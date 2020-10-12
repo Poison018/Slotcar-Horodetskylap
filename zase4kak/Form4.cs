@@ -1079,8 +1079,8 @@ namespace zase4kak
             button5.Enabled = true;
             button5.Visible = true;
             button5.Focus();
-            timer11.Enabled = true;
-            label1.Text = "Привет лол";
+            timer11.Enabled = true;//gjckslyz hj,jxf dthcsz ghjuhfvb
+          
         }
 
         private void Form4_Load(object sender, EventArgs e)
