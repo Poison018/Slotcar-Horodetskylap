@@ -24,3 +24,4 @@ C:\Users\ooleg\OneDrive\Документы\GitHub\Slotcar-Horodetskylap\zase4kak
 C:\Users\ooleg\OneDrive\Документы\GitHub\Slotcar-Horodetskylap\zase4kak\obj\Debug\zase4kak.csproj.CoreCompileInputs.cache
 C:\Users\ooleg\OneDrive\Документы\GitHub\Slotcar-Horodetskylap\zase4kak\obj\Debug\zase4kak.exe
 C:\Users\ooleg\OneDrive\Документы\GitHub\Slotcar-Horodetskylap\zase4kak\obj\Debug\zase4kak.pdb
+C:\Users\ooleg\OneDrive\Документы\GitHub\Slotcar-Horodetskylap\zase4kak\obj\Debug\zase4kak.Form5.resources

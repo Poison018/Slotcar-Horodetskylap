@@ -1151,6 +1151,13 @@ namespace zase4kak
           
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form5 f5 = new Form5();
+            this.Enabled = false;
+            f5.Show();
+        }
+
         private void Form4_Load(object sender, EventArgs e)
         {
             
