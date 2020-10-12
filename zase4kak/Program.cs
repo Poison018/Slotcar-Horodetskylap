@@ -4,13 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace zase4kak
 {
     static class Program
     {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
+       
+        // <summary>
+        // Главная точка входа для приложения.
+       // </summary>
         [STAThread]
         static void Main()
         {
@@ -19,4 +21,5 @@ namespace zase4kak
             Application.Run(new Form1());
         }
     }
+    
 }
