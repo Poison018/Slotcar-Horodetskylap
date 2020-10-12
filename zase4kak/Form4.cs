@@ -1080,9 +1080,7 @@ namespace zase4kak
             button5.Visible = true;
             button5.Focus();
             timer11.Enabled = true;
-
-           
-            label1.Text = "тестово видалив текст))";
+            label1.Text = "Привет лол";
         }
 
         private void Form4_Load(object sender, EventArgs e)
