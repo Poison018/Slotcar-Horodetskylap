@@ -357,6 +357,7 @@
             this.textBox200 = new System.Windows.Forms.TextBox();
             this.textBox201 = new System.Windows.Forms.TextBox();
             this.textBox202 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -3504,6 +3505,7 @@
             this.textBox171.Name = "textBox171";
             this.textBox171.Size = new System.Drawing.Size(24, 22);
             this.textBox171.TabIndex = 164;
+            this.textBox171.Visible = false;
             // 
             // textBox172
             // 
@@ -3517,6 +3519,7 @@
             this.textBox172.TabIndex = 165;
             this.textBox172.TabStop = false;
             this.textBox172.Text = "999";
+            this.textBox172.Visible = false;
             // 
             // textBox173
             // 
@@ -3568,6 +3571,7 @@
             this.textBox177.TabIndex = 169;
             this.textBox177.TabStop = false;
             this.textBox177.Text = "999";
+            this.textBox177.Visible = false;
             // 
             // textBox178
             // 
@@ -3577,6 +3581,7 @@
             this.textBox178.Name = "textBox178";
             this.textBox178.Size = new System.Drawing.Size(24, 22);
             this.textBox178.TabIndex = 168;
+            this.textBox178.Visible = false;
             // 
             // textBox179
             // 
@@ -3609,6 +3614,7 @@
             this.textBox181.TabIndex = 173;
             this.textBox181.TabStop = false;
             this.textBox181.Text = "999";
+            this.textBox181.Visible = false;
             // 
             // textBox182
             // 
@@ -3618,6 +3624,7 @@
             this.textBox182.Name = "textBox182";
             this.textBox182.Size = new System.Drawing.Size(24, 22);
             this.textBox182.TabIndex = 172;
+            this.textBox182.Visible = false;
             // 
             // textBox183
             // 
@@ -3650,6 +3657,7 @@
             this.textBox185.TabIndex = 177;
             this.textBox185.TabStop = false;
             this.textBox185.Text = "999";
+            this.textBox185.Visible = false;
             // 
             // textBox186
             // 
@@ -3659,6 +3667,7 @@
             this.textBox186.Name = "textBox186";
             this.textBox186.Size = new System.Drawing.Size(24, 22);
             this.textBox186.TabIndex = 176;
+            this.textBox186.Visible = false;
             // 
             // textBox187
             // 
@@ -3691,6 +3700,7 @@
             this.textBox189.TabIndex = 181;
             this.textBox189.TabStop = false;
             this.textBox189.Text = "999";
+            this.textBox189.Visible = false;
             // 
             // textBox190
             // 
@@ -3700,6 +3710,7 @@
             this.textBox190.Name = "textBox190";
             this.textBox190.Size = new System.Drawing.Size(24, 22);
             this.textBox190.TabIndex = 180;
+            this.textBox190.Visible = false;
             // 
             // textBox191
             // 
@@ -3732,6 +3743,7 @@
             this.textBox193.TabIndex = 185;
             this.textBox193.TabStop = false;
             this.textBox193.Text = "999";
+            this.textBox193.Visible = false;
             // 
             // textBox194
             // 
@@ -3741,6 +3753,7 @@
             this.textBox194.Name = "textBox194";
             this.textBox194.Size = new System.Drawing.Size(24, 22);
             this.textBox194.TabIndex = 184;
+            this.textBox194.Visible = false;
             // 
             // textBox195
             // 
@@ -3773,6 +3786,7 @@
             this.textBox197.TabIndex = 189;
             this.textBox197.TabStop = false;
             this.textBox197.Text = "999";
+            this.textBox197.Visible = false;
             // 
             // textBox198
             // 
@@ -3782,6 +3796,7 @@
             this.textBox198.Name = "textBox198";
             this.textBox198.Size = new System.Drawing.Size(24, 22);
             this.textBox198.TabIndex = 188;
+            this.textBox198.Visible = false;
             // 
             // textBox199
             // 
@@ -3814,6 +3829,7 @@
             this.textBox201.TabIndex = 193;
             this.textBox201.TabStop = false;
             this.textBox201.Text = "999";
+            this.textBox201.Visible = false;
             // 
             // textBox202
             // 
@@ -3823,6 +3839,18 @@
             this.textBox202.Name = "textBox202";
             this.textBox202.Size = new System.Drawing.Size(24, 22);
             this.textBox202.TabIndex = 192;
+            this.textBox202.Visible = false;
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button7.Location = new System.Drawing.Point(1108, 967);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(149, 72);
+            this.button7.TabIndex = 196;
+            this.button7.Text = "Продовжити";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Visible = false;
             // 
             // Form4
             // 
@@ -3830,6 +3858,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.textBox199);
             this.Controls.Add(this.textBox200);
             this.Controls.Add(this.textBox201);
@@ -4216,5 +4245,6 @@
         private System.Windows.Forms.TextBox textBox200;
         private System.Windows.Forms.TextBox textBox201;
         private System.Windows.Forms.TextBox textBox202;
+        private System.Windows.Forms.Button button7;
     }
 }

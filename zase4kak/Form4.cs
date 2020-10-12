@@ -586,6 +586,18 @@ namespace zase4kak
 
         private void timer3_Tick(object sender, EventArgs e)
         {
+
+
+
+            if (label101.Text == "<<Кваліфікацію завершено!>>")
+            {
+                button7.Visible = true;
+                button2.Visible = false;
+                button3.Visible = false;
+                button6.Visible = false;
+            }
+
+
             if (Convert.ToDouble(textBox35.Text) < Convert.ToDouble(textBox33.Text))
             {
                 textBox109.Text = textBox33.Text;
@@ -1031,6 +1043,8 @@ namespace zase4kak
                 textBox202.Text = textBox198.Text;
                 textBox198.Text = textBox199.Text;
             }
+
+           
         }
 
         private void timer4_Tick(object sender, EventArgs e)
