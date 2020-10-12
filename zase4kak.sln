@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zase4kak", "zase4kak\zase4kak.csproj", "{9263E48E-9693-4541-AB35-33B62F1785EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9263E48E-9693-4541-AB35-33B62F1785EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9263E48E-9693-4541-AB35-33B62F1785EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9263E48E-9693-4541-AB35-33B62F1785EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9263E48E-9693-4541-AB35-33B62F1785EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E109144-36F3-42FA-8C48-F17159087617}
+	EndGlobalSection
+EndGlobal
