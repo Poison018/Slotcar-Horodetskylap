@@ -943,40 +943,94 @@ namespace zase4kak
                 textBox32.Text = textBox31.Text;
                 textBox31.Text = textBox170.Text;
             }
-            //сортування
-            //double temp;
-            //for (int i = 0; i < arr.Length - 1; i++)
-            //{
-            //    for (int j = i + 1; j < arr.Length; j++)
-            //    {
-            //        if (arr[i] < arr[j])
-            //        {
-            //            temp = arr[i];
-            //            arr[i] = arr[j];
-            //            arr[j] = temp;
 
+            if (Convert.ToDouble(textBox172.Text) < Convert.ToDouble(textBox64.Text))
+            {
+                textBox173.Text = textBox64.Text;
+                textBox64.Text = textBox172.Text;
+                textBox172.Text = textBox173.Text;
 
-            //        }
-            //    }
+                textBox174.Text = textBox171.Text;
+                textBox171.Text = textBox32.Text;
+                textBox32.Text = textBox174.Text;
+            }
 
-            //}
-            //for (int i = 0; i < arr.Length; i++)
+            if (Convert.ToDouble(textBox177.Text) < Convert.ToDouble(textBox172.Text))
+            {
+                textBox176.Text = textBox172.Text;
+                textBox172.Text = textBox177.Text;
+                textBox177.Text = textBox176.Text;
 
-            //{
-            //    textBox33.Text = Convert.ToString(arr[i]);
-            //}
+                textBox175.Text = textBox178.Text;
+                textBox178.Text = textBox171.Text;
+                textBox171.Text = textBox175.Text;
+            }
 
+            if (Convert.ToDouble(textBox181.Text) < Convert.ToDouble(textBox177.Text))
+            {
+                textBox180.Text = textBox177.Text;
+                textBox177.Text = textBox181.Text;
+                textBox181.Text = textBox180.Text;
 
-            //for (int W = 3; W < arr.Length; W++)
+                textBox179.Text = textBox182.Text;
+                textBox182.Text = textBox178.Text;
+                textBox178.Text = textBox179.Text;
+            }
 
-            //{
-            //    textBox35.Text = Convert.ToString(arr[W]);
-            //}
+            if (Convert.ToDouble(textBox185.Text) < Convert.ToDouble(textBox181.Text))
+            {
+                textBox184.Text = textBox181.Text;
+                textBox181.Text = textBox185.Text;
+                textBox185.Text = textBox184.Text;
 
+                textBox183.Text = textBox186.Text;
+                textBox186.Text = textBox182.Text;
+                textBox182.Text = textBox183.Text;
+            }
 
+            if (Convert.ToDouble(textBox189.Text) < Convert.ToDouble(textBox185.Text))
+            {
+                textBox188.Text = textBox185.Text;
+                textBox185.Text = textBox189.Text;
+                textBox189.Text = textBox188.Text;
 
+                textBox187.Text = textBox190.Text;
+                textBox190.Text = textBox186.Text;
+                textBox186.Text = textBox187.Text;
+            }
 
+            if (Convert.ToDouble(textBox193.Text) < Convert.ToDouble(textBox189.Text))
+            {
+                textBox192.Text = textBox189.Text;
+                textBox189.Text = textBox193.Text;
+                textBox193.Text = textBox192.Text;
 
+                textBox191.Text = textBox194.Text;
+                textBox194.Text = textBox190.Text;
+                textBox190.Text = textBox191.Text;
+            }
+
+            if (Convert.ToDouble(textBox197.Text) < Convert.ToDouble(textBox193.Text))
+            {
+                textBox196.Text = textBox193.Text;
+                textBox193.Text = textBox197.Text;
+                textBox197.Text = textBox196.Text;
+
+                textBox195.Text = textBox198.Text;
+                textBox198.Text = textBox194.Text;
+                textBox194.Text = textBox195.Text;
+            }
+
+            if (Convert.ToDouble(textBox201.Text) < Convert.ToDouble(textBox197.Text))
+            {
+                textBox200.Text = textBox197.Text;
+                textBox197.Text = textBox201.Text;
+                textBox201.Text = textBox200.Text;
+
+                textBox199.Text = textBox202.Text;
+                textBox202.Text = textBox198.Text;
+                textBox198.Text = textBox199.Text;
+            }
         }
 
         private void timer4_Tick(object sender, EventArgs e)
@@ -1079,7 +1133,7 @@ namespace zase4kak
             button5.Enabled = true;
             button5.Visible = true;
             button5.Focus();
-            timer11.Enabled = true;//gjckslyz hj,jxf dthcsz ghjuhfvb
+            timer11.Enabled = true;
           
         }
 
@@ -1549,76 +1603,80 @@ namespace zase4kak
 
                     case 33:
                         textBox103.BackColor = Color.Lime;
-                        textBox33.Text = label56.Text;
-                        textBox65.Text = label55.Text;
+                        textBox171.Text = label56.Text;
+                        textBox172.Text = label55.Text;
                         label56.Text = textBox102.Text;
                         textBox65.Text = textBox101.Text;
-                        arr[32] = Convert.ToDouble(textBox65.Text);
+                        arr[32] = Convert.ToDouble(textBox172.Text);
                         
                         break;
 
                     case 34:
                         textBox102.BackColor = Color.Lime;
-                        textBox34.Text = label56.Text;
-                        textBox66.Text = label55.Text;
+                        textBox178.Text = label56.Text;
+                        textBox177.Text = label55.Text;
                         label56.Text = textBox101.Text;
                         textBox65.Text = textBox100.Text;
-                        arr[33] = Convert.ToDouble(textBox66.Text);
+                        arr[33] = Convert.ToDouble(textBox177.Text);
                         
                         break;
 
                     case 35:
                         textBox101.BackColor = Color.Lime;
-                        textBox35.Text = label56.Text;
-                        textBox67.Text = label55.Text;
+                        textBox182.Text = label56.Text;
+                        textBox181.Text = label55.Text;
                         label56.Text = textBox100.Text;
                         textBox65.Text = textBox99.Text;
-                        arr[34] = Convert.ToDouble(textBox67.Text);
+                        arr[34] = Convert.ToDouble(textBox181.Text);
                        
                         break;
 
                     case 36:
                         textBox100.BackColor = Color.Lime;
-                        textBox36.Text = label56.Text;
-                        textBox68.Text = label55.Text;
+                        textBox186.Text = label56.Text;
+                        textBox185.Text = label55.Text;
                         label56.Text = textBox99.Text;
                         textBox65.Text = textBox98.Text;
-                        arr[35] = Convert.ToDouble(textBox68.Text);
+                        arr[35] = Convert.ToDouble(textBox185.Text);
                         
                         break;
                     case 37:
 
                         textBox99.BackColor = Color.Lime;
-                        textBox37.Text = label56.Text;
-                        textBox69.Text = label55.Text;
+                        textBox190.Text = label56.Text;
+                        textBox189.Text = label55.Text;
                         label56.Text = textBox98.Text;
                         textBox65.Text = textBox97.Text;
-                        arr[36] = Convert.ToDouble(textBox69.Text);
+                        arr[36] = Convert.ToDouble(textBox189.Text);
                        
                         break;
 
                     case 38:
                         textBox98.BackColor = Color.Lime;
-                        textBox38.Text = label56.Text;
-                        textBox70.Text = label55.Text;
+                        textBox194.Text = label56.Text;
+                        textBox193.Text = label55.Text;
                         label56.Text = textBox97.Text;
                         textBox65.Text = textBox96.Text;
-                        arr[37] = Convert.ToDouble(textBox70.Text);
+                        arr[37] = Convert.ToDouble(textBox193.Text);
                        
                         break;
 
                     case 39:
                         textBox97.BackColor = Color.Lime;
-                        textBox39.Text = label56.Text;
-                        textBox71.Text = label55.Text;
+                        textBox198.Text = label56.Text;
+                        textBox197.Text = label55.Text;
                         label56.Text = textBox96.Text;
-                        textBox65.Text = textBox95.Text;
-                        arr[38] = Convert.ToDouble(textBox71.Text);
+                        textBox65.Text = "-";
+                        arr[38] = Convert.ToDouble(textBox197.Text);
                    
                         break;
 
                     case 40:
+
+
                         textBox96.BackColor = Color.Lime;
+                        textBox202.Text = label56.Text;
+                        textBox201.Text = label55.Text;
                         timer1.Enabled = false;
                         timer2.Enabled = false;
                         
