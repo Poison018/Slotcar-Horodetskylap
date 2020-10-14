@@ -31,6 +31,22 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox183 = new System.Windows.Forms.TextBox();
+            this.textBox184 = new System.Windows.Forms.TextBox();
+            this.textBox185 = new System.Windows.Forms.TextBox();
+            this.textBox186 = new System.Windows.Forms.TextBox();
+            this.textBox179 = new System.Windows.Forms.TextBox();
+            this.textBox180 = new System.Windows.Forms.TextBox();
+            this.textBox181 = new System.Windows.Forms.TextBox();
+            this.textBox182 = new System.Windows.Forms.TextBox();
+            this.textBox175 = new System.Windows.Forms.TextBox();
+            this.textBox176 = new System.Windows.Forms.TextBox();
+            this.textBox177 = new System.Windows.Forms.TextBox();
+            this.textBox178 = new System.Windows.Forms.TextBox();
+            this.textBox174 = new System.Windows.Forms.TextBox();
+            this.textBox173 = new System.Windows.Forms.TextBox();
+            this.textBox172 = new System.Windows.Forms.TextBox();
+            this.textBox171 = new System.Windows.Forms.TextBox();
             this.textBox170 = new System.Windows.Forms.TextBox();
             this.textBox169 = new System.Windows.Forms.TextBox();
             this.textBox168 = new System.Windows.Forms.TextBox();
@@ -325,22 +341,6 @@
             this.label104 = new System.Windows.Forms.Label();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.button5 = new System.Windows.Forms.Button();
-            this.textBox171 = new System.Windows.Forms.TextBox();
-            this.textBox172 = new System.Windows.Forms.TextBox();
-            this.textBox173 = new System.Windows.Forms.TextBox();
-            this.textBox174 = new System.Windows.Forms.TextBox();
-            this.textBox175 = new System.Windows.Forms.TextBox();
-            this.textBox176 = new System.Windows.Forms.TextBox();
-            this.textBox177 = new System.Windows.Forms.TextBox();
-            this.textBox178 = new System.Windows.Forms.TextBox();
-            this.textBox179 = new System.Windows.Forms.TextBox();
-            this.textBox180 = new System.Windows.Forms.TextBox();
-            this.textBox181 = new System.Windows.Forms.TextBox();
-            this.textBox182 = new System.Windows.Forms.TextBox();
-            this.textBox183 = new System.Windows.Forms.TextBox();
-            this.textBox184 = new System.Windows.Forms.TextBox();
-            this.textBox185 = new System.Windows.Forms.TextBox();
-            this.textBox186 = new System.Windows.Forms.TextBox();
             this.textBox187 = new System.Windows.Forms.TextBox();
             this.textBox188 = new System.Windows.Forms.TextBox();
             this.textBox189 = new System.Windows.Forms.TextBox();
@@ -574,6 +574,178 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // textBox183
+            // 
+            this.textBox183.Enabled = false;
+            this.textBox183.Location = new System.Drawing.Point(504, 926);
+            this.textBox183.Name = "textBox183";
+            this.textBox183.Size = new System.Drawing.Size(17, 20);
+            this.textBox183.TabIndex = 179;
+            this.textBox183.Visible = false;
+            // 
+            // textBox184
+            // 
+            this.textBox184.Enabled = false;
+            this.textBox184.Location = new System.Drawing.Point(478, 926);
+            this.textBox184.Name = "textBox184";
+            this.textBox184.Size = new System.Drawing.Size(20, 20);
+            this.textBox184.TabIndex = 178;
+            this.textBox184.Text = "999";
+            this.textBox184.Visible = false;
+            // 
+            // textBox185
+            // 
+            this.textBox185.Enabled = false;
+            this.textBox185.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox185.HideSelection = false;
+            this.textBox185.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox185.Location = new System.Drawing.Point(452, 924);
+            this.textBox185.Name = "textBox185";
+            this.textBox185.Size = new System.Drawing.Size(20, 22);
+            this.textBox185.TabIndex = 177;
+            this.textBox185.TabStop = false;
+            this.textBox185.Text = "999";
+            this.textBox185.Visible = false;
+            // 
+            // textBox186
+            // 
+            this.textBox186.Enabled = false;
+            this.textBox186.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.textBox186.Location = new System.Drawing.Point(423, 924);
+            this.textBox186.Name = "textBox186";
+            this.textBox186.Size = new System.Drawing.Size(24, 22);
+            this.textBox186.TabIndex = 176;
+            this.textBox186.Visible = false;
+            // 
+            // textBox179
+            // 
+            this.textBox179.Enabled = false;
+            this.textBox179.Location = new System.Drawing.Point(389, 927);
+            this.textBox179.Name = "textBox179";
+            this.textBox179.Size = new System.Drawing.Size(17, 20);
+            this.textBox179.TabIndex = 175;
+            this.textBox179.Visible = false;
+            // 
+            // textBox180
+            // 
+            this.textBox180.Enabled = false;
+            this.textBox180.Location = new System.Drawing.Point(363, 927);
+            this.textBox180.Name = "textBox180";
+            this.textBox180.Size = new System.Drawing.Size(20, 20);
+            this.textBox180.TabIndex = 174;
+            this.textBox180.Text = "999";
+            this.textBox180.Visible = false;
+            // 
+            // textBox181
+            // 
+            this.textBox181.Enabled = false;
+            this.textBox181.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox181.HideSelection = false;
+            this.textBox181.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox181.Location = new System.Drawing.Point(338, 925);
+            this.textBox181.Name = "textBox181";
+            this.textBox181.Size = new System.Drawing.Size(20, 22);
+            this.textBox181.TabIndex = 173;
+            this.textBox181.TabStop = false;
+            this.textBox181.Text = "999";
+            this.textBox181.Visible = false;
+            // 
+            // textBox182
+            // 
+            this.textBox182.Enabled = false;
+            this.textBox182.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.textBox182.Location = new System.Drawing.Point(308, 925);
+            this.textBox182.Name = "textBox182";
+            this.textBox182.Size = new System.Drawing.Size(24, 22);
+            this.textBox182.TabIndex = 172;
+            this.textBox182.Visible = false;
+            // 
+            // textBox175
+            // 
+            this.textBox175.Enabled = false;
+            this.textBox175.Location = new System.Drawing.Point(264, 927);
+            this.textBox175.Name = "textBox175";
+            this.textBox175.Size = new System.Drawing.Size(17, 20);
+            this.textBox175.TabIndex = 171;
+            this.textBox175.Visible = false;
+            // 
+            // textBox176
+            // 
+            this.textBox176.Enabled = false;
+            this.textBox176.Location = new System.Drawing.Point(238, 927);
+            this.textBox176.Name = "textBox176";
+            this.textBox176.Size = new System.Drawing.Size(20, 20);
+            this.textBox176.TabIndex = 170;
+            this.textBox176.Text = "999";
+            this.textBox176.Visible = false;
+            // 
+            // textBox177
+            // 
+            this.textBox177.Enabled = false;
+            this.textBox177.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox177.HideSelection = false;
+            this.textBox177.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox177.Location = new System.Drawing.Point(212, 925);
+            this.textBox177.Name = "textBox177";
+            this.textBox177.Size = new System.Drawing.Size(20, 22);
+            this.textBox177.TabIndex = 169;
+            this.textBox177.TabStop = false;
+            this.textBox177.Text = "999";
+            this.textBox177.Visible = false;
+            // 
+            // textBox178
+            // 
+            this.textBox178.Enabled = false;
+            this.textBox178.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.textBox178.Location = new System.Drawing.Point(183, 925);
+            this.textBox178.Name = "textBox178";
+            this.textBox178.Size = new System.Drawing.Size(24, 22);
+            this.textBox178.TabIndex = 168;
+            this.textBox178.Visible = false;
+            // 
+            // textBox174
+            // 
+            this.textBox174.Enabled = false;
+            this.textBox174.Location = new System.Drawing.Point(145, 927);
+            this.textBox174.Name = "textBox174";
+            this.textBox174.Size = new System.Drawing.Size(17, 20);
+            this.textBox174.TabIndex = 167;
+            this.textBox174.Visible = false;
+            // 
+            // textBox173
+            // 
+            this.textBox173.Enabled = false;
+            this.textBox173.Location = new System.Drawing.Point(119, 927);
+            this.textBox173.Name = "textBox173";
+            this.textBox173.Size = new System.Drawing.Size(20, 20);
+            this.textBox173.TabIndex = 166;
+            this.textBox173.Text = "999";
+            this.textBox173.Visible = false;
+            // 
+            // textBox172
+            // 
+            this.textBox172.Enabled = false;
+            this.textBox172.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox172.HideSelection = false;
+            this.textBox172.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox172.Location = new System.Drawing.Point(93, 925);
+            this.textBox172.Name = "textBox172";
+            this.textBox172.Size = new System.Drawing.Size(20, 22);
+            this.textBox172.TabIndex = 165;
+            this.textBox172.TabStop = false;
+            this.textBox172.Text = "999";
+            this.textBox172.Visible = false;
+            // 
+            // textBox171
+            // 
+            this.textBox171.Enabled = false;
+            this.textBox171.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.textBox171.Location = new System.Drawing.Point(64, 925);
+            this.textBox171.Name = "textBox171";
+            this.textBox171.Size = new System.Drawing.Size(24, 22);
+            this.textBox171.TabIndex = 164;
+            this.textBox171.Visible = false;
+            // 
             // textBox170
             // 
             this.textBox170.Enabled = false;
@@ -730,7 +902,7 @@
             // textBox153
             // 
             this.textBox153.Enabled = false;
-            this.textBox153.Location = new System.Drawing.Point(499, 457);
+            this.textBox153.Location = new System.Drawing.Point(499, 458);
             this.textBox153.Name = "textBox153";
             this.textBox153.Size = new System.Drawing.Size(67, 20);
             this.textBox153.TabIndex = 146;
@@ -739,7 +911,7 @@
             // textBox152
             // 
             this.textBox152.Enabled = false;
-            this.textBox152.Location = new System.Drawing.Point(499, 431);
+            this.textBox152.Location = new System.Drawing.Point(499, 432);
             this.textBox152.Name = "textBox152";
             this.textBox152.Size = new System.Drawing.Size(67, 20);
             this.textBox152.TabIndex = 145;
@@ -3497,178 +3669,6 @@
             this.button5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button5_KeyDown);
             this.button5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button5_KeyPress);
             // 
-            // textBox171
-            // 
-            this.textBox171.Enabled = false;
-            this.textBox171.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox171.Location = new System.Drawing.Point(64, 925);
-            this.textBox171.Name = "textBox171";
-            this.textBox171.Size = new System.Drawing.Size(24, 22);
-            this.textBox171.TabIndex = 164;
-            this.textBox171.Visible = false;
-            // 
-            // textBox172
-            // 
-            this.textBox172.Enabled = false;
-            this.textBox172.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox172.HideSelection = false;
-            this.textBox172.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox172.Location = new System.Drawing.Point(93, 925);
-            this.textBox172.Name = "textBox172";
-            this.textBox172.Size = new System.Drawing.Size(20, 22);
-            this.textBox172.TabIndex = 165;
-            this.textBox172.TabStop = false;
-            this.textBox172.Text = "999";
-            this.textBox172.Visible = false;
-            // 
-            // textBox173
-            // 
-            this.textBox173.Enabled = false;
-            this.textBox173.Location = new System.Drawing.Point(119, 927);
-            this.textBox173.Name = "textBox173";
-            this.textBox173.Size = new System.Drawing.Size(20, 20);
-            this.textBox173.TabIndex = 166;
-            this.textBox173.Text = "999";
-            this.textBox173.Visible = false;
-            // 
-            // textBox174
-            // 
-            this.textBox174.Enabled = false;
-            this.textBox174.Location = new System.Drawing.Point(145, 927);
-            this.textBox174.Name = "textBox174";
-            this.textBox174.Size = new System.Drawing.Size(17, 20);
-            this.textBox174.TabIndex = 167;
-            this.textBox174.Visible = false;
-            // 
-            // textBox175
-            // 
-            this.textBox175.Enabled = false;
-            this.textBox175.Location = new System.Drawing.Point(264, 927);
-            this.textBox175.Name = "textBox175";
-            this.textBox175.Size = new System.Drawing.Size(17, 20);
-            this.textBox175.TabIndex = 171;
-            this.textBox175.Visible = false;
-            // 
-            // textBox176
-            // 
-            this.textBox176.Enabled = false;
-            this.textBox176.Location = new System.Drawing.Point(238, 927);
-            this.textBox176.Name = "textBox176";
-            this.textBox176.Size = new System.Drawing.Size(20, 20);
-            this.textBox176.TabIndex = 170;
-            this.textBox176.Text = "999";
-            this.textBox176.Visible = false;
-            // 
-            // textBox177
-            // 
-            this.textBox177.Enabled = false;
-            this.textBox177.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox177.HideSelection = false;
-            this.textBox177.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox177.Location = new System.Drawing.Point(212, 925);
-            this.textBox177.Name = "textBox177";
-            this.textBox177.Size = new System.Drawing.Size(20, 22);
-            this.textBox177.TabIndex = 169;
-            this.textBox177.TabStop = false;
-            this.textBox177.Text = "999";
-            this.textBox177.Visible = false;
-            // 
-            // textBox178
-            // 
-            this.textBox178.Enabled = false;
-            this.textBox178.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox178.Location = new System.Drawing.Point(183, 925);
-            this.textBox178.Name = "textBox178";
-            this.textBox178.Size = new System.Drawing.Size(24, 22);
-            this.textBox178.TabIndex = 168;
-            this.textBox178.Visible = false;
-            // 
-            // textBox179
-            // 
-            this.textBox179.Enabled = false;
-            this.textBox179.Location = new System.Drawing.Point(389, 927);
-            this.textBox179.Name = "textBox179";
-            this.textBox179.Size = new System.Drawing.Size(17, 20);
-            this.textBox179.TabIndex = 175;
-            this.textBox179.Visible = false;
-            // 
-            // textBox180
-            // 
-            this.textBox180.Enabled = false;
-            this.textBox180.Location = new System.Drawing.Point(363, 927);
-            this.textBox180.Name = "textBox180";
-            this.textBox180.Size = new System.Drawing.Size(20, 20);
-            this.textBox180.TabIndex = 174;
-            this.textBox180.Text = "999";
-            this.textBox180.Visible = false;
-            // 
-            // textBox181
-            // 
-            this.textBox181.Enabled = false;
-            this.textBox181.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox181.HideSelection = false;
-            this.textBox181.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox181.Location = new System.Drawing.Point(338, 925);
-            this.textBox181.Name = "textBox181";
-            this.textBox181.Size = new System.Drawing.Size(20, 22);
-            this.textBox181.TabIndex = 173;
-            this.textBox181.TabStop = false;
-            this.textBox181.Text = "999";
-            this.textBox181.Visible = false;
-            // 
-            // textBox182
-            // 
-            this.textBox182.Enabled = false;
-            this.textBox182.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox182.Location = new System.Drawing.Point(308, 925);
-            this.textBox182.Name = "textBox182";
-            this.textBox182.Size = new System.Drawing.Size(24, 22);
-            this.textBox182.TabIndex = 172;
-            this.textBox182.Visible = false;
-            // 
-            // textBox183
-            // 
-            this.textBox183.Enabled = false;
-            this.textBox183.Location = new System.Drawing.Point(504, 926);
-            this.textBox183.Name = "textBox183";
-            this.textBox183.Size = new System.Drawing.Size(17, 20);
-            this.textBox183.TabIndex = 179;
-            this.textBox183.Visible = false;
-            // 
-            // textBox184
-            // 
-            this.textBox184.Enabled = false;
-            this.textBox184.Location = new System.Drawing.Point(478, 926);
-            this.textBox184.Name = "textBox184";
-            this.textBox184.Size = new System.Drawing.Size(20, 20);
-            this.textBox184.TabIndex = 178;
-            this.textBox184.Text = "999";
-            this.textBox184.Visible = false;
-            // 
-            // textBox185
-            // 
-            this.textBox185.Enabled = false;
-            this.textBox185.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox185.HideSelection = false;
-            this.textBox185.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox185.Location = new System.Drawing.Point(452, 924);
-            this.textBox185.Name = "textBox185";
-            this.textBox185.Size = new System.Drawing.Size(20, 22);
-            this.textBox185.TabIndex = 177;
-            this.textBox185.TabStop = false;
-            this.textBox185.Text = "999";
-            this.textBox185.Visible = false;
-            // 
-            // textBox186
-            // 
-            this.textBox186.Enabled = false;
-            this.textBox186.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox186.Location = new System.Drawing.Point(423, 924);
-            this.textBox186.Name = "textBox186";
-            this.textBox186.Size = new System.Drawing.Size(24, 22);
-            this.textBox186.TabIndex = 176;
-            this.textBox186.Visible = false;
-            // 
             // textBox187
             // 
             this.textBox187.Enabled = false;
@@ -3933,37 +3933,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
@@ -3984,37 +3953,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox64;
-        private System.Windows.Forms.TextBox textBox63;
-        private System.Windows.Forms.TextBox textBox62;
-        private System.Windows.Forms.TextBox textBox61;
-        private System.Windows.Forms.TextBox textBox60;
-        private System.Windows.Forms.TextBox textBox59;
-        private System.Windows.Forms.TextBox textBox58;
-        private System.Windows.Forms.TextBox textBox57;
-        private System.Windows.Forms.TextBox textBox56;
-        private System.Windows.Forms.TextBox textBox55;
-        private System.Windows.Forms.TextBox textBox54;
-        private System.Windows.Forms.TextBox textBox53;
-        private System.Windows.Forms.TextBox textBox52;
-        private System.Windows.Forms.TextBox textBox51;
-        private System.Windows.Forms.TextBox textBox50;
-        private System.Windows.Forms.TextBox textBox49;
-        private System.Windows.Forms.TextBox textBox48;
-        private System.Windows.Forms.TextBox textBox47;
-        private System.Windows.Forms.TextBox textBox46;
-        private System.Windows.Forms.TextBox textBox45;
-        private System.Windows.Forms.TextBox textBox44;
-        private System.Windows.Forms.TextBox textBox43;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox34;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
@@ -4147,8 +4085,6 @@
         private System.Windows.Forms.Label label104;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.TextBox textBox75;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox109;
         private System.Windows.Forms.TextBox textBox110;
         private System.Windows.Forms.TextBox textBox111;
@@ -4216,36 +4152,100 @@
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox174;
         private System.Windows.Forms.TextBox textBox173;
-        private System.Windows.Forms.TextBox textBox172;
-        private System.Windows.Forms.TextBox textBox171;
         private System.Windows.Forms.TextBox textBox183;
         private System.Windows.Forms.TextBox textBox184;
-        private System.Windows.Forms.TextBox textBox185;
-        private System.Windows.Forms.TextBox textBox186;
         private System.Windows.Forms.TextBox textBox179;
         private System.Windows.Forms.TextBox textBox180;
-        private System.Windows.Forms.TextBox textBox181;
-        private System.Windows.Forms.TextBox textBox182;
         private System.Windows.Forms.TextBox textBox175;
         private System.Windows.Forms.TextBox textBox176;
-        private System.Windows.Forms.TextBox textBox177;
-        private System.Windows.Forms.TextBox textBox178;
         private System.Windows.Forms.TextBox textBox187;
         private System.Windows.Forms.TextBox textBox188;
-        private System.Windows.Forms.TextBox textBox189;
-        private System.Windows.Forms.TextBox textBox190;
         private System.Windows.Forms.TextBox textBox191;
         private System.Windows.Forms.TextBox textBox192;
-        private System.Windows.Forms.TextBox textBox193;
-        private System.Windows.Forms.TextBox textBox194;
         private System.Windows.Forms.TextBox textBox195;
         private System.Windows.Forms.TextBox textBox196;
-        private System.Windows.Forms.TextBox textBox197;
-        private System.Windows.Forms.TextBox textBox198;
         private System.Windows.Forms.TextBox textBox199;
         private System.Windows.Forms.TextBox textBox200;
-        private System.Windows.Forms.TextBox textBox201;
-        private System.Windows.Forms.TextBox textBox202;
         private System.Windows.Forms.Button button7;
+        public System.Windows.Forms.TextBox textBox33;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox32;
+        public System.Windows.Forms.TextBox textBox31;
+        public System.Windows.Forms.TextBox textBox30;
+        public System.Windows.Forms.TextBox textBox29;
+        public System.Windows.Forms.TextBox textBox28;
+        public System.Windows.Forms.TextBox textBox27;
+        public System.Windows.Forms.TextBox textBox26;
+        public System.Windows.Forms.TextBox textBox25;
+        public System.Windows.Forms.TextBox textBox24;
+        public System.Windows.Forms.TextBox textBox23;
+        public System.Windows.Forms.TextBox textBox22;
+        public System.Windows.Forms.TextBox textBox21;
+        public System.Windows.Forms.TextBox textBox20;
+        public System.Windows.Forms.TextBox textBox19;
+        public System.Windows.Forms.TextBox textBox18;
+        public System.Windows.Forms.TextBox textBox17;
+        public System.Windows.Forms.TextBox textBox16;
+        public System.Windows.Forms.TextBox textBox15;
+        public System.Windows.Forms.TextBox textBox14;
+        public System.Windows.Forms.TextBox textBox13;
+        public System.Windows.Forms.TextBox textBox12;
+        public System.Windows.Forms.TextBox textBox11;
+        public System.Windows.Forms.TextBox textBox10;
+        public System.Windows.Forms.TextBox textBox9;
+        public System.Windows.Forms.TextBox textBox8;
+        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox64;
+        public System.Windows.Forms.TextBox textBox63;
+        public System.Windows.Forms.TextBox textBox62;
+        public System.Windows.Forms.TextBox textBox61;
+        public System.Windows.Forms.TextBox textBox60;
+        public System.Windows.Forms.TextBox textBox59;
+        public System.Windows.Forms.TextBox textBox58;
+        public System.Windows.Forms.TextBox textBox57;
+        public System.Windows.Forms.TextBox textBox56;
+        public System.Windows.Forms.TextBox textBox55;
+        public System.Windows.Forms.TextBox textBox54;
+        public System.Windows.Forms.TextBox textBox53;
+        public System.Windows.Forms.TextBox textBox52;
+        public System.Windows.Forms.TextBox textBox51;
+        public System.Windows.Forms.TextBox textBox50;
+        public System.Windows.Forms.TextBox textBox49;
+        public System.Windows.Forms.TextBox textBox48;
+        public System.Windows.Forms.TextBox textBox47;
+        public System.Windows.Forms.TextBox textBox46;
+        public System.Windows.Forms.TextBox textBox45;
+        public System.Windows.Forms.TextBox textBox44;
+        public System.Windows.Forms.TextBox textBox43;
+        public System.Windows.Forms.TextBox textBox42;
+        public System.Windows.Forms.TextBox textBox41;
+        public System.Windows.Forms.TextBox textBox40;
+        public System.Windows.Forms.TextBox textBox39;
+        public System.Windows.Forms.TextBox textBox38;
+        public System.Windows.Forms.TextBox textBox37;
+        public System.Windows.Forms.TextBox textBox36;
+        public System.Windows.Forms.TextBox textBox35;
+        public System.Windows.Forms.TextBox textBox34;
+        public System.Windows.Forms.TextBox textBox172;
+        public System.Windows.Forms.TextBox textBox171;
+        public System.Windows.Forms.TextBox textBox185;
+        public System.Windows.Forms.TextBox textBox186;
+        public System.Windows.Forms.TextBox textBox181;
+        public System.Windows.Forms.TextBox textBox182;
+        public System.Windows.Forms.TextBox textBox177;
+        public System.Windows.Forms.TextBox textBox178;
+        public System.Windows.Forms.TextBox textBox189;
+        public System.Windows.Forms.TextBox textBox190;
+        public System.Windows.Forms.TextBox textBox193;
+        public System.Windows.Forms.TextBox textBox194;
+        public System.Windows.Forms.TextBox textBox197;
+        public System.Windows.Forms.TextBox textBox198;
+        public System.Windows.Forms.TextBox textBox201;
+        public System.Windows.Forms.TextBox textBox202;
     }
 }
