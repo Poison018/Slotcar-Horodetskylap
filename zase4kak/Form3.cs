@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Threading;
+using Excel = Microsoft.Office.Interop.Excel;
+
 
 namespace zase4kak
 {
 	public partial class Form3 : Form
 	{
+		string[,] list = new string[50, 5];
 		public Form3()
 		{
 			InitializeComponent();
@@ -265,8 +268,8 @@ namespace zase4kak
 
 		}
 
-        private void timer17_Tick(object sender, EventArgs e)
-        {
+		private void timer17_Tick(object sender, EventArgs e)
+		{
 
 
 			Timez += 0.001 * timer17.Interval;                   //timer на час кола зелена доріжка
@@ -274,26 +277,97 @@ namespace zase4kak
 
 		}
 
-        private void timer16_Tick(object sender, EventArgs e)
-        {
+		private void timer16_Tick(object sender, EventArgs e)
+		{
 
 			Timeg += 0.001 * timer16.Interval;                   //timer на час кола жовта доріжка
 			label28.Text = string.Format("{0:F3}", Timeg);       //timer на час кола жовта доріжка
 
 		}
 
-        private void timer18_Tick(object sender, EventArgs e)
-        {
+		private void timer18_Tick(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void timer19_Tick(object sender, EventArgs e)
-        {
+		private void timer19_Tick(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void timer13_Tick(object sender, EventArgs e)
-        {
+		private void button3_Click(object sender, EventArgs e)
+		{
+
+
+		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			int n = ExportExcel();
+			listBox1.Items.Clear();
+			string s;
+			for (int i = 0; i < n; i++) // по всем строкам
+			{
+				s = "";
+				for (int j = 1; j < 2; j++) //по всем колонкам
+					s += list[i, j];
+				listBox1.Items.Add(s);
+			}
+			
+			
+			button4.Visible = false;
+            
+				
+			if (button4.Visible == false)
+			{
+	
+					button2.Visible = true;
+					comboBox1.Visible = true;
+					label49.Visible = true;
+				
+				
+			}
+		}
+		// Импорт данных из Excel-файла (не более 5 столбцов и любое количество строк <= 50.
+		private int ExportExcel()
+		{
+			// Выбрать путь и имя файла в диалоговом окне
+			OpenFileDialog ofd = new OpenFileDialog();
+			// Задаем расширение имени файла по умолчанию (открывается папка с программой)
+			ofd.DefaultExt = "*.xls;*.xlsx";
+			// Задаем строку фильтра имен файлов, которая определяет варианты
+			ofd.Filter = "файл Excel (Spisok.xlsx)|*.xlsx";
+			// Задаем заголовок диалогового окна
+			ofd.Title = "Виберіть файл Lap-Time";
+			if (!(ofd.ShowDialog() == DialogResult.OK)) // если файл БД не выбран -> Выход
+				return 0;
+			Excel.Application ObjWorkExcel = new Excel.Application();
+			Excel.Workbook ObjWorkBook = ObjWorkExcel.Workbooks.Open(ofd.FileName);
+			Excel.Worksheet ObjWorkSheet = (Excel.Worksheet)ObjWorkBook.Sheets[1]; //получить 1-й лист
+			var lastCell = ObjWorkSheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell);//последнюю ячейку
+																								// размеры базы
+			int lastColumn = (int)lastCell.Column;
+			int lastRow = (int)lastCell.Row;
+			// Перенос в промежуточный массив класса Form1: string[,] list = new string[50, 5]; 
+			for (int j = 0; j < 5; j++) //по всем колонкам
+				for (int i = 0; i < lastRow; i++) // по всем строкам
+					list[i, j] = ObjWorkSheet.Cells[i + 1, j + 1].Text.ToString(); //считываем данные
+			ObjWorkBook.Close(false, Type.Missing, Type.Missing); //закрыть не сохраняя
+			ObjWorkExcel.Quit(); // выйти из Excel
+			GC.Collect(); // убрать за собой
+			return lastRow;
+
+
+			
+		}
+
+		private void panel2_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void timer13_Tick(object sender, EventArgs e)
+		{
 
 			c++;                                            //добавляю кола 1 доріці
 			label24.Text = Convert.ToString(c);
@@ -302,8 +376,8 @@ namespace zase4kak
 			timer13.Enabled = false;
 		}
 
-        private void timer14_Tick(object sender, EventArgs e)
-        {
+		private void timer14_Tick(object sender, EventArgs e)
+		{
 
 			d++;                                            //добавляю кола 4 доріці
 			label25.Text = Convert.ToString(d);
@@ -312,8 +386,8 @@ namespace zase4kak
 			timer14.Enabled = false;
 		}
 
-        private void timer15_Tick(object sender, EventArgs e)
-        {
+		private void timer15_Tick(object sender, EventArgs e)
+		{
 
 
 			Times += 0.001 * timer15.Interval;                   //timer на час кола синя доріжка
@@ -334,7 +408,7 @@ namespace zase4kak
 
 		}
 
-		
+
 
 		private void label16_Click(object sender, EventArgs e)
 		{
@@ -354,6 +428,36 @@ namespace zase4kak
 			button2.Visible = false;
 			button1.Visible = true;
 			comboBox1.Visible = false;
+			label49.Visible = false;
+
+			// цикл для підтягування спортсменів за результатами лаптайму
+
+			int n = listBox1.Items.Count - 1;
+
+			label48.Text = Convert.ToString(listBox1.Items[n]);
+			if (label48.Text == "")
+			{
+				for (int i = 0; i < n; n--)
+				{
+
+					label48.Text = Convert.ToString(listBox1.Items[n]);
+					if (label48.Text != "")
+                    {
+						break;
+                    }
+					
+				}
+				n--;
+				label47.Text = Convert.ToString(listBox1.Items[n]);
+				n--;
+				label46.Text = Convert.ToString(listBox1.Items[n]);
+				n--;
+				label45.Text = Convert.ToString(listBox1.Items[n]);
+				
+			}
+
+			
+			button4.Visible = false;
 		}
 
 		private void timer10_Tick(object sender, EventArgs e)
