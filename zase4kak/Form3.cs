@@ -540,7 +540,15 @@ namespace zase4kak
 
 		private void timer18_Tick_1(object sender, EventArgs e)
 		{
-			//жовта
+
+
+			
+
+
+
+
+
+			//алгоритм сортування відставання до суперника
 
 
 			if (Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text))
@@ -552,7 +560,107 @@ namespace zase4kak
 				panel7.Visible = true;
 				panel8.Visible = true;
 				panel9.Visible = true;
+				label55.Visible = true;
+				label59.Visible = true;
+				label60.Visible = true;
+				label61.Visible = true;
+				label62.Visible = true;
 
+				if (panel1.Location == new Point(7, 213))
+				{
+
+
+					int label17l, label23l, label24l, label25l;
+
+					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label23.Text);
+
+					label59.Text = "0";
+
+					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label17.Text);
+
+					label61.Text = Convert.ToString(label23l);
+
+					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label17.Text);
+
+					label60.Text = Convert.ToString(label24l);
+
+					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label17.Text);
+
+					label62.Text = Convert.ToString(label25l);
+
+
+				}
+
+				if (panel3.Location == new Point(7, 213))
+				{
+
+
+					int label17l, label23l, label25l;
+
+					label60.Text = "0";
+
+					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label24.Text);
+
+					label59.Text = Convert.ToString(label17l);
+
+					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label24.Text);
+
+					label61.Text = Convert.ToString(label23l);
+
+					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label24.Text);
+
+					label62.Text = Convert.ToString(label25l);
+
+
+				}
+
+				if (panel4.Location == new Point(7, 213))
+				{
+
+
+					int label17l, label24l, label25l;
+
+					label61.Text = "0";
+
+					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label23.Text);
+
+					label59.Text = Convert.ToString(label17l);
+
+					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label23.Text);
+
+					label60.Text = Convert.ToString(label24l);
+
+					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label23.Text);
+
+					label62.Text = Convert.ToString(label25l);
+
+
+				}
+
+				if (panel5.Location == new Point(7, 213))
+				{
+
+
+					int label17l, label23l, label24l;
+
+					label62.Text = "0";
+
+					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label25.Text);
+
+					label59.Text = Convert.ToString(label17l);
+
+					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label25.Text);
+
+					label60.Text = Convert.ToString(label24l);
+
+					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label25.Text);
+
+					label61.Text = Convert.ToString(label23l);
+
+
+				}
+
+				//алгоритм сортування жовтої доріжки по місцям
 
 				if (Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text))
 
@@ -667,7 +775,7 @@ namespace zase4kak
 				}
 
 
-				//Синя
+				//алгоритм сортування синьої доріжки по місцям
 				if (Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text))
 				{
 					if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
@@ -773,7 +881,7 @@ namespace zase4kak
 					}
 				}
 
-				//Зелена
+				//алгоритм сортування зеленої доріжки по місцям
 				if (Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text))
 				{
 					if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label17.Text))
@@ -868,7 +976,7 @@ namespace zase4kak
 					}
 				}
 
-				//Червона
+				//алгоритм сортування червоної доріжки по місцям
 				if (Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text))
 				{
 					if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
@@ -977,7 +1085,28 @@ namespace zase4kak
 			}
         }
 
-		private void timer13_Tick(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer19_Tick_1(object sender, EventArgs e)
+        {
+			
+
+		}
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_TextChanged(object sender, EventArgs e)
+        {
+			
+        }
+
+        private void timer13_Tick(object sender, EventArgs e)
 		{
 
 			c++;                                            //добавляю кола 1 доріці
@@ -1143,6 +1272,9 @@ namespace zase4kak
 					panel7.Visible = false;
 					panel8.Visible = false;
 					panel9.Visible = false;
+
+					
+					
 				}
 
 
@@ -1153,8 +1285,8 @@ namespace zase4kak
 
 		private void timer9_Tick(object sender, EventArgs e)
 		{
-			
-			
+			timer19.Enabled = true; 
+
 			if (Convert.ToInt32(textBox15.Text) == 01)
 			{
 				i = Convert.ToInt32(label17.Text);          //червона доріжка
