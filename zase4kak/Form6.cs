@@ -27,7 +27,7 @@ namespace zase4kak
 
         void SaveTable(DataGridView What_save)
         {
-            string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "Lap_time.xlsx";
+            string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "Lap_Time.xlsx";
 
             Exel.Application excelapp = new Exel.Application();
             Exel.Workbook workbook = excelapp.Workbooks.Add();
@@ -43,7 +43,9 @@ namespace zase4kak
             }
             excelapp.AlertBeforeOverwriting = false;
             workbook.SaveAs(path);
-            excelapp.Quit();
+            excelapp.Visible = true;
+         
+            GC.Collect();
         }
 
         private void button1_Click(object sender, EventArgs e)

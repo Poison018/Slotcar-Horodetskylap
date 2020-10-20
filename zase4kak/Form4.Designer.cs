@@ -3622,16 +3622,17 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(221, 922);
+            this.comboBox1.Location = new System.Drawing.Point(1141, 887);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 37;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(356, 922);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button4.Location = new System.Drawing.Point(1141, 828);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(142, 51);
             this.button4.TabIndex = 38;
             this.button4.Text = "зберегти";
             this.button4.UseVisualStyleBackColor = true;
