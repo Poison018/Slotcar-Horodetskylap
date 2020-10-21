@@ -1066,10 +1066,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(881, 908);
+            this.button1.Location = new System.Drawing.Point(847, 881);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(265, 85);
+            this.button1.Size = new System.Drawing.Size(358, 128);
             this.button1.TabIndex = 29;
             this.button1.Text = "Старт";
             this.button1.UseVisualStyleBackColor = true;
@@ -1126,8 +1126,7 @@
             // 
             // textBox15
             // 
-            this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(7, 652);
+            this.textBox15.Location = new System.Drawing.Point(35, 627);
             this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(137, 20);
