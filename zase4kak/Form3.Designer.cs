@@ -35,6 +35,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label66 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
@@ -55,6 +56,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
@@ -70,6 +72,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label64 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.textBox18 = new System.Windows.Forms.TextBox();
@@ -86,6 +89,7 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label65 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
@@ -147,6 +151,17 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label54 = new System.Windows.Forms.Label();
             this.timer19 = new System.Windows.Forms.Timer(this.components);
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.timer20 = new System.Windows.Forms.Timer(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button8 = new System.Windows.Forms.Button();
+            this.timer21 = new System.Windows.Forms.Timer(this.components);
+            this.label67 = new System.Windows.Forms.Label();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -156,6 +171,7 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -222,6 +238,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.Controls.Add(this.label66);
             this.panel1.Controls.Add(this.label59);
             this.panel1.Controls.Add(this.label50);
             this.panel1.Controls.Add(this.textBox16);
@@ -242,6 +259,16 @@
             this.panel1.Size = new System.Drawing.Size(1923, 55);
             this.panel1.TabIndex = 14;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(774, 33);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(13, 13);
+            this.label66.TabIndex = 44;
+            this.label66.Text = "0";
+            this.label66.Visible = false;
             // 
             // label59
             // 
@@ -472,6 +499,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel3.Controls.Add(this.label63);
             this.panel3.Controls.Add(this.label60);
             this.panel3.Controls.Add(this.label51);
             this.panel3.Controls.Add(this.textBox17);
@@ -491,6 +519,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(2578, 57);
             this.panel3.TabIndex = 21;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(775, 33);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(13, 13);
+            this.label63.TabIndex = 41;
+            this.label63.Text = "0";
+            this.label63.Visible = false;
             // 
             // label60
             // 
@@ -644,6 +682,7 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel4.Controls.Add(this.label64);
             this.panel4.Controls.Add(this.label61);
             this.panel4.Controls.Add(this.label52);
             this.panel4.Controls.Add(this.textBox18);
@@ -664,6 +703,16 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(2578, 54);
             this.panel4.TabIndex = 22;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(774, 31);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(13, 13);
+            this.label64.TabIndex = 43;
+            this.label64.Text = "0";
+            this.label64.Visible = false;
             // 
             // label61
             // 
@@ -829,6 +878,7 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.Gold;
+            this.panel5.Controls.Add(this.label65);
             this.panel5.Controls.Add(this.label62);
             this.panel5.Controls.Add(this.label53);
             this.panel5.Controls.Add(this.textBox19);
@@ -848,6 +898,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(2564, 54);
             this.panel5.TabIndex = 23;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(774, 35);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(13, 13);
+            this.label65.TabIndex = 42;
+            this.label65.Text = "0";
+            this.label65.Visible = false;
             // 
             // label62
             // 
@@ -1013,7 +1073,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(897, 61);
+            this.label13.Location = new System.Drawing.Point(785, 68);
             this.label13.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(247, 73);
@@ -1065,16 +1125,17 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(847, 881);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(785, 814);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(358, 128);
+            this.button1.Size = new System.Drawing.Size(458, 148);
             this.button1.TabIndex = 29;
             this.button1.Text = "Старт";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button1_KeyDown);
             // 
             // timer1
             // 
@@ -1126,6 +1187,7 @@
             // 
             // textBox15
             // 
+            this.textBox15.Enabled = false;
             this.textBox15.Location = new System.Drawing.Point(35, 627);
             this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.Name = "textBox15";
@@ -1152,7 +1214,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(474, 597);
+            this.button2.Location = new System.Drawing.Point(481, 597);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 37);
             this.button2.TabIndex = 32;
@@ -1250,16 +1312,16 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(238, 837);
+            this.listBox1.Location = new System.Drawing.Point(30, 682);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(280, 56);
+            this.listBox1.Size = new System.Drawing.Size(142, 56);
             this.listBox1.TabIndex = 39;
             this.listBox1.Visible = false;
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(779, 761);
+            this.button4.Location = new System.Drawing.Point(785, 699);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(223, 94);
             this.button4.TabIndex = 40;
@@ -1286,11 +1348,12 @@
             this.number_group.Size = new System.Drawing.Size(13, 13);
             this.number_group.TabIndex = 42;
             this.number_group.Text = "0";
+            this.number_group.Visible = false;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(1046, 761);
+            this.button3.Location = new System.Drawing.Point(1020, 699);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(223, 94);
             this.button3.TabIndex = 43;
@@ -1301,7 +1364,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(474, 597);
+            this.button5.Location = new System.Drawing.Point(481, 597);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 37);
             this.button5.TabIndex = 44;
@@ -1404,12 +1467,116 @@
             this.timer19.Tag = "Таймер для різниці відставання";
             this.timer19.Tick += new System.EventHandler(this.timer19_Tick_1);
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
+            this.button6.Location = new System.Drawing.Point(785, 814);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(458, 148);
+            this.button6.TabIndex = 48;
+            this.button6.Text = "Пауза";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button6_KeyDown);
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
+            this.button7.Location = new System.Drawing.Point(785, 814);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(458, 148);
+            this.button7.TabIndex = 49;
+            this.button7.Text = "Продовжити";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Visible = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button7_KeyDown);
+            // 
+            // timer20
+            // 
+            this.timer20.Interval = 2000;
+            this.timer20.Tag = "затримка для відкриття порта при старті";
+            this.timer20.Tick += new System.EventHandler(this.timer20_Tick);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView1.Location = new System.Drawing.Point(1340, 535);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(440, 500);
+            this.dataGridView1.TabIndex = 50;
+            this.dataGridView1.Visible = false;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(1786, 948);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(106, 34);
+            this.button8.TabIndex = 51;
+            this.button8.Text = "Продовжити";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Visible = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // timer21
+            // 
+            this.timer21.Tag = "таймер для зміни учасників групи";
+            this.timer21.Tick += new System.EventHandler(this.timer21_Tick);
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(733, 66);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(13, 13);
+            this.label67.TabIndex = 52;
+            this.label67.Text = "0";
+            this.label67.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Доріжка";
+            this.Column4.Name = "Column4";
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Спортсмен";
+            this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Результат";
+            this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column2.Width = 70;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Сектор";
+            this.Column3.Name = "Column3";
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column3.Width = 80;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.Controls.Add(this.label67);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
@@ -1462,6 +1629,7 @@
             this.panel9.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1587,5 +1755,20 @@
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Timer timer19;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Timer timer20;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Timer timer21;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

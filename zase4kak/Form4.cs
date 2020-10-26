@@ -260,6 +260,7 @@ namespace zase4kak
                 timer1.Enabled = false;
                 timer2.Enabled = false;
                 label101.Text = "<<Кваліфікацію завершено!>>";
+                serialPort1.Close();
             }
 
 
@@ -1109,22 +1110,6 @@ namespace zase4kak
                     
                          
                 
-            }
-        }
-
-        private void button6_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Space)
-            {
-
-               
-                timer1.Enabled = true;
-                button6.Enabled = false;
-                button6.Visible = false;
-                button5.Enabled = true;
-                button5.Visible = true;
-                button5.Focus();
-                timer11.Enabled = true;
             }
         }
 

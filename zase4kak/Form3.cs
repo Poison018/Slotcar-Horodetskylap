@@ -30,6 +30,8 @@ namespace zase4kak
 
 			timer1.Enabled = true;
 			button1.Visible = false;
+			button6.Visible = true;
+			button6.Focus();
 		}
 
 		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d;
@@ -99,7 +101,7 @@ namespace zase4kak
 					label15.Visible = true;
 					label15.Text = "1/4";
 					label13.Visible = true;
-					serialPort1.Open();
+					timer20.Enabled = true;
 					timer11.Enabled = true;
 					timer16.Enabled = true;
 					timer17.Enabled = true;
@@ -138,29 +140,56 @@ namespace zase4kak
 					timer3.Enabled = true;
 					label13.Text = "<<Перехід!>>";
 
+
+
 					//перехід між доріжками
+
+
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+
+
+
 					textBox16.Text = label45.Text;
 					label50.Text = label17.Text;
+					label66.Text = label21.Text;
+
 
 					textBox17.Text = label46.Text;
 					label51.Text = label24.Text;
+					label63.Text = label27.Text;
 
 					textBox18.Text = label47.Text;
 					label52.Text = label23.Text;
+					label64.Text = label26.Text;
 
 					textBox19.Text = label48.Text;
 					label53.Text = label25.Text;
+					label65.Text = label28.Text;
+
 
 
 
 					label45.Text = textBox17.Text;
 					label17.Text = label51.Text;
+					label21.Text = label63.Text;
+
 					label46.Text = textBox19.Text;
 					label24.Text = label53.Text;
+					label27.Text = label65.Text;
+
 					label47.Text = textBox16.Text;
 					label23.Text = label50.Text;
+					label26.Text = label66.Text;
+
 					label48.Text = textBox18.Text;
 					label25.Text = label52.Text;
+					label28.Text = label64.Text;
+
+
+					
 
 					label18.Text = "00,000";
 					label22.Text = "00,000";
@@ -182,6 +211,8 @@ namespace zase4kak
 					label40.Text = "00,000";
 					label41.Text = "00,000";
 					label44.Text = "999";
+
+					number_group.Text = "1";
 				}
 			}
 		}
@@ -192,7 +223,12 @@ namespace zase4kak
 		{
 			label4.Text = Convert.ToString(mins) + ":" + Convert.ToString(secs);
 			secs--;
+
+			button6.Enabled = false;
+		
 			
+
+
 
 			if (secs > 60)
 			{
@@ -209,6 +245,11 @@ namespace zase4kak
 
 			if (secs == 0 && mins == 0)
 			{
+				Time = Convert.ToDouble(label63.Text);
+				Timeg = Convert.ToDouble(label64.Text);
+				Timez = Convert.ToDouble(label65.Text);
+				Times = Convert.ToDouble(label66.Text);
+
 				timer3.Enabled = false;
 				timer4.Enabled = true;
 				sec = 1;
@@ -217,8 +258,13 @@ namespace zase4kak
 				label13.Text = "<<Гонка!>>";
 				label15.Text = "2/4";
 
-				
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
 
+				button6.Enabled = true;
+				button6.Focus();
 			}
 		}
 
@@ -247,27 +293,48 @@ namespace zase4kak
 					mins = 0;
 					timer5.Enabled = true;
 					label13.Text = "<<Перехід!>>";
+
+
 					//перехід між доріжками
+
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+
 					textBox16.Text = label45.Text;
 					label50.Text = label17.Text;
+					label66.Text = label21.Text;
 
 					textBox17.Text = label46.Text;
 					label51.Text = label24.Text;
+					label63.Text = label27.Text;
 
 					textBox18.Text = label47.Text;
 					label52.Text = label23.Text;
+					label64.Text = label26.Text;
 
 					textBox19.Text = label48.Text;
 					label53.Text = label25.Text;
+					label65.Text = label28.Text;
+
+
 
 					label45.Text = textBox17.Text;
 					label17.Text = label51.Text;
+					label21.Text = label63.Text;
+
 					label46.Text = textBox19.Text;
 					label24.Text = label53.Text;
+					label27.Text = label65.Text;
+
 					label47.Text = textBox16.Text;
 					label23.Text = label50.Text;
+					label26.Text = label66.Text;
+
 					label48.Text = textBox18.Text;
 					label25.Text = label52.Text;
+					label28.Text = label64.Text;
 
 					label18.Text = "00,000";
 					label22.Text = "00,000";
@@ -290,6 +357,8 @@ namespace zase4kak
 					label41.Text = "00,000";
 					label44.Text = "999";
 
+					number_group.Text = "2";
+
 				}
 			}
 		}
@@ -300,6 +369,10 @@ namespace zase4kak
 		{
 			label4.Text = Convert.ToString(mins) + ":" + Convert.ToString(secs);
 			secs--;
+
+			button6.Enabled = false;
+
+			
 
 			if (secs > 60)
 			{
@@ -318,14 +391,26 @@ namespace zase4kak
 			{
 				timer5.Enabled = false;
 				timer6.Enabled = true;
+
+				Time = Convert.ToDouble(label63.Text);
+				Timeg = Convert.ToDouble(label64.Text);
+				Timez = Convert.ToDouble(label65.Text);
+				Times = Convert.ToDouble(label66.Text);
+
+
 				sec = 1;
 				min = Convert.ToInt32(textBox13.Text);
 				label4.Text = "00:00";
 				label13.Text = "<<Гонка!>>";
 				label15.Text = "3/4";
 
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
 
-				
+				button6.Enabled = true;
+				button6.Focus();
 			}
 
 		}
@@ -369,27 +454,51 @@ namespace zase4kak
 					mins = 0;
 					timer7.Enabled = true;
 					label13.Text = "<<Перехід!>>";
+
 					//перехід між доріжками
+
+
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+
+
 					textBox16.Text = label45.Text;
 					label50.Text = label17.Text;
+					label66.Text = label21.Text;
+
 
 					textBox17.Text = label46.Text;
 					label51.Text = label24.Text;
+					label63.Text = label27.Text;
 
 					textBox18.Text = label47.Text;
 					label52.Text = label23.Text;
+					label64.Text = label26.Text;
 
 					textBox19.Text = label48.Text;
 					label53.Text = label25.Text;
+					label65.Text = label28.Text;
+
+
+
 
 					label45.Text = textBox17.Text;
 					label17.Text = label51.Text;
+					label21.Text = label63.Text;
+
 					label46.Text = textBox19.Text;
 					label24.Text = label53.Text;
+					label27.Text = label65.Text;
+
 					label47.Text = textBox16.Text;
 					label23.Text = label50.Text;
+					label26.Text = label66.Text;
+
 					label48.Text = textBox18.Text;
 					label25.Text = label52.Text;
+					label28.Text = label64.Text;
 
 					label18.Text = "00,000";
 					label22.Text = "00,000";
@@ -411,6 +520,8 @@ namespace zase4kak
 					label40.Text = "00,000";
 					label41.Text = "00,000";
 					label44.Text = "999";
+
+					number_group.Text = "3";
 
 				}
 
@@ -535,6 +646,8 @@ namespace zase4kak
 			button1.Visible = true;
 			comboBox1.Visible = false;
 			label49.Visible = false;
+			timer21.Enabled = true;
+			button1.Focus();
 			
 		}
 
@@ -1106,12 +1219,253 @@ namespace zase4kak
 			
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+			if(number_group.Text == "0")	// кнопка пауза для 1 заїзду
+            {
+				timer2.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				button6.Visible = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+
+			if (number_group.Text == "1")	// кнопка пауза для 2 заїзду
+			{
+				timer4.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				button6.Visible = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+
+			if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
+			{
+				timer6.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				button6.Visible = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+
+			if (number_group.Text == "3")   // кнопка пауза для 3 заїзду
+			{
+				timer8.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				button6.Visible = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+		}
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+			if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
+			{
+				timer2.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+
+			if (number_group.Text == "1")   // кнопка продовжити для 2 заїзду
+			{
+				timer4.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+
+			if (number_group.Text == "2")   // кнопка продовжити для 3 заїзду
+			{
+				timer6.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+
+			if (number_group.Text == "3")   // кнопка продовжити для 3 заїзду
+			{
+				timer8.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = false;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+		}
+
+        private void button7_KeyDown(object sender, KeyEventArgs e)
+        {
+			if (e.KeyCode == Keys.Space)
+			{
+				if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
+				{
+					timer2.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
+					button6.Visible = true;
+					button7.Visible = false;
+					button6.Focus();
+				}
+
+				if (number_group.Text == "1")   // кнопка продовжити для 2 заїзду
+				{
+					timer4.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
+					button6.Visible = true;
+					button7.Visible = false;
+					button6.Focus();
+				}
+
+				if (number_group.Text == "2")   // кнопка продовжити для 3 заїзду
+				{
+					timer6.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
+					button6.Visible = true;
+					button7.Visible = false;
+					button6.Focus();
+				}
+
+				if (number_group.Text == "3")   // кнопка продовжити для 3 заїзду
+				{
+					timer8.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = false;
+					button6.Visible = true;
+					button7.Visible = false;
+					button6.Focus();
+				}
+
+
+
+
+
+
+			}
+		}
+
+        private void button6_KeyDown(object sender, KeyEventArgs e)
+        {
+			if(e.KeyCode == Keys.Space)
+            {
+				if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
+				{
+					timer2.Enabled = false;
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					button6.Visible = false;
+					button7.Visible = true;
+					button7.Focus();
+				}
+
+				if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
+				{
+					timer4.Enabled = false;
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					button6.Visible = false;
+					button7.Visible = true;
+					button7.Focus();
+				}
+
+				if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
+				{
+					timer6.Enabled = false;
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					button6.Visible = false;
+					button7.Visible = true;
+					button7.Focus();
+				}
+
+				if (number_group.Text == "3")   // кнопка пауза для 3 заїзду
+				{
+					timer8.Enabled = false;
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					button6.Visible = false;
+					button7.Visible = true;
+					button7.Focus();
+				}
+			}
+        }
+
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+			if(e.KeyCode == Keys.Space)
+            {
+				timer1.Enabled = true;
+				button1.Visible = false;
+				button6.Visible = true;
+				button6.Focus();
+			}
+        }
+
+        private void timer20_Tick(object sender, EventArgs e)
+        {
+			serialPort1.Open();
+			timer20.Enabled = false;
+        }
+
+       
+
         private void timer13_Tick(object sender, EventArgs e)
 		{
 
 			c++;                                            //добавляю кола 1 доріці
 			label24.Text = Convert.ToString(c);
 
+			if (Convert.ToDouble(label30.Text) < 1)         //обмеження по часу кола 1 секунда
+			{
+				c--;
+				label24.Text = Convert.ToString(c);
+			}
 
 			timer13.Enabled = false;
 		}
@@ -1121,12 +1475,139 @@ namespace zase4kak
 
 			d++;                                            //добавляю кола 4 доріці
 			label25.Text = Convert.ToString(d);
-
+			if (Convert.ToDouble(label39.Text) < 1)         //обмеження по часу кола 1 секунда
+			{
+				d--;
+				label25.Text = Convert.ToString(d);
+			}
 
 			timer14.Enabled = false;
 		}
+			
+		private void timer21_Tick(object sender, EventArgs e)
+		{
 
-		private void timer15_Tick(object sender, EventArgs e)
+
+
+			int n;
+
+
+
+
+
+
+
+			if (label48.Text == "" && label15.Text == "номер заизду")
+				{
+				n = 39;
+				//label48.Text = Convert.ToString(listBox1.Items[n]);
+
+					for (int i = 0; i < n; n--)
+					{
+
+						label48.Text = Convert.ToString(listBox1.Items[n]);
+						if (label48.Text != "")
+						{
+							break;
+						}
+
+					}
+					n--;
+					label47.Text = Convert.ToString(listBox1.Items[n]);
+					n--;
+					label46.Text = Convert.ToString(listBox1.Items[n]);
+					n--;
+					label45.Text = Convert.ToString(listBox1.Items[n]);
+
+				label67.Text = Convert.ToString(n);
+					//Convert.ToString(listBox1.Items.Count);
+					
+					timer21.Enabled = false;
+
+				}
+
+			if(Convert.ToInt32(label67.Text) != 0)
+            {
+
+
+
+				if (number_group.Text == "0" && label13.Text == "<<Фініш!>>")
+				{
+					n = Convert.ToInt32(label67.Text);
+					// перехід між групами
+					dataGridView1.Visible = false;
+					button8.Visible = false;
+					button1.Visible = true;
+					button7.Visible = false;
+					button6.Visible = false;
+					button1.Focus();
+					panel1.Location = new Point(7, 213);
+					panel3.Location = new Point(7, 294);
+					panel4.Location = new Point(7, 389);
+					panel5.Location = new Point(7, 477);
+
+					label17.Text = "0";
+					label24.Text = "0";
+					label23.Text = "0";
+					label25.Text = "0";
+
+					label18.Text = "00,000";
+					label22.Text = "00,000";
+					label19.Text = "00,000";
+					label20.Text = "00,000";
+					label16.Text = "999";
+					label29.Text = "00,000";
+					label30.Text = "00,000";
+					label31.Text = "00,000";
+					label32.Text = "00,000";
+					label42.Text = "999";
+					label35.Text = "00,000";
+					label36.Text = "00,000";
+					label37.Text = "00,000";
+					label34.Text = "00,000";
+					label43.Text = "999";
+					label38.Text = "00,000";
+					label39.Text = "00,000";
+					label40.Text = "00,000";
+					label41.Text = "00,000";
+					label44.Text = "999";
+					label8.Visible = false;
+					panel6.Visible = false;
+					panel7.Visible = false;
+					panel8.Visible = false;
+					panel9.Visible = false;
+					label55.Visible = false;
+					label59.Visible = false;
+					label60.Visible = false;
+					label61.Visible = false;
+					label62.Visible = false;
+					n--;
+					label48.Text = Convert.ToString(listBox1.Items[n]);
+					n--;
+					label47.Text = Convert.ToString(listBox1.Items[n]);
+					n--;
+					label46.Text = Convert.ToString(listBox1.Items[n]);
+					n--;
+					label45.Text = Convert.ToString(listBox1.Items[n]);
+
+
+					label67.Text = Convert.ToString(n);
+					timetostart = 5;
+					label13.Visible = false;
+					timer21.Enabled = false;
+
+                }
+               
+			}
+
+			if (label67.Text == "0" && label13.Text == "<<Фініш!>>")
+			{
+				label13.Text = "Заїзди завершено!";
+			}
+		}
+		
+
+        private void timer15_Tick(object sender, EventArgs e)
 		{
 
 
@@ -1161,6 +1642,9 @@ namespace zase4kak
 
 		}
 
+
+		int n;
+
 		private void button2_Click(object sender, EventArgs e)
 		{
 			serialPort1.BaudRate = 9600;
@@ -1169,36 +1653,20 @@ namespace zase4kak
 			button1.Visible = true;
 			comboBox1.Visible = false;
 			label49.Visible = false;
-			
+			timer21.Enabled = true;
+
 
 			// цикл для підтягування спортсменів за результатами лаптайму
 
-			int n = listBox1.Items.Count - 1;
-
-			label48.Text = Convert.ToString(listBox1.Items[n]);
-			if (label48.Text == "")
-			{
-				for (int i = 0; i < n; n--)
-				{
-
-					label48.Text = Convert.ToString(listBox1.Items[n]);
-					if (label48.Text != "")
-                    {
-						break;
-                    }
-					
-				}
-				n--;
-				label47.Text = Convert.ToString(listBox1.Items[n]);
-				n--;
-				label46.Text = Convert.ToString(listBox1.Items[n]);
-				n--;
-				label45.Text = Convert.ToString(listBox1.Items[n]);
-				
-			}
+			
 
 			
 			button4.Visible = false;
+		}
+
+		private void button8_Click(object sender, EventArgs e)
+		{
+			timer21.Enabled = true;
 		}
 
 		private void timer10_Tick(object sender, EventArgs e)
@@ -1206,7 +1674,11 @@ namespace zase4kak
 
 			i++;                                            //добавляю кола 1 доріці
 			label17.Text = Convert.ToString(i);
-
+			if (Convert.ToDouble(label22.Text) < 1)			//обмеження по часу кола 1 секунда
+            {
+				i--;
+				label17.Text = Convert.ToString(i); 
+			}
 			//textBox15.Text = "0";
 			timer10.Enabled = false;
 		}
@@ -1215,6 +1687,10 @@ namespace zase4kak
 		{
 			label4.Text = Convert.ToString(mins) + ":" + Convert.ToString(secs);
 			secs--;
+
+			button6.Enabled = false;
+
+			
 
 			if (secs > 60)
 			{
@@ -1233,14 +1709,26 @@ namespace zase4kak
 			{
 				timer7.Enabled = false;
 				timer8.Enabled = true;
+
+				Time = Convert.ToDouble(label63.Text);
+				Timeg = Convert.ToDouble(label64.Text);
+				Timez = Convert.ToDouble(label65.Text);
+				Times = Convert.ToDouble(label66.Text);
+
+
 				sec = 1;
 				min = Convert.ToInt32(textBox13.Text);
 				label4.Text = "00:00";
 				label13.Text = "<<Гонка!>>";
 				label15.Text = "4/4";
 
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
 
-
+				button6.Enabled = true;
+				button6.Focus();
 			}
 		}
 
@@ -1273,8 +1761,26 @@ namespace zase4kak
 					panel8.Visible = false;
 					panel9.Visible = false;
 
+					number_group.Text = "0";
+					button8.Visible = true;
+					serialPort1.Close();
+					//вивід результату в таблицю
+					dataGridView1.Visible = true;
+
+					dataGridView1.Rows.Add("Червона",label45.Text, label17.Text);
+					
+					dataGridView1.Rows.Add("Зелена",label46.Text, label24.Text);
+					
+					dataGridView1.Rows.Add("Синя",label47.Text, label23.Text);
+					
+					dataGridView1.Rows.Add("Жовта",label48.Text, label25.Text);
+					//сортування результату гонки в таблиці
+
+					
+					dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
 					
 					
+
 				}
 
 
@@ -1543,7 +2049,7 @@ namespace zase4kak
 				}
 			}
 
-			if (Convert.ToInt32(textBox15.Text) == 01001)
+			if (Convert.ToInt32(textBox15.Text) == 01011)
 			{
 				i = Convert.ToInt32(label17.Text);          //червона  + Зелена+ Синя доріжка
 				timer10.Enabled = true;
@@ -1975,7 +2481,13 @@ namespace zase4kak
 			b++;                                            //добавляю кола 1 доріці
 			label23.Text = Convert.ToString(b);
 
-			
+
+			if (Convert.ToDouble(label34.Text) < 1)         //обмеження по часу кола 1 секунда
+			{
+				b--;
+				label23.Text = Convert.ToString(b);
+			}
+
 			timer12.Enabled = false;
 		}
 

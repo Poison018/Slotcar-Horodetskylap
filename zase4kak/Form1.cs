@@ -21,7 +21,12 @@ namespace zase4kak
         {
             Form2 f2 = new Form2();
             f2.Show();
-            this.Hide();
+            this.Visible = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

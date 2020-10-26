@@ -54,6 +54,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox2
@@ -93,7 +94,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(786, 214);
+            this.button2.Location = new System.Drawing.Point(184, 237);
             this.button2.Margin = new System.Windows.Forms.Padding(1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(145, 34);
@@ -175,6 +176,7 @@
             this.checkBox8.TabIndex = 42;
             this.checkBox8.Text = "чорна   ";
             this.checkBox8.UseVisualStyleBackColor = false;
+            this.checkBox8.Visible = false;
             // 
             // checkBox9
             // 
@@ -187,6 +189,7 @@
             this.checkBox9.TabIndex = 41;
             this.checkBox9.Text = "біла        ";
             this.checkBox9.UseVisualStyleBackColor = false;
+            this.checkBox9.Visible = false;
             // 
             // checkBox4
             // 
@@ -199,6 +202,7 @@
             this.checkBox4.TabIndex = 40;
             this.checkBox4.Text = "оранжева";
             this.checkBox4.UseVisualStyleBackColor = false;
+            this.checkBox4.Visible = false;
             // 
             // checkBox5
             // 
@@ -211,6 +215,7 @@
             this.checkBox5.TabIndex = 39;
             this.checkBox5.Text = "фіолетова";
             this.checkBox5.UseVisualStyleBackColor = false;
+            this.checkBox5.Visible = false;
             // 
             // checkBox6
             // 
@@ -223,6 +228,7 @@
             this.checkBox6.TabIndex = 38;
             this.checkBox6.Text = "жовта    ";
             this.checkBox6.UseVisualStyleBackColor = false;
+            this.checkBox6.Visible = false;
             // 
             // checkBox3
             // 
@@ -236,6 +242,7 @@
             this.checkBox3.TabIndex = 37;
             this.checkBox3.Text = "синя       ";
             this.checkBox3.UseVisualStyleBackColor = false;
+            this.checkBox3.Visible = false;
             // 
             // checkBox2
             // 
@@ -248,6 +255,7 @@
             this.checkBox2.TabIndex = 36;
             this.checkBox2.Text = "зелена  ";
             this.checkBox2.UseVisualStyleBackColor = false;
+            this.checkBox2.Visible = false;
             // 
             // checkBox1
             // 
@@ -260,6 +268,7 @@
             this.checkBox1.TabIndex = 35;
             this.checkBox1.Text = "червона";
             this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.Visible = false;
             // 
             // label1
             // 
@@ -299,7 +308,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(591, 62);
+            this.label6.Location = new System.Drawing.Point(299, 71);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(181, 24);
@@ -308,7 +317,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(786, 67);
+            this.textBox3.Location = new System.Drawing.Point(494, 76);
             this.textBox3.Margin = new System.Windows.Forms.Padding(1);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(47, 20);
@@ -318,7 +327,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(591, 96);
+            this.label7.Location = new System.Drawing.Point(299, 105);
             this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(184, 24);
@@ -327,17 +336,30 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(786, 101);
+            this.textBox4.Location = new System.Drawing.Point(494, 110);
             this.textBox4.Margin = new System.Windows.Forms.Padding(1);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(47, 20);
             this.textBox4.TabIndex = 55;
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(360, 219);
+            this.button3.Margin = new System.Windows.Forms.Padding(1);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(154, 71);
+            this.button3.TabIndex = 56;
+            this.button3.Text = "Закрити програму";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 318);
+            this.ClientSize = new System.Drawing.Size(597, 318);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox3);
@@ -362,6 +384,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -396,5 +420,6 @@
         public System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button3;
     }
 }
