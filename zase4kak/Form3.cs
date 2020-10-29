@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO.Ports;
 using System.Threading;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Data;
 
 
 namespace zase4kak
@@ -646,7 +647,7 @@ namespace zase4kak
 			button1.Visible = true;
 			comboBox1.Visible = false;
 			label49.Visible = false;
-			timer21.Enabled = true;
+			
 			button1.Focus();
 			
 		}
@@ -1603,6 +1604,7 @@ namespace zase4kak
 			if (label67.Text == "0" && label13.Text == "<<Фініш!>>")
 			{
 				label13.Text = "Заїзди завершено!";
+				button6.Visible = false;
 			}
 		}
 		
@@ -1616,7 +1618,39 @@ namespace zase4kak
 
 		}
 
-		private void timer11_Tick(object sender, EventArgs e)
+        private void button9_Click(object sender, EventArgs e)
+        {
+			label68.Visible = false;
+			textBox20.Visible = false;
+			textBox21.Visible = false;
+			textBox22.Visible = false;
+			textBox23.Visible = false;
+			button9.Visible = false;
+
+			button8.Visible = true;
+
+			dataGridView1.Visible = true;
+
+			dataGridView1.Rows.Add("Червона", label45.Text, label17.Text + "," + textBox20.Text);
+
+			dataGridView1.Rows.Add("Зелена", label46.Text, label24.Text + "," + textBox22.Text);
+
+			dataGridView1.Rows.Add("Синя", label47.Text, label23.Text + "," + textBox21.Text);
+
+			dataGridView1.Rows.Add("Жовта", label48.Text, label25.Text + "," + textBox23.Text);
+			//сортування результату гонки в таблиці
+
+
+			dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
+
+			textBox20.Text = "";
+			textBox21.Text = "";
+			textBox22.Text = "";
+			textBox23.Text = "";
+
+		}
+
+        private void timer11_Tick(object sender, EventArgs e)
 		{
 
 
@@ -1664,9 +1698,48 @@ namespace zase4kak
 			button4.Visible = false;
 		}
 
+		void SaveTable(DataGridView Whats_save)
+		{
+			string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "result_of_racing.xlsx";
+
+			Excel.Application excel_lapp = new Excel.Application();
+			Excel.Workbook workbooks = excel_lapp.Workbooks.Add();
+			Excel.Worksheet worksheet = workbooks.ActiveSheet;
+
+			for (int i = 1; i < Whats_save.RowCount + 1; i++)
+			{
+				for (int j = 1; j < Whats_save.ColumnCount+1; j++)
+				{
+					worksheet.Rows[i].Columns[j] = Whats_save.Rows[i - 1].Cells[j - 1].Value;
+
+				}
+			}
+			excel_lapp.AlertBeforeOverwriting = false;
+			workbooks.SaveAs(path);
+			workbooks.Close();
+
+			GC.Collect();
+
+
+			
+
+		}
+
 		private void button8_Click(object sender, EventArgs e)
 		{
+			button1.Focus();
 			timer21.Enabled = true;
+			SaveTable(dataGridView1);
+			
+			if(label13.Text == "Заїзди завершено!")
+            {
+				button6.Enabled = false;
+				
+            }
+            else
+            {
+				button6.Enabled = true;
+            }
 		}
 
 		private void timer10_Tick(object sender, EventArgs e)
@@ -1750,6 +1823,14 @@ namespace zase4kak
 
 				if (min == -1 && sec == 60)
 				{
+					label68.Visible = true;
+					textBox20.Visible = true;
+					textBox21.Visible = true;
+					textBox22.Visible = true;
+					textBox23.Visible = true;
+					button9.Visible = true;
+					button6.Enabled = false;
+					
 
 					timer8.Enabled = false;
 					label4.Text = "00:00";
@@ -1762,22 +1843,10 @@ namespace zase4kak
 					panel9.Visible = false;
 
 					number_group.Text = "0";
-					button8.Visible = true;
+					
 					serialPort1.Close();
 					//вивід результату в таблицю
-					dataGridView1.Visible = true;
-
-					dataGridView1.Rows.Add("Червона",label45.Text, label17.Text);
 					
-					dataGridView1.Rows.Add("Зелена",label46.Text, label24.Text);
-					
-					dataGridView1.Rows.Add("Синя",label47.Text, label23.Text);
-					
-					dataGridView1.Rows.Add("Жовта",label48.Text, label25.Text);
-					//сортування результату гонки в таблиці
-
-					
-					dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
 					
 					
 

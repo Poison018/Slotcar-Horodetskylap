@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox33 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -101,6 +105,15 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox192 = new System.Windows.Forms.TextBox();
+            this.textBox190 = new System.Windows.Forms.TextBox();
+            this.textBox189 = new System.Windows.Forms.TextBox();
+            this.textBox194 = new System.Windows.Forms.TextBox();
+            this.textBox193 = new System.Windows.Forms.TextBox();
+            this.textBox198 = new System.Windows.Forms.TextBox();
+            this.textBox197 = new System.Windows.Forms.TextBox();
+            this.textBox202 = new System.Windows.Forms.TextBox();
+            this.textBox201 = new System.Windows.Forms.TextBox();
             this.textBox185 = new System.Windows.Forms.TextBox();
             this.textBox186 = new System.Windows.Forms.TextBox();
             this.textBox181 = new System.Windows.Forms.TextBox();
@@ -109,30 +122,17 @@
             this.textBox178 = new System.Windows.Forms.TextBox();
             this.textBox172 = new System.Windows.Forms.TextBox();
             this.textBox171 = new System.Windows.Forms.TextBox();
-            this.textBox201 = new System.Windows.Forms.TextBox();
-            this.textBox202 = new System.Windows.Forms.TextBox();
-            this.textBox197 = new System.Windows.Forms.TextBox();
-            this.textBox198 = new System.Windows.Forms.TextBox();
-            this.textBox193 = new System.Windows.Forms.TextBox();
-            this.textBox194 = new System.Windows.Forms.TextBox();
-            this.textBox189 = new System.Windows.Forms.TextBox();
-            this.textBox190 = new System.Windows.Forms.TextBox();
-            this.textBox192 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -146,20 +146,47 @@
             this.dataGridView1.Location = new System.Drawing.Point(618, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.Size = new System.Drawing.Size(552, 970);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Column3.HeaderText = "Місце";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 50;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Column1.HeaderText = "Спортсмен";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 300;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Результат";
+            this.Column2.Name = "Column2";
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Група";
+            this.Column4.Name = "Column4";
             // 
             // button1
             // 
@@ -867,6 +894,109 @@
             this.panel1.TabIndex = 156;
             this.panel1.Visible = false;
             // 
+            // textBox192
+            // 
+            this.textBox192.Location = new System.Drawing.Point(47, 419);
+            this.textBox192.Name = "textBox192";
+            this.textBox192.Size = new System.Drawing.Size(100, 20);
+            this.textBox192.TabIndex = 210;
+            // 
+            // textBox190
+            // 
+            this.textBox190.Enabled = false;
+            this.textBox190.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.textBox190.Location = new System.Drawing.Point(170, 384);
+            this.textBox190.Name = "textBox190";
+            this.textBox190.Size = new System.Drawing.Size(24, 22);
+            this.textBox190.TabIndex = 202;
+            this.textBox190.Visible = false;
+            // 
+            // textBox189
+            // 
+            this.textBox189.Enabled = false;
+            this.textBox189.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox189.HideSelection = false;
+            this.textBox189.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox189.Location = new System.Drawing.Point(108, 391);
+            this.textBox189.Name = "textBox189";
+            this.textBox189.Size = new System.Drawing.Size(20, 22);
+            this.textBox189.TabIndex = 203;
+            this.textBox189.TabStop = false;
+            this.textBox189.Text = "999";
+            this.textBox189.Visible = false;
+            // 
+            // textBox194
+            // 
+            this.textBox194.Enabled = false;
+            this.textBox194.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.textBox194.Location = new System.Drawing.Point(139, 294);
+            this.textBox194.Name = "textBox194";
+            this.textBox194.Size = new System.Drawing.Size(24, 22);
+            this.textBox194.TabIndex = 204;
+            this.textBox194.Visible = false;
+            // 
+            // textBox193
+            // 
+            this.textBox193.Enabled = false;
+            this.textBox193.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox193.HideSelection = false;
+            this.textBox193.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox193.Location = new System.Drawing.Point(92, 307);
+            this.textBox193.Name = "textBox193";
+            this.textBox193.Size = new System.Drawing.Size(20, 22);
+            this.textBox193.TabIndex = 205;
+            this.textBox193.TabStop = false;
+            this.textBox193.Text = "999";
+            this.textBox193.Visible = false;
+            // 
+            // textBox198
+            // 
+            this.textBox198.Enabled = false;
+            this.textBox198.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.textBox198.Location = new System.Drawing.Point(123, 322);
+            this.textBox198.Name = "textBox198";
+            this.textBox198.Size = new System.Drawing.Size(24, 22);
+            this.textBox198.TabIndex = 206;
+            this.textBox198.Visible = false;
+            // 
+            // textBox197
+            // 
+            this.textBox197.Enabled = false;
+            this.textBox197.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox197.HideSelection = false;
+            this.textBox197.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox197.Location = new System.Drawing.Point(174, 322);
+            this.textBox197.Name = "textBox197";
+            this.textBox197.Size = new System.Drawing.Size(20, 22);
+            this.textBox197.TabIndex = 207;
+            this.textBox197.TabStop = false;
+            this.textBox197.Text = "999";
+            this.textBox197.Visible = false;
+            // 
+            // textBox202
+            // 
+            this.textBox202.Enabled = false;
+            this.textBox202.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.textBox202.Location = new System.Drawing.Point(104, 359);
+            this.textBox202.Name = "textBox202";
+            this.textBox202.Size = new System.Drawing.Size(24, 22);
+            this.textBox202.TabIndex = 208;
+            this.textBox202.Visible = false;
+            // 
+            // textBox201
+            // 
+            this.textBox201.Enabled = false;
+            this.textBox201.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox201.HideSelection = false;
+            this.textBox201.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox201.Location = new System.Drawing.Point(134, 359);
+            this.textBox201.Name = "textBox201";
+            this.textBox201.Size = new System.Drawing.Size(20, 22);
+            this.textBox201.TabIndex = 209;
+            this.textBox201.TabStop = false;
+            this.textBox201.Text = "999";
+            this.textBox201.Visible = false;
+            // 
             // textBox185
             // 
             this.textBox185.Enabled = false;
@@ -963,109 +1093,6 @@
             this.textBox171.TabIndex = 194;
             this.textBox171.Visible = false;
             // 
-            // textBox201
-            // 
-            this.textBox201.Enabled = false;
-            this.textBox201.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox201.HideSelection = false;
-            this.textBox201.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox201.Location = new System.Drawing.Point(134, 359);
-            this.textBox201.Name = "textBox201";
-            this.textBox201.Size = new System.Drawing.Size(20, 22);
-            this.textBox201.TabIndex = 209;
-            this.textBox201.TabStop = false;
-            this.textBox201.Text = "999";
-            this.textBox201.Visible = false;
-            // 
-            // textBox202
-            // 
-            this.textBox202.Enabled = false;
-            this.textBox202.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox202.Location = new System.Drawing.Point(104, 359);
-            this.textBox202.Name = "textBox202";
-            this.textBox202.Size = new System.Drawing.Size(24, 22);
-            this.textBox202.TabIndex = 208;
-            this.textBox202.Visible = false;
-            // 
-            // textBox197
-            // 
-            this.textBox197.Enabled = false;
-            this.textBox197.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox197.HideSelection = false;
-            this.textBox197.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox197.Location = new System.Drawing.Point(174, 322);
-            this.textBox197.Name = "textBox197";
-            this.textBox197.Size = new System.Drawing.Size(20, 22);
-            this.textBox197.TabIndex = 207;
-            this.textBox197.TabStop = false;
-            this.textBox197.Text = "999";
-            this.textBox197.Visible = false;
-            // 
-            // textBox198
-            // 
-            this.textBox198.Enabled = false;
-            this.textBox198.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox198.Location = new System.Drawing.Point(123, 322);
-            this.textBox198.Name = "textBox198";
-            this.textBox198.Size = new System.Drawing.Size(24, 22);
-            this.textBox198.TabIndex = 206;
-            this.textBox198.Visible = false;
-            // 
-            // textBox193
-            // 
-            this.textBox193.Enabled = false;
-            this.textBox193.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox193.HideSelection = false;
-            this.textBox193.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox193.Location = new System.Drawing.Point(92, 307);
-            this.textBox193.Name = "textBox193";
-            this.textBox193.Size = new System.Drawing.Size(20, 22);
-            this.textBox193.TabIndex = 205;
-            this.textBox193.TabStop = false;
-            this.textBox193.Text = "999";
-            this.textBox193.Visible = false;
-            // 
-            // textBox194
-            // 
-            this.textBox194.Enabled = false;
-            this.textBox194.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox194.Location = new System.Drawing.Point(139, 294);
-            this.textBox194.Name = "textBox194";
-            this.textBox194.Size = new System.Drawing.Size(24, 22);
-            this.textBox194.TabIndex = 204;
-            this.textBox194.Visible = false;
-            // 
-            // textBox189
-            // 
-            this.textBox189.Enabled = false;
-            this.textBox189.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox189.HideSelection = false;
-            this.textBox189.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox189.Location = new System.Drawing.Point(108, 391);
-            this.textBox189.Name = "textBox189";
-            this.textBox189.Size = new System.Drawing.Size(20, 22);
-            this.textBox189.TabIndex = 203;
-            this.textBox189.TabStop = false;
-            this.textBox189.Text = "999";
-            this.textBox189.Visible = false;
-            // 
-            // textBox190
-            // 
-            this.textBox190.Enabled = false;
-            this.textBox190.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox190.Location = new System.Drawing.Point(170, 384);
-            this.textBox190.Name = "textBox190";
-            this.textBox190.Size = new System.Drawing.Size(24, 22);
-            this.textBox190.TabIndex = 202;
-            this.textBox190.Visible = false;
-            // 
-            // textBox192
-            // 
-            this.textBox192.Location = new System.Drawing.Point(47, 419);
-            this.textBox192.Name = "textBox192";
-            this.textBox192.Size = new System.Drawing.Size(100, 20);
-            this.textBox192.TabIndex = 210;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -1089,33 +1116,6 @@
             this.label2.Size = new System.Drawing.Size(244, 42);
             this.label2.TabIndex = 203;
             this.label2.Text = "Клас моделі";
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column3.HeaderText = "Місце";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 50;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.HeaderText = "Спортсмен";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 300;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Результат";
-            this.Column2.Name = "Column2";
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Група";
-            this.Column4.Name = "Column4";
             // 
             // Form6
             // 

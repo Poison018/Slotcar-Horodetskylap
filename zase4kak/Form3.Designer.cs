@@ -155,13 +155,18 @@
             this.button7 = new System.Windows.Forms.Button();
             this.timer20 = new System.Windows.Forms.Timer(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button8 = new System.Windows.Forms.Button();
-            this.timer21 = new System.Windows.Forms.Timer(this.components);
-            this.label67 = new System.Windows.Forms.Label();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button8 = new System.Windows.Forms.Button();
+            this.timer21 = new System.Windows.Forms.Timer(this.components);
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -274,7 +279,7 @@
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label59.Location = new System.Drawing.Point(969, 8);
+            this.label59.Location = new System.Drawing.Point(963, 11);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(36, 38);
             this.label59.TabIndex = 40;
@@ -370,7 +375,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(841, -10);
+            this.label17.Location = new System.Drawing.Point(831, -10);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(69, 73);
             this.label17.TabIndex = 9;
@@ -534,7 +539,7 @@
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label60.Location = new System.Drawing.Point(969, 10);
+            this.label60.Location = new System.Drawing.Point(963, 10);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(36, 38);
             this.label60.TabIndex = 41;
@@ -607,7 +612,7 @@
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(841, -6);
+            this.label24.Location = new System.Drawing.Point(827, -6);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(69, 73);
             this.label24.TabIndex = 36;
@@ -718,7 +723,7 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label61.Location = new System.Drawing.Point(969, 10);
+            this.label61.Location = new System.Drawing.Point(963, 10);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(36, 38);
             this.label61.TabIndex = 42;
@@ -803,7 +808,7 @@
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(841, -10);
+            this.label23.Location = new System.Drawing.Point(827, -11);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(69, 73);
             this.label23.TabIndex = 36;
@@ -913,7 +918,7 @@
             // 
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label62.Location = new System.Drawing.Point(969, 6);
+            this.label62.Location = new System.Drawing.Point(963, 6);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(36, 38);
             this.label62.TabIndex = 43;
@@ -1008,7 +1013,7 @@
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(841, -7);
+            this.label25.Location = new System.Drawing.Point(827, -7);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(69, 73);
             this.label25.TabIndex = 34;
@@ -1126,7 +1131,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(785, 814);
+            this.button1.Location = new System.Drawing.Point(785, 834);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(458, 148);
@@ -1470,7 +1475,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
-            this.button6.Location = new System.Drawing.Point(785, 814);
+            this.button6.Location = new System.Drawing.Point(784, 834);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(458, 148);
             this.button6.TabIndex = 48;
@@ -1483,7 +1488,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
-            this.button7.Location = new System.Drawing.Point(785, 814);
+            this.button7.Location = new System.Drawing.Point(785, 834);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(458, 148);
             this.button7.TabIndex = 49;
@@ -1505,13 +1510,31 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
             this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(1340, 535);
+            this.Column2});
+            this.dataGridView1.Location = new System.Drawing.Point(1363, 549);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(440, 500);
+            this.dataGridView1.Size = new System.Drawing.Size(417, 500);
             this.dataGridView1.TabIndex = 50;
             this.dataGridView1.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Доріжка";
+            this.Column4.Name = "Column4";
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Спортсмен";
+            this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Width = 180;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Результат";
+            this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // button8
             // 
@@ -1539,32 +1562,63 @@
             this.label67.Text = "0";
             this.label67.Visible = false;
             // 
-            // Column4
+            // label68
             // 
-            this.Column4.HeaderText = "Доріжка";
-            this.Column4.Name = "Column4";
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label68.Location = new System.Drawing.Point(843, 574);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(227, 24);
+            this.label68.TabIndex = 53;
+            this.label68.Text = "<<Введіть сектора!>>";
+            this.label68.Visible = false;
             // 
-            // Column1
+            // textBox20
             // 
-            this.Column1.HeaderText = "Спортсмен";
-            this.Column1.Name = "Column1";
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 150;
+            this.textBox20.BackColor = System.Drawing.Color.Red;
+            this.textBox20.Location = new System.Drawing.Point(837, 607);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(100, 20);
+            this.textBox20.TabIndex = 54;
+            this.textBox20.Visible = false;
             // 
-            // Column2
+            // textBox21
             // 
-            this.Column2.HeaderText = "Результат";
-            this.Column2.Name = "Column2";
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column2.Width = 70;
+            this.textBox21.BackColor = System.Drawing.Color.DodgerBlue;
+            this.textBox21.Location = new System.Drawing.Point(958, 607);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(100, 20);
+            this.textBox21.TabIndex = 55;
+            this.textBox21.Visible = false;
             // 
-            // Column3
+            // textBox22
             // 
-            this.Column3.HeaderText = "Сектор";
-            this.Column3.Name = "Column3";
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column3.Width = 80;
+            this.textBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.textBox22.Location = new System.Drawing.Point(837, 632);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(100, 20);
+            this.textBox22.TabIndex = 56;
+            this.textBox22.Visible = false;
+            // 
+            // textBox23
+            // 
+            this.textBox23.BackColor = System.Drawing.Color.Gold;
+            this.textBox23.Location = new System.Drawing.Point(958, 632);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(100, 20);
+            this.textBox23.TabIndex = 57;
+            this.textBox23.Visible = false;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(1075, 627);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(76, 25);
+            this.button9.TabIndex = 58;
+            this.button9.Text = "Зберегти";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Visible = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Form3
             // 
@@ -1572,6 +1626,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.textBox23);
+            this.Controls.Add(this.textBox22);
+            this.Controls.Add(this.textBox21);
+            this.Controls.Add(this.textBox20);
+            this.Controls.Add(this.label68);
             this.Controls.Add(this.label67);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.dataGridView1);
@@ -1766,9 +1826,14 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Timer timer21;
         private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

@@ -3560,7 +3560,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 2;
+            this.timer1.Interval = 1000;
             this.timer1.Tag = "таймер часу лап тайму";
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
@@ -3574,7 +3574,7 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 2;
+            this.timer2.Interval = 1000;
             this.timer2.Tag = "таймер часу переходу";
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
