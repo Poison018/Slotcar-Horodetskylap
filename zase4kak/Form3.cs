@@ -11,7 +11,7 @@ using System.IO.Ports;
 using System.Threading;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Data;
-
+using System.Media;
 
 namespace zase4kak
 {
@@ -19,6 +19,13 @@ namespace zase4kak
 	{
 		string[,] list = new string[50, 5];
 		string[] name = new string[40];
+		SoundPlayer timetostartsound = new SoundPlayer();
+		SoundPlayer kinetsgonkisound = new SoundPlayer();
+		SoundPlayer pausesound = new SoundPlayer();
+		SoundPlayer startsound = new SoundPlayer();
+		SoundPlayer perehid = new SoundPlayer();
+		int timetotraning = 60;
+
 		public Form3()
 		{
 			InitializeComponent();
@@ -77,9 +84,15 @@ namespace zase4kak
 
 			timer15.Interval = 15; //timer на час кола
 			Times = 0.0;             //timer на час кола
+			
 
-
-
+			if (label4.Text == "4")				//звук для time to start
+			{
+				
+				timetostartsound.SoundLocation = "music/81980c1a7dcb7cd.wav";
+				timetostartsound.Load();
+				timetostartsound.Play();
+			}
 
 			label4.Text = Convert.ToString(timetostart); //вивід стартового таймера у лейбл
 			timetostart--;
@@ -107,7 +120,19 @@ namespace zase4kak
 					timer16.Enabled = true;
 					timer17.Enabled = true;
 					timer15.Enabled = true;
+					serialPort1.Open();
+					serialPort1.WriteLine("4");
+					serialPort1.Close();
+					label69.Text = "Трек включений";
+					label69.BackColor = Color.Green;
+					button10.Enabled = false;
+					button11.Enabled = true;
+
+					
+
 				}
+
+				
 
 
 
@@ -133,7 +158,12 @@ namespace zase4kak
 
 				if (min == -1 && sec == 60)
 				{
-
+					perehid.Play();
+					serialPort1.WriteLine("3");//пауза
+					label69.Text = "Трек виключений";
+					label69.BackColor = Color.Red;
+					button10.Enabled = true;
+					button11.Enabled = false;
 					timer2.Enabled = false;
 					label4.Text = "00:00";
 					secs = Convert.ToInt32(textBox14.Text);
@@ -246,6 +276,12 @@ namespace zase4kak
 
 			if (secs == 0 && mins == 0)
 			{
+
+				serialPort1.WriteLine("4"); //продовжити 
+				label69.Text = "Трек включений";
+				label69.BackColor = Color.Green;
+				button10.Enabled = false;
+				button11.Enabled = true;
 				Time = Convert.ToDouble(label63.Text);
 				Timeg = Convert.ToDouble(label64.Text);
 				Timez = Convert.ToDouble(label65.Text);
@@ -287,7 +323,12 @@ namespace zase4kak
 
 				if (min == -1 && sec == 60)
 				{
-
+					perehid.Play();
+					serialPort1.WriteLine("3");//пауза
+					label69.Text = "Трек виключений";
+					label69.BackColor = Color.Red;
+					button10.Enabled = true;
+					button11.Enabled = false;
 					timer4.Enabled = false;
 					label4.Text = "00:00";
 					secs = Convert.ToInt32(textBox14.Text);
@@ -390,6 +431,11 @@ namespace zase4kak
 
 			if (secs == 0 && mins == 0)
 			{
+				serialPort1.WriteLine("4"); //продовжити 
+				label69.Text = "Трек включений";
+				label69.BackColor = Color.Green;
+				button10.Enabled = false;
+				button11.Enabled = true;
 				timer5.Enabled = false;
 				timer6.Enabled = true;
 
@@ -418,6 +464,13 @@ namespace zase4kak
 
 		private void Form3_Load(object sender, EventArgs e)
 		{
+			perehid.SoundLocation = "music/perehid.wav";
+			perehid.Load();
+			pausesound.SoundLocation = "music/noty-do.wav";
+			pausesound.Load();
+			startsound.SoundLocation = "music/re.wav";
+			startsound.Load();
+			kinetsgonkisound.SoundLocation = "music/aplodismenty_s_krikami_bravo.wav";
 			String[] strPortName = SerialPort.GetPortNames();
 			foreach (string n in strPortName)
 			{
@@ -448,7 +501,12 @@ namespace zase4kak
 
 				if (min == -1 && sec == 60)
 				{
-
+					perehid.Play();
+					serialPort1.WriteLine("3");//пауза
+					label69.Text = "Трек виключений";
+					label69.BackColor = Color.Red;
+					button10.Enabled = true;
+					button11.Enabled = false;
 					timer6.Enabled = false;
 					label4.Text = "00:00";
 					secs = Convert.ToInt32(textBox14.Text);
@@ -647,7 +705,10 @@ namespace zase4kak
 			button1.Visible = true;
 			comboBox1.Visible = false;
 			label49.Visible = false;
-			
+			serialPort1.Open();
+			serialPort1.WriteLine("3");
+			serialPort1.Close();
+
 			button1.Focus();
 			
 		}
@@ -1222,6 +1283,13 @@ namespace zase4kak
 
         private void button6_Click(object sender, EventArgs e)
         {
+			serialPort1.WriteLine("3");
+			label69.Text = "Трек виключений";
+			label69.BackColor = Color.Red;
+			button10.Enabled = true;
+			button11.Enabled = false;
+
+			pausesound.Play();
 			if(number_group.Text == "0")	// кнопка пауза для 1 заїзду
             {
 				timer2.Enabled = false;
@@ -1269,11 +1337,18 @@ namespace zase4kak
 				button7.Visible = true;
 				button7.Focus();
 			}
+			
 		}
 
         private void button7_Click(object sender, EventArgs e)
         {
+			serialPort1.WriteLine("4");
+			label69.Text = "Трек включений";
+			label69.BackColor = Color.Green;
+			button10.Enabled = false;
 
+			button11.Enabled = true;
+			startsound.Play();
 			if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
 			{
 				timer2.Enabled = true;
@@ -1327,6 +1402,7 @@ namespace zase4kak
         {
 			if (e.KeyCode == Keys.Space)
 			{
+				serialPort1.WriteLine("4");
 				if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
 				{
 					timer2.Enabled = true;
@@ -1387,6 +1463,9 @@ namespace zase4kak
         {
 			if(e.KeyCode == Keys.Space)
             {
+
+				serialPort1.WriteLine("3");
+
 				if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
 				{
 					timer2.Enabled = false;
@@ -1441,6 +1520,7 @@ namespace zase4kak
         {
 			if(e.KeyCode == Keys.Space)
             {
+				serialPort1.WriteLine("4");
 				timer1.Enabled = true;
 				button1.Visible = false;
 				button6.Visible = true;
@@ -1650,6 +1730,78 @@ namespace zase4kak
 
 		}
 
+		private void button10_Click(object sender, EventArgs e)
+		{
+			serialPort1.Open();
+			serialPort1.WriteLine("4");
+			serialPort1.Close();
+			label69.Text = "Трек включений";
+			label69.BackColor = Color.Green;
+			button10.Enabled = false;
+			button11.Enabled = true;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+			serialPort1.Open();
+			serialPort1.WriteLine("3");
+			serialPort1.Close();
+			label69.Text = "Трек виключений";
+			label69.BackColor = Color.Red;
+			button10.Enabled = true;
+			button11.Enabled = false;
+		}
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+			button12.Visible = false;
+			button13.Visible = true;
+			label13.Visible = true;
+			label13.Text = "<<1 хв Тренування!>>";
+			label70.Visible = true;
+			timetotraning = 60;
+			label70.Text = "60";
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+			button1.Enabled = false;
+			label69.Text = "Трек включений";
+			label69.BackColor = Color.Green;
+			serialPort1.Open();
+			serialPort1.WriteLine("4");
+			serialPort1.Close();
+			timer22.Enabled = true;
+        }
+
+        private void timer22_Tick(object sender, EventArgs e)
+        {
+			if (Convert.ToInt32(label70.Text) != 0)
+            {
+				label70.Text = Convert.ToString(timetotraning);
+				timetotraning--;
+
+            }
+            else
+            {
+				label70.Visible = false;
+				button12.Visible = true;
+				timer22.Enabled = false;
+				label70.Text = "60";
+				timetotraning = 60;
+				button13.Visible = false;
+				serialPort1.Open();
+				serialPort1.WriteLine("3");
+				serialPort1.Close();
+				label69.Text = "Трек виключений";
+				label69.BackColor = Color.Red;
+				label13.Visible = false;
+				button1.Enabled = true;
+
+
+			}
+        }
+
         private void timer11_Tick(object sender, EventArgs e)
 		{
 
@@ -1673,7 +1825,7 @@ namespace zase4kak
 		private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
 		{
 			textBox15.AppendText(serialPort1.ReadLine());
-
+			
 		}
 
 
@@ -1688,13 +1840,21 @@ namespace zase4kak
 			comboBox1.Visible = false;
 			label49.Visible = false;
 			timer21.Enabled = true;
+			serialPort1.Open();
+			serialPort1.WriteLine("3");
+			serialPort1.Close();
+			label69.Visible = true;
+			button10.Visible = true;
+			button11.Visible = true;
+			button12.Visible = true;
+
 
 
 			// цикл для підтягування спортсменів за результатами лаптайму
 
-			
 
-			
+
+
 			button4.Visible = false;
 		}
 
@@ -1780,6 +1940,13 @@ namespace zase4kak
 
 			if (secs == 0 && mins == 0)
 			{
+
+				serialPort1.WriteLine("4"); //продовжити 
+				label69.Text = "Трек включений";
+				label69.BackColor = Color.Green;
+				button10.Enabled = false;
+				button11.Enabled = true;
+
 				timer7.Enabled = false;
 				timer8.Enabled = true;
 
@@ -1823,6 +1990,14 @@ namespace zase4kak
 
 				if (min == -1 && sec == 60)
 				{
+
+					serialPort1.WriteLine("3"); //пауза
+					label69.Text = "Трек виключений";
+					label69.BackColor = Color.Red;
+					button10.Enabled = true;
+					button11.Enabled = false;
+
+					kinetsgonkisound.Play();
 					label68.Visible = true;
 					textBox20.Visible = true;
 					textBox21.Visible = true;
@@ -1864,609 +2039,52 @@ namespace zase4kak
 
 
 
-
-
-			if (Convert.ToInt32(textBox15.Text) == 01111) // зелена + Синя+ Жовта+Червона доріжка
-			{
-				c = Convert.ToInt32(label24.Text);
-				timer13.Enabled = true;
-				timer17.Enabled = false;
-				label29.Text = label27.Text;
-				Timez = 0;
-				timer17.Enabled = true;
-				label31.Text = label32.Text;
-				label32.Text = label30.Text;
-				label30.Text = label29.Text;
-				label24.Text = Convert.ToString(c);
-
-
-				b = Convert.ToInt32(label23.Text);
-				timer12.Enabled = true;
-				timer15.Enabled = false;
-				label37.Text = label26.Text;
-				Times = 0;
-				timer15.Enabled = true;
-				label35.Text = label36.Text;
-				label36.Text = label34.Text;
-				label34.Text = label37.Text;
-				label23.Text = Convert.ToString(b);
-
-
-				d = Convert.ToInt32(label25.Text);
-				timer14.Enabled = true;
-				timer16.Enabled = false;
-				label38.Text = label28.Text;
-				Timeg = 0;
-				timer16.Enabled = true;
-				label40.Text = label41.Text;
-				label41.Text = label39.Text;
-				label39.Text = label38.Text;
-				label25.Text = Convert.ToString(d);
-
-				i = Convert.ToInt32(label17.Text);         
-				timer10.Enabled = true;
-				timer11.Enabled = false;
-				label18.Text = label21.Text;
-				Time = 0;
-				timer11.Enabled = true;
-				label20.Text = label19.Text;
-				label19.Text = label22.Text;
-				label22.Text = label18.Text;
-				label17.Text = Convert.ToString(i);
-				textBox15.Text = "0";
-
-				if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				{
-					label16.Text = label18.Text;
-
-				}
-
-				if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				{
-					label44.Text = label38.Text;
-
-				}
-
-				if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				{
-					label43.Text = label37.Text;
-
-				}
-
-				if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				{
-					label42.Text = label29.Text;
-
-				}
-
-
-			}
-
-			if (Convert.ToInt32(textBox15.Text) == 01110) // зелена + Синя+ Жовта доріжка
-			{
-				c = Convert.ToInt32(label24.Text);
-				timer13.Enabled = true;
-				timer17.Enabled = false;
-				label29.Text = label27.Text;
-				Timez = 0;
-				timer17.Enabled = true;
-				label31.Text = label32.Text;
-				label32.Text = label30.Text;
-				label30.Text = label29.Text;
-				label24.Text = Convert.ToString(c);
-
-
-				b = Convert.ToInt32(label23.Text);
-				timer12.Enabled = true;
-				timer15.Enabled = false;
-				label37.Text = label26.Text;
-				Times = 0;
-				timer15.Enabled = true;
-				label35.Text = label36.Text;
-				label36.Text = label34.Text;
-				label34.Text = label37.Text;
-				label23.Text = Convert.ToString(b);
-
-
-				d = Convert.ToInt32(label25.Text);
-				timer14.Enabled = true;
-				timer16.Enabled = false;
-				label38.Text = label28.Text;
-				Timeg = 0;
-				timer16.Enabled = true;
-				label40.Text = label41.Text;
-				label41.Text = label39.Text;
-				label39.Text = label38.Text;
-				label25.Text = Convert.ToString(d);
-				textBox15.Text = "0";
-
-				if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				{
-					label44.Text = label38.Text;
-
-				}
-
-				if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				{
-					label43.Text = label37.Text;
-
-				}
-
-				if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				{
-					label42.Text = label29.Text;
-
-				}
-
-
-			}
-
-
-			if (Convert.ToInt32(textBox15.Text) == 01100)
-			{
-				i = Convert.ToInt32(label17.Text);          //червона доріжка + Синя + жовта
-				timer10.Enabled = true;
-				timer11.Enabled = false;
-				label18.Text = label21.Text;
-				Time = 0;
-				timer11.Enabled = true;
-				label20.Text = label19.Text;
-				label19.Text = label22.Text;
-				label22.Text = label18.Text;
-				label17.Text = Convert.ToString(i);
-
-
-				b = Convert.ToInt32(label23.Text);
-				timer12.Enabled = true;
-				timer15.Enabled = false;
-				label37.Text = label26.Text;
-				Times = 0;
-				timer15.Enabled = true;
-				label35.Text = label36.Text;
-				label36.Text = label34.Text;
-				label34.Text = label37.Text;
-				label23.Text = Convert.ToString(b);
-
-				d = Convert.ToInt32(label25.Text);
-				timer14.Enabled = true;
-				timer16.Enabled = false;
-				label38.Text = label28.Text;
-				Timeg = 0;
-				timer16.Enabled = true;
-				label40.Text = label41.Text;
-				label41.Text = label39.Text;
-				label39.Text = label38.Text;
-				label25.Text = Convert.ToString(d);
-				textBox15.Text = "0";
-
-				if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				{
-					label44.Text = label38.Text;
-
-				}
-
-
-				if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				{
-					label43.Text = label37.Text;
-
-				}
-
-				if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				{
-					label16.Text = label18.Text;
-
-				}
-			}
-
-
-
-			if (Convert.ToInt32(textBox15.Text) == 01011)
-			{
-				i = Convert.ToInt32(label17.Text);          //червона  + Зелена+ Жовта доріжка
-				timer10.Enabled = true;
-				timer11.Enabled = false;
-				label18.Text = label21.Text;
-				Time = 0;
-				timer11.Enabled = true;
-				label20.Text = label19.Text;
-				label19.Text = label22.Text;
-				label22.Text = label18.Text;
-				label17.Text = Convert.ToString(i);
-
-
-				c = Convert.ToInt32(label24.Text);
-				timer13.Enabled = true;
-				timer17.Enabled = false;
-				label29.Text = label27.Text;
-				Timez = 0;
-				timer17.Enabled = true;
-				label31.Text = label32.Text;
-				label32.Text = label30.Text;
-				label30.Text = label29.Text;
-				label24.Text = Convert.ToString(c);
-
-				d = Convert.ToInt32(label25.Text);
-				timer14.Enabled = true;
-				timer16.Enabled = false;
-				label38.Text = label28.Text;
-				Timeg = 0;
-				timer16.Enabled = true;
-				label40.Text = label41.Text;
-				label41.Text = label39.Text;
-				label39.Text = label38.Text;
-				label25.Text = Convert.ToString(d);
-				textBox15.Text = "0";
-
-				if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				{
-					label44.Text = label38.Text;
-
-				}
-
-
-				if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				{
-					label42.Text = label29.Text;
-
-				}
-
-				if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				{
-					label16.Text = label18.Text;
-
-				}
-			}
-
-			if (Convert.ToInt32(textBox15.Text) == 01011)
-			{
-				i = Convert.ToInt32(label17.Text);          //червона  + Зелена+ Синя доріжка
-				timer10.Enabled = true;
-				timer11.Enabled = false;
-				label18.Text = label21.Text;
-				Time = 0;
-				timer11.Enabled = true;
-				label20.Text = label19.Text;
-				label19.Text = label22.Text;
-				label22.Text = label18.Text;
-				label17.Text = Convert.ToString(i);
-
-
-				c = Convert.ToInt32(label24.Text);
-				timer13.Enabled = true;
-				timer17.Enabled = false;
-				label29.Text = label27.Text;
-				Timez = 0;
-				timer17.Enabled = true;
-				label31.Text = label32.Text;
-				label32.Text = label30.Text;
-				label30.Text = label29.Text;
-				label24.Text = Convert.ToString(c);
-
-
-				b = Convert.ToInt32(label23.Text);
-				timer12.Enabled = true;
-				timer15.Enabled = false;
-				label37.Text = label26.Text;
-				Times = 0;
-				timer15.Enabled = true;
-				label35.Text = label36.Text;
-				label36.Text = label34.Text;
-				label34.Text = label37.Text;
-				label23.Text = Convert.ToString(b);
-				textBox15.Text = "0";
-
-
-				if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				{
-					label43.Text = label37.Text;
-
-				}
-
-
-				if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				{
-					label42.Text = label29.Text;
-
-				}
-
-				if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				{
-					label16.Text = label18.Text;
-
-				}
-			}
-
-			if (Convert.ToInt32(textBox15.Text) == 01010) // зелена + Синя доріжка
-			{
-				c = Convert.ToInt32(label24.Text);
-				timer13.Enabled = true;
-				timer17.Enabled = false;
-				label29.Text = label27.Text;
-				Timez = 0;
-				timer17.Enabled = true;
-				label31.Text = label32.Text;
-				label32.Text = label30.Text;
-				label30.Text = label29.Text;
-				label24.Text = Convert.ToString(c);
-
-
-				b = Convert.ToInt32(label23.Text);
-				timer12.Enabled = true;
-				timer15.Enabled = false;
-				label37.Text = label26.Text;
-				Times = 0;
-				timer15.Enabled = true;
-				label35.Text = label36.Text;
-				label36.Text = label34.Text;
-				label34.Text = label37.Text;
-				label23.Text = Convert.ToString(b);
-				textBox15.Text = "0";
-
-
-				if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				{
-					label43.Text = label37.Text;
-
-				}
-
-				if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				{
-					label42.Text = label29.Text;
-
-				}
-
-
-			}
-
-
-
-			if (Convert.ToInt32(textBox15.Text) == 01001) // жовта + Синя доріжка
-			{
-				d = Convert.ToInt32(label25.Text);
-				timer14.Enabled = true;
-				timer16.Enabled = false;
-				label38.Text = label28.Text;
-				Timeg = 0;
-				timer16.Enabled = true;
-				label40.Text = label41.Text;
-				label41.Text = label39.Text;
-				label39.Text = label38.Text;
-				label25.Text = Convert.ToString(d);
-
-
-
-				b = Convert.ToInt32(label23.Text);
-				timer12.Enabled = true;
-				timer15.Enabled = false;
-				label37.Text = label26.Text;
-				Times = 0;
-				timer15.Enabled = true;
-				label35.Text = label36.Text;
-				label36.Text = label34.Text;
-				label34.Text = label37.Text;
-				label23.Text = Convert.ToString(b);
-				textBox15.Text = "0";
-
-
-				if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				{
-					label43.Text = label37.Text;
-
-				}
-
-				if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				{
-					label44.Text = label38.Text;
-
-				}
-
-
-			}
-
-
-
-
-			if (Convert.ToInt32(textBox15.Text) == 01000)
-			{
-				i = Convert.ToInt32(label17.Text);          //червона доріжка + Синя
-				timer10.Enabled = true;
-				timer11.Enabled = false;
-				label18.Text = label21.Text;
-				Time = 0;
-				timer11.Enabled = true;
-				label20.Text = label19.Text;
-				label19.Text = label22.Text;
-				label22.Text = label18.Text;
-				label17.Text = Convert.ToString(i);
-
-
-				b = Convert.ToInt32(label23.Text);
-				timer12.Enabled = true;
-				timer15.Enabled = false;
-				label37.Text = label26.Text;
-				Times = 0;
-				timer15.Enabled = true;
-				label35.Text = label36.Text;
-				label36.Text = label34.Text;
-				label34.Text = label37.Text;
-				label23.Text = Convert.ToString(b);
-				textBox15.Text = "0";
-
-
-				if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				{
-					label43.Text = label37.Text;
-
-				}
-
-				if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				{
-					label16.Text = label18.Text;
-
-				}
-			}
-
-
-
-
-			if (Convert.ToInt32(textBox15.Text) == 0111)
-			{
-				i = Convert.ToInt32(label17.Text);          //червона + Жовта доріжка
-				timer10.Enabled = true;
-				timer11.Enabled = false;
-				label18.Text = label21.Text;
-				Time = 0;
-				timer11.Enabled = true;
-				label20.Text = label19.Text;
-				label19.Text = label22.Text;
-				label22.Text = label18.Text;
-				label17.Text = Convert.ToString(i);
-
-
-				d = Convert.ToInt32(label25.Text);
-				timer14.Enabled = true;
-				timer16.Enabled = false;
-				label38.Text = label28.Text;
-				Timeg = 0;
-				timer16.Enabled = true;
-				label40.Text = label41.Text;
-				label41.Text = label39.Text;
-				label39.Text = label38.Text;
-				label25.Text = Convert.ToString(d);
-				textBox15.Text = "0";
-
-				if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				{
-					label44.Text = label38.Text;
-
-				}
-
-				if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				{
-					label16.Text = label18.Text;
-
-				}
-			}
-
-
-
-
-			if (Convert.ToInt32(textBox15.Text) == 0110)
-			{
-				i = Convert.ToInt32(label17.Text);          //червона + зелена доріжка
-				c = Convert.ToInt32(label24.Text);
-
-				timer10.Enabled = true;
-				timer11.Enabled = false;
-				label18.Text = label21.Text;
-				Time = 0;
-				timer11.Enabled = true;
-				label20.Text = label19.Text;
-				label19.Text = label22.Text;
-				label22.Text = label18.Text;
-				label17.Text = Convert.ToString(i);
-				
-
-
-
-
-				
-				timer13.Enabled = true;
-				timer17.Enabled = false;
-				label29.Text = label27.Text;
-				Timez = 0;
-				timer17.Enabled = true;
-				label31.Text = label32.Text;
-				label32.Text = label30.Text;
-				label30.Text = label29.Text;
-				label24.Text = Convert.ToString(c);
-				textBox15.Text = "0";
-
-				if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				{
-					label42.Text = label29.Text;
-
-				}
-
-				if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				{
-					label16.Text = label18.Text;
-
-				}
-			}
-
-
-
-
-
-
-			if (Convert.ToInt32(textBox15.Text) == 0101) // жовта + зелена
-			{
-				d = Convert.ToInt32(label25.Text);
-				c = Convert.ToInt32(label24.Text);
-				timer14.Enabled = true;
-				timer13.Enabled = true;
-				timer16.Enabled = false;
-				timer17.Enabled = false;
-				label38.Text = label28.Text;
-				label29.Text = label27.Text;
-				Timeg = 0;
-				Timez = 0;
-				timer16.Enabled = true;
-				timer17.Enabled = true;
-				label40.Text = label41.Text;
-				label31.Text = label32.Text;
-				label41.Text = label39.Text;
-				label32.Text = label30.Text;
-				label39.Text = label38.Text;
-				label30.Text = label29.Text;
-				label25.Text = Convert.ToString(d);
-				label24.Text = Convert.ToString(c);
-				textBox15.Text = "0";
-
-
-
-				if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				{
-					label42.Text = label29.Text;
-
-				}
-
-				if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				{
-					label44.Text = label38.Text;
-
-				}
-
-
-			}
-
-			if (Convert.ToInt32(textBox15.Text) == 01)
-			{
-				i = Convert.ToInt32(label17.Text);          //червона доріжка
-				timer10.Enabled = true;
-				timer11.Enabled = false;
-				label18.Text = label21.Text;
-				Time = 0;
-				timer11.Enabled = true;
-				label20.Text = label19.Text;
-				label19.Text = label22.Text;
-				label22.Text = label18.Text;
-				label17.Text = Convert.ToString(i);
-				textBox15.Text = "0";
-
-				if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				{
-					label16.Text = label18.Text;
-
-				}
-			}
-
-				
-
-					if (Convert.ToInt32(textBox15.Text) == 011) // синя доріжка
-					{
+            switch (Convert.ToInt32(textBox15.Text))
+            {
+				case 01:
+                    {
+						i = Convert.ToInt32(label17.Text);          //червона доріжка
+						timer10.Enabled = true;
+						timer11.Enabled = false;
+						label18.Text = label21.Text;
+						Time = 0;
+						timer11.Enabled = true;
+						label20.Text = label19.Text;
+						label19.Text = label22.Text;
+						label22.Text = label18.Text;
+						label17.Text = Convert.ToString(i);
+						textBox15.Text = "0";
+
+						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+						{
+							label16.Text = label18.Text;
+
+						}
+						break;
+					}
+				case 010:
+                    {
+						c = Convert.ToInt32(label24.Text);
+						timer13.Enabled = true;
+						timer17.Enabled = false;
+						label29.Text = label27.Text;
+						Timez = 0;
+						timer17.Enabled = true;
+						label31.Text = label32.Text;
+						label32.Text = label30.Text;
+						label30.Text = label29.Text;
+						label24.Text = Convert.ToString(c);
+						textBox15.Text = "0";
+
+						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+						{
+							label42.Text = label29.Text;
+
+						}
+						break;
+					}
+				case 011:
+                    {
 						b = Convert.ToInt32(label23.Text);
 						timer12.Enabled = true;
 						timer15.Enabled = false;
@@ -2475,66 +2093,1270 @@ namespace zase4kak
 						timer15.Enabled = true;
 						label35.Text = label36.Text;
 						label36.Text = label34.Text;
-						label34.Text = label37.Text; 
+						label34.Text = label37.Text;
 						label23.Text = Convert.ToString(b);
 						textBox15.Text = "0";
 
 
-				if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				{
-					label43.Text = label37.Text;
+						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+						{
+							label43.Text = label37.Text;
 
-				}
+						}
+						break;
+					}
+				case 0100:
+                    {
+						d = Convert.ToInt32(label25.Text);
+						timer14.Enabled = true;
+						timer16.Enabled = false;
+						label38.Text = label28.Text;
+						Timeg = 0;
+						timer16.Enabled = true;
+						label40.Text = label41.Text;
+						label41.Text = label39.Text;
+						label39.Text = label38.Text;
+						label25.Text = Convert.ToString(d);
+						textBox15.Text = "0";
+
+						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+						{
+							label44.Text = label38.Text;
+
+						}
+						break;
+					}
+				case 01111://// зелена + Синя+ Жовта+Червона доріжка
+					{
+						c = Convert.ToInt32(label24.Text);
+						timer13.Enabled = true;
+						timer17.Enabled = false;
+						label29.Text = label27.Text;
+						Timez = 0;
+						timer17.Enabled = true;
+						label31.Text = label32.Text;
+						label32.Text = label30.Text;
+						label30.Text = label29.Text;
+						label24.Text = Convert.ToString(c);
+
+
+						b = Convert.ToInt32(label23.Text);
+						timer12.Enabled = true;
+						timer15.Enabled = false;
+						label37.Text = label26.Text;
+						Times = 0;
+						timer15.Enabled = true;
+						label35.Text = label36.Text;
+						label36.Text = label34.Text;
+						label34.Text = label37.Text;
+						label23.Text = Convert.ToString(b);
+
+
+						d = Convert.ToInt32(label25.Text);
+						timer14.Enabled = true;
+						timer16.Enabled = false;
+						label38.Text = label28.Text;
+						Timeg = 0;
+						timer16.Enabled = true;
+						label40.Text = label41.Text;
+						label41.Text = label39.Text;
+						label39.Text = label38.Text;
+						label25.Text = Convert.ToString(d);
+
+						i = Convert.ToInt32(label17.Text);
+						timer10.Enabled = true;
+						timer11.Enabled = false;
+						label18.Text = label21.Text;
+						Time = 0;
+						timer11.Enabled = true;
+						label20.Text = label19.Text;
+						label19.Text = label22.Text;
+						label22.Text = label18.Text;
+						label17.Text = Convert.ToString(i);
+						textBox15.Text = "0";
+
+						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+						{
+							label16.Text = label18.Text;
+
+						}
+
+						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+						{
+							label44.Text = label38.Text;
+
+						}
+
+						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+						{
+							label43.Text = label37.Text;
+
+						}
+
+						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+						{
+							label42.Text = label29.Text;
+
+						}
+						break;
+					}
+				case 01110:			// зелена + Синя+ Жовта доріжка
+					{
+						c = Convert.ToInt32(label24.Text);
+						timer13.Enabled = true;
+						timer17.Enabled = false;
+						label29.Text = label27.Text;
+						Timez = 0;
+						timer17.Enabled = true;
+						label31.Text = label32.Text;
+						label32.Text = label30.Text;
+						label30.Text = label29.Text;
+						label24.Text = Convert.ToString(c);
+
+
+						b = Convert.ToInt32(label23.Text);
+						timer12.Enabled = true;
+						timer15.Enabled = false;
+						label37.Text = label26.Text;
+						Times = 0;
+						timer15.Enabled = true;
+						label35.Text = label36.Text;
+						label36.Text = label34.Text;
+						label34.Text = label37.Text;
+						label23.Text = Convert.ToString(b);
+
+
+						d = Convert.ToInt32(label25.Text);
+						timer14.Enabled = true;
+						timer16.Enabled = false;
+						label38.Text = label28.Text;
+						Timeg = 0;
+						timer16.Enabled = true;
+						label40.Text = label41.Text;
+						label41.Text = label39.Text;
+						label39.Text = label38.Text;
+						label25.Text = Convert.ToString(d);
+						textBox15.Text = "0";
+
+						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+						{
+							label44.Text = label38.Text;
+
+						}
+
+						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+						{
+							label43.Text = label37.Text;
+
+						}
+
+						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+						{
+							label42.Text = label29.Text;
+
+						}
+						break;
+					}
+				case 01100:
+                    {
+						i = Convert.ToInt32(label17.Text);          //червона доріжка + Синя + жовта
+						timer10.Enabled = true;
+						timer11.Enabled = false;
+						label18.Text = label21.Text;
+						Time = 0;
+						timer11.Enabled = true;
+						label20.Text = label19.Text;
+						label19.Text = label22.Text;
+						label22.Text = label18.Text;
+						label17.Text = Convert.ToString(i);
+
+
+						b = Convert.ToInt32(label23.Text);
+						timer12.Enabled = true;
+						timer15.Enabled = false;
+						label37.Text = label26.Text;
+						Times = 0;
+						timer15.Enabled = true;
+						label35.Text = label36.Text;
+						label36.Text = label34.Text;
+						label34.Text = label37.Text;
+						label23.Text = Convert.ToString(b);
+
+						d = Convert.ToInt32(label25.Text);
+						timer14.Enabled = true;
+						timer16.Enabled = false;
+						label38.Text = label28.Text;
+						Timeg = 0;
+						timer16.Enabled = true;
+						label40.Text = label41.Text;
+						label41.Text = label39.Text;
+						label39.Text = label38.Text;
+						label25.Text = Convert.ToString(d);
+						textBox15.Text = "0";
+
+						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+						{
+							label44.Text = label38.Text;
+
+						}
+
+
+						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+						{
+							label43.Text = label37.Text;
+
+						}
+
+						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+						{
+							label16.Text = label18.Text;
+
+						}
+						break;
+					}
+				case 01011:
+                    {
+						i = Convert.ToInt32(label17.Text);          //червона  + Зелена+ Жовта доріжка
+						timer10.Enabled = true;
+						timer11.Enabled = false;
+						label18.Text = label21.Text;
+						Time = 0;
+						timer11.Enabled = true;
+						label20.Text = label19.Text;
+						label19.Text = label22.Text;
+						label22.Text = label18.Text;
+						label17.Text = Convert.ToString(i);
+
+
+						c = Convert.ToInt32(label24.Text);
+						timer13.Enabled = true;
+						timer17.Enabled = false;
+						label29.Text = label27.Text;
+						Timez = 0;
+						timer17.Enabled = true;
+						label31.Text = label32.Text;
+						label32.Text = label30.Text;
+						label30.Text = label29.Text;
+						label24.Text = Convert.ToString(c);
+
+						d = Convert.ToInt32(label25.Text);
+						timer14.Enabled = true;
+						timer16.Enabled = false;
+						label38.Text = label28.Text;
+						Timeg = 0;
+						timer16.Enabled = true;
+						label40.Text = label41.Text;
+						label41.Text = label39.Text;
+						label39.Text = label38.Text;
+						label25.Text = Convert.ToString(d);
+						textBox15.Text = "0";
+
+						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+						{
+							label44.Text = label38.Text;
+
+						}
+
+
+						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+						{
+							label42.Text = label29.Text;
+
+						}
+
+						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+						{
+							label16.Text = label18.Text;
+
+						}
+						break;
+					}
+				
+					
+				case 01010:										// зелена + Синя доріжка
+					{
+						c = Convert.ToInt32(label24.Text);
+						timer13.Enabled = true;
+						timer17.Enabled = false;
+						label29.Text = label27.Text;
+						Timez = 0;
+						timer17.Enabled = true;
+						label31.Text = label32.Text;
+						label32.Text = label30.Text;
+						label30.Text = label29.Text;
+						label24.Text = Convert.ToString(c);
+
+
+						b = Convert.ToInt32(label23.Text);
+						timer12.Enabled = true;
+						timer15.Enabled = false;
+						label37.Text = label26.Text;
+						Times = 0;
+						timer15.Enabled = true;
+						label35.Text = label36.Text;
+						label36.Text = label34.Text;
+						label34.Text = label37.Text;
+						label23.Text = Convert.ToString(b);
+						textBox15.Text = "0";
+
+
+						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+						{
+							label43.Text = label37.Text;
+
+						}
+
+						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+						{
+							label42.Text = label29.Text;
+
+						}
+						break;
+					}
+				case 01001: // жовта + Синя доріжка
+                    {
+						
+							d = Convert.ToInt32(label25.Text);
+							timer14.Enabled = true;
+							timer16.Enabled = false;
+							label38.Text = label28.Text;
+							Timeg = 0;
+							timer16.Enabled = true;
+							label40.Text = label41.Text;
+							label41.Text = label39.Text;
+							label39.Text = label38.Text;
+							label25.Text = Convert.ToString(d);
+
+
+
+							b = Convert.ToInt32(label23.Text);
+							timer12.Enabled = true;
+							timer15.Enabled = false;
+							label37.Text = label26.Text;
+							Times = 0;
+							timer15.Enabled = true;
+							label35.Text = label36.Text;
+							label36.Text = label34.Text;
+							label34.Text = label37.Text;
+							label23.Text = Convert.ToString(b);
+							textBox15.Text = "0";
+
+
+							if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+							{
+								label43.Text = label37.Text;
+
+							}
+
+							if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+							{
+								label44.Text = label38.Text;
+
+							}
+							break;	
+						}
+				case 01000:
+                    {
+						i = Convert.ToInt32(label17.Text);          //червона доріжка + Синя
+						timer10.Enabled = true;
+						timer11.Enabled = false;
+						label18.Text = label21.Text;
+						Time = 0;
+						timer11.Enabled = true;
+						label20.Text = label19.Text;
+						label19.Text = label22.Text;
+						label22.Text = label18.Text;
+						label17.Text = Convert.ToString(i);
+
+
+						b = Convert.ToInt32(label23.Text);
+						timer12.Enabled = true;
+						timer15.Enabled = false;
+						label37.Text = label26.Text;
+						Times = 0;
+						timer15.Enabled = true;
+						label35.Text = label36.Text;
+						label36.Text = label34.Text;
+						label34.Text = label37.Text;
+						label23.Text = Convert.ToString(b);
+						textBox15.Text = "0";
+
+
+						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+						{
+							label43.Text = label37.Text;
+
+						}
+
+						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+						{
+							label16.Text = label18.Text;
+
+						}
+						break;
+					}
+				case 0111:
+                    {
+						i = Convert.ToInt32(label17.Text);          //червона + Жовта доріжка
+						timer10.Enabled = true;
+						timer11.Enabled = false;
+						label18.Text = label21.Text;
+						Time = 0;
+						timer11.Enabled = true;
+						label20.Text = label19.Text;
+						label19.Text = label22.Text;
+						label22.Text = label18.Text;
+						label17.Text = Convert.ToString(i);
+
+
+						d = Convert.ToInt32(label25.Text);
+						timer14.Enabled = true;
+						timer16.Enabled = false;
+						label38.Text = label28.Text;
+						Timeg = 0;
+						timer16.Enabled = true;
+						label40.Text = label41.Text;
+						label41.Text = label39.Text;
+						label39.Text = label38.Text;
+						label25.Text = Convert.ToString(d);
+						textBox15.Text = "0";
+
+						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+						{
+							label44.Text = label38.Text;
+
+						}
+
+						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+						{
+							label16.Text = label18.Text;
+
+						}
+						break;
+					}
+				case 0110:
+                    {
+						i = Convert.ToInt32(label17.Text);          //червона + зелена доріжка
+						c = Convert.ToInt32(label24.Text);
+
+						timer10.Enabled = true;
+						timer11.Enabled = false;
+						label18.Text = label21.Text;
+						Time = 0;
+						timer11.Enabled = true;
+						label20.Text = label19.Text;
+						label19.Text = label22.Text;
+						label22.Text = label18.Text;
+						label17.Text = Convert.ToString(i);
+
+
+
+
+
+
+						timer13.Enabled = true;
+						timer17.Enabled = false;
+						label29.Text = label27.Text;
+						Timez = 0;
+						timer17.Enabled = true;
+						label31.Text = label32.Text;
+						label32.Text = label30.Text;
+						label30.Text = label29.Text;
+						label24.Text = Convert.ToString(c);
+						textBox15.Text = "0";
+
+						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+						{
+							label42.Text = label29.Text;
+
+						}
+
+						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+						{
+							label16.Text = label18.Text;
+
+						}
+						break;
+					}
+				case 0101:								// жовта + зелена
+					{
+						d = Convert.ToInt32(label25.Text);
+						c = Convert.ToInt32(label24.Text);
+						timer14.Enabled = true;
+						timer13.Enabled = true;
+						timer16.Enabled = false;
+						timer17.Enabled = false;
+						label38.Text = label28.Text;
+						label29.Text = label27.Text;
+						Timeg = 0;
+						Timez = 0;
+						timer16.Enabled = true;
+						timer17.Enabled = true;
+						label40.Text = label41.Text;
+						label31.Text = label32.Text;
+						label41.Text = label39.Text;
+						label32.Text = label30.Text;
+						label39.Text = label38.Text;
+						label30.Text = label29.Text;
+						label25.Text = Convert.ToString(d);
+						label24.Text = Convert.ToString(c);
+						textBox15.Text = "0";
+
+
+
+						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+						{
+							label42.Text = label29.Text;
+
+						}
+
+						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+						{
+							label44.Text = label38.Text;
+
+						}
+						break;
+						
+					}
+				case 0:
+                    {
+
+						break;
+                    }
+				default:
+
+						textBox15.Text = "0";
+
+					if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
+					{
+						timer2.Enabled = false;
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+						button6.Visible = false;
+						button7.Visible = true;
+						button7.Focus();
+						textBox15.Text = "0";
+					}
+
+					if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
+					{
+						timer4.Enabled = false;
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+						button6.Visible = false;
+						button7.Visible = true;
+						button7.Focus();
+						textBox15.Text = "0";
+					}
+
+					if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
+					{
+						timer6.Enabled = false;
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+						button6.Visible = false;
+						button7.Visible = true;
+						button7.Focus();
+						textBox15.Text = "0";
+					}
+
+					if (number_group.Text == "3")   // кнопка пауза для 3 заїзду
+					{
+						timer8.Enabled = false;
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+						button6.Visible = false;
+						button7.Visible = true;
+						button7.Focus();
+						textBox15.Text = "0";
+					}
+
+					MessageBox.Show("Щось пішло не так!! Перевірте моделі!");
+					
+					break;
+
+
 
 
 			}
 
-
-			if (Convert.ToInt32(textBox15.Text) == 010) // зелена доріжка
-			{
-				c = Convert.ToInt32(label24.Text);
-				timer13.Enabled = true;
-				timer17.Enabled = false;
-				label29.Text = label27.Text;
-				Timez = 0;
-				timer17.Enabled = true;
-				label31.Text = label32.Text;
-				label32.Text = label30.Text;
-				label30.Text = label29.Text; 
-				label24.Text = Convert.ToString(c);
-				textBox15.Text = "0";
-
-				if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				{
-					label42.Text = label29.Text;
-
-				}
+			//if (Convert.ToInt32(textBox15.Text) == 01111) // зелена + Синя+ Жовта+Червона доріжка
+			//{
+			//	c = Convert.ToInt32(label24.Text);
+			//	timer13.Enabled = true;
+			//	timer17.Enabled = false;
+			//	label29.Text = label27.Text;
+			//	Timez = 0;
+			//	timer17.Enabled = true;
+			//	label31.Text = label32.Text;
+			//	label32.Text = label30.Text;
+			//	label30.Text = label29.Text;
+			//	label24.Text = Convert.ToString(c);
 
 
-			}
-
-			if (Convert.ToInt32(textBox15.Text) == 0100) // жовта доріжка
-			{
-				d = Convert.ToInt32(label25.Text);
-				timer14.Enabled = true;
-				timer16.Enabled = false;
-				label38.Text = label28.Text;
-				Timeg = 0;
-				timer16.Enabled = true;
-				label40.Text = label41.Text;
-				label41.Text = label39.Text;
-				label39.Text = label38.Text;
-				label25.Text = Convert.ToString(d);
-				textBox15.Text = "0";
-
-				if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				{
-					label44.Text = label38.Text;
-
-				}
+			//	b = Convert.ToInt32(label23.Text);
+			//	timer12.Enabled = true;
+			//	timer15.Enabled = false;
+			//	label37.Text = label26.Text;
+			//	Times = 0;
+			//	timer15.Enabled = true;
+			//	label35.Text = label36.Text;
+			//	label36.Text = label34.Text;
+			//	label34.Text = label37.Text;
+			//	label23.Text = Convert.ToString(b);
 
 
-			}
+			//	d = Convert.ToInt32(label25.Text);
+			//	timer14.Enabled = true;
+			//	timer16.Enabled = false;
+			//	label38.Text = label28.Text;
+			//	Timeg = 0;
+			//	timer16.Enabled = true;
+			//	label40.Text = label41.Text;
+			//	label41.Text = label39.Text;
+			//	label39.Text = label38.Text;
+			//	label25.Text = Convert.ToString(d);
+
+			//	i = Convert.ToInt32(label17.Text);         
+			//	timer10.Enabled = true;
+			//	timer11.Enabled = false;
+			//	label18.Text = label21.Text;
+			//	Time = 0;
+			//	timer11.Enabled = true;
+			//	label20.Text = label19.Text;
+			//	label19.Text = label22.Text;
+			//	label22.Text = label18.Text;
+			//	label17.Text = Convert.ToString(i);
+			//	textBox15.Text = "0";
+
+			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+			//	{
+			//		label16.Text = label18.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+			//	{
+			//		label44.Text = label38.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+			//	{
+			//		label43.Text = label37.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+			//	{
+			//		label42.Text = label29.Text;
+
+			//	}
+
+
+			//}
+
+			//if (Convert.ToInt32(textBox15.Text) == 01110) // зелена + Синя+ Жовта доріжка
+			//{
+			//	c = Convert.ToInt32(label24.Text);
+			//	timer13.Enabled = true;
+			//	timer17.Enabled = false;
+			//	label29.Text = label27.Text;
+			//	Timez = 0;
+			//	timer17.Enabled = true;
+			//	label31.Text = label32.Text;
+			//	label32.Text = label30.Text;
+			//	label30.Text = label29.Text;
+			//	label24.Text = Convert.ToString(c);
+
+
+			//	b = Convert.ToInt32(label23.Text);
+			//	timer12.Enabled = true;
+			//	timer15.Enabled = false;
+			//	label37.Text = label26.Text;
+			//	Times = 0;
+			//	timer15.Enabled = true;
+			//	label35.Text = label36.Text;
+			//	label36.Text = label34.Text;
+			//	label34.Text = label37.Text;
+			//	label23.Text = Convert.ToString(b);
+
+
+			//	d = Convert.ToInt32(label25.Text);
+			//	timer14.Enabled = true;
+			//	timer16.Enabled = false;
+			//	label38.Text = label28.Text;
+			//	Timeg = 0;
+			//	timer16.Enabled = true;
+			//	label40.Text = label41.Text;
+			//	label41.Text = label39.Text;
+			//	label39.Text = label38.Text;
+			//	label25.Text = Convert.ToString(d);
+			//	textBox15.Text = "0";
+
+			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+			//	{
+			//		label44.Text = label38.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+			//	{
+			//		label43.Text = label37.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+			//	{
+			//		label42.Text = label29.Text;
+
+			//	}
+
+
+			//}
+
+
+			//if (Convert.ToInt32(textBox15.Text) == 01100)
+			//{
+			//	i = Convert.ToInt32(label17.Text);          //червона доріжка + Синя + жовта
+			//	timer10.Enabled = true;
+			//	timer11.Enabled = false;
+			//	label18.Text = label21.Text;
+			//	Time = 0;
+			//	timer11.Enabled = true;
+			//	label20.Text = label19.Text;
+			//	label19.Text = label22.Text;
+			//	label22.Text = label18.Text;
+			//	label17.Text = Convert.ToString(i);
+
+
+			//	b = Convert.ToInt32(label23.Text);
+			//	timer12.Enabled = true;
+			//	timer15.Enabled = false;
+			//	label37.Text = label26.Text;
+			//	Times = 0;
+			//	timer15.Enabled = true;
+			//	label35.Text = label36.Text;
+			//	label36.Text = label34.Text;
+			//	label34.Text = label37.Text;
+			//	label23.Text = Convert.ToString(b);
+
+			//	d = Convert.ToInt32(label25.Text);
+			//	timer14.Enabled = true;
+			//	timer16.Enabled = false;
+			//	label38.Text = label28.Text;
+			//	Timeg = 0;
+			//	timer16.Enabled = true;
+			//	label40.Text = label41.Text;
+			//	label41.Text = label39.Text;
+			//	label39.Text = label38.Text;
+			//	label25.Text = Convert.ToString(d);
+			//	textBox15.Text = "0";
+
+			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+			//	{
+			//		label44.Text = label38.Text;
+
+			//	}
+
+
+			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+			//	{
+			//		label43.Text = label37.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+			//	{
+			//		label16.Text = label18.Text;
+
+			//	}
+			//}
+
+
+
+			//if (Convert.ToInt32(textBox15.Text) == 01011)
+			//{
+			//	i = Convert.ToInt32(label17.Text);          //червона  + Зелена+ Жовта доріжка
+			//	timer10.Enabled = true;
+			//	timer11.Enabled = false;
+			//	label18.Text = label21.Text;
+			//	Time = 0;
+			//	timer11.Enabled = true;
+			//	label20.Text = label19.Text;
+			//	label19.Text = label22.Text;
+			//	label22.Text = label18.Text;
+			//	label17.Text = Convert.ToString(i);
+
+
+			//	c = Convert.ToInt32(label24.Text);
+			//	timer13.Enabled = true;
+			//	timer17.Enabled = false;
+			//	label29.Text = label27.Text;
+			//	Timez = 0;
+			//	timer17.Enabled = true;
+			//	label31.Text = label32.Text;
+			//	label32.Text = label30.Text;
+			//	label30.Text = label29.Text;
+			//	label24.Text = Convert.ToString(c);
+
+			//	d = Convert.ToInt32(label25.Text);
+			//	timer14.Enabled = true;
+			//	timer16.Enabled = false;
+			//	label38.Text = label28.Text;
+			//	Timeg = 0;
+			//	timer16.Enabled = true;
+			//	label40.Text = label41.Text;
+			//	label41.Text = label39.Text;
+			//	label39.Text = label38.Text;
+			//	label25.Text = Convert.ToString(d);
+			//	textBox15.Text = "0";
+
+			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+			//	{
+			//		label44.Text = label38.Text;
+
+			//	}
+
+
+			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+			//	{
+			//		label42.Text = label29.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+			//	{
+			//		label16.Text = label18.Text;
+
+			//	}
+			//}
+
+			//if (Convert.ToInt32(textBox15.Text) == 01011)
+			//{
+			//	i = Convert.ToInt32(label17.Text);          //червона  + Зелена+ Синя доріжка
+			//	timer10.Enabled = true;
+			//	timer11.Enabled = false;
+			//	label18.Text = label21.Text;
+			//	Time = 0;
+			//	timer11.Enabled = true;
+			//	label20.Text = label19.Text;
+			//	label19.Text = label22.Text;
+			//	label22.Text = label18.Text;
+			//	label17.Text = Convert.ToString(i);
+
+
+			//	c = Convert.ToInt32(label24.Text);
+			//	timer13.Enabled = true;
+			//	timer17.Enabled = false;
+			//	label29.Text = label27.Text;
+			//	Timez = 0;
+			//	timer17.Enabled = true;
+			//	label31.Text = label32.Text;
+			//	label32.Text = label30.Text;
+			//	label30.Text = label29.Text;
+			//	label24.Text = Convert.ToString(c);
+
+
+			//	b = Convert.ToInt32(label23.Text);
+			//	timer12.Enabled = true;
+			//	timer15.Enabled = false;
+			//	label37.Text = label26.Text;
+			//	Times = 0;
+			//	timer15.Enabled = true;
+			//	label35.Text = label36.Text;
+			//	label36.Text = label34.Text;
+			//	label34.Text = label37.Text;
+			//	label23.Text = Convert.ToString(b);
+			//	textBox15.Text = "0";
+
+
+			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+			//	{
+			//		label43.Text = label37.Text;
+
+			//	}
+
+
+			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+			//	{
+			//		label42.Text = label29.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+			//	{
+			//		label16.Text = label18.Text;
+
+			//	}
+			//}
+
+			//if (Convert.ToInt32(textBox15.Text) == 01010) // зелена + Синя доріжка
+			//{
+			//	c = Convert.ToInt32(label24.Text);
+			//	timer13.Enabled = true;
+			//	timer17.Enabled = false;
+			//	label29.Text = label27.Text;
+			//	Timez = 0;
+			//	timer17.Enabled = true;
+			//	label31.Text = label32.Text;
+			//	label32.Text = label30.Text;
+			//	label30.Text = label29.Text;
+			//	label24.Text = Convert.ToString(c);
+
+
+			//	b = Convert.ToInt32(label23.Text);
+			//	timer12.Enabled = true;
+			//	timer15.Enabled = false;
+			//	label37.Text = label26.Text;
+			//	Times = 0;
+			//	timer15.Enabled = true;
+			//	label35.Text = label36.Text;
+			//	label36.Text = label34.Text;
+			//	label34.Text = label37.Text;
+			//	label23.Text = Convert.ToString(b);
+			//	textBox15.Text = "0";
+
+
+			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+			//	{
+			//		label43.Text = label37.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+			//	{
+			//		label42.Text = label29.Text;
+
+			//	}
+
+
+			//}
+
+
+
+			//if (Convert.ToInt32(textBox15.Text) == 01001) // жовта + Синя доріжка
+			//{
+			//	d = Convert.ToInt32(label25.Text);
+			//	timer14.Enabled = true;
+			//	timer16.Enabled = false;
+			//	label38.Text = label28.Text;
+			//	Timeg = 0;
+			//	timer16.Enabled = true;
+			//	label40.Text = label41.Text;
+			//	label41.Text = label39.Text;
+			//	label39.Text = label38.Text;
+			//	label25.Text = Convert.ToString(d);
+
+
+
+			//	b = Convert.ToInt32(label23.Text);
+			//	timer12.Enabled = true;
+			//	timer15.Enabled = false;
+			//	label37.Text = label26.Text;
+			//	Times = 0;
+			//	timer15.Enabled = true;
+			//	label35.Text = label36.Text;
+			//	label36.Text = label34.Text;
+			//	label34.Text = label37.Text;
+			//	label23.Text = Convert.ToString(b);
+			//	textBox15.Text = "0";
+
+
+			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+			//	{
+			//		label43.Text = label37.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+			//	{
+			//		label44.Text = label38.Text;
+
+			//	}
+
+
+			//}
+
+
+
+
+			//if (Convert.ToInt32(textBox15.Text) == 01000)
+			//{
+			//	i = Convert.ToInt32(label17.Text);          //червона доріжка + Синя
+			//	timer10.Enabled = true;
+			//	timer11.Enabled = false;
+			//	label18.Text = label21.Text;
+			//	Time = 0;
+			//	timer11.Enabled = true;
+			//	label20.Text = label19.Text;
+			//	label19.Text = label22.Text;
+			//	label22.Text = label18.Text;
+			//	label17.Text = Convert.ToString(i);
+
+
+			//	b = Convert.ToInt32(label23.Text);
+			//	timer12.Enabled = true;
+			//	timer15.Enabled = false;
+			//	label37.Text = label26.Text;
+			//	Times = 0;
+			//	timer15.Enabled = true;
+			//	label35.Text = label36.Text;
+			//	label36.Text = label34.Text;
+			//	label34.Text = label37.Text;
+			//	label23.Text = Convert.ToString(b);
+			//	textBox15.Text = "0";
+
+
+			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+			//	{
+			//		label43.Text = label37.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+			//	{
+			//		label16.Text = label18.Text;
+
+			//	}
+			//}
+
+
+
+
+			//if (Convert.ToInt32(textBox15.Text) == 0111)
+			//{
+			//	i = Convert.ToInt32(label17.Text);          //червона + Жовта доріжка
+			//	timer10.Enabled = true;
+			//	timer11.Enabled = false;
+			//	label18.Text = label21.Text;
+			//	Time = 0;
+			//	timer11.Enabled = true;
+			//	label20.Text = label19.Text;
+			//	label19.Text = label22.Text;
+			//	label22.Text = label18.Text;
+			//	label17.Text = Convert.ToString(i);
+
+
+			//	d = Convert.ToInt32(label25.Text);
+			//	timer14.Enabled = true;
+			//	timer16.Enabled = false;
+			//	label38.Text = label28.Text;
+			//	Timeg = 0;
+			//	timer16.Enabled = true;
+			//	label40.Text = label41.Text;
+			//	label41.Text = label39.Text;
+			//	label39.Text = label38.Text;
+			//	label25.Text = Convert.ToString(d);
+			//	textBox15.Text = "0";
+
+			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+			//	{
+			//		label44.Text = label38.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+			//	{
+			//		label16.Text = label18.Text;
+
+			//	}
+			//}
+
+
+
+
+			//if (Convert.ToInt32(textBox15.Text) == 0110)
+			//{
+			//	i = Convert.ToInt32(label17.Text);          //червона + зелена доріжка
+			//	c = Convert.ToInt32(label24.Text);
+
+			//	timer10.Enabled = true;
+			//	timer11.Enabled = false;
+			//	label18.Text = label21.Text;
+			//	Time = 0;
+			//	timer11.Enabled = true;
+			//	label20.Text = label19.Text;
+			//	label19.Text = label22.Text;
+			//	label22.Text = label18.Text;
+			//	label17.Text = Convert.ToString(i);
+				
+
+
+
+
+				
+			//	timer13.Enabled = true;
+			//	timer17.Enabled = false;
+			//	label29.Text = label27.Text;
+			//	Timez = 0;
+			//	timer17.Enabled = true;
+			//	label31.Text = label32.Text;
+			//	label32.Text = label30.Text;
+			//	label30.Text = label29.Text;
+			//	label24.Text = Convert.ToString(c);
+			//	textBox15.Text = "0";
+
+			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+			//	{
+			//		label42.Text = label29.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+			//	{
+			//		label16.Text = label18.Text;
+
+			//	}
+			//}
+
+
+
+
+
+
+			//if (Convert.ToInt32(textBox15.Text) == 0101) // жовта + зелена
+			//{
+			//	d = Convert.ToInt32(label25.Text);
+			//	c = Convert.ToInt32(label24.Text);
+			//	timer14.Enabled = true;
+			//	timer13.Enabled = true;
+			//	timer16.Enabled = false;
+			//	timer17.Enabled = false;
+			//	label38.Text = label28.Text;
+			//	label29.Text = label27.Text;
+			//	Timeg = 0;
+			//	Timez = 0;
+			//	timer16.Enabled = true;
+			//	timer17.Enabled = true;
+			//	label40.Text = label41.Text;
+			//	label31.Text = label32.Text;
+			//	label41.Text = label39.Text;
+			//	label32.Text = label30.Text;
+			//	label39.Text = label38.Text;
+			//	label30.Text = label29.Text;
+			//	label25.Text = Convert.ToString(d);
+			//	label24.Text = Convert.ToString(c);
+			//	textBox15.Text = "0";
+
+
+
+			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+			//	{
+			//		label42.Text = label29.Text;
+
+			//	}
+
+			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+			//	{
+			//		label44.Text = label38.Text;
+
+			//	}
+
+
+			//}
+
+			//if (Convert.ToInt32(textBox15.Text) == 01)
+			//{
+			//	i = Convert.ToInt32(label17.Text);          //червона доріжка
+			//	timer10.Enabled = true;
+			//	timer11.Enabled = false;
+			//	label18.Text = label21.Text;
+			//	Time = 0;
+			//	timer11.Enabled = true;
+			//	label20.Text = label19.Text;
+			//	label19.Text = label22.Text;
+			//	label22.Text = label18.Text;
+			//	label17.Text = Convert.ToString(i);
+			//	textBox15.Text = "0";
+
+			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+			//	{
+			//		label16.Text = label18.Text;
+
+			//	}
+			//}
+
+				
+
+			//		if (Convert.ToInt32(textBox15.Text) == 011) // синя доріжка
+			//		{
+			//			b = Convert.ToInt32(label23.Text);
+			//			timer12.Enabled = true;
+			//			timer15.Enabled = false;
+			//			label37.Text = label26.Text;
+			//			Times = 0;
+			//			timer15.Enabled = true;
+			//			label35.Text = label36.Text;
+			//			label36.Text = label34.Text;
+			//			label34.Text = label37.Text; 
+			//			label23.Text = Convert.ToString(b);
+			//			textBox15.Text = "0";
+
+
+			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+			//	{
+			//		label43.Text = label37.Text;
+
+			//	}
+
+
+			//}
+
+
+			//if (Convert.ToInt32(textBox15.Text) == 010) // зелена доріжка
+			//{
+			//	c = Convert.ToInt32(label24.Text);
+			//	timer13.Enabled = true;
+			//	timer17.Enabled = false;
+			//	label29.Text = label27.Text;
+			//	Timez = 0;
+			//	timer17.Enabled = true;
+			//	label31.Text = label32.Text;
+			//	label32.Text = label30.Text;
+			//	label30.Text = label29.Text; 
+			//	label24.Text = Convert.ToString(c);
+			//	textBox15.Text = "0";
+
+			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+			//	{
+			//		label42.Text = label29.Text;
+
+			//	}
+
+
+			//}
+
+			//if (Convert.ToInt32(textBox15.Text) == 0100) // жовта доріжка
+			//{
+			//	d = Convert.ToInt32(label25.Text);
+			//	timer14.Enabled = true;
+			//	timer16.Enabled = false;
+			//	label38.Text = label28.Text;
+			//	Timeg = 0;
+			//	timer16.Enabled = true;
+			//	label40.Text = label41.Text;
+			//	label41.Text = label39.Text;
+			//	label39.Text = label38.Text;
+			//	label25.Text = Convert.ToString(d);
+			//	textBox15.Text = "0";
+
+			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+			//	{
+			//		label44.Text = label38.Text;
+
+			//	}
+
+
+			//}
 
 
 			

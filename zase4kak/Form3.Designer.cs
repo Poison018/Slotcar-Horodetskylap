@@ -167,6 +167,13 @@
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label69 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label70 = new System.Windows.Forms.Label();
+            this.timer22 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -1150,7 +1157,6 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 1000;
             this.timer2.Tag = "час 1 заїзду";
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
@@ -1162,7 +1168,6 @@
             // 
             // timer4
             // 
-            this.timer4.Interval = 1000;
             this.timer4.Tag = "час 2 заїзду";
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
@@ -1174,7 +1179,6 @@
             // 
             // timer6
             // 
-            this.timer6.Interval = 1000;
             this.timer6.Tag = "третя гонка";
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
@@ -1186,7 +1190,6 @@
             // 
             // timer8
             // 
-            this.timer8.Interval = 1000;
             this.timer8.Tag = "четверта гонка";
             this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
             // 
@@ -1369,7 +1372,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(481, 597);
+            this.button5.Location = new System.Drawing.Point(563, 597);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 37);
             this.button5.TabIndex = 44;
@@ -1620,12 +1623,92 @@
             this.button9.Visible = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(143, 981);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(83, 23);
+            this.button10.TabIndex = 59;
+            this.button10.Text = "Вкл Трек";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Visible = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Enabled = false;
+            this.button11.Location = new System.Drawing.Point(232, 981);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(83, 23);
+            this.button11.TabIndex = 60;
+            this.button11.Text = "Викл Трек";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Visible = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.BackColor = System.Drawing.Color.Red;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label69.Location = new System.Drawing.Point(150, 958);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(156, 20);
+            this.label69.TabIndex = 61;
+            this.label69.Text = "Трек виключений";
+            this.label69.Visible = false;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(335, 981);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(102, 23);
+            this.button12.TabIndex = 62;
+            this.button12.Text = "1 хв. Тренувань.";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Visible = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(335, 981);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(121, 23);
+            this.button13.TabIndex = 63;
+            this.button13.Text = "Старт тренування";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Visible = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label70.Location = new System.Drawing.Point(327, 870);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(153, 108);
+            this.label70.TabIndex = 64;
+            this.label70.Text = "60";
+            this.label70.Visible = false;
+            // 
+            // timer22
+            // 
+            this.timer22.Interval = 1000;
+            this.timer22.Tag = "Таймер для тренування";
+            this.timer22.Tick += new System.EventHandler(this.timer22_Tick);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.Controls.Add(this.label70);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.label69);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.textBox23);
             this.Controls.Add(this.textBox22);
@@ -1835,5 +1918,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Timer timer22;
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Runtime.CompilerServices;
+using System.Media;
 
 namespace zase4kak
 {
@@ -25,6 +26,11 @@ namespace zase4kak
 
         double[] arr = new double[40];   //масив кращого часу
         char[] name = new char[40];
+        SoundPlayer stopsound = new SoundPlayer();
+        SoundPlayer startsound = new SoundPlayer();
+        SoundPlayer finishsound = new SoundPlayer();
+        SoundPlayer timetostart = new SoundPlayer();
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -253,7 +259,10 @@ namespace zase4kak
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            
+            if(label50.Text == "0:4")
+            {
+                timetostart.Play();
+            }
 
             if (label56.Text == "-")
             {
@@ -261,6 +270,7 @@ namespace zase4kak
                 timer2.Enabled = false;
                 label101.Text = "<<Кваліфікацію завершено!>>";
                 serialPort1.Close();
+                finishsound.Play();
             }
 
 
@@ -344,6 +354,28 @@ namespace zase4kak
 
                 }
             }
+        }
+
+
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            timetostart.SoundLocation = "music/81980c1a7dcb7cd.wav";
+            timetostart.Load();
+            stopsound.SoundLocation = "music/noty-do.wav";
+            stopsound.Load();
+            startsound.SoundLocation = "music/re.wav";
+            startsound.Load();
+            finishsound.SoundLocation = "music/aplodismenty_s_krikami_bravo.wav";
+            finishsound.Load();
+
+
+            String[] strPortName = SerialPort.GetPortNames();
+            foreach (string n in strPortName)
+            {
+                comboBox1.Items.Add(n);
+            }
+            comboBox1.SelectedIndex = 0;
         }
         double Time;
         private void timer11_Tick(object sender, EventArgs e)
@@ -1084,8 +1116,8 @@ namespace zase4kak
         {
             if (e.KeyCode == Keys.Space)
             {
+                startsound.Play();
                 timer1.Enabled = true;
-                min = Convert.ToInt32(textBox106.Text);
                 button1.Visible = false;
                 label101.Visible = true;
                 button5.Visible = true;
@@ -1099,6 +1131,7 @@ namespace zase4kak
         {
             if (e.KeyCode == Keys.Space)
             {
+                stopsound.Play();
                 timer1.Enabled = false;
                 button5.Enabled = false;
                 button5.Visible = false;
@@ -1115,6 +1148,7 @@ namespace zase4kak
 
         private void button5_Click(object sender, EventArgs e)
         {
+            stopsound.Play();
             timer1.Enabled = false;
             button5.Enabled = false;
             button5.Visible = false;
@@ -1126,6 +1160,7 @@ namespace zase4kak
 
         private void button6_Click(object sender, EventArgs e)
         {
+            startsound.Play();
             timer1.Enabled = true;
             button6.Enabled = false;
             button6.Visible = false;
@@ -1269,17 +1304,7 @@ namespace zase4kak
             //this.Enabled = false;
         }
 
-        private void Form4_Load(object sender, EventArgs e)
-        {
-            
-            
-            String[] strPortName = SerialPort.GetPortNames();
-            foreach (string n in strPortName)
-            {
-                comboBox1.Items.Add(n);
-            }
-            comboBox1.SelectedIndex = 0;
-        }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -1828,6 +1853,7 @@ namespace zase4kak
 
         private void button1_Click(object sender, EventArgs e)
         {
+            startsound.Play();
             timer1.Enabled = true;
             min = Convert.ToInt32(textBox106.Text);
             button1.Visible = false;
