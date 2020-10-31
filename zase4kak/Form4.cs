@@ -30,6 +30,9 @@ namespace zase4kak
         SoundPlayer startsound = new SoundPlayer();
         SoundPlayer finishsound = new SoundPlayer();
         SoundPlayer timetostart = new SoundPlayer();
+        SoundPlayer kvalificatsia = new SoundPlayer();
+        SoundPlayer sekyd = new SoundPlayer();
+        SoundPlayer zaminapilota = new SoundPlayer();
 
 
         private void label3_Click(object sender, EventArgs e)
@@ -259,6 +262,14 @@ namespace zase4kak
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+
+
+            if(label50.Text == "0:17")
+            {
+                sekyd.Play();
+            }
+
+
             if(label50.Text == "0:4")
             {
                 timetostart.Play();
@@ -270,7 +281,7 @@ namespace zase4kak
                 timer2.Enabled = false;
                 label101.Text = "<<Кваліфікацію завершено!>>";
                 serialPort1.Close();
-                finishsound.Play();
+                kvalificatsia.Play();
             }
 
 
@@ -293,6 +304,7 @@ namespace zase4kak
 
             if(pmin == -1 || psec == 0)
             {
+                serialPort1.WriteLine("4");
                 timer2.Enabled = false;
                 min = Convert.ToInt32(textBox106.Text);
                 sec = 1;
@@ -360,6 +372,12 @@ namespace zase4kak
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            zaminapilota.SoundLocation = "music/zaminapilota.wav";
+            zaminapilota.Load();
+            sekyd.SoundLocation = "music/15secynd.wav";
+            sekyd.Load();
+            kvalificatsia.SoundLocation = "music/kvalifikatsia.wav";
+            kvalificatsia.Load();
             timetostart.SoundLocation = "music/81980c1a7dcb7cd.wav";
             timetostart.Load();
             stopsound.SoundLocation = "music/noty-do.wav";
@@ -394,9 +412,13 @@ namespace zase4kak
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             button1.Focus();
             serialPort1.BaudRate = 9600;
             serialPort1.PortName = comboBox1.Text;
+            serialPort1.Open();
+            serialPort1.WriteLine("3");
+            serialPort1.Close();
             button4.Visible = false;
             button1.Visible = true;
             comboBox1.Visible = false;
@@ -1116,6 +1138,7 @@ namespace zase4kak
         {
             if (e.KeyCode == Keys.Space)
             {
+                serialPort1.WriteLine("4");
                 startsound.Play();
                 timer1.Enabled = true;
                 button1.Visible = false;
@@ -1131,6 +1154,7 @@ namespace zase4kak
         {
             if (e.KeyCode == Keys.Space)
             {
+                serialPort1.WriteLine("3");
                 stopsound.Play();
                 timer1.Enabled = false;
                 button5.Enabled = false;
@@ -1148,6 +1172,7 @@ namespace zase4kak
 
         private void button5_Click(object sender, EventArgs e)
         {
+            serialPort1.WriteLine("3");
             stopsound.Play();
             timer1.Enabled = false;
             button5.Enabled = false;
@@ -1160,6 +1185,7 @@ namespace zase4kak
 
         private void button6_Click(object sender, EventArgs e)
         {
+            serialPort1.WriteLine("4");
             startsound.Play();
             timer1.Enabled = true;
             button6.Enabled = false;
@@ -1369,7 +1395,9 @@ namespace zase4kak
             }
 
             if (min == -1 || sec == 0)
-            { 
+            {
+
+                serialPort1.WriteLine("3");
                 laptime++;
                 label104.Text = Convert.ToString(laptime);
                 timer1.Enabled = false;
@@ -1377,11 +1405,16 @@ namespace zase4kak
                 pmin = 0;
                 timer2.Enabled = true;
                 label101.Text = "<<Заміна пілота>>";
-
+                
                 button5.Visible = false;
                 button6.Visible = false;
                 button5.Enabled = false;
                 button6.Enabled = false;
+
+                if(textBox65.Text != "-")
+                {
+                    zaminapilota.Play();
+                }
               
 
 
@@ -1853,6 +1886,7 @@ namespace zase4kak
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             startsound.Play();
             timer1.Enabled = true;
             min = Convert.ToInt32(textBox106.Text);
@@ -1863,6 +1897,7 @@ namespace zase4kak
             button1.Enabled = false;
             button5.Focus();
             button6.Focus();
+            serialPort1.WriteLine("4");
         }
     }
 }

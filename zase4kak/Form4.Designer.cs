@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox183 = new System.Windows.Forms.TextBox();
@@ -1354,6 +1355,7 @@
             this.textBox35.Size = new System.Drawing.Size(74, 22);
             this.textBox35.TabIndex = 64;
             this.textBox35.Text = "999";
+            this.textBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox34
             // 
@@ -1364,6 +1366,7 @@
             this.textBox34.Size = new System.Drawing.Size(74, 22);
             this.textBox34.TabIndex = 63;
             this.textBox34.Text = "999";
+            this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox33
             // 
@@ -1374,6 +1377,7 @@
             this.textBox33.Size = new System.Drawing.Size(74, 22);
             this.textBox33.TabIndex = 62;
             this.textBox33.Text = "999";
+            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
             // 
@@ -1516,6 +1520,7 @@
             this.textBox64.TabIndex = 93;
             this.textBox64.TabStop = false;
             this.textBox64.Text = "999";
+            this.textBox64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox63
             // 
@@ -1526,6 +1531,7 @@
             this.textBox63.Size = new System.Drawing.Size(74, 22);
             this.textBox63.TabIndex = 92;
             this.textBox63.Text = "999";
+            this.textBox63.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox62
             // 
@@ -1536,6 +1542,7 @@
             this.textBox62.Size = new System.Drawing.Size(74, 22);
             this.textBox62.TabIndex = 91;
             this.textBox62.Text = "999";
+            this.textBox62.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox61
             // 
@@ -1546,6 +1553,7 @@
             this.textBox61.Size = new System.Drawing.Size(74, 22);
             this.textBox61.TabIndex = 90;
             this.textBox61.Text = "999";
+            this.textBox61.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox60
             // 
@@ -1556,6 +1564,7 @@
             this.textBox60.Size = new System.Drawing.Size(74, 22);
             this.textBox60.TabIndex = 89;
             this.textBox60.Text = "999";
+            this.textBox60.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox59
             // 
@@ -1566,6 +1575,7 @@
             this.textBox59.Size = new System.Drawing.Size(74, 22);
             this.textBox59.TabIndex = 88;
             this.textBox59.Text = "999";
+            this.textBox59.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox58
             // 
@@ -1576,6 +1586,7 @@
             this.textBox58.Size = new System.Drawing.Size(74, 22);
             this.textBox58.TabIndex = 87;
             this.textBox58.Text = "999";
+            this.textBox58.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox57
             // 
@@ -1586,6 +1597,7 @@
             this.textBox57.Size = new System.Drawing.Size(74, 22);
             this.textBox57.TabIndex = 86;
             this.textBox57.Text = "999";
+            this.textBox57.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox56
             // 
@@ -1596,6 +1608,7 @@
             this.textBox56.Size = new System.Drawing.Size(74, 22);
             this.textBox56.TabIndex = 85;
             this.textBox56.Text = "999";
+            this.textBox56.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox55
             // 
@@ -1606,6 +1619,7 @@
             this.textBox55.Size = new System.Drawing.Size(74, 22);
             this.textBox55.TabIndex = 84;
             this.textBox55.Text = "999";
+            this.textBox55.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox54
             // 
@@ -1616,6 +1630,7 @@
             this.textBox54.Size = new System.Drawing.Size(74, 22);
             this.textBox54.TabIndex = 83;
             this.textBox54.Text = "999";
+            this.textBox54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox53
             // 
@@ -1626,6 +1641,7 @@
             this.textBox53.Size = new System.Drawing.Size(74, 22);
             this.textBox53.TabIndex = 82;
             this.textBox53.Text = "999";
+            this.textBox53.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox52
             // 
@@ -1636,6 +1652,7 @@
             this.textBox52.Size = new System.Drawing.Size(74, 22);
             this.textBox52.TabIndex = 81;
             this.textBox52.Text = "999";
+            this.textBox52.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox51
             // 
@@ -1646,6 +1663,7 @@
             this.textBox51.Size = new System.Drawing.Size(74, 22);
             this.textBox51.TabIndex = 80;
             this.textBox51.Text = "999";
+            this.textBox51.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox50
             // 
@@ -1656,6 +1674,7 @@
             this.textBox50.Size = new System.Drawing.Size(74, 22);
             this.textBox50.TabIndex = 79;
             this.textBox50.Text = "999";
+            this.textBox50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox49
             // 
@@ -1666,6 +1685,7 @@
             this.textBox49.Size = new System.Drawing.Size(74, 22);
             this.textBox49.TabIndex = 78;
             this.textBox49.Text = "999";
+            this.textBox49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox48
             // 
@@ -1676,6 +1696,7 @@
             this.textBox48.Size = new System.Drawing.Size(74, 22);
             this.textBox48.TabIndex = 77;
             this.textBox48.Text = "999";
+            this.textBox48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox47
             // 
@@ -1686,6 +1707,7 @@
             this.textBox47.Size = new System.Drawing.Size(74, 22);
             this.textBox47.TabIndex = 76;
             this.textBox47.Text = "999";
+            this.textBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox46
             // 
@@ -1696,6 +1718,7 @@
             this.textBox46.Size = new System.Drawing.Size(74, 22);
             this.textBox46.TabIndex = 75;
             this.textBox46.Text = "999";
+            this.textBox46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox45
             // 
@@ -1706,6 +1729,7 @@
             this.textBox45.Size = new System.Drawing.Size(74, 22);
             this.textBox45.TabIndex = 74;
             this.textBox45.Text = "999";
+            this.textBox45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox44
             // 
@@ -1716,6 +1740,7 @@
             this.textBox44.Size = new System.Drawing.Size(74, 22);
             this.textBox44.TabIndex = 73;
             this.textBox44.Text = "999";
+            this.textBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox43
             // 
@@ -1726,6 +1751,7 @@
             this.textBox43.Size = new System.Drawing.Size(74, 22);
             this.textBox43.TabIndex = 72;
             this.textBox43.Text = "999";
+            this.textBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox42
             // 
@@ -1736,6 +1762,7 @@
             this.textBox42.Size = new System.Drawing.Size(74, 22);
             this.textBox42.TabIndex = 71;
             this.textBox42.Text = "999";
+            this.textBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox41
             // 
@@ -1746,6 +1773,7 @@
             this.textBox41.Size = new System.Drawing.Size(74, 22);
             this.textBox41.TabIndex = 70;
             this.textBox41.Text = "999";
+            this.textBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox40
             // 
@@ -1756,6 +1784,7 @@
             this.textBox40.Size = new System.Drawing.Size(74, 22);
             this.textBox40.TabIndex = 69;
             this.textBox40.Text = "999";
+            this.textBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox39
             // 
@@ -1766,6 +1795,7 @@
             this.textBox39.Size = new System.Drawing.Size(74, 22);
             this.textBox39.TabIndex = 68;
             this.textBox39.Text = "999";
+            this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox38
             // 
@@ -1776,6 +1806,7 @@
             this.textBox38.Size = new System.Drawing.Size(74, 22);
             this.textBox38.TabIndex = 67;
             this.textBox38.Text = "999";
+            this.textBox38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox37
             // 
@@ -1786,6 +1817,7 @@
             this.textBox37.Size = new System.Drawing.Size(74, 22);
             this.textBox37.TabIndex = 66;
             this.textBox37.Text = "999";
+            this.textBox37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox36
             // 
@@ -1796,6 +1828,7 @@
             this.textBox36.Size = new System.Drawing.Size(74, 22);
             this.textBox36.TabIndex = 65;
             this.textBox36.Text = "999";
+            this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label36
             // 
@@ -2430,7 +2463,7 @@
             // 
             this.label101.AutoSize = true;
             this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label101.Location = new System.Drawing.Point(363, 178);
+            this.label101.Location = new System.Drawing.Point(300, 178);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(323, 39);
             this.label101.TabIndex = 9;
@@ -2439,40 +2472,40 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel8.Controls.Add(this.label100);
             this.panel8.Location = new System.Drawing.Point(361, 88);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(135, 48);
+            this.panel8.Size = new System.Drawing.Size(141, 65);
             this.panel8.TabIndex = 37;
             // 
             // label100
             // 
             this.label100.AutoSize = true;
             this.label100.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label100.Location = new System.Drawing.Point(46, 2);
+            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label100.Location = new System.Drawing.Point(31, 5);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(40, 42);
+            this.label100.Size = new System.Drawing.Size(80, 55);
             this.label100.TabIndex = 36;
-            this.label100.Text = "0";
+            this.label100.Text = "00";
             // 
             // textBox65
             // 
             this.textBox65.Enabled = false;
-            this.textBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox65.Location = new System.Drawing.Point(203, 273);
+            this.textBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox65.Location = new System.Drawing.Point(267, 272);
             this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(269, 31);
+            this.textBox65.Size = new System.Drawing.Size(433, 44);
             this.textBox65.TabIndex = 103;
             // 
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label57.Location = new System.Drawing.Point(16, 277);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(194, 25);
+            this.label57.Size = new System.Drawing.Size(256, 33);
             this.label57.TabIndex = 106;
             this.label57.Text = "Приготуватися - ";
             // 
@@ -2491,53 +2524,53 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel6.Controls.Add(this.label56);
             this.panel6.Location = new System.Drawing.Point(14, 88);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(336, 48);
+            this.panel6.Size = new System.Drawing.Size(336, 65);
             this.panel6.TabIndex = 3;
             // 
             // label56
             // 
             this.label56.AutoSize = true;
             this.label56.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label56.Location = new System.Drawing.Point(3, 13);
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label56.Location = new System.Drawing.Point(19, 14);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(0, 24);
+            this.label56.Size = new System.Drawing.Size(0, 37);
             this.label56.TabIndex = 37;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel5.Controls.Add(this.label55);
             this.panel5.Location = new System.Drawing.Point(1058, 88);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(176, 48);
+            this.panel5.Size = new System.Drawing.Size(176, 65);
             this.panel5.TabIndex = 2;
             // 
             // label55
             // 
             this.label55.AutoSize = true;
             this.label55.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label55.Location = new System.Drawing.Point(52, 3);
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label55.Location = new System.Drawing.Point(15, 5);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(84, 42);
+            this.label55.Size = new System.Drawing.Size(108, 55);
             this.label55.TabIndex = 36;
             this.label55.Text = "999";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Controls.Add(this.label54);
             this.panel4.Controls.Add(this.label53);
             this.panel4.Controls.Add(this.label52);
             this.panel4.Controls.Add(this.label51);
-            this.panel4.Location = new System.Drawing.Point(505, 88);
+            this.panel4.Location = new System.Drawing.Point(507, 88);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(547, 48);
+            this.panel4.Size = new System.Drawing.Size(547, 65);
             this.panel4.TabIndex = 1;
             // 
             // label54
@@ -2545,7 +2578,7 @@
             this.label54.AutoSize = true;
             this.label54.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label54.Location = new System.Drawing.Point(405, 5);
+            this.label54.Location = new System.Drawing.Point(405, 14);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(128, 39);
             this.label54.TabIndex = 12;
@@ -2556,7 +2589,7 @@
             this.label53.AutoSize = true;
             this.label53.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label53.Location = new System.Drawing.Point(271, 5);
+            this.label53.Location = new System.Drawing.Point(271, 14);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(128, 39);
             this.label53.TabIndex = 12;
@@ -2567,7 +2600,7 @@
             this.label52.AutoSize = true;
             this.label52.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label52.Location = new System.Drawing.Point(137, 5);
+            this.label52.Location = new System.Drawing.Point(137, 14);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(128, 39);
             this.label52.TabIndex = 12;
@@ -2578,7 +2611,7 @@
             this.label51.AutoSize = true;
             this.label51.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51.Location = new System.Drawing.Point(3, 5);
+            this.label51.Location = new System.Drawing.Point(3, 12);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(128, 39);
             this.label51.TabIndex = 12;
@@ -3511,7 +3544,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(512, 869);
+            this.button6.Location = new System.Drawing.Point(514, 869);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(475, 170);
             this.button6.TabIndex = 41;
@@ -3858,7 +3891,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.ClientSize = new System.Drawing.Size(1924, 1057);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.textBox199);
             this.Controls.Add(this.textBox200);
@@ -3891,6 +3924,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form4";
             this.Text = "Лап-Тайм";

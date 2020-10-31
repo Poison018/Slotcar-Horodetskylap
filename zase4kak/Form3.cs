@@ -24,6 +24,8 @@ namespace zase4kak
 		SoundPlayer pausesound = new SoundPlayer();
 		SoundPlayer startsound = new SoundPlayer();
 		SoundPlayer perehid = new SoundPlayer();
+		SoundPlayer sekynd = new SoundPlayer();
+		SoundPlayer fivesecond = new SoundPlayer();
 		int timetotraning = 60;
 
 		public Form3()
@@ -34,8 +36,8 @@ namespace zase4kak
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-
-
+			
+			button12.Enabled = false;
 			timer1.Enabled = true;
 			button1.Visible = false;
 			button6.Visible = true;
@@ -107,6 +109,7 @@ namespace zase4kak
 
 
 				{
+					label71.Visible = true;
 					timer2.Enabled = true;
 					label4.Text = "00:00";
 					sec = 1;
@@ -170,7 +173,7 @@ namespace zase4kak
 					mins = 0;
 					timer3.Enabled = true;
 					label13.Text = "<<Перехід!>>";
-
+					button6.Enabled = false;
 
 
 					//перехід між доріжками
@@ -256,9 +259,16 @@ namespace zase4kak
 			secs--;
 
 			button6.Enabled = false;
-		
-			
 
+			if (label4.Text == "0:3")
+			{
+				timetostartsound.Play();
+			}
+
+			if (label4.Text == "0:16")//залишилось 15 секунд
+			{
+				sekynd.Play();
+            }
 
 
 			if (secs > 60)
@@ -274,7 +284,7 @@ namespace zase4kak
 				secs = 60;
 			}
 
-			if (secs == 0 && mins == 0)
+			if (secs == 60 && mins == -1)
 			{
 
 				serialPort1.WriteLine("4"); //продовжити 
@@ -336,7 +346,7 @@ namespace zase4kak
 					timer5.Enabled = true;
 					label13.Text = "<<Перехід!>>";
 
-
+					button6.Enabled = false;
 					//перехід між доріжками
 
 					timer17.Enabled = false;
@@ -414,7 +424,17 @@ namespace zase4kak
 
 			button6.Enabled = false;
 
-			
+
+			if (label4.Text == "0:3")
+			{
+				timetostartsound.Play();
+			}
+
+			if (label4.Text == "0:16")//залишилось 15 секунд
+			{
+				sekynd.Play();
+			}
+
 
 			if (secs > 60)
 			{
@@ -429,7 +449,7 @@ namespace zase4kak
 				secs = 60;
 			}
 
-			if (secs == 0 && mins == 0)
+			if (secs == 60 && mins == -1)
 			{
 				serialPort1.WriteLine("4"); //продовжити 
 				label69.Text = "Трек включений";
@@ -464,6 +484,10 @@ namespace zase4kak
 
 		private void Form3_Load(object sender, EventArgs e)
 		{
+			fivesecond.SoundLocation = "music/fivesecond.wav";
+			fivesecond.Load();
+			sekynd.SoundLocation = "music/15secynd.wav";
+			sekynd.Load();
 			perehid.SoundLocation = "music/perehid.wav";
 			perehid.Load();
 			pausesound.SoundLocation = "music/noty-do.wav";
@@ -513,7 +537,7 @@ namespace zase4kak
 					mins = 0;
 					timer7.Enabled = true;
 					label13.Text = "<<Перехід!>>";
-
+					button6.Enabled = false;
 					//перехід між доріжками
 
 
@@ -716,7 +740,61 @@ namespace zase4kak
 		private void timer18_Tick_1(object sender, EventArgs e)
 		{
 
+            switch (Convert.ToInt32(label67.Text))
+            {
+				case 36:
+					{
+						label71.Text = "Група - << J >>";
+						break;
+					}
 
+				case 32:
+					{
+						label71.Text = "Група - << I >>";
+						break;
+					}
+				case 28:
+					{
+						label71.Text = "Група - << H >>";
+						break;
+					}
+				case 24:
+					{
+						label71.Text = "Група - << G >>";
+						break;
+					}
+				case 20:
+					{
+						label71.Text = "Група - << F >>";
+						break;
+					}
+				case 16:
+					{
+						label71.Text = "Група - << E >>";
+						break;
+					}
+				case 12:
+					{
+						label71.Text = "Група - << D >>";
+						break;
+					}
+				case 8:
+					{
+						label71.Text = "Група - << C >>";
+						break;
+					}
+				case 4:
+					{
+						label71.Text = "Група - << B >>";
+						break;
+					}
+				case 0:
+					{
+						label71.Text = "Група - << A >>";
+						break;
+					}
+				
+			}
 			
 
 
@@ -871,44 +949,44 @@ namespace zase4kak
 
 									if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label23.Text))
 									{
-										panel5.Location = new Point(7, 389);
+										panel5.Location = new Point(7, 381);
 									}
 									else
 									{
 										if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label24.Text))
 										{
-											panel5.Location = new Point(7, 389);
+											panel5.Location = new Point(7, 381);
 										}
 										else
 										{
 											if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label17.Text))
 											{
-												panel5.Location = new Point(7, 389);
+												panel5.Location = new Point(7, 381);
 											}
 											else
 											{
 
 												if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
 												{
-													panel5.Location = new Point(7, 477);
+													panel5.Location = new Point(7, 463);
 												}
 												else
 												{
 													if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text))
 													{
-														panel5.Location = new Point(7, 389);
+														panel5.Location = new Point(7, 381);
 													}
 													else
 													{
 														if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
 														{
-															panel5.Location = new Point(7, 389);
+															panel5.Location = new Point(7, 381);
 														}
 														else
 														{
 															if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
 															{
-																panel5.Location = new Point(7, 389);
+																panel5.Location = new Point(7, 381);
 															}
 															else
 															{
@@ -980,19 +1058,19 @@ namespace zase4kak
 
 									if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text))
 									{
-										panel4.Location = new Point(7, 389);
+										panel4.Location = new Point(7, 381);
 									}
 									else
 									{
 										if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text))
 										{
-											panel4.Location = new Point(7, 389);
+											panel4.Location = new Point(7, 381);
 										}
 										else
 										{
 											if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
 											{
-												panel4.Location = new Point(7, 389);
+												panel4.Location = new Point(7, 381);
 											}
 											else
 											{
@@ -1000,26 +1078,26 @@ namespace zase4kak
 
 												if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
 												{
-													panel4.Location = new Point(7, 477);
+													panel4.Location = new Point(7, 463);
 
 												}
 												else
 												{
 													if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text))
 													{
-														panel4.Location = new Point(7, 389);
+														panel4.Location = new Point(7, 381);
 													}
 													else
 													{
 														if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
 														{
-															panel4.Location = new Point(7, 389);
+															panel4.Location = new Point(7, 381);
 														}
 														else
 														{
 															if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
 															{
-																panel4.Location = new Point(7, 389);
+																panel4.Location = new Point(7, 381);
 															}
 															else
 															{
@@ -1087,7 +1165,7 @@ namespace zase4kak
 
 									if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text))
 									{
-										panel3.Location = new Point(7, 389);
+										panel3.Location = new Point(7, 381);
 
 
 									}
@@ -1095,25 +1173,25 @@ namespace zase4kak
 									{
 										if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
 										{
-											panel3.Location = new Point(7, 477);
+											panel3.Location = new Point(7, 463);
 										}
 										else
 										{
 											if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text))
 											{
-												panel3.Location = new Point(7, 389);
+												panel3.Location = new Point(7, 381);
 											}
 											else
 											{
 												if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
 												{
-													panel3.Location = new Point(7, 389);
+													panel3.Location = new Point(7, 381);
 												}
 												else
 												{
 													if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
 													{
-														panel3.Location = new Point(7, 389);
+														panel3.Location = new Point(7, 381);
 													}
 													else
 													{
@@ -1182,19 +1260,19 @@ namespace zase4kak
 
 									if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text))
 									{
-										panel1.Location = new Point(7, 389);
+										panel1.Location = new Point(7, 381);
 									}
 									else
 									{
 										if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
 										{
-											panel1.Location = new Point(7, 389);
+											panel1.Location = new Point(7, 381);
 										}
 										else
 										{
 											if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text))
 											{
-												panel1.Location = new Point(7, 389);
+												panel1.Location = new Point(7, 381);
 											}
 											else
 											{
@@ -1203,25 +1281,25 @@ namespace zase4kak
 
 												if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
 												{
-													panel1.Location = new Point(7, 477);
+													panel1.Location = new Point(7, 463);
 												}
 												else
 												{
 													if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text))
 													{
-														panel1.Location = new Point(7, 389);
+														panel1.Location = new Point(7, 381);
 													}
 													else
 													{
 														if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
 														{
-															panel1.Location = new Point(7, 389);
+															panel1.Location = new Point(7, 381);
 														}
 														else
 														{
 															if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
 															{
-																panel1.Location = new Point(7, 389);
+																panel1.Location = new Point(7, 381);
 															}
 															else
 															{
@@ -1402,7 +1480,10 @@ namespace zase4kak
         {
 			if (e.KeyCode == Keys.Space)
 			{
+				startsound.Play();
 				serialPort1.WriteLine("4");
+				label69.Text = "Трек включений";
+				label69.BackColor = Color.Green;
 				if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
 				{
 					timer2.Enabled = true;
@@ -1463,8 +1544,10 @@ namespace zase4kak
         {
 			if(e.KeyCode == Keys.Space)
             {
-
+				pausesound.Play();
 				serialPort1.WriteLine("3");
+				label69.Text = "Трек виключений";
+				label69.BackColor = Color.Red;
 
 				if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
 				{
@@ -1520,7 +1603,8 @@ namespace zase4kak
         {
 			if(e.KeyCode == Keys.Space)
             {
-				serialPort1.WriteLine("4");
+				
+				
 				timer1.Enabled = true;
 				button1.Visible = false;
 				button6.Visible = true;
@@ -1624,8 +1708,8 @@ namespace zase4kak
 					button1.Focus();
 					panel1.Location = new Point(7, 213);
 					panel3.Location = new Point(7, 294);
-					panel4.Location = new Point(7, 389);
-					panel5.Location = new Point(7, 477);
+					panel4.Location = new Point(7, 381);
+					panel5.Location = new Point(7, 463);
 
 					label17.Text = "0";
 					label24.Text = "0";
@@ -1776,6 +1860,16 @@ namespace zase4kak
 
         private void timer22_Tick(object sender, EventArgs e)
         {
+			if(label70.Text == "6")// 5 секунд
+            {
+				fivesecond.Play();
+            }
+
+			if (label70.Text == "17") //залишилось 15 секунд
+			{
+				sekynd.Play();
+			}
+
 			if (Convert.ToInt32(label70.Text) != 0)
             {
 				label70.Text = Convert.ToString(timetotraning);
@@ -1800,6 +1894,11 @@ namespace zase4kak
 
 
 			}
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void timer11_Tick(object sender, EventArgs e)
@@ -1887,6 +1986,7 @@ namespace zase4kak
 
 		private void button8_Click(object sender, EventArgs e)
 		{
+			button12.Enabled = true;
 			button1.Focus();
 			timer21.Enabled = true;
 			SaveTable(dataGridView1);
@@ -1923,7 +2023,16 @@ namespace zase4kak
 
 			button6.Enabled = false;
 
-			
+			if (label4.Text == "0:3")
+			{
+				timetostartsound.Play();
+			}
+
+
+			if (label4.Text == "0:16") //залишилось 15 секунд
+			{
+				sekynd.Play();
+			}
 
 			if (secs > 60)
 			{
@@ -1938,7 +2047,7 @@ namespace zase4kak
 				secs = 60;
 			}
 
-			if (secs == 0 && mins == 0)
+			if (secs == 60 && mins == -1)
 			{
 
 				serialPort1.WriteLine("4"); //продовжити 
@@ -1990,7 +2099,7 @@ namespace zase4kak
 
 				if (min == -1 && sec == 60)
 				{
-
+					button6.Enabled = false;
 					serialPort1.WriteLine("3"); //пауза
 					label69.Text = "Трек виключений";
 					label69.BackColor = Color.Red;

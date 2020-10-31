@@ -103,8 +103,25 @@ namespace zase4kak
 
 		private void timer1_Tick(object sender, EventArgs e)
 		{
+			if(textBox1.Text == "" || textBox2.Text == "")
+            {
+				button1.Enabled = false;
+            }
+            else
+            {
+				button1.Enabled = true;
+            }
 
 
+			if (textBox3.Text == "" || textBox4.Text == "")
+            {
+				button2.Enabled = false;
+
+            }
+            else
+            {
+				button2.Enabled = true;
+            }
 
 		}
 
