@@ -45,6 +45,11 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // comboBox2
@@ -86,9 +91,10 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.LemonChiffon;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(137, 208);
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(138, 249);
             this.button2.Margin = new System.Windows.Forms.Padding(1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(145, 34);
@@ -100,9 +106,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LemonChiffon;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(12, 208);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(12, 249);
             this.button1.Margin = new System.Windows.Forms.Padding(1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 34);
@@ -115,6 +122,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.LightGray;
             this.label4.Location = new System.Drawing.Point(169, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
@@ -220,6 +228,68 @@
             this.textBox4.TabIndex = 55;
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(10, 180);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 24);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Фінал:";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.checkBox1.Location = new System.Drawing.Point(80, 180);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(57, 24);
+            this.checkBox1.TabIndex = 57;
+            this.checkBox1.Text = "Так";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox2.ForeColor = System.Drawing.Color.Red;
+            this.checkBox2.Location = new System.Drawing.Point(138, 180);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(45, 24);
+            this.checkBox2.TabIndex = 58;
+            this.checkBox2.Text = "Ні";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.Color.Gold;
+            this.label8.Location = new System.Drawing.Point(10, 212);
+            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(198, 20);
+            this.label8.TabIndex = 59;
+            this.label8.Text = "Час фінальної гонки (хв):";
+            this.label8.Visible = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox5.Location = new System.Drawing.Point(204, 212);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(1);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(47, 20);
+            this.textBox5.TabIndex = 60;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox5.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,6 +297,11 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(571, 312);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox3);
@@ -246,6 +321,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Налаштування гонки";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
@@ -269,5 +345,10 @@
         public System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.CheckBox checkBox2;
     }
 }

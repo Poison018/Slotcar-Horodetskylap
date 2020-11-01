@@ -300,7 +300,15 @@ namespace zase4kak
 				timer3.Enabled = false;
 				timer4.Enabled = true;
 				sec = 1;
-				min = Convert.ToInt32(textBox13.Text);
+				if (textBox25.Text == "")
+                {
+					min = Convert.ToInt32(textBox13.Text);
+                }
+                else
+                {
+					min = Convert.ToInt32(textBox24.Text);
+				}
+				
 				label4.Text = "00:00";
 				label13.Text = "<<Гонка!>>";
 				label15.Text = "2/4";
@@ -466,7 +474,18 @@ namespace zase4kak
 
 
 				sec = 1;
-				min = Convert.ToInt32(textBox13.Text);
+
+
+				if (textBox25.Text == "")
+				{
+					min = Convert.ToInt32(textBox13.Text);
+				}
+				else
+				{
+					min = Convert.ToInt32(textBox24.Text);
+				}
+
+
 				label4.Text = "00:00";
 				label13.Text = "<<Гонка!>>";
 				label15.Text = "3/4";
@@ -677,6 +696,7 @@ namespace zase4kak
 		// Импорт данных из Excel-файла (не более 5 столбцов и любое количество строк <= 50.
 		private int ExportExcel()
 		{
+
 			// Выбрать путь и имя файла в диалоговом окне
 			OpenFileDialog ofd = new OpenFileDialog();
 			// Задаем расширение имени файла по умолчанию (открывается папка с программой)
@@ -703,7 +723,7 @@ namespace zase4kak
 			GC.Collect(); // убрать за собой
 			return lastRow;
 
-
+			
 			
 		}
 
@@ -791,6 +811,11 @@ namespace zase4kak
 				case 0:
 					{
 						label71.Text = "Група - << A >>";
+						break;
+					}
+				case 228:
+                    {
+						label71.Text = "<< Фінал! >>";
 						break;
 					}
 				
@@ -1765,11 +1790,7 @@ namespace zase4kak
                
 			}
 
-			if (label67.Text == "0" && label13.Text == "<<Фініш!>>")
-			{
-				label13.Text = "Заїзди завершено!";
-				button6.Visible = false;
-			}
+			
 		}
 		
 
@@ -1791,30 +1812,56 @@ namespace zase4kak
 			textBox23.Visible = false;
 			button9.Visible = false;
 
-			button8.Visible = true;
+			
+			if (textBox25.Text == "")
+			{
 
-			dataGridView1.Visible = true;
+				button8.Visible = true;
+				dataGridView1.Visible = true;
 
-			dataGridView1.Rows.Add("Червона", label45.Text, label17.Text + "," + textBox20.Text);
+				dataGridView1.Rows.Add("Червона", label45.Text, label17.Text + "." + textBox20.Text);
 
-			dataGridView1.Rows.Add("Зелена", label46.Text, label24.Text + "," + textBox22.Text);
+				dataGridView1.Rows.Add("Зелена", label46.Text, label24.Text + "." + textBox22.Text);
 
-			dataGridView1.Rows.Add("Синя", label47.Text, label23.Text + "," + textBox21.Text);
+				dataGridView1.Rows.Add("Синя", label47.Text, label23.Text + "." + textBox21.Text);
 
-			dataGridView1.Rows.Add("Жовта", label48.Text, label25.Text + "," + textBox23.Text);
-			//сортування результату гонки в таблиці
+				dataGridView1.Rows.Add("Жовта", label48.Text, label25.Text + "." + textBox23.Text);
+				//сортування результату гонки в таблиці
 
 
-			dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
+				dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
 
-			textBox20.Text = "";
-			textBox21.Text = "";
-			textBox22.Text = "";
-			textBox23.Text = "";
+				textBox20.Text = "";
+				textBox21.Text = "";
+				textBox22.Text = "";
+				textBox23.Text = "";
 
-		}
+            }
+            else
+            {
+				dataGridView2.Visible = true;
+				button16.Visible = true;
 
-		private void button10_Click(object sender, EventArgs e)
+				dataGridView2.Rows.Add("Червона", label45.Text, label17.Text + "." + textBox20.Text);
+
+				dataGridView2.Rows.Add("Зелена", label46.Text, label24.Text + "." + textBox22.Text);
+
+				dataGridView2.Rows.Add("Синя", label47.Text, label23.Text + "." + textBox21.Text);
+
+				dataGridView2.Rows.Add("Жовта", label48.Text, label25.Text + "." + textBox23.Text);
+				//сортування результату гонки в таблиці
+
+
+				dataGridView2.Sort(dataGridView2.Columns[2], ListSortDirection.Descending);
+
+				textBox20.Text = "";
+				textBox21.Text = "";
+				textBox22.Text = "";
+				textBox23.Text = "";
+			}
+			}
+
+			private void button10_Click(object sender, EventArgs e)
 		{
 			serialPort1.Open();
 			serialPort1.WriteLine("4");
@@ -1901,6 +1948,183 @@ namespace zase4kak
 
         }
 
+        private void button14_Click(object sender, EventArgs e)
+        {
+			label67.Text = "228";
+			textBox25.Text = textBox24.Text;
+
+			button14.Visible = false;
+			button15.Visible = true;
+			min = Convert.ToInt32(textBox24.Text);
+			button12.Enabled = true;
+			dataGridView1.Visible = false;
+			button8.Visible = false;
+			button1.Visible = true;
+			button7.Visible = false;
+			button6.Visible = false;
+			button1.Focus();
+			panel1.Location = new Point(7, 213);
+			panel3.Location = new Point(7, 294);
+			panel4.Location = new Point(7, 381);
+			panel5.Location = new Point(7, 463);
+
+			label17.Text = "0";
+			label24.Text = "0";
+			label23.Text = "0";
+			label25.Text = "0";
+
+			label18.Text = "00,000";
+			label22.Text = "00,000";
+			label19.Text = "00,000";
+			label20.Text = "00,000";
+			label16.Text = "999";
+			label29.Text = "00,000";
+			label30.Text = "00,000";
+			label31.Text = "00,000";
+			label32.Text = "00,000";
+			label42.Text = "999";
+			label35.Text = "00,000";
+			label36.Text = "00,000";
+			label37.Text = "00,000";
+			label34.Text = "00,000";
+			label43.Text = "999";
+			label38.Text = "00,000";
+			label39.Text = "00,000";
+			label40.Text = "00,000";
+			label41.Text = "00,000";
+			label44.Text = "999";
+			label8.Visible = false;
+			panel6.Visible = false;
+			panel7.Visible = false;
+			panel8.Visible = false;
+			panel9.Visible = false;
+			label55.Visible = false;
+			label59.Visible = false;
+			label60.Visible = false;
+			label61.Visible = false;
+			label62.Visible = false;
+			button1.Focus();
+			timetostart = 5;
+			label13.Visible = false;
+			timer21.Enabled = false;
+
+
+			//задаю учасників фіналістів
+
+			label48.Text = dataGridView1[1, 3].Value.ToString();
+			label47.Text = dataGridView1[1, 2].Value.ToString();
+			label46.Text = dataGridView1[1, 1].Value.ToString();
+			label45.Text = dataGridView1[1, 0].Value.ToString();
+			
+
+		}
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+			button12.Enabled = false;
+			timer23.Enabled = true;
+			button1.Visible = false;
+			button15.Visible = false;
+			button6.Visible = true;
+			button6.Enabled = true;
+			button6.Focus();
+		}
+
+        private void timer23_Tick(object sender, EventArgs e)
+        {
+			label18.Text = "00,000";
+			label22.Text = "00,000";
+			label19.Text = "00,000";
+			label20.Text = "00,000";
+			label16.Text = "999";
+			label29.Text = "00,000";
+			label30.Text = "00,000";
+			label31.Text = "00,000";
+			label32.Text = "00,000";
+			label42.Text = "999";
+			label35.Text = "00,000";
+			label36.Text = "00,000";
+			label37.Text = "00,000";
+			label34.Text = "00,000";
+			label43.Text = "999";
+			label38.Text = "00,000";
+			label39.Text = "00,000";
+			label40.Text = "00,000";
+			label41.Text = "00,000";
+			label44.Text = "999";
+			timer11.Interval = 15; //timer на час кола
+			Time = 0.0;             //timer на час кола
+
+			timer16.Interval = 15; //timer на час кола
+			Timeg = 0.0;             //timer на час кола
+
+			timer17.Interval = 15; //timer на час кола
+			Timez = 0.0;             //timer на час кола
+
+			timer15.Interval = 15; //timer на час кола
+			Times = 0.0;             //timer на час кола
+
+
+			if (label4.Text == "4")             //звук для time to start
+			{
+
+				timetostartsound.SoundLocation = "music/81980c1a7dcb7cd.wav";
+				timetostartsound.Load();
+				timetostartsound.Play();
+			}
+
+			label4.Text = Convert.ToString(timetostart); //вивід стартового таймера у лейбл
+			timetostart--;
+
+			if (timetostart == -1) //якщо стартовий номер = -1 таймер зупиняє роботу і ховає лейбл4
+			{
+
+				timer23.Enabled = false;
+
+
+				if (timetostart == -1)
+
+
+				{
+					label71.Visible = true;
+					timer2.Enabled = true;
+					label4.Text = "00:00";
+					sec = 1;
+					min = Convert.ToInt32(textBox24.Text);
+					label13.Text = "<<Гонка!>>";
+					label15.Visible = true;
+					label15.Text = "1/4";
+					label13.Visible = true;
+					timer20.Enabled = true;
+					timer11.Enabled = true;
+					timer16.Enabled = true;
+					timer17.Enabled = true;
+					timer15.Enabled = true;
+					serialPort1.Open();
+					serialPort1.WriteLine("4");
+					serialPort1.Close();
+					label69.Text = "Трек включений";
+					label69.BackColor = Color.Green;
+					button10.Enabled = false;
+					button11.Enabled = true;
+
+
+
+				}
+
+
+
+
+
+			}
+		}
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+			SaveTable(dataGridView2);
+			label13.Text = "<< Заїзди завершено! >>";
+		}
+
         private void timer11_Tick(object sender, EventArgs e)
 		{
 
@@ -1959,9 +2183,13 @@ namespace zase4kak
 
 		void SaveTable(DataGridView Whats_save)
 		{
-			string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "result_of_racing.xlsx";
+			if(textBox25.Text == "")
+            {
 
-			Excel.Application excel_lapp = new Excel.Application();
+           
+			string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "result_of_racing.xlsx";// запис в ексель результату гонки
+
+				Excel.Application excel_lapp = new Excel.Application();
 			Excel.Workbook workbooks = excel_lapp.Workbooks.Add();
 			Excel.Worksheet worksheet = workbooks.ActiveSheet;
 
@@ -1978,7 +2206,27 @@ namespace zase4kak
 			workbooks.Close();
 
 			GC.Collect();
+            }
+            else// запис в ексель результату фіналу
+            {
+				string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "Finaly_of_racing.xlsx";
 
+				Excel.Application excel_lapp_final = new Excel.Application();
+				Excel.Workbook workbooks_final = excel_lapp_final.Workbooks.Add();
+				Excel.Worksheet worksheet_final = workbooks_final.ActiveSheet;
+
+				for (int i = 1; i < Whats_save.RowCount + 1; i++)
+				{
+					for (int j = 1; j < Whats_save.ColumnCount + 1; j++)
+					{
+						worksheet_final.Rows[i].Columns[j] = Whats_save.Rows[i - 1].Cells[j - 1].Value;
+
+					}
+				}
+				excel_lapp_final.AlertBeforeOverwriting = false;
+				workbooks_final.SaveAs(path);
+				workbooks_final.Close();
+			}
 
 			
 
@@ -1986,20 +2234,29 @@ namespace zase4kak
 
 		private void button8_Click(object sender, EventArgs e)
 		{
-			button12.Enabled = true;
-			button1.Focus();
-			timer21.Enabled = true;
-			SaveTable(dataGridView1);
-			
-			if(label13.Text == "Заїзди завершено!")
+
+			if (label67.Text == "0" && label13.Text == "<<Фініш!>>")
+			{
+				label13.Text = "Заїзди завершено!";
+				button6.Visible = false;
+			}
+
+
+			if (label13.Text == "Заїзди завершено!")
             {
 				button6.Enabled = false;
-				
+				button8.Visible = false;
+				button14.Visible = true;
             }
             else
             {
 				button6.Enabled = true;
             }
+
+			button12.Enabled = true;
+			button1.Focus();
+			timer21.Enabled = true;
+			SaveTable(dataGridView1);
 		}
 
 		private void timer10_Tick(object sender, EventArgs e)
@@ -2066,7 +2323,16 @@ namespace zase4kak
 
 
 				sec = 1;
-				min = Convert.ToInt32(textBox13.Text);
+				if (textBox25.Text == "")
+				{
+					min = Convert.ToInt32(textBox13.Text);
+				}
+				else
+				{
+					min = Convert.ToInt32(textBox24.Text);
+				}
+
+
 				label4.Text = "00:00";
 				label13.Text = "<<Гонка!>>";
 				label15.Text = "4/4";
@@ -2787,13 +3053,17 @@ namespace zase4kak
 						button7.Focus();
 						textBox15.Text = "0";
 					}
+					
 
-					MessageBox.Show("Щось пішло не так!! Перевірте моделі!");
+
+					
+					
+						MessageBox.Show("Щось пішло не так!! Перевірте моделі!");
+
+						
+							
 					
 					break;
-
-
-
 
 			}
 

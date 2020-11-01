@@ -176,6 +176,16 @@
             this.label70 = new System.Windows.Forms.Label();
             this.timer22 = new System.Windows.Forms.Timer(this.components);
             this.label71 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.button15 = new System.Windows.Forms.Button();
+            this.timer23 = new System.Windows.Forms.Timer(this.components);
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button16 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -186,6 +196,7 @@
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -252,6 +263,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label66);
             this.panel1.Controls.Add(this.label59);
             this.panel1.Controls.Add(this.label50);
@@ -364,7 +376,7 @@
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(1036, 22);
+            this.label22.Location = new System.Drawing.Point(1036, 20);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(128, 39);
             this.label22.TabIndex = 34;
@@ -375,7 +387,7 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(1309, 22);
+            this.label20.Location = new System.Drawing.Point(1309, 20);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(128, 39);
             this.label20.TabIndex = 12;
@@ -386,7 +398,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(1175, 22);
+            this.label19.Location = new System.Drawing.Point(1175, 20);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(128, 39);
             this.label19.TabIndex = 11;
@@ -409,7 +421,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(1492, 3);
+            this.textBox3.Location = new System.Drawing.Point(1492, 1);
             this.textBox3.Margin = new System.Windows.Forms.Padding(1);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -420,7 +432,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(1034, 3);
+            this.textBox2.Location = new System.Drawing.Point(1034, 1);
             this.textBox2.Margin = new System.Windows.Forms.Padding(1);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -517,6 +529,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label63);
             this.panel3.Controls.Add(this.label60);
             this.panel3.Controls.Add(this.label51);
@@ -615,7 +628,7 @@
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label30.Location = new System.Drawing.Point(1041, 25);
+            this.label30.Location = new System.Drawing.Point(1041, 19);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(128, 39);
             this.label30.TabIndex = 38;
@@ -637,7 +650,7 @@
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label31.Location = new System.Drawing.Point(1309, 26);
+            this.label31.Location = new System.Drawing.Point(1309, 20);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(128, 39);
             this.label31.TabIndex = 37;
@@ -648,7 +661,7 @@
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label32.Location = new System.Drawing.Point(1175, 25);
+            this.label32.Location = new System.Drawing.Point(1175, 19);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(128, 39);
             this.label32.TabIndex = 36;
@@ -658,7 +671,7 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(1493, 5);
+            this.textBox4.Location = new System.Drawing.Point(1493, 1);
             this.textBox4.Margin = new System.Windows.Forms.Padding(1);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
@@ -669,7 +682,7 @@
             // 
             this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(1036, 5);
+            this.textBox5.Location = new System.Drawing.Point(1036, 1);
             this.textBox5.Margin = new System.Windows.Forms.Padding(1);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
@@ -716,6 +729,7 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label64);
             this.panel4.Controls.Add(this.label61);
             this.panel4.Controls.Add(this.label52);
@@ -849,7 +863,7 @@
             this.label35.AutoSize = true;
             this.label35.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label35.Location = new System.Drawing.Point(1309, 20);
+            this.label35.Location = new System.Drawing.Point(1309, 19);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(128, 39);
             this.label35.TabIndex = 41;
@@ -870,7 +884,7 @@
             // 
             this.textBox7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(1493, 3);
+            this.textBox7.Location = new System.Drawing.Point(1493, 1);
             this.textBox7.Margin = new System.Windows.Forms.Padding(1);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
@@ -881,7 +895,7 @@
             // 
             this.textBox8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(1036, 3);
+            this.textBox8.Location = new System.Drawing.Point(1036, 1);
             this.textBox8.Margin = new System.Windows.Forms.Padding(1);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
@@ -928,6 +942,7 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.Gold;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.label65);
             this.panel5.Controls.Add(this.label62);
             this.panel5.Controls.Add(this.label53);
@@ -1069,7 +1084,7 @@
             // 
             this.textBox10.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(1494, 3);
+            this.textBox10.Location = new System.Drawing.Point(1494, 2);
             this.textBox10.Margin = new System.Windows.Forms.Padding(1);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
@@ -1080,7 +1095,7 @@
             // 
             this.textBox11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(1036, 6);
+            this.textBox11.Location = new System.Drawing.Point(1036, 2);
             this.textBox11.Margin = new System.Windows.Forms.Padding(1);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
@@ -1191,8 +1206,9 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(785, 834);
+            this.button1.Location = new System.Drawing.Point(750, 835);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(458, 148);
@@ -1275,6 +1291,7 @@
             // 
             // button2
             // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(481, 597);
             this.button2.Name = "button2";
@@ -1346,8 +1363,10 @@
             // 
             // button4
             // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(785, 699);
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Location = new System.Drawing.Point(750, 700);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(223, 94);
             this.button4.TabIndex = 40;
@@ -1378,8 +1397,10 @@
             // 
             // button3
             // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(1020, 699);
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Location = new System.Drawing.Point(985, 700);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(223, 94);
             this.button3.TabIndex = 43;
@@ -1389,8 +1410,10 @@
             // 
             // button5
             // 
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(481, 596);
+            this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button5.Location = new System.Drawing.Point(481, 597);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 37);
             this.button5.TabIndex = 44;
@@ -1495,8 +1518,9 @@
             // 
             // button6
             // 
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
-            this.button6.Location = new System.Drawing.Point(784, 834);
+            this.button6.Location = new System.Drawing.Point(750, 835);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(458, 148);
             this.button6.TabIndex = 48;
@@ -1508,8 +1532,9 @@
             // 
             // button7
             // 
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
-            this.button7.Location = new System.Drawing.Point(784, 834);
+            this.button7.Location = new System.Drawing.Point(750, 835);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(458, 148);
             this.button7.TabIndex = 49;
@@ -1559,7 +1584,10 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(1786, 948);
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button8.Location = new System.Drawing.Point(1786, 936);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(106, 34);
             this.button8.TabIndex = 51;
@@ -1632,6 +1660,8 @@
             // 
             // button9
             // 
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button9.Location = new System.Drawing.Point(1075, 627);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(76, 25);
@@ -1643,24 +1673,28 @@
             // 
             // button10
             // 
+            this.button10.BackColor = System.Drawing.Color.Lime;
             this.button10.Location = new System.Drawing.Point(143, 981);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(83, 23);
             this.button10.TabIndex = 59;
             this.button10.Text = "Вкл Трек";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.UseVisualStyleBackColor = false;
             this.button10.Visible = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
+            this.button11.BackColor = System.Drawing.Color.Firebrick;
             this.button11.Enabled = false;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button11.Location = new System.Drawing.Point(232, 981);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(83, 23);
             this.button11.TabIndex = 60;
             this.button11.Text = "Викл Трек";
-            this.button11.UseVisualStyleBackColor = true;
+            this.button11.UseVisualStyleBackColor = false;
             this.button11.Visible = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -1726,12 +1760,114 @@
             this.label71.Text = "label71";
             this.label71.Visible = false;
             // 
+            // button14
+            // 
+            this.button14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button14.BackgroundImage")));
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button14.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button14.Location = new System.Drawing.Point(1786, 981);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(106, 34);
+            this.button14.TabIndex = 66;
+            this.button14.Text = "Фінал";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Visible = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(1792, 1021);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(34, 20);
+            this.textBox24.TabIndex = 67;
+            this.textBox24.Visible = false;
+            // 
+            // button15
+            // 
+            this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button15.Location = new System.Drawing.Point(750, 835);
+            this.button15.Margin = new System.Windows.Forms.Padding(2);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(458, 148);
+            this.button15.TabIndex = 68;
+            this.button15.Text = "Старт фіналу";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Visible = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // timer23
+            // 
+            this.timer23.Interval = 1000;
+            this.timer23.Tag = "timer to start для фіналу";
+            this.timer23.Tick += new System.EventHandler(this.timer23_Tick);
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(1832, 1021);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(36, 20);
+            this.textBox25.TabIndex = 69;
+            this.textBox25.Visible = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.dataGridView2.Location = new System.Drawing.Point(1363, 565);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(417, 229);
+            this.dataGridView2.TabIndex = 70;
+            this.dataGridView2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Доріжка";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Спортсмен";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Результат";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // button16
+            // 
+            this.button16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button16.BackgroundImage")));
+            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button16.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button16.Location = new System.Drawing.Point(1786, 885);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(106, 45);
+            this.button16.TabIndex = 71;
+            this.button16.Text = "Зберегти в Excel";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Visible = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(1924, 1057);
+            this.ClientSize = new System.Drawing.Size(1920, 1057);
+            this.Controls.Add(this.button16);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.textBox25);
+            this.Controls.Add(this.button15);
+            this.Controls.Add(this.textBox24);
+            this.Controls.Add(this.button14);
             this.Controls.Add(this.label71);
             this.Controls.Add(this.label70);
             this.Controls.Add(this.button13);
@@ -1802,6 +1938,7 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1955,5 +2092,15 @@
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Timer timer22;
         private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Button button14;
+        public System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Timer timer23;
+        public System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button button16;
     }
 }

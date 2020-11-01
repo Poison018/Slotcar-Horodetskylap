@@ -31,7 +31,7 @@ namespace zase4kak
 			Form3 f3 = new Form3();
 
 
-
+			f3.textBox24.Text = textBox5.Text;
 
 
 			f3.textBox13.Text = textBox1.Text;
@@ -103,6 +103,21 @@ namespace zase4kak
 
 		private void timer1_Tick(object sender, EventArgs e)
 		{
+
+
+			if(checkBox1.Checked == true)		//задавання параметрів фінальної гонки
+            {
+				label8.Visible = true;
+				textBox5.Visible = true;
+            }
+            else
+            {
+				label8.Visible = false;
+				textBox5.Visible = false;
+			}
+
+
+
 			if(textBox1.Text == "" || textBox2.Text == "")
             {
 				button1.Enabled = false;
@@ -195,5 +210,39 @@ namespace zase4kak
 			
 			
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+			if(checkBox1.Checked == true)
+            {
+				checkBox1.Enabled = false;
+				checkBox2.Enabled = true;
+				checkBox2.Checked = false;
+            }
+            else
+            {
+				checkBox1.Enabled = true;
+				checkBox2.Enabled = false;
+				checkBox1.Checked = false;
+			}
+			
+		}
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+			if (checkBox2.Checked == true)
+			{
+				checkBox2.Enabled = false;
+				checkBox1.Enabled = true;
+				checkBox1.Checked = false;
+				textBox5.Text = "";
+			}
+			else
+			{
+				checkBox2.Enabled = true;
+				checkBox1.Enabled = false;
+				checkBox2.Checked = false;
+			}
+		}
     }
 }

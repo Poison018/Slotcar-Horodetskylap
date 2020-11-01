@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9263E48E-9693-4541-AB35-33B62F1785EE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>zase4kak</RootNamespace>
-    <AssemblyName>zase4kak</AssemblyName>
+    <RootNamespace>zase4ka</RootNamespace>
+    <AssemblyName>zase4ka</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

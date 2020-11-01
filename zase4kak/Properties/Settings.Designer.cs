@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace zase4kak.Properties {
+namespace zase4ka.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

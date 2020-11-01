@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,32 @@ namespace zase4kak
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.Close();
+            if (textBox1.Text == "alabamba")
+            {
+                label1.Visible = false;
+                textBox1.Visible = false;
+            }
+            else
+            {
+                label1.Text = "Пароль не вірний!";
+            }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Visible = true;
+            button2.Visible = false;
+            label1.Visible = true;
+            timer1.Enabled = true;
+            timer1.Enabled = false;
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+       
     }
 }

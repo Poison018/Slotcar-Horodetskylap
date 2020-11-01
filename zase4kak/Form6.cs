@@ -25,7 +25,7 @@ namespace zase4kak
 
         }
 
-        void SaveTable(DataGridView What_save)
+       public void SaveTable(DataGridView What_save)
         {
             string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "Lap_Time.xlsx";
 

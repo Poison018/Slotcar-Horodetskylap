@@ -382,6 +382,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.textBox183);
             this.panel1.Controls.Add(this.textBox184);
             this.panel1.Controls.Add(this.textBox185);
@@ -1390,6 +1391,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -2434,6 +2436,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label102);
             this.panel2.Controls.Add(this.label101);
             this.panel2.Controls.Add(this.panel8);
@@ -2685,6 +2688,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.textBox75);
             this.panel7.Controls.Add(this.label89);
             this.panel7.Controls.Add(this.label90);
@@ -2768,7 +2772,7 @@
             this.panel7.Controls.Add(this.label59);
             this.panel7.Location = new System.Drawing.Point(9, 490);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1274, 337);
+            this.panel7.Size = new System.Drawing.Size(1283, 337);
             this.panel7.TabIndex = 3;
             // 
             // textBox75
@@ -3543,8 +3547,9 @@
             // 
             // button6
             // 
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(514, 869);
+            this.button6.Location = new System.Drawing.Point(512, 869);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(475, 170);
             this.button6.TabIndex = 41;
@@ -3556,6 +3561,7 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(512, 869);
             this.button1.Name = "button1";
@@ -3581,6 +3587,7 @@
             // 
             // button3
             // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.Enabled = false;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(993, 828);
@@ -3661,6 +3668,7 @@
             // 
             // button4
             // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.button4.Location = new System.Drawing.Point(1141, 828);
             this.button4.Name = "button4";
@@ -3690,8 +3698,9 @@
             // 
             // button5
             // 
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(512, 869);
+            this.button5.Location = new System.Drawing.Point(512, 871);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(475, 170);
             this.button5.TabIndex = 40;
@@ -3876,7 +3885,9 @@
             // 
             // button7
             // 
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button7.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button7.Location = new System.Drawing.Point(1067, 942);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(149, 72);
@@ -3891,7 +3902,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(1924, 1057);
+            this.ClientSize = new System.Drawing.Size(1920, 1057);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.textBox199);
             this.Controls.Add(this.textBox200);
@@ -3906,9 +3917,9 @@
             this.Controls.Add(this.textBox193);
             this.Controls.Add(this.textBox194);
             this.Controls.Add(this.textBox187);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox188);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox189);
             this.Controls.Add(this.label104);
             this.Controls.Add(this.textBox190);
