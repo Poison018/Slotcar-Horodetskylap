@@ -33,6 +33,7 @@ namespace zase4kak
         SoundPlayer kvalificatsia = new SoundPlayer();
         SoundPlayer sekyd = new SoundPlayer();
         SoundPlayer zaminapilota = new SoundPlayer();
+        SoundPlayer record = new SoundPlayer();
 
 
         private void label3_Click(object sender, EventArgs e)
@@ -304,6 +305,7 @@ namespace zase4kak
 
             if(pmin == -1 || psec == 0)
             {
+                serialPort1.Open();
                 serialPort1.WriteLine("4");
                 timer2.Enabled = false;
                 min = Convert.ToInt32(textBox106.Text);
@@ -361,7 +363,7 @@ namespace zase4kak
                     if (Convert.ToDouble(label55.Text) > Convert.ToDouble(label103.Text))
                     {
                         label55.Text = label103.Text;
-
+                        record.Play();
                     }
 
                 }
@@ -386,6 +388,8 @@ namespace zase4kak
             startsound.Load();
             finishsound.SoundLocation = "music/aplodismenty_s_krikami_bravo.wav";
             finishsound.Load();
+            record.SoundLocation = "music/00508.wav";
+            record.Load();
 
 
             String[] strPortName = SerialPort.GetPortNames();
@@ -641,7 +645,10 @@ namespace zase4kak
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-
+            if(serialPort1.IsOpen == true || timer2.Enabled == true)
+            {
+                serialPort1.Close();
+            }
 
 
             if (label101.Text == "<<Кваліфікацію завершено!>>")
@@ -1195,6 +1202,25 @@ namespace zase4kak
             button5.Focus();
             timer11.Enabled = true;
           
+        }
+
+        private void Form4_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show(
+                 "Вы действительно хотите выйти из программы?",
+                 "Завершение программы",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning
+                );
+            if (dialog == DialogResult.Yes)
+            {
+                e.Cancel = false;
+             
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)

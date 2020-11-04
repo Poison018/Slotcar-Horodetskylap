@@ -215,14 +215,12 @@ namespace zase4kak
         {
 			if(checkBox1.Checked == true)
             {
-				checkBox1.Enabled = false;
-				checkBox2.Enabled = true;
+			
 				checkBox2.Checked = false;
             }
             else
             {
-				checkBox1.Enabled = true;
-				checkBox2.Enabled = false;
+				
 				checkBox1.Checked = false;
 			}
 			
@@ -232,17 +230,44 @@ namespace zase4kak
         {
 			if (checkBox2.Checked == true)
 			{
-				checkBox2.Enabled = false;
-				checkBox1.Enabled = true;
+				
 				checkBox1.Checked = false;
 				textBox5.Text = "";
 			}
 			else
 			{
-				checkBox2.Enabled = true;
-				checkBox1.Enabled = false;
+				
 				checkBox2.Checked = false;
 			}
 		}
-    }
-}
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+			Form3 f3 = new Form3();      //закриваю програму
+				DialogResult dialog = MessageBox.Show(
+				 "Вы действительно хотите выйти из программы?",
+				 "Завершение программы",
+				 MessageBoxButtons.YesNo,
+				 MessageBoxIcon.Warning
+				);
+				if (dialog == DialogResult.Yes)
+				{
+					e.Cancel = false;
+				Application.Exit();
+			}
+			else
+				{
+					e.Cancel = true;
+				
+				}
+			}
+		}
+	}
+
+
+    

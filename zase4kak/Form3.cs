@@ -40,7 +40,7 @@ namespace zase4kak
 			button12.Enabled = false;
 			timer1.Enabled = true;
 			button1.Visible = false;
-			button6.Visible = true;
+			
 			button6.Focus();
 		}
 
@@ -286,7 +286,7 @@ namespace zase4kak
 
 			if (secs == 60 && mins == -1)
 			{
-
+				serialPort1.Open();
 				serialPort1.WriteLine("4"); //продовжити 
 				label69.Text = "Трек включений";
 				label69.BackColor = Color.Green;
@@ -327,6 +327,8 @@ namespace zase4kak
 
 		private void timer4_Tick(object sender, EventArgs e)
 		{
+
+			
 			sec--;
 			label4.Text = Convert.ToString(min) + ":" + Convert.ToString(sec);               //зчитую час гонки який був заданий у настройках
 
@@ -459,6 +461,7 @@ namespace zase4kak
 
 			if (secs == 60 && mins == -1)
 			{
+				serialPort1.Open();
 				serialPort1.WriteLine("4"); //продовжити 
 				label69.Text = "Трек включений";
 				label69.BackColor = Color.Green;
@@ -530,6 +533,8 @@ namespace zase4kak
 
 		private void timer6_Tick(object sender, EventArgs e)
 		{
+
+			
 			sec--;
 			label4.Text = Convert.ToString(min) + ":" + Convert.ToString(sec);           //зчитую час гонки який був заданий у настройках
 
@@ -759,6 +764,15 @@ namespace zase4kak
 
 		private void timer18_Tick_1(object sender, EventArgs e)
 		{
+			if (textBox20.Text == "" || textBox21.Text == "" || textBox22.Text == "" || textBox23.Text == "")
+            {
+				button9.Enabled = false;
+            }
+            else
+            {
+				button9.Enabled = true;
+            }
+
 
             switch (Convert.ToInt32(label67.Text))
             {
@@ -952,19 +966,19 @@ namespace zase4kak
 					{
 						if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label24.Text))
 						{
-							panel5.Location = new Point(7, 294);
+							panel5.Location = new Point(7, 358);
 						}
 						else
 						{
 							if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label17.Text))
 							{
-								panel5.Location = new Point(7, 294);
+								panel5.Location = new Point(7, 358);
 							}
 							else
 							{
 								if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label17.Text))
 								{
-									panel5.Location = new Point(7, 294);
+									panel5.Location = new Point(7, 358);
 								}
 								else
 								{
@@ -974,63 +988,63 @@ namespace zase4kak
 
 									if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label23.Text))
 									{
-										panel5.Location = new Point(7, 381);
+										panel5.Location = new Point(7, 502);
 									}
 									else
 									{
 										if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label24.Text))
 										{
-											panel5.Location = new Point(7, 381);
+											panel5.Location = new Point(7, 502);
 										}
 										else
 										{
 											if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label17.Text))
 											{
-												panel5.Location = new Point(7, 381);
+												panel5.Location = new Point(7, 502);
 											}
 											else
 											{
 
 												if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
 												{
-													panel5.Location = new Point(7, 463);
+													panel5.Location = new Point(7, 645);
 												}
 												else
 												{
 													if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text))
 													{
-														panel5.Location = new Point(7, 381);
+														panel5.Location = new Point(7, 502);
 													}
 													else
 													{
 														if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
 														{
-															panel5.Location = new Point(7, 381);
+															panel5.Location = new Point(7, 502);
 														}
 														else
 														{
 															if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
 															{
-																panel5.Location = new Point(7, 381);
+																panel5.Location = new Point(7, 502);
 															}
 															else
 															{
 																if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text))
 																{
-																	panel5.Location = new Point(7, 294);
+																	panel5.Location = new Point(7, 358);
 
 																}
 																else
 																{
 																	if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text))
 																	{
-																		panel5.Location = new Point(7, 294);
+																		panel5.Location = new Point(7, 358);
 																	}
 																	else
 																	{
 																		if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
 																		{
-																			panel5.Location = new Point(7, 294);
+																			panel5.Location = new Point(7, 358);
 																		}
 																	}
 																}
@@ -1064,38 +1078,38 @@ namespace zase4kak
 					{
 						if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text))
 						{
-							panel4.Location = new Point(7, 294);
+							panel4.Location = new Point(7, 358);
 						}
 						else
 						{
 							if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
 							{
-								panel4.Location = new Point(7, 294);
+								panel4.Location = new Point(7, 358);
 							}
 							else
 							{
 								if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
 								{
-									panel4.Location = new Point(7, 294);
+									panel4.Location = new Point(7, 358);
 								}
 								else
 								{
 
 									if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text))
 									{
-										panel4.Location = new Point(7, 381);
+										panel4.Location = new Point(7, 502);
 									}
 									else
 									{
 										if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text))
 										{
-											panel4.Location = new Point(7, 381);
+											panel4.Location = new Point(7, 502);
 										}
 										else
 										{
 											if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
 											{
-												panel4.Location = new Point(7, 381);
+												panel4.Location = new Point(7, 502);
 											}
 											else
 											{
@@ -1103,44 +1117,44 @@ namespace zase4kak
 
 												if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
 												{
-													panel4.Location = new Point(7, 463);
+													panel4.Location = new Point(7, 645);
 
 												}
 												else
 												{
 													if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text))
 													{
-														panel4.Location = new Point(7, 381);
+														panel4.Location = new Point(7, 502);
 													}
 													else
 													{
 														if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
 														{
-															panel4.Location = new Point(7, 381);
+															panel4.Location = new Point(7, 502);
 														}
 														else
 														{
 															if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
 															{
-																panel4.Location = new Point(7, 381);
+																panel4.Location = new Point(7, 502);
 															}
 															else
 															{
 																if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text))
 																{
-																	panel4.Location = new Point(7, 294);
+																	panel4.Location = new Point(7, 358);
 																}
 																else
 																{
 																	if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
 																	{
-																		panel4.Location = new Point(7, 294);
+																		panel4.Location = new Point(7, 358);
 																	}
 																	else
 																	{
 																		if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text))
 																		{
-																			panel4.Location = new Point(7, 294);
+																			panel4.Location = new Point(7, 358);
 																		}
 																	}
 																}
@@ -1170,19 +1184,19 @@ namespace zase4kak
 					{
 						if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label23.Text))
 						{
-							panel3.Location = new Point(7, 294);
+							panel3.Location = new Point(7, 358);
 						}
 						else
 						{
 							if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label17.Text))
 							{
-								panel3.Location = new Point(7, 294);
+								panel3.Location = new Point(7, 358);
 							}
 							else
 							{
 								if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label17.Text))
 								{
-									panel3.Location = new Point(7, 294);
+									panel3.Location = new Point(7, 358);
 								}
 								else
 								{
@@ -1190,7 +1204,7 @@ namespace zase4kak
 
 									if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text))
 									{
-										panel3.Location = new Point(7, 381);
+										panel3.Location = new Point(7, 502);
 
 
 									}
@@ -1198,43 +1212,43 @@ namespace zase4kak
 									{
 										if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
 										{
-											panel3.Location = new Point(7, 463);
+											panel3.Location = new Point(7, 645);
 										}
 										else
 										{
 											if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text))
 											{
-												panel3.Location = new Point(7, 381);
+												panel3.Location = new Point(7, 502);
 											}
 											else
 											{
 												if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
 												{
-													panel3.Location = new Point(7, 381);
+													panel3.Location = new Point(7, 502);
 												}
 												else
 												{
 													if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
 													{
-														panel3.Location = new Point(7, 381);
+														panel3.Location = new Point(7, 502);
 													}
 													else
 													{
 														if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text))
 														{
-															panel3.Location = new Point(7, 294);
+															panel3.Location = new Point(7, 358);
 														}
 														else
 														{
 															if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
 															{
-																panel3.Location = new Point(7, 294);
+																panel3.Location = new Point(7, 358);
 															}
 															else
 															{
 																if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text))
 																{
-																	panel3.Location = new Point(7, 294);
+																	panel3.Location = new Point(7, 358);
 																}
 															}
 														}
@@ -1265,19 +1279,19 @@ namespace zase4kak
 					{
 						if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text))
 						{
-							panel1.Location = new Point(7, 294);
+							panel1.Location = new Point(7, 358);
 						}
 						else
 						{
 							if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
 							{
-								panel1.Location = new Point(7, 294);
+								panel1.Location = new Point(7, 358);
 							}
 							else
 							{
 								if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
 								{
-									panel1.Location = new Point(7, 294);
+									panel1.Location = new Point(7, 358);
 								}
 								else
 								{
@@ -1285,19 +1299,19 @@ namespace zase4kak
 
 									if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text))
 									{
-										panel1.Location = new Point(7, 381);
+										panel1.Location = new Point(7, 502);
 									}
 									else
 									{
 										if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
 										{
-											panel1.Location = new Point(7, 381);
+											panel1.Location = new Point(7, 502);
 										}
 										else
 										{
 											if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text))
 											{
-												panel1.Location = new Point(7, 381);
+												panel1.Location = new Point(7, 502);
 											}
 											else
 											{
@@ -1306,43 +1320,43 @@ namespace zase4kak
 
 												if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
 												{
-													panel1.Location = new Point(7, 463);
+													panel1.Location = new Point(7, 645);
 												}
 												else
 												{
 													if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text))
 													{
-														panel1.Location = new Point(7, 381);
+														panel1.Location = new Point(7, 502);
 													}
 													else
 													{
 														if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
 														{
-															panel1.Location = new Point(7, 381);
+															panel1.Location = new Point(7, 502);
 														}
 														else
 														{
 															if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
 															{
-																panel1.Location = new Point(7, 381);
+																panel1.Location = new Point(7, 502);
 															}
 															else
 															{
 																if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text))
 																{
-																	panel1.Location = new Point(7, 294);
+																	panel1.Location = new Point(7, 358);
 																}
 																else
 																{
 																	if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text))
 																	{
-																		panel1.Location = new Point(7, 294);
+																		panel1.Location = new Point(7, 358);
 																	}
 																	else
 																	{
 																		if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
 																		{
-																			panel1.Location = new Point(7, 294);
+																			panel1.Location = new Point(7, 358);
 																		}
 																	}
 																}
@@ -1370,7 +1384,806 @@ namespace zase4kak
 
         private void timer19_Tick_1(object sender, EventArgs e)
         {
+			if (serialPort1.IsOpen == true && timer3.Enabled == true || timer5.Enabled == true || timer7.Enabled == true)
+            {
+				serialPort1.Close();
+            }
+            
 			
+
+
+			//if (label22.Text == "00,000" || label19.Text == "00,000" || label20.Text == "00,000")
+   //         {
+			//	label72.Text = "-";
+   //         }
+   //         else
+   //         {
+
+
+
+			//	switch (Convert.ToInt32(textBox13.Text))  // прогноз червона доріжка
+			//	{
+			//		case 1:
+			//			{
+			//				double red_result;
+			//				int timetoprognoz, prognozRed;
+
+			//				timetoprognoz = 60;
+
+			//				red_result = Convert.ToDouble(label22.Text) + Convert.ToDouble(label19.Text) + Convert.ToDouble(label20.Text);
+
+
+			//				prognozRed = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(red_result);
+
+
+			//				label72.Text = Convert.ToString(prognozRed);
+
+
+
+			//			}
+			//			break;
+			//		case 2:
+			//			{
+			//				double red_result;
+			//				int timetoprognoz, prognozRed;
+
+			//				timetoprognoz = 120;
+
+			//				red_result = Convert.ToDouble(label22.Text) + Convert.ToDouble(label19.Text) + Convert.ToDouble(label20.Text);
+
+
+			//				prognozRed = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(red_result);
+
+
+			//				label72.Text = Convert.ToString(prognozRed);
+			//			}
+			//			break;
+
+			//		case 3:
+			//			{
+			//				double red_result;
+			//				int timetoprognoz, prognozRed;
+
+			//				timetoprognoz = 180;
+
+			//				red_result = Convert.ToDouble(label22.Text) + Convert.ToDouble(label19.Text) + Convert.ToDouble(label20.Text);
+
+
+			//				prognozRed = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(red_result);
+
+
+			//				label72.Text = Convert.ToString(prognozRed);
+			//			}
+			//			break;
+			//		case 4:
+			//			{
+			//				double red_result;
+			//				int timetoprognoz, prognozRed;
+
+			//				timetoprognoz = 240;
+
+			//				red_result = Convert.ToDouble(label22.Text) + Convert.ToDouble(label19.Text) + Convert.ToDouble(label20.Text);
+
+
+			//				prognozRed = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(red_result);
+
+
+			//				label72.Text = Convert.ToString(prognozRed);
+			//			}
+			//			break;
+			//		case 5:
+			//			{
+			//				double red_result;
+			//				int timetoprognoz, prognozRed;
+
+			//				timetoprognoz = 300;
+
+			//				red_result = Convert.ToDouble(label22.Text) + Convert.ToDouble(label19.Text) + Convert.ToDouble(label20.Text);
+
+
+			//				prognozRed = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(red_result);
+
+
+			//				label72.Text = Convert.ToString(prognozRed);
+			//			}
+			//			break;
+			//		case 6:
+			//			{
+			//				double red_result;
+			//				int timetoprognoz, prognozRed;
+
+			//				timetoprognoz = 360;
+
+			//				red_result = Convert.ToDouble(label22.Text) + Convert.ToDouble(label19.Text) + Convert.ToDouble(label20.Text);
+
+
+			//				prognozRed = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(red_result);
+
+
+			//				label72.Text = Convert.ToString(prognozRed);
+			//			}
+			//			break;
+			//		case 7:
+			//			{
+			//				double red_result;
+			//				int timetoprognoz, prognozRed;
+
+			//				timetoprognoz = 420;
+
+			//				red_result = Convert.ToDouble(label22.Text) + Convert.ToDouble(label19.Text) + Convert.ToDouble(label20.Text);
+
+
+			//				prognozRed = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(red_result);
+
+
+			//				label72.Text = Convert.ToString(prognozRed);
+			//			}
+			//			break;
+			//		case 8:
+			//			{
+			//				double red_result;
+			//				int timetoprognoz, prognozRed;
+
+			//				timetoprognoz = 480;
+
+			//				red_result = Convert.ToDouble(label22.Text) + Convert.ToDouble(label19.Text) + Convert.ToDouble(label20.Text);
+
+
+			//				prognozRed = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(red_result);
+
+
+			//				label72.Text = Convert.ToString(prognozRed);
+			//			}
+			//			break;
+			//		case 9:
+			//			{
+			//				double red_result;
+			//				int timetoprognoz, prognozRed;
+
+			//				timetoprognoz = 540;
+
+			//				red_result = Convert.ToDouble(label22.Text) + Convert.ToDouble(label19.Text) + Convert.ToDouble(label20.Text);
+
+
+			//				prognozRed = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(red_result);
+
+
+			//				label72.Text = Convert.ToString(prognozRed);
+			//			}
+			//			break;
+			//		case 10:
+			//			{
+			//				double red_result;
+			//				int timetoprognoz, prognozRed;
+
+			//				timetoprognoz = 600;
+
+			//				red_result = Convert.ToDouble(label22.Text) + Convert.ToDouble(label19.Text) + Convert.ToDouble(label20.Text);
+
+
+			//				prognozRed = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(red_result);
+
+
+			//				label72.Text = Convert.ToString(prognozRed);
+			//			}
+			//			break;
+			//		default:
+			//			{
+			//				label72.Text = "-";
+			//				label73.Text = "-";
+			//				label74.Text = "-";
+			//				label75.Text = "-";
+
+			//			}
+			//			break;
+
+
+
+			//	}
+
+			//	}
+
+
+			//	if (label30.Text == "00,000" || label32.Text == "00,000" || label31.Text == "00,000")   // Прогноз зелена доріжка
+			//	{
+			//		label73.Text = "-";
+			//	}
+			//	else
+			//	{
+
+
+
+			//		switch (Convert.ToInt32(textBox13.Text))
+			//		{
+			//			case 1:
+			//				{
+			//					double  Grean_result;
+			//					int timetoprognoz, prognozGrean;
+
+			//					timetoprognoz = 60;
+
+								
+			//					Grean_result = Convert.ToDouble(label30.Text) + Convert.ToDouble(label32.Text) + Convert.ToDouble(label31.Text);
+								
+			//					prognozGrean = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Grean_result);
+								
+
+								
+			//					label73.Text = Convert.ToString(prognozGrean);
+								
+
+
+
+			//				}
+			//				break;
+			//			case 2:
+			//				{
+			//					double Grean_result;
+			//					int timetoprognoz, prognozGrean;
+
+			//					timetoprognoz = 120;
+
+
+			//					Grean_result = Convert.ToDouble(label30.Text) + Convert.ToDouble(label32.Text) + Convert.ToDouble(label31.Text);
+
+			//					prognozGrean = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Grean_result);
+
+
+
+			//					label73.Text = Convert.ToString(prognozGrean);
+			//				}
+			//				break;
+
+			//			case 3:
+			//				{
+			//					double Grean_result;
+			//					int timetoprognoz, prognozGrean;
+
+			//					timetoprognoz = 180;
+
+
+			//					Grean_result = Convert.ToDouble(label30.Text) + Convert.ToDouble(label32.Text) + Convert.ToDouble(label31.Text);
+
+			//					prognozGrean = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Grean_result);
+
+
+
+			//					label73.Text = Convert.ToString(prognozGrean);
+			//				}
+			//				break;
+			//			case 4:
+			//				{
+			//					double Grean_result;
+			//					int timetoprognoz, prognozGrean;
+
+			//					timetoprognoz = 240;
+
+
+			//					Grean_result = Convert.ToDouble(label30.Text) + Convert.ToDouble(label32.Text) + Convert.ToDouble(label31.Text);
+
+			//					prognozGrean = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Grean_result);
+
+
+
+			//					label73.Text = Convert.ToString(prognozGrean);
+			//				}
+			//				break;
+			//			case 5:
+			//				{
+			//					double Grean_result;
+			//					int timetoprognoz, prognozGrean;
+
+			//					timetoprognoz = 300;
+
+
+			//					Grean_result = Convert.ToDouble(label30.Text) + Convert.ToDouble(label32.Text) + Convert.ToDouble(label31.Text);
+
+			//					prognozGrean = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Grean_result);
+
+
+
+			//					label73.Text = Convert.ToString(prognozGrean);
+			//				}
+			//				break;
+			//			case 6:
+			//				{
+			//					double Grean_result;
+			//					int timetoprognoz, prognozGrean;
+
+			//					timetoprognoz = 360;
+
+
+			//					Grean_result = Convert.ToDouble(label30.Text) + Convert.ToDouble(label32.Text) + Convert.ToDouble(label31.Text);
+
+			//					prognozGrean = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Grean_result);
+
+
+
+			//					label73.Text = Convert.ToString(prognozGrean);
+			//				}
+			//				break;
+			//			case 7:
+			//				{
+			//					double Grean_result;
+			//					int timetoprognoz, prognozGrean;
+
+			//					timetoprognoz = 420;
+
+
+			//					Grean_result = Convert.ToDouble(label30.Text) + Convert.ToDouble(label32.Text) + Convert.ToDouble(label31.Text);
+
+			//					prognozGrean = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Grean_result);
+
+
+
+			//					label73.Text = Convert.ToString(prognozGrean);
+			//				}
+			//				break;
+			//			case 8:
+			//				{
+			//					double Grean_result;
+			//					int timetoprognoz, prognozGrean;
+
+			//					timetoprognoz = 480;
+
+
+			//					Grean_result = Convert.ToDouble(label30.Text) + Convert.ToDouble(label32.Text) + Convert.ToDouble(label31.Text);
+
+			//					prognozGrean = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Grean_result);
+
+
+
+			//					label73.Text = Convert.ToString(prognozGrean);
+			//				}
+			//				break;
+			//			case 9:
+			//				{
+			//					double Grean_result;
+			//					int timetoprognoz, prognozGrean;
+
+			//					timetoprognoz = 540;
+
+
+			//					Grean_result = Convert.ToDouble(label30.Text) + Convert.ToDouble(label32.Text) + Convert.ToDouble(label31.Text);
+
+			//					prognozGrean = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Grean_result);
+
+
+
+			//					label73.Text = Convert.ToString(prognozGrean);
+			//				}
+			//				break;
+			//			case 10:
+			//				{
+			//					double Grean_result;
+			//					int timetoprognoz, prognozGrean;
+
+			//					timetoprognoz = 600;
+
+
+			//					Grean_result = Convert.ToDouble(label30.Text) + Convert.ToDouble(label32.Text) + Convert.ToDouble(label31.Text);
+
+			//					prognozGrean = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Grean_result);
+
+
+
+			//					label73.Text = Convert.ToString(prognozGrean);
+			//				}
+			//				break;
+			//			default:
+			//				{
+			//					label72.Text = "-";
+			//					label73.Text = "-";
+			//					label74.Text = "-";
+			//					label75.Text = "-";
+
+			//				}
+			//				break;
+
+
+
+
+
+			//		}
+
+
+
+			//	}
+
+			//	if (label34.Text == "00,000" || label36.Text == "00,000" || label35.Text == "00,000")
+			//	{
+			//		label74.Text = "-";
+			//	}
+			//	else
+			//	{
+
+
+
+			//		switch (Convert.ToInt32(textBox13.Text))  // прогноз синя доріжка
+			//		{
+			//			case 1:
+			//				{
+			//					double blue_result;
+			//					int timetoprognoz, prognozBlue;
+
+			//					timetoprognoz = 60;
+
+
+			//					blue_result = Convert.ToDouble(label34.Text) + Convert.ToDouble(label36.Text) + Convert.ToDouble(label35.Text);
+
+			//					prognozBlue = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(blue_result);
+
+			//					label74.Text = Convert.ToString(prognozBlue);
+
+
+
+
+			//				}
+			//				break;
+			//			case 2:
+			//				{
+			//					double blue_result;
+			//					int timetoprognoz, prognozBlue;
+
+			//					timetoprognoz = 120;
+
+								
+			//					blue_result = Convert.ToDouble(label34.Text) + Convert.ToDouble(label36.Text) + Convert.ToDouble(label35.Text);
+								
+			//					prognozBlue = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(blue_result);
+								
+			//					label74.Text = Convert.ToString(prognozBlue);
+								
+			//				}
+			//				break;
+
+			//			case 3:
+			//				{
+			//					double blue_result;
+			//					int timetoprognoz, prognozBlue;
+
+			//					timetoprognoz = 180;
+
+
+			//					blue_result = Convert.ToDouble(label34.Text) + Convert.ToDouble(label36.Text) + Convert.ToDouble(label35.Text);
+
+			//					prognozBlue = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(blue_result);
+
+			//					label74.Text = Convert.ToString(prognozBlue);
+
+			//				}
+			//				break;
+			//			case 4:
+			//				{
+			//					double blue_result;
+			//					int timetoprognoz, prognozBlue;
+
+			//					timetoprognoz = 240;
+
+
+			//					blue_result = Convert.ToDouble(label34.Text) + Convert.ToDouble(label36.Text) + Convert.ToDouble(label35.Text);
+
+			//					prognozBlue = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(blue_result);
+
+			//					label74.Text = Convert.ToString(prognozBlue);
+
+			//				}
+			//				break;
+			//			case 5:
+			//				{
+			//					double blue_result;
+			//					int timetoprognoz, prognozBlue;
+
+			//					timetoprognoz = 300;
+
+
+			//					blue_result = Convert.ToDouble(label34.Text) + Convert.ToDouble(label36.Text) + Convert.ToDouble(label35.Text);
+
+			//					prognozBlue = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(blue_result);
+
+			//					label74.Text = Convert.ToString(prognozBlue);
+
+			//				}
+			//				break;
+			//			case 6:
+			//				{
+			//					double blue_result;
+			//					int timetoprognoz, prognozBlue;
+
+			//					timetoprognoz = 360;
+
+
+			//					blue_result = Convert.ToDouble(label34.Text) + Convert.ToDouble(label36.Text) + Convert.ToDouble(label35.Text);
+
+			//					prognozBlue = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(blue_result);
+
+			//					label74.Text = Convert.ToString(prognozBlue);
+
+			//				}
+			//				break;
+			//			case 7:
+			//				{
+			//					double blue_result;
+			//					int timetoprognoz, prognozBlue;
+
+			//					timetoprognoz = 420;
+
+
+			//					blue_result = Convert.ToDouble(label34.Text) + Convert.ToDouble(label36.Text) + Convert.ToDouble(label35.Text);
+
+			//					prognozBlue = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(blue_result);
+
+			//					label74.Text = Convert.ToString(prognozBlue);
+
+			//				}
+			//				break;
+			//			case 8:
+			//				{
+			//					double blue_result;
+			//					int timetoprognoz, prognozBlue;
+
+			//					timetoprognoz = 480;
+
+
+			//					blue_result = Convert.ToDouble(label34.Text) + Convert.ToDouble(label36.Text) + Convert.ToDouble(label35.Text);
+
+			//					prognozBlue = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(blue_result);
+
+			//					label74.Text = Convert.ToString(prognozBlue);
+
+			//				}
+			//				break;
+			//			case 9:
+			//				{
+			//					double blue_result;
+			//					int timetoprognoz, prognozBlue;
+
+			//					timetoprognoz = 540;
+
+
+			//					blue_result = Convert.ToDouble(label34.Text) + Convert.ToDouble(label36.Text) + Convert.ToDouble(label35.Text);
+
+			//					prognozBlue = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(blue_result);
+
+			//					label74.Text = Convert.ToString(prognozBlue);
+
+			//				}
+			//				break;
+			//			case 10:
+			//				{
+			//					double blue_result;
+			//					int timetoprognoz, prognozBlue;
+
+			//					timetoprognoz = 600;
+
+
+			//					blue_result = Convert.ToDouble(label34.Text) + Convert.ToDouble(label36.Text) + Convert.ToDouble(label35.Text);
+
+			//					prognozBlue = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(blue_result);
+
+			//					label74.Text = Convert.ToString(prognozBlue);
+
+			//				}
+			//				break;
+			//			default:
+			//				{
+			//					label72.Text = "-";
+			//					label73.Text = "-";
+			//					label74.Text = "-";
+			//					label75.Text = "-";
+
+			//				}
+			//				break;
+
+
+
+
+
+			//		}
+			//	}
+			//	if (label39.Text == "00,000" || label41.Text == "00,000" || label40.Text == "00,000")
+			//	{
+			//		label75.Text = "-";
+			//	}
+			//	else
+			//	{
+
+
+
+			//		switch (Convert.ToInt32(textBox13.Text))  // прогноз жовта доріжка
+			//		{
+			//			case 1:
+			//				{
+			//					double Yelow_result;
+			//					int timetoprognoz, prognozYelow;
+
+			//					timetoprognoz = 60;
+
+
+			//					Yelow_result = Convert.ToDouble(label39.Text) + Convert.ToDouble(label41.Text) + Convert.ToDouble(label40.Text);
+
+
+			//					prognozYelow = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Yelow_result);
+
+
+			//					label75.Text = Convert.ToString(prognozYelow);
+
+
+
+			//				}
+			//				break;
+			//			case 2:
+			//				{
+			//					double Yelow_result;
+			//					int timetoprognoz,prognozYelow;
+
+			//					timetoprognoz = 120;
+
+								
+			//					Yelow_result = Convert.ToDouble(label39.Text) + Convert.ToDouble(label41.Text) + Convert.ToDouble(label40.Text);
+
+								
+			//					prognozYelow = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Yelow_result);
+
+								
+			//					label75.Text = Convert.ToString(prognozYelow);
+			//				}
+			//				break;
+
+			//			case 3:
+			//				{
+			//					double Yelow_result;
+			//					int timetoprognoz, prognozYelow;
+
+			//					timetoprognoz = 180;
+
+
+			//					Yelow_result = Convert.ToDouble(label39.Text) + Convert.ToDouble(label41.Text) + Convert.ToDouble(label40.Text);
+
+
+			//					prognozYelow = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Yelow_result);
+
+
+			//					label75.Text = Convert.ToString(prognozYelow);
+			//				}
+			//				break;
+			//			case 4:
+			//				{
+			//					double Yelow_result;
+			//					int timetoprognoz, prognozYelow;
+
+			//					timetoprognoz = 240;
+
+
+			//					Yelow_result = Convert.ToDouble(label39.Text) + Convert.ToDouble(label41.Text) + Convert.ToDouble(label40.Text);
+
+
+			//					prognozYelow = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Yelow_result);
+
+
+			//					label75.Text = Convert.ToString(prognozYelow);
+			//				}
+			//				break;
+			//			case 5:
+			//				{
+			//					double Yelow_result;
+			//					int timetoprognoz, prognozYelow;
+
+			//					timetoprognoz = 300;
+
+
+			//					Yelow_result = Convert.ToDouble(label39.Text) + Convert.ToDouble(label41.Text) + Convert.ToDouble(label40.Text);
+
+
+			//					prognozYelow = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Yelow_result);
+
+
+			//					label75.Text = Convert.ToString(prognozYelow);
+			//				}
+			//				break;
+			//			case 6:
+			//				{
+			//					double Yelow_result;
+			//					int timetoprognoz, prognozYelow;
+
+			//					timetoprognoz = 360;
+
+
+			//					Yelow_result = Convert.ToDouble(label39.Text) + Convert.ToDouble(label41.Text) + Convert.ToDouble(label40.Text);
+
+
+			//					prognozYelow = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Yelow_result);
+
+
+			//					label75.Text = Convert.ToString(prognozYelow);
+			//				}
+			//				break;
+			//			case 7:
+			//				{
+			//					double Yelow_result;
+			//					int timetoprognoz, prognozYelow;
+
+			//					timetoprognoz = 420;
+
+
+			//					Yelow_result = Convert.ToDouble(label39.Text) + Convert.ToDouble(label41.Text) + Convert.ToDouble(label40.Text);
+
+
+			//					prognozYelow = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Yelow_result);
+
+
+			//					label75.Text = Convert.ToString(prognozYelow);
+			//				}
+			//				break;
+			//			case 8:
+			//				{
+			//					double Yelow_result;
+			//					int timetoprognoz, prognozYelow;
+
+			//					timetoprognoz = 480;
+
+
+			//					Yelow_result = Convert.ToDouble(label39.Text) + Convert.ToDouble(label41.Text) + Convert.ToDouble(label40.Text);
+
+
+			//					prognozYelow = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Yelow_result);
+
+
+			//					label75.Text = Convert.ToString(prognozYelow);
+			//				}
+			//				break;
+			//			case 9:
+			//				{
+			//					double Yelow_result;
+			//					int timetoprognoz, prognozYelow;
+
+			//					timetoprognoz = 540;
+
+
+			//					Yelow_result = Convert.ToDouble(label39.Text) + Convert.ToDouble(label41.Text) + Convert.ToDouble(label40.Text);
+
+
+			//					prognozYelow = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Yelow_result);
+
+
+			//					label75.Text = Convert.ToString(prognozYelow);
+			//				}
+			//				break;
+			//			case 10:
+			//				{
+			//					double Yelow_result;
+			//					int timetoprognoz, prognozYelow;
+
+			//					timetoprognoz = 600;
+
+
+			//					Yelow_result = Convert.ToDouble(label39.Text) + Convert.ToDouble(label41.Text) + Convert.ToDouble(label40.Text);
+
+
+			//					prognozYelow = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Yelow_result);
+
+
+			//					label75.Text = Convert.ToString(prognozYelow);
+			//				}
+			//				break;
+			//			default:
+			//				{
+			//					label72.Text = "-";
+			//					label73.Text = "-";
+			//					label74.Text = "-";
+			//					label75.Text = "-";
+
+			//				}
+			//				break;
+
+
+
+
+
+			//		}
+			//	}
+
+				
 
 		}
 
@@ -1640,6 +2453,7 @@ namespace zase4kak
         private void timer20_Tick(object sender, EventArgs e)
         {
 			serialPort1.Open();
+			button6.Visible = true;
 			timer20.Enabled = false;
         }
 
@@ -1732,9 +2546,9 @@ namespace zase4kak
 					button6.Visible = false;
 					button1.Focus();
 					panel1.Location = new Point(7, 213);
-					panel3.Location = new Point(7, 294);
-					panel4.Location = new Point(7, 381);
-					panel5.Location = new Point(7, 463);
+					panel3.Location = new Point(7, 358);
+					panel4.Location = new Point(7, 502);
+					panel5.Location = new Point(7, 645);
 
 					label17.Text = "0";
 					label24.Text = "0";
@@ -1950,6 +2764,7 @@ namespace zase4kak
 
         private void button14_Click(object sender, EventArgs e)
         {
+			
 			label67.Text = "228";
 			textBox25.Text = textBox24.Text;
 
@@ -1959,14 +2774,13 @@ namespace zase4kak
 			button12.Enabled = true;
 			dataGridView1.Visible = false;
 			button8.Visible = false;
-			button1.Visible = true;
 			button7.Visible = false;
 			button6.Visible = false;
-			button1.Focus();
+			button15.Focus();
 			panel1.Location = new Point(7, 213);
-			panel3.Location = new Point(7, 294);
-			panel4.Location = new Point(7, 381);
-			panel5.Location = new Point(7, 463);
+			panel3.Location = new Point(7, 358);
+			panel4.Location = new Point(7, 502);
+			panel5.Location = new Point(7, 645);
 
 			label17.Text = "0";
 			label24.Text = "0";
@@ -2003,7 +2817,7 @@ namespace zase4kak
 			label60.Visible = false;
 			label61.Visible = false;
 			label62.Visible = false;
-			button1.Focus();
+			button15.Focus();
 			timetostart = 5;
 			label13.Visible = false;
 			timer21.Enabled = false;
@@ -2123,6 +2937,41 @@ namespace zase4kak
         {
 			SaveTable(dataGridView2);
 			label13.Text = "<< Заїзди завершено! >>";
+		}
+
+        private void label58_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label44_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+			DialogResult dialog = MessageBox.Show(
+				 "Вы действительно хотите выйти из программы?",
+				 "Завершение программы",
+				 MessageBoxButtons.YesNo,
+				 MessageBoxIcon.Warning
+				);
+			if (dialog == DialogResult.Yes)
+			{
+				e.Cancel = false;
+				
+			
+			}
+			else
+			{
+				e.Cancel = true;
+			}
 		}
 
         private void timer11_Tick(object sender, EventArgs e)
@@ -2246,7 +3095,12 @@ namespace zase4kak
             {
 				button6.Enabled = false;
 				button8.Visible = false;
+
+				if(textBox24.Text != "")  //алгоритм для показу кнопки (Фінал)
+                {
 				button14.Visible = true;
+                }
+				
             }
             else
             {
@@ -2306,7 +3160,7 @@ namespace zase4kak
 
 			if (secs == 60 && mins == -1)
 			{
-
+				serialPort1.Open();
 				serialPort1.WriteLine("4"); //продовжити 
 				label69.Text = "Трек включений";
 				label69.BackColor = Color.Green;
@@ -2351,6 +3205,7 @@ namespace zase4kak
 
 		private void timer8_Tick(object sender, EventArgs e)
 		{
+			
 			sec--;
 			label4.Text = Convert.ToString(min) + ":" + Convert.ToString(sec);           //зчитую час гонки який був заданий у настройках
 
@@ -2411,11 +3266,12 @@ namespace zase4kak
 		private void timer9_Tick(object sender, EventArgs e)
 		{
 			timer19.Enabled = true;
+			
+			
 
-
-
-            switch (Convert.ToInt32(textBox15.Text))
+            switch (Convert.ToInt64(textBox15.Text))
             {
+				
 				case 01:
                     {
 						i = Convert.ToInt32(label17.Text);          //червона доріжка
@@ -2998,9 +3854,14 @@ namespace zase4kak
 
 						break;
                     }
+
+
 				default:
 
-						textBox15.Text = "0";
+
+					
+
+				
 
 					if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
 					{
@@ -3053,19 +3914,21 @@ namespace zase4kak
 						button7.Focus();
 						textBox15.Text = "0";
 					}
-					
+
+					serialPort1.Close();
+
+					textBox15.Text = "0";
+
+					MessageBox.Show("Щось пішло не так!! Перевірте моделі!");
 
 
-					
-					
-						MessageBox.Show("Щось пішло не так!! Перевірте моделі!");
 
-						
-							
-					
+
 					break;
 
 			}
+
+			
 
 			//if (Convert.ToInt32(textBox15.Text) == 01111) // зелена + Синя+ Жовта+Червона доріжка
 			//{
@@ -3567,12 +4430,12 @@ namespace zase4kak
 			//	label19.Text = label22.Text;
 			//	label22.Text = label18.Text;
 			//	label17.Text = Convert.ToString(i);
-				
 
 
 
 
-				
+
+
 			//	timer13.Enabled = true;
 			//	timer17.Enabled = false;
 			//	label29.Text = label27.Text;
@@ -3664,7 +4527,7 @@ namespace zase4kak
 			//	}
 			//}
 
-				
+
 
 			//		if (Convert.ToInt32(textBox15.Text) == 011) // синя доріжка
 			//		{
@@ -3736,13 +4599,6 @@ namespace zase4kak
 
 
 			//}
-
-
-			
-
-
-
-
 
 		}
 		private void timer12_Tick(object sender, EventArgs e)
