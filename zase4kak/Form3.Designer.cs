@@ -190,6 +190,45 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button16 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.кольориДоріжокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.доріжкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.червонаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.зеленаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.синяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.жовтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.білаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фіолетоваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.чорнаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оранжеваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.доріжкаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.доріжкаToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.доріжкаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.червонаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.білаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.оранжеваToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.фіолетоваToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.жовтаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.синяToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.чорнаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.зеленаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.червонаToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.білаToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.оранжеваToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.фіолетоваToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.жовтаToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.синяToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.чорнаToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.зеленаToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.червонаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.білаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.оранжеваToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.фіолетоваToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.жовтаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.синяToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.чорнаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.зеленаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -201,6 +240,7 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label10
@@ -543,7 +583,7 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel3.BackColor = System.Drawing.Color.LimeGreen;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label73);
             this.panel3.Controls.Add(this.label63);
@@ -729,7 +769,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label12.BackColor = System.Drawing.Color.LimeGreen;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.label12.Location = new System.Drawing.Point(16, 53);
             this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
@@ -1215,7 +1255,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(7, 6);
+            this.label14.Location = new System.Drawing.Point(7, 24);
             this.label14.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(473, 73);
@@ -1227,7 +1267,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(20, 92);
+            this.label15.Location = new System.Drawing.Point(20, 93);
             this.label15.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(345, 55);
@@ -1810,7 +1850,7 @@
             // 
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
-            this.label71.Location = new System.Drawing.Point(167, 92);
+            this.label71.Location = new System.Drawing.Point(167, 97);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(186, 55);
             this.label71.TabIndex = 65;
@@ -1913,6 +1953,321 @@
             this.button16.Visible = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1920, 24);
+            this.menuStrip1.TabIndex = 72;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.кольориДоріжокToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(81, 20);
+            this.toolStripMenuItem1.Text = "Параметри";
+            // 
+            // кольориДоріжокToolStripMenuItem
+            // 
+            this.кольориДоріжокToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.доріжкаToolStripMenuItem,
+            this.доріжкаToolStripMenuItem1,
+            this.доріжкаToolStripMenuItem2,
+            this.доріжкаToolStripMenuItem3});
+            this.кольориДоріжокToolStripMenuItem.Name = "кольориДоріжокToolStripMenuItem";
+            this.кольориДоріжокToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.кольориДоріжокToolStripMenuItem.Text = "Кольори доріжок";
+            // 
+            // доріжкаToolStripMenuItem
+            // 
+            this.доріжкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.червонаToolStripMenuItem,
+            this.білаToolStripMenuItem,
+            this.оранжеваToolStripMenuItem,
+            this.фіолетоваToolStripMenuItem,
+            this.жовтаToolStripMenuItem,
+            this.синяToolStripMenuItem,
+            this.чорнаToolStripMenuItem,
+            this.зеленаToolStripMenuItem});
+            this.доріжкаToolStripMenuItem.Name = "доріжкаToolStripMenuItem";
+            this.доріжкаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.доріжкаToolStripMenuItem.Text = "1 доріжка";
+            this.доріжкаToolStripMenuItem.Click += new System.EventHandler(this.доріжкаToolStripMenuItem_Click);
+            // 
+            // червонаToolStripMenuItem
+            // 
+            this.червонаToolStripMenuItem.Name = "червонаToolStripMenuItem";
+            this.червонаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.червонаToolStripMenuItem.Text = "Червона";
+            this.червонаToolStripMenuItem.Click += new System.EventHandler(this.червонаToolStripMenuItem_Click);
+            // 
+            // зеленаToolStripMenuItem
+            // 
+            this.зеленаToolStripMenuItem.Name = "зеленаToolStripMenuItem";
+            this.зеленаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.зеленаToolStripMenuItem.Text = "Зелена";
+            this.зеленаToolStripMenuItem.Click += new System.EventHandler(this.зеленаToolStripMenuItem_Click);
+            // 
+            // синяToolStripMenuItem
+            // 
+            this.синяToolStripMenuItem.Name = "синяToolStripMenuItem";
+            this.синяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.синяToolStripMenuItem.Text = "Синя";
+            this.синяToolStripMenuItem.Click += new System.EventHandler(this.синяToolStripMenuItem_Click);
+            // 
+            // жовтаToolStripMenuItem
+            // 
+            this.жовтаToolStripMenuItem.Name = "жовтаToolStripMenuItem";
+            this.жовтаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.жовтаToolStripMenuItem.Text = "Жовта";
+            this.жовтаToolStripMenuItem.Click += new System.EventHandler(this.жовтаToolStripMenuItem_Click);
+            // 
+            // білаToolStripMenuItem
+            // 
+            this.білаToolStripMenuItem.Name = "білаToolStripMenuItem";
+            this.білаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.білаToolStripMenuItem.Text = "Біла";
+            this.білаToolStripMenuItem.Click += new System.EventHandler(this.білаToolStripMenuItem_Click);
+            // 
+            // фіолетоваToolStripMenuItem
+            // 
+            this.фіолетоваToolStripMenuItem.Name = "фіолетоваToolStripMenuItem";
+            this.фіолетоваToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.фіолетоваToolStripMenuItem.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem_Click);
+            // 
+            // чорнаToolStripMenuItem
+            // 
+            this.чорнаToolStripMenuItem.Name = "чорнаToolStripMenuItem";
+            this.чорнаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.чорнаToolStripMenuItem.Text = "Чорна";
+            this.чорнаToolStripMenuItem.Click += new System.EventHandler(this.чорнаToolStripMenuItem_Click);
+            // 
+            // оранжеваToolStripMenuItem
+            // 
+            this.оранжеваToolStripMenuItem.Name = "оранжеваToolStripMenuItem";
+            this.оранжеваToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.оранжеваToolStripMenuItem.Text = "Оранжева";
+            this.оранжеваToolStripMenuItem.Click += new System.EventHandler(this.оранжеваToolStripMenuItem_Click);
+            // 
+            // доріжкаToolStripMenuItem1
+            // 
+            this.доріжкаToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.червонаToolStripMenuItem1,
+            this.білаToolStripMenuItem1,
+            this.оранжеваToolStripMenuItem1,
+            this.фіолетоваToolStripMenuItem1,
+            this.жовтаToolStripMenuItem1,
+            this.синяToolStripMenuItem1,
+            this.чорнаToolStripMenuItem1,
+            this.зеленаToolStripMenuItem1});
+            this.доріжкаToolStripMenuItem1.Name = "доріжкаToolStripMenuItem1";
+            this.доріжкаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.доріжкаToolStripMenuItem1.Text = "2 доріжка";
+            // 
+            // доріжкаToolStripMenuItem2
+            // 
+            this.доріжкаToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.червонаToolStripMenuItem2,
+            this.білаToolStripMenuItem2,
+            this.оранжеваToolStripMenuItem2,
+            this.фіолетоваToolStripMenuItem2,
+            this.жовтаToolStripMenuItem2,
+            this.синяToolStripMenuItem2,
+            this.чорнаToolStripMenuItem2,
+            this.зеленаToolStripMenuItem2});
+            this.доріжкаToolStripMenuItem2.Name = "доріжкаToolStripMenuItem2";
+            this.доріжкаToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.доріжкаToolStripMenuItem2.Text = "3 доріжка";
+            this.доріжкаToolStripMenuItem2.Click += new System.EventHandler(this.доріжкаToolStripMenuItem2_Click);
+            // 
+            // доріжкаToolStripMenuItem3
+            // 
+            this.доріжкаToolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.червонаToolStripMenuItem3,
+            this.білаToolStripMenuItem3,
+            this.оранжеваToolStripMenuItem3,
+            this.фіолетоваToolStripMenuItem3,
+            this.жовтаToolStripMenuItem3,
+            this.синяToolStripMenuItem3,
+            this.чорнаToolStripMenuItem3,
+            this.зеленаToolStripMenuItem3});
+            this.доріжкаToolStripMenuItem3.Name = "доріжкаToolStripMenuItem3";
+            this.доріжкаToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.доріжкаToolStripMenuItem3.Text = "4 доріжка";
+            // 
+            // червонаToolStripMenuItem1
+            // 
+            this.червонаToolStripMenuItem1.Name = "червонаToolStripMenuItem1";
+            this.червонаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.червонаToolStripMenuItem1.Text = "Червона";
+            this.червонаToolStripMenuItem1.Click += new System.EventHandler(this.червонаToolStripMenuItem1_Click);
+            // 
+            // білаToolStripMenuItem1
+            // 
+            this.білаToolStripMenuItem1.Name = "білаToolStripMenuItem1";
+            this.білаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.білаToolStripMenuItem1.Text = "Біла";
+            this.білаToolStripMenuItem1.Click += new System.EventHandler(this.білаToolStripMenuItem1_Click);
+            // 
+            // оранжеваToolStripMenuItem1
+            // 
+            this.оранжеваToolStripMenuItem1.Name = "оранжеваToolStripMenuItem1";
+            this.оранжеваToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.оранжеваToolStripMenuItem1.Text = "Оранжева";
+            this.оранжеваToolStripMenuItem1.Click += new System.EventHandler(this.оранжеваToolStripMenuItem1_Click);
+            // 
+            // фіолетоваToolStripMenuItem1
+            // 
+            this.фіолетоваToolStripMenuItem1.Name = "фіолетоваToolStripMenuItem1";
+            this.фіолетоваToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.фіолетоваToolStripMenuItem1.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem1.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem1_Click);
+            // 
+            // жовтаToolStripMenuItem1
+            // 
+            this.жовтаToolStripMenuItem1.Name = "жовтаToolStripMenuItem1";
+            this.жовтаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.жовтаToolStripMenuItem1.Text = "Жовта";
+            this.жовтаToolStripMenuItem1.Click += new System.EventHandler(this.жовтаToolStripMenuItem1_Click);
+            // 
+            // синяToolStripMenuItem1
+            // 
+            this.синяToolStripMenuItem1.Name = "синяToolStripMenuItem1";
+            this.синяToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.синяToolStripMenuItem1.Text = "Синя";
+            this.синяToolStripMenuItem1.Click += new System.EventHandler(this.синяToolStripMenuItem1_Click);
+            // 
+            // чорнаToolStripMenuItem1
+            // 
+            this.чорнаToolStripMenuItem1.Name = "чорнаToolStripMenuItem1";
+            this.чорнаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.чорнаToolStripMenuItem1.Text = "Чорна";
+            this.чорнаToolStripMenuItem1.Click += new System.EventHandler(this.чорнаToolStripMenuItem1_Click);
+            // 
+            // зеленаToolStripMenuItem1
+            // 
+            this.зеленаToolStripMenuItem1.Name = "зеленаToolStripMenuItem1";
+            this.зеленаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.зеленаToolStripMenuItem1.Text = "Зелена";
+            this.зеленаToolStripMenuItem1.Click += new System.EventHandler(this.зеленаToolStripMenuItem1_Click);
+            // 
+            // червонаToolStripMenuItem2
+            // 
+            this.червонаToolStripMenuItem2.Name = "червонаToolStripMenuItem2";
+            this.червонаToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.червонаToolStripMenuItem2.Text = "Червона";
+            this.червонаToolStripMenuItem2.Click += new System.EventHandler(this.червонаToolStripMenuItem2_Click);
+            // 
+            // білаToolStripMenuItem2
+            // 
+            this.білаToolStripMenuItem2.Name = "білаToolStripMenuItem2";
+            this.білаToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.білаToolStripMenuItem2.Text = "Біла";
+            this.білаToolStripMenuItem2.Click += new System.EventHandler(this.білаToolStripMenuItem2_Click);
+            // 
+            // оранжеваToolStripMenuItem2
+            // 
+            this.оранжеваToolStripMenuItem2.Name = "оранжеваToolStripMenuItem2";
+            this.оранжеваToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.оранжеваToolStripMenuItem2.Text = "Оранжева";
+            this.оранжеваToolStripMenuItem2.Click += new System.EventHandler(this.оранжеваToolStripMenuItem2_Click);
+            // 
+            // фіолетоваToolStripMenuItem2
+            // 
+            this.фіолетоваToolStripMenuItem2.Name = "фіолетоваToolStripMenuItem2";
+            this.фіолетоваToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.фіолетоваToolStripMenuItem2.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem2.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem2_Click);
+            // 
+            // жовтаToolStripMenuItem2
+            // 
+            this.жовтаToolStripMenuItem2.Name = "жовтаToolStripMenuItem2";
+            this.жовтаToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.жовтаToolStripMenuItem2.Text = "Жовта";
+            this.жовтаToolStripMenuItem2.Click += new System.EventHandler(this.жовтаToolStripMenuItem2_Click);
+            // 
+            // синяToolStripMenuItem2
+            // 
+            this.синяToolStripMenuItem2.Name = "синяToolStripMenuItem2";
+            this.синяToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.синяToolStripMenuItem2.Text = "Синя";
+            this.синяToolStripMenuItem2.Click += new System.EventHandler(this.синяToolStripMenuItem2_Click);
+            // 
+            // чорнаToolStripMenuItem2
+            // 
+            this.чорнаToolStripMenuItem2.Name = "чорнаToolStripMenuItem2";
+            this.чорнаToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.чорнаToolStripMenuItem2.Text = "Чорна";
+            this.чорнаToolStripMenuItem2.Click += new System.EventHandler(this.чорнаToolStripMenuItem2_Click);
+            // 
+            // зеленаToolStripMenuItem2
+            // 
+            this.зеленаToolStripMenuItem2.Name = "зеленаToolStripMenuItem2";
+            this.зеленаToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.зеленаToolStripMenuItem2.Text = "Зелена";
+            this.зеленаToolStripMenuItem2.Click += new System.EventHandler(this.зеленаToolStripMenuItem2_Click);
+            // 
+            // червонаToolStripMenuItem3
+            // 
+            this.червонаToolStripMenuItem3.Name = "червонаToolStripMenuItem3";
+            this.червонаToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.червонаToolStripMenuItem3.Text = "Червона";
+            this.червонаToolStripMenuItem3.Click += new System.EventHandler(this.червонаToolStripMenuItem3_Click);
+            // 
+            // білаToolStripMenuItem3
+            // 
+            this.білаToolStripMenuItem3.Name = "білаToolStripMenuItem3";
+            this.білаToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.білаToolStripMenuItem3.Text = "Біла";
+            this.білаToolStripMenuItem3.Click += new System.EventHandler(this.білаToolStripMenuItem3_Click);
+            // 
+            // оранжеваToolStripMenuItem3
+            // 
+            this.оранжеваToolStripMenuItem3.Name = "оранжеваToolStripMenuItem3";
+            this.оранжеваToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.оранжеваToolStripMenuItem3.Text = "Оранжева";
+            this.оранжеваToolStripMenuItem3.Click += new System.EventHandler(this.оранжеваToolStripMenuItem3_Click);
+            // 
+            // фіолетоваToolStripMenuItem3
+            // 
+            this.фіолетоваToolStripMenuItem3.Name = "фіолетоваToolStripMenuItem3";
+            this.фіолетоваToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.фіолетоваToolStripMenuItem3.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem3.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem3_Click);
+            // 
+            // жовтаToolStripMenuItem3
+            // 
+            this.жовтаToolStripMenuItem3.Name = "жовтаToolStripMenuItem3";
+            this.жовтаToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.жовтаToolStripMenuItem3.Text = "Жовта";
+            this.жовтаToolStripMenuItem3.Click += new System.EventHandler(this.жовтаToolStripMenuItem3_Click);
+            // 
+            // синяToolStripMenuItem3
+            // 
+            this.синяToolStripMenuItem3.Name = "синяToolStripMenuItem3";
+            this.синяToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.синяToolStripMenuItem3.Text = "Синя";
+            this.синяToolStripMenuItem3.Click += new System.EventHandler(this.синяToolStripMenuItem3_Click);
+            // 
+            // чорнаToolStripMenuItem3
+            // 
+            this.чорнаToolStripMenuItem3.Name = "чорнаToolStripMenuItem3";
+            this.чорнаToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.чорнаToolStripMenuItem3.Text = "Чорна";
+            this.чорнаToolStripMenuItem3.Click += new System.EventHandler(this.чорнаToolStripMenuItem3_Click);
+            // 
+            // зеленаToolStripMenuItem3
+            // 
+            this.зеленаToolStripMenuItem3.Name = "зеленаToolStripMenuItem3";
+            this.зеленаToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.зеленаToolStripMenuItem3.Text = "Зелена";
+            this.зеленаToolStripMenuItem3.Click += new System.EventHandler(this.зеленаToolStripMenuItem3_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1968,8 +2323,10 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form3";
@@ -1997,6 +2354,8 @@
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2164,5 +2523,44 @@
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label75;
         public System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem кольориДоріжокToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem доріжкаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem червонаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem зеленаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem синяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem жовтаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem білаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem фіолетоваToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem чорнаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem оранжеваToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem доріжкаToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem червонаToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem білаToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem оранжеваToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem фіолетоваToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem жовтаToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem синяToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem чорнаToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem зеленаToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem доріжкаToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem червонаToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem білаToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem оранжеваToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem фіолетоваToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem жовтаToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem синяToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem чорнаToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem зеленаToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem доріжкаToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem червонаToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem білаToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem оранжеваToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem фіолетоваToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem жовтаToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem синяToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem чорнаToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem зеленаToolStripMenuItem3;
     }
 }

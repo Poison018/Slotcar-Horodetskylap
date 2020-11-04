@@ -22,5 +22,357 @@ namespace zase4ka.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color line_1 {
+            get {
+                return ((global::System.Drawing.Color)(this["line_1"]));
+            }
+            set {
+                this["line_1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color line_2 {
+            get {
+                return ((global::System.Drawing.Color)(this["line_2"]));
+            }
+            set {
+                this["line_2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color line_3 {
+            get {
+                return ((global::System.Drawing.Color)(this["line_3"]));
+            }
+            set {
+                this["line_3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color line_4 {
+            get {
+                return ((global::System.Drawing.Color)(this["line_4"]));
+            }
+            set {
+                this["line_4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Yellow_line_1 {
+            get {
+                return ((global::System.Drawing.Color)(this["Yellow_line_1"]));
+            }
+            set {
+                this["Yellow_line_1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Blue_line_1 {
+            get {
+                return ((global::System.Drawing.Color)(this["Blue_line_1"]));
+            }
+            set {
+                this["Blue_line_1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Black_line_1 {
+            get {
+                return ((global::System.Drawing.Color)(this["Black_line_1"]));
+            }
+            set {
+                this["Black_line_1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Green_line_1 {
+            get {
+                return ((global::System.Drawing.Color)(this["Green_line_1"]));
+            }
+            set {
+                this["Green_line_1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Read_line_2 {
+            get {
+                return ((global::System.Drawing.Color)(this["Read_line_2"]));
+            }
+            set {
+                this["Read_line_2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color White_line_2 {
+            get {
+                return ((global::System.Drawing.Color)(this["White_line_2"]));
+            }
+            set {
+                this["White_line_2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Orange_line_2 {
+            get {
+                return ((global::System.Drawing.Color)(this["Orange_line_2"]));
+            }
+            set {
+                this["Orange_line_2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Perple_line_2 {
+            get {
+                return ((global::System.Drawing.Color)(this["Perple_line_2"]));
+            }
+            set {
+                this["Perple_line_2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Yellow_line_2 {
+            get {
+                return ((global::System.Drawing.Color)(this["Yellow_line_2"]));
+            }
+            set {
+                this["Yellow_line_2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Blue_line_2 {
+            get {
+                return ((global::System.Drawing.Color)(this["Blue_line_2"]));
+            }
+            set {
+                this["Blue_line_2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Black_line_2 {
+            get {
+                return ((global::System.Drawing.Color)(this["Black_line_2"]));
+            }
+            set {
+                this["Black_line_2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Green_line_2 {
+            get {
+                return ((global::System.Drawing.Color)(this["Green_line_2"]));
+            }
+            set {
+                this["Green_line_2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Read_line_3 {
+            get {
+                return ((global::System.Drawing.Color)(this["Read_line_3"]));
+            }
+            set {
+                this["Read_line_3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color White_line_3 {
+            get {
+                return ((global::System.Drawing.Color)(this["White_line_3"]));
+            }
+            set {
+                this["White_line_3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Orange_line_3 {
+            get {
+                return ((global::System.Drawing.Color)(this["Orange_line_3"]));
+            }
+            set {
+                this["Orange_line_3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Perple_line_3 {
+            get {
+                return ((global::System.Drawing.Color)(this["Perple_line_3"]));
+            }
+            set {
+                this["Perple_line_3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Yellow_line_3 {
+            get {
+                return ((global::System.Drawing.Color)(this["Yellow_line_3"]));
+            }
+            set {
+                this["Yellow_line_3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Blue_line_3 {
+            get {
+                return ((global::System.Drawing.Color)(this["Blue_line_3"]));
+            }
+            set {
+                this["Blue_line_3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Black_line_3 {
+            get {
+                return ((global::System.Drawing.Color)(this["Black_line_3"]));
+            }
+            set {
+                this["Black_line_3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Green_line_3 {
+            get {
+                return ((global::System.Drawing.Color)(this["Green_line_3"]));
+            }
+            set {
+                this["Green_line_3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Read_line_4 {
+            get {
+                return ((global::System.Drawing.Color)(this["Read_line_4"]));
+            }
+            set {
+                this["Read_line_4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color White_line_4 {
+            get {
+                return ((global::System.Drawing.Color)(this["White_line_4"]));
+            }
+            set {
+                this["White_line_4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Orange_line_4 {
+            get {
+                return ((global::System.Drawing.Color)(this["Orange_line_4"]));
+            }
+            set {
+                this["Orange_line_4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Perple_line_4 {
+            get {
+                return ((global::System.Drawing.Color)(this["Perple_line_4"]));
+            }
+            set {
+                this["Perple_line_4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Yellow_line_4 {
+            get {
+                return ((global::System.Drawing.Color)(this["Yellow_line_4"]));
+            }
+            set {
+                this["Yellow_line_4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Blue_line_4 {
+            get {
+                return ((global::System.Drawing.Color)(this["Blue_line_4"]));
+            }
+            set {
+                this["Blue_line_4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Black_line_4 {
+            get {
+                return ((global::System.Drawing.Color)(this["Black_line_4"]));
+            }
+            set {
+                this["Black_line_4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Green_line_4 {
+            get {
+                return ((global::System.Drawing.Color)(this["Green_line_4"]));
+            }
+            set {
+                this["Green_line_4"] = value;
+            }
+        }
     }
 }

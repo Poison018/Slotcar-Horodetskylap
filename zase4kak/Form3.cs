@@ -12,6 +12,7 @@ using System.Threading;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Data;
 using System.Media;
+using zase4ka.Properties;
 
 namespace zase4kak
 {
@@ -32,6 +33,13 @@ namespace zase4kak
 		{
 			InitializeComponent();
 			CheckForIllegalCrossThreadCalls = false;
+
+			panel1.BackColor = Settings.Default.line_1;
+			panel3.BackColor = Settings.Default.line_2;
+			panel4.BackColor = Settings.Default.line_3;
+			panel5.BackColor = Settings.Default.line_4;
+			
+
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -2956,6 +2964,12 @@ namespace zase4kak
 
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
+
+			Settings.Default.line_1 = panel1.BackColor;
+			Settings.Default.line_2 = panel3.BackColor;
+			Settings.Default.line_3 = panel4.BackColor;
+			Settings.Default.line_4 = panel5.BackColor;
+
 			DialogResult dialog = MessageBox.Show(
 				 "Вы действительно хотите выйти из программы?",
 				 "Завершение программы",
@@ -2972,6 +2986,212 @@ namespace zase4kak
 			{
 				e.Cancel = true;
 			}
+		}
+
+        private void червонаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			
+			Settings.Default.line_1 = panel1.BackColor = Color.Red;
+			Settings.Default.Save();
+        }
+
+        private void зеленаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_1 = panel1.BackColor = Color.LimeGreen;
+			Settings.Default.Save();
+
+		}
+
+        private void білаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_2 = panel1.BackColor = Color.White;
+			Settings.Default.Save();
+        }
+
+        private void оранжеваToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_3 = panel1.BackColor = Color.Orange;
+			Settings.Default.Save();
+        }
+
+        private void фіолетоваToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_4 = panel1.BackColor = Color.Purple;
+			Settings.Default.Save();
+        }
+
+        private void жовтаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_1 = panel1.BackColor = Color.Gold;
+			Settings.Default.Save();
+        }
+
+        private void синяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_1 = panel1.BackColor = Color.DodgerBlue;
+			Settings.Default.Save();
+
+		}
+
+        private void чорнаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_1 = panel1.BackColor = Color.Black;
+			Settings.Default.Save();
+        }
+
+        private void червонаToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_2 = panel3.BackColor = Color.Red;
+			Settings.Default.Save();
+		}
+
+        private void білаToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_2 = panel3.BackColor = Color.White;
+			Settings.Default.Save();
+		}
+
+        private void оранжеваToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_2 = panel3.BackColor = Color.Orange;
+			Settings.Default.Save();
+		}
+
+        private void доріжкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void фіолетоваToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_2 = panel3.BackColor = Color.Purple;
+			Settings.Default.Save();
+		}
+
+        private void жовтаToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_2 = panel3.BackColor = Color.Gold;
+			Settings.Default.Save();
+		}
+
+        private void синяToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_2 = panel3.BackColor = Color.DodgerBlue;
+			Settings.Default.Save();
+		}
+
+        private void чорнаToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_2 = panel3.BackColor = Color.Black;
+			Settings.Default.Save();
+		}
+
+        private void зеленаToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_2 = panel3.BackColor = Color.LimeGreen;
+			Settings.Default.Save();
+		}
+
+        private void червонаToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_3 = panel4.BackColor = Color.Red;
+			Settings.Default.Save();
+		}
+
+        private void білаToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_3 = panel4.BackColor = Color.White;
+			Settings.Default.Save();
+		}
+
+        private void оранжеваToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_3 = panel4.BackColor = Color.Orange;
+			Settings.Default.Save();
+		}
+
+        private void фіолетоваToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_3 = panel4.BackColor = Color.Purple;
+			Settings.Default.Save();
+		}
+
+        private void жовтаToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_3 = panel4.BackColor = Color.Gold;
+			Settings.Default.Save();
+		}
+
+        private void синяToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_3 = panel4.BackColor = Color.DodgerBlue;
+			Settings.Default.Save();
+		}
+
+        private void чорнаToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_3 = panel4.BackColor = Color.Black;
+			Settings.Default.Save();
+		}
+
+        private void доріжкаToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void зеленаToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_3 = panel4.BackColor = Color.LimeGreen;
+			Settings.Default.Save();
+		}
+
+        private void червонаToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_4 = panel5.BackColor = Color.Red;
+			Settings.Default.Save();
+		}
+
+        private void білаToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_4 = panel5.BackColor = Color.White;
+			Settings.Default.Save();
+		}
+
+        private void оранжеваToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_4 = panel5.BackColor = Color.Orange;
+			Settings.Default.Save();
+		}
+
+        private void фіолетоваToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_4 = panel5.BackColor = Color.Purple;
+			Settings.Default.Save();
+
+		}
+
+        private void жовтаToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_4 = panel5.BackColor = Color.Gold;
+			Settings.Default.Save();
+		}
+
+        private void синяToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_4 = panel5.BackColor = Color.DodgerBlue;
+			Settings.Default.Save();
+		}
+
+        private void чорнаToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_4 = panel5.BackColor = Color.Black;
+			Settings.Default.Save();
+		}
+
+        private void зеленаToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+			Settings.Default.line_4 = panel5.BackColor = Color.LimeGreen;
+			Settings.Default.Save();
 		}
 
         private void timer11_Tick(object sender, EventArgs e)
