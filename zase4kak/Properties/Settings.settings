@@ -14,88 +14,10 @@
     <Setting Name="line_4" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Yellow_line_1" Type="System.Drawing.Color" Scope="User">
+    <Setting Name="zase4ka_comPort" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Blue_line_1" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Black_line_1" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Green_line_1" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Read_line_2" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="White_line_2" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Orange_line_2" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Perple_line_2" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Yellow_line_2" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Blue_line_2" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Black_line_2" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Green_line_2" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Read_line_3" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="White_line_3" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Orange_line_3" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Perple_line_3" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Yellow_line_3" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Blue_line_3" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Black_line_3" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Green_line_3" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Read_line_4" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="White_line_4" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Orange_line_4" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Perple_line_4" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Yellow_line_4" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Blue_line_4" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Black_line_4" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Green_line_4" Type="System.Drawing.Color" Scope="User">
+    <Setting Name="lapTIme_comPort" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

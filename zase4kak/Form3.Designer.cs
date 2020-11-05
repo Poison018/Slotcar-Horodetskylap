@@ -36,6 +36,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
@@ -58,8 +61,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label79 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
@@ -76,7 +82,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label82 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
@@ -95,8 +104,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label85 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
@@ -195,16 +207,14 @@
             this.кольориДоріжокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.доріжкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.червонаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.зеленаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.синяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.жовтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.білаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.фіолетоваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.чорнаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оранжеваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фіолетоваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.жовтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.синяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.чорнаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.зеленаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.доріжкаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.доріжкаToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.доріжкаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.червонаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.білаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.оранжеваToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -213,6 +223,7 @@
             this.синяToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.чорнаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.зеленаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.доріжкаToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.червонаToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.білаToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.оранжеваToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -221,6 +232,7 @@
             this.синяToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.чорнаToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.зеленаToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.доріжкаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.червонаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.білаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.оранжеваToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -229,6 +241,10 @@
             this.синяToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.чорнаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.зеленаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button17 = new System.Windows.Forms.Button();
+            this.timer24 = new System.Windows.Forms.Timer(this.components);
+            this.timer25 = new System.Windows.Forms.Timer(this.components);
+            this.button18 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -308,6 +324,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label78);
+            this.panel1.Controls.Add(this.label77);
+            this.panel1.Controls.Add(this.label76);
             this.panel1.Controls.Add(this.label72);
             this.panel1.Controls.Add(this.label66);
             this.panel1.Controls.Add(this.label59);
@@ -331,6 +350,42 @@
             this.panel1.Size = new System.Drawing.Size(1923, 133);
             this.panel1.TabIndex = 14;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label78.Location = new System.Drawing.Point(1347, 37);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(160, 51);
+            this.label78.TabIndex = 48;
+            this.label78.Text = "00,000";
+            this.label78.Visible = false;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label77.Location = new System.Drawing.Point(1188, 37);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(160, 51);
+            this.label77.TabIndex = 47;
+            this.label77.Text = "00,000";
+            this.label77.Visible = false;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label76.Location = new System.Drawing.Point(1022, 37);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(160, 51);
+            this.label76.TabIndex = 46;
+            this.label76.Text = "00,000";
+            this.label76.Visible = false;
             // 
             // label72
             // 
@@ -515,12 +570,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Red;
+            this.label1.BackColor = System.Drawing.Color.LightBlue;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(14, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 39);
+            this.label1.Size = new System.Drawing.Size(50, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "1.";
             // 
@@ -585,8 +641,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.LimeGreen;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label79);
             this.panel3.Controls.Add(this.label73);
+            this.panel3.Controls.Add(this.label80);
             this.panel3.Controls.Add(this.label63);
+            this.panel3.Controls.Add(this.label81);
             this.panel3.Controls.Add(this.label60);
             this.panel3.Controls.Add(this.label51);
             this.panel3.Controls.Add(this.textBox17);
@@ -608,6 +667,18 @@
             this.panel3.Size = new System.Drawing.Size(1923, 133);
             this.panel3.TabIndex = 21;
             // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label79.Location = new System.Drawing.Point(1347, 36);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(160, 51);
+            this.label79.TabIndex = 51;
+            this.label79.Text = "00,000";
+            this.label79.Visible = false;
+            // 
             // label73
             // 
             this.label73.AutoSize = true;
@@ -618,6 +689,18 @@
             this.label73.TabIndex = 46;
             this.label73.Text = "-";
             // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label80.Location = new System.Drawing.Point(1185, 36);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(160, 51);
+            this.label80.TabIndex = 50;
+            this.label80.Text = "00,000";
+            this.label80.Visible = false;
+            // 
             // label63
             // 
             this.label63.AutoSize = true;
@@ -627,6 +710,18 @@
             this.label63.TabIndex = 41;
             this.label63.Text = "0";
             this.label63.Visible = false;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label81.Location = new System.Drawing.Point(1022, 36);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(160, 51);
+            this.label81.TabIndex = 49;
+            this.label81.Text = "00,000";
+            this.label81.Visible = false;
             // 
             // label60
             // 
@@ -769,12 +864,13 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.LimeGreen;
+            this.label12.BackColor = System.Drawing.Color.LightBlue;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.label12.Location = new System.Drawing.Point(16, 53);
             this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 39);
+            this.label12.Size = new System.Drawing.Size(50, 41);
             this.label12.TabIndex = 0;
             this.label12.Text = "2.";
             // 
@@ -796,7 +892,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.label82);
             this.panel4.Controls.Add(this.label74);
+            this.panel4.Controls.Add(this.label83);
+            this.panel4.Controls.Add(this.label84);
             this.panel4.Controls.Add(this.label64);
             this.panel4.Controls.Add(this.label61);
             this.panel4.Controls.Add(this.label52);
@@ -820,6 +919,18 @@
             this.panel4.Size = new System.Drawing.Size(1923, 133);
             this.panel4.TabIndex = 22;
             // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label82.Location = new System.Drawing.Point(1347, 33);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(160, 51);
+            this.label82.TabIndex = 54;
+            this.label82.Text = "00,000";
+            this.label82.Visible = false;
+            // 
             // label74
             // 
             this.label74.AutoSize = true;
@@ -829,6 +940,30 @@
             this.label74.Size = new System.Drawing.Size(30, 42);
             this.label74.TabIndex = 47;
             this.label74.Text = "-";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label83.Location = new System.Drawing.Point(1185, 34);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(160, 51);
+            this.label83.TabIndex = 53;
+            this.label83.Text = "00,000";
+            this.label83.Visible = false;
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label84.Location = new System.Drawing.Point(1022, 34);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(160, 51);
+            this.label84.TabIndex = 52;
+            this.label84.Text = "00,000";
+            this.label84.Visible = false;
             // 
             // label64
             // 
@@ -993,12 +1128,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label2.BackColor = System.Drawing.Color.LightBlue;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(16, 51);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 39);
+            this.label2.Size = new System.Drawing.Size(50, 41);
             this.label2.TabIndex = 0;
             this.label2.Text = "3.";
             // 
@@ -1020,8 +1156,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.Gold;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.label85);
             this.panel5.Controls.Add(this.label75);
+            this.panel5.Controls.Add(this.label86);
             this.panel5.Controls.Add(this.label65);
+            this.panel5.Controls.Add(this.label87);
             this.panel5.Controls.Add(this.label62);
             this.panel5.Controls.Add(this.label53);
             this.panel5.Controls.Add(this.textBox19);
@@ -1043,6 +1182,18 @@
             this.panel5.Size = new System.Drawing.Size(1923, 133);
             this.panel5.TabIndex = 23;
             // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label85.Location = new System.Drawing.Point(1347, 36);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(160, 51);
+            this.label85.TabIndex = 57;
+            this.label85.Text = "00,000";
+            this.label85.Visible = false;
+            // 
             // label75
             // 
             this.label75.AutoSize = true;
@@ -1053,6 +1204,18 @@
             this.label75.TabIndex = 48;
             this.label75.Text = "-";
             // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label86.Location = new System.Drawing.Point(1185, 37);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(160, 51);
+            this.label86.TabIndex = 56;
+            this.label86.Text = "00,000";
+            this.label86.Visible = false;
+            // 
             // label65
             // 
             this.label65.AutoSize = true;
@@ -1062,6 +1225,18 @@
             this.label65.TabIndex = 42;
             this.label65.Text = "0";
             this.label65.Visible = false;
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label87.Location = new System.Drawing.Point(1022, 37);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(160, 51);
+            this.label87.TabIndex = 55;
+            this.label87.Text = "00,000";
+            this.label87.Visible = false;
             // 
             // label62
             // 
@@ -1205,7 +1380,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Gold;
+            this.label3.BackColor = System.Drawing.Color.LightBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(16, 55);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
@@ -1231,11 +1406,11 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(1620, 39);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 84.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(1567, 24);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(289, 108);
+            this.label4.Size = new System.Drawing.Size(343, 128);
             this.label4.TabIndex = 24;
             this.label4.Text = "00:00";
             // 
@@ -1507,7 +1682,7 @@
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(521, 987);
+            this.button5.Location = new System.Drawing.Point(521, 912);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 37);
             this.button5.TabIndex = 44;
@@ -1712,7 +1887,7 @@
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label68.Location = new System.Drawing.Point(794, 819);
+            this.label68.Location = new System.Drawing.Point(787, 815);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(227, 24);
             this.label68.TabIndex = 53;
@@ -1979,7 +2154,7 @@
             this.доріжкаToolStripMenuItem2,
             this.доріжкаToolStripMenuItem3});
             this.кольориДоріжокToolStripMenuItem.Name = "кольориДоріжокToolStripMenuItem";
-            this.кольориДоріжокToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.кольориДоріжокToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.кольориДоріжокToolStripMenuItem.Text = "Кольори доріжок";
             // 
             // доріжкаToolStripMenuItem
@@ -1994,65 +2169,65 @@
             this.чорнаToolStripMenuItem,
             this.зеленаToolStripMenuItem});
             this.доріжкаToolStripMenuItem.Name = "доріжкаToolStripMenuItem";
-            this.доріжкаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.доріжкаToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.доріжкаToolStripMenuItem.Text = "1 доріжка";
             this.доріжкаToolStripMenuItem.Click += new System.EventHandler(this.доріжкаToolStripMenuItem_Click);
             // 
             // червонаToolStripMenuItem
             // 
             this.червонаToolStripMenuItem.Name = "червонаToolStripMenuItem";
-            this.червонаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.червонаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.червонаToolStripMenuItem.Text = "Червона";
             this.червонаToolStripMenuItem.Click += new System.EventHandler(this.червонаToolStripMenuItem_Click);
-            // 
-            // зеленаToolStripMenuItem
-            // 
-            this.зеленаToolStripMenuItem.Name = "зеленаToolStripMenuItem";
-            this.зеленаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.зеленаToolStripMenuItem.Text = "Зелена";
-            this.зеленаToolStripMenuItem.Click += new System.EventHandler(this.зеленаToolStripMenuItem_Click);
-            // 
-            // синяToolStripMenuItem
-            // 
-            this.синяToolStripMenuItem.Name = "синяToolStripMenuItem";
-            this.синяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.синяToolStripMenuItem.Text = "Синя";
-            this.синяToolStripMenuItem.Click += new System.EventHandler(this.синяToolStripMenuItem_Click);
-            // 
-            // жовтаToolStripMenuItem
-            // 
-            this.жовтаToolStripMenuItem.Name = "жовтаToolStripMenuItem";
-            this.жовтаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.жовтаToolStripMenuItem.Text = "Жовта";
-            this.жовтаToolStripMenuItem.Click += new System.EventHandler(this.жовтаToolStripMenuItem_Click);
             // 
             // білаToolStripMenuItem
             // 
             this.білаToolStripMenuItem.Name = "білаToolStripMenuItem";
-            this.білаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.білаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.білаToolStripMenuItem.Text = "Біла";
             this.білаToolStripMenuItem.Click += new System.EventHandler(this.білаToolStripMenuItem_Click);
-            // 
-            // фіолетоваToolStripMenuItem
-            // 
-            this.фіолетоваToolStripMenuItem.Name = "фіолетоваToolStripMenuItem";
-            this.фіолетоваToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.фіолетоваToolStripMenuItem.Text = "Фіолетова";
-            this.фіолетоваToolStripMenuItem.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem_Click);
-            // 
-            // чорнаToolStripMenuItem
-            // 
-            this.чорнаToolStripMenuItem.Name = "чорнаToolStripMenuItem";
-            this.чорнаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.чорнаToolStripMenuItem.Text = "Чорна";
-            this.чорнаToolStripMenuItem.Click += new System.EventHandler(this.чорнаToolStripMenuItem_Click);
             // 
             // оранжеваToolStripMenuItem
             // 
             this.оранжеваToolStripMenuItem.Name = "оранжеваToolStripMenuItem";
-            this.оранжеваToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.оранжеваToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.оранжеваToolStripMenuItem.Text = "Оранжева";
             this.оранжеваToolStripMenuItem.Click += new System.EventHandler(this.оранжеваToolStripMenuItem_Click);
+            // 
+            // фіолетоваToolStripMenuItem
+            // 
+            this.фіолетоваToolStripMenuItem.Name = "фіолетоваToolStripMenuItem";
+            this.фіолетоваToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.фіолетоваToolStripMenuItem.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem_Click);
+            // 
+            // жовтаToolStripMenuItem
+            // 
+            this.жовтаToolStripMenuItem.Name = "жовтаToolStripMenuItem";
+            this.жовтаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.жовтаToolStripMenuItem.Text = "Жовта";
+            this.жовтаToolStripMenuItem.Click += new System.EventHandler(this.жовтаToolStripMenuItem_Click);
+            // 
+            // синяToolStripMenuItem
+            // 
+            this.синяToolStripMenuItem.Name = "синяToolStripMenuItem";
+            this.синяToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.синяToolStripMenuItem.Text = "Синя";
+            this.синяToolStripMenuItem.Click += new System.EventHandler(this.синяToolStripMenuItem_Click);
+            // 
+            // чорнаToolStripMenuItem
+            // 
+            this.чорнаToolStripMenuItem.Name = "чорнаToolStripMenuItem";
+            this.чорнаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.чорнаToolStripMenuItem.Text = "Чорна";
+            this.чорнаToolStripMenuItem.Click += new System.EventHandler(this.чорнаToolStripMenuItem_Click);
+            // 
+            // зеленаToolStripMenuItem
+            // 
+            this.зеленаToolStripMenuItem.Name = "зеленаToolStripMenuItem";
+            this.зеленаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.зеленаToolStripMenuItem.Text = "Зелена";
+            this.зеленаToolStripMenuItem.Click += new System.EventHandler(this.зеленаToolStripMenuItem_Click);
             // 
             // доріжкаToolStripMenuItem1
             // 
@@ -2066,8 +2241,64 @@
             this.чорнаToolStripMenuItem1,
             this.зеленаToolStripMenuItem1});
             this.доріжкаToolStripMenuItem1.Name = "доріжкаToolStripMenuItem1";
-            this.доріжкаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.доріжкаToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
             this.доріжкаToolStripMenuItem1.Text = "2 доріжка";
+            // 
+            // червонаToolStripMenuItem1
+            // 
+            this.червонаToolStripMenuItem1.Name = "червонаToolStripMenuItem1";
+            this.червонаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.червонаToolStripMenuItem1.Text = "Червона";
+            this.червонаToolStripMenuItem1.Click += new System.EventHandler(this.червонаToolStripMenuItem1_Click);
+            // 
+            // білаToolStripMenuItem1
+            // 
+            this.білаToolStripMenuItem1.Name = "білаToolStripMenuItem1";
+            this.білаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.білаToolStripMenuItem1.Text = "Біла";
+            this.білаToolStripMenuItem1.Click += new System.EventHandler(this.білаToolStripMenuItem1_Click);
+            // 
+            // оранжеваToolStripMenuItem1
+            // 
+            this.оранжеваToolStripMenuItem1.Name = "оранжеваToolStripMenuItem1";
+            this.оранжеваToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.оранжеваToolStripMenuItem1.Text = "Оранжева";
+            this.оранжеваToolStripMenuItem1.Click += new System.EventHandler(this.оранжеваToolStripMenuItem1_Click);
+            // 
+            // фіолетоваToolStripMenuItem1
+            // 
+            this.фіолетоваToolStripMenuItem1.Name = "фіолетоваToolStripMenuItem1";
+            this.фіолетоваToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.фіолетоваToolStripMenuItem1.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem1.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem1_Click);
+            // 
+            // жовтаToolStripMenuItem1
+            // 
+            this.жовтаToolStripMenuItem1.Name = "жовтаToolStripMenuItem1";
+            this.жовтаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.жовтаToolStripMenuItem1.Text = "Жовта";
+            this.жовтаToolStripMenuItem1.Click += new System.EventHandler(this.жовтаToolStripMenuItem1_Click);
+            // 
+            // синяToolStripMenuItem1
+            // 
+            this.синяToolStripMenuItem1.Name = "синяToolStripMenuItem1";
+            this.синяToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.синяToolStripMenuItem1.Text = "Синя";
+            this.синяToolStripMenuItem1.Click += new System.EventHandler(this.синяToolStripMenuItem1_Click);
+            // 
+            // чорнаToolStripMenuItem1
+            // 
+            this.чорнаToolStripMenuItem1.Name = "чорнаToolStripMenuItem1";
+            this.чорнаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.чорнаToolStripMenuItem1.Text = "Чорна";
+            this.чорнаToolStripMenuItem1.Click += new System.EventHandler(this.чорнаToolStripMenuItem1_Click);
+            // 
+            // зеленаToolStripMenuItem1
+            // 
+            this.зеленаToolStripMenuItem1.Name = "зеленаToolStripMenuItem1";
+            this.зеленаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.зеленаToolStripMenuItem1.Text = "Зелена";
+            this.зеленаToolStripMenuItem1.Click += new System.EventHandler(this.зеленаToolStripMenuItem1_Click);
             // 
             // доріжкаToolStripMenuItem2
             // 
@@ -2081,9 +2312,65 @@
             this.чорнаToolStripMenuItem2,
             this.зеленаToolStripMenuItem2});
             this.доріжкаToolStripMenuItem2.Name = "доріжкаToolStripMenuItem2";
-            this.доріжкаToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.доріжкаToolStripMenuItem2.Size = new System.Drawing.Size(127, 22);
             this.доріжкаToolStripMenuItem2.Text = "3 доріжка";
             this.доріжкаToolStripMenuItem2.Click += new System.EventHandler(this.доріжкаToolStripMenuItem2_Click);
+            // 
+            // червонаToolStripMenuItem2
+            // 
+            this.червонаToolStripMenuItem2.Name = "червонаToolStripMenuItem2";
+            this.червонаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.червонаToolStripMenuItem2.Text = "Червона";
+            this.червонаToolStripMenuItem2.Click += new System.EventHandler(this.червонаToolStripMenuItem2_Click);
+            // 
+            // білаToolStripMenuItem2
+            // 
+            this.білаToolStripMenuItem2.Name = "білаToolStripMenuItem2";
+            this.білаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.білаToolStripMenuItem2.Text = "Біла";
+            this.білаToolStripMenuItem2.Click += new System.EventHandler(this.білаToolStripMenuItem2_Click);
+            // 
+            // оранжеваToolStripMenuItem2
+            // 
+            this.оранжеваToolStripMenuItem2.Name = "оранжеваToolStripMenuItem2";
+            this.оранжеваToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.оранжеваToolStripMenuItem2.Text = "Оранжева";
+            this.оранжеваToolStripMenuItem2.Click += new System.EventHandler(this.оранжеваToolStripMenuItem2_Click);
+            // 
+            // фіолетоваToolStripMenuItem2
+            // 
+            this.фіолетоваToolStripMenuItem2.Name = "фіолетоваToolStripMenuItem2";
+            this.фіолетоваToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.фіолетоваToolStripMenuItem2.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem2.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem2_Click);
+            // 
+            // жовтаToolStripMenuItem2
+            // 
+            this.жовтаToolStripMenuItem2.Name = "жовтаToolStripMenuItem2";
+            this.жовтаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.жовтаToolStripMenuItem2.Text = "Жовта";
+            this.жовтаToolStripMenuItem2.Click += new System.EventHandler(this.жовтаToolStripMenuItem2_Click);
+            // 
+            // синяToolStripMenuItem2
+            // 
+            this.синяToolStripMenuItem2.Name = "синяToolStripMenuItem2";
+            this.синяToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.синяToolStripMenuItem2.Text = "Синя";
+            this.синяToolStripMenuItem2.Click += new System.EventHandler(this.синяToolStripMenuItem2_Click);
+            // 
+            // чорнаToolStripMenuItem2
+            // 
+            this.чорнаToolStripMenuItem2.Name = "чорнаToolStripMenuItem2";
+            this.чорнаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.чорнаToolStripMenuItem2.Text = "Чорна";
+            this.чорнаToolStripMenuItem2.Click += new System.EventHandler(this.чорнаToolStripMenuItem2_Click);
+            // 
+            // зеленаToolStripMenuItem2
+            // 
+            this.зеленаToolStripMenuItem2.Name = "зеленаToolStripMenuItem2";
+            this.зеленаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.зеленаToolStripMenuItem2.Text = "Зелена";
+            this.зеленаToolStripMenuItem2.Click += new System.EventHandler(this.зеленаToolStripMenuItem2_Click);
             // 
             // доріжкаToolStripMenuItem3
             // 
@@ -2097,176 +2384,104 @@
             this.чорнаToolStripMenuItem3,
             this.зеленаToolStripMenuItem3});
             this.доріжкаToolStripMenuItem3.Name = "доріжкаToolStripMenuItem3";
-            this.доріжкаToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.доріжкаToolStripMenuItem3.Size = new System.Drawing.Size(127, 22);
             this.доріжкаToolStripMenuItem3.Text = "4 доріжка";
-            // 
-            // червонаToolStripMenuItem1
-            // 
-            this.червонаToolStripMenuItem1.Name = "червонаToolStripMenuItem1";
-            this.червонаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.червонаToolStripMenuItem1.Text = "Червона";
-            this.червонаToolStripMenuItem1.Click += new System.EventHandler(this.червонаToolStripMenuItem1_Click);
-            // 
-            // білаToolStripMenuItem1
-            // 
-            this.білаToolStripMenuItem1.Name = "білаToolStripMenuItem1";
-            this.білаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.білаToolStripMenuItem1.Text = "Біла";
-            this.білаToolStripMenuItem1.Click += new System.EventHandler(this.білаToolStripMenuItem1_Click);
-            // 
-            // оранжеваToolStripMenuItem1
-            // 
-            this.оранжеваToolStripMenuItem1.Name = "оранжеваToolStripMenuItem1";
-            this.оранжеваToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.оранжеваToolStripMenuItem1.Text = "Оранжева";
-            this.оранжеваToolStripMenuItem1.Click += new System.EventHandler(this.оранжеваToolStripMenuItem1_Click);
-            // 
-            // фіолетоваToolStripMenuItem1
-            // 
-            this.фіолетоваToolStripMenuItem1.Name = "фіолетоваToolStripMenuItem1";
-            this.фіолетоваToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.фіолетоваToolStripMenuItem1.Text = "Фіолетова";
-            this.фіолетоваToolStripMenuItem1.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem1_Click);
-            // 
-            // жовтаToolStripMenuItem1
-            // 
-            this.жовтаToolStripMenuItem1.Name = "жовтаToolStripMenuItem1";
-            this.жовтаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.жовтаToolStripMenuItem1.Text = "Жовта";
-            this.жовтаToolStripMenuItem1.Click += new System.EventHandler(this.жовтаToolStripMenuItem1_Click);
-            // 
-            // синяToolStripMenuItem1
-            // 
-            this.синяToolStripMenuItem1.Name = "синяToolStripMenuItem1";
-            this.синяToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.синяToolStripMenuItem1.Text = "Синя";
-            this.синяToolStripMenuItem1.Click += new System.EventHandler(this.синяToolStripMenuItem1_Click);
-            // 
-            // чорнаToolStripMenuItem1
-            // 
-            this.чорнаToolStripMenuItem1.Name = "чорнаToolStripMenuItem1";
-            this.чорнаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.чорнаToolStripMenuItem1.Text = "Чорна";
-            this.чорнаToolStripMenuItem1.Click += new System.EventHandler(this.чорнаToolStripMenuItem1_Click);
-            // 
-            // зеленаToolStripMenuItem1
-            // 
-            this.зеленаToolStripMenuItem1.Name = "зеленаToolStripMenuItem1";
-            this.зеленаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.зеленаToolStripMenuItem1.Text = "Зелена";
-            this.зеленаToolStripMenuItem1.Click += new System.EventHandler(this.зеленаToolStripMenuItem1_Click);
-            // 
-            // червонаToolStripMenuItem2
-            // 
-            this.червонаToolStripMenuItem2.Name = "червонаToolStripMenuItem2";
-            this.червонаToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.червонаToolStripMenuItem2.Text = "Червона";
-            this.червонаToolStripMenuItem2.Click += new System.EventHandler(this.червонаToolStripMenuItem2_Click);
-            // 
-            // білаToolStripMenuItem2
-            // 
-            this.білаToolStripMenuItem2.Name = "білаToolStripMenuItem2";
-            this.білаToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.білаToolStripMenuItem2.Text = "Біла";
-            this.білаToolStripMenuItem2.Click += new System.EventHandler(this.білаToolStripMenuItem2_Click);
-            // 
-            // оранжеваToolStripMenuItem2
-            // 
-            this.оранжеваToolStripMenuItem2.Name = "оранжеваToolStripMenuItem2";
-            this.оранжеваToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.оранжеваToolStripMenuItem2.Text = "Оранжева";
-            this.оранжеваToolStripMenuItem2.Click += new System.EventHandler(this.оранжеваToolStripMenuItem2_Click);
-            // 
-            // фіолетоваToolStripMenuItem2
-            // 
-            this.фіолетоваToolStripMenuItem2.Name = "фіолетоваToolStripMenuItem2";
-            this.фіолетоваToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.фіолетоваToolStripMenuItem2.Text = "Фіолетова";
-            this.фіолетоваToolStripMenuItem2.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem2_Click);
-            // 
-            // жовтаToolStripMenuItem2
-            // 
-            this.жовтаToolStripMenuItem2.Name = "жовтаToolStripMenuItem2";
-            this.жовтаToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.жовтаToolStripMenuItem2.Text = "Жовта";
-            this.жовтаToolStripMenuItem2.Click += new System.EventHandler(this.жовтаToolStripMenuItem2_Click);
-            // 
-            // синяToolStripMenuItem2
-            // 
-            this.синяToolStripMenuItem2.Name = "синяToolStripMenuItem2";
-            this.синяToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.синяToolStripMenuItem2.Text = "Синя";
-            this.синяToolStripMenuItem2.Click += new System.EventHandler(this.синяToolStripMenuItem2_Click);
-            // 
-            // чорнаToolStripMenuItem2
-            // 
-            this.чорнаToolStripMenuItem2.Name = "чорнаToolStripMenuItem2";
-            this.чорнаToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.чорнаToolStripMenuItem2.Text = "Чорна";
-            this.чорнаToolStripMenuItem2.Click += new System.EventHandler(this.чорнаToolStripMenuItem2_Click);
-            // 
-            // зеленаToolStripMenuItem2
-            // 
-            this.зеленаToolStripMenuItem2.Name = "зеленаToolStripMenuItem2";
-            this.зеленаToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.зеленаToolStripMenuItem2.Text = "Зелена";
-            this.зеленаToolStripMenuItem2.Click += new System.EventHandler(this.зеленаToolStripMenuItem2_Click);
             // 
             // червонаToolStripMenuItem3
             // 
             this.червонаToolStripMenuItem3.Name = "червонаToolStripMenuItem3";
-            this.червонаToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.червонаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.червонаToolStripMenuItem3.Text = "Червона";
             this.червонаToolStripMenuItem3.Click += new System.EventHandler(this.червонаToolStripMenuItem3_Click);
             // 
             // білаToolStripMenuItem3
             // 
             this.білаToolStripMenuItem3.Name = "білаToolStripMenuItem3";
-            this.білаToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.білаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.білаToolStripMenuItem3.Text = "Біла";
             this.білаToolStripMenuItem3.Click += new System.EventHandler(this.білаToolStripMenuItem3_Click);
             // 
             // оранжеваToolStripMenuItem3
             // 
             this.оранжеваToolStripMenuItem3.Name = "оранжеваToolStripMenuItem3";
-            this.оранжеваToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.оранжеваToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.оранжеваToolStripMenuItem3.Text = "Оранжева";
             this.оранжеваToolStripMenuItem3.Click += new System.EventHandler(this.оранжеваToolStripMenuItem3_Click);
             // 
             // фіолетоваToolStripMenuItem3
             // 
             this.фіолетоваToolStripMenuItem3.Name = "фіолетоваToolStripMenuItem3";
-            this.фіолетоваToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.фіолетоваToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.фіолетоваToolStripMenuItem3.Text = "Фіолетова";
             this.фіолетоваToolStripMenuItem3.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem3_Click);
             // 
             // жовтаToolStripMenuItem3
             // 
             this.жовтаToolStripMenuItem3.Name = "жовтаToolStripMenuItem3";
-            this.жовтаToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.жовтаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.жовтаToolStripMenuItem3.Text = "Жовта";
             this.жовтаToolStripMenuItem3.Click += new System.EventHandler(this.жовтаToolStripMenuItem3_Click);
             // 
             // синяToolStripMenuItem3
             // 
             this.синяToolStripMenuItem3.Name = "синяToolStripMenuItem3";
-            this.синяToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.синяToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.синяToolStripMenuItem3.Text = "Синя";
             this.синяToolStripMenuItem3.Click += new System.EventHandler(this.синяToolStripMenuItem3_Click);
             // 
             // чорнаToolStripMenuItem3
             // 
             this.чорнаToolStripMenuItem3.Name = "чорнаToolStripMenuItem3";
-            this.чорнаToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.чорнаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.чорнаToolStripMenuItem3.Text = "Чорна";
             this.чорнаToolStripMenuItem3.Click += new System.EventHandler(this.чорнаToolStripMenuItem3_Click);
             // 
             // зеленаToolStripMenuItem3
             // 
             this.зеленаToolStripMenuItem3.Name = "зеленаToolStripMenuItem3";
-            this.зеленаToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.зеленаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.зеленаToolStripMenuItem3.Text = "Зелена";
             this.зеленаToolStripMenuItem3.Click += new System.EventHandler(this.зеленаToolStripMenuItem3_Click);
+            // 
+            // button17
+            // 
+            this.button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button17.BackgroundImage")));
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button17.Location = new System.Drawing.Point(693, 902);
+            this.button17.Margin = new System.Windows.Forms.Padding(2);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(458, 122);
+            this.button17.TabIndex = 73;
+            this.button17.Text = "Старт Тренування";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Visible = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // timer24
+            // 
+            this.timer24.Interval = 10;
+            this.timer24.Tag = "Таймер для тренування";
+            this.timer24.Tick += new System.EventHandler(this.timer24_Tick);
+            // 
+            // timer25
+            // 
+            this.timer25.Interval = 30000;
+            this.timer25.Tag = "Таймер переходу тренування";
+            this.timer25.Tick += new System.EventHandler(this.timer25_Tick);
+            // 
+            // button18
+            // 
+            this.button18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button18.BackgroundImage")));
+            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button18.Location = new System.Drawing.Point(693, 900);
+            this.button18.Margin = new System.Windows.Forms.Padding(2);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(458, 122);
+            this.button18.TabIndex = 74;
+            this.button18.Text = "Завершити тренування";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Visible = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // Form3
             // 
@@ -2274,6 +2489,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1920, 1057);
+            this.Controls.Add(this.button18);
+            this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.textBox25);
@@ -2562,5 +2779,21 @@
         private System.Windows.Forms.ToolStripMenuItem синяToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem чорнаToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem зеленаToolStripMenuItem3;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Timer timer24;
+        private System.Windows.Forms.Timer timer25;
+        private System.Windows.Forms.Button button18;
     }
 }

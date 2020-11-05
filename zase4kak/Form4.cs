@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO.Ports;
 using System.Runtime.CompilerServices;
 using System.Media;
+using zase4ka.Properties;
 
 namespace zase4kak
 {
@@ -19,6 +20,7 @@ namespace zase4kak
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
+            comboBox1.Text = Settings.Default.zase4ka_comPort;
         }
 
 
@@ -428,6 +430,9 @@ namespace zase4kak
             comboBox1.Visible = false;
             button3.Enabled = true;
 
+            Settings.Default.lapTIme_comPort = comboBox1.Text;
+            Settings.Default.Save();
+            
             
             button1.Visible = true;
             button2.Enabled = false;
@@ -645,11 +650,14 @@ namespace zase4kak
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-            if(serialPort1.IsOpen == true || timer2.Enabled == true)
+
+
+           
+
+            if(serialPort1.IsOpen == true && timer2.Enabled == true)
             {
                 serialPort1.Close();
             }
-
 
             if (label101.Text == "<<Кваліфікацію завершено!>>")
             {
@@ -1145,22 +1153,23 @@ namespace zase4kak
         {
             if (e.KeyCode == Keys.Space)
             {
+                serialPort1.Open();
                 serialPort1.WriteLine("4");
                 startsound.Play();
                 timer1.Enabled = true;
-                button1.Visible = false;
-                label101.Visible = true;
+                button6.Enabled = false;
+                button6.Visible = false;
+                button5.Enabled = true;
                 button5.Visible = true;
-                button1.Enabled = false;
                 button5.Focus();
-                button6.Focus();
+                timer11.Enabled = true;
             }
         }
-
         private void button5_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Space)
             {
+               
                 serialPort1.WriteLine("3");
                 stopsound.Play();
                 timer1.Enabled = false;
@@ -1171,9 +1180,17 @@ namespace zase4kak
                 button6.Focus();
                 timer11.Enabled = false;
 
-                    
-                         
-                
+                if (serialPort1.IsOpen == true && timer1.Enabled == false)
+                {
+                    serialPort1.Close();
+
+                }
+                else
+                {
+                    serialPort1.Open();
+                }
+
+
             }
         }
 
@@ -1188,10 +1205,21 @@ namespace zase4kak
             button6.Visible = true;
             button6.Focus();
             timer11.Enabled = false;
+
+            if (serialPort1.IsOpen == true && timer1.Enabled == false)
+            {
+                serialPort1.Close();
+
+            }
+            else
+            {
+                serialPort1.Open();
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            serialPort1.Open();
             serialPort1.WriteLine("4");
             startsound.Play();
             timer1.Enabled = true;
@@ -1215,6 +1243,7 @@ namespace zase4kak
             if (dialog == DialogResult.Yes)
             {
                 e.Cancel = false;
+                serialPort1.Close();
              
             }
             else

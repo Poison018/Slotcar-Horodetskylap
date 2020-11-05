@@ -27,6 +27,7 @@ namespace zase4kak
 		SoundPlayer perehid = new SoundPlayer();
 		SoundPlayer sekynd = new SoundPlayer();
 		SoundPlayer fivesecond = new SoundPlayer();
+		SoundPlayer best_time = new SoundPlayer();
 		int timetotraning = 60;
 
 		public Form3()
@@ -34,10 +35,12 @@ namespace zase4kak
 			InitializeComponent();
 			CheckForIllegalCrossThreadCalls = false;
 
+			// вибір кольору доріжки
 			panel1.BackColor = Settings.Default.line_1;
 			panel3.BackColor = Settings.Default.line_2;
 			panel4.BackColor = Settings.Default.line_3;
 			panel5.BackColor = Settings.Default.line_4;
+			comboBox1.Text = Settings.Default.zase4ka_comPort;
 			
 
 		}
@@ -52,7 +55,7 @@ namespace zase4kak
 			button6.Focus();
 		}
 
-		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d;
+		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, time_to_traning_min = 30, time_to_traning_sec = 1;
 
 		
 
@@ -525,6 +528,8 @@ namespace zase4kak
 			startsound.SoundLocation = "music/re.wav";
 			startsound.Load();
 			kinetsgonkisound.SoundLocation = "music/aplodismenty_s_krikami_bravo.wav";
+			best_time.SoundLocation = "music/00508.wav";
+			best_time.Load();
 			String[] strPortName = SerialPort.GetPortNames();
 			foreach (string n in strPortName)
 			{
@@ -756,18 +761,88 @@ namespace zase4kak
 
         private void button5_Click(object sender, EventArgs e)
         {
+			label13.Visible = true;
+			label13.Text = "Тренування!";
 			serialPort1.BaudRate = 9600;
 			serialPort1.PortName = comboBox1.Text;
 			button5.Visible = false;
-			button1.Visible = true;
 			comboBox1.Visible = false;
 			label49.Visible = false;
 			serialPort1.Open();
 			serialPort1.WriteLine("3");
 			serialPort1.Close();
+			Settings.Default.zase4ka_comPort = comboBox1.Text;
+			Settings.Default.Save();
 
-			button1.Focus();
-			
+
+			// переміщення інтерфейсу під тренування
+			textBox1.Location = new Point(92, -13);
+			textBox1.Size = new Size(301, 151);
+			textBox6.Location = new Point(92, -5);
+			textBox6.Size = new Size(301, 151);
+			textBox9.Location = new Point(92, - 5);
+			textBox9.Size = new Size(301, 151);
+			textBox12.Location = new Point(92, 1);
+			textBox12.Size = new Size(301, 151);
+			label17.Location = new Point(88, - 10);
+			label24.Location = new Point(88, -6);
+			label23.Location = new Point(88, -6);
+			label25.Location = new Point(88, -10);
+			textBox2.Location = new Point(431, 12);
+			textBox2.Size = new Size(1083, 104);
+			textBox5.Location = new Point(431, 12);
+			textBox5.Size = new Size(1083, 104);
+			textBox8.Location = new Point(431, 12);
+			textBox8.Size = new Size(1083, 104);
+			textBox11.Location = new Point(431, 12);
+			textBox11.Size = new Size(1083, 104);
+			label7.Text = "Круги";
+			label5.Visible = false;
+			label9.Location = new Point (878, 8);
+			label11.Visible = false;
+			label72.Visible = false;
+			label73.Visible = false;
+			label74.Visible = false;
+			label75.Visible = false;
+			label22.Location = new Point(431, 34);
+			label19.Location = new Point(610, 34);
+			label20.Location = new Point(803, 37);
+			label76.Visible = true;
+			label77.Visible = true;
+			label78.Visible = true;
+			label30.Location = new Point(431, 33);
+			label32.Location = new Point(610, 33);
+			label31.Location = new Point(803, 36);
+			label79.Visible = true;
+			label80.Visible = true;
+			label81.Visible = true;
+			label34.Location = new Point(431, 35);
+			label36.Location = new Point(610, 35);
+			label35.Location = new Point(803, 38);
+			label82.Visible = true;
+			label83.Visible = true;
+			label84.Visible = true;
+			label39.Location = new Point(431, 34);
+			label41.Location = new Point(610, 34);
+			label40.Location = new Point(803, 37);
+			label87.Visible = true;
+			label86.Visible = true;
+			label85.Visible = true;
+			button17.Visible = true;
+			timer18.Enabled = false;
+
+
+
+
+
+
+
+
+
+
+
+
+
 		}
 
 		private void timer18_Tick_1(object sender, EventArgs e)
@@ -1397,15 +1472,58 @@ namespace zase4kak
 				serialPort1.Close();
             }
             
-			
+			if (panel1.BackColor == Color.Black)
+            {
+				label45.ForeColor = Color.White;
+				label59.ForeColor = Color.White;
+            }
+            else
+            {
+				label45.ForeColor = Color.Black;
+				label59.ForeColor = Color.Black;
+			}
+
+
+			if (panel3.BackColor == Color.Black)
+			{
+				label46.ForeColor = Color.White;
+				label60.ForeColor = Color.White;
+			}
+			else
+			{
+				label46.ForeColor = Color.Black;
+				label60.ForeColor = Color.Black;
+			}
+
+			if (panel4.BackColor == Color.Black)
+			{
+				label47.ForeColor = Color.White;
+				label61.ForeColor = Color.White;
+			}
+			else
+			{
+				label47.ForeColor = Color.Black;
+				label61.ForeColor = Color.Black;
+			}
+
+			if (panel5.BackColor == Color.Black)
+			{
+				label48.ForeColor = Color.White;
+				label62.ForeColor = Color.White;
+			}
+			else
+			{
+				label48.ForeColor = Color.Black;
+				label62.ForeColor = Color.Black;
+			}
 
 
 			//if (label22.Text == "00,000" || label19.Text == "00,000" || label20.Text == "00,000")
-   //         {
+			//         {
 			//	label72.Text = "-";
-   //         }
-   //         else
-   //         {
+			//         }
+			//         else
+			//         {
 
 
 
@@ -1610,15 +1728,15 @@ namespace zase4kak
 
 			//					timetoprognoz = 60;
 
-								
-			//					Grean_result = Convert.ToDouble(label30.Text) + Convert.ToDouble(label32.Text) + Convert.ToDouble(label31.Text);
-								
-			//					prognozGrean = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Grean_result);
-								
 
-								
+			//					Grean_result = Convert.ToDouble(label30.Text) + Convert.ToDouble(label32.Text) + Convert.ToDouble(label31.Text);
+
+			//					prognozGrean = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Grean_result);
+
+
+
 			//					label73.Text = Convert.ToString(prognozGrean);
-								
+
 
 
 
@@ -1835,13 +1953,13 @@ namespace zase4kak
 
 			//					timetoprognoz = 120;
 
-								
+
 			//					blue_result = Convert.ToDouble(label34.Text) + Convert.ToDouble(label36.Text) + Convert.ToDouble(label35.Text);
-								
+
 			//					prognozBlue = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(blue_result);
-								
+
 			//					label74.Text = Convert.ToString(prognozBlue);
-								
+
 			//				}
 			//				break;
 
@@ -2027,13 +2145,13 @@ namespace zase4kak
 
 			//					timetoprognoz = 120;
 
-								
+
 			//					Yelow_result = Convert.ToDouble(label39.Text) + Convert.ToDouble(label41.Text) + Convert.ToDouble(label40.Text);
 
-								
+
 			//					prognozYelow = Convert.ToInt32(timetoprognoz) / Convert.ToInt32(Yelow_result);
 
-								
+
 			//					label75.Text = Convert.ToString(prognozYelow);
 			//				}
 			//				break;
@@ -2191,7 +2309,7 @@ namespace zase4kak
 			//		}
 			//	}
 
-				
+
 
 		}
 
@@ -2213,9 +2331,14 @@ namespace zase4kak
 			button10.Enabled = true;
 			button11.Enabled = false;
 
+			
+
+
+
 			pausesound.Play();
 			if(number_group.Text == "0")	// кнопка пауза для 1 заїзду
             {
+				serialPort1.Close();
 				timer2.Enabled = false;
 				timer17.Enabled = false;
 				timer11.Enabled = false;
@@ -2228,6 +2351,7 @@ namespace zase4kak
 
 			if (number_group.Text == "1")	// кнопка пауза для 2 заїзду
 			{
+				serialPort1.Close();
 				timer4.Enabled = false;
 				timer17.Enabled = false;
 				timer11.Enabled = false;
@@ -2240,6 +2364,7 @@ namespace zase4kak
 
 			if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
 			{
+				serialPort1.Close();
 				timer6.Enabled = false;
 				timer17.Enabled = false;
 				timer11.Enabled = false;
@@ -2252,6 +2377,7 @@ namespace zase4kak
 
 			if (number_group.Text == "3")   // кнопка пауза для 3 заїзду
 			{
+				serialPort1.Close();
 				timer8.Enabled = false;
 				timer17.Enabled = false;
 				timer11.Enabled = false;
@@ -2266,6 +2392,7 @@ namespace zase4kak
 
         private void button7_Click(object sender, EventArgs e)
         {
+			serialPort1.Open();
 			serialPort1.WriteLine("4");
 			label69.Text = "Трек включений";
 			label69.BackColor = Color.Green;
@@ -2275,6 +2402,7 @@ namespace zase4kak
 			startsound.Play();
 			if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
 			{
+				
 				timer2.Enabled = true;
 				timer17.Enabled = true;
 				timer11.Enabled = true;
@@ -2287,6 +2415,7 @@ namespace zase4kak
 
 			if (number_group.Text == "1")   // кнопка продовжити для 2 заїзду
 			{
+				
 				timer4.Enabled = true;
 				timer17.Enabled = true;
 				timer11.Enabled = true;
@@ -2299,6 +2428,7 @@ namespace zase4kak
 
 			if (number_group.Text == "2")   // кнопка продовжити для 3 заїзду
 			{
+				
 				timer6.Enabled = true;
 				timer17.Enabled = true;
 				timer11.Enabled = true;
@@ -2311,6 +2441,7 @@ namespace zase4kak
 
 			if (number_group.Text == "3")   // кнопка продовжити для 3 заїзду
 			{
+				
 				timer8.Enabled = true;
 				timer17.Enabled = true;
 				timer11.Enabled = true;
@@ -2462,6 +2593,7 @@ namespace zase4kak
         {
 			serialPort1.Open();
 			button6.Visible = true;
+			button6.Focus();
 			timer20.Enabled = false;
         }
 
@@ -2979,7 +3111,7 @@ namespace zase4kak
 			if (dialog == DialogResult.Yes)
 			{
 				e.Cancel = false;
-				
+				serialPort1.Close();
 			
 			}
 			else
@@ -3194,6 +3326,126 @@ namespace zase4kak
 			Settings.Default.Save();
 		}
 
+        private void timer25_Tick(object sender, EventArgs e)
+        {
+			serialPort1.WriteLine("4");
+			time_to_traning_min = 30;
+			time_to_traning_sec = 1;
+			label13.Text = "Тренування!";
+			timer24.Enabled = true;
+			timer25.Enabled = false;
+			
+        }
+
+        private void timer26_Tick(object sender, EventArgs e)
+        {
+			if (label13.Text == "Тренування!") // алгоритм часу для тренування
+			{
+				label78.Text = label77.Text;
+				label77.Text = label76.Text;
+				label76.Text = label20.Text;
+				
+
+				
+
+				
+			}
+		}
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+			serialPort1.Close();
+			this.Close();
+        }
+
+        private void timer24_Tick(object sender, EventArgs e)
+        {
+			time_to_traning_sec--;
+			label4.Text = Convert.ToString(time_to_traning_min) + ":" + Convert.ToString(time_to_traning_sec); //зчитую час гонки який був заданий у настройках
+
+
+
+
+
+			if (time_to_traning_sec == 0)                                               //таймер для гонки 1 перший заїзд
+			{
+				time_to_traning_min--;
+				time_to_traning_sec = 60;
+
+				if (time_to_traning_min == -1 && time_to_traning_sec == 60)
+				{
+					serialPort1.Write("3");
+					perehid.Play();
+					serialPort1.WriteLine("3");//пауза
+					label69.Text = "Трек виключений";
+					label69.BackColor = Color.Red;
+					timer24.Enabled = false;
+					timer25.Enabled = true;
+					label13.Text = "15 сек переходу!";
+
+
+
+					label17.Text = "0";
+					label24.Text = "0";
+					label23.Text = "0";
+					label25.Text = "0";
+
+					label18.Text = "00,000";
+					label22.Text = "00,000";
+					label19.Text = "00,000";
+					label20.Text = "00,000";
+					label16.Text = "999";
+					label29.Text = "00,000";
+					label30.Text = "00,000";
+					label31.Text = "00,000";
+					label32.Text = "00,000";
+					label42.Text = "999";
+					label35.Text = "00,000";
+					label36.Text = "00,000";
+					label37.Text = "00,000";
+					label34.Text = "00,000";
+					label43.Text = "999";
+					label38.Text = "00,000";
+					label39.Text = "00,000";
+					label40.Text = "00,000";
+					label41.Text = "00,000";
+					label44.Text = "999";
+					label78.Text = "00,000";
+					label77.Text = "00,000";
+					label76.Text = "00,000";
+
+					label79.Text = "00,000";
+					label80.Text = "00,000";
+					label81.Text = "00,000";
+
+					label82.Text = "00,000";
+					label83.Text = "00,000";
+					label84.Text = "00,000";
+
+					label85.Text = "00,000";
+					label86.Text = "00,000";
+					label87.Text = "00,000";
+
+
+
+				}
+			}
+		}
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+			button17.Visible = false;
+			button18.Visible = true;
+
+			serialPort1.Open();
+			serialPort1.WriteLine("4");
+			timer24.Enabled = true;
+			timer17.Enabled = true;
+			timer15.Enabled = true;
+			timer11.Enabled = true;
+			timer16.Enabled = true;
+        }
+
         private void timer11_Tick(object sender, EventArgs e)
 		{
 
@@ -3239,6 +3491,8 @@ namespace zase4kak
 			button10.Visible = true;
 			button11.Visible = true;
 			button12.Visible = true;
+			Settings.Default.zase4ka_comPort = comboBox1.Text;
+			Settings.Default.Save();
 
 
 
@@ -3500,16 +3754,40 @@ namespace zase4kak
 						label18.Text = label21.Text;
 						Time = 0;
 						timer11.Enabled = true;
-						label20.Text = label19.Text;
-						label19.Text = label22.Text;
-						label22.Text = label18.Text;
-						label17.Text = Convert.ToString(i);
-						textBox15.Text = "0";
 
-						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+						if (label13.Text == "Тренування!")  // алгоритм для часу кола для тренування червона доріжка
 						{
-							label16.Text = label18.Text;
+							label78.Text = label77.Text;
+							label77.Text = label76.Text;
+							label76.Text = label20.Text;
+							label20.Text = label19.Text;
+							label19.Text = label22.Text;
+							label22.Text = label18.Text;
+							label17.Text = Convert.ToString(i);
+							textBox15.Text = "0";
 
+							if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+							{
+								label16.Text = label18.Text;
+								best_time.Play();
+
+							}
+						}
+						else                             // алгоритм для часу кола для гонок червона доріжка
+						{
+
+							label20.Text = label19.Text;
+							label19.Text = label22.Text;
+							label22.Text = label18.Text;
+							label17.Text = Convert.ToString(i);
+							textBox15.Text = "0";
+
+							if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+							{
+								label16.Text = label18.Text;
+								
+
+							}
 						}
 						break;
 					}
@@ -3521,16 +3799,42 @@ namespace zase4kak
 						label29.Text = label27.Text;
 						Timez = 0;
 						timer17.Enabled = true;
-						label31.Text = label32.Text;
-						label32.Text = label30.Text;
-						label30.Text = label29.Text;
-						label24.Text = Convert.ToString(c);
-						textBox15.Text = "0";
 
-						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+						if (label13.Text == "Тренування!")		// алгоритм для часу кола для тренування зеленої доріжка
 						{
-							label42.Text = label29.Text;
+							label79.Text = label80.Text;
+							label80.Text = label81.Text;
+							label81.Text = label31.Text;
+							label31.Text = label32.Text;
+							label32.Text = label30.Text;
+							label30.Text = label29.Text;
+							label24.Text = Convert.ToString(c);
+							textBox15.Text = "0";
 
+							if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+							{
+								label42.Text = label29.Text;
+								best_time.Play();
+								
+
+							}
+						}
+						else                                     // алгоритм для часу кола для гонки зеленої доріжка
+						{
+
+
+							label31.Text = label32.Text;
+							label32.Text = label30.Text;
+							label30.Text = label29.Text;
+							label24.Text = Convert.ToString(c);
+							textBox15.Text = "0";
+
+							if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+							{
+								label42.Text = label29.Text;
+								
+
+							}
 						}
 						break;
 					}
@@ -3542,17 +3846,43 @@ namespace zase4kak
 						label37.Text = label26.Text;
 						Times = 0;
 						timer15.Enabled = true;
-						label35.Text = label36.Text;
-						label36.Text = label34.Text;
-						label34.Text = label37.Text;
-						label23.Text = Convert.ToString(b);
-						textBox15.Text = "0";
 
 
-						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+						if (label13.Text == "Тренування!")		// алгоритм для часу кола для тренування синьої доріжка
 						{
-							label43.Text = label37.Text;
+							label82.Text = label83.Text;
+							label83.Text = label84.Text;
+							label84.Text = label35.Text;
+							label35.Text = label36.Text;
+							label36.Text = label34.Text;
+							label34.Text = label37.Text;
+							label23.Text = Convert.ToString(b);
+							textBox15.Text = "0";
 
+
+							if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+							{
+								label43.Text = label37.Text;
+								best_time.Play();
+
+							}
+						}
+						else                                        // алгоритм для часу кола для гонки синьої доріжка
+						{
+
+
+							label35.Text = label36.Text;
+							label36.Text = label34.Text;
+							label34.Text = label37.Text;
+							label23.Text = Convert.ToString(b);
+							textBox15.Text = "0";
+
+
+							if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+							{
+								label43.Text = label37.Text;
+
+							}
 						}
 						break;
 					}
@@ -3564,16 +3894,39 @@ namespace zase4kak
 						label38.Text = label28.Text;
 						Timeg = 0;
 						timer16.Enabled = true;
-						label40.Text = label41.Text;
-						label41.Text = label39.Text;
-						label39.Text = label38.Text;
-						label25.Text = Convert.ToString(d);
-						textBox15.Text = "0";
-
-						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+						if (label13.Text == "Тренування!")// алгоритм для часу кола для тренування жовтої доріжка
 						{
-							label44.Text = label38.Text;
+							label85.Text = label86.Text;
+							label86.Text = label87.Text;
+							label87.Text = label40.Text;
+							label40.Text = label41.Text;
+							label41.Text = label39.Text;
+							label39.Text = label38.Text;
+							label25.Text = Convert.ToString(d);
+							textBox15.Text = "0";
 
+							if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+							{
+								label44.Text = label38.Text;
+								best_time.Play();
+
+							}
+						}
+						else                                     // алгоритм для часу кола для Гонки жовтої доріжка
+						{
+
+
+							label40.Text = label41.Text;
+							label41.Text = label39.Text;
+							label39.Text = label38.Text;
+							label25.Text = Convert.ToString(d);
+							textBox15.Text = "0";
+
+							if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+							{
+								label44.Text = label38.Text;
+
+							}
 						}
 						break;
 					}
