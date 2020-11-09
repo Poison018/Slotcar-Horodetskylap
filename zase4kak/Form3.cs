@@ -40,24 +40,24 @@ namespace zase4kak
 			panel3.BackColor = Settings.Default.line_2;
 			panel4.BackColor = Settings.Default.line_3;
 			panel5.BackColor = Settings.Default.line_4;
-			comboBox1.Text = Settings.Default.zase4ka_comPort;
-			
+
+
 
 		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			
+
 			button12.Enabled = false;
 			timer1.Enabled = true;
 			button1.Visible = false;
-			
+
 			button6.Focus();
 		}
 
-		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, time_to_traning_min = 30, time_to_traning_sec = 1;
+		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, time_to_traning_min, time_to_traning_sec;
 
-		
+		int time_to_traning_secs = 1;// секунди для тренування
 
 
 		int timetostart = 5; // значення стартового таймера
@@ -97,11 +97,11 @@ namespace zase4kak
 
 			timer15.Interval = 15; //timer на час кола
 			Times = 0.0;             //timer на час кола
-			
 
-			if (label4.Text == "4")				//звук для time to start
+
+			if (label4.Text == "4")             //звук для time to start
 			{
-				
+
 				timetostartsound.SoundLocation = "music/81980c1a7dcb7cd.wav";
 				timetostartsound.Load();
 				timetostartsound.Play();
@@ -142,11 +142,11 @@ namespace zase4kak
 					button10.Enabled = false;
 					button11.Enabled = true;
 
-					
+
 
 				}
 
-				
+
 
 
 
@@ -234,7 +234,7 @@ namespace zase4kak
 					label28.Text = label64.Text;
 
 
-					
+
 
 					label18.Text = "00,000";
 					label22.Text = "00,000";
@@ -279,7 +279,7 @@ namespace zase4kak
 			if (label4.Text == "0:16")//залишилось 15 секунд
 			{
 				sekynd.Play();
-            }
+			}
 
 
 			if (secs > 60)
@@ -312,14 +312,14 @@ namespace zase4kak
 				timer4.Enabled = true;
 				sec = 1;
 				if (textBox25.Text == "")
-                {
+				{
 					min = Convert.ToInt32(textBox13.Text);
-                }
-                else
-                {
+				}
+				else
+				{
 					min = Convert.ToInt32(textBox24.Text);
 				}
-				
+
 				label4.Text = "00:00";
 				label13.Text = "<<Гонка!>>";
 				label15.Text = "2/4";
@@ -339,7 +339,7 @@ namespace zase4kak
 		private void timer4_Tick(object sender, EventArgs e)
 		{
 
-			
+
 			sec--;
 			label4.Text = Convert.ToString(min) + ":" + Convert.ToString(sec);               //зчитую час гонки який був заданий у настройках
 
@@ -517,6 +517,8 @@ namespace zase4kak
 
 		private void Form3_Load(object sender, EventArgs e)
 		{
+			timetostartsound.SoundLocation = "music/81980c1a7dcb7cd.wav";
+			timetostartsound.Load();
 			fivesecond.SoundLocation = "music/fivesecond.wav";
 			fivesecond.Load();
 			sekynd.SoundLocation = "music/15secynd.wav";
@@ -547,7 +549,7 @@ namespace zase4kak
 		private void timer6_Tick(object sender, EventArgs e)
 		{
 
-			
+
 			sec--;
 			label4.Text = Convert.ToString(min) + ":" + Convert.ToString(sec);           //зчитую час гонки який був заданий у настройках
 
@@ -684,6 +686,7 @@ namespace zase4kak
 
 		private void button4_Click(object sender, EventArgs e)
 		{
+			comboBox1.Text = Settings.Default.zase4ka_comPort;
 			int n = ExportExcel();
 			listBox1.Items.Clear();
 			string s;
@@ -694,21 +697,21 @@ namespace zase4kak
 					s += list[i, j];
 				listBox1.Items.Add(s);
 			}
-			
-			
+
+
 			button4.Visible = false;
-			
+
 			button3.Visible = false;
 
 
 			if (button4.Visible == false)
 			{
-	
-					button2.Visible = true;
-					comboBox1.Visible = true;
-					label49.Visible = true;
-				
-				
+
+				button2.Visible = true;
+				comboBox1.Visible = true;
+				label49.Visible = true;
+
+
 			}
 		}
 		// Импорт данных из Excel-файла (не более 5 столбцов и любое количество строк <= 50.
@@ -741,8 +744,8 @@ namespace zase4kak
 			GC.Collect(); // убрать за собой
 			return lastRow;
 
-			
-			
+
+
 		}
 
 		private void panel2_Paint(object sender, PaintEventArgs e)
@@ -750,17 +753,25 @@ namespace zase4kak
 
 		}
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
+		private void button3_Click_1(object sender, EventArgs e)
+		{
 			label49.Visible = true;
 			comboBox1.Visible = true;
 			button5.Visible = true;
 			button4.Visible = false;
 			button3.Visible = false;
+			label88.Visible = true;
+			label89.Visible = true;
+			textBox26.Visible = true;
+			textBox27.Visible = true;
+			button20.Visible = true;
+
+
+
 		}
 
-        private void button5_Click(object sender, EventArgs e)
-        {
+		private void button5_Click(object sender, EventArgs e)
+		{
 			label13.Visible = true;
 			label13.Text = "Тренування!";
 			serialPort1.BaudRate = 9600;
@@ -780,11 +791,11 @@ namespace zase4kak
 			textBox1.Size = new Size(301, 151);
 			textBox6.Location = new Point(92, -5);
 			textBox6.Size = new Size(301, 151);
-			textBox9.Location = new Point(92, - 5);
+			textBox9.Location = new Point(92, -5);
 			textBox9.Size = new Size(301, 151);
 			textBox12.Location = new Point(92, 1);
 			textBox12.Size = new Size(301, 151);
-			label17.Location = new Point(88, - 10);
+			label17.Location = new Point(88, -10);
 			label24.Location = new Point(88, -6);
 			label23.Location = new Point(88, -6);
 			label25.Location = new Point(88, -10);
@@ -798,7 +809,7 @@ namespace zase4kak
 			textBox11.Size = new Size(1083, 104);
 			label7.Text = "Круги";
 			label5.Visible = false;
-			label9.Location = new Point (878, 8);
+			label9.Location = new Point(878, 8);
 			label11.Visible = false;
 			label72.Visible = false;
 			label73.Visible = false;
@@ -830,8 +841,10 @@ namespace zase4kak
 			label85.Visible = true;
 			button17.Visible = true;
 			timer18.Enabled = false;
-
-
+			textBox3.Size = new Size(223, 104);
+			textBox4.Size = new Size(223, 104);
+			textBox7.Size = new Size(223, 104);
+			textBox10.Size = new Size(223, 104);
 
 
 
@@ -847,18 +860,21 @@ namespace zase4kak
 
 		private void timer18_Tick_1(object sender, EventArgs e)
 		{
+
+
+
 			if (textBox20.Text == "" || textBox21.Text == "" || textBox22.Text == "" || textBox23.Text == "")
-            {
+			{
 				button9.Enabled = false;
-            }
-            else
-            {
+			}
+			else
+			{
 				button9.Enabled = true;
-            }
+			}
 
 
-            switch (Convert.ToInt32(label67.Text))
-            {
+			switch (Convert.ToInt32(label67.Text))
+			{
 				case 36:
 					{
 						label71.Text = "Група - << J >>";
@@ -911,13 +927,13 @@ namespace zase4kak
 						break;
 					}
 				case 228:
-                    {
+					{
 						label71.Text = "<< Фінал! >>";
 						break;
 					}
-				
+
 			}
-			
+
 
 
 
@@ -1458,27 +1474,27 @@ namespace zase4kak
 					}
 				}
 			}
-        }
+		}
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+		private void panel1_Paint(object sender, PaintEventArgs e)
+		{
 
-        }
+		}
 
-        private void timer19_Tick_1(object sender, EventArgs e)
-        {
+		private void timer19_Tick_1(object sender, EventArgs e)
+		{
 			if (serialPort1.IsOpen == true && timer3.Enabled == true || timer5.Enabled == true || timer7.Enabled == true)
-            {
+			{
 				serialPort1.Close();
-            }
-            
+			}
+
 			if (panel1.BackColor == Color.Black)
-            {
+			{
 				label45.ForeColor = Color.White;
 				label59.ForeColor = Color.White;
-            }
-            else
-            {
+			}
+			else
+			{
 				label45.ForeColor = Color.Black;
 				label59.ForeColor = Color.Black;
 			}
@@ -2313,31 +2329,31 @@ namespace zase4kak
 
 		}
 
-        private void label17_Click(object sender, EventArgs e)
-        {
+		private void label17_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void label17_TextChanged(object sender, EventArgs e)
-        {
-			
-        }
+		private void label17_TextChanged(object sender, EventArgs e)
+		{
 
-        private void button6_Click(object sender, EventArgs e)
-        {
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
 			serialPort1.WriteLine("3");
 			label69.Text = "Трек виключений";
 			label69.BackColor = Color.Red;
 			button10.Enabled = true;
 			button11.Enabled = false;
 
-			
+
 
 
 
 			pausesound.Play();
-			if(number_group.Text == "0")	// кнопка пауза для 1 заїзду
-            {
+			if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
+			{
 				serialPort1.Close();
 				timer2.Enabled = false;
 				timer17.Enabled = false;
@@ -2349,7 +2365,7 @@ namespace zase4kak
 				button7.Focus();
 			}
 
-			if (number_group.Text == "1")	// кнопка пауза для 2 заїзду
+			if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
 			{
 				serialPort1.Close();
 				timer4.Enabled = false;
@@ -2387,11 +2403,11 @@ namespace zase4kak
 				button7.Visible = true;
 				button7.Focus();
 			}
-			
+
 		}
 
-        private void button7_Click(object sender, EventArgs e)
-        {
+		private void button7_Click(object sender, EventArgs e)
+		{
 			serialPort1.Open();
 			serialPort1.WriteLine("4");
 			label69.Text = "Трек включений";
@@ -2402,7 +2418,7 @@ namespace zase4kak
 			startsound.Play();
 			if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
 			{
-				
+
 				timer2.Enabled = true;
 				timer17.Enabled = true;
 				timer11.Enabled = true;
@@ -2415,7 +2431,7 @@ namespace zase4kak
 
 			if (number_group.Text == "1")   // кнопка продовжити для 2 заїзду
 			{
-				
+
 				timer4.Enabled = true;
 				timer17.Enabled = true;
 				timer11.Enabled = true;
@@ -2428,7 +2444,7 @@ namespace zase4kak
 
 			if (number_group.Text == "2")   // кнопка продовжити для 3 заїзду
 			{
-				
+
 				timer6.Enabled = true;
 				timer17.Enabled = true;
 				timer11.Enabled = true;
@@ -2441,7 +2457,7 @@ namespace zase4kak
 
 			if (number_group.Text == "3")   // кнопка продовжити для 3 заїзду
 			{
-				
+
 				timer8.Enabled = true;
 				timer17.Enabled = true;
 				timer11.Enabled = true;
@@ -2453,8 +2469,8 @@ namespace zase4kak
 			}
 		}
 
-        private void button7_KeyDown(object sender, KeyEventArgs e)
-        {
+		private void button7_KeyDown(object sender, KeyEventArgs e)
+		{
 			if (e.KeyCode == Keys.Space)
 			{
 				startsound.Play();
@@ -2517,10 +2533,10 @@ namespace zase4kak
 			}
 		}
 
-        private void button6_KeyDown(object sender, KeyEventArgs e)
-        {
-			if(e.KeyCode == Keys.Space)
-            {
+		private void button6_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Space)
+			{
 				pausesound.Play();
 				serialPort1.WriteLine("3");
 				label69.Text = "Трек виключений";
@@ -2574,32 +2590,32 @@ namespace zase4kak
 					button7.Focus();
 				}
 			}
-        }
+		}
 
-        private void button1_KeyDown(object sender, KeyEventArgs e)
-        {
-			if(e.KeyCode == Keys.Space)
-            {
-				
-				
+		private void button1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Space)
+			{
+
+
 				timer1.Enabled = true;
 				button1.Visible = false;
 				button6.Visible = true;
 				button6.Focus();
 			}
-        }
+		}
 
-        private void timer20_Tick(object sender, EventArgs e)
-        {
+		private void timer20_Tick(object sender, EventArgs e)
+		{
 			serialPort1.Open();
 			button6.Visible = true;
 			button6.Focus();
 			timer20.Enabled = false;
-        }
+		}
 
-       
 
-        private void timer13_Tick(object sender, EventArgs e)
+
+		private void timer13_Tick(object sender, EventArgs e)
 		{
 
 			c++;                                            //добавляю кола 1 доріці
@@ -2627,7 +2643,7 @@ namespace zase4kak
 
 			timer14.Enabled = false;
 		}
-			
+
 		private void timer21_Tick(object sender, EventArgs e)
 		{
 
@@ -2642,36 +2658,36 @@ namespace zase4kak
 
 
 			if (label48.Text == "" && label15.Text == "номер заизду")
-				{
+			{
 				n = 39;
 				//label48.Text = Convert.ToString(listBox1.Items[n]);
 
-					for (int i = 0; i < n; n--)
+				for (int i = 0; i < n; n--)
+				{
+
+					label48.Text = Convert.ToString(listBox1.Items[n]);
+					if (label48.Text != "")
 					{
-
-						label48.Text = Convert.ToString(listBox1.Items[n]);
-						if (label48.Text != "")
-						{
-							break;
-						}
-
+						break;
 					}
-					n--;
-					label47.Text = Convert.ToString(listBox1.Items[n]);
-					n--;
-					label46.Text = Convert.ToString(listBox1.Items[n]);
-					n--;
-					label45.Text = Convert.ToString(listBox1.Items[n]);
-
-				label67.Text = Convert.ToString(n);
-					//Convert.ToString(listBox1.Items.Count);
-					
-					timer21.Enabled = false;
 
 				}
+				n--;
+				label47.Text = Convert.ToString(listBox1.Items[n]);
+				n--;
+				label46.Text = Convert.ToString(listBox1.Items[n]);
+				n--;
+				label45.Text = Convert.ToString(listBox1.Items[n]);
 
-			if(Convert.ToInt32(label67.Text) != 0)
-            {
+				label67.Text = Convert.ToString(n);
+				//Convert.ToString(listBox1.Items.Count);
+
+				timer21.Enabled = false;
+
+			}
+
+			if (Convert.ToInt32(label67.Text) != 0)
+			{
 
 
 
@@ -2740,15 +2756,15 @@ namespace zase4kak
 					label13.Visible = false;
 					timer21.Enabled = false;
 
-                }
-               
+				}
+
 			}
 
-			
-		}
-		
 
-        private void timer15_Tick(object sender, EventArgs e)
+		}
+
+
+		private void timer15_Tick(object sender, EventArgs e)
 		{
 
 
@@ -2757,8 +2773,8 @@ namespace zase4kak
 
 		}
 
-        private void button9_Click(object sender, EventArgs e)
-        {
+		private void button9_Click(object sender, EventArgs e)
+		{
 			label68.Visible = false;
 			textBox20.Visible = false;
 			textBox21.Visible = false;
@@ -2766,33 +2782,34 @@ namespace zase4kak
 			textBox23.Visible = false;
 			button9.Visible = false;
 
-			
+
 			if (textBox25.Text == "")
 			{
 
 				button8.Visible = true;
 				dataGridView1.Visible = true;
 
-				dataGridView1.Rows.Add("Червона", label45.Text, label17.Text + "." + textBox20.Text);
+				dataGridView1.Rows.Add("Червона", label45.Text, label17.Text + "," + textBox20.Text);
 
-				dataGridView1.Rows.Add("Зелена", label46.Text, label24.Text + "." + textBox22.Text);
+				dataGridView1.Rows.Add("Зелена", label46.Text, label24.Text + "," + textBox22.Text);
 
-				dataGridView1.Rows.Add("Синя", label47.Text, label23.Text + "." + textBox21.Text);
+				dataGridView1.Rows.Add("Синя", label47.Text, label23.Text + "," + textBox21.Text);
 
-				dataGridView1.Rows.Add("Жовта", label48.Text, label25.Text + "." + textBox23.Text);
+				dataGridView1.Rows.Add("Жовта", label48.Text, label25.Text + "," + textBox23.Text);
+
 				//сортування результату гонки в таблиці
 
 
-				dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
-
+				//dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
+				dataGridView1.Sort(Column2, ListSortDirection.Descending);
 				textBox20.Text = "";
 				textBox21.Text = "";
 				textBox22.Text = "";
 				textBox23.Text = "";
 
-            }
-            else
-            {
+			}
+			else
+			{
 				dataGridView2.Visible = true;
 				button16.Visible = true;
 
@@ -2813,9 +2830,9 @@ namespace zase4kak
 				textBox22.Text = "";
 				textBox23.Text = "";
 			}
-			}
+		}
 
-			private void button10_Click(object sender, EventArgs e)
+		private void button10_Click(object sender, EventArgs e)
 		{
 			serialPort1.Open();
 			serialPort1.WriteLine("4");
@@ -2824,10 +2841,10 @@ namespace zase4kak
 			label69.BackColor = Color.Green;
 			button10.Enabled = false;
 			button11.Enabled = true;
-        }
+		}
 
-        private void button11_Click(object sender, EventArgs e)
-        {
+		private void button11_Click(object sender, EventArgs e)
+		{
 			serialPort1.Open();
 			serialPort1.WriteLine("3");
 			serialPort1.Close();
@@ -2837,8 +2854,8 @@ namespace zase4kak
 			button11.Enabled = false;
 		}
 
-        private void button12_Click(object sender, EventArgs e)
-        {
+		private void button12_Click(object sender, EventArgs e)
+		{
 			button12.Visible = false;
 			button13.Visible = true;
 			label13.Visible = true;
@@ -2846,10 +2863,10 @@ namespace zase4kak
 			label70.Visible = true;
 			timetotraning = 60;
 			label70.Text = "60";
-        }
+		}
 
-        private void button13_Click(object sender, EventArgs e)
-        {
+		private void button13_Click(object sender, EventArgs e)
+		{
 			button1.Enabled = false;
 			label69.Text = "Трек включений";
 			label69.BackColor = Color.Green;
@@ -2857,14 +2874,14 @@ namespace zase4kak
 			serialPort1.WriteLine("4");
 			serialPort1.Close();
 			timer22.Enabled = true;
-        }
+		}
 
-        private void timer22_Tick(object sender, EventArgs e)
-        {
-			if(label70.Text == "6")// 5 секунд
-            {
+		private void timer22_Tick(object sender, EventArgs e)
+		{
+			if (label70.Text == "6")// 5 секунд
+			{
 				fivesecond.Play();
-            }
+			}
 
 			if (label70.Text == "17") //залишилось 15 секунд
 			{
@@ -2872,13 +2889,13 @@ namespace zase4kak
 			}
 
 			if (Convert.ToInt32(label70.Text) != 0)
-            {
+			{
 				label70.Text = Convert.ToString(timetotraning);
 				timetotraning--;
 
-            }
-            else
-            {
+			}
+			else
+			{
 				label70.Visible = false;
 				button12.Visible = true;
 				timer22.Enabled = false;
@@ -2895,16 +2912,16 @@ namespace zase4kak
 
 
 			}
-        }
+		}
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+		private void textBox2_TextChanged(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void button14_Click(object sender, EventArgs e)
-        {
-			
+		private void button14_Click(object sender, EventArgs e)
+		{
+
 			label67.Text = "228";
 			textBox25.Text = textBox24.Text;
 
@@ -2969,12 +2986,12 @@ namespace zase4kak
 			label47.Text = dataGridView1[1, 2].Value.ToString();
 			label46.Text = dataGridView1[1, 1].Value.ToString();
 			label45.Text = dataGridView1[1, 0].Value.ToString();
-			
+
 
 		}
 
-        private void button15_Click(object sender, EventArgs e)
-        {
+		private void button15_Click(object sender, EventArgs e)
+		{
 			button12.Enabled = false;
 			timer23.Enabled = true;
 			button1.Visible = false;
@@ -2984,8 +3001,8 @@ namespace zase4kak
 			button6.Focus();
 		}
 
-        private void timer23_Tick(object sender, EventArgs e)
-        {
+		private void timer23_Tick(object sender, EventArgs e)
+		{
 			label18.Text = "00,000";
 			label22.Text = "00,000";
 			label19.Text = "00,000";
@@ -3019,11 +3036,11 @@ namespace zase4kak
 			Times = 0.0;             //timer на час кола
 
 
-			if (label4.Text == "4")             //звук для time to start
+			if (label4.Text == "3")             //звук для time to start
 			{
 
-				timetostartsound.SoundLocation = "music/81980c1a7dcb7cd.wav";
-				timetostartsound.Load();
+
+
 				timetostartsound.Play();
 			}
 
@@ -3073,29 +3090,29 @@ namespace zase4kak
 			}
 		}
 
-        private void button16_Click(object sender, EventArgs e)
-        {
+		private void button16_Click(object sender, EventArgs e)
+		{
 			SaveTable(dataGridView2);
 			label13.Text = "<< Заїзди завершено! >>";
 		}
 
-        private void label58_Click(object sender, EventArgs e)
-        {
+		private void label58_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void label44_Click(object sender, EventArgs e)
-        {
+		private void label44_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void button15_KeyDown(object sender, KeyEventArgs e)
-        {
+		private void button15_KeyDown(object sender, KeyEventArgs e)
+		{
 
-        }
+		}
 
-        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
-        {
+		private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+		{
 
 			Settings.Default.line_1 = panel1.BackColor;
 			Settings.Default.line_2 = panel3.BackColor;
@@ -3112,7 +3129,7 @@ namespace zase4kak
 			{
 				e.Cancel = false;
 				serialPort1.Close();
-			
+
 			}
 			else
 			{
@@ -3120,259 +3137,306 @@ namespace zase4kak
 			}
 		}
 
-        private void червонаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-			
+		private void червонаToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
 			Settings.Default.line_1 = panel1.BackColor = Color.Red;
 			Settings.Default.Save();
-        }
+		}
 
-        private void зеленаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+		private void зеленаToolStripMenuItem_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_1 = panel1.BackColor = Color.LimeGreen;
 			Settings.Default.Save();
 
 		}
 
-        private void білаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+		private void білаToolStripMenuItem_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_2 = panel1.BackColor = Color.White;
 			Settings.Default.Save();
-        }
+		}
 
-        private void оранжеваToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+		private void оранжеваToolStripMenuItem_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_3 = panel1.BackColor = Color.Orange;
 			Settings.Default.Save();
-        }
+		}
 
-        private void фіолетоваToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+		private void фіолетоваToolStripMenuItem_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_4 = panel1.BackColor = Color.Purple;
 			Settings.Default.Save();
-        }
+		}
 
-        private void жовтаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+		private void жовтаToolStripMenuItem_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_1 = panel1.BackColor = Color.Gold;
 			Settings.Default.Save();
-        }
+		}
 
-        private void синяToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+		private void синяToolStripMenuItem_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_1 = panel1.BackColor = Color.DodgerBlue;
 			Settings.Default.Save();
 
 		}
 
-        private void чорнаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+		private void чорнаToolStripMenuItem_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_1 = panel1.BackColor = Color.Black;
 			Settings.Default.Save();
-        }
+		}
 
-        private void червонаToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+		private void червонаToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_2 = panel3.BackColor = Color.Red;
 			Settings.Default.Save();
 		}
 
-        private void білаToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+		private void білаToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_2 = panel3.BackColor = Color.White;
 			Settings.Default.Save();
 		}
 
-        private void оранжеваToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+		private void оранжеваToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_2 = panel3.BackColor = Color.Orange;
 			Settings.Default.Save();
 		}
 
-        private void доріжкаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+		private void доріжкаToolStripMenuItem_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void фіолетоваToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+		private void фіолетоваToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_2 = panel3.BackColor = Color.Purple;
 			Settings.Default.Save();
 		}
 
-        private void жовтаToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+		private void жовтаToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_2 = panel3.BackColor = Color.Gold;
 			Settings.Default.Save();
 		}
 
-        private void синяToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+		private void синяToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_2 = panel3.BackColor = Color.DodgerBlue;
 			Settings.Default.Save();
 		}
 
-        private void чорнаToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+		private void чорнаToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_2 = panel3.BackColor = Color.Black;
 			Settings.Default.Save();
 		}
 
-        private void зеленаToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+		private void зеленаToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_2 = panel3.BackColor = Color.LimeGreen;
 			Settings.Default.Save();
 		}
 
-        private void червонаToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
+		private void червонаToolStripMenuItem2_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_3 = panel4.BackColor = Color.Red;
 			Settings.Default.Save();
 		}
 
-        private void білаToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
+		private void білаToolStripMenuItem2_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_3 = panel4.BackColor = Color.White;
 			Settings.Default.Save();
 		}
 
-        private void оранжеваToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
+		private void оранжеваToolStripMenuItem2_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_3 = panel4.BackColor = Color.Orange;
 			Settings.Default.Save();
 		}
 
-        private void фіолетоваToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
+		private void фіолетоваToolStripMenuItem2_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_3 = panel4.BackColor = Color.Purple;
 			Settings.Default.Save();
 		}
 
-        private void жовтаToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
+		private void жовтаToolStripMenuItem2_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_3 = panel4.BackColor = Color.Gold;
 			Settings.Default.Save();
 		}
 
-        private void синяToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
+		private void синяToolStripMenuItem2_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_3 = panel4.BackColor = Color.DodgerBlue;
 			Settings.Default.Save();
 		}
 
-        private void чорнаToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
+		private void чорнаToolStripMenuItem2_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_3 = panel4.BackColor = Color.Black;
 			Settings.Default.Save();
 		}
 
-        private void доріжкаToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
+		private void доріжкаToolStripMenuItem2_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void зеленаToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
+		private void зеленаToolStripMenuItem2_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_3 = panel4.BackColor = Color.LimeGreen;
 			Settings.Default.Save();
 		}
 
-        private void червонаToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
+		private void червонаToolStripMenuItem3_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_4 = panel5.BackColor = Color.Red;
 			Settings.Default.Save();
 		}
 
-        private void білаToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
+		private void білаToolStripMenuItem3_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_4 = panel5.BackColor = Color.White;
 			Settings.Default.Save();
 		}
 
-        private void оранжеваToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
+		private void оранжеваToolStripMenuItem3_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_4 = panel5.BackColor = Color.Orange;
 			Settings.Default.Save();
 		}
 
-        private void фіолетоваToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
+		private void фіолетоваToolStripMenuItem3_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_4 = panel5.BackColor = Color.Purple;
 			Settings.Default.Save();
 
 		}
 
-        private void жовтаToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
+		private void жовтаToolStripMenuItem3_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_4 = panel5.BackColor = Color.Gold;
 			Settings.Default.Save();
 		}
 
-        private void синяToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
+		private void синяToolStripMenuItem3_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_4 = panel5.BackColor = Color.DodgerBlue;
 			Settings.Default.Save();
 		}
 
-        private void чорнаToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
+		private void чорнаToolStripMenuItem3_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_4 = panel5.BackColor = Color.Black;
 			Settings.Default.Save();
 		}
 
-        private void зеленаToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
+		private void зеленаToolStripMenuItem3_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line_4 = panel5.BackColor = Color.LimeGreen;
 			Settings.Default.Save();
 		}
 
-        private void timer25_Tick(object sender, EventArgs e)
-        {
-			serialPort1.WriteLine("4");
-			time_to_traning_min = 30;
-			time_to_traning_sec = 1;
-			label13.Text = "Тренування!";
-			timer24.Enabled = true;
-			timer25.Enabled = false;
-			
-        }
+		private void timer25_Tick(object sender, EventArgs e)
+		{
+			time_to_traning_sec--;
+			label4.Text = Convert.ToString(time_to_traning_sec);
 
-        private void timer26_Tick(object sender, EventArgs e)
-        {
+
+			if (Convert.ToInt32(label4.Text) == 3)
+			{
+				timetostartsound.Play();
+
+			}
+
+			if (Convert.ToInt32(label4.Text) == 0)
+			{
+
+
+
+				serialPort1.WriteLine("4");
+				time_to_traning_min = Convert.ToInt32(textBox26.Text);
+				time_to_traning_sec = Convert.ToInt32(textBox27.Text);
+				time_to_traning_secs = 1;
+				label13.Text = "Тренування!";
+				timer24.Enabled = true;
+				timer25.Enabled = false;
+			}
+		}
+
+		private void timer26_Tick(object sender, EventArgs e)
+		{
 			if (label13.Text == "Тренування!") // алгоритм часу для тренування
 			{
 				label78.Text = label77.Text;
 				label77.Text = label76.Text;
 				label76.Text = label20.Text;
-				
 
-				
 
-				
+
+
+
 			}
 		}
 
-        private void button18_Click(object sender, EventArgs e)
-        {
+		private void button18_Click(object sender, EventArgs e)
+		{
 			serialPort1.Close();
 			this.Close();
-        }
+		}
+
+		private void button20_Click(object sender, EventArgs e)
+		{
+			label88.Visible = false;
+			label89.Visible = false;
+			textBox26.Visible = false;
+			textBox27.Visible = false;
+			button20.Visible = false;
+			time_to_traning_min = Convert.ToInt32(textBox26.Text);
+			time_to_traning_sec = Convert.ToInt32(textBox27.Text);
+		}
+
+		private void dataGridView1_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
+		{
+			if (double.Parse(e.CellValue1.ToString()) > double.Parse(e.CellValue2.ToString()))
+			{
+				e.SortResult = 1;
+			}
+			else if (double.Parse(e.CellValue1.ToString()) < double.Parse(e.CellValue2.ToString()))
+			{
+				e.SortResult = -1;
+			}
+			else
+			{
+				e.SortResult = 0;
+			}
+			e.Handled = true;
+		}
+	
+	
 
         private void timer24_Tick(object sender, EventArgs e)
         {
-			time_to_traning_sec--;
-			label4.Text = Convert.ToString(time_to_traning_min) + ":" + Convert.ToString(time_to_traning_sec); //зчитую час гонки який був заданий у настройках
+			
+			time_to_traning_secs--;
+			label4.Text = Convert.ToString(time_to_traning_min) + ":" + Convert.ToString(time_to_traning_secs); //зчитую час гонки який був заданий у настройках
 
 
 
 
 
-			if (time_to_traning_sec == 0)                                               //таймер для гонки 1 перший заїзд
+			if (time_to_traning_secs == 0)                                               //таймер для гонки 1 перший заїзд
 			{
 				time_to_traning_min--;
-				time_to_traning_sec = 60;
+				time_to_traning_secs = 60;
 
-				if (time_to_traning_min == -1 && time_to_traning_sec == 60)
+				if (time_to_traning_min == -1 && time_to_traning_secs == 60)
 				{
 					serialPort1.Write("3");
 					perehid.Play();
@@ -3381,7 +3445,7 @@ namespace zase4kak
 					label69.BackColor = Color.Red;
 					timer24.Enabled = false;
 					timer25.Enabled = true;
-					label13.Text = "15 сек переходу!";
+					label13.Text = "Перехід!";
 
 
 
@@ -3477,6 +3541,7 @@ namespace zase4kak
 
 		private void button2_Click(object sender, EventArgs e)
 		{
+
 			serialPort1.BaudRate = 9600;
 			serialPort1.PortName = comboBox1.Text;
 			button2.Visible = false;
@@ -3512,7 +3577,7 @@ namespace zase4kak
            
 			string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "result_of_racing.xlsx";// запис в ексель результату гонки
 
-				Excel.Application excel_lapp = new Excel.Application();
+			Excel.Application excel_lapp = new Excel.Application();
 			Excel.Workbook workbooks = excel_lapp.Workbooks.Add();
 			Excel.Worksheet worksheet = workbooks.ActiveSheet;
 

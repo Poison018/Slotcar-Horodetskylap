@@ -20,7 +20,8 @@ namespace zase4kak
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
-            comboBox1.Text = Settings.Default.zase4ka_comPort;
+       
+          
         }
 
 
@@ -37,7 +38,7 @@ namespace zase4kak
         SoundPlayer zaminapilota = new SoundPlayer();
         SoundPlayer record = new SoundPlayer();
 
-
+       
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -342,6 +343,11 @@ namespace zase4kak
         int i;
         private void timer9_Tick(object sender, EventArgs e)
         {
+
+
+
+            
+
             if (Convert.ToInt32(textBox108.Text) != 0)
             {
                 i = Convert.ToInt32(label100.Text);          //червона доріжка
@@ -376,6 +382,8 @@ namespace zase4kak
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            
+          
             zaminapilota.SoundLocation = "music/zaminapilota.wav";
             zaminapilota.Load();
             sekyd.SoundLocation = "music/15secynd.wav";
@@ -418,7 +426,12 @@ namespace zase4kak
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+
+
+             Settings.Default.lapTIme_comPort = comboBox1.Text;
+            Settings.Default.Save();
+
+
             button1.Focus();
             serialPort1.BaudRate = 9600;
             serialPort1.PortName = comboBox1.Text;
@@ -430,8 +443,7 @@ namespace zase4kak
             comboBox1.Visible = false;
             button3.Enabled = true;
 
-            Settings.Default.lapTIme_comPort = comboBox1.Text;
-            Settings.Default.Save();
+           
             
             
             button1.Visible = true;
@@ -1252,6 +1264,12 @@ namespace zase4kak
             }
         }
 
+        private void timer4_Tick_1(object sender, EventArgs e)
+        {
+            comboBox1.Text = Settings.Default.lapTIme_comPort;
+            timer4.Enabled = false;
+        }
+
         private void button7_Click(object sender, EventArgs e)
         {
             Form6 f6 = new Form6();
@@ -1936,8 +1954,8 @@ namespace zase4kak
 
 
         }
-            
-        
+
+      
 
         private void button1_Click(object sender, EventArgs e)
         {

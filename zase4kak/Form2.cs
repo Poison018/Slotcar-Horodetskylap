@@ -146,7 +146,7 @@ namespace zase4kak
 			f4.Show();
 			f4.textBox106.Text = textBox3.Text;
 			f4.textBox107.Text = textBox4.Text;
-
+			
 			switch (comboBox2.SelectedIndex)
 			{
 				case 0:

@@ -172,9 +172,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.timer20 = new System.Windows.Forms.Timer(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button8 = new System.Windows.Forms.Button();
             this.timer21 = new System.Windows.Forms.Timer(this.components);
             this.label67 = new System.Windows.Forms.Label();
@@ -202,7 +199,16 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button16 = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.button17 = new System.Windows.Forms.Button();
+            this.timer24 = new System.Windows.Forms.Timer(this.components);
+            this.timer25 = new System.Windows.Forms.Timer(this.components);
+            this.button18 = new System.Windows.Forms.Button();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.button20 = new System.Windows.Forms.Button();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.кольориДоріжокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.доріжкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -241,10 +247,11 @@
             this.синяToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.чорнаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.зеленаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.button17 = new System.Windows.Forms.Button();
-            this.timer24 = new System.Windows.Forms.Timer(this.components);
-            this.timer25 = new System.Windows.Forms.Timer(this.components);
-            this.button18 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -257,6 +264,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.form4BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -264,7 +272,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(1555, 6);
+            this.label10.Location = new System.Drawing.Point(1555, 7);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(144, 26);
@@ -276,7 +284,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(1191, 6);
+            this.label9.Location = new System.Drawing.Point(1191, 7);
             this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(112, 26);
@@ -288,7 +296,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(631, 6);
+            this.label8.Location = new System.Drawing.Point(631, 7);
             this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 26);
@@ -410,10 +418,10 @@
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label59.Location = new System.Drawing.Point(969, 45);
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label59.Location = new System.Drawing.Point(949, 47);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(36, 38);
+            this.label59.Size = new System.Drawing.Size(27, 29);
             this.label59.TabIndex = 40;
             this.label59.Text = "0";
             this.label59.Visible = false;
@@ -535,7 +543,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(1);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 104);
+            this.textBox3.Size = new System.Drawing.Size(215, 104);
             this.textBox3.TabIndex = 7;
             // 
             // textBox2
@@ -573,7 +581,7 @@
             this.label1.BackColor = System.Drawing.Color.LightBlue;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(14, 45);
+            this.label1.Location = new System.Drawing.Point(14, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 41);
@@ -603,7 +611,7 @@
             this.label55.AutoSize = true;
             this.label55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label55.Location = new System.Drawing.Point(938, 6);
+            this.label55.Location = new System.Drawing.Point(938, 7);
             this.label55.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(99, 26);
@@ -628,7 +636,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(1759, 6);
+            this.label11.Location = new System.Drawing.Point(1759, 7);
             this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(102, 26);
@@ -726,10 +734,10 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label60.Location = new System.Drawing.Point(969, 36);
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label60.Location = new System.Drawing.Point(949, 36);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(36, 38);
+            this.label60.Size = new System.Drawing.Size(27, 29);
             this.label60.TabIndex = 41;
             this.label60.Text = "0";
             this.label60.Visible = false;
@@ -836,7 +844,7 @@
             this.textBox4.Margin = new System.Windows.Forms.Padding(1);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(196, 104);
+            this.textBox4.Size = new System.Drawing.Size(214, 104);
             this.textBox4.TabIndex = 7;
             // 
             // textBox5
@@ -854,7 +862,7 @@
             // 
             this.textBox6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(709, -6);
+            this.textBox6.Location = new System.Drawing.Point(709, -7);
             this.textBox6.Margin = new System.Windows.Forms.Padding(1);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
@@ -978,10 +986,10 @@
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label61.Location = new System.Drawing.Point(969, 36);
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label61.Location = new System.Drawing.Point(949, 36);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(36, 38);
+            this.label61.Size = new System.Drawing.Size(27, 29);
             this.label61.TabIndex = 42;
             this.label61.Text = "0";
             this.label61.Visible = false;
@@ -1020,7 +1028,7 @@
             this.label43.AutoSize = true;
             this.label43.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label43.Location = new System.Drawing.Point(1575, 32);
+            this.label43.Location = new System.Drawing.Point(1575, 33);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(97, 51);
             this.label43.TabIndex = 39;
@@ -1100,7 +1108,7 @@
             this.textBox7.Margin = new System.Windows.Forms.Padding(1);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(196, 104);
+            this.textBox7.Size = new System.Drawing.Size(214, 104);
             this.textBox7.TabIndex = 7;
             // 
             // textBox8
@@ -1118,7 +1126,7 @@
             // 
             this.textBox9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(709, -6);
+            this.textBox9.Location = new System.Drawing.Point(709, -7);
             this.textBox9.Margin = new System.Windows.Forms.Padding(1);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
@@ -1241,10 +1249,10 @@
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label62.Location = new System.Drawing.Point(969, 33);
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label62.Location = new System.Drawing.Point(949, 37);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(36, 38);
+            this.label62.Size = new System.Drawing.Size(27, 29);
             this.label62.TabIndex = 43;
             this.label62.Text = "0";
             this.label62.Visible = false;
@@ -1352,7 +1360,7 @@
             this.textBox10.Margin = new System.Windows.Forms.Padding(1);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(196, 104);
+            this.textBox10.Size = new System.Drawing.Size(214, 104);
             this.textBox10.TabIndex = 7;
             // 
             // textBox11
@@ -1491,7 +1499,6 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 1000;
             this.timer2.Tag = "час 1 заїзду";
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
@@ -1503,7 +1510,6 @@
             // 
             // timer4
             // 
-            this.timer4.Interval = 1000;
             this.timer4.Tag = "час 2 заїзду";
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
@@ -1515,7 +1521,6 @@
             // 
             // timer6
             // 
-            this.timer6.Interval = 1000;
             this.timer6.Tag = "третя гонка";
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
@@ -1682,7 +1687,7 @@
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(521, 912);
+            this.button5.Location = new System.Drawing.Point(521, 987);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 37);
             this.button5.TabIndex = 44;
@@ -1834,25 +1839,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(417, 197);
             this.dataGridView1.TabIndex = 50;
             this.dataGridView1.Visible = false;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Доріжка";
-            this.Column4.Name = "Column4";
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Спортсмен";
-            this.Column1.Name = "Column1";
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 180;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Результат";
-            this.Column2.Name = "Column2";
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.dataGridView1.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView1_SortCompare);
             // 
             // button8
             // 
@@ -2025,7 +2012,7 @@
             // 
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
-            this.label71.Location = new System.Drawing.Point(167, 97);
+            this.label71.Location = new System.Drawing.Point(167, 98);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(186, 55);
             this.label71.TabIndex = 65;
@@ -2037,7 +2024,7 @@
             this.button14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button14.BackgroundImage")));
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button14.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button14.Location = new System.Drawing.Point(1786, 981);
+            this.button14.Location = new System.Drawing.Point(1786, 982);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(106, 34);
             this.button14.TabIndex = 66;
@@ -2121,22 +2108,113 @@
             this.button16.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button16.Location = new System.Drawing.Point(1786, 885);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(106, 45);
+            this.button16.Size = new System.Drawing.Size(106, 46);
             this.button16.TabIndex = 71;
             this.button16.Text = "Зберегти в Excel";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Visible = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
-            // menuStrip1
+            // button17
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1920, 24);
-            this.menuStrip1.TabIndex = 72;
-            this.menuStrip1.Text = "menuStrip1";
+            this.button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button17.BackgroundImage")));
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button17.Location = new System.Drawing.Point(693, 902);
+            this.button17.Margin = new System.Windows.Forms.Padding(2);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(458, 122);
+            this.button17.TabIndex = 73;
+            this.button17.Text = "Старт Тренування";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Visible = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // timer24
+            // 
+            this.timer24.Interval = 1000;
+            this.timer24.Tag = "Таймер для тренування";
+            this.timer24.Tick += new System.EventHandler(this.timer24_Tick);
+            // 
+            // timer25
+            // 
+            this.timer25.Interval = 1000;
+            this.timer25.Tag = "Таймер переходу тренування";
+            this.timer25.Tick += new System.EventHandler(this.timer25_Tick);
+            // 
+            // button18
+            // 
+            this.button18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button18.BackgroundImage")));
+            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button18.Location = new System.Drawing.Point(693, 902);
+            this.button18.Margin = new System.Windows.Forms.Padding(2);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(458, 122);
+            this.button18.TabIndex = 74;
+            this.button18.Text = "Завершити тренування";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Visible = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // textBox26
+            // 
+            this.textBox26.Location = new System.Drawing.Point(433, 820);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(100, 20);
+            this.textBox26.TabIndex = 75;
+            this.textBox26.Visible = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // textBox27
+            // 
+            this.textBox27.Location = new System.Drawing.Point(433, 852);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(100, 20);
+            this.textBox27.TabIndex = 77;
+            this.textBox27.Visible = false;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label88.ForeColor = System.Drawing.Color.Black;
+            this.label88.Location = new System.Drawing.Point(226, 816);
+            this.label88.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(199, 24);
+            this.label88.TabIndex = 78;
+            this.label88.Text = "Час тренування  (хв):";
+            this.label88.Visible = false;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label89.ForeColor = System.Drawing.Color.Black;
+            this.label89.Location = new System.Drawing.Point(226, 846);
+            this.label89.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(184, 24);
+            this.label89.TabIndex = 79;
+            this.label89.Text = "Час переходу (сек):";
+            this.label89.Visible = false;
+            // 
+            // button20
+            // 
+            this.button20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button20.BackgroundImage")));
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button20.Location = new System.Drawing.Point(538, 820);
+            this.button20.Margin = new System.Windows.Forms.Padding(2);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(71, 52);
+            this.button20.TabIndex = 81;
+            this.button20.Text = "OK";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Visible = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -2443,45 +2521,39 @@
             this.зеленаToolStripMenuItem3.Text = "Зелена";
             this.зеленаToolStripMenuItem3.Click += new System.EventHandler(this.зеленаToolStripMenuItem3_Click);
             // 
-            // button17
+            // menuStrip1
             // 
-            this.button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button17.BackgroundImage")));
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button17.Location = new System.Drawing.Point(693, 902);
-            this.button17.Margin = new System.Windows.Forms.Padding(2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(458, 122);
-            this.button17.TabIndex = 73;
-            this.button17.Text = "Старт Тренування";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Visible = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1920, 24);
+            this.menuStrip1.TabIndex = 72;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // timer24
+            // Column4
             // 
-            this.timer24.Interval = 10;
-            this.timer24.Tag = "Таймер для тренування";
-            this.timer24.Tick += new System.EventHandler(this.timer24_Tick);
+            this.Column4.HeaderText = "Доріжка";
+            this.Column4.Name = "Column4";
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // timer25
+            // Column1
             // 
-            this.timer25.Interval = 30000;
-            this.timer25.Tag = "Таймер переходу тренування";
-            this.timer25.Tick += new System.EventHandler(this.timer25_Tick);
+            this.Column1.HeaderText = "Спортсмен";
+            this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Width = 180;
             // 
-            // button18
+            // Column2
             // 
-            this.button18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button18.BackgroundImage")));
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button18.Location = new System.Drawing.Point(693, 900);
-            this.button18.Margin = new System.Windows.Forms.Padding(2);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(458, 122);
-            this.button18.TabIndex = 74;
-            this.button18.Text = "Завершити тренування";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Visible = false;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.Column2.HeaderText = "Результат";
+            this.Column2.MaxInputLength = 300;
+            this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // form4BindingSource
+            // 
+            this.form4BindingSource.DataSource = typeof(zase4kak.Form4);
             // 
             // Form3
             // 
@@ -2489,6 +2561,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1920, 1057);
+            this.Controls.Add(this.button20);
+            this.Controls.Add(this.label89);
+            this.Controls.Add(this.label88);
+            this.Controls.Add(this.textBox27);
+            this.Controls.Add(this.textBox26);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
@@ -2573,6 +2650,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.form4BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2714,9 +2792,6 @@
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label69;
@@ -2740,18 +2815,39 @@
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label75;
         public System.IO.Ports.SerialPort serialPort1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Timer timer24;
+        private System.Windows.Forms.Timer timer25;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.Button button20;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem кольориДоріжокToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem доріжкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem червонаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem зеленаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem синяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem жовтаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem білаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem фіолетоваToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem чорнаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оранжеваToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem фіолетоваToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem жовтаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem синяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem чорнаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem зеленаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem доріжкаToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem червонаToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem білаToolStripMenuItem1;
@@ -2779,21 +2875,10 @@
         private System.Windows.Forms.ToolStripMenuItem синяToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem чорнаToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem зеленаToolStripMenuItem3;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Timer timer24;
-        private System.Windows.Forms.Timer timer25;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.BindingSource form4BindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
