@@ -2438,7 +2438,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.label102);
             this.panel2.Controls.Add(this.label101);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.textBox65);
@@ -2456,12 +2455,11 @@
             // label102
             // 
             this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(338, 156);
+            this.label102.Location = new System.Drawing.Point(300, 69);
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(13, 13);
             this.label102.TabIndex = 34;
             this.label102.Text = "0";
-            this.label102.Visible = false;
             // 
             // label101
             // 
@@ -2529,6 +2527,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel6.Controls.Add(this.label102);
             this.panel6.Controls.Add(this.label56);
             this.panel6.Location = new System.Drawing.Point(14, 88);
             this.panel6.Name = "panel6";
@@ -3601,7 +3600,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 300;
+            this.timer1.Interval = 1000;
             this.timer1.Tag = "таймер часу лап тайму";
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
@@ -3656,7 +3655,7 @@
             // 
             // timer11
             // 
-            this.timer11.Interval = 15;
+            this.timer11.Interval = 1;
             this.timer11.Tag = "timer для часа доріжки кола";
             this.timer11.Tick += new System.EventHandler(this.timer11_Tick);
             // 

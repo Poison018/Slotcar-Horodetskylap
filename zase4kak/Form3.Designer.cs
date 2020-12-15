@@ -1499,7 +1499,7 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 300;
+            this.timer2.Interval = 1000;
             this.timer2.Tag = "час 1 заїзду";
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
@@ -1511,7 +1511,7 @@
             // 
             // timer4
             // 
-            this.timer4.Interval = 300;
+            this.timer4.Interval = 1000;
             this.timer4.Tag = "час 2 заїзду";
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
@@ -1523,7 +1523,7 @@
             // 
             // timer6
             // 
-            this.timer6.Interval = 300;
+            this.timer6.Interval = 1000;
             this.timer6.Tag = "третя гонка";
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
@@ -1591,7 +1591,7 @@
             // 
             // timer11
             // 
-            this.timer11.Interval = 15;
+            this.timer11.Interval = 1;
             this.timer11.Tag = "timer для часа червоної доріжки кола";
             this.timer11.Tick += new System.EventHandler(this.timer11_Tick);
             // 
@@ -1613,19 +1613,19 @@
             // 
             // timer15
             // 
-            this.timer15.Interval = 15;
+            this.timer15.Interval = 1;
             this.timer15.Tag = "timer для часа синя доріжки кола";
             this.timer15.Tick += new System.EventHandler(this.timer15_Tick);
             // 
             // timer16
             // 
-            this.timer16.Interval = 15;
+            this.timer16.Interval = 1;
             this.timer16.Tag = "timer для часа жовта доріжки кола";
             this.timer16.Tick += new System.EventHandler(this.timer16_Tick);
             // 
             // timer17
             // 
-            this.timer17.Interval = 15;
+            this.timer17.Interval = 1;
             this.timer17.Tag = "timer для часа зелена доріжки кола";
             this.timer17.Tick += new System.EventHandler(this.timer17_Tick);
             // 

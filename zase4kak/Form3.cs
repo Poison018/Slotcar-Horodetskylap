@@ -655,7 +655,7 @@ namespace zase4kak
 		{
 
 
-			Timez += 0.001 * timer17.Interval;                   //timer на час кола зелена доріжка
+			Timez += 0.001 * 17;                   //timer на час кола зелена доріжка
 			label27.Text = string.Format("{0:F3}", Timez);       //timer на час кола зелена доріжка
 
 		}
@@ -663,7 +663,7 @@ namespace zase4kak
 		private void timer16_Tick(object sender, EventArgs e)
 		{
 
-			Timeg += 0.001 * timer16.Interval;                   //timer на час кола жовта доріжка
+			Timeg += 0.001 * 17;                   //timer на час кола жовта доріжка
 			label28.Text = string.Format("{0:F3}", Timeg);       //timer на час кола жовта доріжка
 
 		}
@@ -2341,7 +2341,15 @@ namespace zase4kak
 
 		private void button6_Click(object sender, EventArgs e)
 		{
+
 			serialPort1.WriteLine("3");
+
+
+			if (serialPort1.IsOpen == true){
+			serialPort1.Close();
+            }
+			
+			
 			label69.Text = "Трек виключений";
 			label69.BackColor = Color.Red;
 			button10.Enabled = true;
@@ -2408,7 +2416,12 @@ namespace zase4kak
 
 		private void button7_Click(object sender, EventArgs e)
 		{
-			serialPort1.Open();
+			if(serialPort1.IsOpen == false)
+            {
+				serialPort1.Open();
+            }
+          
+			
 			serialPort1.WriteLine("4");
 			label69.Text = "Трек включений";
 			label69.BackColor = Color.Green;
@@ -2474,6 +2487,12 @@ namespace zase4kak
 			if (e.KeyCode == Keys.Space)
 			{
 				startsound.Play();
+
+				if (serialPort1.IsOpen == false)
+				{
+					serialPort1.Open();
+				}
+				
 				serialPort1.WriteLine("4");
 				label69.Text = "Трек включений";
 				label69.BackColor = Color.Green;
@@ -2537,8 +2556,14 @@ namespace zase4kak
 		{
 			if (e.KeyCode == Keys.Space)
 			{
-				pausesound.Play();
 				serialPort1.WriteLine("3");
+				if (serialPort1.IsOpen == true)
+                {
+					serialPort1.Close();
+                }
+				
+				pausesound.Play();
+				
 				label69.Text = "Трек виключений";
 				label69.BackColor = Color.Red;
 
@@ -2596,12 +2621,16 @@ namespace zase4kak
 		{
 			if (e.KeyCode == Keys.Space)
 			{
-
-
+				button12.Enabled = false;
 				timer1.Enabled = true;
 				button1.Visible = false;
-				button6.Visible = true;
+
 				button6.Focus();
+
+				//timer1.Enabled = true;
+				//button1.Visible = false;
+				//button6.Visible = true;
+				//button6.Focus();
 			}
 		}
 
@@ -2768,7 +2797,7 @@ namespace zase4kak
 		{
 
 
-			Times += 0.001 * timer15.Interval;                   //timer на час кола синя доріжка
+			Times += 0.001 * 17;                   //timer на час кола синя доріжка
 			label26.Text = string.Format("{0:F3}", Times);       //timer на час кола синя доріжка
 
 		}
@@ -3514,7 +3543,7 @@ namespace zase4kak
 		{
 
 
-			Time += 0.001 * timer11.Interval;                   //timer на час кола
+			Time += 0.001 * 17;                   //timer на час кола
 			label21.Text = string.Format("{0:F3}", Time);       //timer на час кола 
 
 

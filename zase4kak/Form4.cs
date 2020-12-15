@@ -412,7 +412,7 @@ namespace zase4kak
         double Time;
         private void timer11_Tick(object sender, EventArgs e)
         {
-            Time += 0.001 * timer11.Interval;                   //timer на час кола
+            Time += 0.001 * 17;                   //timer на час кола
             label102.Text = string.Format("{0:F3}", Time);       //timer на час кола 
 
         }
