@@ -172,6 +172,9 @@
             this.button7 = new System.Windows.Forms.Button();
             this.timer20 = new System.Windows.Forms.Timer(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button8 = new System.Windows.Forms.Button();
             this.timer21 = new System.Windows.Forms.Timer(this.components);
             this.label67 = new System.Windows.Forms.Label();
@@ -248,9 +251,6 @@
             this.чорнаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.зеленаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1499,6 +1499,7 @@
             // 
             // timer2
             // 
+            this.timer2.Interval = 300;
             this.timer2.Tag = "час 1 заїзду";
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
@@ -1510,6 +1511,7 @@
             // 
             // timer4
             // 
+            this.timer4.Interval = 300;
             this.timer4.Tag = "час 2 заїзду";
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
@@ -1521,6 +1523,7 @@
             // 
             // timer6
             // 
+            this.timer6.Interval = 300;
             this.timer6.Tag = "третя гонка";
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
@@ -1532,7 +1535,7 @@
             // 
             // timer8
             // 
-            this.timer8.Interval = 1000;
+            this.timer8.Interval = 300;
             this.timer8.Tag = "четверта гонка";
             this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
             // 
@@ -1840,6 +1843,26 @@
             this.dataGridView1.TabIndex = 50;
             this.dataGridView1.Visible = false;
             this.dataGridView1.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView1_SortCompare);
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Доріжка";
+            this.Column4.Name = "Column4";
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Спортсмен";
+            this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Width = 180;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Результат";
+            this.Column2.MaxInputLength = 300;
+            this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // button8
             // 
@@ -2530,26 +2553,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1920, 24);
             this.menuStrip1.TabIndex = 72;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Доріжка";
-            this.Column4.Name = "Column4";
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Спортсмен";
-            this.Column1.Name = "Column1";
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 180;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Результат";
-            this.Column2.MaxInputLength = 300;
-            this.Column2.Name = "Column2";
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // form4BindingSource
             // 

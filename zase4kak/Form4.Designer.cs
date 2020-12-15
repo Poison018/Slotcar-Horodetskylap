@@ -3601,7 +3601,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 300;
             this.timer1.Tag = "таймер часу лап тайму";
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
