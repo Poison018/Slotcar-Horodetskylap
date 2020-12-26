@@ -55,7 +55,7 @@ namespace zase4kak
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            Form8 f8 = new Form8();
         }
     }
 }
