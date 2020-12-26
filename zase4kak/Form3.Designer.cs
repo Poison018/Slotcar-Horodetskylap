@@ -39,7 +39,6 @@
             this.label78 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
@@ -59,10 +58,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label55 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label79 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
             this.label80 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.label81 = new System.Windows.Forms.Label();
@@ -83,7 +80,6 @@
             this.label29 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label82 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
@@ -105,7 +101,6 @@
             this.label37 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label85 = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
             this.label86 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.label87 = new System.Windows.Forms.Label();
@@ -251,6 +246,7 @@
             this.чорнаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.зеленаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.button19 = new System.Windows.Forms.Button();
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -335,7 +331,6 @@
             this.panel1.Controls.Add(this.label78);
             this.panel1.Controls.Add(this.label77);
             this.panel1.Controls.Add(this.label76);
-            this.panel1.Controls.Add(this.label72);
             this.panel1.Controls.Add(this.label66);
             this.panel1.Controls.Add(this.label59);
             this.panel1.Controls.Add(this.label50);
@@ -394,16 +389,6 @@
             this.label76.TabIndex = 46;
             this.label76.Text = "00,000";
             this.label76.Visible = false;
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label72.Location = new System.Drawing.Point(1803, 37);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(30, 42);
-            this.label72.TabIndex = 45;
-            this.label72.Text = "-";
             // 
             // label66
             // 
@@ -598,7 +583,6 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label11);
             this.panel2.Location = new System.Drawing.Point(7, 157);
             this.panel2.Margin = new System.Windows.Forms.Padding(1);
             this.panel2.Name = "panel2";
@@ -631,18 +615,6 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Ім\'я";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(1759, 7);
-            this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 26);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Прогноз";
-            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -650,7 +622,6 @@
             this.panel3.BackColor = System.Drawing.Color.LimeGreen;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label79);
-            this.panel3.Controls.Add(this.label73);
             this.panel3.Controls.Add(this.label80);
             this.panel3.Controls.Add(this.label63);
             this.panel3.Controls.Add(this.label81);
@@ -686,16 +657,6 @@
             this.label79.TabIndex = 51;
             this.label79.Text = "00,000";
             this.label79.Visible = false;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label73.Location = new System.Drawing.Point(1803, 42);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(30, 42);
-            this.label73.TabIndex = 46;
-            this.label73.Text = "-";
             // 
             // label80
             // 
@@ -901,7 +862,6 @@
             this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label82);
-            this.panel4.Controls.Add(this.label74);
             this.panel4.Controls.Add(this.label83);
             this.panel4.Controls.Add(this.label84);
             this.panel4.Controls.Add(this.label64);
@@ -938,16 +898,6 @@
             this.label82.TabIndex = 54;
             this.label82.Text = "00,000";
             this.label82.Visible = false;
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label74.Location = new System.Drawing.Point(1803, 41);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(30, 42);
-            this.label74.TabIndex = 47;
-            this.label74.Text = "-";
             // 
             // label83
             // 
@@ -1165,7 +1115,6 @@
             this.panel5.BackColor = System.Drawing.Color.Gold;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.label85);
-            this.panel5.Controls.Add(this.label75);
             this.panel5.Controls.Add(this.label86);
             this.panel5.Controls.Add(this.label65);
             this.panel5.Controls.Add(this.label87);
@@ -1201,16 +1150,6 @@
             this.label85.TabIndex = 57;
             this.label85.Text = "00,000";
             this.label85.Visible = false;
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label75.Location = new System.Drawing.Point(1803, 44);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(30, 42);
-            this.label75.TabIndex = 48;
-            this.label75.Text = "-";
             // 
             // label86
             // 
@@ -2554,6 +2493,17 @@
             this.menuStrip1.TabIndex = 72;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(220, 1026);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(121, 23);
+            this.button19.TabIndex = 82;
+            this.button19.Text = "Відмінити";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Visible = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click_2);
+            // 
             // form4BindingSource
             // 
             this.form4BindingSource.DataSource = typeof(zase4kak.Form4);
@@ -2564,6 +2514,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1920, 1057);
+            this.Controls.Add(this.button19);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.label89);
             this.Controls.Add(this.label88);
@@ -2673,7 +2624,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
@@ -2813,10 +2763,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.Label label75;
         public System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label76;
@@ -2883,5 +2829,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Button button19;
     }
 }

@@ -47,7 +47,8 @@ namespace zase4kak
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-
+			button13.Visible = false;
+			label70.Visible = false;
 			button12.Enabled = false;
 			timer1.Enabled = true;
 			button1.Visible = false;
@@ -810,11 +811,6 @@ namespace zase4kak
 			label7.Text = "Круги";
 			label5.Visible = false;
 			label9.Location = new Point(878, 8);
-			label11.Visible = false;
-			label72.Visible = false;
-			label73.Visible = false;
-			label74.Visible = false;
-			label75.Visible = false;
 			label22.Location = new Point(431, 34);
 			label19.Location = new Point(610, 34);
 			label20.Location = new Point(803, 37);
@@ -2627,10 +2623,6 @@ namespace zase4kak
 
 				button6.Focus();
 
-				//timer1.Enabled = true;
-				//button1.Visible = false;
-				//button6.Visible = true;
-				//button6.Focus();
 			}
 		}
 
@@ -2885,6 +2877,7 @@ namespace zase4kak
 
 		private void button12_Click(object sender, EventArgs e)
 		{
+			button19.Visible = true;
 			button12.Visible = false;
 			button13.Visible = true;
 			label13.Visible = true;
@@ -2892,10 +2885,12 @@ namespace zase4kak
 			label70.Visible = true;
 			timetotraning = 60;
 			label70.Text = "60";
+			button1.Enabled = false;
 		}
 
 		private void button13_Click(object sender, EventArgs e)
 		{
+			button19.Visible = false;
 			button1.Enabled = false;
 			label69.Text = "Трек включений";
 			label69.BackColor = Color.Green;
@@ -2903,6 +2898,7 @@ namespace zase4kak
 			serialPort1.WriteLine("4");
 			serialPort1.Close();
 			timer22.Enabled = true;
+			button13.Enabled = false;
 		}
 
 		private void timer22_Tick(object sender, EventArgs e)
@@ -2938,6 +2934,8 @@ namespace zase4kak
 				label69.BackColor = Color.Red;
 				label13.Visible = false;
 				button1.Enabled = true;
+				button1.Focus();
+				button13.Enabled = true;
 
 
 			}
@@ -3447,8 +3445,13 @@ namespace zase4kak
 			}
 			e.Handled = true;
 		}
-	
-	
+
+
+        private void button19_Click_2(object sender, EventArgs e)
+        {
+button19.Visible = false;
+				button1.Enabled = true;
+        }
 
         private void timer24_Tick(object sender, EventArgs e)
         {
