@@ -20,6 +20,7 @@ namespace zase4kak
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             Form2 f2 = new Form2();
             f2.Show();
             this.Visible = false;
@@ -56,6 +57,8 @@ namespace zase4kak
         private void button3_Click(object sender, EventArgs e)
         {
             Form8 f8 = new Form8();
+            this.Visible = false;
+            f8.Show();
         }
     }
 }
