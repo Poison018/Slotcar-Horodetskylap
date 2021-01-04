@@ -290,6 +290,10 @@ namespace zase4kak
             this.label113 = new System.Windows.Forms.Label();
             this.label114 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer26 = new System.Windows.Forms.Timer(this.components);
+            this.timer27 = new System.Windows.Forms.Timer(this.components);
+            this.timer28 = new System.Windows.Forms.Timer(this.components);
+            this.timer29 = new System.Windows.Forms.Timer(this.components);
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel9.SuspendLayout();
@@ -692,7 +696,7 @@ namespace zase4kak
             // timer12
             // 
             this.timer12.Interval = 1;
-            this.timer12.Tag = "додавання кругів синя доріжка";
+            this.timer12.Tag = "додавання кругів зелена доріжка";
             this.timer12.Tick += new System.EventHandler(this.timer12_Tick);
             // 
             // button7
@@ -724,29 +728,31 @@ namespace zase4kak
             // timer13
             // 
             this.timer13.Interval = 1;
+            this.timer13.Tag = "додавання кругів біла доріжка";
             this.timer13.Tick += new System.EventHandler(this.timer13_Tick);
             // 
             // timer14
             // 
             this.timer14.Interval = 1;
+            this.timer14.Tag = "додавання кругів оранжевій доріжчі";
             this.timer14.Tick += new System.EventHandler(this.timer14_Tick);
             // 
             // timer15
             // 
             this.timer15.Interval = 1;
-            this.timer15.Tag = "timer для часа синя доріжки кола";
+            this.timer15.Tag = "timer для часа зелена доріжки кола";
             this.timer15.Tick += new System.EventHandler(this.timer15_Tick);
             // 
             // timer16
             // 
             this.timer16.Interval = 1;
-            this.timer16.Tag = "timer для часа жовта доріжки кола";
+            this.timer16.Tag = "timer для часа оранжева доріжки кола";
             this.timer16.Tick += new System.EventHandler(this.timer16_Tick);
             // 
             // timer17
             // 
             this.timer17.Interval = 1;
-            this.timer17.Tag = "timer для часа зелена доріжки кола";
+            this.timer17.Tag = "timer для часа біла доріжки кола";
             this.timer17.Tick += new System.EventHandler(this.timer17_Tick);
             // 
             // button5
@@ -1293,7 +1299,7 @@ namespace zase4kak
             this.label81.AutoSize = true;
             this.label81.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label81.Location = new System.Drawing.Point(1022, 25);
+            this.label81.Location = new System.Drawing.Point(1019, 22);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(160, 51);
             this.label81.TabIndex = 49;
@@ -1525,7 +1531,7 @@ namespace zase4kak
             this.label84.AutoSize = true;
             this.label84.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label84.Location = new System.Drawing.Point(1022, 27);
+            this.label84.Location = new System.Drawing.Point(1025, 24);
             this.label84.Name = "label84";
             this.label84.Size = new System.Drawing.Size(160, 51);
             this.label84.TabIndex = 52;
@@ -1856,7 +1862,7 @@ namespace zase4kak
             this.label78.AutoSize = true;
             this.label78.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label78.Location = new System.Drawing.Point(1347, 24);
+            this.label78.Location = new System.Drawing.Point(1350, -14);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(160, 51);
             this.label78.TabIndex = 48;
@@ -1868,7 +1874,7 @@ namespace zase4kak
             this.label77.AutoSize = true;
             this.label77.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label77.Location = new System.Drawing.Point(1188, 24);
+            this.label77.Location = new System.Drawing.Point(1184, -10);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(160, 51);
             this.label77.TabIndex = 47;
@@ -1880,7 +1886,7 @@ namespace zase4kak
             this.label76.AutoSize = true;
             this.label76.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label76.Location = new System.Drawing.Point(1022, 22);
+            this.label76.Location = new System.Drawing.Point(1022, -15);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(160, 51);
             this.label76.TabIndex = 46;
@@ -1925,7 +1931,7 @@ namespace zase4kak
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(960, 100);
+            this.label18.Location = new System.Drawing.Point(960, 78);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(52, 16);
             this.label18.TabIndex = 10;
@@ -2153,7 +2159,7 @@ namespace zase4kak
             this.label87.AutoSize = true;
             this.label87.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label87.Location = new System.Drawing.Point(1022, 23);
+            this.label87.Location = new System.Drawing.Point(1019, 19);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(160, 51);
             this.label87.TabIndex = 55;
@@ -2216,7 +2222,7 @@ namespace zase4kak
             this.label39.AutoSize = true;
             this.label39.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label39.Location = new System.Drawing.Point(1022, 26);
+            this.label39.Location = new System.Drawing.Point(1025, 22);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(160, 51);
             this.label39.TabIndex = 45;
@@ -2542,7 +2548,7 @@ namespace zase4kak
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(1347, 22);
+            this.label11.Location = new System.Drawing.Point(1347, 20);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(160, 51);
             this.label11.TabIndex = 57;
@@ -2554,12 +2560,11 @@ namespace zase4kak
             this.label72.AutoSize = true;
             this.label72.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label72.Location = new System.Drawing.Point(1185, 23);
+            this.label72.Location = new System.Drawing.Point(1185, 19);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(160, 51);
             this.label72.TabIndex = 56;
             this.label72.Text = "00,000";
-            this.label72.Visible = false;
             // 
             // label73
             // 
@@ -2576,12 +2581,11 @@ namespace zase4kak
             this.label74.AutoSize = true;
             this.label74.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label74.Location = new System.Drawing.Point(1022, 23);
+            this.label74.Location = new System.Drawing.Point(1025, 19);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(160, 51);
             this.label74.TabIndex = 55;
             this.label74.Text = "00,000";
-            this.label74.Visible = false;
             // 
             // label75
             // 
@@ -2644,17 +2648,19 @@ namespace zase4kak
             this.label93.Size = new System.Drawing.Size(160, 51);
             this.label93.TabIndex = 45;
             this.label93.Text = "00,000";
+            this.label93.Visible = false;
             // 
             // label94
             // 
             this.label94.AutoSize = true;
             this.label94.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label94.Location = new System.Drawing.Point(1347, 27);
+            this.label94.Location = new System.Drawing.Point(1347, 19);
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(160, 51);
             this.label94.TabIndex = 44;
             this.label94.Text = "00,000";
+            this.label94.Click += new System.EventHandler(this.label94_Click);
             // 
             // label95
             // 
@@ -2676,6 +2682,7 @@ namespace zase4kak
             this.label96.Size = new System.Drawing.Size(160, 51);
             this.label96.TabIndex = 43;
             this.label96.Text = "00,000";
+            this.label96.Visible = false;
             // 
             // label97
             // 
@@ -2791,24 +2798,22 @@ namespace zase4kak
             this.label100.AutoSize = true;
             this.label100.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label100.Location = new System.Drawing.Point(1347, 22);
+            this.label100.Location = new System.Drawing.Point(1350, 20);
             this.label100.Name = "label100";
             this.label100.Size = new System.Drawing.Size(160, 51);
             this.label100.TabIndex = 57;
             this.label100.Text = "00,000";
-            this.label100.Visible = false;
             // 
             // label101
             // 
             this.label101.AutoSize = true;
             this.label101.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label101.Location = new System.Drawing.Point(1185, 23);
+            this.label101.Location = new System.Drawing.Point(1188, 19);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(160, 51);
             this.label101.TabIndex = 56;
             this.label101.Text = "00,000";
-            this.label101.Visible = false;
             // 
             // label102
             // 
@@ -2825,12 +2830,11 @@ namespace zase4kak
             this.label103.AutoSize = true;
             this.label103.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label103.Location = new System.Drawing.Point(1022, 23);
+            this.label103.Location = new System.Drawing.Point(1025, 19);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(160, 51);
             this.label103.TabIndex = 55;
             this.label103.Text = "00,000";
-            this.label103.Visible = false;
             // 
             // label104
             // 
@@ -2893,6 +2897,7 @@ namespace zase4kak
             this.label108.Size = new System.Drawing.Size(160, 51);
             this.label108.TabIndex = 45;
             this.label108.Text = "00,000";
+            this.label108.Visible = false;
             // 
             // label109
             // 
@@ -2904,6 +2909,7 @@ namespace zase4kak
             this.label109.Size = new System.Drawing.Size(160, 51);
             this.label109.TabIndex = 44;
             this.label109.Text = "00,000";
+            this.label109.Visible = false;
             // 
             // label110
             // 
@@ -2925,6 +2931,7 @@ namespace zase4kak
             this.label111.Size = new System.Drawing.Size(160, 51);
             this.label111.TabIndex = 43;
             this.label111.Text = "00,000";
+            this.label111.Visible = false;
             // 
             // label112
             // 
@@ -2999,6 +3006,30 @@ namespace zase4kak
             this.timer2.Interval = 1000;
             this.timer2.Tag = "час 1 заїзду";
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer26
+            // 
+            this.timer26.Interval = 1;
+            this.timer26.Tag = "timer для часа синя доріжки кола";
+            this.timer26.Tick += new System.EventHandler(this.timer26_Tick_1);
+            // 
+            // timer27
+            // 
+            this.timer27.Interval = 1;
+            this.timer27.Tag = "timer для часа жовта доріжки кола";
+            this.timer27.Tick += new System.EventHandler(this.timer27_Tick);
+            // 
+            // timer28
+            // 
+            this.timer28.Interval = 1;
+            this.timer28.Tag = "додавання кругів синя доріжчі";
+            this.timer28.Tick += new System.EventHandler(this.timer28_Tick);
+            // 
+            // timer29
+            // 
+            this.timer29.Interval = 1;
+            this.timer29.Tag = "додавання кругів жовта доріжці";
+            this.timer29.Tick += new System.EventHandler(this.timer29_Tick);
             // 
             // form4BindingSource
             // 
@@ -3372,5 +3403,9 @@ namespace zase4kak
         private System.Windows.Forms.Timer timer2;
         public System.Windows.Forms.Label label115;
         public System.Windows.Forms.Label label116;
+        private System.Windows.Forms.Timer timer26;
+        private System.Windows.Forms.Timer timer27;
+        private System.Windows.Forms.Timer timer28;
+        private System.Windows.Forms.Timer timer29;
     }
 }

@@ -82,7 +82,7 @@ namespace zase4kak
 			button6.Focus();
 		}
 
-		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, time_to_traning_min, time_to_traning_sec;
+		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, v, l, time_to_traning_min, time_to_traning_sec;
 
 		int time_to_traning_secs = 1;// секунди для тренування
 
@@ -90,7 +90,7 @@ namespace zase4kak
 		int timetostart = 5; // значення стартового таймера
 
 
-		double Time, Times, Timez, Timeg;//timer на час кола
+		double Time, Times, Timez, Timeg, Timeb, Timeo;//timer на час кола
 		private void timer1_Tick(object sender, EventArgs e)
 		{
 			label18.Text = "00,000";
@@ -125,6 +125,8 @@ namespace zase4kak
 			timer15.Interval = 15; //timer на час кола
 			Times = 0.0;             //timer на час кола
 
+			timer26.Interval = 15;
+			Timeo = 0.0;
 
 			if (label4.Text == "4")             //звук для time to start
 			{
@@ -161,6 +163,8 @@ namespace zase4kak
 					timer16.Enabled = true;
 					timer17.Enabled = true;
 					timer15.Enabled = true;
+					timer26.Enabled = true;
+					timer27.Enabled = true;
 					serialPort1.Open();
 					serialPort1.WriteLine("4");
 					serialPort1.Close();
@@ -682,16 +686,16 @@ namespace zase4kak
 		{
 
 
-			Timez += 0.001 * 17;                   //timer на час кола зелена доріжка
-			label27.Text = string.Format("{0:F3}", Timez);       //timer на час кола зелена доріжка
+			Timez += 0.001 * 17;                   //timer на час кола біла доріжка
+			label27.Text = string.Format("{0:F3}", Timez);       //timer на час кола біла доріжка
 
 		}
 
 		private void timer16_Tick(object sender, EventArgs e)
 		{
 
-			Timeg += 0.001 * 17;                   //timer на час кола жовта доріжка
-			label28.Text = string.Format("{0:F3}", Timeg);       //timer на час кола жовта доріжка
+			Timeg += 0.001 * 17;                   //timer на час кола оранжева доріжка
+			label28.Text = string.Format("{0:F3}", Timeg);       //timer на час кола оранжева доріжка
 
 		}
 
@@ -3479,8 +3483,8 @@ namespace zase4kak
 		{
 
 
-			Times += 0.001 * 17;                   //timer на час кола синя доріжка
-			label26.Text = string.Format("{0:F3}", Times);       //timer на час кола синя доріжка
+			Times += 0.001 * 17;                   //timer на час кола зелена доріжка
+			label26.Text = string.Format("{0:F3}", Times);       //timer на час кола зелена доріжка
 
 		}
 
@@ -4143,6 +4147,49 @@ namespace zase4kak
 			button1.Enabled = true;
 		}
 
+        private void timer28_Tick(object sender, EventArgs e)
+        {
+			v++;                                            //добавляю кола 1 доріці
+			label97.Text = Convert.ToString(v);
+			if (Convert.ToDouble(label74.Text) < 1)         //обмеження по часу кола 1 секунда
+			{
+				v--;
+				label97.Text = Convert.ToString(v);
+			}
+			//textBox15.Text = "0";
+			timer28.Enabled = false;
+		}
+
+        private void timer29_Tick(object sender, EventArgs e)
+        {
+			l++;                                            //добавляю кола 1 доріці
+			label112.Text = Convert.ToString(l);
+			if (Convert.ToDouble(label103.Text) < 1)         //обмеження по часу кола 1 секунда
+			{
+				l--;
+				label112.Text = Convert.ToString(l);
+			}
+			//textBox15.Text = "0";
+			timer29.Enabled = false;
+		}
+
+        private void label94_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer26_Tick_1(object sender, EventArgs e)
+        {
+			Timeo += 0.001 * 17;                   //timer на час кола синя доріжка
+			label95.Text = string.Format("{0:F3}", Timeo);       //timer на час кола синя доріжка
+		}
+
+        private void timer27_Tick(object sender, EventArgs e)
+        {
+			Timeb += 0.001 * 17;                   //timer на час кола жовта доріжка
+			label110.Text = string.Format("{0:F3}", Timeb);       //timer на час кола жовта доріжка
+		}
+
         private void Form8_FormClosing(object sender, FormClosingEventArgs e)
         {
 			Settings.Default.line_1 = panel1.BackColor;
@@ -4301,8 +4348,8 @@ namespace zase4kak
 		{
 
 
-			Time += 0.001 * 17;                   //timer на час кола
-			label21.Text = string.Format("{0:F3}", Time);       //timer на час кола 
+			Time += 0.001 * 17;                   //timer на час кола червона доріжка
+			label21.Text = string.Format("{0:F3}", Time);       //timer на час кола червона доріжка 
 
 
 
@@ -4598,6 +4645,56 @@ namespace zase4kak
 			switch (Convert.ToInt64(textBox15.Text))
 			{
 
+				case 10000:
+                    {
+						l = Convert.ToInt32(label112.Text);          //синя доріжка
+						timer29.Enabled = true;
+						timer27.Enabled = false;
+						label114.Text = label110.Text;
+						Timeb = 0;
+						timer27.Enabled = true;
+
+
+						label100.Text = label101.Text;
+						label101.Text = label103.Text;
+						label103.Text = label114.Text;
+						label112.Text = Convert.ToString(l);
+						textBox15.Text = "0";
+
+						if (Convert.ToDouble(label107.Text) > Convert.ToDouble(label114.Text))
+						{
+							label107.Text = label114.Text;
+
+
+						}
+					}
+					break;
+				case 10001:
+					{
+						v = Convert.ToInt32(label97.Text);          //синя доріжка
+						timer28.Enabled = true;
+						timer26.Enabled = false;
+						label99.Text = label95.Text;
+						Timeo = 0;
+						timer26.Enabled = true;
+
+
+						label94.Text = label72.Text;
+						label72.Text = label74.Text;
+						label74.Text = label99.Text;
+						label97.Text = Convert.ToString(v);
+						textBox15.Text = "0";
+
+						if (Convert.ToDouble(label92.Text) > Convert.ToDouble(label99.Text))
+						{
+							label92.Text = label99.Text;
+
+
+						}
+					
+
+			}
+					break;
 				case 01:
 					{
 						i = Convert.ToInt32(label17.Text);          //червона доріжка
@@ -4652,7 +4749,7 @@ namespace zase4kak
 						Timez = 0;
 						timer17.Enabled = true;
 
-						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування зеленої доріжка
+						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування біла доріжка
 						{
 							label79.Text = label80.Text;
 							label80.Text = label81.Text;
@@ -4671,7 +4768,7 @@ namespace zase4kak
 
 							}
 						}
-						else                                     // алгоритм для часу кола для гонки зеленої доріжка
+						else                                     // алгоритм для часу кола для гонки біла доріжка
 						{
 
 
@@ -4700,7 +4797,7 @@ namespace zase4kak
 						timer15.Enabled = true;
 
 
-						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування синьої доріжка
+						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування зелена доріжка
 						{
 							label82.Text = label83.Text;
 							label83.Text = label84.Text;
@@ -4719,7 +4816,7 @@ namespace zase4kak
 
 							}
 						}
-						else                                        // алгоритм для часу кола для гонки синьої доріжка
+						else                                        // алгоритм для часу кола для гонки зелена доріжка
 						{
 
 
@@ -4746,7 +4843,7 @@ namespace zase4kak
 						label38.Text = label28.Text;
 						Timeg = 0;
 						timer16.Enabled = true;
-						if (label13.Text == "Тренування!")// алгоритм для часу кола для тренування жовтої доріжка
+						if (label13.Text == "Тренування!")// алгоритм для часу кола для тренування оранжева доріжка
 						{
 							label85.Text = label86.Text;
 							label86.Text = label87.Text;
@@ -4764,7 +4861,7 @@ namespace zase4kak
 
 							}
 						}
-						else                                     // алгоритм для часу кола для Гонки жовтої доріжка
+						else                                     // алгоритм для часу кола для Гонки оранжева доріжка
 						{
 
 
@@ -4782,7 +4879,7 @@ namespace zase4kak
 						}
 						break;
 					}
-				case 01111://// зелена + Синя+ Жовта+Червона доріжка
+				case 01111://// білан + зелена+ оранжева+Червона доріжка
 					{
 						c = Convert.ToInt32(label24.Text);
 						timer13.Enabled = true;
@@ -4856,7 +4953,7 @@ namespace zase4kak
 						}
 						break;
 					}
-				case 01110:         // зелена + Синя+ Жовта доріжка
+				case 01110:         // біла + зелена+ оранжева доріжка
 					{
 						c = Convert.ToInt32(label24.Text);
 						timer13.Enabled = true;
@@ -4915,7 +5012,7 @@ namespace zase4kak
 					}
 				case 01100:
 					{
-						i = Convert.ToInt32(label17.Text);          //червона доріжка + Синя + жовта
+						i = Convert.ToInt32(label17.Text);          //червона доріжка + зелена + оранжева
 						timer10.Enabled = true;
 						timer11.Enabled = false;
 						label18.Text = label21.Text;
@@ -4972,7 +5069,7 @@ namespace zase4kak
 					}
 				case 01011:
 					{
-						i = Convert.ToInt32(label17.Text);          //червона  + Зелена+ Жовта доріжка
+						i = Convert.ToInt32(label17.Text);          //червона  + біла+ оранжева доріжка
 						timer10.Enabled = true;
 						timer11.Enabled = false;
 						label18.Text = label21.Text;
@@ -5029,7 +5126,7 @@ namespace zase4kak
 					}
 
 
-				case 01010:                                     // зелена + Синя доріжка
+				case 01010:                                     // біла + зелена доріжка
 					{
 						c = Convert.ToInt32(label24.Text);
 						timer13.Enabled = true;
@@ -5069,7 +5166,7 @@ namespace zase4kak
 						}
 						break;
 					}
-				case 01001: // жовта + Синя доріжка
+				case 01001: // оранжева + зелена доріжка
 					{
 
 						d = Convert.ToInt32(label25.Text);
@@ -5113,7 +5210,7 @@ namespace zase4kak
 					}
 				case 01000:
 					{
-						i = Convert.ToInt32(label17.Text);          //червона доріжка + Синя
+						i = Convert.ToInt32(label17.Text);          //червона доріжка + зелена
 						timer10.Enabled = true;
 						timer11.Enabled = false;
 						label18.Text = label21.Text;
@@ -5153,7 +5250,7 @@ namespace zase4kak
 					}
 				case 0111:
 					{
-						i = Convert.ToInt32(label17.Text);          //червона + Жовта доріжка
+						i = Convert.ToInt32(label17.Text);          //червона + оранжева доріжка
 						timer10.Enabled = true;
 						timer11.Enabled = false;
 						label18.Text = label21.Text;
@@ -5192,7 +5289,7 @@ namespace zase4kak
 					}
 				case 0110:
 					{
-						i = Convert.ToInt32(label17.Text);          //червона + зелена доріжка
+						i = Convert.ToInt32(label17.Text);          //червона + біла доріжка
 						c = Convert.ToInt32(label24.Text);
 
 						timer10.Enabled = true;
@@ -5234,7 +5331,7 @@ namespace zase4kak
 						}
 						break;
 					}
-				case 0101:                              // жовта + зелена
+				case 0101:                              // оранжева + біла
 					{
 						d = Convert.ToInt32(label25.Text);
 						c = Convert.ToInt32(label24.Text);
@@ -5274,6 +5371,7 @@ namespace zase4kak
 						break;
 
 					}
+				
 				case 0:
 					{
 
