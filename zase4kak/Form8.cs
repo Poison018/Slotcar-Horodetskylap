@@ -17,7 +17,7 @@ namespace zase4kak
 {
     public partial class Form8 : Form
     {
-		string[,] list = new string[50, 5];
+		string[,] list = new string[60, 5];
 		string[] name = new string[40];
 		SoundPlayer timetostartsound = new SoundPlayer();
 		SoundPlayer kinetsgonkisound = new SoundPlayer();
@@ -698,11 +698,671 @@ namespace zase4kak
 		private void timer18_Tick(object sender, EventArgs e)
 		{
 
+			if (textBox20.Text == "" || textBox21.Text == "" || textBox22.Text == "" || textBox23.Text == "")
+			{
+				button9.Enabled = false;
+			}
+			else
+			{
+				button9.Enabled = true;
+			}
+
+
+			switch (Convert.ToInt32(label67.Text))
+			{
+				case 36:
+					{
+						label71.Text = "Група - << J >>";
+						break;
+					}
+
+				case 32:
+					{
+						label71.Text = "Група - << I >>";
+						break;
+					}
+				case 28:
+					{
+						label71.Text = "Група - << H >>";
+						break;
+					}
+				case 24:
+					{
+						label71.Text = "Група - << G >>";
+						break;
+					}
+				case 20:
+					{
+						label71.Text = "Група - << F >>";
+						break;
+					}
+				case 16:
+					{
+						label71.Text = "Група - << E >>";
+						break;
+					}
+				case 12:
+					{
+						label71.Text = "Група - << D >>";
+						break;
+					}
+				case 8:
+					{
+						label71.Text = "Група - << C >>";
+						break;
+					}
+				case 4:
+					{
+						label71.Text = "Група - << B >>";
+						break;
+					}
+				case 0:
+					{
+						label71.Text = "Група - << A >>";
+						break;
+					}
+				case 228:
+					{
+						label71.Text = "<< Фінал! >>";
+						break;
+					}
+
+			}
+
+
+
+
+
+
+			//алгоритм сортування відставання до суперника
+
+
+			if (Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text))
+
+
+			{
+				label8.Visible = true;
+				panel6.Visible = true;
+				panel7.Visible = true;
+				panel8.Visible = true;
+				panel9.Visible = true;
+				label55.Visible = true;
+				label59.Visible = true;
+				label60.Visible = true;
+				label61.Visible = true;
+				label62.Visible = true;
+
+				if (panel1.Location == new Point(7, 213))
+				{
+
+
+					int label17l, label23l, label24l, label25l;
+
+					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label23.Text);
+
+					label59.Text = "0";
+
+					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label17.Text);
+
+					label61.Text = Convert.ToString(label23l);
+
+					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label17.Text);
+
+					label60.Text = Convert.ToString(label24l);
+
+					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label17.Text);
+
+					label62.Text = Convert.ToString(label25l);
+
+
+				}
+
+				if (panel3.Location == new Point(7, 213))
+				{
+
+
+					int label17l, label23l, label25l;
+
+					label60.Text = "0";
+
+					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label24.Text);
+
+					label59.Text = Convert.ToString(label17l);
+
+					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label24.Text);
+
+					label61.Text = Convert.ToString(label23l);
+
+					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label24.Text);
+
+					label62.Text = Convert.ToString(label25l);
+
+
+				}
+
+				if (panel4.Location == new Point(7, 213))
+				{
+
+
+					int label17l, label24l, label25l;
+
+					label61.Text = "0";
+
+					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label23.Text);
+
+					label59.Text = Convert.ToString(label17l);
+
+					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label23.Text);
+
+					label60.Text = Convert.ToString(label24l);
+
+					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label23.Text);
+
+					label62.Text = Convert.ToString(label25l);
+
+
+				}
+
+				if (panel5.Location == new Point(7, 213))
+				{
+
+
+					int label17l, label23l, label24l;
+
+					label62.Text = "0";
+
+					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label25.Text);
+
+					label59.Text = Convert.ToString(label17l);
+
+					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label25.Text);
+
+					label60.Text = Convert.ToString(label24l);
+
+					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label25.Text);
+
+					label61.Text = Convert.ToString(label23l);
+
+
+				}
+
+				//алгоритм сортування жовтої доріжки по місцям
+
+				if (Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text))
+
+				{
+					if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label17.Text))
+					{
+						panel5.Location = new Point(7, 213);
+
+					}
+					else
+					{
+						if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label24.Text))
+						{
+							panel5.Location = new Point(7, 358);
+						}
+						else
+						{
+							if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label17.Text))
+							{
+								panel5.Location = new Point(7, 358);
+							}
+							else
+							{
+								if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label17.Text))
+								{
+									panel5.Location = new Point(7, 358);
+								}
+								else
+								{
+
+
+
+
+									if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label23.Text))
+									{
+										panel5.Location = new Point(7, 502);
+									}
+									else
+									{
+										if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label24.Text))
+										{
+											panel5.Location = new Point(7, 502);
+										}
+										else
+										{
+											if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label17.Text))
+											{
+												panel5.Location = new Point(7, 502);
+											}
+											else
+											{
+
+												if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
+												{
+													panel5.Location = new Point(7, 645);
+												}
+												else
+												{
+													if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text))
+													{
+														panel5.Location = new Point(7, 502);
+													}
+													else
+													{
+														if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
+														{
+															panel5.Location = new Point(7, 502);
+														}
+														else
+														{
+															if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
+															{
+																panel5.Location = new Point(7, 502);
+															}
+															else
+															{
+																if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text))
+																{
+																	panel5.Location = new Point(7, 358);
+
+																}
+																else
+																{
+																	if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text))
+																	{
+																		panel5.Location = new Point(7, 358);
+																	}
+																	else
+																	{
+																		if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
+																		{
+																			panel5.Location = new Point(7, 358);
+																		}
+																	}
+																}
+
+															}
+
+														}
+
+													}
+
+												}
+											}
+										}
+									}
+								}
+
+							}
+						}
+					}
+				}
+
+
+				//алгоритм сортування синьої доріжки по місцям
+				if (Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text))
+				{
+					if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
+					{
+						panel4.Location = new Point(7, 213);
+					}
+					else
+					{
+						if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text))
+						{
+							panel4.Location = new Point(7, 358);
+						}
+						else
+						{
+							if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
+							{
+								panel4.Location = new Point(7, 358);
+							}
+							else
+							{
+								if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
+								{
+									panel4.Location = new Point(7, 358);
+								}
+								else
+								{
+
+									if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text))
+									{
+										panel4.Location = new Point(7, 502);
+									}
+									else
+									{
+										if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text))
+										{
+											panel4.Location = new Point(7, 502);
+										}
+										else
+										{
+											if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
+											{
+												panel4.Location = new Point(7, 502);
+											}
+											else
+											{
+
+
+												if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
+												{
+													panel4.Location = new Point(7, 645);
+
+												}
+												else
+												{
+													if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text))
+													{
+														panel4.Location = new Point(7, 502);
+													}
+													else
+													{
+														if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
+														{
+															panel4.Location = new Point(7, 502);
+														}
+														else
+														{
+															if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
+															{
+																panel4.Location = new Point(7, 502);
+															}
+															else
+															{
+																if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text))
+																{
+																	panel4.Location = new Point(7, 358);
+																}
+																else
+																{
+																	if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
+																	{
+																		panel4.Location = new Point(7, 358);
+																	}
+																	else
+																	{
+																		if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text))
+																		{
+																			panel4.Location = new Point(7, 358);
+																		}
+																	}
+																}
+															}
+														}
+													}
+
+												}
+											}
+										}
+									}
+
+								}
+							}
+						}
+					}
+				}
+
+				//алгоритм сортування зеленої доріжки по місцям
+				if (Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text))
+				{
+					if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label17.Text))
+					{
+						panel3.Location = new Point(7, 213);
+					}
+					else
+					{
+						if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label23.Text))
+						{
+							panel3.Location = new Point(7, 358);
+						}
+						else
+						{
+							if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label17.Text))
+							{
+								panel3.Location = new Point(7, 358);
+							}
+							else
+							{
+								if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label17.Text))
+								{
+									panel3.Location = new Point(7, 358);
+								}
+								else
+								{
+
+
+									if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text))
+									{
+										panel3.Location = new Point(7, 502);
+
+
+									}
+									else
+									{
+										if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
+										{
+											panel3.Location = new Point(7, 645);
+										}
+										else
+										{
+											if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text))
+											{
+												panel3.Location = new Point(7, 502);
+											}
+											else
+											{
+												if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
+												{
+													panel3.Location = new Point(7, 502);
+												}
+												else
+												{
+													if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
+													{
+														panel3.Location = new Point(7, 502);
+													}
+													else
+													{
+														if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text))
+														{
+															panel3.Location = new Point(7, 358);
+														}
+														else
+														{
+															if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
+															{
+																panel3.Location = new Point(7, 358);
+															}
+															else
+															{
+																if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text))
+																{
+																	panel3.Location = new Point(7, 358);
+																}
+															}
+														}
+													}
+
+
+
+
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					}
+				}
+
+				//алгоритм сортування червоної доріжки по місцям
+				if (Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text))
+				{
+					if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
+					{
+						panel1.Location = new Point(7, 213);
+					}
+					else
+					{
+						if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text))
+						{
+							panel1.Location = new Point(7, 358);
+						}
+						else
+						{
+							if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
+							{
+								panel1.Location = new Point(7, 358);
+							}
+							else
+							{
+								if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
+								{
+									panel1.Location = new Point(7, 358);
+								}
+								else
+								{
+
+
+									if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text))
+									{
+										panel1.Location = new Point(7, 502);
+									}
+									else
+									{
+										if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
+										{
+											panel1.Location = new Point(7, 502);
+										}
+										else
+										{
+											if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text))
+											{
+												panel1.Location = new Point(7, 502);
+											}
+											else
+											{
+
+
+
+												if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
+												{
+													panel1.Location = new Point(7, 645);
+												}
+												else
+												{
+													if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text))
+													{
+														panel1.Location = new Point(7, 502);
+													}
+													else
+													{
+														if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
+														{
+															panel1.Location = new Point(7, 502);
+														}
+														else
+														{
+															if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
+															{
+																panel1.Location = new Point(7, 502);
+															}
+															else
+															{
+																if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text))
+																{
+																	panel1.Location = new Point(7, 358);
+																}
+																else
+																{
+																	if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text))
+																	{
+																		panel1.Location = new Point(7, 358);
+																	}
+																	else
+																	{
+																		if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
+																		{
+																			panel1.Location = new Point(7, 358);
+																		}
+																	}
+																}
+
+															}
+
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
+
 
 		private void timer19_Tick(object sender, EventArgs e)
 		{
+			if (serialPort1.IsOpen == true && timer3.Enabled == true || timer5.Enabled == true || timer7.Enabled == true)
+			{
+				serialPort1.Close();
+			}
 
+			if (panel1.BackColor == Color.Black)
+			{
+				label45.ForeColor = Color.White;
+				label59.ForeColor = Color.White;
+			}
+			else
+			{
+				label45.ForeColor = Color.Black;
+				label59.ForeColor = Color.Black;
+			}
+
+
+			if (panel3.BackColor == Color.Black)
+			{
+				label46.ForeColor = Color.White;
+				label60.ForeColor = Color.White;
+			}
+			else
+			{
+				label46.ForeColor = Color.Black;
+				label60.ForeColor = Color.Black;
+			}
+
+			if (panel4.BackColor == Color.Black)
+			{
+				label47.ForeColor = Color.White;
+				label61.ForeColor = Color.White;
+			}
+			else
+			{
+				label47.ForeColor = Color.Black;
+				label61.ForeColor = Color.Black;
+			}
+
+			if (panel5.BackColor == Color.Black)
+			{
+				label48.ForeColor = Color.White;
+				label62.ForeColor = Color.White;
+			}
+			else
+			{
+				label48.ForeColor = Color.Black;
+				label62.ForeColor = Color.Black;
+			}
 		}
 
 		
@@ -2701,28 +3361,31 @@ namespace zase4kak
 
 
 
-			if (label48.Text == "" && label15.Text == "номер заизду")
+			if (label116.Text == "" && label15.Text == "номер заизду")
 			{
-				n = 39;
+				n = 59;
 				//label48.Text = Convert.ToString(listBox1.Items[n]);
 
 				for (int i = 0; i < n; n--)
 				{
 
-					label48.Text = Convert.ToString(listBox1.Items[n]);
-					if (label48.Text != "")
+					label116.Text = Convert.ToString(listBox1.Items[n]);
+					if (label116.Text != "")
 					{
 						break;
 					}
 
 				}
 				n--;
+				label115.Text = Convert.ToString(listBox1.Items[n]);
+				n--;
+				label48.Text = Convert.ToString(listBox1.Items[n]);
+				n--;
 				label47.Text = Convert.ToString(listBox1.Items[n]);
 				n--;
 				label46.Text = Convert.ToString(listBox1.Items[n]);
 				n--;
 				label45.Text = Convert.ToString(listBox1.Items[n]);
-
 				label67.Text = Convert.ToString(n);
 				//Convert.ToString(listBox1.Items.Count);
 
@@ -2785,6 +3448,10 @@ namespace zase4kak
 					label60.Visible = false;
 					label61.Visible = false;
 					label62.Visible = false;
+					n--;
+					label116.Text = Convert.ToString(listBox1.Items[n]);
+					n--;
+					label115.Text = Convert.ToString(listBox1.Items[n]);
 					n--;
 					label48.Text = Convert.ToString(listBox1.Items[n]);
 					n--;
@@ -3502,38 +4169,93 @@ namespace zase4kak
 		
 	}
 
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
         private void timer24_Tick(object sender, EventArgs e)
 		{
 
-			time_to_traning_secs--;
-			label4.Text = Convert.ToString(time_to_traning_min) + ":" + Convert.ToString(time_to_traning_secs); //зчитую час гонки який був заданий у настройках
+			sec--;
+			label4.Text = Convert.ToString(min) + ":" + Convert.ToString(sec); //зчитую час гонки який був заданий у настройках
 
 
 
 
 
-			if (time_to_traning_secs == 0)                                               //таймер для гонки 1 перший заїзд
+			if (sec == 0)                                               //таймер для гонки 1 перший заїзд
 			{
-				time_to_traning_min--;
-				time_to_traning_secs = 60;
+				min--;
+				sec = 60;
 
-				if (time_to_traning_min == -1 && time_to_traning_secs == 60)
+				if (min == -1 && sec == 60)
 				{
-					serialPort1.Write("3");
 					perehid.Play();
 					serialPort1.WriteLine("3");//пауза
 					label69.Text = "Трек виключений";
 					label69.BackColor = Color.Red;
-					timer24.Enabled = false;
-					timer25.Enabled = true;
-					label13.Text = "Перехід!";
+					button10.Enabled = true;
+					button11.Enabled = false;
+					timer2.Enabled = false;
+					label4.Text = "00:00";
+					secs = Convert.ToInt32(textBox14.Text);
+					mins = 0;
+					timer3.Enabled = true;
+					label13.Text = "<<Перехід!>>";
+					button6.Enabled = false;
+
+
+					//перехід між доріжками
+
+
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
 
 
 
-					label17.Text = "0";
-					label24.Text = "0";
-					label23.Text = "0";
-					label25.Text = "0";
+					textBox16.Text = label45.Text;
+					label50.Text = label17.Text;
+					label66.Text = label21.Text;
+
+
+					textBox17.Text = label46.Text;
+					label51.Text = label24.Text;
+					label63.Text = label27.Text;
+
+					textBox18.Text = label47.Text;
+					label52.Text = label23.Text;
+					label64.Text = label26.Text;
+
+					textBox19.Text = label48.Text;
+					label53.Text = label25.Text;
+					label65.Text = label28.Text;
+
+
+
+
+					label45.Text = textBox17.Text;
+					label17.Text = label51.Text;
+					label21.Text = label63.Text;
+
+					label46.Text = textBox19.Text;
+					label24.Text = label53.Text;
+					label27.Text = label65.Text;
+
+					label47.Text = textBox16.Text;
+					label23.Text = label50.Text;
+					label26.Text = label66.Text;
+
+					label48.Text = textBox18.Text;
+					label25.Text = label52.Text;
+					label28.Text = label64.Text;
+
+
+
 
 					label18.Text = "00,000";
 					label22.Text = "00,000";
@@ -3555,24 +4277,8 @@ namespace zase4kak
 					label40.Text = "00,000";
 					label41.Text = "00,000";
 					label44.Text = "999";
-					label78.Text = "00,000";
-					label77.Text = "00,000";
-					label76.Text = "00,000";
 
-					label79.Text = "00,000";
-					label80.Text = "00,000";
-					label81.Text = "00,000";
-
-					label82.Text = "00,000";
-					label83.Text = "00,000";
-					label84.Text = "00,000";
-
-					label85.Text = "00,000";
-					label86.Text = "00,000";
-					label87.Text = "00,000";
-
-
-
+					number_group.Text = "1";
 				}
 			}
 		}

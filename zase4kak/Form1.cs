@@ -56,9 +56,13 @@ namespace zase4kak
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form8 f8 = new Form8();
+            Form2 f2 = new Form2();
             this.Visible = false;
-            f8.Show();
+            f2.Show();
+            f2.button1.Visible = false;
+            f2.button3.Visible = true;
+
+           
         }
     }
 }

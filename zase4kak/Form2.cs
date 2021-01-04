@@ -121,10 +121,12 @@ namespace zase4kak
 			if(textBox1.Text == "" || textBox2.Text == "")
             {
 				button1.Enabled = false;
+				button3.Enabled = false;
             }
             else
             {
 				button1.Enabled = true;
+				button3.Enabled = true;
             }
 
 
@@ -266,7 +268,79 @@ namespace zase4kak
 				
 				}
 			}
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+			Form8 f8 = new Form8();
+
+
+			f8.textBox24.Text = textBox5.Text;
+
+
+			f8.textBox13.Text = textBox1.Text;
+			f8.textBox14.Text = textBox2.Text;
+
+			switch (comboBox2.SelectedIndex)
+			{
+				case 0:
+					f8.label14.Text = "Ретро";
+					f8.label14.Visible = true;
+
+					break;
+				case 1:
+					f8.label14.Text = "Вантажівка";
+					f8.label14.Visible = true;
+					break;
+				case 2:
+					f8.label14.Text = "ЕS-Стандарт";
+					f8.label14.Visible = true;
+					break;
+				case 3:
+					f8.label14.Text = "G-33";
+					f8.label14.Visible = true;
+					break;
+				case 4:
+					f8.label14.Text = "F1-24";
+					f8.label14.Visible = true;
+					break;
+				case 5:
+					f8.label14.Text = "G12-Стандарт";
+					f8.label14.Visible = true;
+					break;
+				case 6:
+					f8.label14.Text = "G12";
+					f8.label14.Visible = true;
+					break;
+				case 7:
+					f8.label14.Text = "PR24";
+					f8.label14.Visible = true;
+					break;
+				case 8:
+					f8.label14.Text = "ES-24";
+					f8.label14.Visible = true;
+					break;
+				case 9:
+					f8.label14.Text = "ES-32";
+					f8.label14.Visible = true;
+					break;
+				case 10:
+					f8.label14.Text = "F1";
+					f8.label14.Visible = true;
+					break;
+				case 11:
+					f8.label14.Text = "G15";
+					f8.label14.Visible = true;
+					break;
+				case 12:
+					f8.label14.Text = "Open-G12";
+					f8.label14.Visible = true;
+					break;
+
+
+			}
+			f8.Show();
 		}
+    }
 	}
 
 

@@ -183,7 +183,70 @@ namespace zase4kak
 
             dataGridView1.Rows.Add("40", textBox202.Text, textBox201.Text, "J");
             dataGridView1.Rows[39].DefaultCellStyle.BackColor = Color.MediumTurquoise;
+
+            dataGridView1.Rows.Add("41", "", 999, "K") ;
             dataGridView1.Rows[40].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+
+            dataGridView1.Rows.Add("42", "", 999, "K");
+            dataGridView1.Rows[41].DefaultCellStyle.BackColor = Color.MediumTurquoise;
+
+            dataGridView1.Rows.Add("43", "", 999, "K");
+            dataGridView1.Rows[42].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+
+            dataGridView1.Rows.Add("44", "", 999, "K");
+            dataGridView1.Rows[43].DefaultCellStyle.BackColor = Color.MediumTurquoise;
+
+            dataGridView1.Rows.Add("45", "", 999, "L");
+            dataGridView1.Rows[44].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+
+            dataGridView1.Rows.Add("46", "", 999, "L");
+            dataGridView1.Rows[45].DefaultCellStyle.BackColor = Color.MediumTurquoise;
+
+            dataGridView1.Rows.Add("47", "", 999, "L");
+            dataGridView1.Rows[46].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+
+            dataGridView1.Rows.Add("48", "", 999, "L");
+            dataGridView1.Rows[47].DefaultCellStyle.BackColor = Color.MediumTurquoise;
+
+            dataGridView1.Rows.Add("49", "", 999, "M");
+            dataGridView1.Rows[48].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+
+            dataGridView1.Rows.Add("50", "", 999, "M");
+            dataGridView1.Rows[49].DefaultCellStyle.BackColor = Color.MediumTurquoise;
+
+            dataGridView1.Rows.Add("51", "", 999, "M");
+            dataGridView1.Rows[50].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+
+            dataGridView1.Rows.Add("52", "", 999, "M");
+            dataGridView1.Rows[51].DefaultCellStyle.BackColor = Color.MediumTurquoise;
+
+            dataGridView1.Rows.Add("53", "", 999, "N");
+            dataGridView1.Rows[52].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+
+            dataGridView1.Rows.Add("54", "", 999, "N");
+            dataGridView1.Rows[53].DefaultCellStyle.BackColor = Color.MediumTurquoise;
+
+            dataGridView1.Rows.Add("55", "", 999, "N");
+            dataGridView1.Rows[54].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+
+            dataGridView1.Rows.Add("56", "", 999, "N");
+            dataGridView1.Rows[55].DefaultCellStyle.BackColor = Color.MediumTurquoise;
+
+            dataGridView1.Rows.Add("57", "", 999, "O");
+            dataGridView1.Rows[56].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+
+            dataGridView1.Rows.Add("58", "", 999, "O");
+            dataGridView1.Rows[57].DefaultCellStyle.BackColor = Color.MediumTurquoise;
+
+            dataGridView1.Rows.Add("59", "", 999, "O");
+            dataGridView1.Rows[58].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+
+            dataGridView1.Rows.Add("60", "", 999, "O");
+            dataGridView1.Rows[59].DefaultCellStyle.BackColor = Color.MediumTurquoise;
+
+
+
+            dataGridView1.Rows[60].DefaultCellStyle.BackColor = Color.PaleTurquoise;
 
             timer1.Enabled = false;
         }
