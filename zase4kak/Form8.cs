@@ -128,6 +128,9 @@ namespace zase4kak
 			timer26.Interval = 15;
 			Timeo = 0.0;
 
+			timer27.Interval = 15;
+			Timeb = 0.0;
+
 			if (label4.Text == "4")             //звук для time to start
 			{
 
@@ -156,7 +159,7 @@ namespace zase4kak
 					min = Convert.ToInt32(textBox13.Text);
 					label13.Text = "<<Гонка!>>";
 					label15.Visible = true;
-					label15.Text = "1/4";
+					label15.Text = "1/6";
 					label13.Visible = true;
 					timer20.Enabled = true;
 					timer11.Enabled = true;
@@ -225,44 +228,62 @@ namespace zase4kak
 					timer11.Enabled = false;
 					timer15.Enabled = false;
 					timer16.Enabled = false;
+					timer26.Enabled = false;
+					timer27.Enabled = false;
 
 
 
-					textBox16.Text = label45.Text;
+					textBox16.Text = label45.Text;  //червона
 					label50.Text = label17.Text;
 					label66.Text = label21.Text;
 
 
-					textBox17.Text = label46.Text;
+					textBox17.Text = label46.Text; //біла
 					label51.Text = label24.Text;
 					label63.Text = label27.Text;
 
-					textBox18.Text = label47.Text;
+					textBox18.Text = label47.Text;  //зелена
 					label52.Text = label23.Text;
 					label64.Text = label26.Text;
 
-					textBox19.Text = label48.Text;
+					textBox19.Text = label48.Text;  //оранжева
 					label53.Text = label25.Text;
 					label65.Text = label28.Text;
 
+					textBox28.Text = label115.Text;  //синя
+					label90.Text = label97.Text;
+					label73.Text = label95.Text;
+
+					textBox32.Text = label116.Text;  //жовта
+					label105.Text = label112.Text;
+					label102.Text = label110.Text;
 
 
 
-					label45.Text = textBox17.Text;
-					label17.Text = label51.Text;
-					label21.Text = label63.Text;
 
-					label46.Text = textBox19.Text;
-					label24.Text = label53.Text;
-					label27.Text = label65.Text;
+					label45.Text = textBox32.Text;
+					label17.Text = label105.Text;
+					label21.Text = label102.Text;
+
+					label46.Text = textBox28.Text;
+					label24.Text = label90.Text;
+					label27.Text = label73.Text;
 
 					label47.Text = textBox16.Text;
 					label23.Text = label50.Text;
 					label26.Text = label66.Text;
 
-					label48.Text = textBox18.Text;
-					label25.Text = label52.Text;
-					label28.Text = label64.Text;
+					label48.Text = textBox17.Text;
+					label25.Text = label51.Text;
+					label28.Text = label63.Text;
+
+					label115.Text = textBox18.Text;
+					label97.Text = label52.Text;
+					label95.Text = label64.Text;
+
+					label116.Text = textBox19.Text;
+					label112.Text = label53.Text;
+					label110.Text = label65.Text;
 
 
 
@@ -272,21 +293,37 @@ namespace zase4kak
 					label19.Text = "00,000";
 					label20.Text = "00,000";
 					label16.Text = "999";
+
 					label29.Text = "00,000";
 					label30.Text = "00,000";
 					label31.Text = "00,000";
 					label32.Text = "00,000";
 					label42.Text = "999";
+
 					label35.Text = "00,000";
 					label36.Text = "00,000";
 					label37.Text = "00,000";
 					label34.Text = "00,000";
 					label43.Text = "999";
+
 					label38.Text = "00,000";
 					label39.Text = "00,000";
 					label40.Text = "00,000";
 					label41.Text = "00,000";
 					label44.Text = "999";
+
+					label94.Text = "00,000";
+					label96.Text = "00,000";
+					label93.Text = "00,000";
+					label99.Text = "00,000";
+					label92.Text = "999";
+
+					label100.Text = "00,000";
+					label101.Text = "00,000";
+					label103.Text = "00,000";
+					label114.Text = "00,000";
+					label107.Text = "999";
+
 
 					number_group.Text = "1";
 				}
@@ -334,10 +371,13 @@ namespace zase4kak
 				label69.BackColor = Color.Green;
 				button10.Enabled = false;
 				button11.Enabled = true;
-				Time = Convert.ToDouble(label63.Text);
-				Timeg = Convert.ToDouble(label64.Text);
-				Timez = Convert.ToDouble(label65.Text);
+
+				Time = Convert.ToDouble(label102.Text); 
+				Timeg = Convert.ToDouble(label63.Text);
+				Timez = Convert.ToDouble(label73.Text);
 				Times = Convert.ToDouble(label66.Text);
+				Timeo = Convert.ToDouble(label64.Text);
+				Timeb = Convert.ToDouble(label65.Text);
 
 				timer3.Enabled = false;
 				timer4.Enabled = true;
@@ -353,12 +393,14 @@ namespace zase4kak
 
 				label4.Text = "00:00";
 				label13.Text = "<<Гонка!>>";
-				label15.Text = "2/4";
+				label15.Text = "2/6";
 
 				timer17.Enabled = true;
 				timer11.Enabled = true;
 				timer15.Enabled = true;
 				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
 
 				button6.Enabled = true;
 				button6.Focus();
@@ -405,61 +447,96 @@ namespace zase4kak
 					timer11.Enabled = false;
 					timer15.Enabled = false;
 					timer16.Enabled = false;
+					timer26.Enabled = false;
+					timer27.Enabled = false;
 
-					textBox16.Text = label45.Text;
+					textBox16.Text = label45.Text;  //червона
 					label50.Text = label17.Text;
 					label66.Text = label21.Text;
 
-					textBox17.Text = label46.Text;
+
+					textBox17.Text = label46.Text; //біла
 					label51.Text = label24.Text;
 					label63.Text = label27.Text;
 
-					textBox18.Text = label47.Text;
+					textBox18.Text = label47.Text;  //зелена
 					label52.Text = label23.Text;
 					label64.Text = label26.Text;
 
-					textBox19.Text = label48.Text;
+					textBox19.Text = label48.Text;  //оранжева
 					label53.Text = label25.Text;
 					label65.Text = label28.Text;
 
+					textBox28.Text = label115.Text;  //синя
+					label90.Text = label97.Text;
+					label73.Text = label95.Text;
+
+					textBox32.Text = label116.Text;  //жовта
+					label105.Text = label112.Text;
+					label102.Text = label110.Text;
 
 
-					label45.Text = textBox17.Text;
-					label17.Text = label51.Text;
-					label21.Text = label63.Text;
 
-					label46.Text = textBox19.Text;
-					label24.Text = label53.Text;
-					label27.Text = label65.Text;
+
+					label45.Text = textBox32.Text;
+					label17.Text = label105.Text;
+					label21.Text = label102.Text;
+
+					label46.Text = textBox28.Text;
+					label24.Text = label90.Text;
+					label27.Text = label73.Text;
 
 					label47.Text = textBox16.Text;
 					label23.Text = label50.Text;
 					label26.Text = label66.Text;
 
-					label48.Text = textBox18.Text;
-					label25.Text = label52.Text;
-					label28.Text = label64.Text;
+					label48.Text = textBox17.Text;
+					label25.Text = label51.Text;
+					label28.Text = label63.Text;
+
+					label115.Text = textBox18.Text;
+					label97.Text = label52.Text;
+					label95.Text = label64.Text;
+
+					label116.Text = textBox19.Text;
+					label112.Text = label53.Text;
+					label110.Text = label65.Text;
 
 					label18.Text = "00,000";
 					label22.Text = "00,000";
 					label19.Text = "00,000";
 					label20.Text = "00,000";
 					label16.Text = "999";
+
 					label29.Text = "00,000";
 					label30.Text = "00,000";
 					label31.Text = "00,000";
 					label32.Text = "00,000";
 					label42.Text = "999";
+
 					label35.Text = "00,000";
 					label36.Text = "00,000";
 					label37.Text = "00,000";
 					label34.Text = "00,000";
 					label43.Text = "999";
+
 					label38.Text = "00,000";
 					label39.Text = "00,000";
 					label40.Text = "00,000";
 					label41.Text = "00,000";
 					label44.Text = "999";
+
+					label94.Text = "00,000";
+					label96.Text = "00,000";
+					label93.Text = "00,000";
+					label99.Text = "00,000";
+					label92.Text = "999";
+
+					label100.Text = "00,000";
+					label101.Text = "00,000";
+					label103.Text = "00,000";
+					label114.Text = "00,000";
+					label107.Text = "999";
 
 					number_group.Text = "2";
 
@@ -512,11 +589,12 @@ namespace zase4kak
 				timer5.Enabled = false;
 				timer6.Enabled = true;
 
-				Time = Convert.ToDouble(label63.Text);
-				Timeg = Convert.ToDouble(label64.Text);
-				Timez = Convert.ToDouble(label65.Text);
+				Time = Convert.ToDouble(label102.Text);
+				Timeg = Convert.ToDouble(label63.Text);
+				Timez = Convert.ToDouble(label73.Text);
 				Times = Convert.ToDouble(label66.Text);
-
+				Timeo = Convert.ToDouble(label64.Text);
+				Timeb = Convert.ToDouble(label65.Text);
 
 				sec = 1;
 
@@ -533,12 +611,14 @@ namespace zase4kak
 
 				label4.Text = "00:00";
 				label13.Text = "<<Гонка!>>";
-				label15.Text = "3/4";
+				label15.Text = "3/6";
 
 				timer17.Enabled = true;
 				timer11.Enabled = true;
 				timer15.Enabled = true;
 				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
 
 				button6.Enabled = true;
 				button6.Focus();
@@ -615,64 +695,96 @@ namespace zase4kak
 					timer11.Enabled = false;
 					timer15.Enabled = false;
 					timer16.Enabled = false;
+					timer26.Enabled = false;
+					timer27.Enabled = false;
 
-
-					textBox16.Text = label45.Text;
+					textBox16.Text = label45.Text;  //червона
 					label50.Text = label17.Text;
 					label66.Text = label21.Text;
 
 
-					textBox17.Text = label46.Text;
+					textBox17.Text = label46.Text; //біла
 					label51.Text = label24.Text;
 					label63.Text = label27.Text;
 
-					textBox18.Text = label47.Text;
+					textBox18.Text = label47.Text;  //зелена
 					label52.Text = label23.Text;
 					label64.Text = label26.Text;
 
-					textBox19.Text = label48.Text;
+					textBox19.Text = label48.Text;  //оранжева
 					label53.Text = label25.Text;
 					label65.Text = label28.Text;
 
+					textBox28.Text = label115.Text;  //синя
+					label90.Text = label97.Text;
+					label73.Text = label95.Text;
+
+					textBox32.Text = label116.Text;  //жовта
+					label105.Text = label112.Text;
+					label102.Text = label110.Text;
 
 
 
-					label45.Text = textBox17.Text;
-					label17.Text = label51.Text;
-					label21.Text = label63.Text;
 
-					label46.Text = textBox19.Text;
-					label24.Text = label53.Text;
-					label27.Text = label65.Text;
+					label45.Text = textBox32.Text;
+					label17.Text = label105.Text;
+					label21.Text = label102.Text;
+
+					label46.Text = textBox28.Text;
+					label24.Text = label90.Text;
+					label27.Text = label73.Text;
 
 					label47.Text = textBox16.Text;
 					label23.Text = label50.Text;
 					label26.Text = label66.Text;
 
-					label48.Text = textBox18.Text;
-					label25.Text = label52.Text;
-					label28.Text = label64.Text;
+					label48.Text = textBox17.Text;
+					label25.Text = label51.Text;
+					label28.Text = label63.Text;
+
+					label115.Text = textBox18.Text;
+					label97.Text = label52.Text;
+					label95.Text = label64.Text;
+
+					label116.Text = textBox19.Text;
+					label112.Text = label53.Text;
+					label110.Text = label65.Text;
 
 					label18.Text = "00,000";
 					label22.Text = "00,000";
 					label19.Text = "00,000";
 					label20.Text = "00,000";
 					label16.Text = "999";
+
 					label29.Text = "00,000";
 					label30.Text = "00,000";
 					label31.Text = "00,000";
 					label32.Text = "00,000";
 					label42.Text = "999";
+
 					label35.Text = "00,000";
 					label36.Text = "00,000";
 					label37.Text = "00,000";
 					label34.Text = "00,000";
 					label43.Text = "999";
+
 					label38.Text = "00,000";
 					label39.Text = "00,000";
 					label40.Text = "00,000";
 					label41.Text = "00,000";
 					label44.Text = "999";
+
+					label94.Text = "00,000";
+					label96.Text = "00,000";
+					label93.Text = "00,000";
+					label99.Text = "00,000";
+					label92.Text = "999";
+
+					label100.Text = "00,000";
+					label101.Text = "00,000";
+					label103.Text = "00,000";
+					label114.Text = "00,000";
+					label107.Text = "999";
 
 					number_group.Text = "3";
 
@@ -785,11 +897,7 @@ namespace zase4kak
 
 
 			{
-				label8.Visible = true;
-				panel6.Visible = true;
-				panel7.Visible = true;
-				panel8.Visible = true;
-				panel9.Visible = true;
+				
 				label55.Visible = true;
 				label59.Visible = true;
 				label60.Visible = true;
@@ -1318,7 +1426,7 @@ namespace zase4kak
 
 		private void timer19_Tick(object sender, EventArgs e)
 		{
-			if (serialPort1.IsOpen == true && timer3.Enabled == true || timer5.Enabled == true || timer7.Enabled == true)
+			if (serialPort1.IsOpen == true && timer3.Enabled == true || timer5.Enabled == true || timer7.Enabled == true || timer32.Enabled == true || timer33.Enabled == true)
 			{
 				serialPort1.Close();
 			}
@@ -1628,11 +1736,7 @@ namespace zase4kak
 
 
 			{
-				label8.Visible = true;
-				panel6.Visible = true;
-				panel7.Visible = true;
-				panel8.Visible = true;
-				panel9.Visible = true;
+				
 				label55.Visible = true;
 				label59.Visible = true;
 				label60.Visible = true;
@@ -3442,11 +3546,7 @@ namespace zase4kak
 					label40.Text = "00,000";
 					label41.Text = "00,000";
 					label44.Text = "999";
-					label8.Visible = false;
-					panel6.Visible = false;
-					panel7.Visible = false;
-					panel8.Visible = false;
-					panel9.Visible = false;
+					
 					label55.Visible = false;
 					label59.Visible = false;
 					label60.Visible = false;
@@ -3685,11 +3785,7 @@ namespace zase4kak
 			label40.Text = "00,000";
 			label41.Text = "00,000";
 			label44.Text = "999";
-			label8.Visible = false;
-			panel6.Visible = false;
-			panel7.Visible = false;
-			panel8.Visible = false;
-			panel9.Visible = false;
+			
 			label55.Visible = false;
 			label59.Visible = false;
 			label60.Visible = false;
@@ -4178,6 +4274,364 @@ namespace zase4kak
 
         }
 
+		private void timer30_Tick(object sender, EventArgs e)
+		{
+			sec--;
+			label4.Text = Convert.ToString(min) + ":" + Convert.ToString(sec); //зчитую час гонки який був заданий у настройках
+
+
+
+
+
+			if (sec == 0)                                               //таймер для гонки 1 перший заїзд
+			{
+				min--;
+				sec = 60;
+
+				if (min == -1 && sec == 60)
+				{
+					perehid.Play();
+					serialPort1.WriteLine("3");//пауза
+					label69.Text = "Трек виключений";
+					label69.BackColor = Color.Red;
+					button10.Enabled = true;
+					button11.Enabled = false;
+					timer30.Enabled = false;
+					label4.Text = "00:00";
+					secs = Convert.ToInt32(textBox14.Text);
+					mins = 0;
+					timer33.Enabled = true;
+					label13.Text = "<<Перехід!>>";
+					button6.Enabled = false;
+
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					timer26.Enabled = false;
+					timer27.Enabled = false;
+
+
+					textBox16.Text = label45.Text;  //червона
+					label50.Text = label17.Text;
+					label66.Text = label21.Text;
+
+
+					textBox17.Text = label46.Text; //біла
+					label51.Text = label24.Text;
+					label63.Text = label27.Text;
+
+					textBox18.Text = label47.Text;  //зелена
+					label52.Text = label23.Text;
+					label64.Text = label26.Text;
+
+					textBox19.Text = label48.Text;  //оранжева
+					label53.Text = label25.Text;
+					label65.Text = label28.Text;
+
+					textBox28.Text = label115.Text;  //синя
+					label90.Text = label97.Text;
+					label73.Text = label95.Text;
+
+					textBox32.Text = label116.Text;  //жовта
+					label105.Text = label112.Text;
+					label102.Text = label110.Text;
+
+
+
+
+					label45.Text = textBox32.Text;
+					label17.Text = label105.Text;
+					label21.Text = label102.Text;
+
+					label46.Text = textBox28.Text;
+					label24.Text = label90.Text;
+					label27.Text = label73.Text;
+
+					label47.Text = textBox16.Text;
+					label23.Text = label50.Text;
+					label26.Text = label66.Text;
+
+					label48.Text = textBox17.Text;
+					label25.Text = label51.Text;
+					label28.Text = label63.Text;
+
+					label115.Text = textBox18.Text;
+					label97.Text = label52.Text;
+					label95.Text = label64.Text;
+
+					label116.Text = textBox19.Text;
+					label112.Text = label53.Text;
+					label110.Text = label65.Text;
+
+					label18.Text = "00,000";
+					label22.Text = "00,000";
+					label19.Text = "00,000";
+					label20.Text = "00,000";
+					label16.Text = "999";
+
+					label29.Text = "00,000";
+					label30.Text = "00,000";
+					label31.Text = "00,000";
+					label32.Text = "00,000";
+					label42.Text = "999";
+
+					label35.Text = "00,000";
+					label36.Text = "00,000";
+					label37.Text = "00,000";
+					label34.Text = "00,000";
+					label43.Text = "999";
+
+					label38.Text = "00,000";
+					label39.Text = "00,000";
+					label40.Text = "00,000";
+					label41.Text = "00,000";
+					label44.Text = "999";
+
+					label94.Text = "00,000";
+					label96.Text = "00,000";
+					label93.Text = "00,000";
+					label99.Text = "00,000";
+					label92.Text = "999";
+
+					label100.Text = "00,000";
+					label101.Text = "00,000";
+					label103.Text = "00,000";
+					label114.Text = "00,000";
+					label107.Text = "999";
+
+					number_group.Text = "5";
+				}
+			}
+		}
+
+        private void timer31_Tick(object sender, EventArgs e)
+        {
+			sec--;
+			label4.Text = Convert.ToString(min) + ":" + Convert.ToString(sec); //зчитую час гонки який був заданий у настройках
+
+
+
+
+
+			if (sec == 0)                                               //таймер для гонки 1 перший заїзд
+			{
+				min--;
+				sec = 60;
+
+				if (min == -1 && sec == 60)
+				{
+					button6.Enabled = false;
+					serialPort1.WriteLine("3"); //пауза
+					label69.Text = "Трек виключений";
+					label69.BackColor = Color.Red;
+					button10.Enabled = true;
+					button11.Enabled = false;
+
+					kinetsgonkisound.Play();
+					label68.Visible = true;
+					textBox20.Visible = true;
+					textBox21.Visible = true;
+					textBox22.Visible = true;
+					textBox23.Visible = true;
+					textBox36.Visible = true;
+					textBox37.Visible = true;
+
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					timer26.Enabled = false;
+					timer27.Enabled = false;
+
+					button9.Visible = true;
+					button6.Enabled = false;
+
+
+					timer31.Enabled = false;
+					label4.Text = "00:00";
+					label13.Text = "<<Фініш!>>";
+
+					
+
+					number_group.Text = "0";
+
+					serialPort1.Close();
+					//вивід результату в таблицю
+
+
+
+
+				}
+
+
+			}
+
+
+		}
+
+        private void timer32_Tick(object sender, EventArgs e)
+        {
+			label4.Text = Convert.ToString(mins) + ":" + Convert.ToString(secs);
+			secs--;
+
+			button6.Enabled = false;
+
+			if (label4.Text == "0:3")
+			{
+				timetostartsound.Play();
+			}
+
+			if (label4.Text == "0:16")//залишилось 15 секунд
+			{
+				sekynd.Play();
+			}
+
+
+			if (secs > 60)
+			{
+				mins++;
+				secs = secs - 60;
+
+			}
+			if (secs == -1)
+			{
+
+				mins--;
+				secs = 60;
+			}
+
+			if (secs == 60 && mins == -1)
+			{
+				serialPort1.Open();
+				serialPort1.WriteLine("4"); //продовжити 
+				label69.Text = "Трек включений";
+				label69.BackColor = Color.Green;
+				button10.Enabled = false;
+				button11.Enabled = true;
+
+				Time = Convert.ToDouble(label102.Text);
+				Timeg = Convert.ToDouble(label63.Text);
+				Timez = Convert.ToDouble(label73.Text);
+				Times = Convert.ToDouble(label66.Text);
+				Timeo = Convert.ToDouble(label64.Text);
+				Timeb = Convert.ToDouble(label65.Text);
+
+
+				timer32.Enabled = false;
+				timer30.Enabled = true;
+				sec = 1;
+				if (textBox25.Text == "")
+				{
+					min = Convert.ToInt32(textBox13.Text);
+				}
+				else
+				{
+					min = Convert.ToInt32(textBox24.Text);
+				}
+
+				label4.Text = "00:00";
+				label13.Text = "<<Гонка!>>";
+				label15.Text = "5/6";
+
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+
+				button6.Enabled = true;
+				button6.Focus();
+			}
+		}
+
+        private void timer33_Tick(object sender, EventArgs e)
+        {
+			label4.Text = Convert.ToString(mins) + ":" + Convert.ToString(secs);
+			secs--;
+
+			button6.Enabled = false;
+
+			if (label4.Text == "0:3")
+			{
+				timetostartsound.Play();
+			}
+
+			if (label4.Text == "0:16")//залишилось 15 секунд
+			{
+				sekynd.Play();
+			}
+
+
+			if (secs > 60)
+			{
+				mins++;
+				secs = secs - 60;
+
+			}
+			if (secs == -1)
+			{
+
+				mins--;
+				secs = 60;
+			}
+
+			if (secs == 60 && mins == -1)
+			{
+				serialPort1.Open();
+				serialPort1.WriteLine("4"); //продовжити 
+				label69.Text = "Трек включений";
+				label69.BackColor = Color.Green;
+				button10.Enabled = false;
+				button11.Enabled = true;
+
+				Time = Convert.ToDouble(label102.Text);
+				Timeg = Convert.ToDouble(label63.Text);
+				Timez = Convert.ToDouble(label73.Text);
+				Times = Convert.ToDouble(label66.Text);
+				Timeo = Convert.ToDouble(label64.Text);
+				Timeb = Convert.ToDouble(label65.Text);
+
+
+				timer33.Enabled = false;
+				timer31.Enabled = true;
+				sec = 1;
+				if (textBox25.Text == "")
+				{
+					min = Convert.ToInt32(textBox13.Text);
+				}
+				else
+				{
+					min = Convert.ToInt32(textBox24.Text);
+				}
+
+				label4.Text = "00:00";
+				label13.Text = "<<Гонка!>>";
+				label15.Text = "6/6";
+
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+
+				button6.Enabled = true;
+				button6.Focus();
+			}
+		}
+
+        private void label115_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label53_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void timer26_Tick_1(object sender, EventArgs e)
         {
 			Timeo += 0.001 * 17;                   //timer на час кола синя доріжка
@@ -4543,11 +4997,12 @@ namespace zase4kak
 				timer7.Enabled = false;
 				timer8.Enabled = true;
 
-				Time = Convert.ToDouble(label63.Text);
-				Timeg = Convert.ToDouble(label64.Text);
-				Timez = Convert.ToDouble(label65.Text);
+				Time = Convert.ToDouble(label102.Text);
+				Timeg = Convert.ToDouble(label63.Text);
+				Timez = Convert.ToDouble(label73.Text);
 				Times = Convert.ToDouble(label66.Text);
-
+				Timeo = Convert.ToDouble(label64.Text);
+				Timeb = Convert.ToDouble(label65.Text);
 
 				sec = 1;
 				if (textBox25.Text == "")
@@ -4562,12 +5017,14 @@ namespace zase4kak
 
 				label4.Text = "00:00";
 				label13.Text = "<<Гонка!>>";
-				label15.Text = "4/4";
+				label15.Text = "4/6";
 
 				timer17.Enabled = true;
 				timer11.Enabled = true;
 				timer15.Enabled = true;
 				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
 
 				button6.Enabled = true;
 				button6.Focus();
@@ -4593,40 +5050,121 @@ namespace zase4kak
 
 				if (min == -1 && sec == 60)
 				{
-					button6.Enabled = false;
-					serialPort1.WriteLine("3"); //пауза
+					perehid.Play();
+					serialPort1.WriteLine("3");//пауза
 					label69.Text = "Трек виключений";
 					label69.BackColor = Color.Red;
 					button10.Enabled = true;
 					button11.Enabled = false;
-
-					kinetsgonkisound.Play();
-					label68.Visible = true;
-					textBox20.Visible = true;
-					textBox21.Visible = true;
-					textBox22.Visible = true;
-					textBox23.Visible = true;
-					button9.Visible = true;
+					timer8.Enabled = false;
+					label4.Text = "00:00";
+					secs = Convert.ToInt32(textBox14.Text);
+					mins = 0;
+					timer32.Enabled = true;
+					label13.Text = "<<Перехід!>>";
 					button6.Enabled = false;
 
 
-					timer8.Enabled = false;
-					label4.Text = "00:00";
-					label13.Text = "<<Фініш!>>";
-
-					label8.Visible = false;
-					panel6.Visible = false;
-					panel7.Visible = false;
-					panel8.Visible = false;
-					panel9.Visible = false;
-
-					number_group.Text = "0";
-
-					serialPort1.Close();
-					//вивід результату в таблицю
+					//перехід між доріжками
 
 
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					timer26.Enabled = false;
+					timer27.Enabled = false;
 
+
+					textBox16.Text = label45.Text;  //червона
+					label50.Text = label17.Text;
+					label66.Text = label21.Text;
+
+
+					textBox17.Text = label46.Text; //біла
+					label51.Text = label24.Text;
+					label63.Text = label27.Text;
+
+					textBox18.Text = label47.Text;  //зелена
+					label52.Text = label23.Text;
+					label64.Text = label26.Text;
+
+					textBox19.Text = label48.Text;  //оранжева
+					label53.Text = label25.Text;
+					label65.Text = label28.Text;
+
+					textBox28.Text = label115.Text;  //синя
+					label90.Text = label97.Text;
+					label73.Text = label95.Text;
+
+					textBox32.Text = label116.Text;  //жовта
+					label105.Text = label112.Text;
+					label102.Text = label110.Text;
+
+
+
+
+					label45.Text = textBox32.Text;
+					label17.Text = label105.Text;
+					label21.Text = label102.Text;
+
+					label46.Text = textBox28.Text;
+					label24.Text = label90.Text;
+					label27.Text = label73.Text;
+
+					label47.Text = textBox16.Text;
+					label23.Text = label50.Text;
+					label26.Text = label66.Text;
+
+					label48.Text = textBox17.Text;
+					label25.Text = label51.Text;
+					label28.Text = label63.Text;
+
+					label115.Text = textBox18.Text;
+					label97.Text = label52.Text;
+					label95.Text = label64.Text;
+
+					label116.Text = textBox19.Text;
+					label112.Text = label53.Text;
+					label110.Text = label65.Text;
+
+					label18.Text = "00,000";
+					label22.Text = "00,000";
+					label19.Text = "00,000";
+					label20.Text = "00,000";
+					label16.Text = "999";
+
+					label29.Text = "00,000";
+					label30.Text = "00,000";
+					label31.Text = "00,000";
+					label32.Text = "00,000";
+					label42.Text = "999";
+
+					label35.Text = "00,000";
+					label36.Text = "00,000";
+					label37.Text = "00,000";
+					label34.Text = "00,000";
+					label43.Text = "999";
+
+					label38.Text = "00,000";
+					label39.Text = "00,000";
+					label40.Text = "00,000";
+					label41.Text = "00,000";
+					label44.Text = "999";
+
+					label94.Text = "00,000";
+					label96.Text = "00,000";
+					label93.Text = "00,000";
+					label99.Text = "00,000";
+					label92.Text = "999";
+
+					label100.Text = "00,000";
+					label101.Text = "00,000";
+					label103.Text = "00,000";
+					label114.Text = "00,000";
+					label107.Text = "999";
+
+					number_group.Text = "4";
 
 				}
 
@@ -4647,7 +5185,7 @@ namespace zase4kak
 
 				case 10000:
                     {
-						l = Convert.ToInt32(label112.Text);          //синя доріжка
+						l = Convert.ToInt32(label112.Text);          //жовта доріжка
 						timer29.Enabled = true;
 						timer27.Enabled = false;
 						label114.Text = label110.Text;
