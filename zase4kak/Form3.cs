@@ -3453,6 +3453,23 @@ button19.Visible = false;
 				button1.Enabled = true;
         }
 
+        private void dataGridView2_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
+        {
+			if (double.Parse(e.CellValue1.ToString()) > double.Parse(e.CellValue2.ToString()))
+			{
+				e.SortResult = 1;
+			}
+			else if (double.Parse(e.CellValue1.ToString()) < double.Parse(e.CellValue2.ToString()))
+			{
+				e.SortResult = -1;
+			}
+			else
+			{
+				e.SortResult = 0;
+			}
+			e.Handled = true;
+		}
+
         private void timer24_Tick(object sender, EventArgs e)
         {
 			

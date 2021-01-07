@@ -1438,7 +1438,6 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 1000;
             this.timer2.Tag = "час 1 заїзду";
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
@@ -1450,7 +1449,6 @@
             // 
             // timer4
             // 
-            this.timer4.Interval = 1000;
             this.timer4.Tag = "час 2 заїзду";
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
@@ -1462,7 +1460,6 @@
             // 
             // timer6
             // 
-            this.timer6.Interval = 1000;
             this.timer6.Tag = "третя гонка";
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
@@ -2043,6 +2040,7 @@
             this.dataGridView2.Size = new System.Drawing.Size(417, 197);
             this.dataGridView2.TabIndex = 70;
             this.dataGridView2.Visible = false;
+            this.dataGridView2.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView2_SortCompare);
             // 
             // dataGridViewTextBoxColumn1
             // 

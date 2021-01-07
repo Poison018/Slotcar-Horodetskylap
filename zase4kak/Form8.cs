@@ -15,8 +15,8 @@ using zase4ka.Properties;
 
 namespace zase4kak
 {
-    public partial class Form8 : Form
-    {
+	public partial class Form8 : Form
+	{
 		string[,] list = new string[60, 5];
 		string[] name = new string[40];
 		SoundPlayer timetostartsound = new SoundPlayer();
@@ -30,8 +30,8 @@ namespace zase4kak
 		int timetotraning = 60;
 
 		public Form8()
-        {
-            InitializeComponent();
+		{
+			InitializeComponent();
 			CheckForIllegalCrossThreadCalls = false;
 
 			// вибір кольору доріжки
@@ -81,7 +81,8 @@ namespace zase4kak
 
 			button6.Focus();
 		}
-
+		
+		
 		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, v, l, time_to_traning_min, time_to_traning_sec;
 
 		int time_to_traning_secs = 1;// секунди для тренування
@@ -326,6 +327,318 @@ namespace zase4kak
 
 
 					number_group.Text = "1";
+
+					// сортування по результату
+					dataGridView3.Rows.Add(label17.Text + "," + 6);
+					dataGridView3.Rows.Add(label24.Text + "," + 5);
+					dataGridView3.Rows.Add(label23.Text + "," + 4);
+					dataGridView3.Rows.Add(label25.Text + "," + 3);
+					dataGridView3.Rows.Add(label97.Text + "," + 2);
+					dataGridView3.Rows.Add(label112.Text + "," + 1);
+
+					dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+
+
+
+
+
+
+					//червона
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel1.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel1.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel1.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel1.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+
+
+					// біла
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel3.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel3.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel3.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel3.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					// зелена
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel4.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel4.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel4.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel4.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					//оранжева 
+
+
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel5.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel5.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel5.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel5.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					//синя
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+					{
+						panel10.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel10.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel10.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel10.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel10.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel10.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+
+					//жовта
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+					{
+						panel11.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+						{
+
+							panel11.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+							{
+
+								panel11.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+								{
+
+									panel11.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+									{
+
+										panel11.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+										{
+
+											panel11.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+					timer34.Enabled = true;
 				}
 			}
 		}
@@ -372,7 +685,7 @@ namespace zase4kak
 				button10.Enabled = false;
 				button11.Enabled = true;
 
-				Time = Convert.ToDouble(label102.Text); 
+				Time = Convert.ToDouble(label102.Text);
 				Timeg = Convert.ToDouble(label63.Text);
 				Timez = Convert.ToDouble(label73.Text);
 				Times = Convert.ToDouble(label66.Text);
@@ -539,6 +852,319 @@ namespace zase4kak
 					label107.Text = "999";
 
 					number_group.Text = "2";
+
+
+					// сортування по результату
+					dataGridView3.Rows.Add(label17.Text + "," + 6);
+					dataGridView3.Rows.Add(label24.Text + "," + 5);
+					dataGridView3.Rows.Add(label23.Text + "," + 4);
+					dataGridView3.Rows.Add(label25.Text + "," + 3);
+					dataGridView3.Rows.Add(label97.Text + "," + 2);
+					dataGridView3.Rows.Add(label112.Text + "," + 1);
+
+					dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+
+
+
+
+
+
+					//червона
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel1.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel1.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel1.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel1.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+
+
+					// біла
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel3.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel3.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel3.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel3.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					// зелена
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel4.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel4.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel4.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel4.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					//оранжева 
+
+
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel5.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel5.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel5.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel5.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					//синя
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+					{
+						panel10.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel10.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel10.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel10.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel10.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel10.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+
+					//жовта
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+					{
+						panel11.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+						{
+
+							panel11.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+							{
+
+								panel11.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+								{
+
+									panel11.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+									{
+
+										panel11.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+										{
+
+											panel11.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+					timer34.Enabled = true;
 
 				}
 			}
@@ -788,6 +1414,321 @@ namespace zase4kak
 
 					number_group.Text = "3";
 
+
+
+
+					// сортування по результату
+					dataGridView3.Rows.Add(label17.Text + "," + 6);
+					dataGridView3.Rows.Add(label24.Text + "," + 5);
+					dataGridView3.Rows.Add(label23.Text + "," + 4);
+					dataGridView3.Rows.Add(label25.Text + "," + 3);
+					dataGridView3.Rows.Add(label97.Text + "," + 2);
+					dataGridView3.Rows.Add(label112.Text + "," + 1);
+
+					dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+
+
+
+
+
+
+					//червона
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel1.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel1.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel1.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel1.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+
+
+					// біла
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel3.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel3.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel3.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel3.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					// зелена
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel4.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel4.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel4.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel4.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					//оранжева 
+
+
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel5.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel5.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel5.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel5.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					//синя
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+					{
+						panel10.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel10.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel10.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel10.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel10.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel10.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+
+					//жовта
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+					{
+						panel11.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+						{
+
+							panel11.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+							{
+
+								panel11.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+								{
+
+									panel11.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+									{
+
+										panel11.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+										{
+
+											panel11.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+					timer34.Enabled = true;
+
 				}
 
 			}
@@ -811,10 +1752,53 @@ namespace zase4kak
 
 		}
 
+
+
+
+
+		
+
+	
+
+
+
 		private void timer18_Tick(object sender, EventArgs e)
 		{
+			
 
-			if (textBox20.Text == "" || textBox21.Text == "" || textBox22.Text == "" || textBox23.Text == "")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			int chervona, bila, zelena, orangeva, sunia, shovta;
+
+
+			if (textBox20.Text == "" || textBox21.Text == "" || textBox22.Text == "" || textBox23.Text == "" || textBox36.Text == "" || textBox37.Text == "")
 			{
 				button9.Enabled = false;
 			}
@@ -826,48 +1810,78 @@ namespace zase4kak
 
 			switch (Convert.ToInt32(label67.Text))
 			{
-				case 36:
+				case 84:
+					{
+						label71.Text = "Група - << O >>";
+						break;
+					}
+
+				case 78:
+					{
+						label71.Text = "Група - << N >>";
+						break;
+					}
+
+				case 72:
+					{
+						label71.Text = "Група - << M >>";
+						break;
+					}
+
+				case 66:
+					{
+						label71.Text = "Група - << L >>";
+						break;
+					}
+
+				case 60:
+                    {
+						label71.Text = "Група - << K >>";
+						break;
+                    }
+
+				case 54:
 					{
 						label71.Text = "Група - << J >>";
 						break;
 					}
 
-				case 32:
+				case 48:
 					{
 						label71.Text = "Група - << I >>";
 						break;
 					}
-				case 28:
+				case 42:
 					{
 						label71.Text = "Група - << H >>";
 						break;
 					}
-				case 24:
+				case 36:
 					{
 						label71.Text = "Група - << G >>";
 						break;
 					}
-				case 20:
+				case 30:
 					{
 						label71.Text = "Група - << F >>";
 						break;
 					}
-				case 16:
+				case 24:
 					{
 						label71.Text = "Група - << E >>";
 						break;
 					}
-				case 12:
+				case 18:
 					{
 						label71.Text = "Група - << D >>";
 						break;
 					}
-				case 8:
+				case 12:
 					{
 						label71.Text = "Група - << C >>";
 						break;
 					}
-				case 4:
+				case 6:
 					{
 						label71.Text = "Група - << B >>";
 						break;
@@ -890,537 +1904,2041 @@ namespace zase4kak
 
 
 
-			//алгоритм сортування відставання до суперника
 
 
-			if (Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text))
+
+			
 
 
-			{
+
+
+			//chervona = Convert.ToInt32(label17.Text);
+			//bila = Convert.ToInt32(label24.Text);
+			//zelena = Convert.ToInt32(label23.Text);
+			//orangeva = Convert.ToInt32(label25.Text);
+			//sunia = Convert.ToInt32(label97.Text);
+			//shovta = Convert.ToInt32(label112.Text);
+
+			//for (int i = 0; i < 1; i++)
+   //         {
+			//	listBox2.Items.Add(chervona);
+			//	listBox2.Items.Add(bila);
+			//	listBox2.Items.Add(zelena);
+			//	listBox2.Items.Add(orangeva);
+			//	listBox2.Items.Add(sunia);
+			//	listBox2.Items.Add(shovta);
+			//	break;
 				
-				label55.Visible = true;
+			//}
+
+			//listBox1.Items.Add(s);
+			//if (chervona != bila && chervona !=zelena && chervona != orangeva && chervona != sunia && chervona != shovta && zelena != sunia && zelena!= shovta)
+
+
+
+			//{
+
+
+
+
+
+			//int[] line = new int[] { chervona, bila, zelena, orangeva, sunia, shovta };
+
+   //         Array.Sort(line);
+
+   //         foreach (int n in line)
+
+                //label8.Text = (Convert.ToString(n));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			//if (label15.Text == "2/6" || label15.Text == "3/6" || label15.Text == "5/6")
+			//{
+			//	if (Convert.ToInt32(label8.Text) < Convert.ToInt32(label117.Text))
+			//	{
+			//		label123.Text = label117.Text;
+			//		label117.Text = label8.Text;
+			//		label8.Text = label123.Text;
+   //                 if (chervona == Convert.ToInt32(label8.Text))
+   //                 {
+   //                     panel1.Location = new Point(4, 219);
+   //                     //label8.Text = "0";
+   //                 }
+   //                 else
+   //                 {
+   //                     if (bila == Convert.ToInt32(label8.Text))
+   //                     {
+   //                         panel3.Location = new Point(4, 219);
+   //                         //label8.Text = "0";
+   //                     }
+   //                     else
+   //                     {
+   //                         if (zelena == Convert.ToInt32(label8.Text))
+   //                         {
+   //                             panel4.Location = new Point(4, 219);
+   //                             //label8.Text = "0";
+   //                         }
+   //                         else
+   //                         {
+   //                             if (orangeva == Convert.ToInt32(label8.Text))
+   //                             {
+   //                                 panel5.Location = new Point(4, 219);
+   //                                 //label8.Text = "0";
+   //                             }
+   //                             else
+   //                             {
+   //                                 if (sunia == Convert.ToInt32(label8.Text))
+   //                                 {
+   //                                     panel10.Location = new Point(4, 219);
+   //                                     //label8.Text = "0";
+   //                                 }
+   //                                 else
+   //                                 {
+   //                                     if (shovta == Convert.ToInt32(label8.Text))
+   //                                     {
+   //                                         panel11.Location = new Point(4, 219);
+   //                                         //label8.Text = "0";
+   //                                     }
+   //                                 }
+   //                             }
+   //                         }
+   //                     }
+   //                 }
+   //             }
+
+
+
+
+
+			//	if (Convert.ToInt32(label117.Text) < Convert.ToInt32(label58.Text))
+			//	{
+			//		label118.Text = label58.Text;
+			//		label58.Text = label117.Text;
+			//		label117.Text = label118.Text;
+   //                 if (chervona == Convert.ToInt32(label117.Text))
+   //                 {
+   //                     panel1.Location = new Point(4, 321);
+   //                     //label117.Text = "0";
+   //                 }
+   //                 else
+   //                 {
+   //                     if (bila == Convert.ToInt32(label117.Text))
+   //                     {
+   //                         panel3.Location = new Point(4, 321);
+   //                         //label117.Text = "0";
+   //                     }
+   //                     else
+   //                     {
+   //                         if (zelena == Convert.ToInt32(label117.Text))
+   //                         {
+   //                             panel4.Location = new Point(4, 321);
+   //                             //label117.Text = "0";
+   //                         }
+   //                         else
+   //                         {
+   //                             if (orangeva == Convert.ToInt32(label117.Text))
+   //                             {
+   //                                 panel5.Location = new Point(4, 321);
+   //                                 //label117.Text = "0";
+   //                             }
+   //                             else
+   //                             {
+   //                                 if (sunia == Convert.ToInt32(label117.Text))
+   //                                 {
+   //                                     panel10.Location = new Point(4, 321);
+   //                                     //	label117.Text = "0";
+   //                                 }
+   //                                 else
+   //                                 {
+   //                                     if (shovta == Convert.ToInt32(label117.Text))
+   //                                     {
+   //                                         panel11.Location = new Point(4, 321);
+   //                                         //	label117.Text = "0";
+   //                                     }
+   //                                 }
+   //                             }
+   //                         }
+   //                     }
+   //                 }
+   //             }
+
+
+
+
+			//	if (Convert.ToInt32(label58.Text) < Convert.ToInt32(label57.Text))
+			//	{
+			//		label119.Text = label57.Text;
+			//		label57.Text = label58.Text;
+			//		label58.Text = label119.Text;
+   //                 if (chervona == Convert.ToInt32(label58.Text))
+   //                 {
+   //                     panel1.Location = new Point(4, 423);
+   //                     //	label58.Text = "0";
+   //                 }
+   //                 else
+   //                 {
+   //                     if (bila == Convert.ToInt32(label58.Text))
+   //                     {
+   //                         panel3.Location = new Point(4, 423);
+   //                         //label58.Text = "0";
+   //                     }
+   //                     else
+   //                     {
+   //                         if (zelena == Convert.ToInt32(label58.Text))
+   //                         {
+   //                             panel4.Location = new Point(4, 423);
+   //                             //	label58.Text = "0";
+   //                         }
+   //                         else
+   //                         {
+   //                             if (orangeva == Convert.ToInt32(label58.Text))
+   //                             {
+   //                                 panel5.Location = new Point(4, 423);
+   //                                 //	label58.Text = "0";
+   //                             }
+   //                             else
+   //                             {
+   //                                 if (sunia == Convert.ToInt32(label58.Text))
+   //                                 {
+   //                                     panel10.Location = new Point(4, 423);
+   //                                     //	label58.Text = "0";
+   //                                 }
+   //                                 else
+   //                                 {
+   //                                     if (shovta == Convert.ToInt32(label58.Text))
+   //                                     {
+   //                                         panel11.Location = new Point(4, 423);
+   //                                         //	label58.Text = "0";
+   //                                     }
+   //                                 }
+   //                             }
+   //                         }
+   //                     }
+   //                 }
+
+   //             }
+
+
+
+			//	if (Convert.ToInt32(label57.Text) < Convert.ToInt32(label56.Text))
+			//	{
+			//		label120.Text = label56.Text;
+			//		label56.Text = label57.Text;
+			//		label57.Text = label120.Text;
+			//		if (chervona == Convert.ToInt32(label57.Text))
+			//		{
+			//			panel1.Location = new Point(4, 525);
+			//			//label57.Text = "0";
+			//		}
+			//		else
+			//		{
+			//			if (bila == Convert.ToInt32(label57.Text))
+			//			{
+			//				panel3.Location = new Point(4, 525);
+			//				//label57.Text = "0";
+			//			}
+			//			else
+			//			{
+			//				if (zelena == Convert.ToInt32(label57.Text))
+			//				{
+			//					panel4.Location = new Point(4, 525);
+			//					//label57.Text = "0";
+			//				}
+			//				else
+			//				{
+			//					if (orangeva == Convert.ToInt32(label57.Text))
+			//					{
+			//						panel5.Location = new Point(4, 525);
+			//					//	label57.Text = "0";
+			//					}
+			//					else
+			//					{
+			//						if (sunia == Convert.ToInt32(label57.Text))
+			//						{
+			//							panel10.Location = new Point(4, 525);
+			//						//	label57.Text = "0";
+			//						}
+			//						else
+			//						{
+			//							if (shovta == Convert.ToInt32(label57.Text))
+			//							{
+			//								panel11.Location = new Point(4, 525);
+			//							//	label57.Text = "0";
+			//							}
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+
+			//	}
+
+
+
+			//	if (Convert.ToInt32(label56.Text) < Convert.ToInt32(label54.Text))
+			//	{
+			//		label121.Text = label54.Text;
+			//		label54.Text = label56.Text;
+			//		label56.Text = label121.Text;
+			//		if (chervona == Convert.ToInt32(label56.Text))
+			//		{
+			//			panel1.Location = new Point(4, 628);
+			//			//label56.Text = "0";
+			//		}
+			//		else
+			//		{
+			//			if (bila == Convert.ToInt32(label56.Text))
+			//			{
+			//				panel3.Location = new Point(4, 628);
+			//				//label56.Text = "0";
+			//			}
+			//			else
+			//			{
+			//				if (zelena == Convert.ToInt32(label56.Text))
+			//				{
+			//					panel4.Location = new Point(4, 628);
+			//					//label56.Text = "0";
+			//				}
+			//				else
+			//				{
+			//					if (orangeva == Convert.ToInt32(label56.Text))
+			//					{
+			//						panel5.Location = new Point(4, 628);
+			//						//label56.Text = "0";
+			//					}
+			//					else
+			//					{
+			//						if (sunia == Convert.ToInt32(label56.Text))
+			//						{
+			//							panel10.Location = new Point(4, 628);
+			//							//label56.Text = "0";
+			//						}
+			//						else
+			//						{
+			//							if (shovta == Convert.ToInt32(label56.Text))
+			//							{
+			//								panel11.Location = new Point(4, 628);
+			//								//label56.Text = "0";
+			//							}
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+
+			//	}
+
+				
+			//}
+
+
+
+
+
+
+			label55.Visible = true;
 				label59.Visible = true;
 				label60.Visible = true;
 				label61.Visible = true;
 				label62.Visible = true;
+				label75.Visible = true;
+				label104.Visible = true;
 
-				if (panel1.Location == new Point(7, 213))
+				if (panel1.Location == new Point(4, 219))
 				{
 
 
-					int label17l, label23l, label24l, label25l;
+					int label17l, label23l, label24l, label25l, label97l, label112l;
 
-					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label23.Text);
-
+					//label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label23.Text);
 					label59.Text = "0";
 
 					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label17.Text);
-
 					label61.Text = Convert.ToString(label23l);
 
 					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label17.Text);
-
 					label60.Text = Convert.ToString(label24l);
 
 					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label17.Text);
-
 					label62.Text = Convert.ToString(label25l);
+
+					label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label17.Text);
+					label75.Text = Convert.ToString(label97l);
+
+					label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label17.Text);
+					label104.Text = Convert.ToString(label112l);
+
 
 
 				}
 
-				if (panel3.Location == new Point(7, 213))
+
+
+				if (panel3.Location == new Point(4, 219))
 				{
 
 
-					int label17l, label23l, label25l;
+					int label17l, label23l, label25l, label97l, label112l;
 
 					label60.Text = "0";
 
 					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label24.Text);
-
 					label59.Text = Convert.ToString(label17l);
 
 					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label24.Text);
-
 					label61.Text = Convert.ToString(label23l);
 
 					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label24.Text);
-
 					label62.Text = Convert.ToString(label25l);
+
+					label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label24.Text);
+					label75.Text = Convert.ToString(label97l);
+
+					label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label24.Text);
+					label104.Text = Convert.ToString(label112l);
 
 
 				}
 
-				if (panel4.Location == new Point(7, 213))
+				if (panel4.Location == new Point(4, 219))
 				{
 
 
-					int label17l, label24l, label25l;
+					int label17l, label24l, label25l, label97l, label112l;
 
 					label61.Text = "0";
 
 					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label23.Text);
-
 					label59.Text = Convert.ToString(label17l);
 
 					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label23.Text);
-
 					label60.Text = Convert.ToString(label24l);
 
 					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label23.Text);
-
 					label62.Text = Convert.ToString(label25l);
 
+					label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label23.Text);
+					label75.Text = Convert.ToString(label97l);
+
+					label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label23.Text);
+					label104.Text = Convert.ToString(label112l);
 
 				}
 
-				if (panel5.Location == new Point(7, 213))
+				if (panel5.Location == new Point(4, 219))
 				{
 
 
-					int label17l, label23l, label24l;
+					int label17l, label23l, label24l, label97l, label112l;
 
 					label62.Text = "0";
 
 					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label25.Text);
-
 					label59.Text = Convert.ToString(label17l);
 
 					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label25.Text);
-
 					label60.Text = Convert.ToString(label24l);
 
 					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label25.Text);
-
 					label61.Text = Convert.ToString(label23l);
 
+					label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label25.Text);
+					label75.Text = Convert.ToString(label97l);
+
+					label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label25.Text);
+					label104.Text = Convert.ToString(label112l);
 
 				}
 
-				//алгоритм сортування жовтої доріжки по місцям
-
-				if (Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text))
+				if (panel10.Location == new Point(4, 219))
 
 				{
-					if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label17.Text))
-					{
-						panel5.Location = new Point(7, 213);
-
-					}
-					else
-					{
-						if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label24.Text))
-						{
-							panel5.Location = new Point(7, 358);
-						}
-						else
-						{
-							if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label17.Text))
-							{
-								panel5.Location = new Point(7, 358);
-							}
-							else
-							{
-								if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) > Convert.ToInt32(label17.Text))
-								{
-									panel5.Location = new Point(7, 358);
-								}
-								else
-								{
 
 
+					int label17l, label23l, label24l, label25l, label112l;
 
+					label75.Text = "0";
 
-									if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label23.Text))
-									{
-										panel5.Location = new Point(7, 502);
-									}
-									else
-									{
-										if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label24.Text))
-										{
-											panel5.Location = new Point(7, 502);
-										}
-										else
-										{
-											if (Convert.ToInt32(label25.Text) > Convert.ToInt32(label17.Text))
-											{
-												panel5.Location = new Point(7, 502);
-											}
-											else
-											{
+					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label97.Text);
+					label59.Text = Convert.ToString(label17l);
 
-												if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
-												{
-													panel5.Location = new Point(7, 645);
-												}
-												else
-												{
-													if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text))
-													{
-														panel5.Location = new Point(7, 502);
-													}
-													else
-													{
-														if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
-														{
-															panel5.Location = new Point(7, 502);
-														}
-														else
-														{
-															if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
-															{
-																panel5.Location = new Point(7, 502);
-															}
-															else
-															{
-																if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label24.Text))
-																{
-																	panel5.Location = new Point(7, 358);
+					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label97.Text);
+					label60.Text = Convert.ToString(label24l);
 
-																}
-																else
-																{
-																	if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label23.Text))
-																	{
-																		panel5.Location = new Point(7, 358);
-																	}
-																	else
-																	{
-																		if (Convert.ToInt32(label25.Text) < Convert.ToInt32(label17.Text))
-																		{
-																			panel5.Location = new Point(7, 358);
-																		}
-																	}
-																}
+					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label97.Text);
+					label61.Text = Convert.ToString(label23l);
 
-															}
+					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label97.Text);
+					label62.Text = Convert.ToString(label25l);
 
-														}
+					label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label97.Text);
+					label104.Text = Convert.ToString(label112l);
 
-													}
-
-												}
-											}
-										}
-									}
-								}
-
-							}
-						}
-					}
 				}
 
+				if (panel11.Location == new Point(4, 219))
 
-				//алгоритм сортування синьої доріжки по місцям
-				if (Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text))
 				{
-					if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
-					{
-						panel4.Location = new Point(7, 213);
-					}
-					else
-					{
-						if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text))
-						{
-							panel4.Location = new Point(7, 358);
-						}
-						else
-						{
-							if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
-							{
-								panel4.Location = new Point(7, 358);
-							}
-							else
-							{
-								if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
-								{
-									panel4.Location = new Point(7, 358);
-								}
-								else
-								{
-
-									if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label25.Text))
-									{
-										panel4.Location = new Point(7, 502);
-									}
-									else
-									{
-										if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label24.Text))
-										{
-											panel4.Location = new Point(7, 502);
-										}
-										else
-										{
-											if (Convert.ToInt32(label23.Text) > Convert.ToInt32(label17.Text))
-											{
-												panel4.Location = new Point(7, 502);
-											}
-											else
-											{
 
 
-												if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
-												{
-													panel4.Location = new Point(7, 645);
+					int label17l, label23l, label24l, label25l, label97l;
 
-												}
-												else
-												{
-													if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text))
-													{
-														panel4.Location = new Point(7, 502);
-													}
-													else
-													{
-														if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
-														{
-															panel4.Location = new Point(7, 502);
-														}
-														else
-														{
-															if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
-															{
-																panel4.Location = new Point(7, 502);
-															}
-															else
-															{
-																if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label24.Text))
-																{
-																	panel4.Location = new Point(7, 358);
-																}
-																else
-																{
-																	if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label17.Text))
-																	{
-																		panel4.Location = new Point(7, 358);
-																	}
-																	else
-																	{
-																		if (Convert.ToInt32(label23.Text) < Convert.ToInt32(label25.Text))
-																		{
-																			panel4.Location = new Point(7, 358);
-																		}
-																	}
-																}
-															}
-														}
-													}
+					label104.Text = "0";
 
-												}
-											}
-										}
-									}
+					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label112.Text);
+					label59.Text = Convert.ToString(label17l);
 
-								}
-							}
-						}
-					}
+					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label112.Text);
+					label60.Text = Convert.ToString(label24l);
+
+					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label112.Text);
+					label61.Text = Convert.ToString(label23l);
+
+					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label112.Text);
+					label62.Text = Convert.ToString(label25l);
+
+					label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label112.Text);
+					label75.Text = Convert.ToString(label97l);
+
+
 				}
 
-				//алгоритм сортування зеленої доріжки по місцям
-				if (Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text))
-				{
-					if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label17.Text))
-					{
-						panel3.Location = new Point(7, 213);
-					}
-					else
-					{
-						if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label23.Text))
-						{
-							panel3.Location = new Point(7, 358);
-						}
-						else
-						{
-							if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label17.Text))
-							{
-								panel3.Location = new Point(7, 358);
-							}
-							else
-							{
-								if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) > Convert.ToInt32(label17.Text))
-								{
-									panel3.Location = new Point(7, 358);
-								}
-								else
-								{
-
-
-									if (Convert.ToInt32(label24.Text) > Convert.ToInt32(label25.Text))
-									{
-										panel3.Location = new Point(7, 502);
-
-
-									}
-									else
-									{
-										if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
-										{
-											panel3.Location = new Point(7, 645);
-										}
-										else
-										{
-											if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text))
-											{
-												panel3.Location = new Point(7, 502);
-											}
-											else
-											{
-												if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
-												{
-													panel3.Location = new Point(7, 502);
-												}
-												else
-												{
-													if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
-													{
-														panel3.Location = new Point(7, 502);
-													}
-													else
-													{
-														if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label23.Text))
-														{
-															panel3.Location = new Point(7, 358);
-														}
-														else
-														{
-															if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label17.Text))
-															{
-																panel3.Location = new Point(7, 358);
-															}
-															else
-															{
-																if (Convert.ToInt32(label24.Text) < Convert.ToInt32(label25.Text))
-																{
-																	panel3.Location = new Point(7, 358);
-																}
-															}
-														}
-													}
 
 
 
 
-												}
-											}
-										}
-									}
-								}
-							}
-
-						}
-					}
-				}
-
-				//алгоритм сортування червоної доріжки по місцям
-				if (Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text))
-				{
-					if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
-					{
-						panel1.Location = new Point(7, 213);
-					}
-					else
-					{
-						if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text))
-						{
-							panel1.Location = new Point(7, 358);
-						}
-						else
-						{
-							if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
-							{
-								panel1.Location = new Point(7, 358);
-							}
-							else
-							{
-								if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
-								{
-									panel1.Location = new Point(7, 358);
-								}
-								else
-								{
-
-
-									if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label25.Text))
-									{
-										panel1.Location = new Point(7, 502);
-									}
-									else
-									{
-										if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label24.Text))
-										{
-											panel1.Location = new Point(7, 502);
-										}
-										else
-										{
-											if (Convert.ToInt32(label17.Text) > Convert.ToInt32(label23.Text))
-											{
-												panel1.Location = new Point(7, 502);
-											}
-											else
-											{
 
 
 
-												if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
-												{
-													panel1.Location = new Point(7, 645);
-												}
-												else
-												{
-													if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text))
-													{
-														panel1.Location = new Point(7, 502);
-													}
-													else
-													{
-														if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
-														{
-															panel1.Location = new Point(7, 502);
-														}
-														else
-														{
-															if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
-															{
-																panel1.Location = new Point(7, 502);
-															}
-															else
-															{
-																if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label23.Text))
-																{
-																	panel1.Location = new Point(7, 358);
-																}
-																else
-																{
-																	if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label25.Text))
-																	{
-																		panel1.Location = new Point(7, 358);
-																	}
-																	else
-																	{
-																		if (Convert.ToInt32(label17.Text) < Convert.ToInt32(label24.Text))
-																		{
-																			panel1.Location = new Point(7, 358);
-																		}
-																	}
-																}
 
-															}
 
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
+
+
+
+
+
+
+
+
+
+
+				//if (chervona != bila && chervona != zelena && chervona != orangeva && chervona != sunia && chervona != shovta)
+				//{
+
+				//	if (chervona < zelena && chervona < orangeva && chervona < bila && chervona < sunia && chervona < shovta)   // червона
+
+				//	{
+				//		panel1.Location = new Point(4, 731);
+				//	}
+				//	else
+				//	{
+				//		if (chervona < orangeva && chervona < bila && chervona < sunia && chervona < shovta || chervona < zelena && chervona < orangeva && chervona < bila && chervona < sunia || chervona < sunia && chervona < zelena && shovta < orangeva && chervona < bila || chervona < sunia && chervona < shovta && chervona < zelena && chervona < orangeva || chervona < bila && chervona < sunia && chervona < shovta && chervona < zelena)
+				//		{
+				//			panel1.Location = new Point(4, 628);
+				//		}
+				//		else
+				//		{
+				//			if (chervona < bila && chervona < sunia && chervona < shovta || chervona < orangeva && chervona < zelena && chervona < bila || chervona < shovta && chervona < orangeva && chervona < zelena || chervona < sunia && chervona < shovta && chervona < orangeva || chervona < zelena && chervona < bila && chervona < sunia)
+				//			{
+				//				panel1.Location = new Point(4, 525);
+				//			}
+				//			else
+				//			{
+				//				if (chervona < zelena && chervona < bila || chervona < sunia && chervona < orangeva || chervona < bila && chervona < sunia || chervona < orangeva && chervona < shovta || chervona < shovta && chervona < zelena)
+				//				{
+				//					panel1.Location = new Point(4, 423);
+				//				}
+				//				else
+				//				{
+				//					if (chervona < shovta || chervona < zelena || chervona < sunia || chervona < orangeva || chervona < bila)
+				//					{
+				//						panel1.Location = new Point(4, 321);
+				//					}
+				//					else
+				//					{
+				//						if (chervona > shovta && chervona > zelena && chervona > sunia && chervona > orangeva & chervona > bila)
+				//						{
+				//							panel1.Location = new Point(4, 219);
+				//						}
+				//					}
+				//				}
+				//			}
+				//		}
+				//	}
+
+				//}
+
+
+				//if (zelena != chervona && zelena != bila && zelena != orangeva && zelena != sunia && zelena != shovta)
+				//{
+
+				//	if (zelena < chervona && zelena < orangeva && zelena < bila && zelena < sunia && zelena < shovta) // зелена
+				//	{
+				//		panel4.Location = new Point(4, 731);
+				//	}
+				//	else
+				//	{
+				//		if (zelena < orangeva && zelena < bila && zelena < sunia && zelena < shovta || zelena < chervona && zelena < orangeva && zelena < bila && zelena < sunia || zelena < shovta && zelena < chervona && zelena < orangeva && zelena < bila || zelena < sunia && zelena < shovta && zelena < chervona && zelena < orangeva || zelena < bila && zelena < sunia && zelena < shovta && zelena < chervona)
+				//		{
+				//			panel4.Location = new Point(4, 628);
+				//		}
+				//		else
+				//		{
+				//			if (zelena < bila && zelena < sunia && zelena < shovta || zelena < orangeva && zelena < chervona && zelena < bila || zelena < shovta && zelena < orangeva && zelena < chervona || zelena < sunia && zelena < shovta && zelena < orangeva || zelena < chervona && zelena < bila && zelena < sunia)
+				//			{
+				//				panel4.Location = new Point(4, 525);
+				//			}
+				//			else
+				//			{
+				//				if (zelena < chervona && zelena < bila || zelena < sunia && zelena < orangeva || zelena < bila && zelena < sunia || zelena < orangeva && zelena < shovta || zelena < shovta && zelena < chervona)
+				//				{
+				//					panel4.Location = new Point(4, 423);
+				//				}
+				//				else
+				//				{
+				//					if (zelena < shovta || zelena < chervona || zelena < sunia || zelena < orangeva || zelena < bila)
+				//					{
+				//						panel4.Location = new Point(4, 321);
+				//					}
+				//					else
+				//					{
+				//						if (zelena > chervona && zelena > bila && zelena > orangeva && zelena > sunia && zelena > shovta)
+				//						{
+				//							panel4.Location = new Point(4, 219);
+				//						}
+				//					}
+				//				}
+				//			}
+
+				//		}
+				//	}
+
+				//}
+				//if (bila != chervona && bila != shovta && bila != sunia && bila != zelena && bila != orangeva)
+				//{
+
+				//	if (bila < chervona && bila < orangeva && bila < zelena && bila < sunia && bila < shovta)         // біла
+				//	{
+				//		panel3.Location = new Point(4, 731);
+
+				//	}
+				//	else
+				//	{
+				//		if (bila < orangeva && bila < zelena && bila < sunia && bila < shovta || bila < chervona && bila < orangeva && bila < zelena && bila < sunia || bila < shovta && bila < chervona && bila < orangeva && bila < zelena || bila < sunia && bila < shovta && bila < chervona && bila < orangeva || bila < zelena && bila < sunia && bila < shovta && bila < chervona)
+				//		{
+				//			panel3.Location = new Point(4, 628);
+
+				//		}
+				//		else
+				//		{
+				//			if (bila < zelena && bila < sunia && bila < shovta || bila < orangeva && bila < chervona && bila < zelena || bila < shovta && bila < orangeva && bila < chervona || bila < sunia && bila < shovta && bila < orangeva || bila < chervona && bila < zelena && bila < sunia)
+				//			{
+				//				panel3.Location = new Point(4, 525);
+				//			}
+				//			else
+				//			{
+				//				if (bila < chervona && bila < zelena || bila < sunia && bila < orangeva || bila < zelena & bila < sunia || bila < orangeva && bila < shovta || bila < shovta && bila < chervona)
+				//				{
+				//					panel3.Location = new Point(4, 423);
+				//				}
+				//				else
+				//				{
+				//					if (bila < shovta || bila < chervona || bila < sunia || bila < orangeva || bila < zelena)
+				//					{
+				//						panel3.Location = new Point(4, 321);
+
+				//					}
+				//					else
+				//					{
+				//						if (bila > shovta && bila > chervona && bila > sunia && bila > orangeva && bila > zelena)
+				//						{
+				//							panel3.Location = new Point(4, 219);
+				//						}
+				//					}
+				//				}
+				//			}
+				//		}
+				//	}
+				//}
+
+
+
+
+				//if (sunia != chervona && sunia != orangeva && sunia != zelena && sunia != bila && sunia != shovta)  //синя
+				//{
+
+				//	if (sunia < chervona && sunia < orangeva && sunia < zelena && sunia < bila && sunia < shovta)
+				//	{
+				//		panel10.Location = new Point(4, 731);
+
+				//	}
+				//	else
+				//	{
+				//		if (sunia < orangeva && sunia < zelena && sunia < bila && sunia < shovta || sunia < chervona && sunia < orangeva && sunia < zelena && sunia < bila || sunia < shovta && sunia < chervona && sunia < orangeva && sunia < zelena || sunia < bila && sunia < shovta && sunia < chervona && sunia < orangeva || sunia < zelena && sunia < bila && sunia < shovta && sunia < chervona)
+				//		{
+				//			panel10.Location = new Point(4, 628);
+				//		}
+				//		else
+				//		{
+				//			if (sunia < zelena && sunia < bila && sunia < shovta || sunia < orangeva && sunia < chervona && sunia < zelena || sunia < shovta && sunia < orangeva && sunia < chervona || sunia < bila && sunia < shovta && sunia < orangeva || sunia < chervona && sunia < zelena && sunia < bila)
+				//			{
+				//				panel10.Location = new Point(4, 525);
+				//			}
+				//			else
+				//			{
+				//				if (sunia < chervona && sunia < zelena || sunia < bila && sunia < orangeva || sunia < zelena && sunia < bila || sunia < orangeva && sunia < shovta || sunia < shovta && sunia < chervona)
+				//				{
+				//					panel10.Location = new Point(4, 423);
+				//				}
+				//				else
+				//				{
+				//					if (sunia < shovta || sunia < chervona || sunia < bila || sunia < orangeva || sunia < zelena)
+				//					{
+				//						panel10.Location = new Point(4, 321);
+				//					}
+				//					else
+				//					{
+				//						if (sunia > chervona && sunia > orangeva && sunia > zelena && sunia > bila && sunia > shovta)
+				//						{
+				//							panel10.Location = new Point(4, 219);
+				//						}
+				//					}
+				//				}
+				//			}
+				//		}
+				//	}
+				//}
+				//if (shovta != sunia && shovta != bila && shovta != zelena && shovta != orangeva && shovta != chervona) // жовта
+				//{
+				//	if (shovta < chervona && shovta < orangeva && shovta < zelena && shovta < bila && shovta < sunia)
+				//	{
+				//		panel11.Location = new Point(4, 731);
+				//	}
+				//	else
+				//	{
+				//		if (shovta < orangeva && shovta < zelena && shovta < bila && shovta < sunia || shovta < chervona && shovta < orangeva && shovta < zelena && shovta < bila || shovta < sunia && shovta < chervona && shovta < orangeva || shovta < zelena && shovta < bila && shovta < sunia && shovta < chervona)
+				//		{
+				//			panel11.Location = new Point(4, 628);
+				//		}
+				//		else
+				//		{
+				//			if (shovta < zelena && shovta < bila && shovta < sunia || shovta < orangeva && shovta < chervona && shovta < zelena || shovta < sunia && shovta < orangeva && shovta < chervona || shovta < bila && shovta < sunia && shovta < orangeva || shovta < chervona && shovta < zelena && shovta < bila)
+				//			{
+				//				panel11.Location = new Point(4, 525);
+				//			}
+				//			else
+				//			{
+				//				if (shovta < zelena && shovta < chervona || shovta < bila && shovta < orangeva || shovta < zelena && shovta < bila || shovta < orangeva && shovta < sunia || shovta < sunia && shovta < chervona)
+				//				{
+				//					panel11.Location = new Point(4, 423);
+				//				}
+				//				else
+				//				{
+				//					if (shovta < sunia || shovta < chervona || shovta < bila || shovta < orangeva || shovta < zelena)
+				//					{
+				//						panel11.Location = new Point(4, 321);
+
+				//					}
+				//					else
+				//					{
+				//						if (shovta > sunia && shovta > bila && shovta > zelena && shovta > orangeva && shovta > chervona)
+				//						{
+				//							panel11.Location = new Point(4, 219);
+				//						}
+				//					}
+				//				}
+				//			}
+				//		}
+				//	}
+				//}
+
+
+
+
+				//if (orangeva > chervona && orangeva > shovta && orangeva > zelena && orangeva > bila && orangeva > sunia)  // оранжева
+				//{
+
+				//	if (orangeva < chervona && orangeva < shovta && orangeva < zelena && orangeva < bila && orangeva < sunia)
+				//	{
+				//		panel5.Location = new Point(4, 731);
+				//	}
+				//	else
+				//	{
+				//		if (orangeva < shovta && orangeva < zelena && orangeva < bila && orangeva < sunia || orangeva < chervona && orangeva < shovta && orangeva < zelena && orangeva < bila || orangeva < sunia && orangeva < chervona && orangeva < shovta && orangeva < zelena || orangeva < bila && orangeva < sunia && orangeva < chervona && orangeva < shovta || orangeva < zelena && orangeva < bila && orangeva < sunia && orangeva < shovta)
+				//		{
+				//			panel5.Location = new Point(4, 628);
+
+				//		}
+				//		else
+				//		{
+				//			if (orangeva < zelena && orangeva < bila && orangeva < sunia || orangeva < shovta && orangeva < chervona && orangeva < zelena || orangeva < sunia && orangeva < shovta && orangeva < chervona || orangeva < bila && orangeva < sunia && orangeva < shovta || orangeva < chervona && orangeva < zelena && orangeva < bila)
+				//			{
+				//				panel5.Location = new Point(4, 525);
+				//			}
+				//			else
+				//			{
+				//				if (orangeva < chervona && orangeva < zelena || orangeva < bila && orangeva < shovta || orangeva < zelena && orangeva < bila || orangeva < shovta && orangeva < sunia || orangeva < sunia && orangeva < chervona)
+				//				{
+				//					panel5.Location = new Point(4, 423);
+				//				}
+				//				else
+				//				{
+				//					if (orangeva < sunia || orangeva < chervona || orangeva < bila && orangeva < shovta || orangeva < zelena)
+				//					{
+				//						panel5.Location = new Point(4, 321);
+
+				//					}
+				//					else
+				//					{
+				//						if (orangeva > chervona && orangeva > shovta && orangeva > zelena && orangeva > bila && orangeva > sunia)
+				//						{
+				//							panel5.Location = new Point(4, 219);
+				//						}
+				//					}
+				//				}
+				//			}
+				//		}
+				//	}
+
+				//}
+
+
+
+			//}
+
+
+
+
+
+
+
+
+			//if (chervona != bila && chervona != zelena && chervona != orangeva && chervona != sunia && chervona != shovta)
+			//{
+
+			//	if (chervona > bila && chervona > zelena && chervona > orangeva && chervona > sunia && chervona > shovta)
+			//	{
+			//		panel1.Location = new Point(4, 219);
+			//	}
+			//}
+
+			//if (bila != chervona && bila != zelena && bila != orangeva && bila != sunia && bila != shovta)
+			//{
+			//	if (bila > chervona && bila > zelena && bila > orangeva && bila > sunia && bila > shovta)
+			//	{
+			//		panel3.Location = new Point(4, 219);
+			//	}
+
+			//}
+
+
+			//if (zelena != chervona && zelena != bila && zelena != orangeva && zelena != sunia && zelena != shovta)
+			//{
+			//	if (zelena > chervona && zelena > bila && zelena > orangeva && zelena > sunia && zelena > shovta)
+			//	{
+			//		panel4.Location = new Point(4, 219);
+			//	}
+			//}
+
+
+
+			//if (orangeva != chervona && orangeva != bila && orangeva != zelena && orangeva != sunia && orangeva != shovta)
+			//{
+			//	if (orangeva > chervona && orangeva > bila && orangeva > zelena && orangeva > sunia && orangeva > shovta)
+			//	{
+			//		panel5.Location = new Point(4, 219);
+
+			//	}
+			//}
+
+
+
+			//if (sunia != chervona && sunia != bila && sunia != zelena && sunia != orangeva && sunia != shovta)
+			//{
+
+
+			//	if (sunia > chervona && sunia > bila && sunia > zelena && sunia > orangeva && sunia > shovta)
+			//	{
+			//		panel10.Location = new Point(4, 219);
+			//	}
+			//}
+
+			//if (shovta != chervona && shovta != bila && shovta != zelena && shovta != orangeva && shovta != sunia)
+			//{
+			//	if (shovta > chervona && shovta > bila && shovta > zelena && shovta > orangeva && shovta > sunia)
+			//	{
+			//		panel11.Location = new Point(4, 219);
+			//	}
+			//}
+
+
+
+
+
+
+
+			//	if (chervona < bila && chervona > zelena && chervona > orangeva && chervona > sunia && chervona > shovta)      // червона друге місце
+			//	{
+			//		panel1.Location = new Point(4, 321);
+			//	}
+			//	else
+			//	{
+			//		if (chervona < zelena && chervona >bila && chervona > orangeva && chervona > sunia && chervona > shovta)
+			//		{
+			//			panel1.Location = new Point(4, 321);
+			//		}
+			//		else
+			//		{
+			//			if (chervona < orangeva && chervona > bila && chervona > zelena && chervona > sunia && chervona > shovta)
+			//			{
+			//				panel1.Location = new Point(4, 321);
+			//			}
+			//			else
+			//			{
+			//				if (chervona < sunia && chervona > bila && chervona > zelena && chervona > orangeva && chervona > shovta)
+			//				{
+			//					panel1.Location = new Point(4, 321);
+			//				}
+			//				else
+			//				{
+			//					if (chervona < shovta && chervona > bila && chervona > zelena && chervona > sunia && chervona > orangeva)
+			//					{
+			//						panel1.Location = new Point(4, 321);
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+
+			//	if (bila < chervona && bila > zelena && bila > orangeva && bila > sunia && bila > shovta)  // біла доріжка друге місце
+			//	{
+			//		panel3.Location = new Point(4, 321);
+			//	}
+			//	else
+			//	{
+			//		if (bila < zelena && bila > chervona && bila >orangeva && bila > sunia && bila > shovta)
+			//		{
+			//			panel3.Location = new Point(4, 321);
+			//		}
+			//		else
+			//		{
+			//			if (bila < orangeva && bila > zelena && bila > chervona && bila > sunia && bila > shovta)
+			//			{
+			//				panel3.Location = new Point(4, 321);
+			//			}
+			//			else
+			//			{
+			//				if (bila < sunia && bila > zelena && bila > orangeva && bila > chervona && bila > shovta)
+			//				{
+			//					panel3.Location = new Point(4, 321);
+			//				}
+			//				else
+			//				{
+			//					if (bila < shovta && bila > zelena && bila > orangeva && bila > sunia && bila > chervona)
+			//					{
+			//						panel3.Location = new Point(4, 321);
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+			//	if (zelena < chervona && zelena > bila && zelena > orangeva && zelena > sunia && zelena > shovta) // зелена доріжка друге місце
+			//	{
+			//		panel4.Location = new Point(4, 321);
+			//	}
+			//	else
+			//	{
+
+			//		if (zelena < bila && zelena > chervona && zelena > orangeva && zelena > sunia && zelena > shovta)
+			//		{
+			//			panel4.Location = new Point(4, 321);
+			//		}
+			//		else
+			//		{
+
+			//			if (zelena < orangeva && zelena > bila && zelena > chervona && zelena > sunia && zelena > shovta)
+			//			{
+			//				panel4.Location = new Point(4, 321);
+			//			}
+			//			else
+			//			{
+
+			//				if (zelena < sunia && zelena > bila && zelena > orangeva && zelena > chervona && zelena > shovta)
+			//				{
+			//					panel4.Location = new Point(4, 321);
+			//				}
+			//				else
+			//				{
+
+			//					if (zelena < shovta && zelena > bila && zelena > orangeva && zelena > sunia && zelena > chervona)
+			//					{
+			//						panel4.Location = new Point(4, 321);
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+			//	if (orangeva < chervona && orangeva > bila && orangeva > zelena && orangeva > sunia & orangeva > shovta) // оранжева доріжка друге місце
+			//	{
+			//		panel5.Location = new Point(4, 321);
+			//	}
+			//	else
+			//	{
+			//		if (orangeva < bila && orangeva > chervona && orangeva > zelena && orangeva > sunia & orangeva > shovta)
+			//		{
+			//			panel5.Location = new Point(4, 321);
+			//		}
+			//		else
+			//		{
+			//			if (orangeva < zelena && orangeva > bila && orangeva > chervona && orangeva > sunia & orangeva > shovta)
+			//			{
+			//				panel5.Location = new Point(4, 321);
+			//			}
+			//			else
+			//			{
+			//				if (orangeva < sunia && orangeva > bila && orangeva > zelena && orangeva > chervona & orangeva > shovta)
+			//				{
+			//					panel5.Location = new Point(4, 321);
+			//				}
+			//				else
+			//				{
+			//					if (orangeva < shovta && orangeva > bila && orangeva > zelena && orangeva > sunia & orangeva > chervona)
+			//					{
+			//						panel5.Location = new Point(4, 321);
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+			//	if (sunia < chervona && sunia > bila && sunia > zelena && sunia > orangeva && sunia > shovta)      // синя доріжка друге місце
+			//	{
+			//		panel10.Location = new Point(4, 321);
+			//	}
+			//	else
+			//	{
+			//		if (sunia < bila && sunia > chervona && sunia > zelena && sunia > orangeva && sunia > shovta)
+			//		{
+			//			panel10.Location = new Point(4, 321);
+			//		}
+			//		else
+			//		{
+			//			if (sunia < zelena && sunia > bila && sunia > chervona && sunia > orangeva && sunia > shovta)
+			//			{
+			//				panel10.Location = new Point(4, 321);
+			//			}
+			//			else
+			//			{
+			//				if (sunia < orangeva && sunia > bila && sunia > zelena && sunia >= chervona && sunia > shovta)
+			//				{
+			//					panel10.Location = new Point(4, 321);
+			//				}
+			//				else
+			//				{
+			//					if (sunia < shovta && sunia > bila && sunia > zelena && sunia > orangeva && sunia > chervona)
+			//					{
+			//						panel10.Location = new Point(4, 321);
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+			//	if (shovta < chervona && shovta > bila && shovta > zelena && shovta > orangeva && shovta > sunia)          // жовта доріжка друге місце
+			//	{
+			//		panel11.Location = new Point(4, 321);
+			//	}
+			//	else
+			//	{
+			//		if (shovta < bila && shovta > chervona && shovta > zelena && shovta > orangeva && shovta > sunia)
+			//		{
+			//			panel11.Location = new Point(4, 321);
+			//		}
+			//		else
+			//		{
+			//			if (shovta < zelena && shovta > bila && shovta > chervona && shovta > orangeva && shovta > sunia)
+			//			{
+			//				panel11.Location = new Point(4, 321);
+			//			}
+			//			else
+			//			{
+			//				if (shovta < orangeva && shovta > bila && shovta > zelena && shovta > chervona && shovta > sunia)
+			//				{
+			//					panel11.Location = new Point(4, 321);
+			//				}
+			//				else
+			//				{
+			//					if (shovta < sunia && shovta > bila && shovta > zelena && shovta > orangeva && shovta > chervona)
+			//					{
+			//						panel11.Location = new Point(4, 321);
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+			//	if (chervona < bila && chervona < zelena && chervona > orangeva && chervona > sunia && chervona > shovta)  // червона третє місце
+			//	{
+			//		panel1.Location = new Point(4, 423);
+			//	}
+			//	else
+			//	{
+			//		if (chervona < bila && chervona < orangeva && chervona > zelena && chervona > sunia && chervona > shovta)
+			//		{
+			//			panel1.Location = new Point(4, 423);
+			//		}
+			//		else
+			//		{
+			//			if (chervona < bila && chervona < sunia && chervona > orangeva && chervona > zelena && chervona > shovta)
+			//			{
+			//				panel1.Location = new Point(4, 423);
+			//			}
+			//			else
+			//			{
+			//				if (chervona < bila && chervona < shovta && chervona > orangeva && chervona > sunia && chervona > zelena)
+			//				{
+			//					panel1.Location = new Point(4, 423);
+			//				}
+			//				else
+			//				{
+			//					if (chervona < orangeva && chervona < zelena && chervona >bila && chervona > sunia && chervona > shovta)
+			//					{
+			//						panel1.Location = new Point(4, 423);
+			//					}
+			//					else
+			//					{
+			//						if (chervona < sunia && chervona < zelena && chervona > orangeva && chervona > bila && chervona > shovta)
+			//						{
+			//							panel1.Location = new Point(4, 423);
+			//						}
+			//						else
+			//						{
+			//							if (chervona < shovta && chervona < zelena && chervona > orangeva && chervona > sunia && chervona > bila)
+			//							{
+			//								panel1.Location = new Point(4, 423);
+			//							}
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+			//	if (bila < chervona && bila < zelena && bila > orangeva && bila > sunia && bila > shovta)   // біла третє місце
+			//	{
+			//		panel3.Location = new Point(4, 423);
+			//	}
+			//	else
+			//	{
+			//		if (bila < chervona && bila < orangeva && bila > zelena && bila > sunia && bila > shovta)
+			//		{
+			//			panel3.Location = new Point(4, 423);
+			//		}
+			//		else
+			//		{
+			//			if (bila < chervona && bila < sunia && bila > orangeva && bila > zelena && bila > shovta)
+			//			{
+			//				panel3.Location = new Point(4, 423);
+			//			}
+			//			else
+			//			{
+			//				if (bila < chervona && bila < shovta && bila > orangeva && bila > sunia && bila > zelena)
+			//				{
+			//					panel3.Location = new Point(4, 423);
+			//				}
+			//				else
+			//				{
+			//					if (bila < orangeva && bila < zelena && bila > chervona && bila > sunia && bila > shovta)
+			//					{
+			//						panel3.Location = new Point(4, 423);
+			//					}
+			//					else
+			//					{
+			//						if (bila < sunia && bila < zelena && bila > orangeva && bila > zelena && bila > shovta)
+			//						{
+			//							panel3.Location = new Point(4, 423);
+			//						}
+			//						else
+			//						{
+			//							if (bila < shovta && bila < zelena && bila > orangeva && bila > sunia && bila > zelena)
+			//							{
+			//								panel3.Location = new Point(4, 423);
+			//							}
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+
+
+			//	if (zelena < chervona && zelena < bila && zelena > orangeva && zelena > sunia && zelena > shovta)  // зелена третє місце
+			//	{
+			//		panel4.Location = new Point(4, 423);
+			//	}
+			//	else
+			//	{
+			//		if (zelena < chervona && zelena < orangeva && zelena > bila && zelena > sunia && zelena > shovta)
+			//		{
+			//			panel4.Location = new Point(4, 423);
+			//		}
+			//		else
+			//		{
+			//			if (zelena < chervona && zelena < sunia && zelena > orangeva && zelena > bila && zelena > shovta)
+			//			{
+			//				panel4.Location = new Point(4, 423);
+			//			}
+			//			else
+			//			{
+			//				if (zelena < chervona && zelena < shovta && zelena > orangeva && zelena > sunia && zelena > bila)
+			//				{
+			//					panel4.Location = new Point(4, 423);
+			//				}
+			//				else
+			//				{
+			//					if (zelena < orangeva && zelena < bila && zelena > chervona && zelena > sunia && zelena > shovta)
+			//					{
+			//						panel4.Location = new Point(4, 423);
+			//					}
+			//					else
+			//					{
+			//						if (zelena < sunia && zelena < bila && zelena > orangeva && zelena > chervona && zelena > shovta)
+			//						{
+			//							panel4.Location = new Point(4, 423);
+			//						}
+			//						else
+			//						{
+			//							if (zelena < shovta && zelena < bila && zelena > orangeva && zelena > sunia && zelena > chervona)
+			//							{
+			//								panel4.Location = new Point(4, 423);
+			//							}
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+			//	if (orangeva < chervona && orangeva < bila && orangeva > zelena && orangeva > sunia && orangeva > shovta)    // оранжева третє місце
+			//	{
+			//		panel5.Location = new Point(4, 423);
+			//	}
+			//	else
+			//	{
+			//		if (orangeva < chervona && orangeva < zelena && orangeva > bila && orangeva > sunia && orangeva > shovta)
+			//		{
+			//			panel5.Location = new Point(4, 423);
+			//		}
+			//		else
+			//		{
+			//			if (orangeva < chervona && orangeva < sunia && orangeva > zelena && orangeva > bila && orangeva > shovta)
+			//			{
+			//				panel5.Location = new Point(4, 423);
+			//			}
+			//			else
+			//			{
+			//				if (orangeva < chervona && orangeva < shovta && orangeva > zelena && orangeva > sunia && orangeva > bila)
+			//				{
+			//					panel5.Location = new Point(4, 423);
+			//				}
+			//				else
+			//				{
+			//					if (orangeva < zelena && orangeva < bila && orangeva > chervona && orangeva > sunia && orangeva > shovta)
+			//					{
+			//						panel5.Location = new Point(4, 423);
+			//					}
+			//					else
+			//					{
+			//						if (orangeva < sunia && orangeva < bila && orangeva > zelena && orangeva > bila && orangeva > shovta)
+			//						{
+			//							panel5.Location = new Point(4, 423);
+			//						}
+			//						else
+			//						{
+			//							if (orangeva < shovta && orangeva < bila && orangeva > zelena && orangeva > sunia && orangeva > bila)
+			//							{
+			//								panel5.Location = new Point(4, 423);
+			//							}
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+
+
+
+			//	if (sunia < chervona && sunia < bila && sunia > zelena && sunia > orangeva && sunia > shovta)                // синя третє місце
+			//	{
+			//		panel10.Location = new Point(4, 423);
+			//	}
+			//	else
+			//	{
+			//		if (sunia < chervona && sunia < zelena && sunia > bila && sunia > orangeva && sunia > shovta)
+			//		{
+			//			panel10.Location = new Point(4, 423);
+			//		}
+			//		else
+			//		{
+			//			if (sunia < chervona && sunia < orangeva && sunia >zelena && sunia > bila && sunia > shovta)
+			//			{
+			//				panel10.Location = new Point(4, 423);
+			//			}
+			//			else
+			//			{
+			//				if (sunia < chervona && sunia < shovta && sunia > zelena && sunia > orangeva && sunia >bila)
+			//				{
+			//					panel10.Location = new Point(4, 423);
+			//				}
+			//				else
+			//				{
+			//					if (sunia < zelena && sunia < bila && sunia > chervona && sunia > orangeva && sunia > shovta)
+			//					{
+			//						panel10.Location = new Point(4, 423);
+			//					}
+			//					else
+			//					{
+			//						if (sunia < orangeva && sunia < bila && sunia > zelena && sunia > chervona && sunia > shovta)
+			//						{
+			//							panel10.Location = new Point(4, 423);
+			//						}
+			//						else
+			//						{
+
+			//							if (sunia < shovta && sunia < bila && sunia > zelena && sunia > orangeva && sunia >= chervona)
+			//							{
+			//								panel10.Location = new Point(4, 423);
+			//							}
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+
+			//}
+
+
+
+
+
+			//	if (shovta < chervona && shovta < bila && shovta >zelena && shovta > orangeva && shovta > sunia)  // жовта третє місце
+			//	{
+			//		panel11.Location = new Point(4, 423);
+			//	}
+			//	else
+			//	{
+			//		if (shovta < chervona && shovta < zelena && shovta > bila && shovta > orangeva && shovta > sunia)
+			//		{
+			//			panel11.Location = new Point(4, 423);
+			//		}
+			//		else
+			//		{
+			//			if (shovta < chervona && shovta < orangeva && shovta > zelena && shovta > bila && shovta > sunia)
+			//			{
+			//				panel11.Location = new Point(4, 423);
+			//			}
+			//			else
+			//			{
+			//				if (shovta < chervona && shovta < sunia && shovta > zelena && shovta > orangeva && shovta > bila)
+			//				{
+			//					panel11.Location = new Point(4, 423);
+			//				}
+			//				else
+			//				{
+			//					if (shovta < zelena && shovta < bila && shovta > chervona && shovta > orangeva && shovta > sunia)
+			//					{
+			//						panel11.Location = new Point(4, 423);
+			//					}
+			//					else
+			//					{
+			//						if (shovta < orangeva && shovta < bila && shovta >zelena && shovta > chervona && shovta > sunia)
+			//						{
+			//							panel11.Location = new Point(4, 423);
+			//						}
+			//						else
+			//						{
+			//							if (shovta < sunia && shovta < bila && shovta > zelena && shovta > orangeva && shovta > chervona)
+			//							{
+			//								panel11.Location = new Point(4, 423);
+			//							}
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+
+			//	if (chervona < bila && chervona < zelena && chervona < orangeva && chervona > sunia && chervona > shovta)  //червона четверте місце
+			//	{
+			//		panel1.Location = new Point(4, 525);
+			//	}
+			//	else
+			//	{
+			//		if (chervona < sunia && chervona < zelena && chervona < orangeva && chervona > bila && chervona > shovta)
+			//		{
+			//			panel1.Location = new Point(4, 525);
+			//		}
+			//		else
+			//		{
+			//			if (chervona < shovta && chervona < zelena && chervona < orangeva && chervona > sunia && chervona > bila)
+			//			{
+			//				panel1.Location = new Point(4, 525);
+			//			}
+			//			else
+			//			{
+			//				if (chervona < bila && chervona < orangeva && chervona < zelena && chervona > sunia && chervona > shovta)
+			//				{
+			//					panel1.Location = new Point(4, 525);
+			//				}
+			//				else
+			//				{
+			//					if (chervona < bila && chervona < sunia && chervona < orangeva && chervona > zelena && chervona > shovta)
+			//					{
+			//						panel1.Location = new Point(4, 525);
+			//					}
+			//					else
+			//					{
+			//						if (chervona < bila && chervona < shovta && chervona < orangeva && chervona > sunia && chervona > zelena)
+			//						{
+			//							panel1.Location = new Point(4, 525);
+			//						}
+			//						else
+			//						{
+			//							if (chervona < bila && chervona < zelena && chervona < sunia && chervona > orangeva && chervona > shovta)
+			//							{
+			//								panel1.Location = new Point(4, 525);
+			//							}
+			//							else
+			//							{
+			//								if (chervona < bila && chervona < zelena && chervona < shovta && chervona > sunia && chervona > orangeva)
+			//								{
+			//									panel1.Location = new Point(4, 525);
+			//								}
+			//							}
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+
+			//	if (bila < chervona && bila < zelena && bila < orangeva && bila > sunia && bila > shovta)  // біла четверте місце
+			//	{
+			//		panel3.Location = new Point(4, 525);
+			//	}
+			//	else
+			//	{
+			//		if (bila < sunia && bila < zelena && bila < orangeva && bila > chervona && bila > shovta)
+			//		{
+			//			panel3.Location = new Point(4, 525);
+			//		}
+			//		else
+			//		{
+			//			if (bila < shovta && bila < zelena && bila < orangeva && bila > sunia && bila > chervona)
+			//			{
+			//				panel3.Location = new Point(4, 525);
+			//			}
+			//			else
+			//			{
+			//				if (bila < chervona && bila < sunia && bila < orangeva && bila > zelena && bila > shovta)
+			//				{
+			//					panel3.Location = new Point(4, 525);
+			//				}
+			//				else
+			//				{
+			//					if (bila < chervona && bila < sunia && bila < orangeva && bila > zelena && bila > shovta)
+			//					{
+			//						panel3.Location = new Point(4, 525);
+			//					}
+			//					else
+			//					{
+			//						if (bila < chervona && bila < shovta && bila < orangeva && bila > sunia && bila > zelena)
+			//						{
+			//							panel3.Location = new Point(4, 525);
+			//						}
+			//						else
+			//						{
+			//							if (bila < chervona && bila < zelena && bila < sunia && bila > orangeva && bila > shovta)
+			//							{
+			//								panel3.Location = new Point(4, 525);
+			//							}
+			//							else
+			//							{
+			//								if (bila < chervona && bila < zelena && bila < shovta && bila > sunia && bila > orangeva)
+			//								{
+			//									panel3.Location = new Point(4, 525);
+			//								}
+			//							}
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+			//	if (zelena < chervona && zelena < bila && zelena < orangeva && zelena > sunia && zelena > shovta) // зелена четверте місце
+			//	{
+			//		panel4.Location = new Point(4, 525);
+			//	}
+			//	else
+			//	{
+			//		if (zelena < sunia && zelena < bila && zelena < orangeva && zelena > chervona && zelena > shovta)
+			//		{
+			//			panel4.Location = new Point(4, 525);
+			//		}
+			//		else
+			//		{
+			//			if (zelena < shovta && zelena < bila && zelena < orangeva && zelena > sunia && zelena > chervona)
+			//			{
+			//				panel4.Location = new Point(4, 525);
+			//			}
+			//			else
+			//			{
+			//				if (zelena < chervona && zelena < sunia && zelena < orangeva && zelena > bila && zelena > shovta)
+			//				{
+			//					panel4.Location = new Point(4, 525);
+			//				}
+			//				else
+			//				{
+			//					if (zelena < chervona && zelena < shovta && zelena < orangeva && zelena > sunia && zelena > bila)
+			//					{
+			//						panel4.Location = new Point(4, 525);
+			//					}
+			//					else
+			//					{
+			//						if (zelena < chervona && zelena < bila && zelena < sunia && zelena > orangeva && zelena > shovta)
+			//						{
+			//							panel4.Location = new Point(4, 525);
+			//						}
+			//						else
+			//						{
+			//							if (zelena < chervona && zelena < bila && zelena < shovta && zelena > sunia && zelena > orangeva)
+			//							{
+			//								panel4.Location = new Point(4, 525);
+			//							}
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+
+
+			//	if (orangeva < chervona && orangeva < bila && orangeva < zelena && orangeva > sunia && orangeva > shovta)  // оранжева четверте місце
+			//	{
+			//		panel5.Location = new Point(4, 525);
+			//	}
+			//	else
+			//	{
+			//		if (orangeva < sunia && orangeva < bila && orangeva < zelena && orangeva > chervona && orangeva > shovta)
+			//		{
+			//			panel5.Location = new Point(4, 525);
+			//		}
+			//		else
+			//		{
+			//			if (orangeva < shovta && orangeva < bila && orangeva < zelena && orangeva > sunia && orangeva > chervona)
+			//			{
+			//				panel5.Location = new Point(4, 525);
+			//			}
+			//			else
+			//			{
+			//				if (orangeva < chervona && orangeva < sunia && orangeva < zelena && orangeva > bila && orangeva > shovta)
+			//				{
+			//					panel5.Location = new Point(4, 525);
+			//				}
+			//				else
+			//				{
+			//					if (orangeva < chervona && orangeva < shovta && orangeva < zelena && orangeva > sunia && orangeva > bila)
+			//					{
+			//						panel5.Location = new Point(4, 525);
+			//					}
+			//					else
+			//					{
+			//						if (orangeva < chervona && orangeva < bila && orangeva < sunia && orangeva > zelena && orangeva > shovta)
+			//						{
+			//							panel5.Location = new Point(4, 525);
+			//						}
+			//						else
+			//						{
+			//							if (orangeva < chervona && orangeva < bila && orangeva < shovta && orangeva > sunia && orangeva > zelena)
+			//							{
+			//								panel5.Location = new Point(4, 525);
+			//							}
+			//						}
+			//					}
+			//				}
+
+			//		}
+			//	}
+			//}
+
+
+
+
+
+
+			//	if (sunia < chervona && sunia < bila && sunia < zelena && sunia > orangeva && sunia > shovta) // синя четверте місце
+			//	{
+			//		panel10.Location = new Point(4, 525);
+			//	}
+			//	else
+			//	{
+			//		if (sunia < orangeva && sunia < bila && sunia < zelena && sunia > chervona && sunia > shovta)
+			//		{
+			//			panel10.Location = new Point(4, 525);
+			//		}
+			//		else
+			//		{
+			//			if (sunia < shovta && sunia < bila && sunia < zelena && sunia > orangeva && sunia > chervona)
+			//			{
+			//				panel10.Location = new Point(4, 525);
+			//			}
+			//			else
+			//			{
+			//				if (sunia < chervona && sunia < orangeva && sunia < zelena && sunia > bila && sunia > shovta)
+			//				{
+			//					panel10.Location = new Point(4, 525);
+			//				}
+			//				else
+			//				{
+			//					if (sunia < chervona && sunia < shovta && sunia < zelena && sunia > orangeva && sunia > bila)
+			//					{
+			//						panel10.Location = new Point(4, 525);
+			//					}
+			//					else
+			//					{
+			//						if (sunia < chervona && sunia < bila && sunia < orangeva && sunia > zelena && sunia > shovta)
+			//						{
+			//							panel10.Location = new Point(4, 525);
+			//						}
+			//						else
+			//						{
+			//							if (sunia < chervona && sunia < bila && sunia < shovta && sunia > orangeva && sunia > zelena)
+			//							{
+			//								panel10.Location = new Point(4, 525);
+			//							}
+			//						}
+			//					}
+
+			//			}
+			//		}
+			//	}
+			//}
+
+
+
+
+
+
+			//	if (shovta < chervona && shovta < bila && shovta < zelena && shovta > orangeva && shovta > sunia) // жовта четверте місце
+			//	{
+			//		panel11.Location = new Point(4, 525);
+			//	}
+			//	else
+			//	{
+			//		if (shovta < orangeva && shovta < bila && shovta < zelena && shovta > chervona && shovta > sunia)
+			//		{
+			//			panel11.Location = new Point(4, 525);
+			//		}
+			//		else
+			//		{
+			//			if (shovta < sunia && shovta < bila && shovta < zelena && shovta > orangeva && shovta > chervona)
+			//			{
+			//				panel11.Location = new Point(4, 525);
+			//			}
+			//			else
+			//			{
+			//				if (shovta < chervona && shovta < orangeva && shovta < zelena && shovta > bila && shovta > sunia)
+			//				{
+			//					panel11.Location = new Point(4, 525);
+			//				}
+			//				else
+			//				{
+			//					if (shovta < chervona && shovta < sunia && shovta < zelena && shovta > orangeva && shovta > bila)
+			//					{
+			//						panel11.Location = new Point(4, 525);
+			//					}
+			//					else
+			//					{
+			//						if (shovta < chervona && shovta < bila && shovta < orangeva && shovta > zelena && shovta > sunia)
+			//						{
+			//							panel11.Location = new Point(4, 525);
+			//						}
+			//						else
+			//						{
+			//							if (shovta < chervona && shovta < bila && shovta < sunia && shovta > orangeva && shovta > zelena)
+			//							{
+			//								panel11.Location = new Point(4, 525);
+			//							}
+			//						}
+			//					}
+			//				}
+			//			}
+
+			//	}
+
+			//}
+
+
+
+
+
+
+			//	if (chervona < bila && chervona < zelena && chervona < orangeva && chervona < sunia && chervona > shovta)  // червона 5 місце
+			//	{
+			//		panel1.Location = new Point(4, 628);
+			//	}
+			//	else
+			//	{
+			//		if (chervona < shovta && chervona < zelena && chervona < orangeva && chervona < sunia && chervona > bila)
+			//		{
+			//			panel1.Location = new Point(4, 628);
+			//		}
+			//		else
+			//		{
+			//			if (chervona < bila && chervona < shovta && chervona < orangeva && chervona < sunia && chervona > zelena)
+			//			{
+			//				panel1.Location = new Point(4, 628);
+			//			}
+			//			else
+			//			{
+			//				if (chervona < bila && chervona < zelena && chervona < shovta && chervona < sunia && chervona > orangeva)
+			//				{
+			//					panel1.Location = new Point(4, 628);
+			//				}
+			//				else
+			//				{
+			//					if (chervona < bila && chervona < zelena && chervona < orangeva && chervona < shovta && chervona > sunia)
+			//					{
+			//						panel1.Location = new Point(4, 628);
+			//					}
+			//				}
+			//			}
+			//		}
+
+			//}
+
+
+
+
+
+
+			//	if (bila < chervona && bila < zelena && bila < orangeva && bila < sunia && bila >= shovta)   // біла 5 місце
+			//	{
+			//		panel3.Location = new Point(4, 628);
+			//	}
+			//	else
+			//	{
+			//		if (bila < shovta && bila < zelena && bila < orangeva && bila < sunia && bila > chervona)
+			//		{
+			//			panel3.Location = new Point(4, 628);
+			//		}
+			//		else
+			//		{
+			//			if (bila < chervona && bila < shovta && bila < orangeva && bila < sunia && bila > zelena)
+			//			{
+			//				panel3.Location = new Point(4, 628);
+			//			}
+			//			else
+			//			{
+			//				if (bila < chervona && bila < zelena && bila < shovta && bila < sunia && bila > orangeva)
+			//				{
+			//					panel3.Location = new Point(4, 628);
+			//				}
+			//				else
+			//				{
+			//					if (bila < chervona && bila < zelena && bila < orangeva && bila < shovta && bila > sunia)
+			//					{
+			//						panel3.Location = new Point(4, 628);
+			//					}
+			//				}
+			//			}
+			//		}
+
+			//}
+
+
+
+
+
+			//	if (zelena < chervona && zelena < bila && zelena < orangeva && zelena < sunia && zelena >=shovta)  // зелена 5 місце
+			//	{
+			//		panel4.Location = new Point(4, 628);
+			//	}
+			//	else
+			//	{
+			//		if (zelena < shovta && zelena < bila && zelena < orangeva && zelena < sunia && zelena > chervona)
+			//		{
+			//			panel4.Location = new Point(4, 628);
+			//		}
+			//		else
+			//		{
+			//			if (zelena < chervona && zelena < shovta && zelena < orangeva && zelena < sunia && zelena > bila)
+			//			{
+			//				panel4.Location = new Point(4, 628);
+			//			}
+			//			else
+			//			{
+			//				if (zelena < chervona && zelena < bila && zelena < shovta && zelena < sunia && zelena > orangeva)
+			//				{
+			//					panel4.Location = new Point(4, 628);
+			//				}
+			//				else
+			//				{
+			//					if (zelena < chervona && zelena < bila && zelena < orangeva && zelena < shovta && zelena > sunia)
+			//					{
+			//						panel4.Location = new Point(4, 628);
+			//					}
+
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+
+			//	if (orangeva < chervona && orangeva < bila && orangeva < zelena && orangeva < sunia && orangeva > shovta) // оранжева 5 місце
+			//	{
+			//		panel5.Location = new Point(4, 628);
+			//	}
+			//	else
+			//	{
+			//		if (orangeva < shovta && orangeva < bila && orangeva < zelena && orangeva < sunia && orangeva > chervona)
+			//		{
+			//			panel5.Location = new Point(4, 628);
+			//		}
+			//		else
+			//		{
+			//			if (orangeva < chervona && orangeva < shovta && orangeva < zelena && orangeva < sunia && orangeva > bila)
+			//			{
+			//				panel5.Location = new Point(4, 628);
+			//			}
+			//			else
+			//			{
+			//				if (orangeva < chervona && orangeva < bila && orangeva < shovta && orangeva < sunia && orangeva > zelena)
+			//				{
+			//					panel5.Location = new Point(4, 628);
+			//				}
+			//				else
+			//				{
+			//					if (orangeva < chervona && orangeva < bila && orangeva < zelena && orangeva < shovta && orangeva > sunia)
+			//					{
+			//						panel5.Location = new Point(4, 628);
+			//					}
+			//				}
+			//			}
+			//		}
+
+			//}
+
+
+
+
+
+
+			//	if (sunia < chervona && sunia < bila && sunia < zelena && sunia < orangeva && sunia > shovta) //синя 5 місце
+			//	{
+			//		panel10.Location = new Point(4, 628);
+			//	}
+			//	else
+			//	{
+			//		if (sunia < shovta && sunia < bila && sunia < zelena && sunia < orangeva && sunia > chervona)
+			//		{
+			//			panel10.Location = new Point(4, 628);
+			//		}
+			//		else
+			//		{
+			//			if (sunia < chervona && sunia < shovta && sunia < zelena && sunia < orangeva && sunia > bila)
+			//			{
+			//				panel10.Location = new Point(4, 628);
+			//			}
+			//			else
+			//			{
+			//				if (sunia < chervona && sunia < bila && sunia < shovta && sunia < orangeva && sunia > zelena)
+			//				{
+			//					panel10.Location = new Point(4, 628);
+			//				}
+			//				else
+			//				{
+
+			//					if (sunia < chervona && sunia < bila && sunia < zelena && sunia < shovta && sunia > orangeva)
+			//					{
+			//						panel10.Location = new Point(4, 628);
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+
+
+
+
+			//	if (shovta < chervona && shovta < bila && shovta < zelena && shovta < orangeva && shovta > sunia) // жовта 5 місце
+			//	{
+			//		panel11.Location = new Point(4, 628);
+			//	}
+			//	else
+			//	{
+			//		if (shovta < sunia && shovta < bila && shovta < zelena && shovta < orangeva && shovta > chervona)
+			//		{
+			//			panel11.Location = new Point(4, 628);
+			//		}
+			//		else
+			//		{
+			//			if (shovta < chervona && shovta < sunia && shovta < zelena && shovta < orangeva && shovta > bila)
+			//			{
+			//				panel11.Location = new Point(4, 628);
+			//			}
+			//			else
+			//			{
+			//				if (shovta < chervona && shovta < bila && shovta < sunia && shovta < orangeva && shovta > zelena)
+			//				{
+			//					panel11.Location = new Point(4, 628);
+			//				}
+			//				else
+			//				{
+			//					if (shovta < chervona && shovta < bila && shovta < zelena && shovta < sunia && shovta > orangeva)
+			//					{
+			//						panel11.Location = new Point(4, 628);
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+
+
+
+			//if (chervona < bila && chervona < zelena && chervona < orangeva && chervona < sunia && chervona < shovta)
+			//{
+
+			//	panel1.Location = new Point(4, 731);
+			//}
+
+			//if (bila < chervona && bila < zelena && bila < orangeva && bila < sunia && bila < shovta)
+			//{
+			//	panel3.Location = new Point(4, 731);
+			//}
+
+			//if (zelena < chervona && zelena < bila && zelena < orangeva && zelena < sunia && zelena < shovta)
+			//{
+			//	panel4.Location = new Point(4, 731);
+			//}
+
+			//if (orangeva < chervona && orangeva < bila && orangeva < zelena && orangeva < sunia && orangeva < shovta)
+			//{
+			//	panel5.Location = new Point(4, 731);
+			//}
+
+			//if (sunia < chervona && sunia < bila && sunia < zelena && sunia < orangeva && sunia < shovta)
+			//{
+			//	panel10.Location = new Point(4, 731);
+			//}
+
+			//if (shovta < chervona && shovta < bila && shovta < zelena && shovta < orangeva && shovta < sunia)
+			//{
+			//	panel11.Location = new Point(4, 731);
+			//}
+
+
+
+
+
+
 		}
 
 
@@ -3429,10 +5947,334 @@ namespace zase4kak
 
 		private void timer13_Tick(object sender, EventArgs e)
 		{
+			int bila, chervona, zelena, orangeva, sunia, shovta;
+
+			chervona = Convert.ToInt32(label17.Text);
+			bila = Convert.ToInt32(label24.Text);
+			zelena = Convert.ToInt32(label23.Text);
+			orangeva = Convert.ToInt32(label25.Text);
+			sunia = Convert.ToInt32(label97.Text);
+			shovta = Convert.ToInt32(label112.Text);
 
 			c++;                                            //добавляю кола 1 доріці
 			label24.Text = Convert.ToString(c);
+			
 
+			// сортування по результату
+			dataGridView3.Rows.Add(label17.Text + "," + 6);
+			dataGridView3.Rows.Add(label24.Text + "," + 5);
+			dataGridView3.Rows.Add(label23.Text + "," + 4);
+			dataGridView3.Rows.Add(label25.Text + "," + 3);
+			dataGridView3.Rows.Add(label97.Text + "," + 2);
+			dataGridView3.Rows.Add(label112.Text + "," + 1);
+
+			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+
+
+
+
+
+
+			//червона
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel1.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel1.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel1.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel1.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+
+
+			// біла
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel3.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel3.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel3.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel3.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			// зелена
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel4.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel4.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel4.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel4.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			//оранжева 
+
+
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel5.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel5.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel5.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel5.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			//синя
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+			{
+				panel10.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel10.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel10.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel10.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel10.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel10.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+
+			//жовта
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+			{
+				panel11.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+				{
+
+					panel11.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+					{
+
+						panel11.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+						{
+
+							panel11.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+							{
+
+								panel11.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+								{
+
+									panel11.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+			timer34.Enabled = true;
+
+
+
+			// для сортування позиції гонщика
 			if (Convert.ToDouble(label30.Text) < 1)         //обмеження по часу кола 1 секунда
 			{
 				c--;
@@ -3447,6 +6289,322 @@ namespace zase4kak
 
 			d++;                                            //добавляю кола 4 доріці
 			label25.Text = Convert.ToString(d);
+			
+
+
+
+			// сортування по результату
+			dataGridView3.Rows.Add(label17.Text + "," + 6);
+			dataGridView3.Rows.Add(label24.Text + "," + 5);
+			dataGridView3.Rows.Add(label23.Text + "," + 4);
+			dataGridView3.Rows.Add(label25.Text + "," + 3);
+			dataGridView3.Rows.Add(label97.Text + "," + 2);
+			dataGridView3.Rows.Add(label112.Text + "," + 1);
+
+			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+
+
+
+
+
+
+			//червона
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel1.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel1.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel1.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel1.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+
+
+			// біла
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel3.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel3.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel3.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel3.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			// зелена
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel4.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel4.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel4.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel4.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			//оранжева 
+
+
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel5.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel5.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel5.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel5.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			//синя
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+			{
+				panel10.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel10.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel10.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel10.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel10.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel10.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+
+			//жовта
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+			{
+				panel11.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+				{
+
+					panel11.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+					{
+
+						panel11.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+						{
+
+							panel11.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+							{
+
+								panel11.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+								{
+
+									panel11.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+			timer34.Enabled = true;
+
 			if (Convert.ToDouble(label39.Text) < 1)         //обмеження по часу кола 1 секунда
 			{
 				d--;
@@ -3516,37 +6674,57 @@ namespace zase4kak
 					button7.Visible = false;
 					button6.Visible = false;
 					button1.Focus();
-					panel1.Location = new Point(7, 213);
-					panel3.Location = new Point(7, 358);
-					panel4.Location = new Point(7, 502);
-					panel5.Location = new Point(7, 645);
+
+					panel1.Location = new Point(4, 219);
+					panel3.Location = new Point(4, 321);
+					panel4.Location = new Point(4, 423);
+					panel5.Location = new Point(4, 525);
+					panel10.Location = new Point(4, 628);
+					panel11.Location = new Point(4, 731);
 
 					label17.Text = "0";
 					label24.Text = "0";
 					label23.Text = "0";
 					label25.Text = "0";
+					label97.Text = "0";
+					label112.Text = "0";
 
 					label18.Text = "00,000";
 					label22.Text = "00,000";
 					label19.Text = "00,000";
 					label20.Text = "00,000";
 					label16.Text = "999";
+
 					label29.Text = "00,000";
 					label30.Text = "00,000";
 					label31.Text = "00,000";
 					label32.Text = "00,000";
 					label42.Text = "999";
+
 					label35.Text = "00,000";
 					label36.Text = "00,000";
 					label37.Text = "00,000";
 					label34.Text = "00,000";
 					label43.Text = "999";
+
 					label38.Text = "00,000";
 					label39.Text = "00,000";
 					label40.Text = "00,000";
 					label41.Text = "00,000";
 					label44.Text = "999";
-					
+
+					label94.Text = "00,000";
+					label96.Text = "00,000";
+					label93.Text = "00,000";
+					label99.Text = "00,000";
+					label92.Text = "999";
+
+					label100.Text = "00,000";
+					label101.Text = "00,000";
+					label103.Text = "00,000";
+					label114.Text = "00,000";
+					label107.Text = "999";
+
 					label55.Visible = false;
 					label59.Visible = false;
 					label60.Visible = false;
@@ -3591,10 +6769,14 @@ namespace zase4kak
 		private void button9_Click(object sender, EventArgs e)
 		{
 			label68.Visible = false;
+
 			textBox20.Visible = false;
 			textBox21.Visible = false;
 			textBox22.Visible = false;
 			textBox23.Visible = false;
+			textBox36.Visible = false;
+			textBox37.Visible = false;
+
 			button9.Visible = false;
 
 
@@ -3602,25 +6784,33 @@ namespace zase4kak
 			{
 
 				button8.Visible = true;
+
 				dataGridView1.Visible = true;
 
 				dataGridView1.Rows.Add("Червона", label45.Text, label17.Text + "," + textBox20.Text);
 
-				dataGridView1.Rows.Add("Зелена", label46.Text, label24.Text + "," + textBox22.Text);
+				dataGridView1.Rows.Add("Біла", label46.Text, label24.Text + "," + textBox22.Text);
 
-				dataGridView1.Rows.Add("Синя", label47.Text, label23.Text + "," + textBox21.Text);
+				dataGridView1.Rows.Add("Зелена", label47.Text, label23.Text + "," + textBox21.Text);
 
-				dataGridView1.Rows.Add("Жовта", label48.Text, label25.Text + "," + textBox23.Text);
+				dataGridView1.Rows.Add("Оранжева", label48.Text, label25.Text + "," + textBox23.Text);
+
+				dataGridView1.Rows.Add("Синя", label115.Text, label97.Text + "," + textBox36.Text);
+
+				dataGridView1.Rows.Add("Жовта", label116.Text, label112.Text + "," + textBox37.Text);
 
 				//сортування результату гонки в таблиці
 
 
 				//dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
 				dataGridView1.Sort(Column2, ListSortDirection.Descending);
+
 				textBox20.Text = "";
 				textBox21.Text = "";
 				textBox22.Text = "";
 				textBox23.Text = "";
+				textBox36.Text = "";
+				textBox37.Text = "";
 
 			}
 			else
@@ -3628,13 +6818,17 @@ namespace zase4kak
 				dataGridView2.Visible = true;
 				button16.Visible = true;
 
-				dataGridView2.Rows.Add("Червона", label45.Text, label17.Text + "." + textBox20.Text);
+				dataGridView2.Rows.Add("Червона", label45.Text, label17.Text + "," + textBox20.Text);
 
-				dataGridView2.Rows.Add("Зелена", label46.Text, label24.Text + "." + textBox22.Text);
+				dataGridView2.Rows.Add("Біла", label46.Text, label24.Text + "," + textBox22.Text);
 
-				dataGridView2.Rows.Add("Синя", label47.Text, label23.Text + "." + textBox21.Text);
+				dataGridView2.Rows.Add("Зелена", label47.Text, label23.Text + "," + textBox21.Text);
 
-				dataGridView2.Rows.Add("Жовта", label48.Text, label25.Text + "." + textBox23.Text);
+				dataGridView2.Rows.Add("Оранжева", label48.Text, label25.Text + "," + textBox23.Text);
+
+				dataGridView2.Rows.Add("Синя", label115.Text, label97.Text + "," + textBox36.Text);
+
+				dataGridView2.Rows.Add("Жовта", label116.Text, label112.Text + "," + textBox37.Text);
 				//сортування результату гонки в таблиці
 
 
@@ -3644,6 +6838,8 @@ namespace zase4kak
 				textBox21.Text = "";
 				textBox22.Text = "";
 				textBox23.Text = "";
+				textBox36.Text = "";
+				textBox37.Text = "";
 			}
 		}
 
@@ -4247,6 +7443,321 @@ namespace zase4kak
         {
 			v++;                                            //добавляю кола 1 доріці
 			label97.Text = Convert.ToString(v);
+			
+			// для сортування позиції гонщика
+
+
+			// сортування по результату
+			dataGridView3.Rows.Add(label17.Text + "," + 6);
+			dataGridView3.Rows.Add(label24.Text + "," + 5);
+			dataGridView3.Rows.Add(label23.Text + "," + 4);
+			dataGridView3.Rows.Add(label25.Text + "," + 3);
+			dataGridView3.Rows.Add(label97.Text + "," + 2);
+			dataGridView3.Rows.Add(label112.Text + "," + 1);
+
+			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+
+
+
+
+
+
+			//червона
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel1.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel1.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel1.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel1.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+
+
+			// біла
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel3.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel3.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel3.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel3.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			// зелена
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel4.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel4.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel4.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel4.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			//оранжева 
+
+
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel5.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel5.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel5.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel5.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			//синя
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+			{
+				panel10.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel10.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel10.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel10.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel10.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel10.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+
+			//жовта
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+			{
+				panel11.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+				{
+
+					panel11.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+					{
+
+						panel11.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+						{
+
+							panel11.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+							{
+
+								panel11.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+								{
+
+									panel11.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+			timer34.Enabled = true;
 			if (Convert.ToDouble(label74.Text) < 1)         //обмеження по часу кола 1 секунда
 			{
 				v--;
@@ -4260,6 +7771,322 @@ namespace zase4kak
         {
 			l++;                                            //добавляю кола 1 доріці
 			label112.Text = Convert.ToString(l);
+			           // для сортування позиції гонщика
+															// для сортування позиції гонщика
+
+			// сортування по результату
+			dataGridView3.Rows.Add(label17.Text + "," + 6);
+			dataGridView3.Rows.Add(label24.Text + "," + 5);
+			dataGridView3.Rows.Add(label23.Text + "," + 4);
+			dataGridView3.Rows.Add(label25.Text + "," + 3);
+			dataGridView3.Rows.Add(label97.Text + "," + 2);
+			dataGridView3.Rows.Add(label112.Text + "," + 1);
+
+			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+
+
+
+
+
+
+			//червона
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel1.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel1.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel1.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel1.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+
+
+			// біла
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel3.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel3.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel3.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel3.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			// зелена
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel4.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel4.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel4.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel4.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			//оранжева 
+
+
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel5.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel5.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel5.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel5.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			//синя
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+			{
+				panel10.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel10.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel10.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel10.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel10.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel10.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+
+			//жовта
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+			{
+				panel11.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+				{
+
+					panel11.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+					{
+
+						panel11.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+						{
+
+							panel11.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+							{
+
+								panel11.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+								{
+
+									panel11.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+			timer34.Enabled = true;
+
+
 			if (Convert.ToDouble(label103.Text) < 1)         //обмеження по часу кола 1 секунда
 			{
 				l--;
@@ -4401,6 +8228,322 @@ namespace zase4kak
 					label107.Text = "999";
 
 					number_group.Text = "5";
+
+
+
+
+
+					// сортування по результату
+					dataGridView3.Rows.Add(label17.Text + "," + 6);
+					dataGridView3.Rows.Add(label24.Text + "," + 5);
+					dataGridView3.Rows.Add(label23.Text + "," + 4);
+					dataGridView3.Rows.Add(label25.Text + "," + 3);
+					dataGridView3.Rows.Add(label97.Text + "," + 2);
+					dataGridView3.Rows.Add(label112.Text + "," + 1);
+
+					dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+
+
+
+
+
+
+					//червона
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel1.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel1.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel1.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel1.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+
+
+					// біла
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel3.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel3.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel3.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel3.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					// зелена
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel4.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel4.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel4.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel4.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					//оранжева 
+
+
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel5.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel5.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel5.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel5.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					//синя
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+					{
+						panel10.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel10.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel10.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel10.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel10.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel10.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+
+					//жовта
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+					{
+						panel11.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+						{
+
+							panel11.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+							{
+
+								panel11.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+								{
+
+									panel11.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+									{
+
+										panel11.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+										{
+
+											panel11.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+					timer34.Enabled = true;
 				}
 			}
 		}
@@ -4631,6 +8774,252 @@ namespace zase4kak
         {
 
         }
+
+        private void timer34_Tick(object sender, EventArgs e)
+
+     {
+
+
+
+
+
+			dataGridView3.Rows.Clear();
+			timer34.Enabled = false;
+			
+
+
+			//listBox2.Items.Clear();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			//label128.Text = label8.Text;
+			//label122.Text = label117.Text;
+			//label124.Text = label58.Text;
+			//label125.Text = label57.Text;
+			//label126.Text = label56.Text;
+
+
+
+			//if (Convert.ToInt32(label17.Text) == Convert.ToInt32(label124.Text))
+			//{
+			//	panel1.Location = new Point(4, 423);
+			//	//	label58.Text = "0";
+			//}
+			//else
+			//{
+			//	if (Convert.ToInt32(label24.Text) == Convert.ToInt32(label124.Text))
+			//	{
+			//		panel3.Location = new Point(4, 423);
+			//		//label58.Text = "0";
+			//	}
+			//	else
+			//	{
+			//		if (Convert.ToInt32(label23.Text) == Convert.ToInt32(label124.Text))
+			//		{
+			//			panel4.Location = new Point(4, 423);
+			//			//	label58.Text = "0";
+			//		}
+			//		else
+			//		{
+			//			if (Convert.ToInt32(label25.Text) == Convert.ToInt32(label124.Text))
+			//			{
+			//				panel5.Location = new Point(4, 423);
+			//				//	label58.Text = "0";
+			//			}
+			//			else
+			//			{
+			//				if (Convert.ToInt32(label97.Text) == Convert.ToInt32(label124.Text))
+			//				{
+			//					panel10.Location = new Point(4, 423);
+			//					//	label58.Text = "0";
+			//				}
+			//				else
+			//				{
+			//					if (Convert.ToInt32(label112.Text) == Convert.ToInt32(label124.Text))
+			//					{
+			//						panel11.Location = new Point(4, 423);
+			//						//	label58.Text = "0";
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+			//}
+
+
+
+
+
+			//if (Convert.ToInt32(label17.Text) == Convert.ToInt32(label122.Text))
+			//{
+			//	panel1.Location = new Point(4, 321);
+			//	//label117.Text = "0";
+			//}
+			//else
+			//{
+			//	if (Convert.ToInt32(label24.Text) == Convert.ToInt32(label122.Text))
+			//	{
+			//		panel3.Location = new Point(4, 321);
+			//		//label117.Text = "0";
+			//	}
+			//	else
+			//	{
+			//		if (Convert.ToInt32(label23.Text) == Convert.ToInt32(label122.Text))
+			//		{
+			//			panel4.Location = new Point(4, 321);
+			//			//label117.Text = "0";
+			//		}
+			//		else
+			//		{
+			//			if (Convert.ToInt32(label25.Text) == Convert.ToInt32(label122.Text))
+			//			{
+			//				panel5.Location = new Point(4, 321);
+			//				//label117.Text = "0";
+			//			}
+			//			else
+			//			{
+			//				if (Convert.ToInt32(label97.Text) == Convert.ToInt32(label122.Text))
+			//				{
+			//					panel10.Location = new Point(4, 321);
+			//					//	label117.Text = "0";
+			//				}
+			//				else
+			//				{
+			//					if (Convert.ToInt32(label112.Text) == Convert.ToInt32(label122.Text))
+			//					{
+			//						panel11.Location = new Point(4, 321);
+			//						//	label117.Text = "0";
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+			//}
+		
+
+
+
+			//if (Convert.ToInt32(label17.Text) == Convert.ToInt32(label128.Text))
+			//{
+			//	panel1.Location = new Point(4, 219);
+			//	//label8.Text = "0";
+			//}
+			//else
+			//{
+			//	if (Convert.ToInt32(label24.Text) == Convert.ToInt32(label128.Text))
+			//	{
+			//		panel3.Location = new Point(4, 219);
+			//		//label8.Text = "0";
+			//	}
+			//	else
+			//	{
+			//		if (Convert.ToInt32(label23.Text) == Convert.ToInt32(label128.Text))
+			//		{
+			//			panel4.Location = new Point(4, 219);
+			//			//label8.Text = "0";
+			//		}
+			//		else
+			//		{
+			//			if (Convert.ToInt32(label25.Text) == Convert.ToInt32(label128.Text))
+			//			{
+			//				panel5.Location = new Point(4, 219);
+			//				//label8.Text = "0";
+			//			}
+			//			else
+			//			{
+			//				if (Convert.ToInt32(label97.Text) == Convert.ToInt32(label128.Text))
+			//				{
+			//					panel10.Location = new Point(4, 219);
+			//					//label8.Text = "0";
+			//				}
+			//				else
+			//				{
+			//					if (Convert.ToInt32(label112.Text) == Convert.ToInt32(label128.Text))
+			//					{
+			//						panel11.Location = new Point(4, 219);
+			//						//label8.Text = "0";
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+			//}
+		}
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
+        {
+			if (double.Parse(e.CellValue1.ToString()) > double.Parse(e.CellValue2.ToString()))
+			{
+				e.SortResult = 1;
+			}
+			else if (double.Parse(e.CellValue1.ToString()) < double.Parse(e.CellValue2.ToString()))
+			{
+				e.SortResult = -1;
+			}
+			else
+			{
+				e.SortResult = 0;
+			}
+			e.Handled = true;
+		}
+
+        private void dataGridView2_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
+        {
+			if (double.Parse(e.CellValue1.ToString()) > double.Parse(e.CellValue2.ToString()))
+			{
+				e.SortResult = 1;
+			}
+			else if (double.Parse(e.CellValue1.ToString()) < double.Parse(e.CellValue2.ToString()))
+			{
+				e.SortResult = -1;
+			}
+			else
+			{
+				e.SortResult = 0;
+			}
+			e.Handled = true;
+		}
+
+        private void dataGridView1_SortCompare_1(object sender, DataGridViewSortCompareEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_SortCompare_2(object sender, DataGridViewSortCompareEventArgs e)
+        {
+			if (double.Parse(e.CellValue1.ToString()) > double.Parse(e.CellValue2.ToString()))
+			{
+				e.SortResult = 1;
+			}
+			else if (double.Parse(e.CellValue1.ToString()) < double.Parse(e.CellValue2.ToString()))
+			{
+				e.SortResult = -1;
+			}
+			else
+			{
+				e.SortResult = 0;
+			}
+			e.Handled = true;
+		}
 
         private void timer26_Tick_1(object sender, EventArgs e)
         {
@@ -4942,9 +9331,334 @@ namespace zase4kak
 
 		private void timer10_Tick(object sender, EventArgs e)
 		{
-
+			int chervona, bila, zelena, orangeva, sunia, shovta;
 			i++;                                            //добавляю кола 1 доріці
 			label17.Text = Convert.ToString(i);
+			
+
+
+			chervona = Convert.ToInt32(label17.Text);
+			bila = Convert.ToInt32(label24.Text);
+			zelena = Convert.ToInt32(label23.Text);
+			orangeva = Convert.ToInt32(label25.Text);
+			sunia = Convert.ToInt32(label97.Text);
+			shovta = Convert.ToInt32(label112.Text);
+
+			// сортування по результату
+			dataGridView3.Rows.Add(label17.Text +","+ 6);
+			dataGridView3.Rows.Add(label24.Text + "," + 5);
+			dataGridView3.Rows.Add(label23.Text + "," + 4);
+			dataGridView3.Rows.Add(label25.Text + "," + 3);
+			dataGridView3.Rows.Add(label97.Text + "," + 2);
+			dataGridView3.Rows.Add(label112.Text + "," + 1);
+
+			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+
+
+
+
+
+
+			//червона
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6) )//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel1.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6) )//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel1.Location = new Point(4, 321);
+                }
+                else
+                {
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel1.Location = new Point(4, 423);
+                    }
+                    else
+                    {
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel1.Location = new Point(4, 525);
+                        }
+                        else
+                        {
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(4, 628);
+                            }
+                            else
+                            {
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text+ "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+
+
+					// біла
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel3.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel3.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel3.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel3.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			// зелена
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel4.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel4.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel4.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel4.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			//оранжева 
+
+
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel5.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel5.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel5.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel5.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			//синя
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+			{
+				panel10.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel10.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel10.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel10.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel10.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel10.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+
+			//жовта
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+			{
+				panel11.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+				{
+
+					panel11.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+					{
+
+						panel11.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+						{
+
+							panel11.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1) )// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+							{
+
+								panel11.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1) )// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+								{
+
+									panel11.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+			timer34.Enabled = true;
+			
+			
+			
+			//для сортування місця гонщика
 			if (Convert.ToDouble(label22.Text) < 1)         //обмеження по часу кола 1 секунда
 			{
 				i--;
@@ -5165,6 +9879,323 @@ namespace zase4kak
 					label107.Text = "999";
 
 					number_group.Text = "4";
+
+
+
+
+
+
+					// сортування по результату
+					dataGridView3.Rows.Add(label17.Text + "," + 6);
+					dataGridView3.Rows.Add(label24.Text + "," + 5);
+					dataGridView3.Rows.Add(label23.Text + "," + 4);
+					dataGridView3.Rows.Add(label25.Text + "," + 3);
+					dataGridView3.Rows.Add(label97.Text + "," + 2);
+					dataGridView3.Rows.Add(label112.Text + "," + 1);
+
+					dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+
+
+
+
+
+
+					//червона
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel1.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel1.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel1.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel1.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+
+
+					// біла
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel3.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel3.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel3.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel3.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					// зелена
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel4.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel4.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel4.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel4.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					//оранжева 
+
+
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+					{
+						panel5.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel5.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel5.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel5.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					//синя
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+					{
+						panel10.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel10.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel10.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel10.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel10.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+										{
+
+											panel10.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+
+					//жовта
+
+					if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+					{
+						panel11.Location = new Point(4, 219);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+						{
+
+							panel11.Location = new Point(4, 321);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+							{
+
+								panel11.Location = new Point(4, 423);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+								{
+
+									panel11.Location = new Point(4, 525);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+									{
+
+										panel11.Location = new Point(4, 628);
+									}
+									else
+									{
+										if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+										{
+
+											panel11.Location = new Point(4, 731);
+										}
+									}
+								}
+							}
+						}
+
+					}
+					timer34.Enabled = true;
 
 				}
 
@@ -6667,7 +11698,320 @@ namespace zase4kak
 
 			b++;                                            //добавляю кола 1 доріці
 			label23.Text = Convert.ToString(b);
+			         // для сортування позиції гонщика
+															// для сортування позиції гонщика
 
+			// сортування по результату
+			dataGridView3.Rows.Add(label17.Text + "," + 6);
+			dataGridView3.Rows.Add(label24.Text + "," + 5);
+			dataGridView3.Rows.Add(label23.Text + "," + 4);
+			dataGridView3.Rows.Add(label25.Text + "," + 3);
+			dataGridView3.Rows.Add(label97.Text + "," + 2);
+			dataGridView3.Rows.Add(label112.Text + "," + 1);
+
+			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+
+
+
+
+
+
+			//червона
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel1.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel1.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel1.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel1.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+
+
+			// біла
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel3.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel3.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel3.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel3.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			// зелена
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel4.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel4.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel4.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel4.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			//оранжева 
+
+
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+			{
+				panel5.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel5.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel5.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel5.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			//синя
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+			{
+				panel10.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+				{
+
+					panel10.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel10.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel10.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel10.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel10.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+
+			//жовта
+
+			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+			{
+				panel11.Location = new Point(4, 219);
+			}
+			else
+			{
+				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+				{
+
+					panel11.Location = new Point(4, 321);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+					{
+
+						panel11.Location = new Point(4, 423);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+						{
+
+							panel11.Location = new Point(4, 525);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+							{
+
+								panel11.Location = new Point(4, 628);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+								{
+
+									panel11.Location = new Point(4, 731);
+								}
+							}
+						}
+					}
+				}
+
+			}
+			timer34.Enabled = true;
 
 			if (Convert.ToDouble(label34.Text) < 1)         //обмеження по часу кола 1 секунда
 			{

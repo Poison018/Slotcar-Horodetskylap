@@ -23,6 +23,8 @@ namespace zase4kak
             
             Form2 f2 = new Form2();
             f2.Show();
+            f2.button1.Visible = true;
+            f2.button3.Visible = false;
             this.Visible = false;
         }
 

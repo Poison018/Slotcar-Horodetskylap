@@ -291,6 +291,11 @@ namespace zase4kak
             this.panel11 = new System.Windows.Forms.Panel();
             this.textBox36 = new System.Windows.Forms.TextBox();
             this.textBox37 = new System.Windows.Forms.TextBox();
+            this.timer34 = new System.Windows.Forms.Timer(this.components);
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -302,6 +307,7 @@ namespace zase4kak
             this.panel5.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.form4BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -330,11 +336,13 @@ namespace zase4kak
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            this.dataGridView2.Location = new System.Drawing.Point(1360, 858);
+            this.dataGridView2.Location = new System.Drawing.Point(1362, 858);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(417, 197);
             this.dataGridView2.TabIndex = 130;
             this.dataGridView2.Visible = false;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView2.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView2_SortCompare);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -492,7 +500,7 @@ namespace zase4kak
             // 
             this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
             this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button9.Location = new System.Drawing.Point(1145, 896);
+            this.button9.Location = new System.Drawing.Point(1145, 897);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(76, 25);
             this.button9.TabIndex = 118;
@@ -583,6 +591,7 @@ namespace zase4kak
             this.dataGridView1.Size = new System.Drawing.Size(417, 197);
             this.dataGridView1.TabIndex = 110;
             this.dataGridView1.Visible = false;
+            this.dataGridView1.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView1_SortCompare_2);
             // 
             // Column4
             // 
@@ -706,7 +715,7 @@ namespace zase4kak
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label49.Location = new System.Drawing.Point(388, 958);
+            this.label49.Location = new System.Drawing.Point(390, 951);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(218, 25);
             this.label49.TabIndex = 100;
@@ -1148,7 +1157,7 @@ namespace zase4kak
             this.button16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button16.BackgroundImage")));
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button16.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button16.Location = new System.Drawing.Point(1783, 890);
+            this.button16.Location = new System.Drawing.Point(1783, 886);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(106, 46);
             this.button16.TabIndex = 131;
@@ -1822,7 +1831,6 @@ namespace zase4kak
             this.label50.Size = new System.Drawing.Size(32, 33);
             this.label50.TabIndex = 38;
             this.label50.Text = "0";
-            this.label50.Visible = false;
             // 
             // label18
             // 
@@ -2972,6 +2980,44 @@ namespace zase4kak
             this.textBox37.TabIndex = 144;
             this.textBox37.Visible = false;
             // 
+            // timer34
+            // 
+            this.timer34.Interval = 10;
+            this.timer34.Tick += new System.EventHandler(this.timer34_Tick);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridView3.Location = new System.Drawing.Point(1237, 858);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(117, 197);
+            this.dataGridView3.TabIndex = 165;
+            this.dataGridView3.Visible = false;
+            this.dataGridView3.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView3_SortCompare);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Доріжка";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Спортсмен";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn5.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Результат";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // form4BindingSource
             // 
             this.form4BindingSource.DataSource = typeof(zase4kak.Form4);
@@ -2982,6 +3028,7 @@ namespace zase4kak
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1920, 1057);
+            this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.textBox37);
             this.Controls.Add(this.textBox36);
             this.Controls.Add(this.panel11);
@@ -3066,6 +3113,7 @@ namespace zase4kak
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.form4BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -3335,5 +3383,10 @@ namespace zase4kak
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox textBox36;
         private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.Timer timer34;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }
