@@ -26,6 +26,9 @@ namespace zase4kak
             f2.button1.Visible = true;
             f2.button3.Visible = false;
             this.Visible = false;
+            f2.button4.Visible = false;
+            f2.button2.Visible = true;
+        
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -63,8 +66,8 @@ namespace zase4kak
             f2.Show();
             f2.button1.Visible = false;
             f2.button3.Visible = true;
-
-           
+            f2.button4.Visible = true;
+            f2.button2.Visible = false;
         }
     }
 }

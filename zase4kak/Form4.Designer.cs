@@ -220,7 +220,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label102 = new System.Windows.Forms.Label();
             this.label101 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label100 = new System.Windows.Forms.Label();
@@ -228,6 +227,7 @@
             this.label57 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label102 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label55 = new System.Windows.Forms.Label();
@@ -360,6 +360,12 @@
             this.textBox202 = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.label105 = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.label108 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -384,6 +390,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label110);
+            this.panel1.Controls.Add(this.label109);
+            this.panel1.Controls.Add(this.label108);
+            this.panel1.Controls.Add(this.label107);
+            this.panel1.Controls.Add(this.label106);
+            this.panel1.Controls.Add(this.label105);
             this.panel1.Controls.Add(this.textBox183);
             this.panel1.Controls.Add(this.textBox184);
             this.panel1.Controls.Add(this.textBox185);
@@ -1450,6 +1462,7 @@
             this.label43.Size = new System.Drawing.Size(76, 73);
             this.label43.TabIndex = 99;
             this.label43.Text = "E";
+            this.label43.Click += new System.EventHandler(this.label43_Click);
             // 
             // label42
             // 
@@ -2452,15 +2465,6 @@
             this.panel2.Size = new System.Drawing.Size(1271, 336);
             this.panel2.TabIndex = 2;
             // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(300, 69);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(13, 13);
-            this.label102.TabIndex = 34;
-            this.label102.Text = "0";
-            // 
             // label101
             // 
             this.label101.AutoSize = true;
@@ -2533,6 +2537,15 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(336, 89);
             this.panel6.TabIndex = 3;
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(300, 69);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(13, 13);
+            this.label102.TabIndex = 34;
+            this.label102.Text = "0";
             // 
             // label56
             // 
@@ -3905,6 +3918,66 @@
             this.timer4.Tag = "вибір компорта";
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick_1);
             // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("SWRomnd", 99.74999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.Location = new System.Drawing.Point(406, 76);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(137, 845);
+            this.label105.TabIndex = 197;
+            this.label105.Text = "}\r\n}\r\n}\r\n}\r\n}";
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label106.Location = new System.Drawing.Point(499, 141);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(76, 73);
+            this.label106.TabIndex = 198;
+            this.label106.Text = "A";
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label107.Location = new System.Drawing.Point(499, 304);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(76, 73);
+            this.label107.TabIndex = 199;
+            this.label107.Text = "B";
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label108.Location = new System.Drawing.Point(496, 478);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(79, 73);
+            this.label108.TabIndex = 200;
+            this.label108.Text = "C";
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label109.Location = new System.Drawing.Point(499, 640);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(79, 73);
+            this.label109.TabIndex = 201;
+            this.label109.Text = "D";
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label110.Location = new System.Drawing.Point(499, 807);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(76, 73);
+            this.label110.TabIndex = 202;
+            this.label110.Text = "E";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4010,15 +4083,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label49;
@@ -4303,5 +4367,20 @@
         public System.Windows.Forms.TextBox textBox201;
         public System.Windows.Forms.TextBox textBox202;
         private System.Windows.Forms.Timer timer4;
+        public System.Windows.Forms.Label label105;
+        public System.Windows.Forms.Label label38;
+        public System.Windows.Forms.Label label42;
+        public System.Windows.Forms.Label label41;
+        public System.Windows.Forms.Label label40;
+        public System.Windows.Forms.Label label39;
+        public System.Windows.Forms.Label label46;
+        public System.Windows.Forms.Label label45;
+        public System.Windows.Forms.Label label44;
+        public System.Windows.Forms.Label label43;
+        public System.Windows.Forms.Label label110;
+        public System.Windows.Forms.Label label109;
+        public System.Windows.Forms.Label label108;
+        public System.Windows.Forms.Label label107;
+        public System.Windows.Forms.Label label106;
     }
 }

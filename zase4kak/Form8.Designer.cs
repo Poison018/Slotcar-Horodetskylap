@@ -296,6 +296,12 @@ namespace zase4kak
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer35 = new System.Windows.Forms.Timer(this.components);
+            this.timer36 = new System.Windows.Forms.Timer(this.components);
+            this.timer37 = new System.Windows.Forms.Timer(this.components);
+            this.timer38 = new System.Windows.Forms.Timer(this.components);
+            this.timer39 = new System.Windows.Forms.Timer(this.components);
+            this.timer40 = new System.Windows.Forms.Timer(this.components);
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -375,7 +381,7 @@ namespace zase4kak
             // 
             this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button15.Location = new System.Drawing.Point(690, 924);
+            this.button15.Location = new System.Drawing.Point(690, 930);
             this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(458, 122);
@@ -500,7 +506,7 @@ namespace zase4kak
             // 
             this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
             this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button9.Location = new System.Drawing.Point(1145, 897);
+            this.button9.Location = new System.Drawing.Point(1072, 897);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(76, 25);
             this.button9.TabIndex = 118;
@@ -512,7 +518,7 @@ namespace zase4kak
             // textBox23
             // 
             this.textBox23.BackColor = System.Drawing.Color.Orange;
-            this.textBox23.Location = new System.Drawing.Point(905, 900);
+            this.textBox23.Location = new System.Drawing.Point(832, 900);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(100, 20);
             this.textBox23.TabIndex = 117;
@@ -521,7 +527,7 @@ namespace zase4kak
             // textBox22
             // 
             this.textBox22.BackColor = System.Drawing.Color.White;
-            this.textBox22.Location = new System.Drawing.Point(784, 900);
+            this.textBox22.Location = new System.Drawing.Point(711, 900);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(100, 20);
             this.textBox22.TabIndex = 116;
@@ -530,7 +536,7 @@ namespace zase4kak
             // textBox21
             // 
             this.textBox21.BackColor = System.Drawing.Color.Green;
-            this.textBox21.Location = new System.Drawing.Point(905, 875);
+            this.textBox21.Location = new System.Drawing.Point(832, 875);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(100, 20);
             this.textBox21.TabIndex = 115;
@@ -539,7 +545,7 @@ namespace zase4kak
             // textBox20
             // 
             this.textBox20.BackColor = System.Drawing.Color.Red;
-            this.textBox20.Location = new System.Drawing.Point(784, 875);
+            this.textBox20.Location = new System.Drawing.Point(711, 875);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(100, 20);
             this.textBox20.TabIndex = 114;
@@ -549,7 +555,7 @@ namespace zase4kak
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label68.Location = new System.Drawing.Point(847, 840);
+            this.label68.Location = new System.Drawing.Point(774, 840);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(227, 24);
             this.label68.TabIndex = 113;
@@ -564,6 +570,7 @@ namespace zase4kak
             this.label67.Size = new System.Drawing.Size(13, 13);
             this.label67.TabIndex = 112;
             this.label67.Text = "0";
+            this.label67.Visible = false;
             // 
             // button8
             // 
@@ -622,7 +629,7 @@ namespace zase4kak
             // 
             this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
-            this.button7.Location = new System.Drawing.Point(690, 924);
+            this.button7.Location = new System.Drawing.Point(690, 931);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(458, 122);
             this.button7.TabIndex = 109;
@@ -630,12 +637,13 @@ namespace zase4kak
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Visible = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button7_KeyDown_1);
             // 
             // button6
             // 
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
-            this.button6.Location = new System.Drawing.Point(690, 927);
+            this.button6.Location = new System.Drawing.Point(690, 934);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(458, 122);
             this.button6.TabIndex = 108;
@@ -643,6 +651,7 @@ namespace zase4kak
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button6_KeyDown_1);
             // 
             // timer13
             // 
@@ -1128,7 +1137,7 @@ namespace zase4kak
             // 
             this.button18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button18.BackgroundImage")));
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button18.Location = new System.Drawing.Point(690, 927);
+            this.button18.Location = new System.Drawing.Point(690, 930);
             this.button18.Margin = new System.Windows.Forms.Padding(2);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(458, 122);
@@ -1142,7 +1151,7 @@ namespace zase4kak
             // 
             this.button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button17.BackgroundImage")));
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button17.Location = new System.Drawing.Point(690, 923);
+            this.button17.Location = new System.Drawing.Point(690, 930);
             this.button17.Margin = new System.Windows.Forms.Padding(2);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(458, 122);
@@ -1831,6 +1840,7 @@ namespace zase4kak
             this.label50.Size = new System.Drawing.Size(32, 33);
             this.label50.TabIndex = 38;
             this.label50.Text = "0";
+            this.label50.Visible = false;
             // 
             // label18
             // 
@@ -2138,7 +2148,7 @@ namespace zase4kak
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(690, 924);
+            this.button1.Location = new System.Drawing.Point(690, 931);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(458, 122);
@@ -2691,7 +2701,7 @@ namespace zase4kak
             // 
             // timer30
             // 
-            this.timer30.Interval = 300;
+            this.timer30.Interval = 3;
             this.timer30.Tag = "пята гонка";
             this.timer30.Tick += new System.EventHandler(this.timer30_Tick);
             // 
@@ -2965,7 +2975,7 @@ namespace zase4kak
             // textBox36
             // 
             this.textBox36.BackColor = System.Drawing.Color.DodgerBlue;
-            this.textBox36.Location = new System.Drawing.Point(1022, 876);
+            this.textBox36.Location = new System.Drawing.Point(949, 876);
             this.textBox36.Name = "textBox36";
             this.textBox36.Size = new System.Drawing.Size(100, 20);
             this.textBox36.TabIndex = 143;
@@ -2974,7 +2984,7 @@ namespace zase4kak
             // textBox37
             // 
             this.textBox37.BackColor = System.Drawing.Color.Yellow;
-            this.textBox37.Location = new System.Drawing.Point(1022, 899);
+            this.textBox37.Location = new System.Drawing.Point(949, 899);
             this.textBox37.Name = "textBox37";
             this.textBox37.Size = new System.Drawing.Size(100, 20);
             this.textBox37.TabIndex = 144;
@@ -3017,6 +3027,36 @@ namespace zase4kak
             this.dataGridViewTextBoxColumn6.HeaderText = "Результат";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // timer35
+            // 
+            this.timer35.Interval = 300;
+            this.timer35.Tick += new System.EventHandler(this.timer35_Tick);
+            // 
+            // timer36
+            // 
+            this.timer36.Interval = 300;
+            this.timer36.Tick += new System.EventHandler(this.timer36_Tick);
+            // 
+            // timer37
+            // 
+            this.timer37.Interval = 300;
+            this.timer37.Tick += new System.EventHandler(this.timer37_Tick);
+            // 
+            // timer38
+            // 
+            this.timer38.Interval = 300;
+            this.timer38.Tick += new System.EventHandler(this.timer38_Tick);
+            // 
+            // timer39
+            // 
+            this.timer39.Interval = 300;
+            this.timer39.Tick += new System.EventHandler(this.timer39_Tick);
+            // 
+            // timer40
+            // 
+            this.timer40.Interval = 300;
+            this.timer40.Tick += new System.EventHandler(this.timer40_Tick);
             // 
             // form4BindingSource
             // 
@@ -3388,5 +3428,11 @@ namespace zase4kak
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Timer timer35;
+        private System.Windows.Forms.Timer timer36;
+        private System.Windows.Forms.Timer timer37;
+        private System.Windows.Forms.Timer timer38;
+        private System.Windows.Forms.Timer timer39;
+        private System.Windows.Forms.Timer timer40;
     }
 }

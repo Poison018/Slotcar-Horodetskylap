@@ -1270,6 +1270,11 @@ namespace zase4kak
             timer4.Enabled = false;
         }
 
+        private void label43_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button7_Click(object sender, EventArgs e)
         {
             Form6 f6 = new Form6();

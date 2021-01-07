@@ -105,40 +105,40 @@ namespace zase4kak
 		{
 
 
-			if(checkBox1.Checked == true)		//задавання параметрів фінальної гонки
-            {
+			if (checkBox1.Checked == true)      //задавання параметрів фінальної гонки
+			{
 				label8.Visible = true;
 				textBox5.Visible = true;
-            }
-            else
-            {
+			}
+			else
+			{
 				label8.Visible = false;
 				textBox5.Visible = false;
 			}
 
 
 
-			if(textBox1.Text == "" || textBox2.Text == "")
-            {
+			if (textBox1.Text == "" || textBox2.Text == "")
+			{
 				button1.Enabled = false;
 				button3.Enabled = false;
-            }
-            else
-            {
+			}
+			else
+			{
 				button1.Enabled = true;
 				button3.Enabled = true;
-            }
+			}
 
 
 			if (textBox3.Text == "" || textBox4.Text == "")
-            {
+			{
 				button2.Enabled = false;
 
-            }
-            else
-            {
+			}
+			else
+			{
 				button2.Enabled = true;
-            }
+			}
 
 		}
 
@@ -148,7 +148,22 @@ namespace zase4kak
 			f4.Show();
 			f4.textBox106.Text = textBox3.Text;
 			f4.textBox107.Text = textBox4.Text;
-			
+			f4.label105.Visible = false;
+			f4.label38.Visible = true;
+			f4.label39.Visible = true;
+			f4.label40.Visible = true;
+			f4.label41.Visible = true;
+			f4.label42.Visible = true;
+			f4.label43.Visible = true;
+			f4.label44.Visible = true;
+			f4.label45.Visible = true;
+			f4.label46.Visible = true;
+			f4.label106.Visible = false;
+			f4.label107.Visible = false;
+			f4.label108.Visible = false;
+			f4.label109.Visible = false;
+			f4.label110.Visible = false;
+
 			switch (comboBox2.SelectedIndex)
 			{
 				case 0:
@@ -207,70 +222,70 @@ namespace zase4kak
 			}
 		}
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-			
-			
-        }
+		private void button3_Click(object sender, EventArgs e)
+		{
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-			if(checkBox1.Checked == true)
-            {
-			
-				checkBox2.Checked = false;
-            }
-            else
-            {
-				
-				checkBox1.Checked = false;
-			}
-			
+
 		}
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
+		private void checkBox1_CheckedChanged(object sender, EventArgs e)
+		{
+			if (checkBox1.Checked == true)
+			{
+
+				checkBox2.Checked = false;
+			}
+			else
+			{
+
+				checkBox1.Checked = false;
+			}
+
+		}
+
+		private void checkBox2_CheckedChanged(object sender, EventArgs e)
+		{
 			if (checkBox2.Checked == true)
 			{
-				
+
 				checkBox1.Checked = false;
 				textBox5.Text = "";
 			}
 			else
 			{
-				
+
 				checkBox2.Checked = false;
 			}
 		}
 
-        private void timer2_Tick(object sender, EventArgs e)
-        {
+		private void timer2_Tick(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
-        {
+		private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+		{
 			Form3 f3 = new Form3();      //закриваю програму
-				DialogResult dialog = MessageBox.Show(
-				 "Вы действительно хотите выйти из программы?",
-				 "Завершение программы",
-				 MessageBoxButtons.YesNo,
-				 MessageBoxIcon.Warning
-				);
-				if (dialog == DialogResult.Yes)
-				{
-					e.Cancel = false;
+			DialogResult dialog = MessageBox.Show(
+			 "Вы действительно хотите выйти из программы?",
+			 "Завершение программы",
+			 MessageBoxButtons.YesNo,
+			 MessageBoxIcon.Warning
+			);
+			if (dialog == DialogResult.Yes)
+			{
+				e.Cancel = false;
 				Application.Exit();
 			}
 			else
-				{
-					e.Cancel = true;
-				
-				}
-			}
+			{
+				e.Cancel = true;
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
+			}
+		}
+
+		private void button3_Click_1(object sender, EventArgs e)
+		{
 			Form8 f8 = new Form8();
 
 
@@ -340,8 +355,89 @@ namespace zase4kak
 			}
 			f8.Show();
 		}
-    }
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			Form4 f4 = new Form4();
+			f4.Show();
+			f4.textBox106.Text = textBox3.Text;
+			f4.textBox107.Text = textBox4.Text;
+			f4.label105.Visible = true;
+			f4.label38.Visible = false;
+			f4.label39.Visible = false;
+			f4.label40.Visible = false;
+			f4.label41.Visible = false;
+			f4.label42.Visible = false;
+			f4.label43.Visible = false;
+			f4.label44.Visible = false;
+			f4.label45.Visible = false;
+			f4.label46.Visible = false;
+			f4.label106.Visible = true;
+			f4.label107.Visible = true;
+			f4.label108.Visible = true;
+			f4.label109.Visible = true;
+			f4.label110.Visible = true;
+
+
+			switch (comboBox2.SelectedIndex)
+			{
+				case 0:
+					f4.label1.Text = "Ретро";
+					f4.label1.Visible = true;
+
+					break;
+				case 1:
+					f4.label1.Text = "Вантажівка";
+					f4.label1.Visible = true;
+					break;
+				case 2:
+					f4.label1.Text = "ЕS-Стандарт";
+					f4.label1.Visible = true;
+					break;
+				case 3:
+					f4.label1.Text = "G-33";
+					f4.label1.Visible = true;
+					break;
+				case 4:
+					f4.label1.Text = "F1-24";
+					f4.label1.Visible = true;
+					break;
+				case 5:
+					f4.label1.Text = "G12-Стандарт";
+					f4.label1.Visible = true;
+					break;
+				case 6:
+					f4.label1.Text = "G12";
+					f4.label1.Visible = true;
+					break;
+				case 7:
+					f4.label1.Text = "PR24";
+					f4.label1.Visible = true;
+					break;
+				case 8:
+					f4.label1.Text = "ES-24";
+					f4.label1.Visible = true;
+					break;
+				case 9:
+					f4.label1.Text = "ES-32";
+					f4.label1.Visible = true;
+					break;
+				case 10:
+					f4.label1.Text = "F1";
+					f4.label1.Visible = true;
+					break;
+				case 11:
+					f4.label1.Text = "G15";
+					f4.label1.Visible = true;
+					break;
+				case 12:
+					f4.label1.Text = "Open-G12";
+					f4.label1.Visible = true;
+					break;
+			}
+		}
 	}
+}
 
 
     

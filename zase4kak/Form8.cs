@@ -5673,6 +5673,8 @@ namespace zase4kak
 				timer11.Enabled = false;
 				timer15.Enabled = false;
 				timer16.Enabled = false;
+				timer26.Enabled = false;
+				timer27.Enabled = false;
 				button6.Visible = false;
 				button7.Visible = true;
 				button7.Focus();
@@ -5686,6 +5688,8 @@ namespace zase4kak
 				timer11.Enabled = false;
 				timer15.Enabled = false;
 				timer16.Enabled = false;
+				timer26.Enabled = false;
+				timer27.Enabled = false;
 				button6.Visible = false;
 				button7.Visible = true;
 				button7.Focus();
@@ -5700,11 +5704,13 @@ namespace zase4kak
 				timer15.Enabled = false;
 				timer16.Enabled = false;
 				button6.Visible = false;
+				timer26.Enabled = false;
+				timer27.Enabled = false;
 				button7.Visible = true;
 				button7.Focus();
 			}
 
-			if (number_group.Text == "3")   // кнопка пауза для 3 заїзду
+			if (number_group.Text == "3")   // кнопка пауза для 4 заїзду
 			{
 				serialPort1.Close();
 				timer8.Enabled = false;
@@ -5712,6 +5718,37 @@ namespace zase4kak
 				timer11.Enabled = false;
 				timer15.Enabled = false;
 				timer16.Enabled = false;
+				button6.Visible = false;
+				timer26.Enabled = false;
+				timer27.Enabled = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+
+			if (number_group.Text == "4")   // кнопка пауза для 5 заїзду
+			{
+				serialPort1.Close();
+				timer30.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				timer26.Enabled = false;
+				timer27.Enabled = false;
+				button6.Visible = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+			if (number_group.Text == "5")   // кнопка пауза для 6 заїзду
+			{
+				serialPort1.Close();
+				timer31.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				timer26.Enabled = false;
+				timer27.Enabled = false;
 				button6.Visible = false;
 				button7.Visible = true;
 				button7.Focus();
@@ -5742,6 +5779,8 @@ namespace zase4kak
 				timer11.Enabled = true;
 				timer15.Enabled = true;
 				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
 				button6.Visible = true;
 				button7.Visible = false;
 				button6.Focus();
@@ -5755,6 +5794,8 @@ namespace zase4kak
 				timer11.Enabled = true;
 				timer15.Enabled = true;
 				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
 				button6.Visible = true;
 				button7.Visible = false;
 				button6.Focus();
@@ -5767,20 +5808,52 @@ namespace zase4kak
 				timer17.Enabled = true;
 				timer11.Enabled = true;
 				timer15.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
 				timer16.Enabled = true;
 				button6.Visible = true;
 				button7.Visible = false;
 				button6.Focus();
 			}
 
-			if (number_group.Text == "3")   // кнопка продовжити для 3 заїзду
+			if (number_group.Text == "3")   // кнопка продовжити для 4 заїзду
 			{
 
 				timer8.Enabled = true;
 				timer17.Enabled = true;
 				timer11.Enabled = true;
 				timer15.Enabled = true;
-				timer16.Enabled = false;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+			if (number_group.Text == "4")   // кнопка продовжити для 5 заїзду
+			{
+
+				timer30.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+			if (number_group.Text == "5")   // кнопка продовжити для 6 заїзду
+			{
+
+				timer31.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
 				button6.Visible = true;
 				button7.Visible = false;
 				button6.Focus();
@@ -5972,7 +6045,10 @@ namespace zase4kak
 
 
 
-
+			// підсвітка під час кола
+			textBox6.BackColor = Color.LawnGreen;
+			label24.BackColor = Color.LawnGreen;
+			timer36.Enabled = true;
 
 
 
@@ -6306,6 +6382,10 @@ namespace zase4kak
 
 
 
+			// підсвітка під час кола
+			textBox12.BackColor = Color.LawnGreen;
+			label25.BackColor = Color.LawnGreen;
+			timer38.Enabled = true;
 
 
 
@@ -6951,37 +7031,57 @@ namespace zase4kak
 			button7.Visible = false;
 			button6.Visible = false;
 			button15.Focus();
-			panel1.Location = new Point(7, 213);
-			panel3.Location = new Point(7, 358);
-			panel4.Location = new Point(7, 502);
-			panel5.Location = new Point(7, 645);
+			panel1.Location = new Point(4, 219);
+			panel3.Location = new Point(4,321);
+			panel4.Location = new Point(4,423);
+			panel5.Location = new Point(4,525);
+			panel10.Location = new Point(4, 628);
+			panel11.Location = new Point(4, 731);
 
 			label17.Text = "0";
 			label24.Text = "0";
 			label23.Text = "0";
 			label25.Text = "0";
+			label97.Text = "0";
+			label112.Text = "0";
+
 
 			label18.Text = "00,000";
 			label22.Text = "00,000";
 			label19.Text = "00,000";
 			label20.Text = "00,000";
 			label16.Text = "999";
+
 			label29.Text = "00,000";
 			label30.Text = "00,000";
 			label31.Text = "00,000";
 			label32.Text = "00,000";
 			label42.Text = "999";
+
 			label35.Text = "00,000";
 			label36.Text = "00,000";
 			label37.Text = "00,000";
 			label34.Text = "00,000";
 			label43.Text = "999";
+
 			label38.Text = "00,000";
 			label39.Text = "00,000";
 			label40.Text = "00,000";
 			label41.Text = "00,000";
 			label44.Text = "999";
-			
+
+			label94.Text = "00,000";
+			label96.Text = "00,000";
+			label93.Text = "00,000";
+			label99.Text = "00,000";
+			label92.Text = "999";
+
+			label100.Text = "00,000";
+			label101.Text = "00,000";
+			label103.Text = "00,000";
+			label114.Text = "00,000";
+			label107.Text = "999";
+
 			label55.Visible = false;
 			label59.Visible = false;
 			label60.Visible = false;
@@ -6994,7 +7094,8 @@ namespace zase4kak
 
 
 			//задаю учасників фіналістів
-
+			label116.Text = dataGridView1[1, 5].Value.ToString();
+			label115.Text = dataGridView1[1, 4].Value.ToString();
 			label48.Text = dataGridView1[1, 3].Value.ToString();
 			label47.Text = dataGridView1[1, 2].Value.ToString();
 			label46.Text = dataGridView1[1, 1].Value.ToString();
@@ -7461,6 +7562,10 @@ namespace zase4kak
 
 
 
+			// підсвітка під час кола
+			textBox31.BackColor = Color.LawnGreen;
+			label97.BackColor = Color.LawnGreen;
+			timer39.Enabled = true;
 
 
 
@@ -7788,6 +7893,10 @@ namespace zase4kak
 
 
 
+			// підсвітка під час кола
+			textBox35.BackColor = Color.LawnGreen;
+			label112.BackColor = Color.LawnGreen;
+			timer40.Enabled = true;
 
 
 
@@ -9021,7 +9130,271 @@ namespace zase4kak
 			e.Handled = true;
 		}
 
-        private void timer26_Tick_1(object sender, EventArgs e)
+        private void timer35_Tick(object sender, EventArgs e)
+        {
+			textBox1.BackColor = Color.WhiteSmoke;
+			label17.BackColor = Color.WhiteSmoke;
+			timer35.Enabled = false;
+		}
+
+        private void timer36_Tick(object sender, EventArgs e)
+        {
+			textBox6.BackColor = Color.WhiteSmoke;
+			label24.BackColor = Color.WhiteSmoke;
+			timer36.Enabled = false;
+		}
+
+        private void timer37_Tick(object sender, EventArgs e)
+        {
+			textBox9.BackColor = Color.WhiteSmoke;
+			label23.BackColor = Color.WhiteSmoke;
+			timer37.Enabled = false;
+		}
+
+        private void timer38_Tick(object sender, EventArgs e)
+        {
+			textBox12.BackColor = Color.WhiteSmoke;
+			label25.BackColor = Color.WhiteSmoke;
+			timer38.Enabled = false;
+		}
+
+        private void timer39_Tick(object sender, EventArgs e)
+        {
+			textBox31.BackColor = Color.WhiteSmoke;
+			label97.BackColor = Color.WhiteSmoke;
+			timer39.Enabled = false;
+		}
+
+        private void timer40_Tick(object sender, EventArgs e)
+        {
+			textBox35.BackColor = Color.WhiteSmoke;
+			label112.BackColor = Color.WhiteSmoke;
+			timer40.Enabled = false;
+		}
+
+        private void button7_KeyDown_1(object sender, KeyEventArgs e)
+        {
+
+
+			if (serialPort1.IsOpen == false)
+			{
+				serialPort1.Open();
+			}
+
+
+			serialPort1.WriteLine("4");
+			label69.Text = "Трек включений";
+			label69.BackColor = Color.Green;
+			button10.Enabled = false;
+
+			button11.Enabled = true;
+			startsound.Play();
+
+
+
+			if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
+			{
+
+				timer2.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+
+			if (number_group.Text == "1")   // кнопка продовжити для 2 заїзду
+			{
+
+				timer4.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				timer16.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+
+			if (number_group.Text == "2")   // кнопка продовжити для 3 заїзду
+			{
+
+				timer6.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+
+			if (number_group.Text == "3")   // кнопка продовжити для 4 заїзду
+			{
+
+				timer8.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				timer16.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+			if (number_group.Text == "4")   // кнопка продовжити для 5 заїзду
+			{
+
+				timer30.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+			if (number_group.Text == "5")   // кнопка продовжити для 6 заїзду
+			{
+
+				timer31.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+		}
+
+        private void button6_KeyDown_1(object sender, KeyEventArgs e)
+		{
+
+			serialPort1.WriteLine("3");
+
+
+			if (serialPort1.IsOpen == true)
+			{
+				serialPort1.Close();
+			}
+
+
+			label69.Text = "Трек виключений";
+			label69.BackColor = Color.Red;
+			button10.Enabled = true;
+			button11.Enabled = false;
+
+
+
+
+
+			pausesound.Play();
+			if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
+			{
+				serialPort1.Close();
+				timer2.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				button6.Visible = false;
+				timer26.Enabled = false;
+				timer27.Enabled = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+
+			if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
+			{
+				serialPort1.Close();
+				timer4.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				button6.Visible = false;
+				timer26.Enabled = false;
+				timer27.Enabled = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+
+			if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
+			{
+				serialPort1.Close();
+				timer6.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				button6.Visible = false;
+				timer26.Enabled = false;
+				timer27.Enabled = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+
+			if (number_group.Text == "3")   // кнопка пауза для 4 заїзду
+			{
+				serialPort1.Close();
+				timer8.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				button6.Visible = false;
+				timer26.Enabled = false;
+				timer27.Enabled = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+
+			if (number_group.Text == "4")   // кнопка пауза для 5 заїзду
+			{
+				serialPort1.Close();
+				timer30.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				timer26.Enabled = false;
+				timer27.Enabled = false;
+				button6.Visible = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+			if (number_group.Text == "5")   // кнопка пауза для 6 заїзду
+			{
+				serialPort1.Close();
+				timer31.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				timer26.Enabled = false;
+				timer27.Enabled = false;
+				button6.Visible = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+
+		}
+
+		private void timer26_Tick_1(object sender, EventArgs e)
         {
 			Timeo += 0.001 * 17;                   //timer на час кола синя доріжка
 			label95.Text = string.Format("{0:F3}", Timeo);       //timer на час кола синя доріжка
@@ -9355,10 +9728,10 @@ namespace zase4kak
 			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
 
 
-
-
-
-
+			// підсвітка під час кола
+			textBox1.BackColor = Color.LawnGreen;
+			label17.BackColor = Color.LawnGreen;
+			timer35.Enabled = true;
 
 
 
@@ -11714,7 +12087,10 @@ namespace zase4kak
 
 
 
-
+			// підсвітка під час кола
+			textBox9.BackColor = Color.LawnGreen;
+			label23.BackColor = Color.LawnGreen;
+			timer37.Enabled = true;
 
 
 
