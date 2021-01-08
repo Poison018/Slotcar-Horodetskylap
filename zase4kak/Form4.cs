@@ -370,6 +370,9 @@ namespace zase4kak
 
                     if (Convert.ToDouble(label55.Text) > Convert.ToDouble(label103.Text))
                     {
+                        panel5.BackColor = Color.LawnGreen;
+                        label55.BackColor = Color.LawnGreen;
+                        timer5.Enabled = true;
                         label55.Text = label103.Text;
                         record.Play();
                     }
@@ -673,7 +676,15 @@ namespace zase4kak
 
             if (label101.Text == "<<Кваліфікацію завершено!>>")
             {
-                button7.Visible = true;
+                if(label105.Visible == true)
+                {
+                    button8.Visible = true;
+                }
+                else
+                {
+                    button7.Visible = true;
+                }
+               
                 button2.Visible = false;
                 button3.Visible = false;
                 button6.Visible = false;
@@ -1272,6 +1283,146 @@ namespace zase4kak
 
         private void label43_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            panel5.BackColor = Color.WhiteSmoke;
+            label55.BackColor = Color.WhiteSmoke;
+            timer5.Enabled = false;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form6 f6 = new Form6();
+
+            f6.label2.Text = label1.Text;
+
+            f6.textBox1.Text = textBox1.Text;
+            f6.textBox33.Text = textBox33.Text;
+
+            f6.textBox2.Text = textBox2.Text;
+            f6.textBox35.Text = textBox35.Text;
+
+            f6.textBox3.Text = textBox3.Text;
+            f6.textBox34.Text = textBox34.Text;
+
+            f6.textBox4.Text = textBox4.Text;
+            f6.textBox36.Text = textBox36.Text;
+
+            f6.textBox5.Text = textBox5.Text;
+            f6.textBox37.Text = textBox37.Text;
+
+            f6.textBox6.Text = textBox6.Text;
+            f6.textBox38.Text = textBox38.Text;
+
+            f6.textBox7.Text = textBox7.Text;
+            f6.textBox39.Text = textBox39.Text;
+
+            f6.textBox8.Text = textBox8.Text;
+            f6.textBox40.Text = textBox40.Text;
+
+            f6.textBox9.Text = textBox9.Text;
+            f6.textBox41.Text = textBox41.Text;
+
+            f6.textBox10.Text = textBox10.Text;
+            f6.textBox42.Text = textBox42.Text;
+
+            f6.textBox11.Text = textBox11.Text;
+            f6.textBox43.Text = textBox43.Text;
+
+            f6.textBox12.Text = textBox12.Text;
+            f6.textBox44.Text = textBox44.Text;
+
+            f6.textBox13.Text = textBox13.Text;
+            f6.textBox45.Text = textBox45.Text;
+
+            f6.textBox14.Text = textBox14.Text;
+            f6.textBox46.Text = textBox46.Text;
+
+            f6.textBox15.Text = textBox15.Text;
+            f6.textBox47.Text = textBox47.Text;
+
+            f6.textBox16.Text = textBox16.Text;
+            f6.textBox48.Text = textBox48.Text;
+
+            f6.textBox17.Text = textBox17.Text;
+            f6.textBox49.Text = textBox49.Text;
+
+            f6.textBox18.Text = textBox18.Text;
+            f6.textBox50.Text = textBox50.Text;
+
+            f6.textBox19.Text = textBox19.Text;
+            f6.textBox51.Text = textBox51.Text;
+
+            f6.textBox20.Text = textBox20.Text;
+            f6.textBox52.Text = textBox52.Text;
+
+            f6.textBox21.Text = textBox21.Text;
+            f6.textBox53.Text = textBox53.Text;
+
+            f6.textBox22.Text = textBox22.Text;
+            f6.textBox54.Text = textBox54.Text;
+
+            f6.textBox23.Text = textBox23.Text;
+            f6.textBox55.Text = textBox55.Text;
+
+            f6.textBox24.Text = textBox24.Text;
+            f6.textBox56.Text = textBox56.Text;
+
+            f6.textBox25.Text = textBox25.Text;
+            f6.textBox57.Text = textBox57.Text;
+
+            f6.textBox26.Text = textBox26.Text;
+            f6.textBox58.Text = textBox58.Text;
+
+            f6.textBox27.Text = textBox27.Text;
+            f6.textBox59.Text = textBox59.Text;
+
+            f6.textBox28.Text = textBox28.Text;
+            f6.textBox60.Text = textBox60.Text;
+
+            f6.textBox29.Text = textBox29.Text;
+            f6.textBox61.Text = textBox61.Text;
+
+            f6.textBox30.Text = textBox30.Text;
+            f6.textBox62.Text = textBox62.Text;
+
+            f6.textBox31.Text = textBox31.Text;
+            f6.textBox63.Text = textBox63.Text;
+
+            f6.textBox32.Text = textBox32.Text;
+            f6.textBox64.Text = textBox64.Text;
+
+            f6.textBox171.Text = textBox171.Text;
+            f6.textBox172.Text = textBox172.Text;
+
+            f6.textBox178.Text = textBox178.Text;
+            f6.textBox177.Text = textBox177.Text;
+
+            f6.textBox182.Text = textBox182.Text;
+            f6.textBox181.Text = textBox181.Text;
+
+            f6.textBox186.Text = textBox186.Text;
+            f6.textBox185.Text = textBox185.Text;
+
+            f6.textBox190.Text = textBox190.Text;
+            f6.textBox189.Text = textBox189.Text;
+
+            f6.textBox193.Text = textBox193.Text;
+            f6.textBox192.Text = textBox192.Text;
+
+            f6.textBox198.Text = textBox198.Text;
+            f6.textBox197.Text = textBox197.Text;
+
+            f6.textBox202.Text = textBox202.Text;
+            f6.textBox201.Text = textBox201.Text;
+
+            f6.timer2.Enabled = true;
+
+
+            f6.Show();
 
         }
 

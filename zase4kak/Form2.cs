@@ -133,11 +133,12 @@ namespace zase4kak
 			if (textBox3.Text == "" || textBox4.Text == "")
 			{
 				button2.Enabled = false;
-
+				button4.Enabled = false;
 			}
 			else
 			{
 				button2.Enabled = true;
+				button4.Enabled = true;
 			}
 
 		}

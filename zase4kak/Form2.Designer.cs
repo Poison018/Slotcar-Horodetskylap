@@ -316,7 +316,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(303, 249);
+            this.button4.Location = new System.Drawing.Point(138, 249);
             this.button4.Margin = new System.Windows.Forms.Padding(1);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(145, 34);

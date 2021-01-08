@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -154,14 +153,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.timer18 = new System.Windows.Forms.Timer(this.components);
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label58 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label56 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label57 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label54 = new System.Windows.Forms.Label();
             this.timer19 = new System.Windows.Forms.Timer(this.components);
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -247,19 +238,25 @@
             this.зеленаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.button19 = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer26 = new System.Windows.Forms.Timer(this.components);
+            this.timer27 = new System.Windows.Forms.Timer(this.components);
+            this.timer28 = new System.Windows.Forms.Timer(this.components);
+            this.timer29 = new System.Windows.Forms.Timer(this.components);
+            this.timer30 = new System.Windows.Forms.Timer(this.components);
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.form4BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -286,19 +283,6 @@
             this.label9.Size = new System.Drawing.Size(112, 26);
             this.label9.TabIndex = 18;
             this.label9.Text = "Час кола";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(631, 7);
-            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 26);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Місце";
-            this.label8.Visible = false;
             // 
             // label6
             // 
@@ -577,7 +561,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel2.Controls.Add(this.label55);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
@@ -1642,89 +1625,6 @@
             this.timer18.Tag = "Таймер для сортування Місця";
             this.timer18.Tick += new System.EventHandler(this.timer18_Tick_1);
             // 
-            // panel6
-            // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.label58);
-            this.panel6.Cursor = System.Windows.Forms.Cursors.No;
-            this.panel6.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.panel6.Location = new System.Drawing.Point(656, 260);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(38, 34);
-            this.panel6.TabIndex = 45;
-            this.panel6.Visible = false;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label58.Location = new System.Drawing.Point(0, -3);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(36, 38);
-            this.label58.TabIndex = 39;
-            this.label58.Text = "1";
-            this.label58.Click += new System.EventHandler(this.label58_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel8.Controls.Add(this.label56);
-            this.panel8.Location = new System.Drawing.Point(655, 554);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(38, 34);
-            this.panel8.TabIndex = 46;
-            this.panel8.Visible = false;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label56.Location = new System.Drawing.Point(-1, -4);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(36, 38);
-            this.label56.TabIndex = 39;
-            this.label56.Text = "3";
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel9.Controls.Add(this.label57);
-            this.panel9.Location = new System.Drawing.Point(656, 696);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(38, 35);
-            this.panel9.TabIndex = 46;
-            this.panel9.Visible = false;
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label57.Location = new System.Drawing.Point(-1, -4);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(36, 38);
-            this.label57.TabIndex = 39;
-            this.label57.Text = "4";
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel7.Controls.Add(this.label54);
-            this.panel7.Location = new System.Drawing.Point(654, 413);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(38, 33);
-            this.panel7.TabIndex = 47;
-            this.panel7.Visible = false;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label54.Location = new System.Drawing.Point(0, -4);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(36, 38);
-            this.label54.TabIndex = 47;
-            this.label54.Text = "2";
-            // 
             // timer19
             // 
             this.timer19.Enabled = true;
@@ -2502,6 +2402,68 @@
             this.button19.Visible = false;
             this.button19.Click += new System.EventHandler(this.button19_Click_2);
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridView3.Location = new System.Drawing.Point(1184, 852);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(168, 197);
+            this.dataGridView3.TabIndex = 83;
+            this.dataGridView3.Visible = false;
+            this.dataGridView3.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView3_SortCompare);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Доріжка";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Спортсмен";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn5.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Результат";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // timer26
+            // 
+            this.timer26.Tag = "таймер для сортування результату";
+            this.timer26.Tick += new System.EventHandler(this.timer26_Tick_1);
+            // 
+            // timer27
+            // 
+            this.timer27.Interval = 300;
+            this.timer27.Tag = "таймер для підсвітки 1 доріжка";
+            this.timer27.Tick += new System.EventHandler(this.timer27_Tick);
+            // 
+            // timer28
+            // 
+            this.timer28.Interval = 300;
+            this.timer28.Tag = "таймер для підсвітки 2 доріжка";
+            this.timer28.Tick += new System.EventHandler(this.timer28_Tick);
+            // 
+            // timer29
+            // 
+            this.timer29.Interval = 300;
+            this.timer29.Tag = "таймер для підсвітки 4 доріжка";
+            this.timer29.Tick += new System.EventHandler(this.timer29_Tick);
+            // 
+            // timer30
+            // 
+            this.timer30.Interval = 300;
+            this.timer30.Tag = "таймер для підсвітки 3 доріжка";
+            this.timer30.Tick += new System.EventHandler(this.timer30_Tick);
+            // 
             // form4BindingSource
             // 
             this.form4BindingSource.DataSource = typeof(zase4kak.Form4);
@@ -2512,6 +2474,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1920, 1057);
+            this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.label89);
@@ -2537,10 +2500,6 @@
             this.Controls.Add(this.textBox23);
             this.Controls.Add(this.textBox22);
             this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.textBox20);
             this.Controls.Add(this.label68);
             this.Controls.Add(this.label67);
@@ -2590,18 +2549,11 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.form4BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2612,7 +2564,6 @@
 
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
@@ -2712,14 +2663,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Timer timer18;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
@@ -2828,5 +2771,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Timer timer26;
+        private System.Windows.Forms.Timer timer27;
+        private System.Windows.Forms.Timer timer28;
+        private System.Windows.Forms.Timer timer29;
+        private System.Windows.Forms.Timer timer30;
     }
 }
