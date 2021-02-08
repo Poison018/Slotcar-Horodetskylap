@@ -3675,6 +3675,7 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
             this.timer1.Tag = "таймер часу лап тайму";
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
@@ -3720,7 +3721,7 @@
             // textBox108
             // 
             this.textBox108.Enabled = false;
-            this.textBox108.Location = new System.Drawing.Point(15, 1021);
+            this.textBox108.Location = new System.Drawing.Point(-300, 1021);
             this.textBox108.Margin = new System.Windows.Forms.Padding(2);
             this.textBox108.Name = "textBox108";
             this.textBox108.Size = new System.Drawing.Size(74, 20);

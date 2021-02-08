@@ -118,6 +118,24 @@ namespace zase4kak
             this.червонаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.білаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.фіолетоваToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.доріжкаToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.червонаToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.білаToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.оранжеваToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.фіолетоваToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.жовтаToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.синяToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.чорнаToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.зеленаToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.доріжкаToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.червонаToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.білаToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.оранжеваToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.фіолетоваToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.жовтаToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.синяToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.чорнаToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.зеленаToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.timer24 = new System.Windows.Forms.Timer(this.components);
             this.timer25 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -152,6 +170,10 @@ namespace zase4kak
             this.label12 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label133 = new System.Windows.Forms.Label();
+            this.label127 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
@@ -173,13 +195,21 @@ namespace zase4kak
             this.label37 = new System.Windows.Forms.Label();
             this.button19 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label132 = new System.Windows.Forms.Label();
+            this.label126 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label131 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
@@ -199,6 +229,7 @@ namespace zase4kak
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label124 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -231,6 +262,10 @@ namespace zase4kak
             this.label4 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label134 = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -239,6 +274,10 @@ namespace zase4kak
             this.label3 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.label135 = new System.Windows.Forms.Label();
+            this.label129 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.label121 = new System.Windows.Forms.Label();
             this.label115 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
@@ -289,6 +328,10 @@ namespace zase4kak
             this.label100 = new System.Windows.Forms.Label();
             this.label116 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label136 = new System.Windows.Forms.Label();
+            this.label130 = new System.Windows.Forms.Label();
+            this.label122 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
             this.textBox36 = new System.Windows.Forms.TextBox();
             this.textBox37 = new System.Windows.Forms.TextBox();
             this.timer34 = new System.Windows.Forms.Timer(this.components);
@@ -302,6 +345,10 @@ namespace zase4kak
             this.timer38 = new System.Windows.Forms.Timer(this.components);
             this.timer39 = new System.Windows.Forms.Timer(this.components);
             this.timer40 = new System.Windows.Forms.Timer(this.components);
+            this.textBox38 = new System.Windows.Forms.TextBox();
+            this.timer41 = new System.Windows.Forms.Timer(this.components);
+            this.timer42 = new System.Windows.Forms.Timer(this.components);
+            this.timer43 = new System.Windows.Forms.Timer(this.components);
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -577,7 +624,7 @@ namespace zase4kak
             this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button8.Location = new System.Drawing.Point(1783, 942);
+            this.button8.Location = new System.Drawing.Point(1783, 938);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(106, 34);
             this.button8.TabIndex = 111;
@@ -778,30 +825,35 @@ namespace zase4kak
             this.оранжеваToolStripMenuItem1.Name = "оранжеваToolStripMenuItem1";
             this.оранжеваToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.оранжеваToolStripMenuItem1.Text = "Оранжева";
+            this.оранжеваToolStripMenuItem1.Click += new System.EventHandler(this.оранжеваToolStripMenuItem1_Click);
             // 
             // жовтаToolStripMenuItem1
             // 
             this.жовтаToolStripMenuItem1.Name = "жовтаToolStripMenuItem1";
             this.жовтаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.жовтаToolStripMenuItem1.Text = "Жовта";
+            this.жовтаToolStripMenuItem1.Click += new System.EventHandler(this.жовтаToolStripMenuItem1_Click);
             // 
             // синяToolStripMenuItem1
             // 
             this.синяToolStripMenuItem1.Name = "синяToolStripMenuItem1";
             this.синяToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.синяToolStripMenuItem1.Text = "Синя";
+            this.синяToolStripMenuItem1.Click += new System.EventHandler(this.синяToolStripMenuItem1_Click);
             // 
             // чорнаToolStripMenuItem1
             // 
             this.чорнаToolStripMenuItem1.Name = "чорнаToolStripMenuItem1";
             this.чорнаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.чорнаToolStripMenuItem1.Text = "Чорна";
+            this.чорнаToolStripMenuItem1.Click += new System.EventHandler(this.чорнаToolStripMenuItem1_Click);
             // 
             // зеленаToolStripMenuItem1
             // 
             this.зеленаToolStripMenuItem1.Name = "зеленаToolStripMenuItem1";
             this.зеленаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.зеленаToolStripMenuItem1.Text = "Зелена";
+            this.зеленаToolStripMenuItem1.Click += new System.EventHandler(this.зеленаToolStripMenuItem1_Click);
             // 
             // доріжкаToolStripMenuItem2
             // 
@@ -823,48 +875,56 @@ namespace zase4kak
             this.червонаToolStripMenuItem2.Name = "червонаToolStripMenuItem2";
             this.червонаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
             this.червонаToolStripMenuItem2.Text = "Червона";
+            this.червонаToolStripMenuItem2.Click += new System.EventHandler(this.червонаToolStripMenuItem2_Click);
             // 
             // білаToolStripMenuItem2
             // 
             this.білаToolStripMenuItem2.Name = "білаToolStripMenuItem2";
             this.білаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
             this.білаToolStripMenuItem2.Text = "Біла";
+            this.білаToolStripMenuItem2.Click += new System.EventHandler(this.білаToolStripMenuItem2_Click);
             // 
             // оранжеваToolStripMenuItem2
             // 
             this.оранжеваToolStripMenuItem2.Name = "оранжеваToolStripMenuItem2";
             this.оранжеваToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
             this.оранжеваToolStripMenuItem2.Text = "Оранжева";
+            this.оранжеваToolStripMenuItem2.Click += new System.EventHandler(this.оранжеваToolStripMenuItem2_Click);
             // 
             // фіолетоваToolStripMenuItem2
             // 
             this.фіолетоваToolStripMenuItem2.Name = "фіолетоваToolStripMenuItem2";
             this.фіолетоваToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
             this.фіолетоваToolStripMenuItem2.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem2.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem2_Click);
             // 
             // жовтаToolStripMenuItem2
             // 
             this.жовтаToolStripMenuItem2.Name = "жовтаToolStripMenuItem2";
             this.жовтаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
             this.жовтаToolStripMenuItem2.Text = "Жовта";
+            this.жовтаToolStripMenuItem2.Click += new System.EventHandler(this.жовтаToolStripMenuItem2_Click);
             // 
             // синяToolStripMenuItem2
             // 
             this.синяToolStripMenuItem2.Name = "синяToolStripMenuItem2";
             this.синяToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
             this.синяToolStripMenuItem2.Text = "Синя";
+            this.синяToolStripMenuItem2.Click += new System.EventHandler(this.синяToolStripMenuItem2_Click);
             // 
             // чорнаToolStripMenuItem2
             // 
             this.чорнаToolStripMenuItem2.Name = "чорнаToolStripMenuItem2";
             this.чорнаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
             this.чорнаToolStripMenuItem2.Text = "Чорна";
+            this.чорнаToolStripMenuItem2.Click += new System.EventHandler(this.чорнаToolStripMenuItem2_Click);
             // 
             // зеленаToolStripMenuItem2
             // 
             this.зеленаToolStripMenuItem2.Name = "зеленаToolStripMenuItem2";
             this.зеленаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
             this.зеленаToolStripMenuItem2.Text = "Зелена";
+            this.зеленаToolStripMenuItem2.Click += new System.EventHandler(this.зеленаToolStripMenuItem2_Click);
             // 
             // доріжкаToolStripMenuItem3
             // 
@@ -886,48 +946,56 @@ namespace zase4kak
             this.червонаToolStripMenuItem3.Name = "червонаToolStripMenuItem3";
             this.червонаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.червонаToolStripMenuItem3.Text = "Червона";
+            this.червонаToolStripMenuItem3.Click += new System.EventHandler(this.червонаToolStripMenuItem3_Click);
             // 
             // білаToolStripMenuItem3
             // 
             this.білаToolStripMenuItem3.Name = "білаToolStripMenuItem3";
             this.білаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.білаToolStripMenuItem3.Text = "Біла";
+            this.білаToolStripMenuItem3.Click += new System.EventHandler(this.білаToolStripMenuItem3_Click);
             // 
             // оранжеваToolStripMenuItem3
             // 
             this.оранжеваToolStripMenuItem3.Name = "оранжеваToolStripMenuItem3";
             this.оранжеваToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.оранжеваToolStripMenuItem3.Text = "Оранжева";
+            this.оранжеваToolStripMenuItem3.Click += new System.EventHandler(this.оранжеваToolStripMenuItem3_Click);
             // 
             // фіолетоваToolStripMenuItem3
             // 
             this.фіолетоваToolStripMenuItem3.Name = "фіолетоваToolStripMenuItem3";
             this.фіолетоваToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.фіолетоваToolStripMenuItem3.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem3.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem3_Click);
             // 
             // жовтаToolStripMenuItem3
             // 
             this.жовтаToolStripMenuItem3.Name = "жовтаToolStripMenuItem3";
             this.жовтаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.жовтаToolStripMenuItem3.Text = "Жовта";
+            this.жовтаToolStripMenuItem3.Click += new System.EventHandler(this.жовтаToolStripMenuItem3_Click);
             // 
             // синяToolStripMenuItem3
             // 
             this.синяToolStripMenuItem3.Name = "синяToolStripMenuItem3";
             this.синяToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.синяToolStripMenuItem3.Text = "Синя";
+            this.синяToolStripMenuItem3.Click += new System.EventHandler(this.синяToolStripMenuItem3_Click);
             // 
             // чорнаToolStripMenuItem3
             // 
             this.чорнаToolStripMenuItem3.Name = "чорнаToolStripMenuItem3";
             this.чорнаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.чорнаToolStripMenuItem3.Text = "Чорна";
+            this.чорнаToolStripMenuItem3.Click += new System.EventHandler(this.чорнаToolStripMenuItem3_Click);
             // 
             // зеленаToolStripMenuItem3
             // 
             this.зеленаToolStripMenuItem3.Name = "зеленаToolStripMenuItem3";
             this.зеленаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.зеленаToolStripMenuItem3.Text = "Зелена";
+            this.зеленаToolStripMenuItem3.Click += new System.EventHandler(this.зеленаToolStripMenuItem3_Click);
             // 
             // menuStrip1
             // 
@@ -953,7 +1021,9 @@ namespace zase4kak
             this.доріжкаToolStripMenuItem,
             this.доріжкаToolStripMenuItem1,
             this.доріжкаToolStripMenuItem2,
-            this.доріжкаToolStripMenuItem3});
+            this.доріжкаToolStripMenuItem3,
+            this.доріжкаToolStripMenuItem4,
+            this.доріжкаToolStripMenuItem5});
             this.кольориДоріжокToolStripMenuItem.Name = "кольориДоріжокToolStripMenuItem";
             this.кольориДоріжокToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.кольориДоріжокToolStripMenuItem.Text = "Кольори доріжок";
@@ -978,36 +1048,42 @@ namespace zase4kak
             this.червонаToolStripMenuItem.Name = "червонаToolStripMenuItem";
             this.червонаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.червонаToolStripMenuItem.Text = "Червона";
+            this.червонаToolStripMenuItem.Click += new System.EventHandler(this.червонаToolStripMenuItem_Click);
             // 
             // білаToolStripMenuItem
             // 
             this.білаToolStripMenuItem.Name = "білаToolStripMenuItem";
             this.білаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.білаToolStripMenuItem.Text = "Біла";
+            this.білаToolStripMenuItem.Click += new System.EventHandler(this.білаToolStripMenuItem_Click);
             // 
             // оранжеваToolStripMenuItem
             // 
             this.оранжеваToolStripMenuItem.Name = "оранжеваToolStripMenuItem";
             this.оранжеваToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.оранжеваToolStripMenuItem.Text = "Оранжева";
+            this.оранжеваToolStripMenuItem.Click += new System.EventHandler(this.оранжеваToolStripMenuItem_Click);
             // 
             // фіолетоваToolStripMenuItem
             // 
             this.фіолетоваToolStripMenuItem.Name = "фіолетоваToolStripMenuItem";
             this.фіолетоваToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.фіолетоваToolStripMenuItem.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem_Click);
             // 
             // жовтаToolStripMenuItem
             // 
             this.жовтаToolStripMenuItem.Name = "жовтаToolStripMenuItem";
             this.жовтаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.жовтаToolStripMenuItem.Text = "Жовта";
+            this.жовтаToolStripMenuItem.Click += new System.EventHandler(this.жовтаToolStripMenuItem_Click);
             // 
             // синяToolStripMenuItem
             // 
             this.синяToolStripMenuItem.Name = "синяToolStripMenuItem";
             this.синяToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.синяToolStripMenuItem.Text = "Синя";
+            this.синяToolStripMenuItem.Click += new System.EventHandler(this.синяToolStripMenuItem_Click);
             // 
             // чорнаToolStripMenuItem
             // 
@@ -1020,6 +1096,7 @@ namespace zase4kak
             this.зеленаToolStripMenuItem.Name = "зеленаToolStripMenuItem";
             this.зеленаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.зеленаToolStripMenuItem.Text = "Зелена";
+            this.зеленаToolStripMenuItem.Click += new System.EventHandler(this.зеленаToolStripMenuItem_Click);
             // 
             // доріжкаToolStripMenuItem1
             // 
@@ -1041,18 +1118,164 @@ namespace zase4kak
             this.червонаToolStripMenuItem1.Name = "червонаToolStripMenuItem1";
             this.червонаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.червонаToolStripMenuItem1.Text = "Червона";
+            this.червонаToolStripMenuItem1.Click += new System.EventHandler(this.червонаToolStripMenuItem1_Click);
             // 
             // білаToolStripMenuItem1
             // 
             this.білаToolStripMenuItem1.Name = "білаToolStripMenuItem1";
             this.білаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.білаToolStripMenuItem1.Text = "Біла";
+            this.білаToolStripMenuItem1.Click += new System.EventHandler(this.білаToolStripMenuItem1_Click);
             // 
             // фіолетоваToolStripMenuItem1
             // 
             this.фіолетоваToolStripMenuItem1.Name = "фіолетоваToolStripMenuItem1";
             this.фіолетоваToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.фіолетоваToolStripMenuItem1.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem1.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem1_Click);
+            // 
+            // доріжкаToolStripMenuItem4
+            // 
+            this.доріжкаToolStripMenuItem4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.червонаToolStripMenuItem4,
+            this.білаToolStripMenuItem4,
+            this.оранжеваToolStripMenuItem4,
+            this.фіолетоваToolStripMenuItem4,
+            this.жовтаToolStripMenuItem4,
+            this.синяToolStripMenuItem4,
+            this.чорнаToolStripMenuItem4,
+            this.зеленаToolStripMenuItem4});
+            this.доріжкаToolStripMenuItem4.Name = "доріжкаToolStripMenuItem4";
+            this.доріжкаToolStripMenuItem4.Size = new System.Drawing.Size(127, 22);
+            this.доріжкаToolStripMenuItem4.Text = "5 доріжка";
+            // 
+            // червонаToolStripMenuItem4
+            // 
+            this.червонаToolStripMenuItem4.Name = "червонаToolStripMenuItem4";
+            this.червонаToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.червонаToolStripMenuItem4.Text = "Червона";
+            this.червонаToolStripMenuItem4.Click += new System.EventHandler(this.червонаToolStripMenuItem4_Click);
+            // 
+            // білаToolStripMenuItem4
+            // 
+            this.білаToolStripMenuItem4.Name = "білаToolStripMenuItem4";
+            this.білаToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.білаToolStripMenuItem4.Text = "Біла";
+            this.білаToolStripMenuItem4.Click += new System.EventHandler(this.білаToolStripMenuItem4_Click);
+            // 
+            // оранжеваToolStripMenuItem4
+            // 
+            this.оранжеваToolStripMenuItem4.Name = "оранжеваToolStripMenuItem4";
+            this.оранжеваToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.оранжеваToolStripMenuItem4.Text = "Оранжева";
+            this.оранжеваToolStripMenuItem4.Click += new System.EventHandler(this.оранжеваToolStripMenuItem4_Click);
+            // 
+            // фіолетоваToolStripMenuItem4
+            // 
+            this.фіолетоваToolStripMenuItem4.Name = "фіолетоваToolStripMenuItem4";
+            this.фіолетоваToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.фіолетоваToolStripMenuItem4.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem4.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem4_Click);
+            // 
+            // жовтаToolStripMenuItem4
+            // 
+            this.жовтаToolStripMenuItem4.Name = "жовтаToolStripMenuItem4";
+            this.жовтаToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.жовтаToolStripMenuItem4.Text = "Жовта";
+            this.жовтаToolStripMenuItem4.Click += new System.EventHandler(this.жовтаToolStripMenuItem4_Click);
+            // 
+            // синяToolStripMenuItem4
+            // 
+            this.синяToolStripMenuItem4.Name = "синяToolStripMenuItem4";
+            this.синяToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.синяToolStripMenuItem4.Text = "Синя";
+            this.синяToolStripMenuItem4.Click += new System.EventHandler(this.синяToolStripMenuItem4_Click);
+            // 
+            // чорнаToolStripMenuItem4
+            // 
+            this.чорнаToolStripMenuItem4.Name = "чорнаToolStripMenuItem4";
+            this.чорнаToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.чорнаToolStripMenuItem4.Text = "Чорна";
+            this.чорнаToolStripMenuItem4.Click += new System.EventHandler(this.чорнаToolStripMenuItem4_Click);
+            // 
+            // зеленаToolStripMenuItem4
+            // 
+            this.зеленаToolStripMenuItem4.Name = "зеленаToolStripMenuItem4";
+            this.зеленаToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.зеленаToolStripMenuItem4.Text = "Зелена";
+            this.зеленаToolStripMenuItem4.Click += new System.EventHandler(this.зеленаToolStripMenuItem4_Click);
+            // 
+            // доріжкаToolStripMenuItem5
+            // 
+            this.доріжкаToolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.червонаToolStripMenuItem5,
+            this.білаToolStripMenuItem5,
+            this.оранжеваToolStripMenuItem5,
+            this.фіолетоваToolStripMenuItem5,
+            this.жовтаToolStripMenuItem5,
+            this.синяToolStripMenuItem5,
+            this.чорнаToolStripMenuItem5,
+            this.зеленаToolStripMenuItem5});
+            this.доріжкаToolStripMenuItem5.Name = "доріжкаToolStripMenuItem5";
+            this.доріжкаToolStripMenuItem5.Size = new System.Drawing.Size(127, 22);
+            this.доріжкаToolStripMenuItem5.Text = "6 доріжка";
+            this.доріжкаToolStripMenuItem5.Click += new System.EventHandler(this.доріжкаToolStripMenuItem5_Click);
+            // 
+            // червонаToolStripMenuItem5
+            // 
+            this.червонаToolStripMenuItem5.Name = "червонаToolStripMenuItem5";
+            this.червонаToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.червонаToolStripMenuItem5.Text = "Червона";
+            this.червонаToolStripMenuItem5.Click += new System.EventHandler(this.червонаToolStripMenuItem5_Click);
+            // 
+            // білаToolStripMenuItem5
+            // 
+            this.білаToolStripMenuItem5.Name = "білаToolStripMenuItem5";
+            this.білаToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.білаToolStripMenuItem5.Text = "Біла";
+            this.білаToolStripMenuItem5.Click += new System.EventHandler(this.білаToolStripMenuItem5_Click);
+            // 
+            // оранжеваToolStripMenuItem5
+            // 
+            this.оранжеваToolStripMenuItem5.Name = "оранжеваToolStripMenuItem5";
+            this.оранжеваToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.оранжеваToolStripMenuItem5.Text = "Оранжева";
+            this.оранжеваToolStripMenuItem5.Click += new System.EventHandler(this.оранжеваToolStripMenuItem5_Click);
+            // 
+            // фіолетоваToolStripMenuItem5
+            // 
+            this.фіолетоваToolStripMenuItem5.Name = "фіолетоваToolStripMenuItem5";
+            this.фіолетоваToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.фіолетоваToolStripMenuItem5.Text = "Фіолетова";
+            this.фіолетоваToolStripMenuItem5.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem5_Click);
+            // 
+            // жовтаToolStripMenuItem5
+            // 
+            this.жовтаToolStripMenuItem5.Name = "жовтаToolStripMenuItem5";
+            this.жовтаToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.жовтаToolStripMenuItem5.Text = "Жовта";
+            this.жовтаToolStripMenuItem5.Click += new System.EventHandler(this.жовтаToolStripMenuItem5_Click);
+            // 
+            // синяToolStripMenuItem5
+            // 
+            this.синяToolStripMenuItem5.Name = "синяToolStripMenuItem5";
+            this.синяToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.синяToolStripMenuItem5.Text = "Синя";
+            this.синяToolStripMenuItem5.Click += new System.EventHandler(this.синяToolStripMenuItem5_Click);
+            // 
+            // чорнаToolStripMenuItem5
+            // 
+            this.чорнаToolStripMenuItem5.Name = "чорнаToolStripMenuItem5";
+            this.чорнаToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.чорнаToolStripMenuItem5.Text = "Чорна";
+            this.чорнаToolStripMenuItem5.Click += new System.EventHandler(this.чорнаToolStripMenuItem5_Click);
+            // 
+            // зеленаToolStripMenuItem5
+            // 
+            this.зеленаToolStripMenuItem5.Name = "зеленаToolStripMenuItem5";
+            this.зеленаToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.зеленаToolStripMenuItem5.Text = "Зелена";
+            this.зеленаToolStripMenuItem5.Click += new System.EventHandler(this.зеленаToolStripMenuItem5_Click);
             // 
             // timer24
             // 
@@ -1239,7 +1462,7 @@ namespace zase4kak
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label60.Location = new System.Drawing.Point(949, 36);
+            this.label60.Location = new System.Drawing.Point(951, 36);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(27, 29);
             this.label60.TabIndex = 41;
@@ -1312,7 +1535,7 @@ namespace zase4kak
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(724, -7);
+            this.label24.Location = new System.Drawing.Point(719, -7);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(111, 120);
             this.label24.TabIndex = 36;
@@ -1405,6 +1628,10 @@ namespace zase4kak
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.Green;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.label133);
+            this.panel4.Controls.Add(this.label127);
+            this.panel4.Controls.Add(this.label58);
+            this.panel4.Controls.Add(this.label117);
             this.panel4.Controls.Add(this.label82);
             this.panel4.Controls.Add(this.label83);
             this.panel4.Controls.Add(this.label84);
@@ -1430,6 +1657,52 @@ namespace zase4kak
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1923, 98);
             this.panel4.TabIndex = 87;
+            // 
+            // label133
+            // 
+            this.label133.AutoSize = true;
+            this.label133.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label133.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label133.Location = new System.Drawing.Point(1876, 76);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(16, 16);
+            this.label133.TabIndex = 170;
+            this.label133.Text = "0";
+            this.label133.Visible = false;
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label127.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label127.Location = new System.Drawing.Point(1898, 76);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(16, 16);
+            this.label127.TabIndex = 170;
+            this.label127.Text = "0";
+            this.label127.Visible = false;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label58.Location = new System.Drawing.Point(1772, 27);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(43, 46);
+            this.label58.TabIndex = 171;
+            this.label58.Text = "0";
+            // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label117.Location = new System.Drawing.Point(1757, 73);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(16, 16);
+            this.label117.TabIndex = 170;
+            this.label117.Text = "0";
+            this.label117.Visible = false;
             // 
             // label82
             // 
@@ -1471,7 +1744,7 @@ namespace zase4kak
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label61.Location = new System.Drawing.Point(949, 36);
+            this.label61.Location = new System.Drawing.Point(951, 36);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(27, 29);
             this.label61.TabIndex = 42;
@@ -1556,7 +1829,7 @@ namespace zase4kak
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(724, -12);
+            this.label23.Location = new System.Drawing.Point(719, -12);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(111, 120);
             this.label23.TabIndex = 36;
@@ -1658,6 +1931,10 @@ namespace zase4kak
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label132);
+            this.panel3.Controls.Add(this.label126);
+            this.panel3.Controls.Add(this.label57);
+            this.panel3.Controls.Add(this.label56);
             this.panel3.Controls.Add(this.label79);
             this.panel3.Controls.Add(this.label80);
             this.panel3.Controls.Add(this.label63);
@@ -1683,12 +1960,58 @@ namespace zase4kak
             this.panel3.Size = new System.Drawing.Size(1923, 98);
             this.panel3.TabIndex = 85;
             // 
+            // label132
+            // 
+            this.label132.AutoSize = true;
+            this.label132.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label132.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label132.Location = new System.Drawing.Point(1876, 78);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(16, 16);
+            this.label132.TabIndex = 169;
+            this.label132.Text = "0";
+            this.label132.Visible = false;
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label126.Location = new System.Drawing.Point(1898, 78);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(16, 16);
+            this.label126.TabIndex = 168;
+            this.label126.Text = "0";
+            this.label126.Visible = false;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label57.Location = new System.Drawing.Point(1772, 29);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(43, 46);
+            this.label57.TabIndex = 169;
+            this.label57.Text = "0";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label56.Location = new System.Drawing.Point(1757, 78);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(16, 16);
+            this.label56.TabIndex = 168;
+            this.label56.Text = "0";
+            this.label56.Visible = false;
+            // 
             // label55
             // 
             this.label55.AutoSize = true;
             this.label55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label55.Location = new System.Drawing.Point(938, 7);
+            this.label55.Location = new System.Drawing.Point(940, 8);
             this.label55.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(99, 26);
@@ -1748,7 +2071,11 @@ namespace zase4kak
             // 
             this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label131);
+            this.panel1.Controls.Add(this.label125);
+            this.panel1.Controls.Add(this.label54);
             this.panel1.Controls.Add(this.label78);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label77);
             this.panel1.Controls.Add(this.label76);
             this.panel1.Controls.Add(this.label66);
@@ -1773,6 +2100,40 @@ namespace zase4kak
             this.panel1.Size = new System.Drawing.Size(1923, 98);
             this.panel1.TabIndex = 83;
             // 
+            // label131
+            // 
+            this.label131.AutoSize = true;
+            this.label131.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label131.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label131.Location = new System.Drawing.Point(1876, 75);
+            this.label131.Name = "label131";
+            this.label131.Size = new System.Drawing.Size(16, 16);
+            this.label131.TabIndex = 168;
+            this.label131.Text = "0";
+            this.label131.Visible = false;
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label125.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label125.Location = new System.Drawing.Point(1898, 75);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(16, 16);
+            this.label125.TabIndex = 167;
+            this.label125.Text = "0";
+            this.label125.Visible = false;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label54.Location = new System.Drawing.Point(1772, 26);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(43, 46);
+            this.label54.TabIndex = 49;
+            this.label54.Text = "0";
+            // 
             // label78
             // 
             this.label78.AutoSize = true;
@@ -1784,6 +2145,18 @@ namespace zase4kak
             this.label78.TabIndex = 48;
             this.label78.Text = "00,000";
             this.label78.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(1757, 75);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(16, 16);
+            this.label8.TabIndex = 166;
+            this.label8.Text = "0";
+            this.label8.Visible = false;
             // 
             // label77
             // 
@@ -1823,7 +2196,7 @@ namespace zase4kak
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label59.Location = new System.Drawing.Point(949, 47);
+            this.label59.Location = new System.Drawing.Point(951, 47);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(27, 29);
             this.label59.TabIndex = 40;
@@ -1930,7 +2303,7 @@ namespace zase4kak
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(724, -10);
+            this.label17.Location = new System.Drawing.Point(719, -10);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(111, 120);
             this.label17.TabIndex = 9;
@@ -1991,6 +2364,7 @@ namespace zase4kak
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.label124);
             this.panel2.Controls.Add(this.label55);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label9);
@@ -2002,6 +2376,18 @@ namespace zase4kak
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1923, 42);
             this.panel2.TabIndex = 84;
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label124.Location = new System.Drawing.Point(1780, 7);
+            this.label124.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(102, 26);
+            this.label124.TabIndex = 21;
+            this.label124.Text = "Прогноз";
             // 
             // label7
             // 
@@ -2051,7 +2437,7 @@ namespace zase4kak
             // textBox15
             // 
             this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(372, 981);
+            this.textBox15.Location = new System.Drawing.Point(-372, 981);
             this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.MaxLength = 2000021;
             this.textBox15.Name = "textBox15";
@@ -2085,7 +2471,7 @@ namespace zase4kak
             // 
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label62.Location = new System.Drawing.Point(949, 37);
+            this.label62.Location = new System.Drawing.Point(951, 37);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(27, 29);
             this.label62.TabIndex = 43;
@@ -2214,7 +2600,7 @@ namespace zase4kak
             // 
             // timer4
             // 
-            this.timer4.Interval = 300;
+            this.timer4.Interval = 1000;
             this.timer4.Tag = "час 2 заїзду";
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
@@ -2226,7 +2612,7 @@ namespace zase4kak
             // 
             // timer6
             // 
-            this.timer6.Interval = 300;
+            this.timer6.Interval = 1000;
             this.timer6.Tag = "третя гонка";
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
@@ -2238,7 +2624,7 @@ namespace zase4kak
             // 
             // timer8
             // 
-            this.timer8.Interval = 300;
+            this.timer8.Interval = 1000;
             this.timer8.Tag = "четверта гонка";
             this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
             // 
@@ -2314,6 +2700,10 @@ namespace zase4kak
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.Orange;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.label134);
+            this.panel5.Controls.Add(this.label128);
+            this.panel5.Controls.Add(this.label118);
+            this.panel5.Controls.Add(this.label119);
             this.panel5.Controls.Add(this.label85);
             this.panel5.Controls.Add(this.label86);
             this.panel5.Controls.Add(this.label65);
@@ -2339,6 +2729,52 @@ namespace zase4kak
             this.panel5.Size = new System.Drawing.Size(1923, 98);
             this.panel5.TabIndex = 88;
             // 
+            // label134
+            // 
+            this.label134.AutoSize = true;
+            this.label134.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label134.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label134.Location = new System.Drawing.Point(1876, 78);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(16, 16);
+            this.label134.TabIndex = 172;
+            this.label134.Text = "0";
+            this.label134.Visible = false;
+            // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label128.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label128.Location = new System.Drawing.Point(1898, 78);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(16, 16);
+            this.label128.TabIndex = 172;
+            this.label128.Text = "0";
+            this.label128.Visible = false;
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label118.Location = new System.Drawing.Point(1772, 26);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(43, 46);
+            this.label118.TabIndex = 173;
+            this.label118.Text = "0";
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label119.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label119.Location = new System.Drawing.Point(1755, 74);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(16, 16);
+            this.label119.TabIndex = 172;
+            this.label119.Text = "0";
+            this.label119.Visible = false;
+            // 
             // label41
             // 
             this.label41.AutoSize = true;
@@ -2355,7 +2791,7 @@ namespace zase4kak
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(724, -11);
+            this.label25.Location = new System.Drawing.Point(719, -11);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(111, 120);
             this.label25.TabIndex = 34;
@@ -2424,6 +2860,10 @@ namespace zase4kak
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel10.Controls.Add(this.label135);
+            this.panel10.Controls.Add(this.label129);
+            this.panel10.Controls.Add(this.label120);
+            this.panel10.Controls.Add(this.label121);
             this.panel10.Controls.Add(this.label115);
             this.panel10.Controls.Add(this.label11);
             this.panel10.Controls.Add(this.label72);
@@ -2449,6 +2889,52 @@ namespace zase4kak
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1923, 98);
             this.panel10.TabIndex = 141;
+            // 
+            // label135
+            // 
+            this.label135.AutoSize = true;
+            this.label135.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label135.Location = new System.Drawing.Point(1878, 73);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(16, 16);
+            this.label135.TabIndex = 174;
+            this.label135.Text = "0";
+            this.label135.Visible = false;
+            // 
+            // label129
+            // 
+            this.label129.AutoSize = true;
+            this.label129.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label129.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label129.Location = new System.Drawing.Point(1900, 74);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(16, 16);
+            this.label129.TabIndex = 174;
+            this.label129.Text = "0";
+            this.label129.Visible = false;
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label120.Location = new System.Drawing.Point(1772, 31);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(43, 46);
+            this.label120.TabIndex = 175;
+            this.label120.Text = "0";
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label121.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label121.Location = new System.Drawing.Point(1757, 71);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(16, 16);
+            this.label121.TabIndex = 174;
+            this.label121.Text = "0";
+            this.label121.Visible = false;
             // 
             // label115
             // 
@@ -2508,7 +2994,7 @@ namespace zase4kak
             // 
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label75.Location = new System.Drawing.Point(949, 37);
+            this.label75.Location = new System.Drawing.Point(951, 37);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(27, 29);
             this.label75.TabIndex = 43;
@@ -2606,7 +3092,7 @@ namespace zase4kak
             this.label97.AutoSize = true;
             this.label97.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label97.Location = new System.Drawing.Point(724, -11);
+            this.label97.Location = new System.Drawing.Point(719, -11);
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(111, 120);
             this.label97.TabIndex = 34;
@@ -2671,7 +3157,7 @@ namespace zase4kak
             // 
             // timer2
             // 
-            this.timer2.Interval = 300;
+            this.timer2.Interval = 1000;
             this.timer2.Tag = "час 1 заїзду";
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
@@ -2701,13 +3187,13 @@ namespace zase4kak
             // 
             // timer30
             // 
-            this.timer30.Interval = 3;
+            this.timer30.Interval = 1000;
             this.timer30.Tag = "пята гонка";
             this.timer30.Tick += new System.EventHandler(this.timer30_Tick);
             // 
             // timer31
             // 
-            this.timer31.Interval = 300;
+            this.timer31.Interval = 1000;
             this.timer31.Tag = "шоста гонка";
             this.timer31.Tick += new System.EventHandler(this.timer31_Tick);
             // 
@@ -2785,7 +3271,7 @@ namespace zase4kak
             this.label112.AutoSize = true;
             this.label112.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label112.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label112.Location = new System.Drawing.Point(724, -11);
+            this.label112.Location = new System.Drawing.Point(719, -11);
             this.label112.Name = "label112";
             this.label112.Size = new System.Drawing.Size(111, 120);
             this.label112.TabIndex = 34;
@@ -2881,7 +3367,7 @@ namespace zase4kak
             // 
             this.label104.AutoSize = true;
             this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label104.Location = new System.Drawing.Point(949, 37);
+            this.label104.Location = new System.Drawing.Point(951, 37);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(27, 29);
             this.label104.TabIndex = 43;
@@ -2946,6 +3432,10 @@ namespace zase4kak
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.BackColor = System.Drawing.Color.Yellow;
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel11.Controls.Add(this.label136);
+            this.panel11.Controls.Add(this.label130);
+            this.panel11.Controls.Add(this.label122);
+            this.panel11.Controls.Add(this.label123);
             this.panel11.Controls.Add(this.label116);
             this.panel11.Controls.Add(this.label100);
             this.panel11.Controls.Add(this.label101);
@@ -2971,6 +3461,52 @@ namespace zase4kak
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1923, 98);
             this.panel11.TabIndex = 142;
+            // 
+            // label136
+            // 
+            this.label136.AutoSize = true;
+            this.label136.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label136.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label136.Location = new System.Drawing.Point(1878, 74);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(16, 16);
+            this.label136.TabIndex = 176;
+            this.label136.Text = "0";
+            this.label136.Visible = false;
+            // 
+            // label130
+            // 
+            this.label130.AutoSize = true;
+            this.label130.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label130.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label130.Location = new System.Drawing.Point(1898, 74);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(16, 16);
+            this.label130.TabIndex = 176;
+            this.label130.Text = "0";
+            this.label130.Visible = false;
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label122.Location = new System.Drawing.Point(1772, 26);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(43, 46);
+            this.label122.TabIndex = 177;
+            this.label122.Text = "0";
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label123.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label123.Location = new System.Drawing.Point(1757, 74);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(16, 16);
+            this.label123.TabIndex = 176;
+            this.label123.Text = "0";
+            this.label123.Visible = false;
             // 
             // textBox36
             // 
@@ -3002,9 +3538,9 @@ namespace zase4kak
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-            this.dataGridView3.Location = new System.Drawing.Point(1237, 858);
+            this.dataGridView3.Location = new System.Drawing.Point(1298, 858);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(117, 197);
+            this.dataGridView3.Size = new System.Drawing.Size(56, 197);
             this.dataGridView3.TabIndex = 165;
             this.dataGridView3.Visible = false;
             this.dataGridView3.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView3_SortCompare);
@@ -3058,6 +3594,29 @@ namespace zase4kak
             this.timer40.Interval = 300;
             this.timer40.Tick += new System.EventHandler(this.timer40_Tick);
             // 
+            // textBox38
+            // 
+            this.textBox38.Location = new System.Drawing.Point(1314, 81);
+            this.textBox38.Margin = new System.Windows.Forms.Padding(1);
+            this.textBox38.Name = "textBox38";
+            this.textBox38.Size = new System.Drawing.Size(122, 20);
+            this.textBox38.TabIndex = 167;
+            this.textBox38.Text = "0";
+            this.textBox38.Visible = false;
+            // 
+            // timer41
+            // 
+            this.timer41.Enabled = true;
+            this.timer41.Interval = 10;
+            this.timer41.Tag = "Таймер для прогнозу";
+            this.timer41.Tick += new System.EventHandler(this.timer41_Tick);
+            // 
+            // timer43
+            // 
+            this.timer43.Interval = 1000;
+            this.timer43.Tag = "таймер прогноза";
+            this.timer43.Tick += new System.EventHandler(this.timer43_Tick);
+            // 
             // form4BindingSource
             // 
             this.form4BindingSource.DataSource = typeof(zase4kak.Form4);
@@ -3068,6 +3627,7 @@ namespace zase4kak
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1920, 1057);
+            this.Controls.Add(this.textBox38);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.textBox37);
             this.Controls.Add(this.textBox36);
@@ -3434,5 +3994,52 @@ namespace zase4kak
         private System.Windows.Forms.Timer timer38;
         private System.Windows.Forms.Timer timer39;
         private System.Windows.Forms.Timer timer40;
+        private System.Windows.Forms.ToolStripMenuItem доріжкаToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem червонаToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem білаToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem оранжеваToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem фіолетоваToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem доріжкаToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem жовтаToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem синяToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem чорнаToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem зеленаToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem червонаToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem білаToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem оранжеваToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem фіолетоваToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem жовтаToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem синяToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem чорнаToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem зеленаToolStripMenuItem5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label54;
+        public System.Windows.Forms.TextBox textBox38;
+        private System.Windows.Forms.Timer timer41;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label117;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.Label label128;
+        private System.Windows.Forms.Label label129;
+        private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.Label label133;
+        private System.Windows.Forms.Label label132;
+        private System.Windows.Forms.Label label131;
+        private System.Windows.Forms.Label label134;
+        private System.Windows.Forms.Label label135;
+        private System.Windows.Forms.Label label136;
+        private System.Windows.Forms.Timer timer42;
+        private System.Windows.Forms.Timer timer43;
     }
 }

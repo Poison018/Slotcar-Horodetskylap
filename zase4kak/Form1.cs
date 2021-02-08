@@ -37,10 +37,13 @@ namespace zase4kak
             {
                 label1.Visible = false;
                 textBox1.Visible = false;
+                timer1.Enabled = false;
+               
             }
             else
             {
                 label1.Text = "Пароль не вірний!";
+
             }
         }
 
@@ -50,7 +53,7 @@ namespace zase4kak
             button2.Visible = false;
             label1.Visible = true;
             timer1.Enabled = true;
-            timer1.Enabled = false;
+            
             
         }
 

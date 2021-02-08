@@ -1124,7 +1124,7 @@ namespace zase4kak
 		{
 
 
-			Timez += 0.001 * 17;                   //timer на час кола зелена доріжка
+			Timez += 0.0003 * 53;                   //timer на час кола зелена доріжка
 			label27.Text = string.Format("{0:F3}", Timez);       //timer на час кола зелена доріжка
 
 		}
@@ -1132,7 +1132,7 @@ namespace zase4kak
 		private void timer16_Tick(object sender, EventArgs e)
 		{
 
-			Timeg += 0.001 * 17;                   //timer на час кола жовта доріжка
+			Timeg += 0.0003 * 53;                //timer на час кола жовта доріжка
 			label28.Text = string.Format("{0:F3}", Timeg);       //timer на час кола жовта доріжка
 
 		}
@@ -1310,7 +1310,11 @@ namespace zase4kak
 			textBox7.Size = new Size(223, 104);
 			textBox10.Size = new Size(223, 104);
 
-
+			label55.Visible = false;
+			label59.Visible = false;
+			label60.Visible = false;
+			label61.Visible = false;
+			label62.Visible = false;
 
 
 
@@ -3102,18 +3106,17 @@ namespace zase4kak
 
 			c++;                                            //добавляю кола 1 доріці
 			label24.Text = Convert.ToString(c);
-			dataGridView3.Rows.Add(label17.Text + "," + 6);
-			dataGridView3.Rows.Add(label24.Text + "," + 5);
-			dataGridView3.Rows.Add(label23.Text + "," + 4);
-			dataGridView3.Rows.Add(label25.Text + "," + 3);
 
-			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+			if (label13.Text != "Тренування!")
+			{
+				dataGridView3.Rows.Add(label17.Text + "," + 6);
+				dataGridView3.Rows.Add(label24.Text + "," + 5);
+				dataGridView3.Rows.Add(label23.Text + "," + 4);
+				dataGridView3.Rows.Add(label25.Text + "," + 3);
 
+				dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
 
-			// підсвітка під час кола
-			textBox6.BackColor = Color.LawnGreen;
-			label24.BackColor = Color.LawnGreen;
-			timer28.Enabled = true;
+			
 
 
 
@@ -3253,7 +3256,11 @@ namespace zase4kak
 				}
 
 			}
-
+		}
+			// підсвітка під час кола
+			textBox6.BackColor = Color.LawnGreen;
+			label24.BackColor = Color.LawnGreen;
+			timer28.Enabled = true;
 
 			timer26.Enabled = true;
 			if (Convert.ToDouble(label30.Text) < 1)         //обмеження по часу кола 1 секунда
@@ -3270,19 +3277,17 @@ namespace zase4kak
 
 			d++;                                            //добавляю кола 4 доріці
 			label25.Text = Convert.ToString(d);
+			if (label13.Text != "Тренування!")
+			{
+				dataGridView3.Rows.Add(label17.Text + "," + 6);
+				dataGridView3.Rows.Add(label24.Text + "," + 5);
+				dataGridView3.Rows.Add(label23.Text + "," + 4);
+				dataGridView3.Rows.Add(label25.Text + "," + 3);
 
-			dataGridView3.Rows.Add(label17.Text + "," + 6);
-			dataGridView3.Rows.Add(label24.Text + "," + 5);
-			dataGridView3.Rows.Add(label23.Text + "," + 4);
-			dataGridView3.Rows.Add(label25.Text + "," + 3);
-
-			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+				dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+			
 
 
-			// підсвітка під час кола
-			textBox12.BackColor = Color.LawnGreen;
-			label25.BackColor = Color.LawnGreen;
-			timer29.Enabled = true;
 
 
 
@@ -3422,8 +3427,11 @@ namespace zase4kak
 				}
 
 			}
-
-
+		}
+			// підсвітка під час кола
+			textBox12.BackColor = Color.LawnGreen;
+			label25.BackColor = Color.LawnGreen;
+			timer29.Enabled = true;
 			timer26.Enabled = true;
 			if (Convert.ToDouble(label39.Text) < 1)         //обмеження по часу кола 1 секунда
 			{
@@ -3554,7 +3562,7 @@ namespace zase4kak
 		{
 
 
-			Times += 0.001 * 17;                   //timer на час кола синя доріжка
+			Times += 0.0003 * 53;                //timer на час кола синя доріжка
 			label26.Text = string.Format("{0:F3}", Times);       //timer на час кола синя доріжка
 
 		}
@@ -4377,7 +4385,7 @@ button19.Visible = false;
 		{
 
 
-			Time += 0.001 * 17;                   //timer на час кола
+			Time += 0.0003 * 53;                   //timer на час кола
 			label21.Text = string.Format("{0:F3}", Time);       //timer на час кола 
 
 
@@ -4521,19 +4529,18 @@ button19.Visible = false;
 			i++;                                            //добавляю кола 1 доріці
 			label17.Text = Convert.ToString(i);
 
+			if (label13.Text != "Тренування!")
+			{
 
-			dataGridView3.Rows.Add(label17.Text + "," + 6);
-			dataGridView3.Rows.Add(label24.Text + "," + 5);
-			dataGridView3.Rows.Add(label23.Text + "," + 4);
-			dataGridView3.Rows.Add(label25.Text + "," + 3);
+				dataGridView3.Rows.Add(label17.Text + "," + 6);
+				dataGridView3.Rows.Add(label24.Text + "," + 5);
+				dataGridView3.Rows.Add(label23.Text + "," + 4);
+				dataGridView3.Rows.Add(label25.Text + "," + 3);
+
+				dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
 			
-			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
 
 
-			// підсвітка під час кола
-			textBox1.BackColor = Color.LawnGreen;
-			label17.BackColor = Color.LawnGreen;
-			timer27.Enabled = true;
 
 
 
@@ -4564,7 +4571,7 @@ button19.Visible = false;
 
 							panel1.Location = new Point(7, 645);
 						}
-						
+
 					}
 				}
 
@@ -4599,7 +4606,7 @@ button19.Visible = false;
 
 							panel3.Location = new Point(7, 645);
 						}
-						
+
 					}
 				}
 
@@ -4632,7 +4639,7 @@ button19.Visible = false;
 
 							panel4.Location = new Point(7, 645);
 						}
-						
+
 					}
 				}
 
@@ -4667,17 +4674,20 @@ button19.Visible = false;
 
 							panel5.Location = new Point(7, 645);
 						}
-						
-						
+
+
 					}
 				}
 
 			}
-
+		}
 
 			timer26.Enabled = true;
 
-
+			// підсвітка під час кола
+			textBox1.BackColor = Color.LawnGreen;
+			label17.BackColor = Color.LawnGreen;
+			timer27.Enabled = true;
 
 
 			if (Convert.ToDouble(label22.Text) < 1)			//обмеження по часу кола 1 секунда
@@ -6263,19 +6273,17 @@ button19.Visible = false;
 
 			b++;                                            //добавляю кола 1 доріці
 			label23.Text = Convert.ToString(b);
+			if (label13.Text != "Тренування!")
+			{
+				dataGridView3.Rows.Add(label17.Text + "," + 6);
+				dataGridView3.Rows.Add(label24.Text + "," + 5);
+				dataGridView3.Rows.Add(label23.Text + "," + 4);
+				dataGridView3.Rows.Add(label25.Text + "," + 3);
 
-			dataGridView3.Rows.Add(label17.Text + "," + 6);
-			dataGridView3.Rows.Add(label24.Text + "," + 5);
-			dataGridView3.Rows.Add(label23.Text + "," + 4);
-			dataGridView3.Rows.Add(label25.Text + "," + 3);
-
-			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+				dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+			
 
 
-			// підсвітка під час кола
-			textBox9.BackColor = Color.LawnGreen;
-			label23.BackColor = Color.LawnGreen;
-			timer30.Enabled = true;
 
 
 
@@ -6415,8 +6423,11 @@ button19.Visible = false;
 				}
 
 			}
-
-
+		}
+			// підсвітка під час кола
+			textBox9.BackColor = Color.LawnGreen;
+			label23.BackColor = Color.LawnGreen;
+			timer30.Enabled = true;
 			timer26.Enabled = true;
 			if (Convert.ToDouble(label34.Text) < 1)         //обмеження по часу кола 1 секунда
 			{

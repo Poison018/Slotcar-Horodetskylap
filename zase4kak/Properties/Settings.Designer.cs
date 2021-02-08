@@ -12,7 +12,7 @@ namespace zase4ka.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -88,6 +88,72 @@ namespace zase4ka.Properties {
             }
             set {
                 this["lapTIme_comPort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color line1_6 {
+            get {
+                return ((global::System.Drawing.Color)(this["line1_6"]));
+            }
+            set {
+                this["line1_6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color line2_6 {
+            get {
+                return ((global::System.Drawing.Color)(this["line2_6"]));
+            }
+            set {
+                this["line2_6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color line3_6 {
+            get {
+                return ((global::System.Drawing.Color)(this["line3_6"]));
+            }
+            set {
+                this["line3_6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color line4_6 {
+            get {
+                return ((global::System.Drawing.Color)(this["line4_6"]));
+            }
+            set {
+                this["line4_6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color line5_6 {
+            get {
+                return ((global::System.Drawing.Color)(this["line5_6"]));
+            }
+            set {
+                this["line5_6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color line6_6 {
+            get {
+                return ((global::System.Drawing.Color)(this["line6_6"]));
+            }
+            set {
+                this["line6_6"] = value;
             }
         }
     }

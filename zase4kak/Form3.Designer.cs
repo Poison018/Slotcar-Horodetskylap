@@ -1421,6 +1421,7 @@
             // 
             // timer2
             // 
+            this.timer2.Interval = 1000;
             this.timer2.Tag = "час 1 заїзду";
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
@@ -1432,6 +1433,7 @@
             // 
             // timer4
             // 
+            this.timer4.Interval = 1000;
             this.timer4.Tag = "час 2 заїзду";
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
@@ -1443,6 +1445,7 @@
             // 
             // timer6
             // 
+            this.timer6.Interval = 1000;
             this.timer6.Tag = "третя гонка";
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
@@ -1454,14 +1457,14 @@
             // 
             // timer8
             // 
-            this.timer8.Interval = 300;
+            this.timer8.Interval = 1000;
             this.timer8.Tag = "четверта гонка";
             this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
             // 
             // textBox15
             // 
             this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(375, 975);
+            this.textBox15.Location = new System.Drawing.Point(-300, 975);
             this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.MaxLength = 2000021;
             this.textBox15.Name = "textBox15";
