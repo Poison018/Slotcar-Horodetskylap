@@ -428,7 +428,7 @@ namespace zase4kak
             // 
             this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button15.Location = new System.Drawing.Point(690, 930);
+            this.button15.Location = new System.Drawing.Point(690, 933);
             this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(458, 122);
@@ -437,6 +437,7 @@ namespace zase4kak
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Visible = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button15_KeyPress);
             // 
             // button14
             // 
@@ -1400,6 +1401,7 @@ namespace zase4kak
             // 
             // serialPort1
             // 
+            this.serialPort1.BaudRate = 19200;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // label64
@@ -2437,7 +2439,7 @@ namespace zase4kak
             // textBox15
             // 
             this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(-372, 981);
+            this.textBox15.Location = new System.Drawing.Point(454, -927);
             this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.MaxLength = 2000021;
             this.textBox15.Name = "textBox15";

@@ -2608,6 +2608,7 @@
             this.label102.Size = new System.Drawing.Size(13, 13);
             this.label102.TabIndex = 34;
             this.label102.Text = "0";
+            this.label102.Visible = false;
             // 
             // label56
             // 

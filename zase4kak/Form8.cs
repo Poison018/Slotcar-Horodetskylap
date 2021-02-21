@@ -5758,10 +5758,10 @@ namespace zase4kak
 			serialPort1.WriteLine("3");
 
 
-			if (serialPort1.IsOpen == true)
-			{
-				serialPort1.Close();
-			}
+			//if (serialPort1.IsOpen == true)
+			//{
+			//	serialPort1.Close();
+		//	}
 
 
 			label69.Text = "Трек виключений";
@@ -5776,7 +5776,7 @@ namespace zase4kak
 			pausesound.Play();
 			if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
 			{
-				serialPort1.Close();
+				//serialPort1.Close();
 				timer2.Enabled = false;
 				timer17.Enabled = false;
 				timer11.Enabled = false;
@@ -5791,7 +5791,7 @@ namespace zase4kak
 
 			if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
 			{
-				serialPort1.Close();
+				//serialPort1.Close();
 				timer4.Enabled = false;
 				timer17.Enabled = false;
 				timer11.Enabled = false;
@@ -5806,7 +5806,7 @@ namespace zase4kak
 
 			if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
 			{
-				serialPort1.Close();
+				//serialPort1.Close();
 				timer6.Enabled = false;
 				timer17.Enabled = false;
 				timer11.Enabled = false;
@@ -5821,7 +5821,7 @@ namespace zase4kak
 
 			if (number_group.Text == "3")   // кнопка пауза для 4 заїзду
 			{
-				serialPort1.Close();
+				//serialPort1.Close();
 				timer8.Enabled = false;
 				timer17.Enabled = false;
 				timer11.Enabled = false;
@@ -5836,7 +5836,7 @@ namespace zase4kak
 
 			if (number_group.Text == "4")   // кнопка пауза для 5 заїзду
 			{
-				serialPort1.Close();
+				//serialPort1.Close();
 				timer30.Enabled = false;
 				timer17.Enabled = false;
 				timer11.Enabled = false;
@@ -5850,7 +5850,7 @@ namespace zase4kak
 			}
 			if (number_group.Text == "5")   // кнопка пауза для 6 заїзду
 			{
-				serialPort1.Close();
+				//serialPort1.Close();
 				timer31.Enabled = false;
 				timer17.Enabled = false;
 				timer11.Enabled = false;
@@ -5867,10 +5867,10 @@ namespace zase4kak
 
 		private void button7_Click(object sender, EventArgs e)
 		{
-			if (serialPort1.IsOpen == false)
-			{
-				serialPort1.Open();
-			}
+			//if (serialPort1.IsOpen == false)
+			//{
+			//	serialPort1.Open();
+			//}
 
 
 			serialPort1.WriteLine("4");
@@ -9671,224 +9671,227 @@ namespace zase4kak
 
         private void button7_KeyDown_1(object sender, KeyEventArgs e)
         {
-
-
-			if (serialPort1.IsOpen == false)
-			{
-				serialPort1.Open();
-			}
-
-
-			serialPort1.WriteLine("4");
-			label69.Text = "Трек включений";
-			label69.BackColor = Color.Green;
-			button10.Enabled = false;
-
-			button11.Enabled = true;
-			startsound.Play();
-
-
-
-			if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
+			if (e.KeyCode == Keys.Space)
 			{
 
-				timer2.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer16.Enabled = true;
-				timer26.Enabled = true;
-				timer27.Enabled = true;
-				button6.Visible = true;
-				button7.Visible = false;
-				button6.Focus();
-			}
+				//if (serialPort1.IsOpen == false)
+				//{
+				//	serialPort1.Open();
+			//	}
 
-			if (number_group.Text == "1")   // кнопка продовжити для 2 заїзду
-			{
 
-				timer4.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer26.Enabled = true;
-				timer27.Enabled = true;
-				timer16.Enabled = true;
-				button6.Visible = true;
-				button7.Visible = false;
-				button6.Focus();
-			}
+				serialPort1.WriteLine("4");
+				label69.Text = "Трек включений";
+				label69.BackColor = Color.Green;
+				button10.Enabled = false;
 
-			if (number_group.Text == "2")   // кнопка продовжити для 3 заїзду
-			{
+				button11.Enabled = true;
+				startsound.Play();
 
-				timer6.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer16.Enabled = true;
-				timer26.Enabled = true;
-				timer27.Enabled = true;
-				button6.Visible = true;
-				button7.Visible = false;
-				button6.Focus();
-			}
 
-			if (number_group.Text == "3")   // кнопка продовжити для 4 заїзду
-			{
 
-				timer8.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer26.Enabled = true;
-				timer27.Enabled = true;
-				timer16.Enabled = true;
-				button6.Visible = true;
-				button7.Visible = false;
-				button6.Focus();
-			}
-			if (number_group.Text == "4")   // кнопка продовжити для 5 заїзду
-			{
+				if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
+				{
 
-				timer30.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer16.Enabled = true;
-				timer26.Enabled = true;
-				timer27.Enabled = true;
-				button6.Visible = true;
-				button7.Visible = false;
-				button6.Focus();
-			}
-			if (number_group.Text == "5")   // кнопка продовжити для 6 заїзду
-			{
+					timer2.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
+					timer26.Enabled = true;
+					timer27.Enabled = true;
+					button6.Visible = true;
+					button7.Visible = false;
+					button6.Focus();
+				}
 
-				timer31.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer16.Enabled = true;
-				timer26.Enabled = true;
-				timer27.Enabled = true;
-				button6.Visible = true;
-				button7.Visible = false;
-				button6.Focus();
+				if (number_group.Text == "1")   // кнопка продовжити для 2 заїзду
+				{
+
+					timer4.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer26.Enabled = true;
+					timer27.Enabled = true;
+					timer16.Enabled = true;
+					button6.Visible = true;
+					button7.Visible = false;
+					button6.Focus();
+				}
+
+				if (number_group.Text == "2")   // кнопка продовжити для 3 заїзду
+				{
+
+					timer6.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
+					timer26.Enabled = true;
+					timer27.Enabled = true;
+					button6.Visible = true;
+					button7.Visible = false;
+					button6.Focus();
+				}
+
+				if (number_group.Text == "3")   // кнопка продовжити для 4 заїзду
+				{
+
+					timer8.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer26.Enabled = true;
+					timer27.Enabled = true;
+					timer16.Enabled = true;
+					button6.Visible = true;
+					button7.Visible = false;
+					button6.Focus();
+				}
+				if (number_group.Text == "4")   // кнопка продовжити для 5 заїзду
+				{
+
+					timer30.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
+					timer26.Enabled = true;
+					timer27.Enabled = true;
+					button6.Visible = true;
+					button7.Visible = false;
+					button6.Focus();
+				}
+				if (number_group.Text == "5")   // кнопка продовжити для 6 заїзду
+				{
+
+					timer31.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
+					timer26.Enabled = true;
+					timer27.Enabled = true;
+					button6.Visible = true;
+					button7.Visible = false;
+					button6.Focus();
+				}
 			}
 		}
 
         private void button6_KeyDown_1(object sender, KeyEventArgs e)
 		{
-
-			serialPort1.WriteLine("3");
-
-
-			if (serialPort1.IsOpen == true)
+			if (e.KeyCode == Keys.Space)
 			{
-				serialPort1.Close();
+				serialPort1.WriteLine("3");
+
+
+				//if (serialPort1.IsOpen == true)
+				//{
+				//	serialPort1.Close();
+			//	}
+
+
+				label69.Text = "Трек виключений";
+				label69.BackColor = Color.Red;
+				button10.Enabled = true;
+				button11.Enabled = false;
+
+
+
+
+
+				pausesound.Play();
+				if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
+				{
+					//serialPort1.Close();
+					timer2.Enabled = false;
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					button6.Visible = false;
+					timer26.Enabled = false;
+					timer27.Enabled = false;
+					button7.Visible = true;
+					button7.Focus();
+				}
+
+				if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
+				{
+					//serialPort1.Close();
+					timer4.Enabled = false;
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					button6.Visible = false;
+					timer26.Enabled = false;
+					timer27.Enabled = false;
+					button7.Visible = true;
+					button7.Focus();
+				}
+
+				if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
+				{
+					//serialPort1.Close();
+					timer6.Enabled = false;
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					button6.Visible = false;
+					timer26.Enabled = false;
+					timer27.Enabled = false;
+					button7.Visible = true;
+					button7.Focus();
+				}
+
+				if (number_group.Text == "3")   // кнопка пауза для 4 заїзду
+				{
+					//serialPort1.Close();
+					timer8.Enabled = false;
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					button6.Visible = false;
+					timer26.Enabled = false;
+					timer27.Enabled = false;
+					button7.Visible = true;
+					button7.Focus();
+				}
+
+				if (number_group.Text == "4")   // кнопка пауза для 5 заїзду
+				{
+					//serialPort1.Close();
+					timer30.Enabled = false;
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					timer26.Enabled = false;
+					timer27.Enabled = false;
+					button6.Visible = false;
+					button7.Visible = true;
+					button7.Focus();
+				}
+				if (number_group.Text == "5")   // кнопка пауза для 6 заїзду
+				{
+					//serialPort1.Close();
+					timer31.Enabled = false;
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					timer26.Enabled = false;
+					timer27.Enabled = false;
+					button6.Visible = false;
+					button7.Visible = true;
+					button7.Focus();
+				}
 			}
-
-
-			label69.Text = "Трек виключений";
-			label69.BackColor = Color.Red;
-			button10.Enabled = true;
-			button11.Enabled = false;
-
-
-
-
-
-			pausesound.Play();
-			if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
-			{
-				serialPort1.Close();
-				timer2.Enabled = false;
-				timer17.Enabled = false;
-				timer11.Enabled = false;
-				timer15.Enabled = false;
-				timer16.Enabled = false;
-				button6.Visible = false;
-				timer26.Enabled = false;
-				timer27.Enabled = false;
-				button7.Visible = true;
-				button7.Focus();
-			}
-
-			if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
-			{
-				serialPort1.Close();
-				timer4.Enabled = false;
-				timer17.Enabled = false;
-				timer11.Enabled = false;
-				timer15.Enabled = false;
-				timer16.Enabled = false;
-				button6.Visible = false;
-				timer26.Enabled = false;
-				timer27.Enabled = false;
-				button7.Visible = true;
-				button7.Focus();
-			}
-
-			if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
-			{
-				serialPort1.Close();
-				timer6.Enabled = false;
-				timer17.Enabled = false;
-				timer11.Enabled = false;
-				timer15.Enabled = false;
-				timer16.Enabled = false;
-				button6.Visible = false;
-				timer26.Enabled = false;
-				timer27.Enabled = false;
-				button7.Visible = true;
-				button7.Focus();
-			}
-
-			if (number_group.Text == "3")   // кнопка пауза для 4 заїзду
-			{
-				serialPort1.Close();
-				timer8.Enabled = false;
-				timer17.Enabled = false;
-				timer11.Enabled = false;
-				timer15.Enabled = false;
-				timer16.Enabled = false;
-				button6.Visible = false;
-				timer26.Enabled = false;
-				timer27.Enabled = false;
-				button7.Visible = true;
-				button7.Focus();
-			}
-
-			if (number_group.Text == "4")   // кнопка пауза для 5 заїзду
-			{
-				serialPort1.Close();
-				timer30.Enabled = false;
-				timer17.Enabled = false;
-				timer11.Enabled = false;
-				timer15.Enabled = false;
-				timer16.Enabled = false;
-				timer26.Enabled = false;
-				timer27.Enabled = false;
-				button6.Visible = false;
-				button7.Visible = true;
-				button7.Focus();
-			}
-			if (number_group.Text == "5")   // кнопка пауза для 6 заїзду
-			{
-				serialPort1.Close();
-				timer31.Enabled = false;
-				timer17.Enabled = false;
-				timer11.Enabled = false;
-				timer15.Enabled = false;
-				timer16.Enabled = false;
-				timer26.Enabled = false;
-				timer27.Enabled = false;
-				button6.Visible = false;
-				button7.Visible = true;
-				button7.Focus();
-			}
-
 		}
 
         private void червонаToolStripMenuItem4_Click(object sender, EventArgs e)
@@ -9968,6 +9971,11 @@ namespace zase4kak
 			Settings.Default.line6_6 = panel11.BackColor = Color.Yellow;
 			Settings.Default.Save();
 		}
+
+        private void button15_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
 
         private void синяToolStripMenuItem5_Click(object sender, EventArgs e)
         {
@@ -11166,7 +11174,7 @@ namespace zase4kak
 		private void button2_Click(object sender, EventArgs e)
 		{
 
-			serialPort1.BaudRate = 9600;
+			serialPort1.BaudRate = 19200;
 			serialPort1.PortName = comboBox1.Text;
 			button2.Visible = false;
 			button1.Visible = true;
@@ -13000,9 +13008,27 @@ namespace zase4kak
 						break;
 					}
 
+                case 011111111:
+                    {
 
-				default:
 
+                        button6.PerformClick();
+                        textBox15.Text = "0";
+                       
+                    }
+						break;
+                case 010111111:
+                    {
+                        button7.PerformClick();
+                        textBox15.Text = "0";
+                       
+                    }
+						break;
+                default:
+					{
+						textBox15.Text = "0";
+						break;
+					}
 
 
 

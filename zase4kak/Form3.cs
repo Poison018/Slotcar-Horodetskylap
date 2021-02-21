@@ -3583,13 +3583,20 @@ namespace zase4kak
 				button8.Visible = true;
 				dataGridView1.Visible = true;
 
-				dataGridView1.Rows.Add("Червона", label45.Text, label17.Text + "," + textBox20.Text);
+				//dataGridView1.Rows.Add("Червона", label45.Text, label17.Text + "," + textBox20.Text);
 
-				dataGridView1.Rows.Add("Зелена", label46.Text, label24.Text + "," + textBox22.Text);
+				//dataGridView1.Rows.Add("Зелена", label46.Text, label24.Text + "," + textBox22.Text);
 
-				dataGridView1.Rows.Add("Синя", label47.Text, label23.Text + "," + textBox21.Text);
+				//dataGridView1.Rows.Add("Синя", label47.Text, label23.Text + "," + textBox21.Text);
 
-				dataGridView1.Rows.Add("Жовта", label48.Text, label25.Text + "," + textBox23.Text);
+				//dataGridView1.Rows.Add("Жовта", label48.Text, label25.Text + "," + textBox23.Text);
+				dataGridView1.Rows.Add(label45.Text, label17.Text + "," + textBox20.Text);
+
+				dataGridView1.Rows.Add(label46.Text, label24.Text + "," + textBox22.Text);
+
+				dataGridView1.Rows.Add(label47.Text, label23.Text + "," + textBox21.Text);
+
+				dataGridView1.Rows.Add(label48.Text, label25.Text + "," + textBox23.Text);
 
 				//сортування результату гонки в таблиці
 
@@ -3607,13 +3614,13 @@ namespace zase4kak
 				dataGridView2.Visible = true;
 				button16.Visible = true;
 
-				dataGridView2.Rows.Add("Червона", label45.Text, label17.Text + "." + textBox20.Text);
+				dataGridView2.Rows.Add(label45.Text, label17.Text + "." + textBox20.Text);
 
-				dataGridView2.Rows.Add("Зелена", label46.Text, label24.Text + "." + textBox22.Text);
+				dataGridView2.Rows.Add(label46.Text, label24.Text + "." + textBox22.Text);
 
-				dataGridView2.Rows.Add("Синя", label47.Text, label23.Text + "." + textBox21.Text);
+				dataGridView2.Rows.Add(label47.Text, label23.Text + "." + textBox21.Text);
 
-				dataGridView2.Rows.Add("Жовта", label48.Text, label25.Text + "." + textBox23.Text);
+				dataGridView2.Rows.Add(label48.Text, label25.Text + "." + textBox23.Text);
 				//сортування результату гонки в таблиці
 
 
@@ -4292,6 +4299,11 @@ button19.Visible = false;
 			e.Handled = true;
 		}
 
+        private void textBox22_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void timer24_Tick(object sender, EventArgs e)
         {
 			
@@ -4801,9 +4813,13 @@ button19.Visible = false;
 
 					kinetsgonkisound.Play();
 					label68.Visible = true;
+					textBox20.BackColor = panel1.BackColor;
 					textBox20.Visible = true;
+					textBox21.BackColor = panel4.BackColor;
 					textBox21.Visible = true;
+					textBox22.BackColor = panel3.BackColor;
 					textBox22.Visible = true;
+					textBox23.BackColor = panel5.BackColor;
 					textBox23.Visible = true;
 					button9.Visible = true;
 					button6.Enabled = false;
