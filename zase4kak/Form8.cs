@@ -27,6 +27,7 @@ namespace zase4kak
 		SoundPlayer sekynd = new SoundPlayer();
 		SoundPlayer fivesecond = new SoundPlayer();
 		SoundPlayer best_time = new SoundPlayer();
+		SoundPlayer start_to_pause = new SoundPlayer();
 		int timetotraning = 60;
 
 		public Form8()
@@ -62,6 +63,8 @@ namespace zase4kak
 			kinetsgonkisound.SoundLocation = "music/aplodismenty_s_krikami_bravo.wav";
 			best_time.SoundLocation = "music/00508.wav";
 			best_time.Load();
+			start_to_pause.SoundLocation = "music/start_to_stop.wav";
+			start_to_pause.Load();
 			String[] strPortName = SerialPort.GetPortNames();
 			foreach (string n in strPortName)
 			{
@@ -75,6 +78,7 @@ namespace zase4kak
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			fivesecond.Play();
 			button13.Visible = false;
 			label70.Visible = false;
 			button12.Enabled = false;
@@ -5756,7 +5760,7 @@ namespace zase4kak
 		{
 
 			serialPort1.WriteLine("3");
-
+			
 
 			//if (serialPort1.IsOpen == true)
 			//{
@@ -5770,7 +5774,7 @@ namespace zase4kak
 			button11.Enabled = false;
 
 
-
+			label13.Text = "<<Пауза>>";
 
 
 			pausesound.Play();
@@ -5872,101 +5876,9 @@ namespace zase4kak
 			//	serialPort1.Open();
 			//}
 
-
-			serialPort1.WriteLine("4");
-			label69.Text = "Трек включений";
-			label69.BackColor = Color.Green;
-			button10.Enabled = false;
-
-			button11.Enabled = true;
-			startsound.Play();
-			if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
-			{
-
-				timer2.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer16.Enabled = true;
-				timer26.Enabled = true;
-				timer27.Enabled = true;
-				button6.Visible = true;
-				button7.Visible = false;
-				button6.Focus();
-			}
-
-			if (number_group.Text == "1")   // кнопка продовжити для 2 заїзду
-			{
-
-				timer4.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer16.Enabled = true;
-				timer26.Enabled = true;
-				timer27.Enabled = true;
-				button6.Visible = true;
-				button7.Visible = false;
-				button6.Focus();
-			}
-
-			if (number_group.Text == "2")   // кнопка продовжити для 3 заїзду
-			{
-
-				timer6.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer26.Enabled = true;
-				timer27.Enabled = true;
-				timer16.Enabled = true;
-				button6.Visible = true;
-				button7.Visible = false;
-				button6.Focus();
-			}
-
-			if (number_group.Text == "3")   // кнопка продовжити для 4 заїзду
-			{
-
-				timer8.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer16.Enabled = true;
-				timer26.Enabled = true;
-				timer27.Enabled = true;
-				button6.Visible = true;
-				button7.Visible = false;
-				button6.Focus();
-			}
-			if (number_group.Text == "4")   // кнопка продовжити для 5 заїзду
-			{
-
-				timer30.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer16.Enabled = true;
-				timer26.Enabled = true;
-				timer27.Enabled = true;
-				button6.Visible = true;
-				button7.Visible = false;
-				button6.Focus();
-			}
-			if (number_group.Text == "5")   // кнопка продовжити для 6 заїзду
-			{
-
-				timer31.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer16.Enabled = true;
-				timer26.Enabled = true;
-				timer27.Enabled = true;
-				button6.Visible = true;
-				button7.Visible = false;
-				button6.Focus();
-			}
+			start_to_pause.Play();
+			timer44.Enabled = true;
+			label13.Text = "<<Гонка!>>";
 		}
 
 		private void button7_KeyDown(object sender, KeyEventArgs e)
@@ -7385,6 +7297,7 @@ namespace zase4kak
 
 		private void button15_Click(object sender, EventArgs e)
 		{
+			fivesecond.Play();
 			button12.Enabled = false;
 			timer23.Enabled = true;
 			button1.Visible = false;
@@ -9677,106 +9590,11 @@ namespace zase4kak
 				//if (serialPort1.IsOpen == false)
 				//{
 				//	serialPort1.Open();
-			//	}
+				//	}
+				start_to_pause.Play();
+				timer44.Enabled = true;
 
-
-				serialPort1.WriteLine("4");
-				label69.Text = "Трек включений";
-				label69.BackColor = Color.Green;
-				button10.Enabled = false;
-
-				button11.Enabled = true;
-				startsound.Play();
-
-
-
-				if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
-				{
-
-					timer2.Enabled = true;
-					timer17.Enabled = true;
-					timer11.Enabled = true;
-					timer15.Enabled = true;
-					timer16.Enabled = true;
-					timer26.Enabled = true;
-					timer27.Enabled = true;
-					button6.Visible = true;
-					button7.Visible = false;
-					button6.Focus();
-				}
-
-				if (number_group.Text == "1")   // кнопка продовжити для 2 заїзду
-				{
-
-					timer4.Enabled = true;
-					timer17.Enabled = true;
-					timer11.Enabled = true;
-					timer15.Enabled = true;
-					timer26.Enabled = true;
-					timer27.Enabled = true;
-					timer16.Enabled = true;
-					button6.Visible = true;
-					button7.Visible = false;
-					button6.Focus();
-				}
-
-				if (number_group.Text == "2")   // кнопка продовжити для 3 заїзду
-				{
-
-					timer6.Enabled = true;
-					timer17.Enabled = true;
-					timer11.Enabled = true;
-					timer15.Enabled = true;
-					timer16.Enabled = true;
-					timer26.Enabled = true;
-					timer27.Enabled = true;
-					button6.Visible = true;
-					button7.Visible = false;
-					button6.Focus();
-				}
-
-				if (number_group.Text == "3")   // кнопка продовжити для 4 заїзду
-				{
-
-					timer8.Enabled = true;
-					timer17.Enabled = true;
-					timer11.Enabled = true;
-					timer15.Enabled = true;
-					timer26.Enabled = true;
-					timer27.Enabled = true;
-					timer16.Enabled = true;
-					button6.Visible = true;
-					button7.Visible = false;
-					button6.Focus();
-				}
-				if (number_group.Text == "4")   // кнопка продовжити для 5 заїзду
-				{
-
-					timer30.Enabled = true;
-					timer17.Enabled = true;
-					timer11.Enabled = true;
-					timer15.Enabled = true;
-					timer16.Enabled = true;
-					timer26.Enabled = true;
-					timer27.Enabled = true;
-					button6.Visible = true;
-					button7.Visible = false;
-					button6.Focus();
-				}
-				if (number_group.Text == "5")   // кнопка продовжити для 6 заїзду
-				{
-
-					timer31.Enabled = true;
-					timer17.Enabled = true;
-					timer11.Enabled = true;
-					timer15.Enabled = true;
-					timer16.Enabled = true;
-					timer26.Enabled = true;
-					timer27.Enabled = true;
-					button6.Visible = true;
-					button7.Visible = false;
-					button6.Focus();
-				}
+				
 			}
 		}
 
@@ -9976,6 +9794,105 @@ namespace zase4kak
         {
 
         }
+
+        private void timer44_Tick(object sender, EventArgs e)
+        {
+			serialPort1.WriteLine("4");
+			label69.Text = "Трек включений";
+			label69.BackColor = Color.Green;
+			button10.Enabled = false;
+
+			button11.Enabled = true;
+			//startsound.Play();
+			if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
+			{
+
+				timer2.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+
+			if (number_group.Text == "1")   // кнопка продовжити для 2 заїзду
+			{
+
+				timer4.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+
+			if (number_group.Text == "2")   // кнопка продовжити для 3 заїзду
+			{
+
+				timer6.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				timer16.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+
+			if (number_group.Text == "3")   // кнопка продовжити для 4 заїзду
+			{
+
+				timer8.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+			if (number_group.Text == "4")   // кнопка продовжити для 5 заїзду
+			{
+
+				timer30.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+			if (number_group.Text == "5")   // кнопка продовжити для 6 заїзду
+			{
+
+				timer31.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+				timer26.Enabled = true;
+				timer27.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+			timer44.Enabled = false;
+		}
 
         private void синяToolStripMenuItem5_Click(object sender, EventArgs e)
         {

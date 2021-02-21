@@ -349,6 +349,7 @@ namespace zase4kak
             this.timer41 = new System.Windows.Forms.Timer(this.components);
             this.timer42 = new System.Windows.Forms.Timer(this.components);
             this.timer43 = new System.Windows.Forms.Timer(this.components);
+            this.timer44 = new System.Windows.Forms.Timer(this.components);
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -3619,6 +3620,12 @@ namespace zase4kak
             this.timer43.Tag = "таймер прогноза";
             this.timer43.Tick += new System.EventHandler(this.timer43_Tick);
             // 
+            // timer44
+            // 
+            this.timer44.Interval = 1000;
+            this.timer44.Tag = "timer для старту після паузи із затримкою";
+            this.timer44.Tick += new System.EventHandler(this.timer44_Tick);
+            // 
             // form4BindingSource
             // 
             this.form4BindingSource.DataSource = typeof(zase4kak.Form4);
@@ -4043,5 +4050,6 @@ namespace zase4kak
         private System.Windows.Forms.Label label136;
         private System.Windows.Forms.Timer timer42;
         private System.Windows.Forms.Timer timer43;
+        private System.Windows.Forms.Timer timer44;
     }
 }
