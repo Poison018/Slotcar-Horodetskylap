@@ -737,7 +737,7 @@ namespace zase4kak
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(518, 996);
+            this.button5.Location = new System.Drawing.Point(518, 962);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 37);
             this.button5.TabIndex = 103;
@@ -1712,7 +1712,7 @@ namespace zase4kak
             this.label82.AutoSize = true;
             this.label82.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label82.Location = new System.Drawing.Point(1347, 26);
+            this.label82.Location = new System.Drawing.Point(1347, 28);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(160, 51);
             this.label82.TabIndex = 54;
@@ -3605,7 +3605,6 @@ namespace zase4kak
             this.textBox38.Size = new System.Drawing.Size(122, 20);
             this.textBox38.TabIndex = 167;
             this.textBox38.Text = "0";
-            this.textBox38.Visible = false;
             // 
             // timer41
             // 
@@ -3613,6 +3612,10 @@ namespace zase4kak
             this.timer41.Interval = 10;
             this.timer41.Tag = "Таймер для прогнозу";
             this.timer41.Tick += new System.EventHandler(this.timer41_Tick);
+            // 
+            // timer42
+            // 
+            this.timer42.Tick += new System.EventHandler(this.timer42_Tick);
             // 
             // timer43
             // 

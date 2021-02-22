@@ -9894,6 +9894,11 @@ namespace zase4kak
 			timer44.Enabled = false;
 		}
 
+        private void timer42_Tick(object sender, EventArgs e)
+        {
+
+        }
+
         private void синяToolStripMenuItem5_Click(object sender, EventArgs e)
         {
 			Settings.Default.line6_6 = panel11.BackColor = Color.DodgerBlue;
