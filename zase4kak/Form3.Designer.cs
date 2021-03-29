@@ -268,6 +268,8 @@
             this.timer41 = new System.Windows.Forms.Timer(this.components);
             this.timer33 = new System.Windows.Forms.Timer(this.components);
             this.timer34 = new System.Windows.Forms.Timer(this.components);
+            this.timer35 = new System.Windows.Forms.Timer(this.components);
+            this.timer36 = new System.Windows.Forms.Timer(this.components);
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -493,6 +495,7 @@
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Wide Latin", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.Location = new System.Drawing.Point(57, 29);
+            this.label45.MaximumSize = new System.Drawing.Size(636, 63);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(0, 63);
             this.label45.TabIndex = 36;
@@ -878,6 +881,7 @@
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Wide Latin", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.Location = new System.Drawing.Point(57, 36);
+            this.label46.MaximumSize = new System.Drawing.Size(636, 63);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(0, 63);
             this.label46.TabIndex = 37;
@@ -1157,6 +1161,7 @@
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Wide Latin", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.Location = new System.Drawing.Point(57, 36);
+            this.label47.MaximumSize = new System.Drawing.Size(636, 63);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(0, 63);
             this.label47.TabIndex = 39;
@@ -1426,6 +1431,7 @@
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Wide Latin", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.Location = new System.Drawing.Point(57, 37);
+            this.label48.MaximumSize = new System.Drawing.Size(636, 63);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(0, 63);
             this.label48.TabIndex = 43;
@@ -1643,7 +1649,7 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 1000;
+            this.timer2.Interval = 300;
             this.timer2.Tag = "час 1 заїзду";
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
@@ -1655,7 +1661,7 @@
             // 
             // timer4
             // 
-            this.timer4.Interval = 1000;
+            this.timer4.Interval = 300;
             this.timer4.Tag = "час 2 заїзду";
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
@@ -1667,7 +1673,7 @@
             // 
             // timer6
             // 
-            this.timer6.Interval = 1000;
+            this.timer6.Interval = 300;
             this.timer6.Tag = "третя гонка";
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
@@ -1679,7 +1685,7 @@
             // 
             // timer8
             // 
-            this.timer8.Interval = 1000;
+            this.timer8.Interval = 300;
             this.timer8.Tag = "четверта гонка";
             this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
             // 
@@ -1725,6 +1731,7 @@
             // 
             // serialPort1
             // 
+            this.serialPort1.BaudRate = 115200;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // timer10
@@ -1887,7 +1894,7 @@
             // 
             // timer20
             // 
-            this.timer20.Interval = 2000;
+            this.timer20.Interval = 3000;
             this.timer20.Tag = "затримка для відкриття порта при старті";
             this.timer20.Tick += new System.EventHandler(this.timer20_Tick);
             // 
@@ -2621,9 +2628,9 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-            this.dataGridView3.Location = new System.Drawing.Point(1184, 852);
+            this.dataGridView3.Location = new System.Drawing.Point(1190, 846);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(168, 197);
+            this.dataGridView3.Size = new System.Drawing.Size(190, 197);
             this.dataGridView3.TabIndex = 83;
             this.dataGridView3.Visible = false;
             this.dataGridView3.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView3_SortCompare);
@@ -2649,6 +2656,7 @@
             // 
             // timer26
             // 
+            this.timer26.Interval = 50;
             this.timer26.Tag = "таймер для сортування результату";
             this.timer26.Tick += new System.EventHandler(this.timer26_Tick_1);
             // 
@@ -2686,6 +2694,10 @@
             this.textBox38.Text = "0";
             this.textBox38.Visible = false;
             // 
+            // timer31
+            // 
+            this.timer31.Tick += new System.EventHandler(this.timer31_Tick);
+            // 
             // timer32
             // 
             this.timer32.Interval = 1000;
@@ -2716,6 +2728,11 @@
             this.timer33.Interval = 1000;
             this.timer33.Tag = "таймер для відновлення гонки із затримкою";
             this.timer33.Tick += new System.EventHandler(this.timer33_Tick);
+            // 
+            // timer35
+            // 
+            this.timer35.Tag = "таймер сортування мысця";
+            this.timer35.Tick += new System.EventHandler(this.timer35_Tick);
             // 
             // form4BindingSource
             // 
@@ -3056,5 +3073,7 @@
         private System.Windows.Forms.Timer timer41;
         private System.Windows.Forms.Timer timer33;
         private System.Windows.Forms.Timer timer34;
+        private System.Windows.Forms.Timer timer35;
+        private System.Windows.Forms.Timer timer36;
     }
 }
