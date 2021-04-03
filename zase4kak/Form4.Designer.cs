@@ -368,6 +368,7 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -2616,6 +2617,7 @@
             this.label56.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label56.Location = new System.Drawing.Point(2, 25);
+            this.label56.MaximumSize = new System.Drawing.Size(321, 37);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(0, 37);
             this.label56.TabIndex = 37;
@@ -4001,12 +4003,26 @@
             this.button8.Visible = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Brown;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button9.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button9.Location = new System.Drawing.Point(33, 980);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(148, 37);
+            this.button9.TabIndex = 198;
+            this.button9.Text = "Пропустити час";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1920, 1057);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.textBox199);
@@ -4408,5 +4424,6 @@
         public System.Windows.Forms.Label label106;
         private System.Windows.Forms.Timer timer5;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }

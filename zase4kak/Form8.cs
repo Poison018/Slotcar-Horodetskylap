@@ -42,6 +42,14 @@ namespace zase4kak
 			panel5.BackColor = Settings.Default.line4_6;
 			panel10.BackColor = Settings.Default.line5_6;
 			panel11.BackColor = Settings.Default.line6_6;
+			delay = Settings.Default.delay1;
+			секToolStripMenuItem.BackColor = Settings.Default.color_delay;
+			секToolStripMenuItem1.BackColor = Settings.Default.color_delay1;
+			секToolStripMenuItem2.BackColor = Settings.Default.color_delay2;
+			секToolStripMenuItem3.BackColor = Settings.Default.color_delay3;
+			секToolStripMenuItem4.BackColor = Settings.Default.color_delay4;
+			секToolStripMenuItem5.BackColor = Settings.Default.color_delay5;
+
 		}
 
 
@@ -87,8 +95,8 @@ namespace zase4kak
 
 			button6.Focus();
 		}
-		
-		
+
+		double prognoz1, prognoz2, prognoz3, prognoz4, prognoz5, prognoz6;
 		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, v, l, time_to_traning_min, time_to_traning_sec;
 
 		int time_to_traning_secs = 1;// секунди для тренування
@@ -96,6 +104,7 @@ namespace zase4kak
 
 		int timetostart = 5; // значення стартового таймера
 
+		int delay;
 
 		double Time, Times, Timez, Timeg, Timeb, Timeo, seredniychas1, seredniychas2, seredniychas3, seredniychas4, seredniychas5, seredniychas6;//timer на час кола
 		private void timer1_Tick(object sender, EventArgs e)
@@ -319,11 +328,11 @@ namespace zase4kak
 					label122.Text = label134.Text;
 
 					//label8.Text = "0";
-				//	label56.Text = "0";
+					//	label56.Text = "0";
 					//label117.Text = "0";
 					//label119.Text = "0";
-				//	label121.Text = "0";
-				//	label123.Text = "0";
+					//	label121.Text = "0";
+					//	label123.Text = "0";
 
 
 					label18.Text = "00,000";
@@ -1473,7 +1482,7 @@ namespace zase4kak
 					label122.Text = label134.Text;
 
 					//label8.Text = "0";
-				//label56.Text = "0";
+					//label56.Text = "0";
 					//label117.Text = "0";
 					//label119.Text = "0";
 					//label121.Text = "0";
@@ -1859,15 +1868,15 @@ namespace zase4kak
 
 
 
-		
 
-	
+
+
 
 
 
 		private void timer18_Tick(object sender, EventArgs e)
 		{
-			
+
 
 
 
@@ -1938,10 +1947,10 @@ namespace zase4kak
 					}
 
 				case 60:
-                    {
+					{
 						label71.Text = "Група - << K >>";
 						break;
-                    }
+					}
 
 				case 54:
 					{
@@ -2010,7 +2019,7 @@ namespace zase4kak
 
 
 
-			
+
 
 
 
@@ -2023,7 +2032,7 @@ namespace zase4kak
 			//shovta = Convert.ToInt32(label112.Text);
 
 			//for (int i = 0; i < 1; i++)
-   //         {
+			//         {
 			//	listBox2.Items.Add(chervona);
 			//	listBox2.Items.Add(bila);
 			//	listBox2.Items.Add(zelena);
@@ -2031,7 +2040,7 @@ namespace zase4kak
 			//	listBox2.Items.Add(sunia);
 			//	listBox2.Items.Add(shovta);
 			//	break;
-				
+
 			//}
 
 			//listBox1.Items.Add(s);
@@ -2047,11 +2056,11 @@ namespace zase4kak
 
 			//int[] line = new int[] { chervona, bila, zelena, orangeva, sunia, shovta };
 
-   //         Array.Sort(line);
+			//         Array.Sort(line);
 
-   //         foreach (int n in line)
+			//         foreach (int n in line)
 
-                //label8.Text = (Convert.ToString(n));
+			//label8.Text = (Convert.ToString(n));
 
 
 
@@ -2087,52 +2096,52 @@ namespace zase4kak
 			//		label123.Text = label117.Text;
 			//		label117.Text = label8.Text;
 			//		label8.Text = label123.Text;
-   //                 if (chervona == Convert.ToInt32(label8.Text))
-   //                 {
-   //                     panel1.Location = new Point(4, 219);
-   //                     //label8.Text = "0";
-   //                 }
-   //                 else
-   //                 {
-   //                     if (bila == Convert.ToInt32(label8.Text))
-   //                     {
-   //                         panel3.Location = new Point(4, 219);
-   //                         //label8.Text = "0";
-   //                     }
-   //                     else
-   //                     {
-   //                         if (zelena == Convert.ToInt32(label8.Text))
-   //                         {
-   //                             panel4.Location = new Point(4, 219);
-   //                             //label8.Text = "0";
-   //                         }
-   //                         else
-   //                         {
-   //                             if (orangeva == Convert.ToInt32(label8.Text))
-   //                             {
-   //                                 panel5.Location = new Point(4, 219);
-   //                                 //label8.Text = "0";
-   //                             }
-   //                             else
-   //                             {
-   //                                 if (sunia == Convert.ToInt32(label8.Text))
-   //                                 {
-   //                                     panel10.Location = new Point(4, 219);
-   //                                     //label8.Text = "0";
-   //                                 }
-   //                                 else
-   //                                 {
-   //                                     if (shovta == Convert.ToInt32(label8.Text))
-   //                                     {
-   //                                         panel11.Location = new Point(4, 219);
-   //                                         //label8.Text = "0";
-   //                                     }
-   //                                 }
-   //                             }
-   //                         }
-   //                     }
-   //                 }
-   //             }
+			//                 if (chervona == Convert.ToInt32(label8.Text))
+			//                 {
+			//                     panel1.Location = new Point(4, 219);
+			//                     //label8.Text = "0";
+			//                 }
+			//                 else
+			//                 {
+			//                     if (bila == Convert.ToInt32(label8.Text))
+			//                     {
+			//                         panel3.Location = new Point(4, 219);
+			//                         //label8.Text = "0";
+			//                     }
+			//                     else
+			//                     {
+			//                         if (zelena == Convert.ToInt32(label8.Text))
+			//                         {
+			//                             panel4.Location = new Point(4, 219);
+			//                             //label8.Text = "0";
+			//                         }
+			//                         else
+			//                         {
+			//                             if (orangeva == Convert.ToInt32(label8.Text))
+			//                             {
+			//                                 panel5.Location = new Point(4, 219);
+			//                                 //label8.Text = "0";
+			//                             }
+			//                             else
+			//                             {
+			//                                 if (sunia == Convert.ToInt32(label8.Text))
+			//                                 {
+			//                                     panel10.Location = new Point(4, 219);
+			//                                     //label8.Text = "0";
+			//                                 }
+			//                                 else
+			//                                 {
+			//                                     if (shovta == Convert.ToInt32(label8.Text))
+			//                                     {
+			//                                         panel11.Location = new Point(4, 219);
+			//                                         //label8.Text = "0";
+			//                                     }
+			//                                 }
+			//                             }
+			//                         }
+			//                     }
+			//                 }
+			//             }
 
 
 
@@ -2143,52 +2152,52 @@ namespace zase4kak
 			//		label118.Text = label58.Text;
 			//		label58.Text = label117.Text;
 			//		label117.Text = label118.Text;
-   //                 if (chervona == Convert.ToInt32(label117.Text))
-   //                 {
-   //                     panel1.Location = new Point(4, 321);
-   //                     //label117.Text = "0";
-   //                 }
-   //                 else
-   //                 {
-   //                     if (bila == Convert.ToInt32(label117.Text))
-   //                     {
-   //                         panel3.Location = new Point(4, 321);
-   //                         //label117.Text = "0";
-   //                     }
-   //                     else
-   //                     {
-   //                         if (zelena == Convert.ToInt32(label117.Text))
-   //                         {
-   //                             panel4.Location = new Point(4, 321);
-   //                             //label117.Text = "0";
-   //                         }
-   //                         else
-   //                         {
-   //                             if (orangeva == Convert.ToInt32(label117.Text))
-   //                             {
-   //                                 panel5.Location = new Point(4, 321);
-   //                                 //label117.Text = "0";
-   //                             }
-   //                             else
-   //                             {
-   //                                 if (sunia == Convert.ToInt32(label117.Text))
-   //                                 {
-   //                                     panel10.Location = new Point(4, 321);
-   //                                     //	label117.Text = "0";
-   //                                 }
-   //                                 else
-   //                                 {
-   //                                     if (shovta == Convert.ToInt32(label117.Text))
-   //                                     {
-   //                                         panel11.Location = new Point(4, 321);
-   //                                         //	label117.Text = "0";
-   //                                     }
-   //                                 }
-   //                             }
-   //                         }
-   //                     }
-   //                 }
-   //             }
+			//                 if (chervona == Convert.ToInt32(label117.Text))
+			//                 {
+			//                     panel1.Location = new Point(4, 321);
+			//                     //label117.Text = "0";
+			//                 }
+			//                 else
+			//                 {
+			//                     if (bila == Convert.ToInt32(label117.Text))
+			//                     {
+			//                         panel3.Location = new Point(4, 321);
+			//                         //label117.Text = "0";
+			//                     }
+			//                     else
+			//                     {
+			//                         if (zelena == Convert.ToInt32(label117.Text))
+			//                         {
+			//                             panel4.Location = new Point(4, 321);
+			//                             //label117.Text = "0";
+			//                         }
+			//                         else
+			//                         {
+			//                             if (orangeva == Convert.ToInt32(label117.Text))
+			//                             {
+			//                                 panel5.Location = new Point(4, 321);
+			//                                 //label117.Text = "0";
+			//                             }
+			//                             else
+			//                             {
+			//                                 if (sunia == Convert.ToInt32(label117.Text))
+			//                                 {
+			//                                     panel10.Location = new Point(4, 321);
+			//                                     //	label117.Text = "0";
+			//                                 }
+			//                                 else
+			//                                 {
+			//                                     if (shovta == Convert.ToInt32(label117.Text))
+			//                                     {
+			//                                         panel11.Location = new Point(4, 321);
+			//                                         //	label117.Text = "0";
+			//                                     }
+			//                                 }
+			//                             }
+			//                         }
+			//                     }
+			//                 }
+			//             }
 
 
 
@@ -2198,53 +2207,53 @@ namespace zase4kak
 			//		label119.Text = label57.Text;
 			//		label57.Text = label58.Text;
 			//		label58.Text = label119.Text;
-   //                 if (chervona == Convert.ToInt32(label58.Text))
-   //                 {
-   //                     panel1.Location = new Point(4, 423);
-   //                     //	label58.Text = "0";
-   //                 }
-   //                 else
-   //                 {
-   //                     if (bila == Convert.ToInt32(label58.Text))
-   //                     {
-   //                         panel3.Location = new Point(4, 423);
-   //                         //label58.Text = "0";
-   //                     }
-   //                     else
-   //                     {
-   //                         if (zelena == Convert.ToInt32(label58.Text))
-   //                         {
-   //                             panel4.Location = new Point(4, 423);
-   //                             //	label58.Text = "0";
-   //                         }
-   //                         else
-   //                         {
-   //                             if (orangeva == Convert.ToInt32(label58.Text))
-   //                             {
-   //                                 panel5.Location = new Point(4, 423);
-   //                                 //	label58.Text = "0";
-   //                             }
-   //                             else
-   //                             {
-   //                                 if (sunia == Convert.ToInt32(label58.Text))
-   //                                 {
-   //                                     panel10.Location = new Point(4, 423);
-   //                                     //	label58.Text = "0";
-   //                                 }
-   //                                 else
-   //                                 {
-   //                                     if (shovta == Convert.ToInt32(label58.Text))
-   //                                     {
-   //                                         panel11.Location = new Point(4, 423);
-   //                                         //	label58.Text = "0";
-   //                                     }
-   //                                 }
-   //                             }
-   //                         }
-   //                     }
-   //                 }
+			//                 if (chervona == Convert.ToInt32(label58.Text))
+			//                 {
+			//                     panel1.Location = new Point(4, 423);
+			//                     //	label58.Text = "0";
+			//                 }
+			//                 else
+			//                 {
+			//                     if (bila == Convert.ToInt32(label58.Text))
+			//                     {
+			//                         panel3.Location = new Point(4, 423);
+			//                         //label58.Text = "0";
+			//                     }
+			//                     else
+			//                     {
+			//                         if (zelena == Convert.ToInt32(label58.Text))
+			//                         {
+			//                             panel4.Location = new Point(4, 423);
+			//                             //	label58.Text = "0";
+			//                         }
+			//                         else
+			//                         {
+			//                             if (orangeva == Convert.ToInt32(label58.Text))
+			//                             {
+			//                                 panel5.Location = new Point(4, 423);
+			//                                 //	label58.Text = "0";
+			//                             }
+			//                             else
+			//                             {
+			//                                 if (sunia == Convert.ToInt32(label58.Text))
+			//                                 {
+			//                                     panel10.Location = new Point(4, 423);
+			//                                     //	label58.Text = "0";
+			//                                 }
+			//                                 else
+			//                                 {
+			//                                     if (shovta == Convert.ToInt32(label58.Text))
+			//                                     {
+			//                                         panel11.Location = new Point(4, 423);
+			//                                         //	label58.Text = "0";
+			//                                     }
+			//                                 }
+			//                             }
+			//                         }
+			//                     }
+			//                 }
 
-   //             }
+			//             }
 
 
 
@@ -2356,7 +2365,7 @@ namespace zase4kak
 
 			//	}
 
-				
+
 			//}
 
 
@@ -2365,171 +2374,171 @@ namespace zase4kak
 
 
 			label55.Visible = true;
-				label59.Visible = true;
-				label60.Visible = true;
-				label61.Visible = true;
-				label62.Visible = true;
-				label75.Visible = true;
-				label104.Visible = true;
+			label59.Visible = true;
+			label60.Visible = true;
+			label61.Visible = true;
+			label62.Visible = true;
+			label75.Visible = true;
+			label104.Visible = true;
 
-				if (panel1.Location == new Point(4, 219))
-				{
+			if (panel1.Location == new Point(4, 219))
+			{
 
 
-					int label17l, label23l, label24l, label25l, label97l, label112l;
+				int label17l, label23l, label24l, label25l, label97l, label112l;
 
-					//label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label23.Text);
-					label59.Text = "0";
+				//label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label23.Text);
+				label59.Text = "0";
 
-					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label17.Text);
-					label61.Text = Convert.ToString(label23l);
+				label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label17.Text);
+				label61.Text = Convert.ToString(label23l);
 
-					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label17.Text);
-					label60.Text = Convert.ToString(label24l);
+				label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label17.Text);
+				label60.Text = Convert.ToString(label24l);
 
-					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label17.Text);
-					label62.Text = Convert.ToString(label25l);
+				label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label17.Text);
+				label62.Text = Convert.ToString(label25l);
 
-					label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label17.Text);
-					label75.Text = Convert.ToString(label97l);
+				label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label17.Text);
+				label75.Text = Convert.ToString(label97l);
 
-					label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label17.Text);
-					label104.Text = Convert.ToString(label112l);
+				label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label17.Text);
+				label104.Text = Convert.ToString(label112l);
 
 
 
-				}
+			}
 
 
 
-				if (panel3.Location == new Point(4, 219))
-				{
+			if (panel3.Location == new Point(4, 219))
+			{
 
 
-					int label17l, label23l, label25l, label97l, label112l;
+				int label17l, label23l, label25l, label97l, label112l;
 
-					label60.Text = "0";
+				label60.Text = "0";
 
-					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label24.Text);
-					label59.Text = Convert.ToString(label17l);
+				label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label24.Text);
+				label59.Text = Convert.ToString(label17l);
 
-					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label24.Text);
-					label61.Text = Convert.ToString(label23l);
+				label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label24.Text);
+				label61.Text = Convert.ToString(label23l);
 
-					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label24.Text);
-					label62.Text = Convert.ToString(label25l);
+				label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label24.Text);
+				label62.Text = Convert.ToString(label25l);
 
-					label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label24.Text);
-					label75.Text = Convert.ToString(label97l);
+				label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label24.Text);
+				label75.Text = Convert.ToString(label97l);
 
-					label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label24.Text);
-					label104.Text = Convert.ToString(label112l);
+				label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label24.Text);
+				label104.Text = Convert.ToString(label112l);
 
 
-				}
+			}
 
-				if (panel4.Location == new Point(4, 219))
-				{
+			if (panel4.Location == new Point(4, 219))
+			{
 
 
-					int label17l, label24l, label25l, label97l, label112l;
+				int label17l, label24l, label25l, label97l, label112l;
 
-					label61.Text = "0";
+				label61.Text = "0";
 
-					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label23.Text);
-					label59.Text = Convert.ToString(label17l);
+				label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label23.Text);
+				label59.Text = Convert.ToString(label17l);
 
-					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label23.Text);
-					label60.Text = Convert.ToString(label24l);
+				label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label23.Text);
+				label60.Text = Convert.ToString(label24l);
 
-					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label23.Text);
-					label62.Text = Convert.ToString(label25l);
+				label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label23.Text);
+				label62.Text = Convert.ToString(label25l);
 
-					label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label23.Text);
-					label75.Text = Convert.ToString(label97l);
+				label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label23.Text);
+				label75.Text = Convert.ToString(label97l);
 
-					label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label23.Text);
-					label104.Text = Convert.ToString(label112l);
+				label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label23.Text);
+				label104.Text = Convert.ToString(label112l);
 
-				}
+			}
 
-				if (panel5.Location == new Point(4, 219))
-				{
+			if (panel5.Location == new Point(4, 219))
+			{
 
 
-					int label17l, label23l, label24l, label97l, label112l;
+				int label17l, label23l, label24l, label97l, label112l;
 
-					label62.Text = "0";
+				label62.Text = "0";
 
-					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label25.Text);
-					label59.Text = Convert.ToString(label17l);
+				label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label25.Text);
+				label59.Text = Convert.ToString(label17l);
 
-					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label25.Text);
-					label60.Text = Convert.ToString(label24l);
+				label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label25.Text);
+				label60.Text = Convert.ToString(label24l);
 
-					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label25.Text);
-					label61.Text = Convert.ToString(label23l);
+				label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label25.Text);
+				label61.Text = Convert.ToString(label23l);
 
-					label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label25.Text);
-					label75.Text = Convert.ToString(label97l);
+				label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label25.Text);
+				label75.Text = Convert.ToString(label97l);
 
-					label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label25.Text);
-					label104.Text = Convert.ToString(label112l);
+				label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label25.Text);
+				label104.Text = Convert.ToString(label112l);
 
-				}
+			}
 
-				if (panel10.Location == new Point(4, 219))
+			if (panel10.Location == new Point(4, 219))
 
-				{
+			{
 
 
-					int label17l, label23l, label24l, label25l, label112l;
+				int label17l, label23l, label24l, label25l, label112l;
 
-					label75.Text = "0";
+				label75.Text = "0";
 
-					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label97.Text);
-					label59.Text = Convert.ToString(label17l);
+				label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label97.Text);
+				label59.Text = Convert.ToString(label17l);
 
-					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label97.Text);
-					label60.Text = Convert.ToString(label24l);
+				label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label97.Text);
+				label60.Text = Convert.ToString(label24l);
 
-					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label97.Text);
-					label61.Text = Convert.ToString(label23l);
+				label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label97.Text);
+				label61.Text = Convert.ToString(label23l);
 
-					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label97.Text);
-					label62.Text = Convert.ToString(label25l);
+				label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label97.Text);
+				label62.Text = Convert.ToString(label25l);
 
-					label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label97.Text);
-					label104.Text = Convert.ToString(label112l);
+				label112l = Convert.ToInt32(label112.Text) - Convert.ToInt32(label97.Text);
+				label104.Text = Convert.ToString(label112l);
 
-				}
+			}
 
-				if (panel11.Location == new Point(4, 219))
+			if (panel11.Location == new Point(4, 219))
 
-				{
+			{
 
 
-					int label17l, label23l, label24l, label25l, label97l;
+				int label17l, label23l, label24l, label25l, label97l;
 
-					label104.Text = "0";
+				label104.Text = "0";
 
-					label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label112.Text);
-					label59.Text = Convert.ToString(label17l);
+				label17l = Convert.ToInt32(label17.Text) - Convert.ToInt32(label112.Text);
+				label59.Text = Convert.ToString(label17l);
 
-					label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label112.Text);
-					label60.Text = Convert.ToString(label24l);
+				label24l = Convert.ToInt32(label24.Text) - Convert.ToInt32(label112.Text);
+				label60.Text = Convert.ToString(label24l);
 
-					label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label112.Text);
-					label61.Text = Convert.ToString(label23l);
+				label23l = Convert.ToInt32(label23.Text) - Convert.ToInt32(label112.Text);
+				label61.Text = Convert.ToString(label23l);
 
-					label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label112.Text);
-					label62.Text = Convert.ToString(label25l);
+				label25l = Convert.ToInt32(label25.Text) - Convert.ToInt32(label112.Text);
+				label62.Text = Convert.ToString(label25l);
 
-					label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label112.Text);
-					label75.Text = Convert.ToString(label97l);
+				label97l = Convert.ToInt32(label97.Text) - Convert.ToInt32(label112.Text);
+				label75.Text = Convert.ToString(label97l);
 
 
-				}
+			}
 
 
 
@@ -2550,285 +2559,285 @@ namespace zase4kak
 
 
 
-				//if (chervona != bila && chervona != zelena && chervona != orangeva && chervona != sunia && chervona != shovta)
-				//{
+			//if (chervona != bila && chervona != zelena && chervona != orangeva && chervona != sunia && chervona != shovta)
+			//{
 
-				//	if (chervona < zelena && chervona < orangeva && chervona < bila && chervona < sunia && chervona < shovta)   // червона
+			//	if (chervona < zelena && chervona < orangeva && chervona < bila && chervona < sunia && chervona < shovta)   // червона
 
-				//	{
-				//		panel1.Location = new Point(4, 731);
-				//	}
-				//	else
-				//	{
-				//		if (chervona < orangeva && chervona < bila && chervona < sunia && chervona < shovta || chervona < zelena && chervona < orangeva && chervona < bila && chervona < sunia || chervona < sunia && chervona < zelena && shovta < orangeva && chervona < bila || chervona < sunia && chervona < shovta && chervona < zelena && chervona < orangeva || chervona < bila && chervona < sunia && chervona < shovta && chervona < zelena)
-				//		{
-				//			panel1.Location = new Point(4, 628);
-				//		}
-				//		else
-				//		{
-				//			if (chervona < bila && chervona < sunia && chervona < shovta || chervona < orangeva && chervona < zelena && chervona < bila || chervona < shovta && chervona < orangeva && chervona < zelena || chervona < sunia && chervona < shovta && chervona < orangeva || chervona < zelena && chervona < bila && chervona < sunia)
-				//			{
-				//				panel1.Location = new Point(4, 525);
-				//			}
-				//			else
-				//			{
-				//				if (chervona < zelena && chervona < bila || chervona < sunia && chervona < orangeva || chervona < bila && chervona < sunia || chervona < orangeva && chervona < shovta || chervona < shovta && chervona < zelena)
-				//				{
-				//					panel1.Location = new Point(4, 423);
-				//				}
-				//				else
-				//				{
-				//					if (chervona < shovta || chervona < zelena || chervona < sunia || chervona < orangeva || chervona < bila)
-				//					{
-				//						panel1.Location = new Point(4, 321);
-				//					}
-				//					else
-				//					{
-				//						if (chervona > shovta && chervona > zelena && chervona > sunia && chervona > orangeva & chervona > bila)
-				//						{
-				//							panel1.Location = new Point(4, 219);
-				//						}
-				//					}
-				//				}
-				//			}
-				//		}
-				//	}
+			//	{
+			//		panel1.Location = new Point(4, 731);
+			//	}
+			//	else
+			//	{
+			//		if (chervona < orangeva && chervona < bila && chervona < sunia && chervona < shovta || chervona < zelena && chervona < orangeva && chervona < bila && chervona < sunia || chervona < sunia && chervona < zelena && shovta < orangeva && chervona < bila || chervona < sunia && chervona < shovta && chervona < zelena && chervona < orangeva || chervona < bila && chervona < sunia && chervona < shovta && chervona < zelena)
+			//		{
+			//			panel1.Location = new Point(4, 628);
+			//		}
+			//		else
+			//		{
+			//			if (chervona < bila && chervona < sunia && chervona < shovta || chervona < orangeva && chervona < zelena && chervona < bila || chervona < shovta && chervona < orangeva && chervona < zelena || chervona < sunia && chervona < shovta && chervona < orangeva || chervona < zelena && chervona < bila && chervona < sunia)
+			//			{
+			//				panel1.Location = new Point(4, 525);
+			//			}
+			//			else
+			//			{
+			//				if (chervona < zelena && chervona < bila || chervona < sunia && chervona < orangeva || chervona < bila && chervona < sunia || chervona < orangeva && chervona < shovta || chervona < shovta && chervona < zelena)
+			//				{
+			//					panel1.Location = new Point(4, 423);
+			//				}
+			//				else
+			//				{
+			//					if (chervona < shovta || chervona < zelena || chervona < sunia || chervona < orangeva || chervona < bila)
+			//					{
+			//						panel1.Location = new Point(4, 321);
+			//					}
+			//					else
+			//					{
+			//						if (chervona > shovta && chervona > zelena && chervona > sunia && chervona > orangeva & chervona > bila)
+			//						{
+			//							panel1.Location = new Point(4, 219);
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
 
-				//}
+			//}
 
 
-				//if (zelena != chervona && zelena != bila && zelena != orangeva && zelena != sunia && zelena != shovta)
-				//{
+			//if (zelena != chervona && zelena != bila && zelena != orangeva && zelena != sunia && zelena != shovta)
+			//{
 
-				//	if (zelena < chervona && zelena < orangeva && zelena < bila && zelena < sunia && zelena < shovta) // зелена
-				//	{
-				//		panel4.Location = new Point(4, 731);
-				//	}
-				//	else
-				//	{
-				//		if (zelena < orangeva && zelena < bila && zelena < sunia && zelena < shovta || zelena < chervona && zelena < orangeva && zelena < bila && zelena < sunia || zelena < shovta && zelena < chervona && zelena < orangeva && zelena < bila || zelena < sunia && zelena < shovta && zelena < chervona && zelena < orangeva || zelena < bila && zelena < sunia && zelena < shovta && zelena < chervona)
-				//		{
-				//			panel4.Location = new Point(4, 628);
-				//		}
-				//		else
-				//		{
-				//			if (zelena < bila && zelena < sunia && zelena < shovta || zelena < orangeva && zelena < chervona && zelena < bila || zelena < shovta && zelena < orangeva && zelena < chervona || zelena < sunia && zelena < shovta && zelena < orangeva || zelena < chervona && zelena < bila && zelena < sunia)
-				//			{
-				//				panel4.Location = new Point(4, 525);
-				//			}
-				//			else
-				//			{
-				//				if (zelena < chervona && zelena < bila || zelena < sunia && zelena < orangeva || zelena < bila && zelena < sunia || zelena < orangeva && zelena < shovta || zelena < shovta && zelena < chervona)
-				//				{
-				//					panel4.Location = new Point(4, 423);
-				//				}
-				//				else
-				//				{
-				//					if (zelena < shovta || zelena < chervona || zelena < sunia || zelena < orangeva || zelena < bila)
-				//					{
-				//						panel4.Location = new Point(4, 321);
-				//					}
-				//					else
-				//					{
-				//						if (zelena > chervona && zelena > bila && zelena > orangeva && zelena > sunia && zelena > shovta)
-				//						{
-				//							panel4.Location = new Point(4, 219);
-				//						}
-				//					}
-				//				}
-				//			}
-
-				//		}
-				//	}
-
-				//}
-				//if (bila != chervona && bila != shovta && bila != sunia && bila != zelena && bila != orangeva)
-				//{
-
-				//	if (bila < chervona && bila < orangeva && bila < zelena && bila < sunia && bila < shovta)         // біла
-				//	{
-				//		panel3.Location = new Point(4, 731);
-
-				//	}
-				//	else
-				//	{
-				//		if (bila < orangeva && bila < zelena && bila < sunia && bila < shovta || bila < chervona && bila < orangeva && bila < zelena && bila < sunia || bila < shovta && bila < chervona && bila < orangeva && bila < zelena || bila < sunia && bila < shovta && bila < chervona && bila < orangeva || bila < zelena && bila < sunia && bila < shovta && bila < chervona)
-				//		{
-				//			panel3.Location = new Point(4, 628);
-
-				//		}
-				//		else
-				//		{
-				//			if (bila < zelena && bila < sunia && bila < shovta || bila < orangeva && bila < chervona && bila < zelena || bila < shovta && bila < orangeva && bila < chervona || bila < sunia && bila < shovta && bila < orangeva || bila < chervona && bila < zelena && bila < sunia)
-				//			{
-				//				panel3.Location = new Point(4, 525);
-				//			}
-				//			else
-				//			{
-				//				if (bila < chervona && bila < zelena || bila < sunia && bila < orangeva || bila < zelena & bila < sunia || bila < orangeva && bila < shovta || bila < shovta && bila < chervona)
-				//				{
-				//					panel3.Location = new Point(4, 423);
-				//				}
-				//				else
-				//				{
-				//					if (bila < shovta || bila < chervona || bila < sunia || bila < orangeva || bila < zelena)
-				//					{
-				//						panel3.Location = new Point(4, 321);
-
-				//					}
-				//					else
-				//					{
-				//						if (bila > shovta && bila > chervona && bila > sunia && bila > orangeva && bila > zelena)
-				//						{
-				//							panel3.Location = new Point(4, 219);
-				//						}
-				//					}
-				//				}
-				//			}
-				//		}
-				//	}
-				//}
-
-
-
-
-				//if (sunia != chervona && sunia != orangeva && sunia != zelena && sunia != bila && sunia != shovta)  //синя
-				//{
-
-				//	if (sunia < chervona && sunia < orangeva && sunia < zelena && sunia < bila && sunia < shovta)
-				//	{
-				//		panel10.Location = new Point(4, 731);
-
-				//	}
-				//	else
-				//	{
-				//		if (sunia < orangeva && sunia < zelena && sunia < bila && sunia < shovta || sunia < chervona && sunia < orangeva && sunia < zelena && sunia < bila || sunia < shovta && sunia < chervona && sunia < orangeva && sunia < zelena || sunia < bila && sunia < shovta && sunia < chervona && sunia < orangeva || sunia < zelena && sunia < bila && sunia < shovta && sunia < chervona)
-				//		{
-				//			panel10.Location = new Point(4, 628);
-				//		}
-				//		else
-				//		{
-				//			if (sunia < zelena && sunia < bila && sunia < shovta || sunia < orangeva && sunia < chervona && sunia < zelena || sunia < shovta && sunia < orangeva && sunia < chervona || sunia < bila && sunia < shovta && sunia < orangeva || sunia < chervona && sunia < zelena && sunia < bila)
-				//			{
-				//				panel10.Location = new Point(4, 525);
-				//			}
-				//			else
-				//			{
-				//				if (sunia < chervona && sunia < zelena || sunia < bila && sunia < orangeva || sunia < zelena && sunia < bila || sunia < orangeva && sunia < shovta || sunia < shovta && sunia < chervona)
-				//				{
-				//					panel10.Location = new Point(4, 423);
-				//				}
-				//				else
-				//				{
-				//					if (sunia < shovta || sunia < chervona || sunia < bila || sunia < orangeva || sunia < zelena)
-				//					{
-				//						panel10.Location = new Point(4, 321);
-				//					}
-				//					else
-				//					{
-				//						if (sunia > chervona && sunia > orangeva && sunia > zelena && sunia > bila && sunia > shovta)
-				//						{
-				//							panel10.Location = new Point(4, 219);
-				//						}
-				//					}
-				//				}
-				//			}
-				//		}
-				//	}
-				//}
-				//if (shovta != sunia && shovta != bila && shovta != zelena && shovta != orangeva && shovta != chervona) // жовта
-				//{
-				//	if (shovta < chervona && shovta < orangeva && shovta < zelena && shovta < bila && shovta < sunia)
-				//	{
-				//		panel11.Location = new Point(4, 731);
-				//	}
-				//	else
-				//	{
-				//		if (shovta < orangeva && shovta < zelena && shovta < bila && shovta < sunia || shovta < chervona && shovta < orangeva && shovta < zelena && shovta < bila || shovta < sunia && shovta < chervona && shovta < orangeva || shovta < zelena && shovta < bila && shovta < sunia && shovta < chervona)
-				//		{
-				//			panel11.Location = new Point(4, 628);
-				//		}
-				//		else
-				//		{
-				//			if (shovta < zelena && shovta < bila && shovta < sunia || shovta < orangeva && shovta < chervona && shovta < zelena || shovta < sunia && shovta < orangeva && shovta < chervona || shovta < bila && shovta < sunia && shovta < orangeva || shovta < chervona && shovta < zelena && shovta < bila)
-				//			{
-				//				panel11.Location = new Point(4, 525);
-				//			}
-				//			else
-				//			{
-				//				if (shovta < zelena && shovta < chervona || shovta < bila && shovta < orangeva || shovta < zelena && shovta < bila || shovta < orangeva && shovta < sunia || shovta < sunia && shovta < chervona)
-				//				{
-				//					panel11.Location = new Point(4, 423);
-				//				}
-				//				else
-				//				{
-				//					if (shovta < sunia || shovta < chervona || shovta < bila || shovta < orangeva || shovta < zelena)
-				//					{
-				//						panel11.Location = new Point(4, 321);
-
-				//					}
-				//					else
-				//					{
-				//						if (shovta > sunia && shovta > bila && shovta > zelena && shovta > orangeva && shovta > chervona)
-				//						{
-				//							panel11.Location = new Point(4, 219);
-				//						}
-				//					}
-				//				}
-				//			}
-				//		}
-				//	}
-				//}
-
-
-
-
-				//if (orangeva > chervona && orangeva > shovta && orangeva > zelena && orangeva > bila && orangeva > sunia)  // оранжева
-				//{
-
-				//	if (orangeva < chervona && orangeva < shovta && orangeva < zelena && orangeva < bila && orangeva < sunia)
-				//	{
-				//		panel5.Location = new Point(4, 731);
-				//	}
-				//	else
-				//	{
-				//		if (orangeva < shovta && orangeva < zelena && orangeva < bila && orangeva < sunia || orangeva < chervona && orangeva < shovta && orangeva < zelena && orangeva < bila || orangeva < sunia && orangeva < chervona && orangeva < shovta && orangeva < zelena || orangeva < bila && orangeva < sunia && orangeva < chervona && orangeva < shovta || orangeva < zelena && orangeva < bila && orangeva < sunia && orangeva < shovta)
-				//		{
-				//			panel5.Location = new Point(4, 628);
-
-				//		}
-				//		else
-				//		{
-				//			if (orangeva < zelena && orangeva < bila && orangeva < sunia || orangeva < shovta && orangeva < chervona && orangeva < zelena || orangeva < sunia && orangeva < shovta && orangeva < chervona || orangeva < bila && orangeva < sunia && orangeva < shovta || orangeva < chervona && orangeva < zelena && orangeva < bila)
-				//			{
-				//				panel5.Location = new Point(4, 525);
-				//			}
-				//			else
-				//			{
-				//				if (orangeva < chervona && orangeva < zelena || orangeva < bila && orangeva < shovta || orangeva < zelena && orangeva < bila || orangeva < shovta && orangeva < sunia || orangeva < sunia && orangeva < chervona)
-				//				{
-				//					panel5.Location = new Point(4, 423);
-				//				}
-				//				else
-				//				{
-				//					if (orangeva < sunia || orangeva < chervona || orangeva < bila && orangeva < shovta || orangeva < zelena)
-				//					{
-				//						panel5.Location = new Point(4, 321);
-
-				//					}
-				//					else
-				//					{
-				//						if (orangeva > chervona && orangeva > shovta && orangeva > zelena && orangeva > bila && orangeva > sunia)
-				//						{
-				//							panel5.Location = new Point(4, 219);
-				//						}
-				//					}
-				//				}
-				//			}
-				//		}
-				//	}
-
-				//}
+			//	if (zelena < chervona && zelena < orangeva && zelena < bila && zelena < sunia && zelena < shovta) // зелена
+			//	{
+			//		panel4.Location = new Point(4, 731);
+			//	}
+			//	else
+			//	{
+			//		if (zelena < orangeva && zelena < bila && zelena < sunia && zelena < shovta || zelena < chervona && zelena < orangeva && zelena < bila && zelena < sunia || zelena < shovta && zelena < chervona && zelena < orangeva && zelena < bila || zelena < sunia && zelena < shovta && zelena < chervona && zelena < orangeva || zelena < bila && zelena < sunia && zelena < shovta && zelena < chervona)
+			//		{
+			//			panel4.Location = new Point(4, 628);
+			//		}
+			//		else
+			//		{
+			//			if (zelena < bila && zelena < sunia && zelena < shovta || zelena < orangeva && zelena < chervona && zelena < bila || zelena < shovta && zelena < orangeva && zelena < chervona || zelena < sunia && zelena < shovta && zelena < orangeva || zelena < chervona && zelena < bila && zelena < sunia)
+			//			{
+			//				panel4.Location = new Point(4, 525);
+			//			}
+			//			else
+			//			{
+			//				if (zelena < chervona && zelena < bila || zelena < sunia && zelena < orangeva || zelena < bila && zelena < sunia || zelena < orangeva && zelena < shovta || zelena < shovta && zelena < chervona)
+			//				{
+			//					panel4.Location = new Point(4, 423);
+			//				}
+			//				else
+			//				{
+			//					if (zelena < shovta || zelena < chervona || zelena < sunia || zelena < orangeva || zelena < bila)
+			//					{
+			//						panel4.Location = new Point(4, 321);
+			//					}
+			//					else
+			//					{
+			//						if (zelena > chervona && zelena > bila && zelena > orangeva && zelena > sunia && zelena > shovta)
+			//						{
+			//							panel4.Location = new Point(4, 219);
+			//						}
+			//					}
+			//				}
+			//			}
+
+			//		}
+			//	}
+
+			//}
+			//if (bila != chervona && bila != shovta && bila != sunia && bila != zelena && bila != orangeva)
+			//{
+
+			//	if (bila < chervona && bila < orangeva && bila < zelena && bila < sunia && bila < shovta)         // біла
+			//	{
+			//		panel3.Location = new Point(4, 731);
+
+			//	}
+			//	else
+			//	{
+			//		if (bila < orangeva && bila < zelena && bila < sunia && bila < shovta || bila < chervona && bila < orangeva && bila < zelena && bila < sunia || bila < shovta && bila < chervona && bila < orangeva && bila < zelena || bila < sunia && bila < shovta && bila < chervona && bila < orangeva || bila < zelena && bila < sunia && bila < shovta && bila < chervona)
+			//		{
+			//			panel3.Location = new Point(4, 628);
+
+			//		}
+			//		else
+			//		{
+			//			if (bila < zelena && bila < sunia && bila < shovta || bila < orangeva && bila < chervona && bila < zelena || bila < shovta && bila < orangeva && bila < chervona || bila < sunia && bila < shovta && bila < orangeva || bila < chervona && bila < zelena && bila < sunia)
+			//			{
+			//				panel3.Location = new Point(4, 525);
+			//			}
+			//			else
+			//			{
+			//				if (bila < chervona && bila < zelena || bila < sunia && bila < orangeva || bila < zelena & bila < sunia || bila < orangeva && bila < shovta || bila < shovta && bila < chervona)
+			//				{
+			//					panel3.Location = new Point(4, 423);
+			//				}
+			//				else
+			//				{
+			//					if (bila < shovta || bila < chervona || bila < sunia || bila < orangeva || bila < zelena)
+			//					{
+			//						panel3.Location = new Point(4, 321);
+
+			//					}
+			//					else
+			//					{
+			//						if (bila > shovta && bila > chervona && bila > sunia && bila > orangeva && bila > zelena)
+			//						{
+			//							panel3.Location = new Point(4, 219);
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+			//}
+
+
+
+
+			//if (sunia != chervona && sunia != orangeva && sunia != zelena && sunia != bila && sunia != shovta)  //синя
+			//{
+
+			//	if (sunia < chervona && sunia < orangeva && sunia < zelena && sunia < bila && sunia < shovta)
+			//	{
+			//		panel10.Location = new Point(4, 731);
+
+			//	}
+			//	else
+			//	{
+			//		if (sunia < orangeva && sunia < zelena && sunia < bila && sunia < shovta || sunia < chervona && sunia < orangeva && sunia < zelena && sunia < bila || sunia < shovta && sunia < chervona && sunia < orangeva && sunia < zelena || sunia < bila && sunia < shovta && sunia < chervona && sunia < orangeva || sunia < zelena && sunia < bila && sunia < shovta && sunia < chervona)
+			//		{
+			//			panel10.Location = new Point(4, 628);
+			//		}
+			//		else
+			//		{
+			//			if (sunia < zelena && sunia < bila && sunia < shovta || sunia < orangeva && sunia < chervona && sunia < zelena || sunia < shovta && sunia < orangeva && sunia < chervona || sunia < bila && sunia < shovta && sunia < orangeva || sunia < chervona && sunia < zelena && sunia < bila)
+			//			{
+			//				panel10.Location = new Point(4, 525);
+			//			}
+			//			else
+			//			{
+			//				if (sunia < chervona && sunia < zelena || sunia < bila && sunia < orangeva || sunia < zelena && sunia < bila || sunia < orangeva && sunia < shovta || sunia < shovta && sunia < chervona)
+			//				{
+			//					panel10.Location = new Point(4, 423);
+			//				}
+			//				else
+			//				{
+			//					if (sunia < shovta || sunia < chervona || sunia < bila || sunia < orangeva || sunia < zelena)
+			//					{
+			//						panel10.Location = new Point(4, 321);
+			//					}
+			//					else
+			//					{
+			//						if (sunia > chervona && sunia > orangeva && sunia > zelena && sunia > bila && sunia > shovta)
+			//						{
+			//							panel10.Location = new Point(4, 219);
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+			//}
+			//if (shovta != sunia && shovta != bila && shovta != zelena && shovta != orangeva && shovta != chervona) // жовта
+			//{
+			//	if (shovta < chervona && shovta < orangeva && shovta < zelena && shovta < bila && shovta < sunia)
+			//	{
+			//		panel11.Location = new Point(4, 731);
+			//	}
+			//	else
+			//	{
+			//		if (shovta < orangeva && shovta < zelena && shovta < bila && shovta < sunia || shovta < chervona && shovta < orangeva && shovta < zelena && shovta < bila || shovta < sunia && shovta < chervona && shovta < orangeva || shovta < zelena && shovta < bila && shovta < sunia && shovta < chervona)
+			//		{
+			//			panel11.Location = new Point(4, 628);
+			//		}
+			//		else
+			//		{
+			//			if (shovta < zelena && shovta < bila && shovta < sunia || shovta < orangeva && shovta < chervona && shovta < zelena || shovta < sunia && shovta < orangeva && shovta < chervona || shovta < bila && shovta < sunia && shovta < orangeva || shovta < chervona && shovta < zelena && shovta < bila)
+			//			{
+			//				panel11.Location = new Point(4, 525);
+			//			}
+			//			else
+			//			{
+			//				if (shovta < zelena && shovta < chervona || shovta < bila && shovta < orangeva || shovta < zelena && shovta < bila || shovta < orangeva && shovta < sunia || shovta < sunia && shovta < chervona)
+			//				{
+			//					panel11.Location = new Point(4, 423);
+			//				}
+			//				else
+			//				{
+			//					if (shovta < sunia || shovta < chervona || shovta < bila || shovta < orangeva || shovta < zelena)
+			//					{
+			//						panel11.Location = new Point(4, 321);
+
+			//					}
+			//					else
+			//					{
+			//						if (shovta > sunia && shovta > bila && shovta > zelena && shovta > orangeva && shovta > chervona)
+			//						{
+			//							panel11.Location = new Point(4, 219);
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+			//}
+
+
+
+
+			//if (orangeva > chervona && orangeva > shovta && orangeva > zelena && orangeva > bila && orangeva > sunia)  // оранжева
+			//{
+
+			//	if (orangeva < chervona && orangeva < shovta && orangeva < zelena && orangeva < bila && orangeva < sunia)
+			//	{
+			//		panel5.Location = new Point(4, 731);
+			//	}
+			//	else
+			//	{
+			//		if (orangeva < shovta && orangeva < zelena && orangeva < bila && orangeva < sunia || orangeva < chervona && orangeva < shovta && orangeva < zelena && orangeva < bila || orangeva < sunia && orangeva < chervona && orangeva < shovta && orangeva < zelena || orangeva < bila && orangeva < sunia && orangeva < chervona && orangeva < shovta || orangeva < zelena && orangeva < bila && orangeva < sunia && orangeva < shovta)
+			//		{
+			//			panel5.Location = new Point(4, 628);
+
+			//		}
+			//		else
+			//		{
+			//			if (orangeva < zelena && orangeva < bila && orangeva < sunia || orangeva < shovta && orangeva < chervona && orangeva < zelena || orangeva < sunia && orangeva < shovta && orangeva < chervona || orangeva < bila && orangeva < sunia && orangeva < shovta || orangeva < chervona && orangeva < zelena && orangeva < bila)
+			//			{
+			//				panel5.Location = new Point(4, 525);
+			//			}
+			//			else
+			//			{
+			//				if (orangeva < chervona && orangeva < zelena || orangeva < bila && orangeva < shovta || orangeva < zelena && orangeva < bila || orangeva < shovta && orangeva < sunia || orangeva < sunia && orangeva < chervona)
+			//				{
+			//					panel5.Location = new Point(4, 423);
+			//				}
+			//				else
+			//				{
+			//					if (orangeva < sunia || orangeva < chervona || orangeva < bila && orangeva < shovta || orangeva < zelena)
+			//					{
+			//						panel5.Location = new Point(4, 321);
+
+			//					}
+			//					else
+			//					{
+			//						if (orangeva > chervona && orangeva > shovta && orangeva > zelena && orangeva > bila && orangeva > sunia)
+			//						{
+			//							panel5.Location = new Point(4, 219);
+			//						}
+			//					}
+			//				}
+			//			}
+			//		}
+			//	}
+
+			//}
 
 
 
@@ -4098,7 +4107,7 @@ namespace zase4kak
 			}
 		}
 
-		
+
 
 		private void button4_Click(object sender, EventArgs e)
 		{
@@ -4190,7 +4199,7 @@ namespace zase4kak
 		{
 			label13.Visible = true;
 			label13.Text = "Тренування!";
-			serialPort1.BaudRate = 9600;
+			//serialPort1.BaudRate = 9600;
 			serialPort1.PortName = comboBox1.Text;
 			button5.Visible = false;
 			comboBox1.Visible = false;
@@ -4211,8 +4220,15 @@ namespace zase4kak
 			label60.Visible = false;
 			label61.Visible = false;
 			label62.Visible = false;
-
-
+			label75.Visible = false;
+			label104.Visible = false;
+			label124.Visible = false;
+			label54.Visible = false;
+			label57.Visible =false;
+			label58.Visible = false;
+			label118.Visible = false;
+			label120.Visible = false;
+			label122.Visible = false;
 
 			textBox1.Location = new Point(92, -13);
 			textBox1.Size = new Size(301, 151);
@@ -4226,50 +4242,70 @@ namespace zase4kak
 			label24.Location = new Point(88, -6);
 			label23.Location = new Point(88, -6);
 			label25.Location = new Point(88, -10);
-			textBox2.Location = new Point(431, 12);
-			textBox2.Size = new Size(1083, 104);
-			textBox5.Location = new Point(431, 12);
-			textBox5.Size = new Size(1083, 104);
-			textBox8.Location = new Point(431, 12);
-			textBox8.Size = new Size(1083, 104);
-			textBox11.Location = new Point(431, 12);
-			textBox11.Size = new Size(1083, 104);
+			textBox2.Location = new Point(431, 7);
+			textBox2.Size = new Size(1083, 80);
+			textBox5.Location = new Point(431, 7);
+			textBox5.Size = new Size(1083, 80);
+			textBox8.Location = new Point(431, 7);
+			textBox8.Size = new Size(1083, 80);
+			textBox11.Location = new Point(431, 7);
+			textBox11.Size = new Size(1083, 80);
 			label7.Text = "Круги";
 			label5.Visible = false;
 			label9.Location = new Point(878, 8);
 			label22.Location = new Point(431, 34);
 			label19.Location = new Point(610, 34);
-			label20.Location = new Point(803, 37);
+			label20.Location = new Point(803, 34);
 			label76.Visible = true;
 			label77.Visible = true;
 			label78.Visible = true;
 			label30.Location = new Point(431, 33);
 			label32.Location = new Point(610, 33);
-			label31.Location = new Point(803, 36);
+			label31.Location = new Point(803, 33);
 			label79.Visible = true;
 			label80.Visible = true;
 			label81.Visible = true;
 			label34.Location = new Point(431, 35);
 			label36.Location = new Point(610, 35);
-			label35.Location = new Point(803, 38);
+			label35.Location = new Point(803, 35);
 			label82.Visible = true;
 			label83.Visible = true;
 			label84.Visible = true;
 			label39.Location = new Point(431, 34);
 			label41.Location = new Point(610, 34);
-			label40.Location = new Point(803, 37);
+			label40.Location = new Point(803, 34);
 			label87.Visible = true;
 			label86.Visible = true;
 			label85.Visible = true;
 			button17.Visible = true;
 			timer18.Enabled = false;
-			textBox3.Size = new Size(223, 104);
-			textBox4.Size = new Size(223, 104);
-			textBox7.Size = new Size(223, 104);
-			textBox10.Size = new Size(223, 104);
+			textBox3.Size = new Size(223, 80);
+			textBox4.Size = new Size(223, 80);
+			textBox7.Size = new Size(223, 80);
+			textBox10.Size = new Size(223, 80);
+			textBox31.Location = new Point(92, -2);
+			textBox35.Location = new Point(92, -2);
+			textBox31.Size = new Size(301, 151);
+			textBox35.Size = new Size(301, 151);
+			label97.Location = new Point(88, -11);
+			label112.Location = new Point(88, -11);
+			textBox30.Location = new Point(431, 7);
+			textBox30.Size = new Size(1083, 80);
+			textBox34.Location = new Point(431, 7);
+			textBox34.Size = new Size(1083, 80);
+			label74.Location = new Point(431, 26);
+			label72.Location = new Point(610, 26);
+			label94.Location = new Point(803, 26);
+			label93.Visible = true;
+			label11.Visible = true;
+			label96.Visible = true;
+			label103.Location = new Point(431, 26);
+			label101.Location = new Point(610, 26);
+			label100.Location = new Point(803, 26);
+			label108.Visible = true;
+			label111.Visible = true;
+			label109.Visible = true;
 
-
-			
 
 
 
@@ -4367,7 +4403,7 @@ namespace zase4kak
 
 
 			{
-				
+
 				label55.Visible = true;
 				label59.Visible = true;
 				label60.Visible = true;
@@ -5110,7 +5146,8 @@ namespace zase4kak
 			//				label72.Text = Convert.ToString(prognozRed);
 			//			}
 			//			break;
-			//		case 10:
+			//		
+
 			//			{
 			//				double red_result;
 			//				int timetoprognoz, prognozRed;
@@ -5760,12 +5797,12 @@ namespace zase4kak
 		{
 
 			serialPort1.WriteLine("3");
-			
+
 
 			//if (serialPort1.IsOpen == true)
 			//{
 			//	serialPort1.Close();
-		//	}
+			//	}
 
 
 			label69.Text = "Трек виключений";
@@ -6041,837 +6078,238 @@ namespace zase4kak
 
 		private void timer13_Tick(object sender, EventArgs e)
 		{
-			int bila, chervona, zelena, orangeva, sunia, shovta;
-
-			chervona = Convert.ToInt32(label17.Text);
-			bila = Convert.ToInt32(label24.Text);
-			zelena = Convert.ToInt32(label23.Text);
-			orangeva = Convert.ToInt32(label25.Text);
-			sunia = Convert.ToInt32(label97.Text);
-			shovta = Convert.ToInt32(label112.Text);
-
-			c++;                                            //добавляю кола 1 доріці
-			label24.Text = Convert.ToString(c);
-
-
-			// алгоритм прогнозу
-			if (label15.Text == "1/6")
+			if (Convert.ToDouble(label29.Text) > delay)
 			{
-				double masuv, kola, seredniychas, prognoz;
-				kola = Convert.ToDouble(label29.Text);
-				masuv = Convert.ToDouble(label56.Text);
-				seredniychas2 = Convert.ToDouble(label57.Text);
-				kola = (kola + masuv);
-				label56.Text = Convert.ToString(kola);
-				seredniychas2 = kola / Convert.ToDouble(label24.Text);
+				int bila, chervona, zelena, orangeva, sunia, shovta;
 
-            }
-            else
-            {
-				if (label15.Text == "2/6")
+				chervona = Convert.ToInt32(label17.Text);
+				bila = Convert.ToInt32(label24.Text);
+				zelena = Convert.ToInt32(label23.Text);
+				orangeva = Convert.ToInt32(label25.Text);
+				sunia = Convert.ToInt32(label97.Text);
+				shovta = Convert.ToInt32(label112.Text);
+
+				c++;                                            //добавляю кола 1 доріці
+				label24.Text = Convert.ToString(c);
+
+
+				// алгоритм прогнозу
+				if (label15.Text == "1/6")
 				{
 					double masuv, kola, seredniychas, prognoz;
 					kola = Convert.ToDouble(label29.Text);
 					masuv = Convert.ToDouble(label56.Text);
-					seredniychas5 = Convert.ToDouble(label57.Text);
+					seredniychas2 = Convert.ToDouble(label57.Text);
 					kola = (kola + masuv);
 					label56.Text = Convert.ToString(kola);
-					seredniychas5 = kola / Convert.ToDouble(label24.Text);
+					seredniychas2 = kola / Convert.ToDouble(label24.Text);
 
-                }
-                else
-                {
-					if (label15.Text == "3/6")
+				}
+				else
+				{
+					if (label15.Text == "2/6")
 					{
 						double masuv, kola, seredniychas, prognoz;
 						kola = Convert.ToDouble(label29.Text);
 						masuv = Convert.ToDouble(label56.Text);
-						seredniychas3 = Convert.ToDouble(label57.Text);
+						seredniychas5 = Convert.ToDouble(label57.Text);
 						kola = (kola + masuv);
 						label56.Text = Convert.ToString(kola);
-						seredniychas3 = kola / Convert.ToDouble(label24.Text);
+						seredniychas5 = kola / Convert.ToDouble(label24.Text);
 
-                    }
-                    else
-                    {
-						if (label15.Text == "4/6")
+					}
+					else
+					{
+						if (label15.Text == "3/6")
 						{
 							double masuv, kola, seredniychas, prognoz;
 							kola = Convert.ToDouble(label29.Text);
 							masuv = Convert.ToDouble(label56.Text);
-							seredniychas1 = Convert.ToDouble(label57.Text);
+							seredniychas3 = Convert.ToDouble(label57.Text);
 							kola = (kola + masuv);
 							label56.Text = Convert.ToString(kola);
-							seredniychas1 = kola / Convert.ToDouble(label24.Text);
+							seredniychas3 = kola / Convert.ToDouble(label24.Text);
 
-                        }
-                        else
-                        {
-							if (label15.Text == "5/6")
+						}
+						else
+						{
+							if (label15.Text == "4/6")
 							{
 								double masuv, kola, seredniychas, prognoz;
 								kola = Convert.ToDouble(label29.Text);
 								masuv = Convert.ToDouble(label56.Text);
-								seredniychas6 = Convert.ToDouble(label57.Text);
+								seredniychas1 = Convert.ToDouble(label57.Text);
 								kola = (kola + masuv);
 								label56.Text = Convert.ToString(kola);
-								seredniychas6 = kola / Convert.ToDouble(label24.Text);
+								seredniychas1 = kola / Convert.ToDouble(label24.Text);
 
-                            }
-                            else
-                            {
-								if (label15.Text == "6/6")
+							}
+							else
+							{
+								if (label15.Text == "5/6")
 								{
 									double masuv, kola, seredniychas, prognoz;
 									kola = Convert.ToDouble(label29.Text);
 									masuv = Convert.ToDouble(label56.Text);
-									seredniychas4 = Convert.ToDouble(label57.Text);
+									seredniychas6 = Convert.ToDouble(label57.Text);
 									kola = (kola + masuv);
 									label56.Text = Convert.ToString(kola);
-									seredniychas4 = kola / Convert.ToDouble(label24.Text);
+									seredniychas6 = kola / Convert.ToDouble(label24.Text);
 
 								}
-							}
-						}
-					}
-				}
-			}
-			// сортування по результату
-			dataGridView3.Rows.Add(label17.Text + "," + 6);
-			dataGridView3.Rows.Add(label24.Text + "," + 5);
-			dataGridView3.Rows.Add(label23.Text + "," + 4);
-			dataGridView3.Rows.Add(label25.Text + "," + 3);
-			dataGridView3.Rows.Add(label97.Text + "," + 2);
-			dataGridView3.Rows.Add(label112.Text + "," + 1);
-
-			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
-
-
-
-			// підсвітка під час кола
-			textBox6.BackColor = Color.LawnGreen;
-			label24.BackColor = Color.LawnGreen;
-			timer36.Enabled = true;
-
-
-
-
-
-			//червона
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel1.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel1.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel1.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel1.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel1.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								else
 								{
+									if (label15.Text == "6/6")
+									{
+										double masuv, kola, seredniychas, prognoz;
+										kola = Convert.ToDouble(label29.Text);
+										masuv = Convert.ToDouble(label56.Text);
+										seredniychas4 = Convert.ToDouble(label57.Text);
+										kola = (kola + masuv);
+										label56.Text = Convert.ToString(kola);
+										seredniychas4 = kola / Convert.ToDouble(label24.Text);
 
-									panel1.Location = new Point(4, 731);
+									}
 								}
 							}
 						}
 					}
 				}
 
-			}
+
+				// підсвітка під час кола
+				textBox6.BackColor = Color.LawnGreen;
+				label24.BackColor = Color.LawnGreen;
+				timer36.Enabled = true;
 
 
 
-			// біла
 
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel3.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+
+
+
+
+
+				// для сортування позиції гонщика
+				if (Convert.ToDouble(label30.Text) < 1)         //обмеження по часу кола 1 секунда
 				{
-
-					panel3.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel3.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel3.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel3.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel3.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
+					c--;
+					label24.Text = Convert.ToString(c);
 				}
 
+				timer13.Enabled = false;
 			}
-
-			// зелена
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel4.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel4.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel4.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel4.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel4.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel4.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-			//оранжева 
-
-
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel5.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel5.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel5.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel5.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel5.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel5.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-			//синя
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-			{
-				panel10.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel10.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel10.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel10.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel10.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel10.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-
-			//жовта
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-			{
-				panel11.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-				{
-
-					panel11.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-					{
-
-						panel11.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-						{
-
-							panel11.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-							{
-
-								panel11.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-								{
-
-									panel11.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-			timer34.Enabled = true;
-
-
-
-			// для сортування позиції гонщика
-			if (Convert.ToDouble(label30.Text) < 1)         //обмеження по часу кола 1 секунда
-			{
-				c--;
-				label24.Text = Convert.ToString(c);
-			}
-
-			timer13.Enabled = false;
 		}
 
 		private void timer14_Tick(object sender, EventArgs e)
 		{
-
-			d++;                                            //добавляю кола 4 доріці
-			label25.Text = Convert.ToString(d);
-
-			// алгоритм прогнозу
-
-			if (label15.Text == "1/6")
+			if (Convert.ToDouble(label38.Text) > delay)
 			{
-				double masuv, kola, seredniychas, prognoz;
-				kola = Convert.ToDouble(label38.Text);
-				masuv = Convert.ToDouble(label119.Text);
-				seredniychas4 = Convert.ToDouble(label118.Text);
-				kola = (kola + masuv);
-				label119.Text = Convert.ToString(kola);
-				seredniychas4 = kola / Convert.ToDouble(label25.Text);
-            }
-            else
-            {
-				if (label15.Text == "2/6")
+				d++;                                            //добавляю кола 4 доріці
+				label25.Text = Convert.ToString(d);
+
+				// алгоритм прогнозу
+
+				if (label15.Text == "1/6")
 				{
 					double masuv, kola, seredniychas, prognoz;
 					kola = Convert.ToDouble(label38.Text);
 					masuv = Convert.ToDouble(label119.Text);
-					seredniychas2 = Convert.ToDouble(label118.Text);
+					seredniychas4 = Convert.ToDouble(label118.Text);
 					kola = (kola + masuv);
 					label119.Text = Convert.ToString(kola);
-					seredniychas2 = kola / Convert.ToDouble(label25.Text);
-                }
-                else
-                {
-					if (label15.Text == "3/6")
+					seredniychas4 = kola / Convert.ToDouble(label25.Text);
+				}
+				else
+				{
+					if (label15.Text == "2/6")
 					{
 						double masuv, kola, seredniychas, prognoz;
 						kola = Convert.ToDouble(label38.Text);
 						masuv = Convert.ToDouble(label119.Text);
-						seredniychas5 = Convert.ToDouble(label118.Text);
+						seredniychas2 = Convert.ToDouble(label118.Text);
 						kola = (kola + masuv);
 						label119.Text = Convert.ToString(kola);
-						seredniychas5 = kola / Convert.ToDouble(label25.Text);
-                    }
-                    else
-                    {
-						if (label15.Text == "4/6")
+						seredniychas2 = kola / Convert.ToDouble(label25.Text);
+					}
+					else
+					{
+						if (label15.Text == "3/6")
 						{
 							double masuv, kola, seredniychas, prognoz;
 							kola = Convert.ToDouble(label38.Text);
 							masuv = Convert.ToDouble(label119.Text);
-							seredniychas3 = Convert.ToDouble(label118.Text);
+							seredniychas5 = Convert.ToDouble(label118.Text);
 							kola = (kola + masuv);
 							label119.Text = Convert.ToString(kola);
-							seredniychas3 = kola / Convert.ToDouble(label25.Text);
-                        }
-                        else
-                        {
-							if (label15.Text == "5/6")
+							seredniychas5 = kola / Convert.ToDouble(label25.Text);
+						}
+						else
+						{
+							if (label15.Text == "4/6")
 							{
 								double masuv, kola, seredniychas, prognoz;
 								kola = Convert.ToDouble(label38.Text);
 								masuv = Convert.ToDouble(label119.Text);
-								seredniychas1 = Convert.ToDouble(label118.Text);
+								seredniychas3 = Convert.ToDouble(label118.Text);
 								kola = (kola + masuv);
 								label119.Text = Convert.ToString(kola);
-								seredniychas1 = kola / Convert.ToDouble(label25.Text);
-                            }
-                            else
-                            {
-								if (label15.Text == "6/6")
+								seredniychas3 = kola / Convert.ToDouble(label25.Text);
+							}
+							else
+							{
+								if (label15.Text == "5/6")
 								{
 									double masuv, kola, seredniychas, prognoz;
 									kola = Convert.ToDouble(label38.Text);
 									masuv = Convert.ToDouble(label119.Text);
-									seredniychas6 = Convert.ToDouble(label118.Text);
+									seredniychas1 = Convert.ToDouble(label118.Text);
 									kola = (kola + masuv);
 									label119.Text = Convert.ToString(kola);
-									seredniychas6 = kola / Convert.ToDouble(label25.Text);
+									seredniychas1 = kola / Convert.ToDouble(label25.Text);
 								}
-							}
-						}
-					}
-				}
-			}
-
-			// сортування по результату
-			dataGridView3.Rows.Add(label17.Text + "," + 6);
-			dataGridView3.Rows.Add(label24.Text + "," + 5);
-			dataGridView3.Rows.Add(label23.Text + "," + 4);
-			dataGridView3.Rows.Add(label25.Text + "," + 3);
-			dataGridView3.Rows.Add(label97.Text + "," + 2);
-			dataGridView3.Rows.Add(label112.Text + "," + 1);
-
-			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
-
-
-
-
-			// підсвітка під час кола
-			textBox12.BackColor = Color.LawnGreen;
-			label25.BackColor = Color.LawnGreen;
-			timer38.Enabled = true;
-
-
-
-
-
-			//червона
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel1.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel1.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel1.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel1.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel1.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								else
 								{
-
-									panel1.Location = new Point(4, 731);
+									if (label15.Text == "6/6")
+									{
+										double masuv, kola, seredniychas, prognoz;
+										kola = Convert.ToDouble(label38.Text);
+										masuv = Convert.ToDouble(label119.Text);
+										seredniychas6 = Convert.ToDouble(label118.Text);
+										kola = (kola + masuv);
+										label119.Text = Convert.ToString(kola);
+										seredniychas6 = kola / Convert.ToDouble(label25.Text);
+									}
 								}
 							}
 						}
 					}
 				}
 
-			}
 
 
 
-			// біла
 
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel3.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+				// підсвітка під час кола
+				textBox12.BackColor = Color.LawnGreen;
+				label25.BackColor = Color.LawnGreen;
+				timer38.Enabled = true;
+
+
+
+
+
+
+
+				if (Convert.ToDouble(label39.Text) < 1)         //обмеження по часу кола 1 секунда
 				{
-
-					panel3.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel3.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel3.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel3.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel3.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
+					d--;
+					label25.Text = Convert.ToString(d);
 				}
 
+				timer14.Enabled = false;
 			}
-
-			// зелена
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel4.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel4.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel4.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel4.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel4.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel4.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-			//оранжева 
-
-
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel5.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel5.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel5.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel5.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel5.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel5.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-			//синя
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-			{
-				panel10.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel10.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel10.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel10.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel10.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel10.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-
-			//жовта
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-			{
-				panel11.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-				{
-
-					panel11.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-					{
-
-						panel11.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-						{
-
-							panel11.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-							{
-
-								panel11.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-								{
-
-									panel11.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-			timer34.Enabled = true;
-
-			if (Convert.ToDouble(label39.Text) < 1)         //обмеження по часу кола 1 секунда
-			{
-				d--;
-				label25.Text = Convert.ToString(d);
-			}
-
-			timer14.Enabled = false;
 		}
-
 		private void timer21_Tick(object sender, EventArgs e)
 		{
 
@@ -7058,17 +6496,17 @@ namespace zase4kak
 
 				dataGridView1.Visible = true;
 
-				dataGridView1.Rows.Add("Червона", label45.Text, label17.Text + "," + textBox20.Text);
+				dataGridView1.Rows.Add(label45.Text, label17.Text + "," + textBox20.Text);
 
-				dataGridView1.Rows.Add("Біла", label46.Text, label24.Text + "," + textBox22.Text);
+				dataGridView1.Rows.Add(label46.Text, label24.Text + "," + textBox22.Text);
 
-				dataGridView1.Rows.Add("Зелена", label47.Text, label23.Text + "," + textBox21.Text);
+				dataGridView1.Rows.Add(label47.Text, label23.Text + "," + textBox21.Text);
 
-				dataGridView1.Rows.Add("Оранжева", label48.Text, label25.Text + "," + textBox23.Text);
+				dataGridView1.Rows.Add(label48.Text, label25.Text + "," + textBox23.Text);
 
-				dataGridView1.Rows.Add("Синя", label115.Text, label97.Text + "," + textBox36.Text);
+				dataGridView1.Rows.Add(label115.Text, label97.Text + "," + textBox36.Text);
 
-				dataGridView1.Rows.Add("Жовта", label116.Text, label112.Text + "," + textBox37.Text);
+				dataGridView1.Rows.Add(label116.Text, label112.Text + "," + textBox37.Text);
 
 				//сортування результату гонки в таблиці
 
@@ -7089,21 +6527,21 @@ namespace zase4kak
 				dataGridView2.Visible = true;
 				button16.Visible = true;
 
-				dataGridView2.Rows.Add("Червона", label45.Text, label17.Text + "," + textBox20.Text);
+				dataGridView2.Rows.Add(label45.Text, label17.Text + "," + textBox20.Text);
 
-				dataGridView2.Rows.Add("Біла", label46.Text, label24.Text + "," + textBox22.Text);
+				dataGridView2.Rows.Add(label46.Text, label24.Text + "," + textBox22.Text);
 
-				dataGridView2.Rows.Add("Зелена", label47.Text, label23.Text + "," + textBox21.Text);
+				dataGridView2.Rows.Add(label47.Text, label23.Text + "," + textBox21.Text);
 
-				dataGridView2.Rows.Add("Оранжева", label48.Text, label25.Text + "," + textBox23.Text);
+				dataGridView2.Rows.Add(label48.Text, label25.Text + "," + textBox23.Text);
 
-				dataGridView2.Rows.Add("Синя", label115.Text, label97.Text + "," + textBox36.Text);
+				dataGridView2.Rows.Add(label115.Text, label97.Text + "," + textBox36.Text);
 
-				dataGridView2.Rows.Add("Жовта", label116.Text, label112.Text + "," + textBox37.Text);
+				dataGridView2.Rows.Add(label116.Text, label112.Text + "," + textBox37.Text);
 				//сортування результату гонки в таблиці
 
 
-				dataGridView2.Sort(dataGridView2.Columns[2], ListSortDirection.Descending);
+				dataGridView2.Sort(dataGridView2.Columns[1], ListSortDirection.Descending);
 
 				textBox20.Text = "";
 				textBox21.Text = "";
@@ -7209,6 +6647,18 @@ namespace zase4kak
 
 		private void button14_Click(object sender, EventArgs e)
 		{
+			prognoz1 = 0;
+			prognoz2 = 0;
+			prognoz3 = 0;
+			prognoz4 = 0;
+			prognoz5 = 0;
+			prognoz6 = 0;
+			seredniychas1 = 0;
+			seredniychas2 = 0;
+			seredniychas3 = 0;
+			seredniychas4 = 0;
+			seredniychas5 = 0;
+			seredniychas6 = 0;
 
 			label67.Text = "228";
 			textBox25.Text = textBox24.Text;
@@ -7223,9 +6673,9 @@ namespace zase4kak
 			button6.Visible = false;
 			button15.Focus();
 			panel1.Location = new Point(4, 219);
-			panel3.Location = new Point(4,321);
-			panel4.Location = new Point(4,423);
-			panel5.Location = new Point(4,525);
+			panel3.Location = new Point(4, 321);
+			panel4.Location = new Point(4, 423);
+			panel5.Location = new Point(4, 525);
 			panel10.Location = new Point(4, 628);
 			panel11.Location = new Point(4, 731);
 
@@ -7285,12 +6735,12 @@ namespace zase4kak
 
 
 			//задаю учасників фіналістів
-			label116.Text = dataGridView1[1, 5].Value.ToString();
-			label115.Text = dataGridView1[1, 4].Value.ToString();
-			label48.Text = dataGridView1[1, 3].Value.ToString();
-			label47.Text = dataGridView1[1, 2].Value.ToString();
-			label46.Text = dataGridView1[1, 1].Value.ToString();
-			label45.Text = dataGridView1[1, 0].Value.ToString();
+			label116.Text = dataGridView1[0, 5].Value.ToString();
+			label115.Text = dataGridView1[0, 4].Value.ToString();
+			label48.Text = dataGridView1[0, 3].Value.ToString();
+			label47.Text = dataGridView1[0, 2].Value.ToString();
+			label46.Text = dataGridView1[0, 1].Value.ToString();
+			label45.Text = dataGridView1[0, 0].Value.ToString();
 
 
 		}
@@ -7732,857 +7182,258 @@ namespace zase4kak
 			button1.Enabled = true;
 		}
 
-        private void timer28_Tick(object sender, EventArgs e)
-        {
-			v++;                                            //добавляю кола 1 доріці
-			label97.Text = Convert.ToString(v);
-
-			// алгоритм прогнозу
-
-			if (label15.Text == "1/6")
+		private void timer28_Tick(object sender, EventArgs e)
+		{
+			if (Convert.ToDouble(label99.Text) > delay)
 			{
+				v++;                                            //добавляю кола 1 доріці
+				label97.Text = Convert.ToString(v);
 
+				// алгоритм прогнозу
 
-				double masuv, kola, seredniychas, prognoz;
-				kola = Convert.ToDouble(label99.Text);
-				masuv = Convert.ToDouble(label121.Text);
-				seredniychas5 = Convert.ToDouble(label120.Text);
-				kola = (kola + masuv);
-				label121.Text = Convert.ToString(kola);
-				seredniychas5 = kola / Convert.ToDouble(label97.Text);
-            }
-            else
-            {
-				if (label15.Text == "2/6")
+				if (label15.Text == "1/6")
 				{
 
 
 					double masuv, kola, seredniychas, prognoz;
 					kola = Convert.ToDouble(label99.Text);
 					masuv = Convert.ToDouble(label121.Text);
-					seredniychas3 = Convert.ToDouble(label120.Text);
+					seredniychas5 = Convert.ToDouble(label120.Text);
 					kola = (kola + masuv);
 					label121.Text = Convert.ToString(kola);
-					seredniychas3 = kola / Convert.ToDouble(label97.Text);
-                }
-                else
-                {
-					if (label15.Text == "3/6")
+					seredniychas5 = kola / Convert.ToDouble(label97.Text);
+				}
+				else
+				{
+					if (label15.Text == "2/6")
 					{
 
 
 						double masuv, kola, seredniychas, prognoz;
 						kola = Convert.ToDouble(label99.Text);
 						masuv = Convert.ToDouble(label121.Text);
-						seredniychas1 = Convert.ToDouble(label120.Text);
+						seredniychas3 = Convert.ToDouble(label120.Text);
 						kola = (kola + masuv);
 						label121.Text = Convert.ToString(kola);
-						seredniychas1 = kola / Convert.ToDouble(label97.Text);
-                    }
-                    else
-                    {
-						if (label15.Text == "4/6")
+						seredniychas3 = kola / Convert.ToDouble(label97.Text);
+					}
+					else
+					{
+						if (label15.Text == "3/6")
 						{
 
 
 							double masuv, kola, seredniychas, prognoz;
 							kola = Convert.ToDouble(label99.Text);
 							masuv = Convert.ToDouble(label121.Text);
-							seredniychas6 = Convert.ToDouble(label120.Text);
+							seredniychas1 = Convert.ToDouble(label120.Text);
 							kola = (kola + masuv);
 							label121.Text = Convert.ToString(kola);
-							seredniychas6 = kola / Convert.ToDouble(label97.Text);
-                        }
-                        else
-                        {
-							if (label15.Text == "5/6")
+							seredniychas1 = kola / Convert.ToDouble(label97.Text);
+						}
+						else
+						{
+							if (label15.Text == "4/6")
 							{
 
 
 								double masuv, kola, seredniychas, prognoz;
 								kola = Convert.ToDouble(label99.Text);
 								masuv = Convert.ToDouble(label121.Text);
-								seredniychas4 = Convert.ToDouble(label120.Text);
+								seredniychas6 = Convert.ToDouble(label120.Text);
 								kola = (kola + masuv);
 								label121.Text = Convert.ToString(kola);
-								seredniychas4 = kola / Convert.ToDouble(label97.Text);
-                            }
-                            else
-                            {
-								if (label15.Text == "6/6")
+								seredniychas6 = kola / Convert.ToDouble(label97.Text);
+							}
+							else
+							{
+								if (label15.Text == "5/6")
 								{
 
 
 									double masuv, kola, seredniychas, prognoz;
 									kola = Convert.ToDouble(label99.Text);
 									masuv = Convert.ToDouble(label121.Text);
-									seredniychas2 = Convert.ToDouble(label120.Text);
+									seredniychas4 = Convert.ToDouble(label120.Text);
 									kola = (kola + masuv);
 									label121.Text = Convert.ToString(kola);
-									seredniychas2 = kola / Convert.ToDouble(label97.Text);
+									seredniychas4 = kola / Convert.ToDouble(label97.Text);
 								}
-							}
-						}
-					}
-				}
-			}
-
-			// сортування по результату
-			dataGridView3.Rows.Add(label17.Text + "," + 6);
-			dataGridView3.Rows.Add(label24.Text + "," + 5);
-			dataGridView3.Rows.Add(label23.Text + "," + 4);
-			dataGridView3.Rows.Add(label25.Text + "," + 3);
-			dataGridView3.Rows.Add(label97.Text + "," + 2);
-			dataGridView3.Rows.Add(label112.Text + "," + 1);
-
-			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
-
-
-
-
-
-			// підсвітка під час кола
-			textBox31.BackColor = Color.LawnGreen;
-			label97.BackColor = Color.LawnGreen;
-			timer39.Enabled = true;
-
-
-
-
-			//червона
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel1.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel1.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel1.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel1.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel1.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								else
 								{
+									if (label15.Text == "6/6")
+									{
 
-									panel1.Location = new Point(4, 731);
+
+										double masuv, kola, seredniychas, prognoz;
+										kola = Convert.ToDouble(label99.Text);
+										masuv = Convert.ToDouble(label121.Text);
+										seredniychas2 = Convert.ToDouble(label120.Text);
+										kola = (kola + masuv);
+										label121.Text = Convert.ToString(kola);
+										seredniychas2 = kola / Convert.ToDouble(label97.Text);
+									}
 								}
 							}
 						}
 					}
 				}
 
-			}
 
 
 
-			// біла
 
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel3.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+
+				// підсвітка під час кола
+				textBox31.BackColor = Color.LawnGreen;
+				label97.BackColor = Color.LawnGreen;
+				timer39.Enabled = true;
+
+
+
+
+				if (Convert.ToDouble(label74.Text) < 1)         //обмеження по часу кола 1 секунда
 				{
-
-					panel3.Location = new Point(4, 321);
+					v--;
+					label97.Text = Convert.ToString(v);
 				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel3.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel3.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel3.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel3.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
+				//textBox15.Text = "0";
+				timer28.Enabled = false;
 			}
-
-			// зелена
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel4.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel4.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel4.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel4.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel4.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel4.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-			//оранжева 
-
-
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel5.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel5.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel5.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel5.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel5.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel5.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-			//синя
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-			{
-				panel10.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel10.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel10.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel10.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel10.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel10.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-
-			//жовта
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-			{
-				panel11.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-				{
-
-					panel11.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-					{
-
-						panel11.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-						{
-
-							panel11.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-							{
-
-								panel11.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-								{
-
-									panel11.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-			timer34.Enabled = true;
-			if (Convert.ToDouble(label74.Text) < 1)         //обмеження по часу кола 1 секунда
-			{
-				v--;
-				label97.Text = Convert.ToString(v);
-			}
-			//textBox15.Text = "0";
-			timer28.Enabled = false;
 		}
 
-        private void timer29_Tick(object sender, EventArgs e)
-        {
-			l++;                                            //добавляю кола 1 доріці
-			label112.Text = Convert.ToString(l);
-
-
-
-			// алгоритм прогнозу
-			if (label15.Text == "1/6")
+		private void timer29_Tick(object sender, EventArgs e)
+		{
+			if (Convert.ToDouble(label114.Text) > delay)
 			{
+				l++;                                            //добавляю кола 1 доріці
+				label112.Text = Convert.ToString(l);
 
 
-				double masuv, kola, seredniychas, prognoz;
-				kola = Convert.ToDouble(label114.Text);
-				masuv = Convert.ToDouble(label123.Text);
-				seredniychas6 = Convert.ToDouble(label122.Text);
-				kola = (kola + masuv);
-				label123.Text = Convert.ToString(kola);
-				seredniychas6 = kola / Convert.ToDouble(label112.Text);
 
-            }
-            else
-            {
-				if (label15.Text == "2/6")
+				// алгоритм прогнозу
+				if (label15.Text == "1/6")
 				{
 
 
 					double masuv, kola, seredniychas, prognoz;
 					kola = Convert.ToDouble(label114.Text);
 					masuv = Convert.ToDouble(label123.Text);
-					seredniychas4 = Convert.ToDouble(label122.Text);
+					seredniychas6 = Convert.ToDouble(label122.Text);
 					kola = (kola + masuv);
 					label123.Text = Convert.ToString(kola);
-					seredniychas4 = kola / Convert.ToDouble(label112.Text);
+					seredniychas6 = kola / Convert.ToDouble(label112.Text);
 
-                }
-                else
-                {
-					if (label15.Text == "3/6")
+				}
+				else
+				{
+					if (label15.Text == "2/6")
 					{
 
 
 						double masuv, kola, seredniychas, prognoz;
 						kola = Convert.ToDouble(label114.Text);
 						masuv = Convert.ToDouble(label123.Text);
-						seredniychas2 = Convert.ToDouble(label122.Text);
+						seredniychas4 = Convert.ToDouble(label122.Text);
 						kola = (kola + masuv);
 						label123.Text = Convert.ToString(kola);
-						seredniychas2 = kola / Convert.ToDouble(label112.Text);
+						seredniychas4 = kola / Convert.ToDouble(label112.Text);
 
-                    }
-                    else
-                    {
-						if (label15.Text == "4/6")
+					}
+					else
+					{
+						if (label15.Text == "3/6")
 						{
 
 
 							double masuv, kola, seredniychas, prognoz;
 							kola = Convert.ToDouble(label114.Text);
 							masuv = Convert.ToDouble(label123.Text);
-							seredniychas5 = Convert.ToDouble(label122.Text);
+							seredniychas2 = Convert.ToDouble(label122.Text);
 							kola = (kola + masuv);
 							label123.Text = Convert.ToString(kola);
-							seredniychas5 = kola / Convert.ToDouble(label112.Text);
+							seredniychas2 = kola / Convert.ToDouble(label112.Text);
 
-                        }
-                        else
-                        {
-							if (label15.Text == "5/6")
+						}
+						else
+						{
+							if (label15.Text == "4/6")
 							{
 
 
 								double masuv, kola, seredniychas, prognoz;
 								kola = Convert.ToDouble(label114.Text);
 								masuv = Convert.ToDouble(label123.Text);
-								seredniychas3 = Convert.ToDouble(label122.Text);
+								seredniychas5 = Convert.ToDouble(label122.Text);
 								kola = (kola + masuv);
 								label123.Text = Convert.ToString(kola);
-								seredniychas3 = kola / Convert.ToDouble(label112.Text);
+								seredniychas5 = kola / Convert.ToDouble(label112.Text);
 
-                            }
-                            else
-                            {
-								if (label15.Text == "6/6")
+							}
+							else
+							{
+								if (label15.Text == "5/6")
 								{
 
 
 									double masuv, kola, seredniychas, prognoz;
 									kola = Convert.ToDouble(label114.Text);
 									masuv = Convert.ToDouble(label123.Text);
-									seredniychas1 = Convert.ToDouble(label122.Text);
+									seredniychas3 = Convert.ToDouble(label122.Text);
 									kola = (kola + masuv);
 									label123.Text = Convert.ToString(kola);
-									seredniychas1 = kola / Convert.ToDouble(label112.Text);
+									seredniychas3 = kola / Convert.ToDouble(label112.Text);
 
 								}
-							}
-						}
-					}
-				}
-			}
-
-			// сортування по результату
-			dataGridView3.Rows.Add(label17.Text + "," + 6);
-			dataGridView3.Rows.Add(label24.Text + "," + 5);
-			dataGridView3.Rows.Add(label23.Text + "," + 4);
-			dataGridView3.Rows.Add(label25.Text + "," + 3);
-			dataGridView3.Rows.Add(label97.Text + "," + 2);
-			dataGridView3.Rows.Add(label112.Text + "," + 1);
-
-			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
-
-
-
-
-
-			// підсвітка під час кола
-			textBox35.BackColor = Color.LawnGreen;
-			label112.BackColor = Color.LawnGreen;
-			timer40.Enabled = true;
-
-
-
-
-			//червона
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel1.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel1.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel1.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel1.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel1.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								else
 								{
+									if (label15.Text == "6/6")
+									{
 
-									panel1.Location = new Point(4, 731);
+
+										double masuv, kola, seredniychas, prognoz;
+										kola = Convert.ToDouble(label114.Text);
+										masuv = Convert.ToDouble(label123.Text);
+										seredniychas1 = Convert.ToDouble(label122.Text);
+										kola = (kola + masuv);
+										label123.Text = Convert.ToString(kola);
+										seredniychas1 = kola / Convert.ToDouble(label112.Text);
+
+									}
 								}
 							}
 						}
 					}
 				}
 
-			}
 
 
 
-			// біла
 
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel3.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+				// підсвітка під час кола
+				textBox35.BackColor = Color.LawnGreen;
+				label112.BackColor = Color.LawnGreen;
+				timer40.Enabled = true;
+
+
+
+
+
+
+				if (Convert.ToDouble(label103.Text) < 1)         //обмеження по часу кола 1 секунда
 				{
-
-					panel3.Location = new Point(4, 321);
+					l--;
+					label112.Text = Convert.ToString(l);
 				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel3.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel3.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel3.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel3.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
+				//textBox15.Text = "0";
+				timer29.Enabled = false;
 			}
-
-			// зелена
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel4.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel4.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel4.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel4.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel4.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel4.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-			//оранжева 
-
-
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel5.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel5.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel5.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel5.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel5.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel5.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-			//синя
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-			{
-				panel10.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel10.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel10.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel10.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel10.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel10.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-
-			//жовта
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-			{
-				panel11.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-				{
-
-					panel11.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-					{
-
-						panel11.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-						{
-
-							panel11.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-							{
-
-								panel11.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-								{
-
-									panel11.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-			timer34.Enabled = true;
-
-
-			if (Convert.ToDouble(label103.Text) < 1)         //обмеження по часу кола 1 секунда
-			{
-				l--;
-				label112.Text = Convert.ToString(l);
-			}
-			//textBox15.Text = "0";
-			timer29.Enabled = false;
 		}
 
-        private void label94_Click(object sender, EventArgs e)
-        {
+		private void label94_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
 		private void timer30_Tick(object sender, EventArgs e)
 		{
@@ -8703,10 +7554,10 @@ namespace zase4kak
 					label122.Text = label134.Text;
 
 					//label8.Text = "0";
-				//	label56.Text = "0";
-				//	label117.Text = "0";
-				//	label119.Text = "0";
-				////	label121.Text = "0";
+					//	label56.Text = "0";
+					//	label117.Text = "0";
+					//	label119.Text = "0";
+					////	label121.Text = "0";
 					//label123.Text = "0";
 
 					label18.Text = "00,000";
@@ -9066,8 +7917,8 @@ namespace zase4kak
 			}
 		}
 
-        private void timer31_Tick(object sender, EventArgs e)
-        {
+		private void timer31_Tick(object sender, EventArgs e)
+		{
 			sec--;
 			label4.Text = Convert.ToString(min) + ":" + Convert.ToString(sec); //зчитую час гонки який був заданий у настройках
 
@@ -9114,7 +7965,7 @@ namespace zase4kak
 					label4.Text = "00:00";
 					label13.Text = "<<Фініш!>>";
 
-					
+
 
 					number_group.Text = "0";
 
@@ -9132,8 +7983,8 @@ namespace zase4kak
 
 		}
 
-        private void timer32_Tick(object sender, EventArgs e)
-        {
+		private void timer32_Tick(object sender, EventArgs e)
+		{
 			label4.Text = Convert.ToString(mins) + ":" + Convert.ToString(secs);
 			secs--;
 
@@ -9208,8 +8059,8 @@ namespace zase4kak
 			}
 		}
 
-        private void timer33_Tick(object sender, EventArgs e)
-        {
+		private void timer33_Tick(object sender, EventArgs e)
+		{
 			label4.Text = Convert.ToString(mins) + ":" + Convert.ToString(secs);
 			secs--;
 
@@ -9284,19 +8135,19 @@ namespace zase4kak
 			}
 		}
 
-        private void label115_Click(object sender, EventArgs e)
-        {
+		private void label115_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void label53_Click(object sender, EventArgs e)
-        {
+		private void label53_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void timer34_Tick(object sender, EventArgs e)
+		private void timer34_Tick(object sender, EventArgs e)
 
-     {
+		{
 
 
 
@@ -9304,7 +8155,7 @@ namespace zase4kak
 
 			dataGridView3.Rows.Clear();
 			timer34.Enabled = false;
-			
+
 
 
 			//listBox2.Items.Clear();
@@ -9428,7 +8279,7 @@ namespace zase4kak
 			//		}
 			//	}
 			//}
-		
+
 
 
 
@@ -9479,13 +8330,13 @@ namespace zase4kak
 			//}
 		}
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+		private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
 
-        }
+		}
 
-        private void dataGridView3_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
-        {
+		private void dataGridView3_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
+		{
 			if (double.Parse(e.CellValue1.ToString()) > double.Parse(e.CellValue2.ToString()))
 			{
 				e.SortResult = 1;
@@ -9501,8 +8352,8 @@ namespace zase4kak
 			e.Handled = true;
 		}
 
-        private void dataGridView2_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
-        {
+		private void dataGridView2_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
+		{
 			if (double.Parse(e.CellValue1.ToString()) > double.Parse(e.CellValue2.ToString()))
 			{
 				e.SortResult = 1;
@@ -9518,13 +8369,13 @@ namespace zase4kak
 			e.Handled = true;
 		}
 
-        private void dataGridView1_SortCompare_1(object sender, DataGridViewSortCompareEventArgs e)
-        {
+		private void dataGridView1_SortCompare_1(object sender, DataGridViewSortCompareEventArgs e)
+		{
 
-        }
+		}
 
-        private void dataGridView1_SortCompare_2(object sender, DataGridViewSortCompareEventArgs e)
-        {
+		private void dataGridView1_SortCompare_2(object sender, DataGridViewSortCompareEventArgs e)
+		{
 			if (double.Parse(e.CellValue1.ToString()) > double.Parse(e.CellValue2.ToString()))
 			{
 				e.SortResult = 1;
@@ -9540,50 +8391,50 @@ namespace zase4kak
 			e.Handled = true;
 		}
 
-        private void timer35_Tick(object sender, EventArgs e)
-        {
+		private void timer35_Tick(object sender, EventArgs e)
+		{
 			textBox1.BackColor = Color.WhiteSmoke;
 			label17.BackColor = Color.WhiteSmoke;
 			timer35.Enabled = false;
 		}
 
-        private void timer36_Tick(object sender, EventArgs e)
-        {
+		private void timer36_Tick(object sender, EventArgs e)
+		{
 			textBox6.BackColor = Color.WhiteSmoke;
 			label24.BackColor = Color.WhiteSmoke;
 			timer36.Enabled = false;
 		}
 
-        private void timer37_Tick(object sender, EventArgs e)
-        {
+		private void timer37_Tick(object sender, EventArgs e)
+		{
 			textBox9.BackColor = Color.WhiteSmoke;
 			label23.BackColor = Color.WhiteSmoke;
 			timer37.Enabled = false;
 		}
 
-        private void timer38_Tick(object sender, EventArgs e)
-        {
+		private void timer38_Tick(object sender, EventArgs e)
+		{
 			textBox12.BackColor = Color.WhiteSmoke;
 			label25.BackColor = Color.WhiteSmoke;
 			timer38.Enabled = false;
 		}
 
-        private void timer39_Tick(object sender, EventArgs e)
-        {
+		private void timer39_Tick(object sender, EventArgs e)
+		{
 			textBox31.BackColor = Color.WhiteSmoke;
 			label97.BackColor = Color.WhiteSmoke;
 			timer39.Enabled = false;
 		}
 
-        private void timer40_Tick(object sender, EventArgs e)
-        {
+		private void timer40_Tick(object sender, EventArgs e)
+		{
 			textBox35.BackColor = Color.WhiteSmoke;
 			label112.BackColor = Color.WhiteSmoke;
 			timer40.Enabled = false;
 		}
 
-        private void button7_KeyDown_1(object sender, KeyEventArgs e)
-        {
+		private void button7_KeyDown_1(object sender, KeyEventArgs e)
+		{
 			if (e.KeyCode == Keys.Space)
 			{
 
@@ -9594,11 +8445,11 @@ namespace zase4kak
 				start_to_pause.Play();
 				timer44.Enabled = true;
 
-				
+
 			}
 		}
 
-        private void button6_KeyDown_1(object sender, KeyEventArgs e)
+		private void button6_KeyDown_1(object sender, KeyEventArgs e)
 		{
 			if (e.KeyCode == Keys.Space)
 			{
@@ -9608,7 +8459,7 @@ namespace zase4kak
 				//if (serialPort1.IsOpen == true)
 				//{
 				//	serialPort1.Close();
-			//	}
+				//	}
 
 
 				label69.Text = "Трек виключений";
@@ -9712,91 +8563,173 @@ namespace zase4kak
 			}
 		}
 
-        private void червонаToolStripMenuItem4_Click(object sender, EventArgs e)
-        {
+		private void червонаToolStripMenuItem4_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line5_6 = panel10.BackColor = Color.Red;
 			Settings.Default.Save();
 		}
 
-        private void білаToolStripMenuItem4_Click(object sender, EventArgs e)
-        {
+		private void білаToolStripMenuItem4_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line5_6 = panel10.BackColor = Color.WhiteSmoke;
 			Settings.Default.Save();
 		}
 
-        private void оранжеваToolStripMenuItem4_Click(object sender, EventArgs e)
-        {
+		private void оранжеваToolStripMenuItem4_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line5_6 = panel10.BackColor = Color.Orange;
 			Settings.Default.Save();
 		}
 
-        private void фіолетоваToolStripMenuItem4_Click(object sender, EventArgs e)
-        {
+		private void фіолетоваToolStripMenuItem4_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line5_6 = panel10.BackColor = Color.Purple;
 			Settings.Default.Save();
 		}
 
-        private void жовтаToolStripMenuItem4_Click(object sender, EventArgs e)
-        {
+		private void жовтаToolStripMenuItem4_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line5_6 = panel10.BackColor = Color.Yellow;
 			Settings.Default.Save();
 		}
 
-        private void синяToolStripMenuItem4_Click(object sender, EventArgs e)
-        {
+		private void синяToolStripMenuItem4_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line5_6 = panel10.BackColor = Color.DodgerBlue;
 			Settings.Default.Save();
 		}
 
-        private void чорнаToolStripMenuItem4_Click(object sender, EventArgs e)
-        {
+		private void чорнаToolStripMenuItem4_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line5_6 = panel10.BackColor = Color.Black;
 			Settings.Default.Save();
 		}
 
-        private void зеленаToolStripMenuItem4_Click(object sender, EventArgs e)
-        {
+		private void зеленаToolStripMenuItem4_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line5_6 = panel10.BackColor = Color.Green;
 			Settings.Default.Save();
 		}
 
-        private void червонаToolStripMenuItem5_Click(object sender, EventArgs e)
-        {
+		private void червонаToolStripMenuItem5_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line6_6 = panel11.BackColor = Color.Red;
 			Settings.Default.Save();
 		}
 
-        private void білаToolStripMenuItem5_Click(object sender, EventArgs e)
-        {
+		private void білаToolStripMenuItem5_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line6_6 = panel11.BackColor = Color.WhiteSmoke;
 			Settings.Default.Save();
 		}
 
-        private void оранжеваToolStripMenuItem5_Click(object sender, EventArgs e)
-        {
+		private void оранжеваToolStripMenuItem5_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line6_6 = panel11.BackColor = Color.Orange;
 			Settings.Default.Save();
 		}
 
-        private void фіолетоваToolStripMenuItem5_Click(object sender, EventArgs e)
-        {
+		private void фіолетоваToolStripMenuItem5_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line6_6 = panel11.BackColor = Color.Purple;
 			Settings.Default.Save();
 		}
 
-        private void жовтаToolStripMenuItem5_Click(object sender, EventArgs e)
-        {
+		private void жовтаToolStripMenuItem5_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line6_6 = panel11.BackColor = Color.Yellow;
 			Settings.Default.Save();
 		}
 
-        private void button15_KeyPress(object sender, KeyPressEventArgs e)
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void timer44_Tick(object sender, EventArgs e)
+        private void секToolStripMenuItem_Click(object sender, EventArgs e)
         {
+			Settings.Default.delay1 = delay = 1;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.Lime;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor= Color.WhiteSmoke;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
+
+        private void секToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+			Settings.Default.delay1 = delay = 2;
+			Settings.Default.color_delay = секToolStripMenuItem1.BackColor = Color.Lime;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
+
+        private void секToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+			Settings.Default.delay1 = delay = 3;
+			Settings.Default.color_delay = секToolStripMenuItem2.BackColor = Color.Lime;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
+
+        private void секToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+			Settings.Default.delay1 = delay = 4;
+			Settings.Default.color_delay = секToolStripMenuItem3.BackColor = Color.Lime;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
+
+        private void секToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+			Settings.Default.delay1 = delay = 5;
+			Settings.Default.color_delay = секToolStripMenuItem4.BackColor = Color.Lime;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
+
+        private void секToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+			Settings.Default.delay1 = delay = 6;
+			Settings.Default.color_delay = секToolStripMenuItem5.BackColor = Color.Lime;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
+
+        private void доріжкаToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_KeyPress(object sender, KeyPressEventArgs e)
+		{
+
+		}
+
+		private void timer44_Tick(object sender, EventArgs e)
+		{
 			serialPort1.WriteLine("4");
 			label69.Text = "Трек включений";
 			label69.BackColor = Color.Green;
@@ -9894,38 +8827,361 @@ namespace zase4kak
 			timer44.Enabled = false;
 		}
 
-        private void timer42_Tick(object sender, EventArgs e)
-        {
+		private void timer42_Tick(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void синяToolStripMenuItem5_Click(object sender, EventArgs e)
-        {
+		private void timer46_Tick(object sender, EventArgs e)
+		{
+			dataGridView3.Rows.Clear();
+			timer46.Enabled = false;
+		}
+
+		private void timer45_Tick(object sender, EventArgs e)
+		{
+
+			if (label13.Text != "Тренування!")
+			{
+				// сортування по результату
+				dataGridView3.Rows.Add(label17.Text + "," + 6);
+				dataGridView3.Rows.Add(label24.Text + "," + 5);
+				dataGridView3.Rows.Add(label23.Text + "," + 4);
+				dataGridView3.Rows.Add(label25.Text + "," + 3);
+				dataGridView3.Rows.Add(label97.Text + "," + 2);
+				dataGridView3.Rows.Add(label112.Text + "," + 1);
+
+				dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+
+
+
+				//червона
+
+				if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+				{
+					panel1.Location = new Point(4, 219);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel1.Location = new Point(4, 321);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel1.Location = new Point(4, 423);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(4, 525);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(4, 628);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel1.Location = new Point(4, 731);
+									}
+								}
+							}
+						}
+					}
+
+				}
+
+
+
+				// біла
+
+				if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+				{
+					panel3.Location = new Point(4, 219);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel3.Location = new Point(4, 321);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel3.Location = new Point(4, 423);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(4, 525);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(4, 628);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel3.Location = new Point(4, 731);
+									}
+								}
+							}
+						}
+					}
+
+				}
+
+				// зелена
+
+				if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+				{
+					panel4.Location = new Point(4, 219);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel4.Location = new Point(4, 321);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel4.Location = new Point(4, 423);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(4, 525);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(4, 628);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel4.Location = new Point(4, 731);
+									}
+								}
+							}
+						}
+					}
+
+				}
+
+				//оранжева 
+
+
+
+				if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+				{
+					panel5.Location = new Point(4, 219);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel5.Location = new Point(4, 321);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel5.Location = new Point(4, 423);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(4, 525);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(4, 628);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel5.Location = new Point(4, 731);
+									}
+								}
+							}
+						}
+					}
+
+				}
+
+				//синя
+
+				if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+				{
+					panel10.Location = new Point(4, 219);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+					{
+
+						panel10.Location = new Point(4, 321);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+						{
+
+							panel10.Location = new Point(4, 423);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel10.Location = new Point(4, 525);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel10.Location = new Point(4, 628);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel10.Location = new Point(4, 731);
+									}
+								}
+							}
+						}
+					}
+
+				}
+
+
+				//жовта
+
+				if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+				{
+					panel11.Location = new Point(4, 219);
+				}
+				else
+				{
+					if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+					{
+
+						panel11.Location = new Point(4, 321);
+					}
+					else
+					{
+						if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+						{
+
+							panel11.Location = new Point(4, 423);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+							{
+
+								panel11.Location = new Point(4, 525);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+								{
+
+									panel11.Location = new Point(4, 628);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
+									{
+
+										panel11.Location = new Point(4, 731);
+									}
+								}
+							}
+						}
+					}
+
+				}
+				timer46.Enabled = true;
+			}
+			timer45.Enabled = false;
+		}
+
+		private void синяToolStripMenuItem5_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line6_6 = panel11.BackColor = Color.DodgerBlue;
 			Settings.Default.Save();
 		}
 
-        private void чорнаToolStripMenuItem5_Click(object sender, EventArgs e)
-        {
+		private void чорнаToolStripMenuItem5_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line6_6 = panel11.BackColor = Color.Black;
 			Settings.Default.Save();
 		}
 
-        private void зеленаToolStripMenuItem5_Click(object sender, EventArgs e)
-        {
+		private void зеленаToolStripMenuItem5_Click(object sender, EventArgs e)
+		{
 			Settings.Default.line6_6 = panel11.BackColor = Color.Green;
 			Settings.Default.Save();
 		}
 
-        private void доріжкаToolStripMenuItem5_Click(object sender, EventArgs e)
-        {
+		private void доріжкаToolStripMenuItem5_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void timer43_Tick(object sender, EventArgs e)
-        {
+		private void timer43_Tick(object sender, EventArgs e)
+		{
 			// алгоритм прогнозу
-			double prognoz1, prognoz2, prognoz3, prognoz4, prognoz5, prognoz6;
+			
 			if (label15.Text == "1/6")
 			{
 				prognoz1 = (Convert.ToInt32(textBox38.Text) / seredniychas1) + Convert.ToDouble(label17.Text);
@@ -9964,7 +9220,7 @@ namespace zase4kak
 					label54.Text = string.Format("{0:F2}", prognoz6);
 
 
-					prognoz5 = (Convert.ToInt32(textBox38.Text) / seredniychas5 )+ Convert.ToDouble(label24.Text);
+					prognoz5 = (Convert.ToInt32(textBox38.Text) / seredniychas5) + Convert.ToDouble(label24.Text);
 					label57.Text = Convert.ToString(prognoz5);
 					label57.Text = string.Format("{0:F2}", prognoz5);
 
@@ -9982,12 +9238,12 @@ namespace zase4kak
 					label120.Text = Convert.ToString(prognoz3);
 					label120.Text = string.Format("{0:F2}", prognoz3);
 
-					prognoz4 = (Convert.ToInt32(textBox38.Text) / seredniychas4 )+ Convert.ToDouble(label112.Text);
+					prognoz4 = (Convert.ToInt32(textBox38.Text) / seredniychas4) + Convert.ToDouble(label112.Text);
 					label122.Text = Convert.ToString(prognoz4);
 					label122.Text = string.Format("{0:F2}", prognoz4);
-                }
-                else
-                {
+				}
+				else
+				{
 					if (label15.Text == "3/6")
 					{
 						prognoz4 = (Convert.ToInt32(textBox38.Text) / seredniychas4) + Convert.ToDouble(label17.Text);
@@ -10000,12 +9256,12 @@ namespace zase4kak
 						label57.Text = string.Format("{0:F2}", prognoz3);
 
 
-						prognoz6 =( Convert.ToInt32(textBox38.Text) / seredniychas6 )+ Convert.ToDouble(label23.Text);
+						prognoz6 = (Convert.ToInt32(textBox38.Text) / seredniychas6) + Convert.ToDouble(label23.Text);
 						label58.Text = Convert.ToString(prognoz6);
 						label58.Text = string.Format("{0:F2}", prognoz6);
 
 
-						prognoz5 =( Convert.ToInt32(textBox38.Text) / seredniychas5 )+ Convert.ToDouble(label25.Text);
+						prognoz5 = (Convert.ToInt32(textBox38.Text) / seredniychas5) + Convert.ToDouble(label25.Text);
 						label118.Text = Convert.ToString(prognoz5);
 						label118.Text = string.Format("{0:F2}", prognoz5);
 
@@ -10016,9 +9272,9 @@ namespace zase4kak
 						prognoz2 = (Convert.ToInt32(textBox38.Text) / seredniychas2) + Convert.ToDouble(label112.Text);
 						label122.Text = Convert.ToString(prognoz2);
 						label122.Text = string.Format("{0:F2}", prognoz2);
-                    }
-                    else
-                    {
+					}
+					else
+					{
 						if (label15.Text == "4/6")
 						{
 							prognoz2 = (Convert.ToInt32(textBox38.Text) / seredniychas2) + Convert.ToDouble(label17.Text);
@@ -10026,7 +9282,7 @@ namespace zase4kak
 							label54.Text = string.Format("{0:F2}", prognoz2);
 
 
-							prognoz1 = (Convert.ToInt32(textBox38.Text) / seredniychas1 )+ Convert.ToDouble(label24.Text);
+							prognoz1 = (Convert.ToInt32(textBox38.Text) / seredniychas1) + Convert.ToDouble(label24.Text);
 							label57.Text = Convert.ToString(prognoz1);
 							label57.Text = string.Format("{0:F2}", prognoz1);
 
@@ -10036,7 +9292,7 @@ namespace zase4kak
 							label58.Text = string.Format("{0:F2}", prognoz4);
 
 
-							prognoz3 = (Convert.ToInt32(textBox38.Text) / seredniychas3 )+ Convert.ToDouble(label25.Text);
+							prognoz3 = (Convert.ToInt32(textBox38.Text) / seredniychas3) + Convert.ToDouble(label25.Text);
 							label118.Text = Convert.ToString(prognoz3);
 							label118.Text = string.Format("{0:F2}", prognoz3);
 
@@ -10044,12 +9300,12 @@ namespace zase4kak
 							label120.Text = Convert.ToString(prognoz6);
 							label120.Text = string.Format("{0:F2}", prognoz6);
 
-							prognoz5 =( Convert.ToInt32(textBox38.Text) / seredniychas5) + Convert.ToDouble(label112.Text);
+							prognoz5 = (Convert.ToInt32(textBox38.Text) / seredniychas5) + Convert.ToDouble(label112.Text);
 							label122.Text = Convert.ToString(prognoz5);
 							label122.Text = string.Format("{0:F2}", prognoz5);
-                        }
-                        else
-                        {
+						}
+						else
+						{
 							if (label15.Text == "5/6")
 							{
 								prognoz5 = (Convert.ToInt32(textBox38.Text) / seredniychas5) + Convert.ToDouble(label17.Text);
@@ -10075,12 +9331,12 @@ namespace zase4kak
 								label120.Text = Convert.ToString(prognoz4);
 								label120.Text = string.Format("{0:F2}", prognoz4);
 
-								prognoz3 = (Convert.ToInt32(textBox38.Text) / seredniychas3 )+ Convert.ToDouble(label112.Text);
+								prognoz3 = (Convert.ToInt32(textBox38.Text) / seredniychas3) + Convert.ToDouble(label112.Text);
 								label122.Text = Convert.ToString(prognoz3);
 								label122.Text = string.Format("{0:F2}", prognoz3);
-                            }
-                            else
-                            {
+							}
+							else
+							{
 								if (label15.Text == "6/6")
 								{
 									prognoz3 = (Convert.ToInt32(textBox38.Text) / seredniychas3) + Convert.ToDouble(label17.Text);
@@ -10093,7 +9349,7 @@ namespace zase4kak
 									label57.Text = string.Format("{0:F2}", prognoz4);
 
 
-									prognoz5 = (Convert.ToInt32(textBox38.Text) / seredniychas5 )+ Convert.ToDouble(label23.Text);
+									prognoz5 = (Convert.ToInt32(textBox38.Text) / seredniychas5) + Convert.ToDouble(label23.Text);
 									label58.Text = Convert.ToString(prognoz5);
 									label58.Text = string.Format("{0:F2}", prognoz5);
 
@@ -10102,7 +9358,7 @@ namespace zase4kak
 									label118.Text = Convert.ToString(prognoz6);
 									label118.Text = string.Format("{0:F2}", prognoz6);
 
-									prognoz2 = (Convert.ToInt32(textBox38.Text) / seredniychas2)+ Convert.ToDouble(label97.Text);
+									prognoz2 = (Convert.ToInt32(textBox38.Text) / seredniychas2) + Convert.ToDouble(label97.Text);
 									label120.Text = Convert.ToString(prognoz2);
 									label120.Text = string.Format("{0:F2}", prognoz2);
 
@@ -10119,52 +9375,52 @@ namespace zase4kak
 
 		}
 
-        private void timer41_Tick(object sender, EventArgs e)
-        {
+		private void timer41_Tick(object sender, EventArgs e)
+		{
 			int value;
-			
-            switch (Convert.ToInt32(textBox13.Text))
-            {
+
+			switch (Convert.ToInt32(textBox13.Text))
+			{
 				case 1:
-                    {
-						if(label15.Text == "1/6")
-                        {
+					{
+						if (label15.Text == "1/6")
+						{
 							value = (60 * 5) + sec;
 							textBox38.Text = Convert.ToString(value);
-                        }
-                        else
-                        {
+						}
+						else
+						{
 							if (label15.Text == "2/6")
 							{
 								value = (60 * 4) + sec;
 								textBox38.Text = Convert.ToString(value);
-                            }
-                            else
-                            {
+							}
+							else
+							{
 								if (label15.Text == "3/6")
 								{
 									value = (60 * 3) + sec;
 									textBox38.Text = Convert.ToString(value);
-                                }
-                                else
-                                {
+								}
+								else
+								{
 									if (label15.Text == "4/6")
 									{
 										value = (60 * 2) + sec;
 										textBox38.Text = Convert.ToString(value);
-                                    }
-                                    else
-                                    {
+									}
+									else
+									{
 										if (label15.Text == "5/6")
 										{
 											value = (60 * 1) + sec;
 											textBox38.Text = Convert.ToString(value);
-                                        }
-                                        else
-                                        {
+										}
+										else
+										{
 											if (label15.Text == "6/6")
 											{
-												value =  sec;
+												value = sec;
 												textBox38.Text = Convert.ToString(value);
 											}
 										}
@@ -10172,11 +9428,11 @@ namespace zase4kak
 								}
 							}
 						}
-						
+
 						break;
-                    }
+					}
 				case 2:
-                    {
+					{
 						if (label15.Text == "1/6")
 						{
 							value = (120 * 5) + sec;
@@ -10876,46 +10132,53 @@ namespace zase4kak
 						break;
 					}
 				case 0:
-                    {
+					{
 						value = sec;
 						textBox38.Text = Convert.ToString(value);
 						break;
-                    }
+					}
 
-				default: 
+				default:
 					{
 						value = 0;
 						textBox38.Text = Convert.ToString(value);
 						break;
-                    }
-            
-				
-            
-		
+					}
+
+
+
+
 			}
 
-			
+
 
 		}
 
-        private void timer26_Tick_1(object sender, EventArgs e)
-        {
+		private void timer26_Tick_1(object sender, EventArgs e)
+		{
 			Timeo += 0.0003 * 53;                   //timer на час кола синя доріжка
 			label95.Text = string.Format("{0:F3}", Timeo);       //timer на час кола синя доріжка
 		}
 
-        private void timer27_Tick(object sender, EventArgs e)
-        {
+		private void timer27_Tick(object sender, EventArgs e)
+		{
 			Timeb += 0.0003 * 53;                   //timer на час кола жовта доріжка
 			label110.Text = string.Format("{0:F3}", Timeb);       //timer на час кола жовта доріжка
 		}
 
-        private void Form8_FormClosing(object sender, FormClosingEventArgs e)
-        {
+		private void Form8_FormClosing(object sender, FormClosingEventArgs e)
+		{
 			Settings.Default.line_1 = panel1.BackColor;
 			Settings.Default.line_2 = panel3.BackColor;
 			Settings.Default.line_3 = panel4.BackColor;
 			Settings.Default.line_4 = panel5.BackColor;
+			Settings.Default.delay1 = delay;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor;
 
 			DialogResult dialog = MessageBox.Show(
 				 "Вы действительно хотите выйти из программы?",
@@ -10933,96 +10196,48 @@ namespace zase4kak
 			{
 				e.Cancel = true;
 			}
-		
-	}
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
+		}
 
-        }
-
-        
-
-        private void timer24_Tick(object sender, EventArgs e)
+		private void textBox5_TextChanged(object sender, EventArgs e)
 		{
 
-			sec--;
-			label4.Text = Convert.ToString(min) + ":" + Convert.ToString(sec); //зчитую час гонки який був заданий у настройках
+		}
+
+
+
+		private void timer24_Tick(object sender, EventArgs e)
+		{
+
+			time_to_traning_secs--;
+			label4.Text = Convert.ToString(time_to_traning_min) + ":" + Convert.ToString(time_to_traning_secs); //зчитую час гонки який був заданий у настройках
 
 
 
 
 
-			if (sec == 0)                                               //таймер для гонки 1 перший заїзд
+			if (time_to_traning_secs == 0)                                               //таймер для гонки 1 перший заїзд
 			{
-				min--;
-				sec = 60;
+				time_to_traning_min--;
+				time_to_traning_secs = 60;
 
-				if (min == -1 && sec == 60)
+				if (time_to_traning_min == -1 && time_to_traning_secs == 60)
 				{
+					serialPort1.Write("3");
 					perehid.Play();
 					serialPort1.WriteLine("3");//пауза
 					label69.Text = "Трек виключений";
 					label69.BackColor = Color.Red;
-					button10.Enabled = true;
-					button11.Enabled = false;
-					timer2.Enabled = false;
-					label4.Text = "00:00";
-					secs = Convert.ToInt32(textBox14.Text);
-					mins = 0;
-					timer3.Enabled = true;
-					label13.Text = "<<Перехід!>>";
-					button6.Enabled = false;
-
-
-					//перехід між доріжками
-
-
-					timer17.Enabled = false;
-					timer11.Enabled = false;
-					timer15.Enabled = false;
-					timer16.Enabled = false;
+					timer24.Enabled = false;
+					timer25.Enabled = true;
+					label13.Text = "Перехід!";
 
 
 
-					textBox16.Text = label45.Text;
-					label50.Text = label17.Text;
-					label66.Text = label21.Text;
-
-
-					textBox17.Text = label46.Text;
-					label51.Text = label24.Text;
-					label63.Text = label27.Text;
-
-					textBox18.Text = label47.Text;
-					label52.Text = label23.Text;
-					label64.Text = label26.Text;
-
-					textBox19.Text = label48.Text;
-					label53.Text = label25.Text;
-					label65.Text = label28.Text;
-
-
-
-
-					label45.Text = textBox17.Text;
-					label17.Text = label51.Text;
-					label21.Text = label63.Text;
-
-					label46.Text = textBox19.Text;
-					label24.Text = label53.Text;
-					label27.Text = label65.Text;
-
-					label47.Text = textBox16.Text;
-					label23.Text = label50.Text;
-					label26.Text = label66.Text;
-
-					label48.Text = textBox18.Text;
-					label25.Text = label52.Text;
-					label28.Text = label64.Text;
-
-
-
+					label17.Text = "0";
+					label24.Text = "0";
+					label23.Text = "0";
+					label25.Text = "0";
 
 					label18.Text = "00,000";
 					label22.Text = "00,000";
@@ -11044,8 +10259,24 @@ namespace zase4kak
 					label40.Text = "00,000";
 					label41.Text = "00,000";
 					label44.Text = "999";
+					label78.Text = "00,000";
+					label77.Text = "00,000";
+					label76.Text = "00,000";
 
-					number_group.Text = "1";
+					label79.Text = "00,000";
+					label80.Text = "00,000";
+					label81.Text = "00,000";
+
+					label82.Text = "00,000";
+					label83.Text = "00,000";
+					label84.Text = "00,000";
+
+					label85.Text = "00,000";
+					label86.Text = "00,000";
+					label87.Text = "00,000";
+
+
+
 				}
 			}
 		}
@@ -11062,6 +10293,8 @@ namespace zase4kak
 			timer15.Enabled = true;
 			timer11.Enabled = true;
 			timer16.Enabled = true;
+			timer26.Enabled = true;
+			timer27.Enabled = true;
 		}
 
 		private void timer11_Tick(object sender, EventArgs e)
@@ -11087,7 +10320,7 @@ namespace zase4kak
 		private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
 		{
 			textBox15.AppendText(serialPort1.ReadLine());
-
+			Thread.Sleep(100);
 		}
 
 
@@ -11096,7 +10329,7 @@ namespace zase4kak
 		private void button2_Click(object sender, EventArgs e)
 		{
 
-			serialPort1.BaudRate = 19200;
+			//serialPort1.BaudRate = 19200;
 			serialPort1.PortName = comboBox1.Text;
 			button2.Visible = false;
 			button1.Visible = true;
@@ -11114,7 +10347,7 @@ namespace zase4kak
 			Settings.Default.Save();
 
 
-			
+
 			// цикл для підтягування спортсменів за результатами лаптайму
 
 
@@ -11176,6 +10409,18 @@ namespace zase4kak
 
 		private void button8_Click(object sender, EventArgs e)
 		{
+			prognoz1 = 0;
+			prognoz2 = 0;
+			prognoz3 = 0;
+			prognoz4 = 0;
+			prognoz5 = 0;
+			prognoz6 = 0;
+			seredniychas1 = 0;
+			seredniychas2 = 0;
+			seredniychas3 = 0;
+			seredniychas4 = 0;
+			seredniychas5 = 0;
+			seredniychas6 = 0;
 
 			if (label67.Text == "0" && label13.Text == "<<Фініш!>>")
 			{
@@ -11208,415 +10453,124 @@ namespace zase4kak
 
 		private void timer10_Tick(object sender, EventArgs e)
 		{
-			int chervona, bila, zelena, orangeva, sunia, shovta;
-			i++;                                            //добавляю кола 1 доріці
-			label17.Text = Convert.ToString(i);
-
-
-			// алгоритм прогнозу
-			double masuv, kola, seredniychas, prognoz;
-
-
-			if (label15.Text == "1/6")
+			if (Convert.ToDouble(label18.Text) > delay)
 			{
-				kola = Convert.ToDouble(label18.Text);
-				masuv = Convert.ToDouble(label8.Text);
-				seredniychas1 = Convert.ToDouble(label54.Text);
-				kola = (kola + masuv);
-				label8.Text = Convert.ToString(kola);
-				seredniychas1 = kola / Convert.ToDouble(label17.Text);
-            }
-            else
-            {
-				if (label15.Text == "2/6")
+
+
+
+
+				int chervona, bila, zelena, orangeva, sunia, shovta;
+				i++;                                            //добавляю кола 1 доріці
+				label17.Text = Convert.ToString(i);
+
+
+				// алгоритм прогнозу
+				double masuv, kola, seredniychas, prognoz;
+
+
+				if (label15.Text == "1/6")
 				{
 					kola = Convert.ToDouble(label18.Text);
 					masuv = Convert.ToDouble(label8.Text);
-					seredniychas6 = Convert.ToDouble(label54.Text);
+					seredniychas1 = Convert.ToDouble(label54.Text);
 					kola = (kola + masuv);
 					label8.Text = Convert.ToString(kola);
-					seredniychas6 = kola / Convert.ToDouble(label17.Text);
-                }
-                else
-                {
-					if (label15.Text == "3/6")
+					seredniychas1 = kola / Convert.ToDouble(label17.Text);
+				}
+				else
+				{
+					if (label15.Text == "2/6")
 					{
 						kola = Convert.ToDouble(label18.Text);
 						masuv = Convert.ToDouble(label8.Text);
-						seredniychas4 = Convert.ToDouble(label54.Text);
+						seredniychas6 = Convert.ToDouble(label54.Text);
 						kola = (kola + masuv);
 						label8.Text = Convert.ToString(kola);
-						seredniychas4 = kola / Convert.ToDouble(label17.Text);
-                    }
-                    else
-                    {
-						if (label15.Text == "4/6")
+						seredniychas6 = kola / Convert.ToDouble(label17.Text);
+					}
+					else
+					{
+						if (label15.Text == "3/6")
 						{
 							kola = Convert.ToDouble(label18.Text);
 							masuv = Convert.ToDouble(label8.Text);
-							seredniychas2 = Convert.ToDouble(label54.Text);
+							seredniychas4 = Convert.ToDouble(label54.Text);
 							kola = (kola + masuv);
 							label8.Text = Convert.ToString(kola);
-							seredniychas2 = kola / Convert.ToDouble(label17.Text);
-                        }
-                        else
-                        {
-							if (label15.Text == "5/6")
+							seredniychas4 = kola / Convert.ToDouble(label17.Text);
+						}
+						else
+						{
+							if (label15.Text == "4/6")
 							{
 								kola = Convert.ToDouble(label18.Text);
 								masuv = Convert.ToDouble(label8.Text);
-								seredniychas5 = Convert.ToDouble(label54.Text);
+								seredniychas2 = Convert.ToDouble(label54.Text);
 								kola = (kola + masuv);
 								label8.Text = Convert.ToString(kola);
-								seredniychas5 = kola / Convert.ToDouble(label17.Text);
-                            }
-                            else
-                            {
-								if (label15.Text == "6/6")
+								seredniychas2 = kola / Convert.ToDouble(label17.Text);
+							}
+							else
+							{
+								if (label15.Text == "5/6")
 								{
 									kola = Convert.ToDouble(label18.Text);
 									masuv = Convert.ToDouble(label8.Text);
-									seredniychas3 = Convert.ToDouble(label54.Text);
+									seredniychas5 = Convert.ToDouble(label54.Text);
 									kola = (kola + masuv);
 									label8.Text = Convert.ToString(kola);
-									seredniychas3 = kola / Convert.ToDouble(label17.Text);
+									seredniychas5 = kola / Convert.ToDouble(label17.Text);
 								}
-							}
-						}
-					}
-				}
-			}
-
-
-			chervona = Convert.ToInt32(label17.Text);
-			bila = Convert.ToInt32(label24.Text);
-			zelena = Convert.ToInt32(label23.Text);
-			orangeva = Convert.ToInt32(label25.Text);
-			sunia = Convert.ToInt32(label97.Text);
-			shovta = Convert.ToInt32(label112.Text);
-
-			// сортування по результату
-			dataGridView3.Rows.Add(label17.Text +","+ 6);
-			dataGridView3.Rows.Add(label24.Text + "," + 5);
-			dataGridView3.Rows.Add(label23.Text + "," + 4);
-			dataGridView3.Rows.Add(label25.Text + "," + 3);
-			dataGridView3.Rows.Add(label97.Text + "," + 2);
-			dataGridView3.Rows.Add(label112.Text + "," + 1);
-
-			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
-
-
-			// підсвітка під час кола
-			textBox1.BackColor = Color.LawnGreen;
-			label17.BackColor = Color.LawnGreen;
-			timer35.Enabled = true;
-
-
-
-			//червона
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6) )//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel1.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6) )//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel1.Location = new Point(4, 321);
-                }
-                else
-                {
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel1.Location = new Point(4, 423);
-                    }
-                    else
-                    {
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel1.Location = new Point(4, 525);
-                        }
-                        else
-                        {
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel1.Location = new Point(4, 628);
-                            }
-                            else
-                            {
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text+ "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								else
 								{
-
-									panel1.Location = new Point(4, 731);
+									if (label15.Text == "6/6")
+									{
+										kola = Convert.ToDouble(label18.Text);
+										masuv = Convert.ToDouble(label8.Text);
+										seredniychas3 = Convert.ToDouble(label54.Text);
+										kola = (kola + masuv);
+										label8.Text = Convert.ToString(kola);
+										seredniychas3 = kola / Convert.ToDouble(label17.Text);
+									}
 								}
 							}
 						}
 					}
 				}
 
-			}
+
+				chervona = Convert.ToInt32(label17.Text);
+				bila = Convert.ToInt32(label24.Text);
+				zelena = Convert.ToInt32(label23.Text);
+				orangeva = Convert.ToInt32(label25.Text);
+				sunia = Convert.ToInt32(label97.Text);
+				shovta = Convert.ToInt32(label112.Text);
 
 
 
-					// біла
 
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel3.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+				// підсвітка під час кола
+				textBox1.BackColor = Color.LawnGreen;
+				label17.BackColor = Color.LawnGreen;
+				timer35.Enabled = true;
+
+
+
+
+
+
+
+
+
+				//для сортування місця гонщика
+				if (Convert.ToDouble(label22.Text) < 1)         //обмеження по часу кола 1 секунда
 				{
-
-					panel3.Location = new Point(4, 321);
+					i--;
+					label17.Text = Convert.ToString(i);
 				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel3.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel3.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel3.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel3.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
+				//textBox15.Text = "0";
+				timer10.Enabled = false;
 			}
-
-			// зелена
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel4.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel4.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel4.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel4.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel4.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel4.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-			//оранжева 
-
-
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel5.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel5.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel5.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel5.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel5.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel5.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-			//синя
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-			{
-				panel10.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel10.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel10.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel10.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel10.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel10.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-
-			//жовта
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-			{
-				panel11.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-				{
-
-					panel11.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-					{
-
-						panel11.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-						{
-
-							panel11.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1) )// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-							{
-
-								panel11.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1) )// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-								{
-
-									panel11.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-			timer34.Enabled = true;
-			
-			
-			
-			//для сортування місця гонщика
-			if (Convert.ToDouble(label22.Text) < 1)         //обмеження по часу кола 1 секунда
-			{
-				i--;
-				label17.Text = Convert.ToString(i);
-			}
-			//textBox15.Text = "0";
-			timer10.Enabled = false;
 		}
 
 		private void timer7_Tick(object sender, EventArgs e)
@@ -11822,8 +10776,8 @@ namespace zase4kak
 					//label56.Text = "0";
 					//label117.Text = "0";
 					//label119.Text = "0";
-				//	label121.Text = "0";
-				//	label123.Text = "0";
+					//	label121.Text = "0";
+					//	label123.Text = "0";
 
 					label18.Text = "00,000";
 					label22.Text = "00,000";
@@ -12198,26 +11152,73 @@ namespace zase4kak
 			{
 
 				case 10000:
-                    {
+					{
 						l = Convert.ToInt32(label112.Text);          //жовта доріжка
 						timer29.Enabled = true;
 						timer27.Enabled = false;
 						label114.Text = label110.Text;
 						Timeb = 0;
 						timer27.Enabled = true;
-
-
-						label100.Text = label101.Text;
-						label101.Text = label103.Text;
-						label103.Text = label114.Text;
-						label112.Text = Convert.ToString(l);
+						timer45.Enabled = true;
 						textBox15.Text = "0";
 
-						if (Convert.ToDouble(label107.Text) > Convert.ToDouble(label114.Text))
+
+						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування жовта доріжка
 						{
-							label107.Text = label114.Text;
+							if (Convert.ToDouble(label107.Text) > delay) // обмеження часу у тренуванні
+							{
+
+								textBox15.Text = "0";
+								label109.Text = label111.Text;
+								label111.Text = label108.Text;
+								label108.Text = label100.Text;
+								label100.Text = label101.Text;
+								label101.Text = label103.Text;
+								label103.Text = label114.Text;
+								label112.Text = Convert.ToString(l);
+								if (Convert.ToDouble(label107.Text) > Convert.ToDouble(label114.Text))
+								{
+									label107.Text = label114.Text;
+									best_time.Play();
+
+								}
+							}
+							else
+							{
+								label107.Text = "999";
+								label114.Text = "999";
+								textBox15.Text = "0";
+							}
+						}
+						else
+						{
 
 
+
+
+
+
+							if (Convert.ToDouble(label114.Text) > delay)//обмеження крвщого часу кола 3 секунди
+							{
+								label100.Text = label101.Text;
+								label101.Text = label103.Text;
+								label103.Text = label114.Text;
+								label112.Text = Convert.ToString(l);
+
+
+								if (Convert.ToDouble(label107.Text) > Convert.ToDouble(label114.Text))
+								{
+									label107.Text = label114.Text;
+
+
+								}
+
+							}
+							else
+							{
+								button6.PerformClick();
+								MessageBox.Show("Щось пішло не так!! Перевірте модель на 6 доріжці!");
+							}
 						}
 					}
 					break;
@@ -12229,23 +11230,73 @@ namespace zase4kak
 						label99.Text = label95.Text;
 						Timeo = 0;
 						timer26.Enabled = true;
+						timer45.Enabled = true;
 
-
-						label94.Text = label72.Text;
-						label72.Text = label74.Text;
-						label74.Text = label99.Text;
-						label97.Text = Convert.ToString(v);
 						textBox15.Text = "0";
 
-						if (Convert.ToDouble(label92.Text) > Convert.ToDouble(label99.Text))
+						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування синя доріжка
 						{
-							label92.Text = label99.Text;
+							if (Convert.ToDouble(label92.Text) > delay) // обмеження часу у тренуванні
+							{
 
+
+
+
+
+								label11.Text = label96.Text;
+								label96.Text = label93.Text;
+								label93.Text = label94.Text;
+
+								label94.Text = label72.Text;
+								label72.Text = label74.Text;
+								label74.Text = label99.Text;
+								label97.Text = Convert.ToString(v);
+
+
+								if (Convert.ToDouble(label92.Text) > Convert.ToDouble(label99.Text))
+								{
+									label92.Text = label99.Text;
+									best_time.Play();
+
+								}
+							}
+							else
+							{
+								label107.Text = "999";
+								label114.Text = "999";
+								textBox15.Text = "0";
+							}
+						}
+						else
+						{
+
+
+
+							if (Convert.ToDouble(label99.Text) > delay)//обмеження крвщого часу кола 3 секунди
+							{
+
+								label94.Text = label72.Text;
+								label72.Text = label74.Text;
+								label74.Text = label99.Text;
+								label97.Text = Convert.ToString(v);
+
+
+								if (Convert.ToDouble(label92.Text) > Convert.ToDouble(label99.Text))
+								{
+									label92.Text = label99.Text;
+
+
+								}
+
+							}
+							else
+							{
+								button6.PerformClick();
+								MessageBox.Show("Щось пішло не так!! Перевірте модель на 5 доріжці!");
+							}
 
 						}
-					
-
-			}
+					}
 					break;
 				case 01:
 					{
@@ -12255,39 +11306,60 @@ namespace zase4kak
 						label18.Text = label21.Text;
 						Time = 0;
 						timer11.Enabled = true;
+						timer45.Enabled = true;
 
 						if (label13.Text == "Тренування!")  // алгоритм для часу кола для тренування червона доріжка
 						{
-							label78.Text = label77.Text;
-							label77.Text = label76.Text;
-							label76.Text = label20.Text;
-							label20.Text = label19.Text;
-							label19.Text = label22.Text;
-							label22.Text = label18.Text;
-							label17.Text = Convert.ToString(i);
-							textBox15.Text = "0";
-
-							if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+							
+							if (Convert.ToDouble(label16.Text) > delay) // обмеження часу у тренуванні
 							{
-								label16.Text = label18.Text;
-								best_time.Play();
+								textBox15.Text = "0";
 
+								label78.Text = label77.Text;
+								label77.Text = label76.Text;
+								label76.Text = label20.Text;
+								label20.Text = label19.Text;
+								label19.Text = label22.Text;
+								label22.Text = label18.Text;
+								label17.Text = Convert.ToString(i);
+								
+
+								if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+								{
+									label16.Text = label18.Text;
+									best_time.Play();
+
+								}
+                            }
+                            else
+                            {
+								label18.Text = "999";
+								label16.Text = "999";
+								textBox15.Text = "0";
 							}
 						}
 						else                             // алгоритм для часу кола для гонок червона доріжка
 						{
-
-							label20.Text = label19.Text;
-							label19.Text = label22.Text;
-							label22.Text = label18.Text;
-							label17.Text = Convert.ToString(i);
 							textBox15.Text = "0";
-
-							if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+							if (Convert.ToDouble(label18.Text) > delay)//обмеження крвщого часу кола 3 секунди
 							{
-								label16.Text = label18.Text;
+								label20.Text = label19.Text;
+								label19.Text = label22.Text;
+								label22.Text = label18.Text;
+								label17.Text = Convert.ToString(i);
 
 
+								if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+								{
+									label16.Text = label18.Text;
+
+
+								}
+							}
+							else
+							{
+								button6.PerformClick();
+								MessageBox.Show("Щось пішло не так!! Перевірте модель на 1 доріжці!");
 							}
 						}
 						break;
@@ -12300,42 +11372,66 @@ namespace zase4kak
 						label29.Text = label27.Text;
 						Timez = 0;
 						timer17.Enabled = true;
+						timer45.Enabled = true;
 
-						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування біла доріжка
-						{
-							label79.Text = label80.Text;
-							label80.Text = label81.Text;
-							label81.Text = label31.Text;
-							label31.Text = label32.Text;
-							label32.Text = label30.Text;
-							label30.Text = label29.Text;
-							label24.Text = Convert.ToString(c);
-							textBox15.Text = "0";
+						
 
-							if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+							if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування біла доріжка
 							{
-								label42.Text = label29.Text;
-								best_time.Play();
+							if (Convert.ToDouble(label42.Text) > delay) // обмеження часу у тренуванні
+							{
+								label79.Text = label80.Text;
+								label80.Text = label81.Text;
+								label81.Text = label31.Text;
+								label31.Text = label32.Text;
+								label32.Text = label30.Text;
+								label30.Text = label29.Text;
+								label24.Text = Convert.ToString(c);
+								textBox15.Text = "0";
+
+								if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+								{
+									label42.Text = label29.Text;
+									best_time.Play();
 
 
+								}
+                            }
+                            else
+                            {
+								
+								
+								label29.Text = "999";
+								label42.Text = "999";
+								textBox15.Text = "0";
 							}
 						}
 						else                                     // алгоритм для часу кола для гонки біла доріжка
 						{
 
-
-							label31.Text = label32.Text;
-							label32.Text = label30.Text;
-							label30.Text = label29.Text;
-							label24.Text = Convert.ToString(c);
 							textBox15.Text = "0";
 
-							if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+							if (Convert.ToDouble(label29.Text) > delay)//обмеження крвщого часу кола 3 секунди
 							{
-								label42.Text = label29.Text;
+
+								label31.Text = label32.Text;
+								label32.Text = label30.Text;
+								label30.Text = label29.Text;
+								label24.Text = Convert.ToString(c);
 
 
-							}
+								if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+								{
+									label42.Text = label29.Text;
+
+
+								}
+								
+							}else
+								{
+									button6.PerformClick();
+									MessageBox.Show("Щось пішло не так!! Перевірте модель на 2 доріжці!");
+								}
 						}
 						break;
 					}
@@ -12347,43 +11443,65 @@ namespace zase4kak
 						label37.Text = label26.Text;
 						Times = 0;
 						timer15.Enabled = true;
+						timer45.Enabled = true;
 
+						
 
-						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування зелена доріжка
-						{
-							label82.Text = label83.Text;
-							label83.Text = label84.Text;
-							label84.Text = label35.Text;
-							label35.Text = label36.Text;
-							label36.Text = label34.Text;
-							label34.Text = label37.Text;
-							label23.Text = Convert.ToString(b);
-							textBox15.Text = "0";
-
-
-							if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+							if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування зелена доріжка
 							{
-								label43.Text = label37.Text;
-								best_time.Play();
+							if (Convert.ToDouble(label43.Text) > delay) // обмеження часу у тренуванні
+							{
+								label82.Text = label83.Text;
+								label83.Text = label84.Text;
+								label84.Text = label35.Text;
+								label35.Text = label36.Text;
+								label36.Text = label34.Text;
+								label34.Text = label37.Text;
+								label23.Text = Convert.ToString(b);
+								textBox15.Text = "0";
 
+
+								if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+								{
+									label43.Text = label37.Text;
+									best_time.Play();
+
+								}
+                            }
+                            else
+                            {
+								label37.Text = "999";
+								label43.Text = "999";
+								textBox15.Text = "0";
 							}
 						}
 						else                                        // алгоритм для часу кола для гонки зелена доріжка
 						{
 
 
-							label35.Text = label36.Text;
-							label36.Text = label34.Text;
-							label34.Text = label37.Text;
-							label23.Text = Convert.ToString(b);
 							textBox15.Text = "0";
 
-
-							if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+							if (Convert.ToDouble(label37.Text) > delay) //обмеження крвщого часу кола 3 секунди
 							{
-								label43.Text = label37.Text;
 
-							}
+								label35.Text = label36.Text;
+								label36.Text = label34.Text;
+								label34.Text = label37.Text;
+								label23.Text = Convert.ToString(b);
+
+
+
+								if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+								{
+									label43.Text = label37.Text;
+
+								}
+								
+							}else
+								{
+									button6.PerformClick();
+									MessageBox.Show("Щось пішло не так!! Перевірте модель на 3 доріжці!");
+								}
 						}
 						break;
 					}
@@ -12395,558 +11513,584 @@ namespace zase4kak
 						label38.Text = label28.Text;
 						Timeg = 0;
 						timer16.Enabled = true;
-						if (label13.Text == "Тренування!")// алгоритм для часу кола для тренування оранжева доріжка
-						{
-							label85.Text = label86.Text;
-							label86.Text = label87.Text;
-							label87.Text = label40.Text;
-							label40.Text = label41.Text;
-							label41.Text = label39.Text;
-							label39.Text = label38.Text;
-							label25.Text = Convert.ToString(d);
-							textBox15.Text = "0";
+						timer45.Enabled = true;
 
-							if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+
+					
+
+
+							if (label13.Text == "Тренування!")// алгоритм для часу кола для тренування оранжева доріжка
 							{
-								label44.Text = label38.Text;
-								best_time.Play();
 
+							if (Convert.ToDouble(label44.Text) > delay) // обмеження часу у тренуванні
+							{
+								label85.Text = label86.Text;
+								label86.Text = label87.Text;
+								label87.Text = label40.Text;
+								label40.Text = label41.Text;
+								label41.Text = label39.Text;
+								label39.Text = label38.Text;
+								label25.Text = Convert.ToString(d);
+								textBox15.Text = "0";
+
+								if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+								{
+									label44.Text = label38.Text;
+									best_time.Play();
+
+								}
+                            }
+                            else
+                            {
+								label38.Text = "999";
+								label44.Text = "999";
+								textBox15.Text = "0";
 							}
 						}
 						else                                     // алгоритм для часу кола для Гонки оранжева доріжка
 						{
 
 
-							label40.Text = label41.Text;
-							label41.Text = label39.Text;
-							label39.Text = label38.Text;
-							label25.Text = Convert.ToString(d);
 							textBox15.Text = "0";
-
-							if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+							if (Convert.ToDouble(label38.Text) > delay)//обмеження крвщого часу кола 3 секунди
 							{
-								label44.Text = label38.Text;
 
-							}
+								label40.Text = label41.Text;
+								label41.Text = label39.Text;
+								label39.Text = label38.Text;
+								label25.Text = Convert.ToString(d);
+
+
+								if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+								{
+									label44.Text = label38.Text;
+
+								}
+								
+							}else
+								{
+									button6.PerformClick();
+									MessageBox.Show("Щось пішло не так!! Перевірте модель на 4 доріжці!");
+								}
 						}
 						break;
 					}
-				case 01111://// білан + зелена+ оранжева+Червона доріжка
-					{
-						c = Convert.ToInt32(label24.Text);
-						timer13.Enabled = true;
-						timer17.Enabled = false;
-						label29.Text = label27.Text;
-						Timez = 0;
-						timer17.Enabled = true;
-						label31.Text = label32.Text;
-						label32.Text = label30.Text;
-						label30.Text = label29.Text;
-						label24.Text = Convert.ToString(c);
-
-
-						b = Convert.ToInt32(label23.Text);
-						timer12.Enabled = true;
-						timer15.Enabled = false;
-						label37.Text = label26.Text;
-						Times = 0;
-						timer15.Enabled = true;
-						label35.Text = label36.Text;
-						label36.Text = label34.Text;
-						label34.Text = label37.Text;
-						label23.Text = Convert.ToString(b);
-
-
-						d = Convert.ToInt32(label25.Text);
-						timer14.Enabled = true;
-						timer16.Enabled = false;
-						label38.Text = label28.Text;
-						Timeg = 0;
-						timer16.Enabled = true;
-						label40.Text = label41.Text;
-						label41.Text = label39.Text;
-						label39.Text = label38.Text;
-						label25.Text = Convert.ToString(d);
-
-						i = Convert.ToInt32(label17.Text);
-						timer10.Enabled = true;
-						timer11.Enabled = false;
-						label18.Text = label21.Text;
-						Time = 0;
-						timer11.Enabled = true;
-						label20.Text = label19.Text;
-						label19.Text = label22.Text;
-						label22.Text = label18.Text;
-						label17.Text = Convert.ToString(i);
-						textBox15.Text = "0";
-
-						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-						{
-							label16.Text = label18.Text;
-
-						}
-
-						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-						{
-							label44.Text = label38.Text;
-
-						}
-
-						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-						{
-							label43.Text = label37.Text;
-
-						}
-
-						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-						{
-							label42.Text = label29.Text;
-
-						}
-						break;
-					}
-				case 01110:         // біла + зелена+ оранжева доріжка
-					{
-						c = Convert.ToInt32(label24.Text);
-						timer13.Enabled = true;
-						timer17.Enabled = false;
-						label29.Text = label27.Text;
-						Timez = 0;
-						timer17.Enabled = true;
-						label31.Text = label32.Text;
-						label32.Text = label30.Text;
-						label30.Text = label29.Text;
-						label24.Text = Convert.ToString(c);
-
-
-						b = Convert.ToInt32(label23.Text);
-						timer12.Enabled = true;
-						timer15.Enabled = false;
-						label37.Text = label26.Text;
-						Times = 0;
-						timer15.Enabled = true;
-						label35.Text = label36.Text;
-						label36.Text = label34.Text;
-						label34.Text = label37.Text;
-						label23.Text = Convert.ToString(b);
-
-
-						d = Convert.ToInt32(label25.Text);
-						timer14.Enabled = true;
-						timer16.Enabled = false;
-						label38.Text = label28.Text;
-						Timeg = 0;
-						timer16.Enabled = true;
-						label40.Text = label41.Text;
-						label41.Text = label39.Text;
-						label39.Text = label38.Text;
-						label25.Text = Convert.ToString(d);
-						textBox15.Text = "0";
-
-						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-						{
-							label44.Text = label38.Text;
-
-						}
-
-						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-						{
-							label43.Text = label37.Text;
-
-						}
-
-						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-						{
-							label42.Text = label29.Text;
-
-						}
-						break;
-					}
-				case 01100:
-					{
-						i = Convert.ToInt32(label17.Text);          //червона доріжка + зелена + оранжева
-						timer10.Enabled = true;
-						timer11.Enabled = false;
-						label18.Text = label21.Text;
-						Time = 0;
-						timer11.Enabled = true;
-						label20.Text = label19.Text;
-						label19.Text = label22.Text;
-						label22.Text = label18.Text;
-						label17.Text = Convert.ToString(i);
-
-
-						b = Convert.ToInt32(label23.Text);
-						timer12.Enabled = true;
-						timer15.Enabled = false;
-						label37.Text = label26.Text;
-						Times = 0;
-						timer15.Enabled = true;
-						label35.Text = label36.Text;
-						label36.Text = label34.Text;
-						label34.Text = label37.Text;
-						label23.Text = Convert.ToString(b);
-
-						d = Convert.ToInt32(label25.Text);
-						timer14.Enabled = true;
-						timer16.Enabled = false;
-						label38.Text = label28.Text;
-						Timeg = 0;
-						timer16.Enabled = true;
-						label40.Text = label41.Text;
-						label41.Text = label39.Text;
-						label39.Text = label38.Text;
-						label25.Text = Convert.ToString(d);
-						textBox15.Text = "0";
-
-						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-						{
-							label44.Text = label38.Text;
-
-						}
-
-
-						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-						{
-							label43.Text = label37.Text;
-
-						}
-
-						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-						{
-							label16.Text = label18.Text;
-
-						}
-						break;
-					}
-				case 01011:
-					{
-						i = Convert.ToInt32(label17.Text);          //червона  + біла+ оранжева доріжка
-						timer10.Enabled = true;
-						timer11.Enabled = false;
-						label18.Text = label21.Text;
-						Time = 0;
-						timer11.Enabled = true;
-						label20.Text = label19.Text;
-						label19.Text = label22.Text;
-						label22.Text = label18.Text;
-						label17.Text = Convert.ToString(i);
-
-
-						c = Convert.ToInt32(label24.Text);
-						timer13.Enabled = true;
-						timer17.Enabled = false;
-						label29.Text = label27.Text;
-						Timez = 0;
-						timer17.Enabled = true;
-						label31.Text = label32.Text;
-						label32.Text = label30.Text;
-						label30.Text = label29.Text;
-						label24.Text = Convert.ToString(c);
-
-						d = Convert.ToInt32(label25.Text);
-						timer14.Enabled = true;
-						timer16.Enabled = false;
-						label38.Text = label28.Text;
-						Timeg = 0;
-						timer16.Enabled = true;
-						label40.Text = label41.Text;
-						label41.Text = label39.Text;
-						label39.Text = label38.Text;
-						label25.Text = Convert.ToString(d);
-						textBox15.Text = "0";
-
-						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-						{
-							label44.Text = label38.Text;
-
-						}
-
-
-						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-						{
-							label42.Text = label29.Text;
-
-						}
-
-						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-						{
-							label16.Text = label18.Text;
-
-						}
-						break;
-					}
-
-
-				case 01010:                                     // біла + зелена доріжка
-					{
-						c = Convert.ToInt32(label24.Text);
-						timer13.Enabled = true;
-						timer17.Enabled = false;
-						label29.Text = label27.Text;
-						Timez = 0;
-						timer17.Enabled = true;
-						label31.Text = label32.Text;
-						label32.Text = label30.Text;
-						label30.Text = label29.Text;
-						label24.Text = Convert.ToString(c);
-
-
-						b = Convert.ToInt32(label23.Text);
-						timer12.Enabled = true;
-						timer15.Enabled = false;
-						label37.Text = label26.Text;
-						Times = 0;
-						timer15.Enabled = true;
-						label35.Text = label36.Text;
-						label36.Text = label34.Text;
-						label34.Text = label37.Text;
-						label23.Text = Convert.ToString(b);
-						textBox15.Text = "0";
-
-
-						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-						{
-							label43.Text = label37.Text;
-
-						}
-
-						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-						{
-							label42.Text = label29.Text;
-
-						}
-						break;
-					}
-				case 01001: // оранжева + зелена доріжка
-					{
-
-						d = Convert.ToInt32(label25.Text);
-						timer14.Enabled = true;
-						timer16.Enabled = false;
-						label38.Text = label28.Text;
-						Timeg = 0;
-						timer16.Enabled = true;
-						label40.Text = label41.Text;
-						label41.Text = label39.Text;
-						label39.Text = label38.Text;
-						label25.Text = Convert.ToString(d);
-
-
-
-						b = Convert.ToInt32(label23.Text);
-						timer12.Enabled = true;
-						timer15.Enabled = false;
-						label37.Text = label26.Text;
-						Times = 0;
-						timer15.Enabled = true;
-						label35.Text = label36.Text;
-						label36.Text = label34.Text;
-						label34.Text = label37.Text;
-						label23.Text = Convert.ToString(b);
-						textBox15.Text = "0";
-
-
-						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-						{
-							label43.Text = label37.Text;
-
-						}
-
-						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-						{
-							label44.Text = label38.Text;
-
-						}
-						break;
-					}
-				case 01000:
-					{
-						i = Convert.ToInt32(label17.Text);          //червона доріжка + зелена
-						timer10.Enabled = true;
-						timer11.Enabled = false;
-						label18.Text = label21.Text;
-						Time = 0;
-						timer11.Enabled = true;
-						label20.Text = label19.Text;
-						label19.Text = label22.Text;
-						label22.Text = label18.Text;
-						label17.Text = Convert.ToString(i);
-
-
-						b = Convert.ToInt32(label23.Text);
-						timer12.Enabled = true;
-						timer15.Enabled = false;
-						label37.Text = label26.Text;
-						Times = 0;
-						timer15.Enabled = true;
-						label35.Text = label36.Text;
-						label36.Text = label34.Text;
-						label34.Text = label37.Text;
-						label23.Text = Convert.ToString(b);
-						textBox15.Text = "0";
-
-
-						if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-						{
-							label43.Text = label37.Text;
-
-						}
-
-						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-						{
-							label16.Text = label18.Text;
-
-						}
-						break;
-					}
-				case 0111:
-					{
-						i = Convert.ToInt32(label17.Text);          //червона + оранжева доріжка
-						timer10.Enabled = true;
-						timer11.Enabled = false;
-						label18.Text = label21.Text;
-						Time = 0;
-						timer11.Enabled = true;
-						label20.Text = label19.Text;
-						label19.Text = label22.Text;
-						label22.Text = label18.Text;
-						label17.Text = Convert.ToString(i);
-
-
-						d = Convert.ToInt32(label25.Text);
-						timer14.Enabled = true;
-						timer16.Enabled = false;
-						label38.Text = label28.Text;
-						Timeg = 0;
-						timer16.Enabled = true;
-						label40.Text = label41.Text;
-						label41.Text = label39.Text;
-						label39.Text = label38.Text;
-						label25.Text = Convert.ToString(d);
-						textBox15.Text = "0";
-
-						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-						{
-							label44.Text = label38.Text;
-
-						}
-
-						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-						{
-							label16.Text = label18.Text;
-
-						}
-						break;
-					}
-				case 0110:
-					{
-						i = Convert.ToInt32(label17.Text);          //червона + біла доріжка
-						c = Convert.ToInt32(label24.Text);
-
-						timer10.Enabled = true;
-						timer11.Enabled = false;
-						label18.Text = label21.Text;
-						Time = 0;
-						timer11.Enabled = true;
-						label20.Text = label19.Text;
-						label19.Text = label22.Text;
-						label22.Text = label18.Text;
-						label17.Text = Convert.ToString(i);
-
-
-
-
-
-
-						timer13.Enabled = true;
-						timer17.Enabled = false;
-						label29.Text = label27.Text;
-						Timez = 0;
-						timer17.Enabled = true;
-						label31.Text = label32.Text;
-						label32.Text = label30.Text;
-						label30.Text = label29.Text;
-						label24.Text = Convert.ToString(c);
-						textBox15.Text = "0";
-
-						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-						{
-							label42.Text = label29.Text;
-
-						}
-
-						if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-						{
-							label16.Text = label18.Text;
-
-						}
-						break;
-					}
-				case 0101:                              // оранжева + біла
-					{
-						d = Convert.ToInt32(label25.Text);
-						c = Convert.ToInt32(label24.Text);
-						timer14.Enabled = true;
-						timer13.Enabled = true;
-						timer16.Enabled = false;
-						timer17.Enabled = false;
-						label38.Text = label28.Text;
-						label29.Text = label27.Text;
-						Timeg = 0;
-						Timez = 0;
-						timer16.Enabled = true;
-						timer17.Enabled = true;
-						label40.Text = label41.Text;
-						label31.Text = label32.Text;
-						label41.Text = label39.Text;
-						label32.Text = label30.Text;
-						label39.Text = label38.Text;
-						label30.Text = label29.Text;
-						label25.Text = Convert.ToString(d);
-						label24.Text = Convert.ToString(c);
-						textBox15.Text = "0";
-
-
-
-						if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-						{
-							label42.Text = label29.Text;
-
-						}
-
-						if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-						{
-							label44.Text = label38.Text;
-
-						}
-						break;
-
-					}
-				
+				//case 01111://// білан + зелена+ оранжева+Червона доріжка
+				//	{
+				//		c = Convert.ToInt32(label24.Text);
+				//		timer13.Enabled = true;
+				//		timer17.Enabled = false;
+				//		label29.Text = label27.Text;
+				//		Timez = 0;
+				//		timer17.Enabled = true;
+				//		label31.Text = label32.Text;
+				//		label32.Text = label30.Text;
+				//		label30.Text = label29.Text;
+				//		label24.Text = Convert.ToString(c);
+
+
+				//		b = Convert.ToInt32(label23.Text);
+				//		timer12.Enabled = true;
+				//		timer15.Enabled = false;
+				//		label37.Text = label26.Text;
+				//		Times = 0;
+				//		timer15.Enabled = true;
+				//		label35.Text = label36.Text;
+				//		label36.Text = label34.Text;
+				//		label34.Text = label37.Text;
+				//		label23.Text = Convert.ToString(b);
+
+
+				//		d = Convert.ToInt32(label25.Text);
+				//		timer14.Enabled = true;
+				//		timer16.Enabled = false;
+				//		label38.Text = label28.Text;
+				//		Timeg = 0;
+				//		timer16.Enabled = true;
+				//		label40.Text = label41.Text;
+				//		label41.Text = label39.Text;
+				//		label39.Text = label38.Text;
+				//		label25.Text = Convert.ToString(d);
+
+				//		i = Convert.ToInt32(label17.Text);
+				//		timer10.Enabled = true;
+				//		timer11.Enabled = false;
+				//		label18.Text = label21.Text;
+				//		Time = 0;
+				//		timer11.Enabled = true;
+				//		label20.Text = label19.Text;
+				//		label19.Text = label22.Text;
+				//		label22.Text = label18.Text;
+				//		label17.Text = Convert.ToString(i);
+				//		textBox15.Text = "0";
+
+				//		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+				//		{
+				//			label16.Text = label18.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+				//		{
+				//			label44.Text = label38.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+				//		{
+				//			label43.Text = label37.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+				//		{
+				//			label42.Text = label29.Text;
+
+				//		}
+				//		break;
+				//	}
+				//case 01110:         // біла + зелена+ оранжева доріжка
+				//	{
+				//		c = Convert.ToInt32(label24.Text);
+				//		timer13.Enabled = true;
+				//		timer17.Enabled = false;
+				//		label29.Text = label27.Text;
+				//		Timez = 0;
+				//		timer17.Enabled = true;
+				//		label31.Text = label32.Text;
+				//		label32.Text = label30.Text;
+				//		label30.Text = label29.Text;
+				//		label24.Text = Convert.ToString(c);
+
+
+				//		b = Convert.ToInt32(label23.Text);
+				//		timer12.Enabled = true;
+				//		timer15.Enabled = false;
+				//		label37.Text = label26.Text;
+				//		Times = 0;
+				//		timer15.Enabled = true;
+				//		label35.Text = label36.Text;
+				//		label36.Text = label34.Text;
+				//		label34.Text = label37.Text;
+				//		label23.Text = Convert.ToString(b);
+
+
+				//		d = Convert.ToInt32(label25.Text);
+				//		timer14.Enabled = true;
+				//		timer16.Enabled = false;
+				//		label38.Text = label28.Text;
+				//		Timeg = 0;
+				//		timer16.Enabled = true;
+				//		label40.Text = label41.Text;
+				//		label41.Text = label39.Text;
+				//		label39.Text = label38.Text;
+				//		label25.Text = Convert.ToString(d);
+				//		textBox15.Text = "0";
+
+				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+				//		{
+				//			label44.Text = label38.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+				//		{
+				//			label43.Text = label37.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+				//		{
+				//			label42.Text = label29.Text;
+
+				//		}
+				//		break;
+				//	}
+				//case 01100:
+				//	{
+				//		i = Convert.ToInt32(label17.Text);          //червона доріжка + зелена + оранжева
+				//		timer10.Enabled = true;
+				//		timer11.Enabled = false;
+				//		label18.Text = label21.Text;
+				//		Time = 0;
+				//		timer11.Enabled = true;
+				//		label20.Text = label19.Text;
+				//		label19.Text = label22.Text;
+				//		label22.Text = label18.Text;
+				//		label17.Text = Convert.ToString(i);
+
+
+				//		b = Convert.ToInt32(label23.Text);
+				//		timer12.Enabled = true;
+				//		timer15.Enabled = false;
+				//		label37.Text = label26.Text;
+				//		Times = 0;
+				//		timer15.Enabled = true;
+				//		label35.Text = label36.Text;
+				//		label36.Text = label34.Text;
+				//		label34.Text = label37.Text;
+				//		label23.Text = Convert.ToString(b);
+
+				//		d = Convert.ToInt32(label25.Text);
+				//		timer14.Enabled = true;
+				//		timer16.Enabled = false;
+				//		label38.Text = label28.Text;
+				//		Timeg = 0;
+				//		timer16.Enabled = true;
+				//		label40.Text = label41.Text;
+				//		label41.Text = label39.Text;
+				//		label39.Text = label38.Text;
+				//		label25.Text = Convert.ToString(d);
+				//		textBox15.Text = "0";
+
+				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+				//		{
+				//			label44.Text = label38.Text;
+
+				//		}
+
+
+				//		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+				//		{
+				//			label43.Text = label37.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+				//		{
+				//			label16.Text = label18.Text;
+
+				//		}
+				//		break;
+				//	}
+				//case 01011:
+				//	{
+				//		i = Convert.ToInt32(label17.Text);          //червона  + біла+ оранжева доріжка
+				//		timer10.Enabled = true;
+				//		timer11.Enabled = false;
+				//		label18.Text = label21.Text;
+				//		Time = 0;
+				//		timer11.Enabled = true;
+				//		label20.Text = label19.Text;
+				//		label19.Text = label22.Text;
+				//		label22.Text = label18.Text;
+				//		label17.Text = Convert.ToString(i);
+
+
+				//		c = Convert.ToInt32(label24.Text);
+				//		timer13.Enabled = true;
+				//		timer17.Enabled = false;
+				//		label29.Text = label27.Text;
+				//		Timez = 0;
+				//		timer17.Enabled = true;
+				//		label31.Text = label32.Text;
+				//		label32.Text = label30.Text;
+				//		label30.Text = label29.Text;
+				//		label24.Text = Convert.ToString(c);
+
+				//		d = Convert.ToInt32(label25.Text);
+				//		timer14.Enabled = true;
+				//		timer16.Enabled = false;
+				//		label38.Text = label28.Text;
+				//		Timeg = 0;
+				//		timer16.Enabled = true;
+				//		label40.Text = label41.Text;
+				//		label41.Text = label39.Text;
+				//		label39.Text = label38.Text;
+				//		label25.Text = Convert.ToString(d);
+				//		textBox15.Text = "0";
+
+				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+				//		{
+				//			label44.Text = label38.Text;
+
+				//		}
+
+
+				//		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+				//		{
+				//			label42.Text = label29.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+				//		{
+				//			label16.Text = label18.Text;
+
+				//		}
+				//		break;
+				//	}
+
+
+				//case 01010:                                     // біла + зелена доріжка
+				//	{
+				//		c = Convert.ToInt32(label24.Text);
+				//		timer13.Enabled = true;
+				//		timer17.Enabled = false;
+				//		label29.Text = label27.Text;
+				//		Timez = 0;
+				//		timer17.Enabled = true;
+				//		label31.Text = label32.Text;
+				//		label32.Text = label30.Text;
+				//		label30.Text = label29.Text;
+				//		label24.Text = Convert.ToString(c);
+
+
+				//		b = Convert.ToInt32(label23.Text);
+				//		timer12.Enabled = true;
+				//		timer15.Enabled = false;
+				//		label37.Text = label26.Text;
+				//		Times = 0;
+				//		timer15.Enabled = true;
+				//		label35.Text = label36.Text;
+				//		label36.Text = label34.Text;
+				//		label34.Text = label37.Text;
+				//		label23.Text = Convert.ToString(b);
+				//		textBox15.Text = "0";
+
+
+				//		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+				//		{
+				//			label43.Text = label37.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+				//		{
+				//			label42.Text = label29.Text;
+
+				//		}
+				//		break;
+				//	}
+				//case 01001: // оранжева + зелена доріжка
+				//	{
+
+				//		d = Convert.ToInt32(label25.Text);
+				//		timer14.Enabled = true;
+				//		timer16.Enabled = false;
+				//		label38.Text = label28.Text;
+				//		Timeg = 0;
+				//		timer16.Enabled = true;
+				//		label40.Text = label41.Text;
+				//		label41.Text = label39.Text;
+				//		label39.Text = label38.Text;
+				//		label25.Text = Convert.ToString(d);
+
+
+
+				//		b = Convert.ToInt32(label23.Text);
+				//		timer12.Enabled = true;
+				//		timer15.Enabled = false;
+				//		label37.Text = label26.Text;
+				//		Times = 0;
+				//		timer15.Enabled = true;
+				//		label35.Text = label36.Text;
+				//		label36.Text = label34.Text;
+				//		label34.Text = label37.Text;
+				//		label23.Text = Convert.ToString(b);
+				//		textBox15.Text = "0";
+
+
+				//		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+				//		{
+				//			label43.Text = label37.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+				//		{
+				//			label44.Text = label38.Text;
+
+				//		}
+				//		break;
+				//	}
+				//case 01000:
+				//	{
+				//		i = Convert.ToInt32(label17.Text);          //червона доріжка + зелена
+				//		timer10.Enabled = true;
+				//		timer11.Enabled = false;
+				//		label18.Text = label21.Text;
+				//		Time = 0;
+				//		timer11.Enabled = true;
+				//		label20.Text = label19.Text;
+				//		label19.Text = label22.Text;
+				//		label22.Text = label18.Text;
+				//		label17.Text = Convert.ToString(i);
+
+
+				//		b = Convert.ToInt32(label23.Text);
+				//		timer12.Enabled = true;
+				//		timer15.Enabled = false;
+				//		label37.Text = label26.Text;
+				//		Times = 0;
+				//		timer15.Enabled = true;
+				//		label35.Text = label36.Text;
+				//		label36.Text = label34.Text;
+				//		label34.Text = label37.Text;
+				//		label23.Text = Convert.ToString(b);
+				//		textBox15.Text = "0";
+
+
+				//		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+				//		{
+				//			label43.Text = label37.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+				//		{
+				//			label16.Text = label18.Text;
+
+				//		}
+				//		break;
+				//	}
+				//case 0111:
+				//	{
+				//		i = Convert.ToInt32(label17.Text);          //червона + оранжева доріжка
+				//		timer10.Enabled = true;
+				//		timer11.Enabled = false;
+				//		label18.Text = label21.Text;
+				//		Time = 0;
+				//		timer11.Enabled = true;
+				//		label20.Text = label19.Text;
+				//		label19.Text = label22.Text;
+				//		label22.Text = label18.Text;
+				//		label17.Text = Convert.ToString(i);
+
+
+				//		d = Convert.ToInt32(label25.Text);
+				//		timer14.Enabled = true;
+				//		timer16.Enabled = false;
+				//		label38.Text = label28.Text;
+				//		Timeg = 0;
+				//		timer16.Enabled = true;
+				//		label40.Text = label41.Text;
+				//		label41.Text = label39.Text;
+				//		label39.Text = label38.Text;
+				//		label25.Text = Convert.ToString(d);
+				//		textBox15.Text = "0";
+
+				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+				//		{
+				//			label44.Text = label38.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+				//		{
+				//			label16.Text = label18.Text;
+
+				//		}
+				//		break;
+				//	}
+				//case 0110:
+				//	{
+				//		i = Convert.ToInt32(label17.Text);          //червона + біла доріжка
+				//		c = Convert.ToInt32(label24.Text);
+
+				//		timer10.Enabled = true;
+				//		timer11.Enabled = false;
+				//		label18.Text = label21.Text;
+				//		Time = 0;
+				//		timer11.Enabled = true;
+				//		label20.Text = label19.Text;
+				//		label19.Text = label22.Text;
+				//		label22.Text = label18.Text;
+				//		label17.Text = Convert.ToString(i);
+
+
+
+
+
+
+				//		timer13.Enabled = true;
+				//		timer17.Enabled = false;
+				//		label29.Text = label27.Text;
+				//		Timez = 0;
+				//		timer17.Enabled = true;
+				//		label31.Text = label32.Text;
+				//		label32.Text = label30.Text;
+				//		label30.Text = label29.Text;
+				//		label24.Text = Convert.ToString(c);
+				//		textBox15.Text = "0";
+
+				//		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+				//		{
+				//			label42.Text = label29.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+				//		{
+				//			label16.Text = label18.Text;
+
+				//		}
+				//		break;
+				//	}
+				//case 0101:                              // оранжева + біла
+				//	{
+				//		d = Convert.ToInt32(label25.Text);
+				//		c = Convert.ToInt32(label24.Text);
+				//		timer14.Enabled = true;
+				//		timer13.Enabled = true;
+				//		timer16.Enabled = false;
+				//		timer17.Enabled = false;
+				//		label38.Text = label28.Text;
+				//		label29.Text = label27.Text;
+				//		Timeg = 0;
+				//		Timez = 0;
+				//		timer16.Enabled = true;
+				//		timer17.Enabled = true;
+				//		label40.Text = label41.Text;
+				//		label31.Text = label32.Text;
+				//		label41.Text = label39.Text;
+				//		label32.Text = label30.Text;
+				//		label39.Text = label38.Text;
+				//		label30.Text = label29.Text;
+				//		label25.Text = Convert.ToString(d);
+				//		label24.Text = Convert.ToString(c);
+				//		textBox15.Text = "0";
+
+
+
+				//		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+				//		{
+				//			label42.Text = label29.Text;
+
+				//		}
+
+				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+				//		{
+				//			label44.Text = label38.Text;
+
+				//		}
+				//		break;
+
+				//	}
+
 				case 0:
 					{
 
 						break;
 					}
 
-                case 011111111:
-                    {
+				case 011111111:
+					{
 
 
-                        button6.PerformClick();
-                        textBox15.Text = "0";
-                       
-                    }
-						break;
-                case 010111111:
-                    {
-                        button7.PerformClick();
-                        textBox15.Text = "0";
-                       
-                    }
-						break;
-                default:
+						button6.PerformClick();
+						textBox15.Text = "0";
+
+					}
+					break;
+				case 010111111:
+					{
+						button7.PerformClick();
+						textBox15.Text = "0";
+
+					}
+					break;
+				default:
 					{
 						textBox15.Text = "0";
 						break;
@@ -13696,424 +12840,125 @@ namespace zase4kak
 		}
 		private void timer12_Tick(object sender, EventArgs e)
 		{
+			if (Convert.ToDouble(label37.Text) > delay)
+			{
+				b++;                                            //добавляю кола 1 доріці
+				label23.Text = Convert.ToString(b);
 
-			b++;                                            //добавляю кола 1 доріці
-			label23.Text = Convert.ToString(b);
 
-
-			// алгоритм прогнозу
-			if(label15.Text == "1/6")
-            {
-
-      
-			double masuv, kola, seredniychas, prognoz;
-			kola = Convert.ToDouble(label37.Text);
-			masuv = Convert.ToDouble(label117.Text);
-			seredniychas3 = Convert.ToDouble(label58.Text);
-			kola = (kola + masuv);
-			label117.Text = Convert.ToString(kola);
-			seredniychas3 = kola / Convert.ToDouble(label23.Text);
-            }
-            else
-            {
-				if (label15.Text == "2/6")
+				// алгоритм прогнозу
+				if (label15.Text == "1/6")
 				{
 
 
 					double masuv, kola, seredniychas, prognoz;
 					kola = Convert.ToDouble(label37.Text);
 					masuv = Convert.ToDouble(label117.Text);
-					seredniychas1 = Convert.ToDouble(label58.Text);
+					seredniychas3 = Convert.ToDouble(label58.Text);
 					kola = (kola + masuv);
 					label117.Text = Convert.ToString(kola);
-					seredniychas1 = kola / Convert.ToDouble(label23.Text);
-                }
-                else
-                {
-					if (label15.Text == "3/6")
+					seredniychas3 = kola / Convert.ToDouble(label23.Text);
+				}
+				else
+				{
+					if (label15.Text == "2/6")
 					{
 
 
 						double masuv, kola, seredniychas, prognoz;
 						kola = Convert.ToDouble(label37.Text);
 						masuv = Convert.ToDouble(label117.Text);
-						seredniychas6 = Convert.ToDouble(label58.Text);
+						seredniychas1 = Convert.ToDouble(label58.Text);
 						kola = (kola + masuv);
 						label117.Text = Convert.ToString(kola);
-						seredniychas6 = kola / Convert.ToDouble(label23.Text);
-                    }
-                    else
-                    {
-						if (label15.Text == "4/6")
+						seredniychas1 = kola / Convert.ToDouble(label23.Text);
+					}
+					else
+					{
+						if (label15.Text == "3/6")
 						{
 
 
 							double masuv, kola, seredniychas, prognoz;
 							kola = Convert.ToDouble(label37.Text);
 							masuv = Convert.ToDouble(label117.Text);
-							seredniychas4 = Convert.ToDouble(label58.Text);
+							seredniychas6 = Convert.ToDouble(label58.Text);
 							kola = (kola + masuv);
 							label117.Text = Convert.ToString(kola);
-							seredniychas4 = kola / Convert.ToDouble(label23.Text);
-                        }
-                        else
-                        {
-							if (label15.Text == "5/6")
+							seredniychas6 = kola / Convert.ToDouble(label23.Text);
+						}
+						else
+						{
+							if (label15.Text == "4/6")
 							{
 
 
 								double masuv, kola, seredniychas, prognoz;
 								kola = Convert.ToDouble(label37.Text);
 								masuv = Convert.ToDouble(label117.Text);
-								seredniychas2 = Convert.ToDouble(label58.Text);
+								seredniychas4 = Convert.ToDouble(label58.Text);
 								kola = (kola + masuv);
 								label117.Text = Convert.ToString(kola);
-								seredniychas2 = kola / Convert.ToDouble(label23.Text);
-                            }
-                            else
-                            {
-								if (label15.Text == "6/6")
+								seredniychas4 = kola / Convert.ToDouble(label23.Text);
+							}
+							else
+							{
+								if (label15.Text == "5/6")
 								{
 
 
 									double masuv, kola, seredniychas, prognoz;
 									kola = Convert.ToDouble(label37.Text);
 									masuv = Convert.ToDouble(label117.Text);
-									seredniychas5 = Convert.ToDouble(label58.Text);
+									seredniychas2 = Convert.ToDouble(label58.Text);
 									kola = (kola + masuv);
 									label117.Text = Convert.ToString(kola);
-									seredniychas5 = kola / Convert.ToDouble(label23.Text);
+									seredniychas2 = kola / Convert.ToDouble(label23.Text);
 								}
-							}
-						}
-					}
-				}
-			}
-
-
-			// сортування по результату
-			dataGridView3.Rows.Add(label17.Text + "," + 6);
-			dataGridView3.Rows.Add(label24.Text + "," + 5);
-			dataGridView3.Rows.Add(label23.Text + "," + 4);
-			dataGridView3.Rows.Add(label25.Text + "," + 3);
-			dataGridView3.Rows.Add(label97.Text + "," + 2);
-			dataGridView3.Rows.Add(label112.Text + "," + 1);
-
-			dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
-
-
-
-
-			// підсвітка під час кола
-			textBox9.BackColor = Color.LawnGreen;
-			label23.BackColor = Color.LawnGreen;
-			timer37.Enabled = true;
-
-
-
-
-			//червона
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel1.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel1.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel1.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel1.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel1.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								else
 								{
+									if (label15.Text == "6/6")
+									{
 
-									panel1.Location = new Point(4, 731);
+
+										double masuv, kola, seredniychas, prognoz;
+										kola = Convert.ToDouble(label37.Text);
+										masuv = Convert.ToDouble(label117.Text);
+										seredniychas5 = Convert.ToDouble(label58.Text);
+										kola = (kola + masuv);
+										label117.Text = Convert.ToString(kola);
+										seredniychas5 = kola / Convert.ToDouble(label23.Text);
+									}
 								}
 							}
 						}
 					}
 				}
 
-			}
 
 
 
-			// біла
 
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel3.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+				// підсвітка під час кола
+				textBox9.BackColor = Color.LawnGreen;
+				label23.BackColor = Color.LawnGreen;
+				timer37.Enabled = true;
+
+
+
+
+
+				timer34.Enabled = true;
+
+				if (Convert.ToDouble(label34.Text) < 1)         //обмеження по часу кола 1 секунда
 				{
-
-					panel3.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel3.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel3.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label24.Text + "," + 5))//&& Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel3.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel3.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
+					b--;
+					label23.Text = Convert.ToString(b);
 				}
 
+				timer12.Enabled = false;
 			}
 
-			// зелена
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel4.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel4.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel4.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel4.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel4.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel4.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-			//оранжева 
-
-
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
-			{
-				panel5.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel5.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel5.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel5.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel5.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label25.Text + "," + 3))//&& Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel5.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-			//синя
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label97.Text + "," + 2))//&& Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-			{
-				panel10.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-				{
-
-					panel10.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-					{
-
-						panel10.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-						{
-
-							panel10.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-							{
-
-								panel10.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label97.Text + "," + 2))// && Convert.ToInt32(label97.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label97.Text) != Convert.ToInt32(label112.Text))
-								{
-
-									panel10.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-
-
-			//жовта
-
-			if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-			{
-				panel11.Location = new Point(4, 219);
-			}
-			else
-			{
-				if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label112.Text + "," + 1))// && Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-				{
-
-					panel11.Location = new Point(4, 321);
-				}
-				else
-				{
-					if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-					{
-
-						panel11.Location = new Point(4, 423);
-					}
-					else
-					{
-						if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-						{
-
-							panel11.Location = new Point(4, 525);
-						}
-						else
-						{
-							if (Convert.ToDouble(dataGridView3[0, 4].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-							{
-
-								panel11.Location = new Point(4, 628);
-							}
-							else
-							{
-								if (Convert.ToDouble(dataGridView3[0, 5].Value) == Convert.ToDouble(label112.Text + "," + 1))// Convert.ToInt32(label112.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label112.Text) != Convert.ToInt32(label97.Text))
-								{
-
-									panel11.Location = new Point(4, 731);
-								}
-							}
-						}
-					}
-				}
-
-			}
-			timer34.Enabled = true;
-
-			if (Convert.ToDouble(label34.Text) < 1)         //обмеження по часу кола 1 секунда
-			{
-				b--;
-				label23.Text = Convert.ToString(b);
-			}
-
-			timer12.Enabled = false;
 		}
-
-	}
+	} 
 }

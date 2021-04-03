@@ -1426,6 +1426,19 @@ namespace zase4kak
 
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+        if (label101.Text == "<<Кваліфікація>>")
+            {
+                sec = 3;
+            }
+
+        if (label101.Text == "<<Заміна пілота>>")
+            {
+                psec = 3;
+            }
+        }
+
         private void button7_Click(object sender, EventArgs e)
         {
             Form6 f6 = new Form6();
@@ -1790,7 +1803,10 @@ namespace zase4kak
                         break;
                        
 
-                    case 10:
+                    
+
+
+
                         textBox66.BackColor = Color.Lime;
                         textBox10.Text = label56.Text;
                         textBox42.Text = label55.Text;

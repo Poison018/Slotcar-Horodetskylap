@@ -156,5 +156,83 @@ namespace zase4ka.Properties {
                 this["line6_6"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int delay1 {
+            get {
+                return ((int)(this["delay1"]));
+            }
+            set {
+                this["delay1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color color_delay {
+            get {
+                return ((global::System.Drawing.Color)(this["color_delay"]));
+            }
+            set {
+                this["color_delay"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color color_delay1 {
+            get {
+                return ((global::System.Drawing.Color)(this["color_delay1"]));
+            }
+            set {
+                this["color_delay1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color color_delay2 {
+            get {
+                return ((global::System.Drawing.Color)(this["color_delay2"]));
+            }
+            set {
+                this["color_delay2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color color_delay3 {
+            get {
+                return ((global::System.Drawing.Color)(this["color_delay3"]));
+            }
+            set {
+                this["color_delay3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color color_delay4 {
+            get {
+                return ((global::System.Drawing.Color)(this["color_delay4"]));
+            }
+            set {
+                this["color_delay4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color color_delay5 {
+            get {
+                return ((global::System.Drawing.Color)(this["color_delay5"]));
+            }
+            set {
+                this["color_delay5"] = value;
+            }
+        }
     }
 }

@@ -33,11 +33,7 @@ namespace zase4kak
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
             this.timer22 = new System.Windows.Forms.Timer(this.components);
             this.timer21 = new System.Windows.Forms.Timer(this.components);
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -59,8 +55,6 @@ namespace zase4kak
             this.label67 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer10 = new System.Windows.Forms.Timer(this.components);
             this.timer12 = new System.Windows.Forms.Timer(this.components);
             this.button7 = new System.Windows.Forms.Button();
@@ -350,6 +344,19 @@ namespace zase4kak
             this.timer42 = new System.Windows.Forms.Timer(this.components);
             this.timer43 = new System.Windows.Forms.Timer(this.components);
             this.timer44 = new System.Windows.Forms.Timer(this.components);
+            this.timer45 = new System.Windows.Forms.Timer(this.components);
+            this.timer46 = new System.Windows.Forms.Timer(this.components);
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -376,46 +383,19 @@ namespace zase4kak
             this.timer21.Tag = "таймер для зміни учасників групи";
             this.timer21.Tick += new System.EventHandler(this.timer21_Tick);
             // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Результат";
-            this.Column2.MaxInputLength = 300;
-            this.Column2.Name = "Column2";
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            this.dataGridView2.Location = new System.Drawing.Point(1362, 858);
+            this.dataGridView2.Location = new System.Drawing.Point(1360, 859);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(417, 197);
+            this.dataGridView2.Size = new System.Drawing.Size(329, 197);
             this.dataGridView2.TabIndex = 130;
             this.dataGridView2.Visible = false;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.dataGridView2.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView2_SortCompare);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Доріжка";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Спортсмен";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.Width = 180;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Результат";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // textBox25
             // 
@@ -639,28 +619,14 @@ namespace zase4kak
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column4,
             this.Column1,
             this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(1360, 858);
+            this.dataGridView1.Location = new System.Drawing.Point(1360, 853);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(417, 197);
+            this.dataGridView1.Size = new System.Drawing.Size(329, 197);
             this.dataGridView1.TabIndex = 110;
             this.dataGridView1.Visible = false;
             this.dataGridView1.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView1_SortCompare_2);
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Доріжка";
-            this.Column4.Name = "Column4";
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Спортсмен";
-            this.Column1.Name = "Column1";
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 180;
             // 
             // timer10
             // 
@@ -737,7 +703,7 @@ namespace zase4kak
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(518, 962);
+            this.button5.Location = new System.Drawing.Point(518, 996);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 37);
             this.button5.TabIndex = 103;
@@ -1012,7 +978,8 @@ namespace zase4kak
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.кольориДоріжокToolStripMenuItem});
+            this.кольориДоріжокToolStripMenuItem,
+            this.toolStripMenuItem2});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(81, 20);
             this.toolStripMenuItem1.Text = "Параметри";
@@ -1027,7 +994,7 @@ namespace zase4kak
             this.доріжкаToolStripMenuItem4,
             this.доріжкаToolStripMenuItem5});
             this.кольориДоріжокToolStripMenuItem.Name = "кольориДоріжокToolStripMenuItem";
-            this.кольориДоріжокToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.кольориДоріжокToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.кольориДоріжокToolStripMenuItem.Text = "Кольори доріжок";
             // 
             // доріжкаToolStripMenuItem
@@ -1044,6 +1011,7 @@ namespace zase4kak
             this.доріжкаToolStripMenuItem.Name = "доріжкаToolStripMenuItem";
             this.доріжкаToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.доріжкаToolStripMenuItem.Text = "1 доріжка";
+            this.доріжкаToolStripMenuItem.Click += new System.EventHandler(this.доріжкаToolStripMenuItem_Click_1);
             // 
             // червонаToolStripMenuItem
             // 
@@ -1432,7 +1400,7 @@ namespace zase4kak
             this.label80.AutoSize = true;
             this.label80.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label80.Location = new System.Drawing.Point(1185, 25);
+            this.label80.Location = new System.Drawing.Point(1185, 26);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(160, 51);
             this.label80.TabIndex = 50;
@@ -1454,7 +1422,7 @@ namespace zase4kak
             this.label81.AutoSize = true;
             this.label81.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label81.Location = new System.Drawing.Point(1019, 22);
+            this.label81.Location = new System.Drawing.Point(1019, 26);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(160, 51);
             this.label81.TabIndex = 49;
@@ -1506,6 +1474,7 @@ namespace zase4kak
             this.label42.AutoSize = true;
             this.label42.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
+            this.label42.ForeColor = System.Drawing.Color.DarkGreen;
             this.label42.Location = new System.Drawing.Point(1575, 22);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(97, 51);
@@ -1712,7 +1681,7 @@ namespace zase4kak
             this.label82.AutoSize = true;
             this.label82.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label82.Location = new System.Drawing.Point(1347, 28);
+            this.label82.Location = new System.Drawing.Point(1347, 26);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(160, 51);
             this.label82.TabIndex = 54;
@@ -1724,7 +1693,7 @@ namespace zase4kak
             this.label83.AutoSize = true;
             this.label83.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label83.Location = new System.Drawing.Point(1185, 27);
+            this.label83.Location = new System.Drawing.Point(1185, 26);
             this.label83.Name = "label83";
             this.label83.Size = new System.Drawing.Size(160, 51);
             this.label83.TabIndex = 53;
@@ -1736,7 +1705,7 @@ namespace zase4kak
             this.label84.AutoSize = true;
             this.label84.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label84.Location = new System.Drawing.Point(1025, 24);
+            this.label84.Location = new System.Drawing.Point(1025, 26);
             this.label84.Name = "label84";
             this.label84.Size = new System.Drawing.Size(160, 51);
             this.label84.TabIndex = 52;
@@ -1788,6 +1757,7 @@ namespace zase4kak
             this.label43.AutoSize = true;
             this.label43.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
+            this.label43.ForeColor = System.Drawing.Color.DarkGreen;
             this.label43.Location = new System.Drawing.Point(1575, 26);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(97, 51);
@@ -1875,7 +1845,7 @@ namespace zase4kak
             // 
             this.textBox8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(1016, 12);
+            this.textBox8.Location = new System.Drawing.Point(1016, 7);
             this.textBox8.Margin = new System.Windows.Forms.Padding(1);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
@@ -2142,7 +2112,7 @@ namespace zase4kak
             this.label78.AutoSize = true;
             this.label78.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label78.Location = new System.Drawing.Point(1351, 16);
+            this.label78.Location = new System.Drawing.Point(1351, 26);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(160, 51);
             this.label78.TabIndex = 48;
@@ -2166,7 +2136,7 @@ namespace zase4kak
             this.label77.AutoSize = true;
             this.label77.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label77.Location = new System.Drawing.Point(1181, 19);
+            this.label77.Location = new System.Drawing.Point(1181, 26);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(160, 51);
             this.label77.TabIndex = 47;
@@ -2178,7 +2148,7 @@ namespace zase4kak
             this.label76.AutoSize = true;
             this.label76.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label76.Location = new System.Drawing.Point(1022, 24);
+            this.label76.Location = new System.Drawing.Point(1022, 26);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(160, 51);
             this.label76.TabIndex = 46;
@@ -2262,6 +2232,7 @@ namespace zase4kak
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.DarkGreen;
             this.label16.Location = new System.Drawing.Point(1575, 22);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(97, 51);
@@ -2440,7 +2411,7 @@ namespace zase4kak
             // textBox15
             // 
             this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(454, -927);
+            this.textBox15.Location = new System.Drawing.Point(471, -927);
             this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.MaxLength = 2000021;
             this.textBox15.Name = "textBox15";
@@ -2463,7 +2434,7 @@ namespace zase4kak
             this.label87.AutoSize = true;
             this.label87.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label87.Location = new System.Drawing.Point(1019, 19);
+            this.label87.Location = new System.Drawing.Point(1019, 26);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(160, 51);
             this.label87.TabIndex = 55;
@@ -2516,6 +2487,7 @@ namespace zase4kak
             this.label44.AutoSize = true;
             this.label44.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
+            this.label44.ForeColor = System.Drawing.Color.DarkGreen;
             this.label44.Location = new System.Drawing.Point(1571, 26);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(97, 51);
@@ -2561,7 +2533,7 @@ namespace zase4kak
             this.label86.AutoSize = true;
             this.label86.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label86.Location = new System.Drawing.Point(1185, 23);
+            this.label86.Location = new System.Drawing.Point(1185, 26);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(160, 51);
             this.label86.TabIndex = 56;
@@ -2603,7 +2575,7 @@ namespace zase4kak
             // 
             // timer4
             // 
-            this.timer4.Interval = 1000;
+            this.timer4.Interval = 300;
             this.timer4.Tag = "час 2 заїзду";
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
@@ -2615,7 +2587,7 @@ namespace zase4kak
             // 
             // timer6
             // 
-            this.timer6.Interval = 1000;
+            this.timer6.Interval = 300;
             this.timer6.Tag = "третя гонка";
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
@@ -2627,7 +2599,7 @@ namespace zase4kak
             // 
             // timer8
             // 
-            this.timer8.Interval = 1000;
+            this.timer8.Interval = 300;
             this.timer8.Tag = "четверта гонка";
             this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
             // 
@@ -2667,7 +2639,7 @@ namespace zase4kak
             this.label85.AutoSize = true;
             this.label85.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label85.Location = new System.Drawing.Point(1347, 22);
+            this.label85.Location = new System.Drawing.Point(1347, 26);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(160, 51);
             this.label85.TabIndex = 57;
@@ -2954,7 +2926,7 @@ namespace zase4kak
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(1347, 20);
+            this.label11.Location = new System.Drawing.Point(1347, 26);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(160, 51);
             this.label11.TabIndex = 57;
@@ -2966,7 +2938,7 @@ namespace zase4kak
             this.label72.AutoSize = true;
             this.label72.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label72.Location = new System.Drawing.Point(1185, 19);
+            this.label72.Location = new System.Drawing.Point(1185, 26);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(160, 51);
             this.label72.TabIndex = 56;
@@ -2987,7 +2959,7 @@ namespace zase4kak
             this.label74.AutoSize = true;
             this.label74.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label74.Location = new System.Drawing.Point(1025, 19);
+            this.label74.Location = new System.Drawing.Point(1025, 26);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(160, 51);
             this.label74.TabIndex = 55;
@@ -3038,6 +3010,7 @@ namespace zase4kak
             this.label92.AutoSize = true;
             this.label92.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
+            this.label92.ForeColor = System.Drawing.Color.DarkGreen;
             this.label92.Location = new System.Drawing.Point(1571, 26);
             this.label92.Name = "label92";
             this.label92.Size = new System.Drawing.Size(97, 51);
@@ -3160,7 +3133,7 @@ namespace zase4kak
             // 
             // timer2
             // 
-            this.timer2.Interval = 1000;
+            this.timer2.Interval = 300;
             this.timer2.Tag = "час 1 заїзду";
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
@@ -3190,13 +3163,13 @@ namespace zase4kak
             // 
             // timer30
             // 
-            this.timer30.Interval = 1000;
+            this.timer30.Interval = 300;
             this.timer30.Tag = "пята гонка";
             this.timer30.Tick += new System.EventHandler(this.timer30_Tick);
             // 
             // timer31
             // 
-            this.timer31.Interval = 1000;
+            this.timer31.Interval = 300;
             this.timer31.Tag = "шоста гонка";
             this.timer31.Tick += new System.EventHandler(this.timer31_Tick);
             // 
@@ -3307,7 +3280,7 @@ namespace zase4kak
             this.label109.AutoSize = true;
             this.label109.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label109.Location = new System.Drawing.Point(1347, 27);
+            this.label109.Location = new System.Drawing.Point(1347, 26);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(160, 51);
             this.label109.TabIndex = 44;
@@ -3331,6 +3304,7 @@ namespace zase4kak
             this.label107.AutoSize = true;
             this.label107.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
+            this.label107.ForeColor = System.Drawing.Color.DarkGreen;
             this.label107.Location = new System.Drawing.Point(1571, 26);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(97, 51);
@@ -3382,7 +3356,7 @@ namespace zase4kak
             this.label103.AutoSize = true;
             this.label103.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label103.Location = new System.Drawing.Point(1025, 19);
+            this.label103.Location = new System.Drawing.Point(1025, 26);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(160, 51);
             this.label103.TabIndex = 55;
@@ -3403,7 +3377,7 @@ namespace zase4kak
             this.label101.AutoSize = true;
             this.label101.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label101.Location = new System.Drawing.Point(1188, 19);
+            this.label101.Location = new System.Drawing.Point(1188, 26);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(160, 51);
             this.label101.TabIndex = 56;
@@ -3414,7 +3388,7 @@ namespace zase4kak
             this.label100.AutoSize = true;
             this.label100.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label100.Location = new System.Drawing.Point(1350, 20);
+            this.label100.Location = new System.Drawing.Point(1345, 26);
             this.label100.Name = "label100";
             this.label100.Size = new System.Drawing.Size(160, 51);
             this.label100.TabIndex = 57;
@@ -3570,31 +3544,37 @@ namespace zase4kak
             // timer35
             // 
             this.timer35.Interval = 300;
+            this.timer35.Tag = "підсвітка червона";
             this.timer35.Tick += new System.EventHandler(this.timer35_Tick);
             // 
             // timer36
             // 
             this.timer36.Interval = 300;
+            this.timer36.Tag = "підсвітка біла";
             this.timer36.Tick += new System.EventHandler(this.timer36_Tick);
             // 
             // timer37
             // 
             this.timer37.Interval = 300;
+            this.timer37.Tag = "підсвітка зелена";
             this.timer37.Tick += new System.EventHandler(this.timer37_Tick);
             // 
             // timer38
             // 
             this.timer38.Interval = 300;
+            this.timer38.Tag = "підсвітка оранжева";
             this.timer38.Tick += new System.EventHandler(this.timer38_Tick);
             // 
             // timer39
             // 
             this.timer39.Interval = 300;
+            this.timer39.Tag = "підсвітка синя";
             this.timer39.Tick += new System.EventHandler(this.timer39_Tick);
             // 
             // timer40
             // 
             this.timer40.Interval = 300;
+            this.timer40.Tag = "підсвітка жовта";
             this.timer40.Tick += new System.EventHandler(this.timer40_Tick);
             // 
             // textBox38
@@ -3605,6 +3585,7 @@ namespace zase4kak
             this.textBox38.Size = new System.Drawing.Size(122, 20);
             this.textBox38.TabIndex = 167;
             this.textBox38.Text = "0";
+            this.textBox38.Visible = false;
             // 
             // timer41
             // 
@@ -3628,6 +3609,100 @@ namespace zase4kak
             this.timer44.Interval = 1000;
             this.timer44.Tag = "timer для старту після паузи із затримкою";
             this.timer44.Tick += new System.EventHandler(this.timer44_Tick);
+            // 
+            // timer45
+            // 
+            this.timer45.Tag = "таймер сортування мысця";
+            this.timer45.Tick += new System.EventHandler(this.timer45_Tick);
+            // 
+            // timer46
+            // 
+            this.timer46.Interval = 50;
+            this.timer46.Tag = "таймер для сортування результату";
+            this.timer46.Tick += new System.EventHandler(this.timer46_Tick);
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Спортсмен";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Результат";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Спортсмен";
+            this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Width = 180;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Результат";
+            this.Column2.MaxInputLength = 300;
+            this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.секToolStripMenuItem,
+            this.секToolStripMenuItem1,
+            this.секToolStripMenuItem2,
+            this.секToolStripMenuItem3,
+            this.секToolStripMenuItem4,
+            this.секToolStripMenuItem5});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(198, 22);
+            this.toolStripMenuItem2.Text = "Мінімальний час кола";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // секToolStripMenuItem
+            // 
+            this.секToolStripMenuItem.Name = "секToolStripMenuItem";
+            this.секToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.секToolStripMenuItem.Text = "1 сек";
+            this.секToolStripMenuItem.Click += new System.EventHandler(this.секToolStripMenuItem_Click);
+            // 
+            // секToolStripMenuItem1
+            // 
+            this.секToolStripMenuItem1.Name = "секToolStripMenuItem1";
+            this.секToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.секToolStripMenuItem1.Text = "2 сек";
+            this.секToolStripMenuItem1.Click += new System.EventHandler(this.секToolStripMenuItem1_Click);
+            // 
+            // секToolStripMenuItem2
+            // 
+            this.секToolStripMenuItem2.Name = "секToolStripMenuItem2";
+            this.секToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.секToolStripMenuItem2.Text = "3 сек";
+            this.секToolStripMenuItem2.Click += new System.EventHandler(this.секToolStripMenuItem2_Click);
+            // 
+            // секToolStripMenuItem3
+            // 
+            this.секToolStripMenuItem3.Name = "секToolStripMenuItem3";
+            this.секToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.секToolStripMenuItem3.Text = "4 сек";
+            this.секToolStripMenuItem3.Click += new System.EventHandler(this.секToolStripMenuItem3_Click);
+            // 
+            // секToolStripMenuItem4
+            // 
+            this.секToolStripMenuItem4.Name = "секToolStripMenuItem4";
+            this.секToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.секToolStripMenuItem4.Text = "5 сек";
+            this.секToolStripMenuItem4.Click += new System.EventHandler(this.секToolStripMenuItem4_Click);
+            // 
+            // секToolStripMenuItem5
+            // 
+            this.секToolStripMenuItem5.Name = "секToolStripMenuItem5";
+            this.секToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
+            this.секToolStripMenuItem5.Text = "6 сек";
+            this.секToolStripMenuItem5.Click += new System.EventHandler(this.секToolStripMenuItem5_Click);
             // 
             // form4BindingSource
             // 
@@ -3736,11 +3811,7 @@ namespace zase4kak
 
         private System.Windows.Forms.Timer timer22;
         private System.Windows.Forms.Timer timer21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         public System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button14;
@@ -3762,8 +3833,6 @@ namespace zase4kak
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Timer timer10;
         private System.Windows.Forms.Timer timer12;
         private System.Windows.Forms.Button button7;
@@ -3883,9 +3952,6 @@ namespace zase4kak
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label50;
@@ -4054,5 +4120,21 @@ namespace zase4kak
         private System.Windows.Forms.Timer timer42;
         private System.Windows.Forms.Timer timer43;
         private System.Windows.Forms.Timer timer44;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Timer timer45;
+        private System.Windows.Forms.Timer timer46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem5;
     }
 }
