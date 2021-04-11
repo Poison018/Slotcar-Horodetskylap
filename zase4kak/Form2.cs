@@ -60,35 +60,32 @@ namespace zase4kak
 					f3.label14.Text = "F1-24";
 					f3.label14.Visible = true;
 					break;
+				
 				case 5:
-					f3.label14.Text = "G12-Стандарт";
-					f3.label14.Visible = true;
-					break;
-				case 6:
 					f3.label14.Text = "G12";
 					f3.label14.Visible = true;
 					break;
-				case 7:
+				case 6:
 					f3.label14.Text = "PR24";
 					f3.label14.Visible = true;
 					break;
-				case 8:
+				case 7:
 					f3.label14.Text = "ES-24";
 					f3.label14.Visible = true;
 					break;
-				case 9:
+				case 8:
 					f3.label14.Text = "ES-32";
 					f3.label14.Visible = true;
 					break;
-				case 10:
+				case 9:
 					f3.label14.Text = "F1";
 					f3.label14.Visible = true;
 					break;
-				case 11:
+				case 10:
 					f3.label14.Text = "G15";
 					f3.label14.Visible = true;
 					break;
-				case 12:
+				case 11:
 					f3.label14.Text = "Open-G12";
 					f3.label14.Visible = true;
 					break;
@@ -118,7 +115,7 @@ namespace zase4kak
 
 
 
-			if (textBox1.Text == "" || textBox2.Text == "")
+			if (textBox1.Text == "" || textBox2.Text == "" )
 			{
 				button1.Enabled = false;
 				button3.Enabled = false;
@@ -130,15 +127,17 @@ namespace zase4kak
 			}
 
 
-			if (textBox3.Text == "" || textBox4.Text == "")
+			if (textBox3.Text == "" || textBox4.Text == "" || comboBox2.Text == "")
 			{
 				button2.Enabled = false;
 				button4.Enabled = false;
+				button5.Enabled = false;
 			}
 			else
 			{
 				button2.Enabled = true;
 				button4.Enabled = true;
+				button5.Enabled = true;
 			}
 
 		}
@@ -188,35 +187,32 @@ namespace zase4kak
 					f4.label1.Text = "F1-24";
 					f4.label1.Visible = true;
 					break;
+				
 				case 5:
-					f4.label1.Text = "G12-Стандарт";
-					f4.label1.Visible = true;
-					break;
-				case 6:
 					f4.label1.Text = "G12";
 					f4.label1.Visible = true;
 					break;
-				case 7:
+				case 6:
 					f4.label1.Text = "PR24";
 					f4.label1.Visible = true;
 					break;
-				case 8:
+				case 7:
 					f4.label1.Text = "ES-24";
 					f4.label1.Visible = true;
 					break;
-				case 9:
+				case 8:
 					f4.label1.Text = "ES-32";
 					f4.label1.Visible = true;
 					break;
-				case 10:
+				case 9:
 					f4.label1.Text = "F1";
 					f4.label1.Visible = true;
 					break;
-				case 11:
+				case 10:
 					f4.label1.Text = "G15";
 					f4.label1.Visible = true;
 					break;
-				case 12:
+				case 11:
 					f4.label1.Text = "Open-G12";
 					f4.label1.Visible = true;
 					break;
@@ -319,35 +315,32 @@ namespace zase4kak
 					f8.label14.Text = "F1-24";
 					f8.label14.Visible = true;
 					break;
+				
 				case 5:
-					f8.label14.Text = "G12-Стандарт";
-					f8.label14.Visible = true;
-					break;
-				case 6:
 					f8.label14.Text = "G12";
 					f8.label14.Visible = true;
 					break;
-				case 7:
+				case 6:
 					f8.label14.Text = "PR24";
 					f8.label14.Visible = true;
 					break;
-				case 8:
+				case 7:
 					f8.label14.Text = "ES-24";
 					f8.label14.Visible = true;
 					break;
-				case 9:
+				case 8:
 					f8.label14.Text = "ES-32";
 					f8.label14.Visible = true;
 					break;
-				case 10:
+				case 9:
 					f8.label14.Text = "F1";
 					f8.label14.Visible = true;
 					break;
-				case 11:
+				case 10:
 					f8.label14.Text = "G15";
 					f8.label14.Visible = true;
 					break;
-				case 12:
+				case 11:
 					f8.label14.Text = "Open-G12";
 					f8.label14.Visible = true;
 					break;
@@ -403,41 +396,106 @@ namespace zase4kak
 					f4.label1.Text = "F1-24";
 					f4.label1.Visible = true;
 					break;
+				
 				case 5:
-					f4.label1.Text = "G12-Стандарт";
-					f4.label1.Visible = true;
-					break;
-				case 6:
 					f4.label1.Text = "G12";
 					f4.label1.Visible = true;
 					break;
-				case 7:
+				case 6:
 					f4.label1.Text = "PR24";
 					f4.label1.Visible = true;
 					break;
-				case 8:
+				case 7:
 					f4.label1.Text = "ES-24";
 					f4.label1.Visible = true;
 					break;
-				case 9:
+				case 8:
 					f4.label1.Text = "ES-32";
 					f4.label1.Visible = true;
 					break;
-				case 10:
+				case 9:
 					f4.label1.Text = "F1";
 					f4.label1.Visible = true;
 					break;
-				case 11:
+				case 10:
 					f4.label1.Text = "G15";
 					f4.label1.Visible = true;
 					break;
-				case 12:
+				case 11:
 					f4.label1.Text = "Open-G12";
 					f4.label1.Visible = true;
 					break;
 			}
 		}
-	}
+
+        public void button5_Click(object sender, EventArgs e)
+        {
+			Form9 f9 = new Form9();
+			f9.Show();
+			this.Hide();
+		
+			
+			f9.textBox106.Text = textBox3.Text;
+			f9.textBox107.Text = textBox4.Text;
+			
+
+
+			switch (comboBox2.SelectedIndex)
+			{
+				case 0:
+					f9.label1.Text = "Ретро";
+					f9.label1.Visible = true;
+
+					break;
+				case 1:
+					f9.label1.Text = "Вантажівка";
+					f9.label1.Visible = true;
+					break;
+				case 2:
+					f9.label1.Text = "ЕS-Стандарт";
+					f9.label1.Visible = true;
+					break;
+				case 3:
+					f9.label1.Text = "G-33";
+					f9.label1.Visible = true;
+					break;
+				case 4:
+					f9.label1.Text = "F1-24";
+					f9.label1.Visible = true;
+					break;
+				
+				case 5:
+					f9.label1.Text = "G12";
+					f9.label1.Visible = true;
+					break;
+				case 6:
+					f9.label1.Text = "PR24";
+					f9.label1.Visible = true;
+					break;
+				case 7:
+					f9.label1.Text = "ES-24";
+					f9.label1.Visible = true;
+					break;
+				case 8:
+					f9.label1.Text = "ES-32";
+					f9.label1.Visible = true;
+					break;
+				case 9:
+					f9.label1.Text = "F1";
+					f9.label1.Visible = true;
+					break;
+				case 10:
+					f9.label1.Text = "G15";
+					f9.label1.Visible = true;
+					break;
+				case 11:
+					f9.label1.Text = "Open-G12";
+					f9.label1.Visible = true;
+					break;
+			}
+
+		}
+    }
 }
 
 

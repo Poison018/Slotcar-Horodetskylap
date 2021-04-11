@@ -250,6 +250,13 @@
             this.синяToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.чорнаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.зеленаToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.мінімальнийЧасКолаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.button19 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -1615,6 +1622,7 @@
             this.label14.TabIndex = 26;
             this.label14.Text = "Клас моделей";
             this.label14.Visible = false;
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label15
             // 
@@ -1712,7 +1720,7 @@
             // textBox15
             // 
             this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(494, -786);
+            this.textBox15.Location = new System.Drawing.Point(462, -795);
             this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.MaxLength = 2000021;
             this.textBox15.Name = "textBox15";
@@ -1751,6 +1759,7 @@
             // 
             // serialPort1
             // 
+            this.serialPort1.BaudRate = 19200;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // timer10
@@ -1858,6 +1867,7 @@
             // button5
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.Enabled = false;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button5.Location = new System.Drawing.Point(521, 987);
@@ -2304,7 +2314,7 @@
             // 
             this.button20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button20.BackgroundImage")));
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button20.Location = new System.Drawing.Point(547, 820);
+            this.button20.Location = new System.Drawing.Point(538, 820);
             this.button20.Margin = new System.Windows.Forms.Padding(2);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(71, 52);
@@ -2317,7 +2327,8 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.кольориДоріжокToolStripMenuItem});
+            this.кольориДоріжокToolStripMenuItem,
+            this.мінімальнийЧасКолаToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(81, 20);
             this.toolStripMenuItem1.Text = "Параметри";
@@ -2330,7 +2341,7 @@
             this.доріжкаToolStripMenuItem2,
             this.доріжкаToolStripMenuItem3});
             this.кольориДоріжокToolStripMenuItem.Name = "кольориДоріжокToolStripMenuItem";
-            this.кольориДоріжокToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.кольориДоріжокToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.кольориДоріжокToolStripMenuItem.Text = "Кольори доріжок";
             // 
             // доріжкаToolStripMenuItem
@@ -2618,6 +2629,61 @@
             this.зеленаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
             this.зеленаToolStripMenuItem3.Text = "Зелена";
             this.зеленаToolStripMenuItem3.Click += new System.EventHandler(this.зеленаToolStripMenuItem3_Click);
+            // 
+            // мінімальнийЧасКолаToolStripMenuItem
+            // 
+            this.мінімальнийЧасКолаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.секToolStripMenuItem,
+            this.секToolStripMenuItem1,
+            this.секToolStripMenuItem2,
+            this.секToolStripMenuItem3,
+            this.секToolStripMenuItem4,
+            this.секToolStripMenuItem5});
+            this.мінімальнийЧасКолаToolStripMenuItem.Name = "мінімальнийЧасКолаToolStripMenuItem";
+            this.мінімальнийЧасКолаToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.мінімальнийЧасКолаToolStripMenuItem.Text = "Мінімальний час кола";
+            // 
+            // секToolStripMenuItem
+            // 
+            this.секToolStripMenuItem.Name = "секToolStripMenuItem";
+            this.секToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.секToolStripMenuItem.Text = "1 сек";
+            this.секToolStripMenuItem.Click += new System.EventHandler(this.секToolStripMenuItem_Click);
+            // 
+            // секToolStripMenuItem1
+            // 
+            this.секToolStripMenuItem1.Name = "секToolStripMenuItem1";
+            this.секToolStripMenuItem1.Size = new System.Drawing.Size(104, 22);
+            this.секToolStripMenuItem1.Text = "2  сек";
+            this.секToolStripMenuItem1.Click += new System.EventHandler(this.секToolStripMenuItem1_Click);
+            // 
+            // секToolStripMenuItem2
+            // 
+            this.секToolStripMenuItem2.Name = "секToolStripMenuItem2";
+            this.секToolStripMenuItem2.Size = new System.Drawing.Size(104, 22);
+            this.секToolStripMenuItem2.Text = "3 сек";
+            this.секToolStripMenuItem2.Click += new System.EventHandler(this.секToolStripMenuItem2_Click);
+            // 
+            // секToolStripMenuItem3
+            // 
+            this.секToolStripMenuItem3.Name = "секToolStripMenuItem3";
+            this.секToolStripMenuItem3.Size = new System.Drawing.Size(104, 22);
+            this.секToolStripMenuItem3.Text = "4 сек";
+            this.секToolStripMenuItem3.Click += new System.EventHandler(this.секToolStripMenuItem3_Click);
+            // 
+            // секToolStripMenuItem4
+            // 
+            this.секToolStripMenuItem4.Name = "секToolStripMenuItem4";
+            this.секToolStripMenuItem4.Size = new System.Drawing.Size(104, 22);
+            this.секToolStripMenuItem4.Text = "5 сек";
+            this.секToolStripMenuItem4.Click += new System.EventHandler(this.секToolStripMenuItem4_Click);
+            // 
+            // секToolStripMenuItem5
+            // 
+            this.секToolStripMenuItem5.Name = "секToolStripMenuItem5";
+            this.секToolStripMenuItem5.Size = new System.Drawing.Size(104, 22);
+            this.секToolStripMenuItem5.Text = "6 сек";
+            this.секToolStripMenuItem5.Click += new System.EventHandler(this.секToolStripMenuItem5_Click);
             // 
             // menuStrip1
             // 
@@ -3094,5 +3160,12 @@
         private System.Windows.Forms.Timer timer34;
         private System.Windows.Forms.Timer timer35;
         private System.Windows.Forms.Timer timer36;
+        private System.Windows.Forms.ToolStripMenuItem мінімальнийЧасКолаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem5;
     }
 }

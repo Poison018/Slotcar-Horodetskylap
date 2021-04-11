@@ -44,7 +44,13 @@ namespace zase4kak
 			panel3.BackColor = Settings.Default.line_2;
 			panel4.BackColor = Settings.Default.line_3;
 			panel5.BackColor = Settings.Default.line_4;
-
+			delay = Settings.Default.delay1;
+			секToolStripMenuItem.BackColor = Settings.Default.color_delay;
+			секToolStripMenuItem1.BackColor = Settings.Default.color_delay1;
+			секToolStripMenuItem2.BackColor = Settings.Default.color_delay2;
+			секToolStripMenuItem3.BackColor = Settings.Default.color_delay3;
+			секToolStripMenuItem4.BackColor = Settings.Default.color_delay4;
+			секToolStripMenuItem5.BackColor = Settings.Default.color_delay5;
 
 
 		}
@@ -64,7 +70,7 @@ namespace zase4kak
 		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, time_to_traning_min, time_to_traning_sec;
 
 		int time_to_traning_secs = 1;// секунди для тренування
-
+		double delay;
 
 		int timetostart = 5; // значення стартового таймера
 
@@ -3150,7 +3156,7 @@ namespace zase4kak
 
 		private void timer13_Tick(object sender, EventArgs e)
 		{
-			if (Convert.ToDouble(label29.Text) > 2)
+			if (Convert.ToDouble(label29.Text) > delay)
 			{       //обмеження по часу кола 2 секунда
 				c++;                                            //добавляю кола 1 доріці
 				label24.Text = Convert.ToString(c);
@@ -3243,7 +3249,7 @@ namespace zase4kak
 
 		private void timer14_Tick(object sender, EventArgs e)
 		{
-			if (Convert.ToDouble(label38.Text) > 2)
+			if (Convert.ToDouble(label38.Text) > delay)
 			{       //обмеження по часу кола 2 секунда
 				d++;                                            //добавляю кола 4 доріці
 				label25.Text = Convert.ToString(d);
@@ -3695,7 +3701,7 @@ namespace zase4kak
 
 		private void timer23_Tick(object sender, EventArgs e)
 		{
-
+			textBox13.Text = textBox24.Text;
 			prognoz1 = 0;
 			prognoz2 = 0;
 			prognoz3 = 0;
@@ -3708,6 +3714,7 @@ namespace zase4kak
 			kola = 0;
 			seredniychas = 0;
 			prognoz = 0;
+
 
 			label18.Text = "00,000";
 			label22.Text = "00,000";
@@ -3825,10 +3832,18 @@ namespace zase4kak
 			Settings.Default.line_2 = panel3.BackColor;
 			Settings.Default.line_3 = panel4.BackColor;
 			Settings.Default.line_4 = panel5.BackColor;
+			Settings.Default.delay1 = delay;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor;
+
 
 			DialogResult dialog = MessageBox.Show(
-				 "Вы действительно хотите выйти из программы?",
-				 "Завершение программы",
+				 "Ви дійсно хочите вийти з програми?",
+				 "Завершення роботи",
 				 MessageBoxButtons.YesNo,
 				 MessageBoxIcon.Warning
 				);
@@ -4107,6 +4122,7 @@ namespace zase4kak
 			button20.Visible = false;
 			time_to_traning_min = Convert.ToInt32(textBox26.Text);
 			time_to_traning_sec = Convert.ToInt32(textBox27.Text);
+			button5.Enabled = true;
 		}
 
 		private void dataGridView1_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
@@ -4168,7 +4184,84 @@ namespace zase4kak
 
 		}
 
-		private void timer30_Tick(object sender, EventArgs e)
+        private void секToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Settings.Default.delay1 = delay = 1;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.Lime;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
+
+        private void секToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+			Settings.Default.delay1 = delay = 2;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor = Color.Lime;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
+
+        private void секToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+			Settings.Default.delay1 = delay = 3;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor = Color.Lime;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
+
+        private void секToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+			Settings.Default.delay1 = delay = 4;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.Lime;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
+
+        private void секToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+			Settings.Default.delay1 = delay = 5;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.Lime;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
+
+        private void секToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+			Settings.Default.delay1 = delay = 6;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.Lime;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer30_Tick(object sender, EventArgs e)
 		{
 			textBox9.BackColor = Color.WhiteSmoke;
 			label23.BackColor = Color.WhiteSmoke;
@@ -5370,7 +5463,7 @@ namespace zase4kak
 
 		private void timer10_Tick(object sender, EventArgs e)
 		{
-			if (Convert.ToDouble(label18.Text) > 2)
+			if (Convert.ToDouble(label18.Text) > delay)
 			{
 				i++;                                            //добавляю кола 1 доріці
 				label17.Text = Convert.ToString(i);
@@ -5644,32 +5737,47 @@ namespace zase4kak
 						{
 
 							textBox15.Text = "0";
-							if (Convert.ToDouble(label18.Text) > 2)
-							{ // якщо час кола швидший за 2 секунди він не враховується червона доріжка
-								label78.Text = label77.Text;
-								label77.Text = label76.Text;
-								label76.Text = label20.Text;
-								label20.Text = label19.Text;
-								label19.Text = label22.Text;
-								label22.Text = label18.Text;
-								label17.Text = Convert.ToString(i);
+
+							
 
 
-								if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-								{
-									label16.Text = label18.Text;
-									best_time.Play();
 
-								}
+
+								if (Convert.ToDouble(label18.Text) > delay)
+								{ // якщо час кола швидший за 2 секунди він не враховується червона доріжка
+									label78.Text = label77.Text;
+									label77.Text = label76.Text;
+									label76.Text = label20.Text;
+									label20.Text = label19.Text;
+									label19.Text = label22.Text;
+									label22.Text = label18.Text;
+									label17.Text = Convert.ToString(i);
+
+
+									if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+									{
+										label16.Text = label18.Text;
+										best_time.Play();
+
+									}
+                            }
+                            else
+                            {
+								label18.Text = "999";
+								label16.Text = "999";
+								textBox15.Text = "0";
 							}
+							
 						}
 						else                             // алгоритм для часу кола для гонок червона доріжка
 						{
+
+
 							textBox15.Text = "0";
 
 
 
-							if (Convert.ToDouble(label18.Text) > 2)  // якщо час кола швидший за 2 секунди він не враховується червона доріжка
+							if (Convert.ToDouble(label18.Text) > delay)  // якщо час кола швидший за 2 секунди він не враховується червона доріжка
 							{
 								label20.Text = label19.Text;
 								label19.Text = label22.Text;
@@ -5685,6 +5793,11 @@ namespace zase4kak
 
 
 								}
+                            }
+                            else
+                            {
+								button6.PerformClick();
+								MessageBox.Show("Щось пішло не так!! Перевірте модель на 1 доріжці!");
 							}
 						}
 					
@@ -5710,9 +5823,9 @@ namespace zase4kak
 
 						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування зеленої доріжка
 						{
-							textBox15.Text = "0";
+							
 
-							if (Convert.ToDouble(label29.Text) > 2)
+							if (Convert.ToDouble(label29.Text) > delay)
 							{  // якщо час кола швидший за 2 секунди він не враховується зеленої доріжка
 								label79.Text = label80.Text;
 								label80.Text = label81.Text;
@@ -5721,7 +5834,7 @@ namespace zase4kak
 								label32.Text = label30.Text;
 								label30.Text = label29.Text;
 								label24.Text = Convert.ToString(c);
-
+								textBox15.Text = "0";
 
 								if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
 								{
@@ -5730,6 +5843,12 @@ namespace zase4kak
 
 
 								}
+                            }
+                            else
+                            {
+								label29.Text = "999";
+								label42.Text = "999";
+								textBox15.Text = "0";
 							}
 						}
 						else                                     // алгоритм для часу кола для гонки зеленої доріжка
@@ -5737,7 +5856,7 @@ namespace zase4kak
 							textBox15.Text = "0";
 
 
-							if (Convert.ToDouble(label29.Text) > 2)
+							if (Convert.ToDouble(label29.Text) > delay)
 							{  // якщо час кола швидший за 2 секунди він не враховується зеленої доріжка
 
 								label31.Text = label32.Text;
@@ -5752,6 +5871,11 @@ namespace zase4kak
 
 
 								}
+                            }
+                            else
+                            {
+								button6.PerformClick();
+								MessageBox.Show("Щось пішло не так!! Перевірте модель на 2 доріжці!");
 							}
 						}
 						
@@ -5772,7 +5896,7 @@ namespace zase4kak
 
 						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування синьої доріжка
 						{
-							textBox15.Text = "0";
+							
 
 							if (Convert.ToDouble(label37.Text) > 2)
 							{  // якщо час кола швидший за 2 секунди він не враховується синьої доріжка
@@ -5783,7 +5907,7 @@ namespace zase4kak
 								label36.Text = label34.Text;
 								label34.Text = label37.Text;
 								label23.Text = Convert.ToString(b);
-
+								textBox15.Text = "0";
 
 
 								if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
@@ -5792,13 +5916,19 @@ namespace zase4kak
 									best_time.Play();
 
 								}
+                            }
+                            else
+                            {
+								label37.Text = "999";
+								label43.Text = "999";
+								textBox15.Text = "0";
 							}
 						}
 						else                                        // алгоритм для часу кола для гонки синьої доріжка
 						{
 							textBox15.Text = "0";
 
-							if (Convert.ToDouble(label37.Text) > 2)
+							if (Convert.ToDouble(label37.Text) > delay)
 							{  // якщо час кола швидший за 2 секунди він не враховується синьої доріжка
 								label35.Text = label36.Text;
 								label36.Text = label34.Text;
@@ -5812,6 +5942,11 @@ namespace zase4kak
 									label43.Text = label37.Text;
 
 								}
+                            }
+                            else
+                            {
+								button6.PerformClick();
+								MessageBox.Show("Щось пішло не так!! Перевірте модель на 3 доріжці!");
 							}
 						}
 						break;
@@ -5832,8 +5967,8 @@ namespace zase4kak
 						if (label13.Text == "Тренування!")// алгоритм для часу кола для тренування жовтої доріжка
 
 						{
-							textBox15.Text = "0";
-							if (Convert.ToDouble(label38.Text) > 2)
+							
+							if (Convert.ToDouble(label38.Text) > delay)
 							{  // якщо час кола швидший за 2 секунди він не враховується жовтої доріжка
 								label85.Text = label86.Text;
 								label86.Text = label87.Text;
@@ -5842,7 +5977,7 @@ namespace zase4kak
 								label41.Text = label39.Text;
 								label39.Text = label38.Text;
 								label25.Text = Convert.ToString(d);
-
+								textBox15.Text = "0";
 
 								if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
 								{
@@ -5850,12 +5985,18 @@ namespace zase4kak
 									best_time.Play();
 
 								}
+                            }
+                            else
+                            {
+								label38.Text = "999";
+								label44.Text = "999";
+								textBox15.Text = "0";
 							}
 						}
 						else                                     // алгоритм для часу кола для Гонки жовтої доріжка
 						{
 							textBox15.Text = "0";
-							if (Convert.ToDouble(label38.Text) > 2)
+							if (Convert.ToDouble(label38.Text) > delay)
 							{  // якщо час кола швидший за 2 секунди він не враховується жовтої доріжка
 
 								label40.Text = label41.Text;
@@ -5869,6 +6010,11 @@ namespace zase4kak
 									label44.Text = label38.Text;
 
 								}
+                            }
+                            else
+                            {
+								button6.PerformClick();
+								MessageBox.Show("Щось пішло не так!! Перевірте модель на 4 доріжці!");
 							}
 						}
 						break;
@@ -6458,7 +6604,7 @@ namespace zase4kak
 		}
 		private void timer12_Tick(object sender, EventArgs e)
 		{
-			if (Convert.ToDouble(label37.Text) > 2){		//обмеження по часу кола 2 секунда
+			if (Convert.ToDouble(label37.Text) > delay){		//обмеження по часу кола 2 секунда
 				b++;                                            //добавляю кола 1 доріці
 			label23.Text = Convert.ToString(b);
 
@@ -6532,14 +6678,6 @@ namespace zase4kak
 					}
 				}
 			}
-
-
-
-
-
-
-
-
 
 
 			// підсвітка під час кола

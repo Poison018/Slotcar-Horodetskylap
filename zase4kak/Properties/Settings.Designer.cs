@@ -160,9 +160,9 @@ namespace zase4ka.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int delay1 {
+        public double delay1 {
             get {
-                return ((int)(this["delay1"]));
+                return ((double)(this["delay1"]));
             }
             set {
                 this["delay1"] = value;
@@ -232,6 +232,940 @@ namespace zase4ka.Properties {
             }
             set {
                 this["color_delay5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool enabled4 {
+            get {
+                return ((bool)(this["enabled4"]));
+            }
+            set {
+                this["enabled4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool enabled6 {
+            get {
+                return ((bool)(this["enabled6"]));
+            }
+            set {
+                this["enabled6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color color_delay6 {
+            get {
+                return ((global::System.Drawing.Color)(this["color_delay6"]));
+            }
+            set {
+                this["color_delay6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string deley6_text {
+            get {
+                return ((string)(this["deley6_text"]));
+            }
+            set {
+                this["deley6_text"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name1pr24 {
+            get {
+                return ((string)(this["best_time_name1pr24"]));
+            }
+            set {
+                this["best_time_name1pr24"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name2pr24 {
+            get {
+                return ((string)(this["best_time_name2pr24"]));
+            }
+            set {
+                this["best_time_name2pr24"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name3pr24 {
+            get {
+                return ((string)(this["best_time_name3pr24"]));
+            }
+            set {
+                this["best_time_name3pr24"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result1Pr24 {
+            get {
+                return ((string)(this["best_time_result1Pr24"]));
+            }
+            set {
+                this["best_time_result1Pr24"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result2Pr24 {
+            get {
+                return ((string)(this["best_time_result2Pr24"]));
+            }
+            set {
+                this["best_time_result2Pr24"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result3Pr24 {
+            get {
+                return ((string)(this["best_time_result3Pr24"]));
+            }
+            set {
+                this["best_time_result3Pr24"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result1retro {
+            get {
+                return ((string)(this["best_time_result1retro"]));
+            }
+            set {
+                this["best_time_result1retro"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result2retro {
+            get {
+                return ((string)(this["best_time_result2retro"]));
+            }
+            set {
+                this["best_time_result2retro"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result3retro {
+            get {
+                return ((string)(this["best_time_result3retro"]));
+            }
+            set {
+                this["best_time_result3retro"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name1retro {
+            get {
+                return ((string)(this["best_time_name1retro"]));
+            }
+            set {
+                this["best_time_name1retro"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name2retro {
+            get {
+                return ((string)(this["best_time_name2retro"]));
+            }
+            set {
+                this["best_time_name2retro"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name3retro {
+            get {
+                return ((string)(this["best_time_name3retro"]));
+            }
+            set {
+                this["best_time_name3retro"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name1vantagivka {
+            get {
+                return ((string)(this["best_time_name1vantagivka"]));
+            }
+            set {
+                this["best_time_name1vantagivka"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name2vantagivka {
+            get {
+                return ((string)(this["best_time_name2vantagivka"]));
+            }
+            set {
+                this["best_time_name2vantagivka"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name3vantagivka {
+            get {
+                return ((string)(this["best_time_name3vantagivka"]));
+            }
+            set {
+                this["best_time_name3vantagivka"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result1vantagivka {
+            get {
+                return ((string)(this["best_time_result1vantagivka"]));
+            }
+            set {
+                this["best_time_result1vantagivka"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result2vantagivka {
+            get {
+                return ((string)(this["best_time_result2vantagivka"]));
+            }
+            set {
+                this["best_time_result2vantagivka"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result3vantagivka {
+            get {
+                return ((string)(this["best_time_result3vantagivka"]));
+            }
+            set {
+                this["best_time_result3vantagivka"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name1Es_s {
+            get {
+                return ((string)(this["best_time_name1Es_s"]));
+            }
+            set {
+                this["best_time_name1Es_s"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name2Es_s {
+            get {
+                return ((string)(this["best_time_name2Es_s"]));
+            }
+            set {
+                this["best_time_name2Es_s"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name3Es_s {
+            get {
+                return ((string)(this["best_time_name3Es_s"]));
+            }
+            set {
+                this["best_time_name3Es_s"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result1Es_s {
+            get {
+                return ((string)(this["best_time_result1Es_s"]));
+            }
+            set {
+                this["best_time_result1Es_s"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result2Es_s {
+            get {
+                return ((string)(this["best_time_result2Es_s"]));
+            }
+            set {
+                this["best_time_result2Es_s"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result3Es_s {
+            get {
+                return ((string)(this["best_time_result3Es_s"]));
+            }
+            set {
+                this["best_time_result3Es_s"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name1g33 {
+            get {
+                return ((string)(this["best_time_name1g33"]));
+            }
+            set {
+                this["best_time_name1g33"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name2g33 {
+            get {
+                return ((string)(this["best_time_name2g33"]));
+            }
+            set {
+                this["best_time_name2g33"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name3g33 {
+            get {
+                return ((string)(this["best_time_name3g33"]));
+            }
+            set {
+                this["best_time_name3g33"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result1g33 {
+            get {
+                return ((string)(this["best_time_result1g33"]));
+            }
+            set {
+                this["best_time_result1g33"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result2g33 {
+            get {
+                return ((string)(this["best_time_result2g33"]));
+            }
+            set {
+                this["best_time_result2g33"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result3g33 {
+            get {
+                return ((string)(this["best_time_result3g33"]));
+            }
+            set {
+                this["best_time_result3g33"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name1f124 {
+            get {
+                return ((string)(this["best_time_name1f124"]));
+            }
+            set {
+                this["best_time_name1f124"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name2f124 {
+            get {
+                return ((string)(this["best_time_name2f124"]));
+            }
+            set {
+                this["best_time_name2f124"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name3f124 {
+            get {
+                return ((string)(this["best_time_name3f124"]));
+            }
+            set {
+                this["best_time_name3f124"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result1f124 {
+            get {
+                return ((string)(this["best_time_result1f124"]));
+            }
+            set {
+                this["best_time_result1f124"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result2f124 {
+            get {
+                return ((string)(this["best_time_result2f124"]));
+            }
+            set {
+                this["best_time_result2f124"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result3f124 {
+            get {
+                return ((string)(this["best_time_result3f124"]));
+            }
+            set {
+                this["best_time_result3f124"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name1g12 {
+            get {
+                return ((string)(this["best_time_name1g12"]));
+            }
+            set {
+                this["best_time_name1g12"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name2g12 {
+            get {
+                return ((string)(this["best_time_name2g12"]));
+            }
+            set {
+                this["best_time_name2g12"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name3g12 {
+            get {
+                return ((string)(this["best_time_name3g12"]));
+            }
+            set {
+                this["best_time_name3g12"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result1g12 {
+            get {
+                return ((string)(this["best_time_result1g12"]));
+            }
+            set {
+                this["best_time_result1g12"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result2g12 {
+            get {
+                return ((string)(this["best_time_result2g12"]));
+            }
+            set {
+                this["best_time_result2g12"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result3g12 {
+            get {
+                return ((string)(this["best_time_result3g12"]));
+            }
+            set {
+                this["best_time_result3g12"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name1es24 {
+            get {
+                return ((string)(this["best_time_name1es24"]));
+            }
+            set {
+                this["best_time_name1es24"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name2es24 {
+            get {
+                return ((string)(this["best_time_name2es24"]));
+            }
+            set {
+                this["best_time_name2es24"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name3es24 {
+            get {
+                return ((string)(this["best_time_name3es24"]));
+            }
+            set {
+                this["best_time_name3es24"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result1es24 {
+            get {
+                return ((string)(this["best_time_result1es24"]));
+            }
+            set {
+                this["best_time_result1es24"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result2es24 {
+            get {
+                return ((string)(this["best_time_result2es24"]));
+            }
+            set {
+                this["best_time_result2es24"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result3es24 {
+            get {
+                return ((string)(this["best_time_result3es24"]));
+            }
+            set {
+                this["best_time_result3es24"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name1es32 {
+            get {
+                return ((string)(this["best_time_name1es32"]));
+            }
+            set {
+                this["best_time_name1es32"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name2es32 {
+            get {
+                return ((string)(this["best_time_name2es32"]));
+            }
+            set {
+                this["best_time_name2es32"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name3es32 {
+            get {
+                return ((string)(this["best_time_name3es32"]));
+            }
+            set {
+                this["best_time_name3es32"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result1es32 {
+            get {
+                return ((string)(this["best_time_result1es32"]));
+            }
+            set {
+                this["best_time_result1es32"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result2es32 {
+            get {
+                return ((string)(this["best_time_result2es32"]));
+            }
+            set {
+                this["best_time_result2es32"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result3es32 {
+            get {
+                return ((string)(this["best_time_result3es32"]));
+            }
+            set {
+                this["best_time_result3es32"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name1f1 {
+            get {
+                return ((string)(this["best_time_name1f1"]));
+            }
+            set {
+                this["best_time_name1f1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name2f1 {
+            get {
+                return ((string)(this["best_time_name2f1"]));
+            }
+            set {
+                this["best_time_name2f1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name3f1 {
+            get {
+                return ((string)(this["best_time_name3f1"]));
+            }
+            set {
+                this["best_time_name3f1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result1f1 {
+            get {
+                return ((string)(this["best_time_result1f1"]));
+            }
+            set {
+                this["best_time_result1f1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result2f1 {
+            get {
+                return ((string)(this["best_time_result2f1"]));
+            }
+            set {
+                this["best_time_result2f1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result3f1 {
+            get {
+                return ((string)(this["best_time_result3f1"]));
+            }
+            set {
+                this["best_time_result3f1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name1g15 {
+            get {
+                return ((string)(this["best_time_name1g15"]));
+            }
+            set {
+                this["best_time_name1g15"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name2g15 {
+            get {
+                return ((string)(this["best_time_name2g15"]));
+            }
+            set {
+                this["best_time_name2g15"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name3g15 {
+            get {
+                return ((string)(this["best_time_name3g15"]));
+            }
+            set {
+                this["best_time_name3g15"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result1g15 {
+            get {
+                return ((string)(this["best_time_result1g15"]));
+            }
+            set {
+                this["best_time_result1g15"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result2g15 {
+            get {
+                return ((string)(this["best_time_result2g15"]));
+            }
+            set {
+                this["best_time_result2g15"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result3g15 {
+            get {
+                return ((string)(this["best_time_result3g15"]));
+            }
+            set {
+                this["best_time_result3g15"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name1g12open {
+            get {
+                return ((string)(this["best_time_name1g12open"]));
+            }
+            set {
+                this["best_time_name1g12open"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name2g12open {
+            get {
+                return ((string)(this["best_time_name2g12open"]));
+            }
+            set {
+                this["best_time_name2g12open"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_name3g12open {
+            get {
+                return ((string)(this["best_time_name3g12open"]));
+            }
+            set {
+                this["best_time_name3g12open"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result1g12open {
+            get {
+                return ((string)(this["best_time_result1g12open"]));
+            }
+            set {
+                this["best_time_result1g12open"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result2g12open {
+            get {
+                return ((string)(this["best_time_result2g12open"]));
+            }
+            set {
+                this["best_time_result2g12open"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string best_time_result3g12open {
+            get {
+                return ((string)(this["best_time_result3g12open"]));
+            }
+            set {
+                this["best_time_result3g12open"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string name {
+            get {
+                return ((string)(this["name"]));
+            }
+            set {
+                this["name"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database1.mdf" +
+            ";Integrated Security=True")]
+        public string Database1ConnectionString {
+            get {
+                return ((string)(this["Database1ConnectionString"]));
             }
         }
     }

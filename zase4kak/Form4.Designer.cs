@@ -3627,7 +3627,7 @@
             // 
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(512, 869);
+            this.button6.Location = new System.Drawing.Point(512, 871);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(475, 170);
             this.button6.TabIndex = 41;
@@ -3706,6 +3706,7 @@
             // 
             // serialPort1
             // 
+            this.serialPort1.BaudRate = 19200;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // timer10
@@ -3771,7 +3772,7 @@
             // timer3
             // 
             this.timer3.Enabled = true;
-            this.timer3.Interval = 500;
+            this.timer3.Interval = 300;
             this.timer3.Tag = "таймер для сортування результату";
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 

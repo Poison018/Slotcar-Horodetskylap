@@ -266,7 +266,7 @@ namespace zase4kak
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-
+        
 
             if(label50.Text == "0:17")
             {
@@ -436,7 +436,7 @@ namespace zase4kak
 
 
             button1.Focus();
-            serialPort1.BaudRate = 9600;
+            //serialPort1.BaudRate = 9600;
             serialPort1.PortName = comboBox1.Text;
             serialPort1.Open();
             serialPort1.WriteLine("3");

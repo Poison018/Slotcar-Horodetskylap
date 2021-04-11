@@ -34,6 +34,8 @@ namespace zase4kak
             this.timer22 = new System.Windows.Forms.Timer(this.components);
             this.timer21 = new System.Windows.Forms.Timer(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -55,6 +57,8 @@ namespace zase4kak
             this.label67 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer10 = new System.Windows.Forms.Timer(this.components);
             this.timer12 = new System.Windows.Forms.Timer(this.components);
             this.button7 = new System.Windows.Forms.Button();
@@ -130,6 +134,15 @@ namespace zase4kak
             this.синяToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.чорнаToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.зеленаToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.секToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ввестиВручнуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.timer24 = new System.Windows.Forms.Timer(this.components);
             this.timer25 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -346,17 +359,6 @@ namespace zase4kak
             this.timer44 = new System.Windows.Forms.Timer(this.components);
             this.timer45 = new System.Windows.Forms.Timer(this.components);
             this.timer46 = new System.Windows.Forms.Timer(this.components);
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.секToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.секToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.секToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.секToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.секToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.секToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -397,6 +399,19 @@ namespace zase4kak
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.dataGridView2.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView2_SortCompare);
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Спортсмен";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Результат";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // textBox25
             // 
             this.textBox25.Location = new System.Drawing.Point(1829, 1027);
@@ -409,7 +424,8 @@ namespace zase4kak
             // 
             this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button15.Location = new System.Drawing.Point(690, 933);
+            this.button15.ForeColor = System.Drawing.Color.Goldenrod;
+            this.button15.Location = new System.Drawing.Point(690, 920);
             this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(458, 122);
@@ -437,7 +453,9 @@ namespace zase4kak
             // label71
             // 
             this.label71.AutoSize = true;
+            this.label71.BackColor = System.Drawing.Color.Transparent;
             this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
+            this.label71.ForeColor = System.Drawing.Color.Goldenrod;
             this.label71.Location = new System.Drawing.Point(164, 104);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(186, 55);
@@ -448,7 +466,9 @@ namespace zase4kak
             // label70
             // 
             this.label70.AutoSize = true;
+            this.label70.BackColor = System.Drawing.Color.Transparent;
             this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label70.ForeColor = System.Drawing.Color.Goldenrod;
             this.label70.Location = new System.Drawing.Point(209, 891);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(153, 108);
@@ -458,6 +478,8 @@ namespace zase4kak
             // 
             // button13
             // 
+            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
+            this.button13.ForeColor = System.Drawing.Color.Goldenrod;
             this.button13.Location = new System.Drawing.Point(217, 1002);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(121, 23);
@@ -469,6 +491,8 @@ namespace zase4kak
             // 
             // button12
             // 
+            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
+            this.button12.ForeColor = System.Drawing.Color.Goldenrod;
             this.button12.Location = new System.Drawing.Point(217, 1002);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(102, 23);
@@ -547,6 +571,7 @@ namespace zase4kak
             // textBox23
             // 
             this.textBox23.BackColor = System.Drawing.Color.Orange;
+            this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox23.Location = new System.Drawing.Point(832, 900);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(100, 20);
@@ -556,6 +581,7 @@ namespace zase4kak
             // textBox22
             // 
             this.textBox22.BackColor = System.Drawing.Color.White;
+            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox22.Location = new System.Drawing.Point(711, 900);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(100, 20);
@@ -565,6 +591,7 @@ namespace zase4kak
             // textBox21
             // 
             this.textBox21.BackColor = System.Drawing.Color.Green;
+            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox21.Location = new System.Drawing.Point(832, 875);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(100, 20);
@@ -574,6 +601,7 @@ namespace zase4kak
             // textBox20
             // 
             this.textBox20.BackColor = System.Drawing.Color.Red;
+            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox20.Location = new System.Drawing.Point(711, 875);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(100, 20);
@@ -583,7 +611,9 @@ namespace zase4kak
             // label68
             // 
             this.label68.AutoSize = true;
+            this.label68.BackColor = System.Drawing.Color.Transparent;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label68.ForeColor = System.Drawing.Color.White;
             this.label68.Location = new System.Drawing.Point(774, 840);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(227, 24);
@@ -594,6 +624,8 @@ namespace zase4kak
             // label67
             // 
             this.label67.AutoSize = true;
+            this.label67.BackColor = System.Drawing.Color.Transparent;
+            this.label67.ForeColor = System.Drawing.Color.Goldenrod;
             this.label67.Location = new System.Drawing.Point(730, 72);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(13, 13);
@@ -628,6 +660,20 @@ namespace zase4kak
             this.dataGridView1.Visible = false;
             this.dataGridView1.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView1_SortCompare_2);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Спортсмен";
+            this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Width = 180;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Результат";
+            this.Column2.MaxInputLength = 300;
+            this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // timer10
             // 
             this.timer10.Interval = 1;
@@ -644,7 +690,8 @@ namespace zase4kak
             // 
             this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
-            this.button7.Location = new System.Drawing.Point(690, 931);
+            this.button7.ForeColor = System.Drawing.Color.Goldenrod;
+            this.button7.Location = new System.Drawing.Point(690, 920);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(458, 122);
             this.button7.TabIndex = 109;
@@ -658,7 +705,8 @@ namespace zase4kak
             // 
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
-            this.button6.Location = new System.Drawing.Point(690, 934);
+            this.button6.ForeColor = System.Drawing.Color.Goldenrod;
+            this.button6.Location = new System.Drawing.Point(690, 925);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(458, 122);
             this.button6.TabIndex = 108;
@@ -701,8 +749,9 @@ namespace zase4kak
             // button5
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.Enabled = false;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button5.ForeColor = System.Drawing.Color.Goldenrod;
             this.button5.Location = new System.Drawing.Point(518, 996);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 37);
@@ -716,8 +765,8 @@ namespace zase4kak
             // 
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(925, 831);
+            this.button3.ForeColor = System.Drawing.Color.Goldenrod;
+            this.button3.Location = new System.Drawing.Point(919, 831);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(223, 94);
             this.button3.TabIndex = 102;
@@ -728,6 +777,8 @@ namespace zase4kak
             // number_group
             // 
             this.number_group.AutoSize = true;
+            this.number_group.BackColor = System.Drawing.Color.Transparent;
+            this.number_group.ForeColor = System.Drawing.Color.Goldenrod;
             this.number_group.Location = new System.Drawing.Point(602, 84);
             this.number_group.Name = "number_group";
             this.number_group.Size = new System.Drawing.Size(13, 13);
@@ -738,7 +789,9 @@ namespace zase4kak
             // label49
             // 
             this.label49.AutoSize = true;
+            this.label49.BackColor = System.Drawing.Color.Transparent;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label49.ForeColor = System.Drawing.Color.Goldenrod;
             this.label49.Location = new System.Drawing.Point(390, 951);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(218, 25);
@@ -750,7 +803,7 @@ namespace zase4kak
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.ForeColor = System.Drawing.Color.Goldenrod;
             this.button4.Location = new System.Drawing.Point(690, 831);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(223, 94);
@@ -1247,6 +1300,78 @@ namespace zase4kak
             this.зеленаToolStripMenuItem5.Text = "Зелена";
             this.зеленаToolStripMenuItem5.Click += new System.EventHandler(this.зеленаToolStripMenuItem5_Click);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.секToolStripMenuItem,
+            this.секToolStripMenuItem1,
+            this.секToolStripMenuItem2,
+            this.секToolStripMenuItem3,
+            this.секToolStripMenuItem4,
+            this.секToolStripMenuItem5,
+            this.ввестиВручнуToolStripMenuItem});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(198, 22);
+            this.toolStripMenuItem2.Text = "Мінімальний час кола";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // секToolStripMenuItem
+            // 
+            this.секToolStripMenuItem.Name = "секToolStripMenuItem";
+            this.секToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.секToolStripMenuItem.Text = "1 сек";
+            this.секToolStripMenuItem.Click += new System.EventHandler(this.секToolStripMenuItem_Click);
+            // 
+            // секToolStripMenuItem1
+            // 
+            this.секToolStripMenuItem1.Name = "секToolStripMenuItem1";
+            this.секToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.секToolStripMenuItem1.Text = "2 сек";
+            this.секToolStripMenuItem1.Click += new System.EventHandler(this.секToolStripMenuItem1_Click);
+            // 
+            // секToolStripMenuItem2
+            // 
+            this.секToolStripMenuItem2.Name = "секToolStripMenuItem2";
+            this.секToolStripMenuItem2.Size = new System.Drawing.Size(153, 22);
+            this.секToolStripMenuItem2.Text = "3 сек";
+            this.секToolStripMenuItem2.Click += new System.EventHandler(this.секToolStripMenuItem2_Click);
+            // 
+            // секToolStripMenuItem3
+            // 
+            this.секToolStripMenuItem3.Name = "секToolStripMenuItem3";
+            this.секToolStripMenuItem3.Size = new System.Drawing.Size(153, 22);
+            this.секToolStripMenuItem3.Text = "4 сек";
+            this.секToolStripMenuItem3.Click += new System.EventHandler(this.секToolStripMenuItem3_Click);
+            // 
+            // секToolStripMenuItem4
+            // 
+            this.секToolStripMenuItem4.Name = "секToolStripMenuItem4";
+            this.секToolStripMenuItem4.Size = new System.Drawing.Size(153, 22);
+            this.секToolStripMenuItem4.Text = "5 сек";
+            this.секToolStripMenuItem4.Click += new System.EventHandler(this.секToolStripMenuItem4_Click);
+            // 
+            // секToolStripMenuItem5
+            // 
+            this.секToolStripMenuItem5.Name = "секToolStripMenuItem5";
+            this.секToolStripMenuItem5.Size = new System.Drawing.Size(153, 22);
+            this.секToolStripMenuItem5.Text = "6 сек";
+            this.секToolStripMenuItem5.Click += new System.EventHandler(this.секToolStripMenuItem5_Click);
+            // 
+            // ввестиВручнуToolStripMenuItem
+            // 
+            this.ввестиВручнуToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox1});
+            this.ввестиВручнуToolStripMenuItem.Name = "ввестиВручнуToolStripMenuItem";
+            this.ввестиВручнуToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.ввестиВручнуToolStripMenuItem.Text = "Ввести вручну";
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox1.DoubleClick += new System.EventHandler(this.toolStripTextBox1_DoubleClick);
+            // 
             // timer24
             // 
             this.timer24.Interval = 1000;
@@ -1272,23 +1397,26 @@ namespace zase4kak
             // 
             // button20
             // 
+            this.button20.BackColor = System.Drawing.Color.Goldenrod;
             this.button20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button20.BackgroundImage")));
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button20.ForeColor = System.Drawing.Color.Goldenrod;
             this.button20.Location = new System.Drawing.Point(537, 844);
             this.button20.Margin = new System.Windows.Forms.Padding(2);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(71, 52);
             this.button20.TabIndex = 139;
             this.button20.Text = "OK";
-            this.button20.UseVisualStyleBackColor = true;
+            this.button20.UseVisualStyleBackColor = false;
             this.button20.Visible = false;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // label89
             // 
             this.label89.AutoSize = true;
+            this.label89.BackColor = System.Drawing.Color.Transparent;
             this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label89.ForeColor = System.Drawing.Color.Black;
+            this.label89.ForeColor = System.Drawing.Color.Goldenrod;
             this.label89.Location = new System.Drawing.Point(225, 870);
             this.label89.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label89.Name = "label89";
@@ -1300,8 +1428,9 @@ namespace zase4kak
             // label88
             // 
             this.label88.AutoSize = true;
+            this.label88.BackColor = System.Drawing.Color.Transparent;
             this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label88.ForeColor = System.Drawing.Color.Black;
+            this.label88.ForeColor = System.Drawing.Color.Goldenrod;
             this.label88.Location = new System.Drawing.Point(225, 840);
             this.label88.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label88.Name = "label88";
@@ -1330,7 +1459,8 @@ namespace zase4kak
             // 
             this.button18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button18.BackgroundImage")));
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button18.Location = new System.Drawing.Point(690, 930);
+            this.button18.ForeColor = System.Drawing.Color.Goldenrod;
+            this.button18.Location = new System.Drawing.Point(690, 924);
             this.button18.Margin = new System.Windows.Forms.Padding(2);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(458, 122);
@@ -1344,7 +1474,8 @@ namespace zase4kak
             // 
             this.button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button17.BackgroundImage")));
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button17.Location = new System.Drawing.Point(690, 930);
+            this.button17.ForeColor = System.Drawing.Color.Goldenrod;
+            this.button17.Location = new System.Drawing.Point(690, 924);
             this.button17.Margin = new System.Windows.Forms.Padding(2);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(458, 122);
@@ -1359,7 +1490,7 @@ namespace zase4kak
             this.button16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button16.BackgroundImage")));
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button16.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button16.Location = new System.Drawing.Point(1783, 886);
+            this.button16.Location = new System.Drawing.Point(1783, 879);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(106, 46);
             this.button16.TabIndex = 131;
@@ -1890,6 +2021,8 @@ namespace zase4kak
             // 
             // button19
             // 
+            this.button19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button19.BackgroundImage")));
+            this.button19.ForeColor = System.Drawing.Color.Goldenrod;
             this.button19.Location = new System.Drawing.Point(217, 1027);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(121, 23);
@@ -1982,8 +2115,9 @@ namespace zase4kak
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label55.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label55.Location = new System.Drawing.Point(940, 8);
             this.label55.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label55.Name = "label55";
@@ -1995,8 +2129,9 @@ namespace zase4kak
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label6.Location = new System.Drawing.Point(1, 8);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
@@ -2007,8 +2142,9 @@ namespace zase4kak
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label9.Location = new System.Drawing.Point(1191, 7);
             this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
@@ -2019,8 +2155,9 @@ namespace zase4kak
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label10.Location = new System.Drawing.Point(1555, 7);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
@@ -2031,14 +2168,15 @@ namespace zase4kak
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(786, 8);
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(757, 7);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 26);
+            this.label5.Size = new System.Drawing.Size(111, 26);
             this.label5.TabIndex = 15;
-            this.label5.Text = "Круги";
+            this.label5.Text = "К-сть кіл";
             // 
             // panel1
             // 
@@ -2337,7 +2475,7 @@ namespace zase4kak
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.label124);
             this.panel2.Controls.Add(this.label55);
             this.panel2.Controls.Add(this.label6);
@@ -2354,8 +2492,9 @@ namespace zase4kak
             // label124
             // 
             this.label124.AutoSize = true;
-            this.label124.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label124.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label124.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label124.Location = new System.Drawing.Point(1780, 7);
             this.label124.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label124.Name = "label124";
@@ -2366,8 +2505,9 @@ namespace zase4kak
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label7.Location = new System.Drawing.Point(111, 8);
             this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
@@ -2509,7 +2649,8 @@ namespace zase4kak
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(690, 931);
+            this.button1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.button1.Location = new System.Drawing.Point(690, 920);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(458, 122);
@@ -2552,7 +2693,9 @@ namespace zase4kak
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.Color.Goldenrod;
             this.label13.Location = new System.Drawing.Point(782, 74);
             this.label13.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label13.Name = "label13";
@@ -2613,7 +2756,9 @@ namespace zase4kak
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.ForeColor = System.Drawing.Color.Goldenrod;
             this.label15.Location = new System.Drawing.Point(17, 99);
             this.label15.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label15.Name = "label15";
@@ -2625,7 +2770,9 @@ namespace zase4kak
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.ForeColor = System.Drawing.Color.Goldenrod;
             this.label14.Location = new System.Drawing.Point(4, 30);
             this.label14.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label14.Name = "label14";
@@ -2651,7 +2798,9 @@ namespace zase4kak
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 84.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(1564, 30);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
@@ -3488,19 +3637,21 @@ namespace zase4kak
             // textBox36
             // 
             this.textBox36.BackColor = System.Drawing.Color.DodgerBlue;
+            this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox36.Location = new System.Drawing.Point(949, 876);
             this.textBox36.Name = "textBox36";
             this.textBox36.Size = new System.Drawing.Size(100, 20);
-            this.textBox36.TabIndex = 143;
+            this.textBox36.TabIndex = 118;
             this.textBox36.Visible = false;
             // 
             // textBox37
             // 
             this.textBox37.BackColor = System.Drawing.Color.Yellow;
+            this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox37.Location = new System.Drawing.Point(949, 899);
             this.textBox37.Name = "textBox37";
             this.textBox37.Size = new System.Drawing.Size(100, 20);
-            this.textBox37.TabIndex = 144;
+            this.textBox37.TabIndex = 119;
             this.textBox37.Visible = false;
             // 
             // timer34
@@ -3621,89 +3772,6 @@ namespace zase4kak
             this.timer46.Tag = "таймер для сортування результату";
             this.timer46.Tick += new System.EventHandler(this.timer46_Tick);
             // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Спортсмен";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.Width = 180;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Результат";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Спортсмен";
-            this.Column1.Name = "Column1";
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 180;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Результат";
-            this.Column2.MaxInputLength = 300;
-            this.Column2.Name = "Column2";
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.секToolStripMenuItem,
-            this.секToolStripMenuItem1,
-            this.секToolStripMenuItem2,
-            this.секToolStripMenuItem3,
-            this.секToolStripMenuItem4,
-            this.секToolStripMenuItem5});
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(198, 22);
-            this.toolStripMenuItem2.Text = "Мінімальний час кола";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // секToolStripMenuItem
-            // 
-            this.секToolStripMenuItem.Name = "секToolStripMenuItem";
-            this.секToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.секToolStripMenuItem.Text = "1 сек";
-            this.секToolStripMenuItem.Click += new System.EventHandler(this.секToolStripMenuItem_Click);
-            // 
-            // секToolStripMenuItem1
-            // 
-            this.секToolStripMenuItem1.Name = "секToolStripMenuItem1";
-            this.секToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.секToolStripMenuItem1.Text = "2 сек";
-            this.секToolStripMenuItem1.Click += new System.EventHandler(this.секToolStripMenuItem1_Click);
-            // 
-            // секToolStripMenuItem2
-            // 
-            this.секToolStripMenuItem2.Name = "секToolStripMenuItem2";
-            this.секToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.секToolStripMenuItem2.Text = "3 сек";
-            this.секToolStripMenuItem2.Click += new System.EventHandler(this.секToolStripMenuItem2_Click);
-            // 
-            // секToolStripMenuItem3
-            // 
-            this.секToolStripMenuItem3.Name = "секToolStripMenuItem3";
-            this.секToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
-            this.секToolStripMenuItem3.Text = "4 сек";
-            this.секToolStripMenuItem3.Click += new System.EventHandler(this.секToolStripMenuItem3_Click);
-            // 
-            // секToolStripMenuItem4
-            // 
-            this.секToolStripMenuItem4.Name = "секToolStripMenuItem4";
-            this.секToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
-            this.секToolStripMenuItem4.Text = "5 сек";
-            this.секToolStripMenuItem4.Click += new System.EventHandler(this.секToolStripMenuItem4_Click);
-            // 
-            // секToolStripMenuItem5
-            // 
-            this.секToolStripMenuItem5.Name = "секToolStripMenuItem5";
-            this.секToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
-            this.секToolStripMenuItem5.Text = "6 сек";
-            this.секToolStripMenuItem5.Click += new System.EventHandler(this.секToolStripMenuItem5_Click);
-            // 
             // form4BindingSource
             // 
             this.form4BindingSource.DataSource = typeof(zase4kak.Form4);
@@ -3712,7 +3780,7 @@ namespace zase4kak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(1920, 1057);
             this.Controls.Add(this.textBox38);
             this.Controls.Add(this.dataGridView3);
@@ -4136,5 +4204,7 @@ namespace zase4kak
         private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem ввестиВручнуToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
     }
 }
