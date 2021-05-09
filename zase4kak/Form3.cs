@@ -51,7 +51,8 @@ namespace zase4kak
 			секToolStripMenuItem3.BackColor = Settings.Default.color_delay3;
 			секToolStripMenuItem4.BackColor = Settings.Default.color_delay4;
 			секToolStripMenuItem5.BackColor = Settings.Default.color_delay5;
-
+			toolStripTextBox1.Text = Settings.Default.deley6_text;
+			toolStripTextBox1.BackColor = Settings.Default.color_delay6;
 
 		}
 
@@ -67,7 +68,7 @@ namespace zase4kak
 			button6.Focus();
 		}
 
-		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, time_to_traning_min, time_to_traning_sec;
+		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, time_to_traning_min, time_to_traning_sec, traning_number_group = 1;
 
 		int time_to_traning_secs = 1;// секунди для тренування
 		double delay;
@@ -1345,6 +1346,8 @@ namespace zase4kak
 			textBox26.Visible = true;
 			textBox27.Visible = true;
 			button20.Visible = true;
+			label11.Visible = true;
+			textBox28.Visible = true;
 
 
 
@@ -1455,53 +1458,53 @@ namespace zase4kak
 
 			switch (Convert.ToInt32(label67.Text))
 			{
-				case 36:
+				case 37:
 					{
 						label71.Text = "Група - << J >>";
 						break;
 					}
 
-				case 32:
+				case 33:
 					{
 						label71.Text = "Група - << I >>";
 						break;
 					}
-				case 28:
+				case 29:
 					{
 						label71.Text = "Група - << H >>";
 						break;
 					}
-				case 24:
+				case 25:
 					{
 						label71.Text = "Група - << G >>";
 						break;
 					}
-				case 20:
+				case 21:
 					{
 						label71.Text = "Група - << F >>";
 						break;
 					}
-				case 16:
+				case 17:
 					{
 						label71.Text = "Група - << E >>";
 						break;
 					}
-				case 12:
+				case 13:
 					{
 						label71.Text = "Група - << D >>";
 						break;
 					}
-				case 8:
+				case 9:
 					{
 						label71.Text = "Група - << C >>";
 						break;
 					}
-				case 4:
+				case 5:
 					{
 						label71.Text = "Група - << B >>";
 						break;
 					}
-				case 0:
+				case 1:
 					{
 						label71.Text = "Група - << A >>";
 						break;
@@ -3351,7 +3354,7 @@ namespace zase4kak
 
 			if (label48.Text == "" && label15.Text == "номер заизду")
 			{
-				n = 59;
+				n = listBox1.Items.Count - 1;
 				//label48.Text = Convert.ToString(listBox1.Items[n]);
 
 				for (int i = 0; i < n; n--)
@@ -3749,7 +3752,7 @@ namespace zase4kak
 			Times = 0.0;             //timer на час кола
 
 
-			if (label4.Text == "3")             //звук для time to start
+			if (label4.Text == "4")             //звук для time to start
 			{
 
 
@@ -4120,6 +4123,10 @@ namespace zase4kak
 			textBox26.Visible = false;
 			textBox27.Visible = false;
 			button20.Visible = false;
+			label11.Visible = false;
+			textBox28.Visible = false;
+			label15.Visible = true;
+			label15.Text = traning_number_group +"/"+ textBox28.Text;
 			time_to_traning_min = Convert.ToInt32(textBox26.Text);
 			time_to_traning_sec = Convert.ToInt32(textBox27.Text);
 			button5.Enabled = true;
@@ -4193,6 +4200,7 @@ namespace zase4kak
 			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay6 = toolStripTextBox1.BackColor = Color.WhiteSmoke;
 			Settings.Default.Save();
 		}
 
@@ -4205,6 +4213,7 @@ namespace zase4kak
 			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay6 = toolStripTextBox1.BackColor = Color.WhiteSmoke;
 			Settings.Default.Save();
 		}
 
@@ -4217,6 +4226,7 @@ namespace zase4kak
 			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay6 = toolStripTextBox1.BackColor = Color.WhiteSmoke;
 			Settings.Default.Save();
 		}
 
@@ -4229,6 +4239,7 @@ namespace zase4kak
 			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay6 = toolStripTextBox1.BackColor = Color.WhiteSmoke;
 			Settings.Default.Save();
 		}
 
@@ -4241,6 +4252,7 @@ namespace zase4kak
 			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay6 = toolStripTextBox1.BackColor = Color.WhiteSmoke;
 			Settings.Default.Save();
 		}
 
@@ -4252,6 +4264,7 @@ namespace zase4kak
 			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay6 = toolStripTextBox1.BackColor = Color.WhiteSmoke;
 			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
 			Settings.Default.Save();
 		}
@@ -4260,6 +4273,114 @@ namespace zase4kak
         {
 
         }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+			sec = 2;
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+			
+		}
+
+        private void textBox28_TextChanged(object sender, EventArgs e)
+        {
+			// обмежую активність кнопки ок (button20) коли поля не заповненні
+			if(textBox26.Text != "" && textBox27.Text != "" && textBox28.Text != "")
+            {
+				button20.Enabled = true;
+            }
+            else
+            {
+				button20.Enabled = false;
+            }
+
+			try
+			{
+				int h = Convert.ToInt32(textBox28.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				textBox28.Clear();
+			}
+		}
+
+        private void textBox27_TextChanged(object sender, EventArgs e)
+        {
+			// обмежую активність кнопки ок (button20) коли поля не заповненні
+			if (textBox26.Text != "" && textBox27.Text != "" && textBox28.Text != "")
+			{
+				button20.Enabled = true;
+			}
+			else
+			{
+				button20.Enabled = false;
+			}
+
+			try
+			{
+				int g = Convert.ToInt32(textBox27.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				textBox27.Clear();
+			}
+		}
+
+        private void textBox26_TextChanged(object sender, EventArgs e)
+        {
+			// обмежую активність кнопки ок (button20) коли поля не заповненні
+			if (textBox26.Text != "" && textBox27.Text != "" && textBox28.Text != "")
+			{
+				button20.Enabled = true;
+			}
+			else
+			{
+				button20.Enabled = false;
+			}
+
+
+			try
+			{
+				int f = Convert.ToInt32(textBox26.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				textBox26.Clear();
+			}
+
+		}
+
+        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
+        {
+			try
+			{
+				int h = Convert.ToInt32(toolStripTextBox1.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				toolStripTextBox1.Clear();
+			}
+		}
+
+        private void toolStripTextBox1_DoubleClick(object sender, EventArgs e)
+        {
+			Settings.Default.delay1 = delay = Convert.ToDouble(toolStripTextBox1.Text);
+			Settings.Default.deley6_text = toolStripTextBox1.Text;
+			Settings.Default.color_delay6 = toolStripTextBox1.BackColor = Color.Lime;
+			Settings.Default.color_delay5 = секToolStripMenuItem5.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay1 = секToolStripMenuItem1.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay2 = секToolStripMenuItem2.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay3 = секToolStripMenuItem3.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay4 = секToolStripMenuItem4.BackColor = Color.WhiteSmoke;
+			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
+			Settings.Default.Save();
+		}
 
         private void timer30_Tick(object sender, EventArgs e)
 		{
@@ -4644,7 +4765,7 @@ namespace zase4kak
 			}
 		}
 
-		private void timer41_Tick(object sender, EventArgs e)
+		public void timer41_Tick(object sender, EventArgs e)
 		{
 			int value;
 
@@ -5213,58 +5334,70 @@ namespace zase4kak
 
 				if (time_to_traning_min == -1 && time_to_traning_secs == 60)
 				{
-					serialPort1.Write("3");
-					perehid.Play();
-					serialPort1.WriteLine("3");//пауза
-					label69.Text = "Трек виключений";
-					label69.BackColor = Color.Red;
-					timer24.Enabled = false;
-					timer25.Enabled = true;
-					label13.Text = "Перехід!";
 
 
+					if (Convert.ToInt32(textBox28.Text) > traning_number_group) {
+						serialPort1.Write("3");
+						perehid.Play();
+						serialPort1.WriteLine("3");//пауза
+						label69.Text = "Трек виключений";
+						label69.BackColor = Color.Red;
+						timer24.Enabled = false;
+						timer25.Enabled = true;
+						label13.Text = "Перехід!";
 
-					label17.Text = "0";
-					label24.Text = "0";
-					label23.Text = "0";
-					label25.Text = "0";
+						traning_number_group = traning_number_group + 1;
+						label15.Text = traning_number_group + "/" + textBox28.Text;
 
-					label18.Text = "00,000";
-					label22.Text = "00,000";
-					label19.Text = "00,000";
-					label20.Text = "00,000";
-					label16.Text = "999";
-					label29.Text = "00,000";
-					label30.Text = "00,000";
-					label31.Text = "00,000";
-					label32.Text = "00,000";
-					label42.Text = "999";
-					label35.Text = "00,000";
-					label36.Text = "00,000";
-					label37.Text = "00,000";
-					label34.Text = "00,000";
-					label43.Text = "999";
-					label38.Text = "00,000";
-					label39.Text = "00,000";
-					label40.Text = "00,000";
-					label41.Text = "00,000";
-					label44.Text = "999";
-					label78.Text = "00,000";
-					label77.Text = "00,000";
-					label76.Text = "00,000";
+						label17.Text = "0";
+						label24.Text = "0";
+						label23.Text = "0";
+						label25.Text = "0";
 
-					label79.Text = "00,000";
-					label80.Text = "00,000";
-					label81.Text = "00,000";
+						label18.Text = "00,000";
+						label22.Text = "00,000";
+						label19.Text = "00,000";
+						label20.Text = "00,000";
+						label16.Text = "999";
+						label29.Text = "00,000";
+						label30.Text = "00,000";
+						label31.Text = "00,000";
+						label32.Text = "00,000";
+						label42.Text = "999";
+						label35.Text = "00,000";
+						label36.Text = "00,000";
+						label37.Text = "00,000";
+						label34.Text = "00,000";
+						label43.Text = "999";
+						label38.Text = "00,000";
+						label39.Text = "00,000";
+						label40.Text = "00,000";
+						label41.Text = "00,000";
+						label44.Text = "999";
+						label78.Text = "00,000";
+						label77.Text = "00,000";
+						label76.Text = "00,000";
 
-					label82.Text = "00,000";
-					label83.Text = "00,000";
-					label84.Text = "00,000";
+						label79.Text = "00,000";
+						label80.Text = "00,000";
+						label81.Text = "00,000";
 
-					label85.Text = "00,000";
-					label86.Text = "00,000";
-					label87.Text = "00,000";
+						label82.Text = "00,000";
+						label83.Text = "00,000";
+						label84.Text = "00,000";
 
+						label85.Text = "00,000";
+						label86.Text = "00,000";
+						label87.Text = "00,000";
+                    }
+                    else
+                    {
+						serialPort1.WriteLine("3");//пауза
+						label13.Text = "Тренуванян завершено!";
+						label13.Location = new Point(575, 66);
+						timer24.Enabled = false;
+						timer25.Enabled = false;
+					}
 
 
 				}
@@ -5432,7 +5565,7 @@ namespace zase4kak
 
 
 
-			if (label67.Text == "0" && label13.Text == "<<Фініш!>>")
+			if (label67.Text == "1" && label13.Text == "<<Фініш!>>")
 			{
 				label13.Text = "Заїзди завершено!";
 				button6.Visible = false;

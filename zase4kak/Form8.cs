@@ -99,7 +99,7 @@ namespace zase4kak
 		}
 
 		double prognoz1, prognoz2, prognoz3, prognoz4, prognoz5, prognoz6;
-		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, v, l, time_to_traning_min, time_to_traning_sec;
+		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, v, l, time_to_traning_min, time_to_traning_sec, traning_number_group = 1;
 
 		int time_to_traning_secs = 1;// секунди для тренування
 
@@ -4192,6 +4192,9 @@ namespace zase4kak
 			textBox26.Visible = true;
 			textBox27.Visible = true;
 			button20.Visible = true;
+			label137.Visible = true;
+			textBox39.Visible = true;
+
 
 
 
@@ -7175,9 +7178,14 @@ namespace zase4kak
 			textBox26.Visible = false;
 			textBox27.Visible = false;
 			button20.Visible = false;
+			label137.Visible = false;
+			textBox39.Visible = false;
+			label15.Visible = true;
 			time_to_traning_min = Convert.ToInt32(textBox26.Text);
 			time_to_traning_sec = Convert.ToInt32(textBox27.Text);
 			button5.Enabled = true;
+			label15.Text = traning_number_group + "/" + textBox39.Text;
+
 		}
 
 		private void dataGridView1_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
@@ -8752,10 +8760,7 @@ namespace zase4kak
 			Settings.Default.Save();
 		}
 
-        private void доріжкаToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void toolStripTextBox1_DoubleClick(object sender, EventArgs e)
         {
@@ -8770,6 +8775,115 @@ namespace zase4kak
 			Settings.Default.color_delay = секToolStripMenuItem.BackColor = Color.WhiteSmoke;
 			Settings.Default.Save();
 		}
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+			
+
+		}
+
+        private void textBox26_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox27_TextChanged(object sender, EventArgs e)
+        {
+			// обмежую активність кнопки ок (button20) коли поля не заповненні
+			if (textBox26.Text != "" && textBox27.Text != "" && textBox39.Text != "")
+			{
+				button20.Enabled = true;
+			}
+			else
+			{
+				button20.Enabled = false;
+			}
+			try
+			{
+				int f = Convert.ToInt32(textBox27.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				textBox27.Clear();
+			}
+			
+		}
+
+        private void textBox39_TextChanged(object sender, EventArgs e)
+        {
+			// обмежую активність кнопки ок (button20) коли поля не заповненні
+			if (textBox26.Text != "" && textBox27.Text != "" && textBox39.Text != "")
+			{
+				button20.Enabled = true;
+			}
+			else
+			{
+				button20.Enabled = false;
+			}
+			try
+			{
+				int g = Convert.ToInt32(textBox39.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				textBox39.Clear();
+			}
+			
+		}
+
+        private void textBox26_KeyDown(object sender, KeyEventArgs e)
+        {
+			
+		}
+
+        private void textBox26_TextChanged_1(object sender, EventArgs e)
+        {
+			// обмежую активність кнопки ок (button20) коли поля не заповненні
+			if (textBox26.Text != "" && textBox27.Text != "" && textBox39.Text != "")
+			{
+				button20.Enabled = true;
+			}
+			else
+			{
+				button20.Enabled = false;
+			}
+
+			try
+			{
+				int s = Convert.ToInt32(textBox26.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				textBox26.Clear();
+			}
+			
+		}
+
+        private void toolStripTextBox1_VisibleChanged(object sender, EventArgs e)
+        {
+			
+		}
+
+        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
+        {
+			try
+			{
+				int h = Convert.ToInt32(toolStripTextBox1.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				toolStripTextBox1.Clear();
+			}
+		}
+
+        private void timer47_Tick(object sender, EventArgs e)
+        {
+			
+        }
 
         private void button15_KeyPress(object sender, KeyPressEventArgs e)
 		{
@@ -8877,7 +8991,7 @@ namespace zase4kak
 
 		private void timer42_Tick(object sender, EventArgs e)
 		{
-
+			
 		}
 
 		private void timer46_Tick(object sender, EventArgs e)
@@ -10264,70 +10378,86 @@ namespace zase4kak
 
 
 
+			
 
-			if (time_to_traning_secs == 0)                                               //таймер для гонки 1 перший заїзд
-			{
-				time_to_traning_min--;
-				time_to_traning_secs = 60;
-
-				if (time_to_traning_min == -1 && time_to_traning_secs == 60)
+				if (time_to_traning_secs == 0)                                               //таймер для гонки 1 перший заїзд
 				{
-					serialPort1.Write("3");
-					perehid.Play();
-					serialPort1.WriteLine("3");//пауза
-					label69.Text = "Трек виключений";
-					label69.BackColor = Color.Red;
-					timer24.Enabled = false;
-					timer25.Enabled = true;
-					label13.Text = "Перехід!";
+					time_to_traning_min--;
+					time_to_traning_secs = 60;
+
+					if (time_to_traning_min == -1 && time_to_traning_secs == 60)
+					{
 
 
-
-					label17.Text = "0";
-					label24.Text = "0";
-					label23.Text = "0";
-					label25.Text = "0";
-
-					label18.Text = "00,000";
-					label22.Text = "00,000";
-					label19.Text = "00,000";
-					label20.Text = "00,000";
-					label16.Text = "999";
-					label29.Text = "00,000";
-					label30.Text = "00,000";
-					label31.Text = "00,000";
-					label32.Text = "00,000";
-					label42.Text = "999";
-					label35.Text = "00,000";
-					label36.Text = "00,000";
-					label37.Text = "00,000";
-					label34.Text = "00,000";
-					label43.Text = "999";
-					label38.Text = "00,000";
-					label39.Text = "00,000";
-					label40.Text = "00,000";
-					label41.Text = "00,000";
-					label44.Text = "999";
-					label78.Text = "00,000";
-					label77.Text = "00,000";
-					label76.Text = "00,000";
-
-					label79.Text = "00,000";
-					label80.Text = "00,000";
-					label81.Text = "00,000";
-
-					label82.Text = "00,000";
-					label83.Text = "00,000";
-					label84.Text = "00,000";
-
-					label85.Text = "00,000";
-					label86.Text = "00,000";
-					label87.Text = "00,000";
+					if(Convert.ToInt32(textBox39.Text) > traning_number_group) { 
 
 
+						serialPort1.Write("3");
+						perehid.Play();
+						serialPort1.WriteLine("3");//пауза
+						label69.Text = "Трек виключений";
+						label69.BackColor = Color.Red;
+						timer24.Enabled = false;
+						timer25.Enabled = true;
+						label13.Text = "Перехід!";
+
+						traning_number_group = traning_number_group + 1;
+						label15.Text = traning_number_group + "/" + textBox39.Text;
+
+						label17.Text = "0";
+						label24.Text = "0";
+						label23.Text = "0";
+						label25.Text = "0";
+
+						label18.Text = "00,000";
+						label22.Text = "00,000";
+						label19.Text = "00,000";
+						label20.Text = "00,000";
+						label16.Text = "999";
+						label29.Text = "00,000";
+						label30.Text = "00,000";
+						label31.Text = "00,000";
+						label32.Text = "00,000";
+						label42.Text = "999";
+						label35.Text = "00,000";
+						label36.Text = "00,000";
+						label37.Text = "00,000";
+						label34.Text = "00,000";
+						label43.Text = "999";
+						label38.Text = "00,000";
+						label39.Text = "00,000";
+						label40.Text = "00,000";
+						label41.Text = "00,000";
+						label44.Text = "999";
+						label78.Text = "00,000";
+						label77.Text = "00,000";
+						label76.Text = "00,000";
+
+						label79.Text = "00,000";
+						label80.Text = "00,000";
+						label81.Text = "00,000";
+
+						label82.Text = "00,000";
+						label83.Text = "00,000";
+						label84.Text = "00,000";
+
+						label85.Text = "00,000";
+						label86.Text = "00,000";
+						label87.Text = "00,000";
+
+					} else
+					{
+						serialPort1.WriteLine("3");//пауза
+						label13.Text = "Тренуванян завершено!";
+						label13.Location = new Point(575, 66);
+						timer24.Enabled = false;
+						timer25.Enabled = false;
+					}
 
 				}
-			}
+            }
+           
+           
 		}
 
 		private void button17_Click(object sender, EventArgs e)
@@ -10368,7 +10498,14 @@ namespace zase4kak
 
 		private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
 		{
-			textBox15.AppendText(serialPort1.ReadLine());
+			
+
+			
+				textBox15.AppendText(serialPort1.ReadLine());
+			
+			
+				
+			
 			Thread.Sleep(100);
 		}
 
@@ -11198,158 +11335,40 @@ namespace zase4kak
 
 
 
-			switch (Convert.ToInt64(textBox15.Text))
-			{
 
-				case 10000:
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+			
+
+			
+				
+				
+
+
+					if (Convert.ToInt16(textBox15.Text) == 01)
 					{
-						l = Convert.ToInt32(label112.Text);          //жовта доріжка
-						timer29.Enabled = true;
-						timer27.Enabled = false;
-						label114.Text = label110.Text;
-						Timeb = 0;
-						timer27.Enabled = true;
-						timer45.Enabled = true;
-						textBox15.Text = "0";
-
-
-						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування жовта доріжка
-						{
-							if (Convert.ToDouble(label107.Text) > delay) // обмеження часу у тренуванні
-							{
-
-								textBox15.Text = "0";
-								label109.Text = label111.Text;
-								label111.Text = label108.Text;
-								label108.Text = label100.Text;
-								label100.Text = label101.Text;
-								label101.Text = label103.Text;
-								label103.Text = label114.Text;
-								label112.Text = Convert.ToString(l);
-								if (Convert.ToDouble(label107.Text) > Convert.ToDouble(label114.Text))
-								{
-									label107.Text = label114.Text;
-									best_time.Play();
-
-								}
-							}
-							else
-							{
-								label107.Text = "999";
-								label114.Text = "999";
-								textBox15.Text = "0";
-							}
-						}
-						else
-						{
 
 
 
 
 
 
-							if (Convert.ToDouble(label114.Text) > delay)//обмеження крвщого часу кола 3 секунди
-							{
-								label100.Text = label101.Text;
-								label101.Text = label103.Text;
-								label103.Text = label114.Text;
-								label112.Text = Convert.ToString(l);
 
 
-								if (Convert.ToDouble(label107.Text) > Convert.ToDouble(label114.Text))
-								{
-									label107.Text = label114.Text;
-
-
-								}
-
-							}
-							else
-							{
-								button6.PerformClick();
-								MessageBox.Show("Щось пішло не так!! Перевірте модель на 6 доріжці!");
-							}
-						}
-					}
-					break;
-				case 10001:
-					{
-						v = Convert.ToInt32(label97.Text);          //синя доріжка
-						timer28.Enabled = true;
-						timer26.Enabled = false;
-						label99.Text = label95.Text;
-						Timeo = 0;
-						timer26.Enabled = true;
-						timer45.Enabled = true;
-
-						textBox15.Text = "0";
-
-						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування синя доріжка
-						{
-							if (Convert.ToDouble(label92.Text) > delay) // обмеження часу у тренуванні
-							{
-
-
-
-
-
-								label11.Text = label96.Text;
-								label96.Text = label93.Text;
-								label93.Text = label94.Text;
-
-								label94.Text = label72.Text;
-								label72.Text = label74.Text;
-								label74.Text = label99.Text;
-								label97.Text = Convert.ToString(v);
-
-
-								if (Convert.ToDouble(label92.Text) > Convert.ToDouble(label99.Text))
-								{
-									label92.Text = label99.Text;
-									best_time.Play();
-
-								}
-							}
-							else
-							{
-								label107.Text = "999";
-								label114.Text = "999";
-								textBox15.Text = "0";
-							}
-						}
-						else
-						{
-
-
-
-							if (Convert.ToDouble(label99.Text) > delay)//обмеження крвщого часу кола 3 секунди
-							{
-
-								label94.Text = label72.Text;
-								label72.Text = label74.Text;
-								label74.Text = label99.Text;
-								label97.Text = Convert.ToString(v);
-
-
-								if (Convert.ToDouble(label92.Text) > Convert.ToDouble(label99.Text))
-								{
-									label92.Text = label99.Text;
-
-
-								}
-
-							}
-							else
-							{
-								button6.PerformClick();
-								MessageBox.Show("Щось пішло не так!! Перевірте модель на 5 доріжці!");
-							}
-
-						}
-					}
-					break;
-				case 01:
-					{
 						i = Convert.ToInt32(label17.Text);          //червона доріжка
 						timer10.Enabled = true;
 						timer11.Enabled = false;
@@ -11360,10 +11379,10 @@ namespace zase4kak
 
 						if (label13.Text == "Тренування!")  // алгоритм для часу кола для тренування червона доріжка
 						{
-							
+
 							if (Convert.ToDouble(label16.Text) > delay) // обмеження часу у тренуванні
 							{
-								textBox15.Text = "0";
+								textBox15.Text = "i";
 
 								label78.Text = label77.Text;
 								label77.Text = label76.Text;
@@ -11372,1522 +11391,2406 @@ namespace zase4kak
 								label19.Text = label22.Text;
 								label22.Text = label18.Text;
 								label17.Text = Convert.ToString(i);
-								
+
 
 								if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
 								{
 									label16.Text = label18.Text;
 									best_time.Play();
-
-								}
-                            }
-                            else
-                            {
-								label18.Text = "999";
-								label16.Text = "999";
-								textBox15.Text = "0";
-							}
-						}
-						else                             // алгоритм для часу кола для гонок червона доріжка
-						{
-							textBox15.Text = "0";
-							if (Convert.ToDouble(label18.Text) > delay)//обмеження крвщого часу кола 3 секунди
-							{
-								label20.Text = label19.Text;
-								label19.Text = label22.Text;
-								label22.Text = label18.Text;
-								label17.Text = Convert.ToString(i);
-
-
-								if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-								{
-									label16.Text = label18.Text;
-
 
 								}
 							}
 							else
 							{
-								button6.PerformClick();
-								MessageBox.Show("Щось пішло не так!! Перевірте модель на 1 доріжці!");
+								label18.Text = "999";
+								label16.Text = "999";
+								textBox15.Text = "i";
 							}
 						}
-						break;
-					}
-				case 010:
-					{
-						c = Convert.ToInt32(label24.Text);
-						timer13.Enabled = true;
-						timer17.Enabled = false;
-						label29.Text = label27.Text;
-						Timez = 0;
-						timer17.Enabled = true;
-						timer45.Enabled = true;
-
-						
-
-							if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування біла доріжка
-							{
-							if (Convert.ToDouble(label42.Text) > delay) // обмеження часу у тренуванні
-							{
-								label79.Text = label80.Text;
-								label80.Text = label81.Text;
-								label81.Text = label31.Text;
-								label31.Text = label32.Text;
-								label32.Text = label30.Text;
-								label30.Text = label29.Text;
-								label24.Text = Convert.ToString(c);
-								textBox15.Text = "0";
-
-								if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-								{
-									label42.Text = label29.Text;
-									best_time.Play();
+                else                             // алгоритм для часу кола для гонок червона доріжка
+                {
+                    textBox15.Text = "0";
+                    if (Convert.ToDouble(label18.Text) > delay)//обмеження крвщого часу кола 3 секунди
+                    {
+                        label20.Text = label19.Text;
+                        label19.Text = label22.Text;
+                        label22.Text = label18.Text;
+                        label17.Text = Convert.ToString(i);
 
 
-								}
+                        if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+                        {
+                            label16.Text = label18.Text;
+
+
+                        }
+                    }
+                    else
+                    {
+                        button6.PerformClick();
+                        MessageBox.Show("Щось пішло не так!! Перевірте модель на 1 доріжці!");
+                    }
+                }
+
+
+
+
+
+
+            }
+            else
+            {
+
+
+
+
+
+                if (Convert.ToInt32(textBox15.Text) == 010)
+                {
+
+
+
+
+
+
+
+                    c = Convert.ToInt32(label24.Text);
+                    timer13.Enabled = true;
+                    timer17.Enabled = false;
+                    label29.Text = label27.Text;
+                    Timez = 0;
+                    timer17.Enabled = true;
+                    timer45.Enabled = true;
+
+
+
+                    if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування біла доріжка
+                    {
+                        if (Convert.ToDouble(label42.Text) > delay) // обмеження часу у тренуванні
+                        {
+                            label79.Text = label80.Text;
+                            label80.Text = label81.Text;
+                            label81.Text = label31.Text;
+                            label31.Text = label32.Text;
+                            label32.Text = label30.Text;
+                            label30.Text = label29.Text;
+                            label24.Text = Convert.ToString(c);
+                            textBox15.Text = "0";
+
+                            if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+                            {
+                                label42.Text = label29.Text;
+                                best_time.Play();
+
+
+                            }
+                        }
+                        else
+                        {
+
+
+                            label29.Text = "999";
+                            label42.Text = "999";
+                            textBox15.Text = "0";
+                        }
+                    }
+                    else                                     // алгоритм для часу кола для гонки біла доріжка
+                    {
+
+                        textBox15.Text = "0";
+
+                        if (Convert.ToDouble(label29.Text) > delay)//обмеження крвщого часу кола 3 секунди
+                        {
+
+                            label31.Text = label32.Text;
+                            label32.Text = label30.Text;
+                            label30.Text = label29.Text;
+                            label24.Text = Convert.ToString(c);
+
+
+                            if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+                            {
+                                label42.Text = label29.Text;
+
+
+                            }
+
+                        }
+                        else
+                        {
+                            button6.PerformClick();
+                            MessageBox.Show("Щось пішло не так!! Перевірте модель на 2 доріжці!");
+                        }
+                    }
+
+
+
+
+
+                }
+                else
+                {
+
+
+
+
+
+                    if (Convert.ToInt32(textBox15.Text) == 011)
+                    {
+
+
+
+
+
+
+                        b = Convert.ToInt32(label23.Text);
+                        timer12.Enabled = true;
+                        timer15.Enabled = false;
+                        label37.Text = label26.Text;
+                        Times = 0;
+                        timer15.Enabled = true;
+                        timer45.Enabled = true;
+
+
+
+                        if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування зелена доріжка
+                        {
+                            if (Convert.ToDouble(label43.Text) > delay) // обмеження часу у тренуванні
+                            {
+                                label82.Text = label83.Text;
+                                label83.Text = label84.Text;
+                                label84.Text = label35.Text;
+                                label35.Text = label36.Text;
+                                label36.Text = label34.Text;
+                                label34.Text = label37.Text;
+                                label23.Text = Convert.ToString(b);
+                                textBox15.Text = "0";
+
+
+                                if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+                                {
+                                    label43.Text = label37.Text;
+                                    best_time.Play();
+
+                                }
                             }
                             else
                             {
-								
-								
-								label29.Text = "999";
-								label42.Text = "999";
-								textBox15.Text = "0";
-							}
-						}
-						else                                     // алгоритм для часу кола для гонки біла доріжка
-						{
-
-							textBox15.Text = "0";
-
-							if (Convert.ToDouble(label29.Text) > delay)//обмеження крвщого часу кола 3 секунди
-							{
-
-								label31.Text = label32.Text;
-								label32.Text = label30.Text;
-								label30.Text = label29.Text;
-								label24.Text = Convert.ToString(c);
+                                label37.Text = "999";
+                                label43.Text = "999";
+                                textBox15.Text = "0";
+                            }
+                        }
+                        else                                        // алгоритм для часу кола для гонки зелена доріжка
+                        {
 
 
-								if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-								{
-									label42.Text = label29.Text;
+                            textBox15.Text = "0";
+
+                            if (Convert.ToDouble(label37.Text) > delay) //обмеження крвщого часу кола 3 секунди
+                            {
+
+                                label35.Text = label36.Text;
+                                label36.Text = label34.Text;
+                                label34.Text = label37.Text;
+                                label23.Text = Convert.ToString(b);
 
 
-								}
-								
-							}else
-								{
-									button6.PerformClick();
-									MessageBox.Show("Щось пішло не так!! Перевірте модель на 2 доріжці!");
-								}
-						}
-						break;
-					}
-				case 011:
-					{
-						b = Convert.ToInt32(label23.Text);
-						timer12.Enabled = true;
-						timer15.Enabled = false;
-						label37.Text = label26.Text;
-						Times = 0;
-						timer15.Enabled = true;
-						timer45.Enabled = true;
 
-						
+                                if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+                                {
+                                    label43.Text = label37.Text;
 
-							if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування зелена доріжка
-							{
-							if (Convert.ToDouble(label43.Text) > delay) // обмеження часу у тренуванні
-							{
-								label82.Text = label83.Text;
-								label83.Text = label84.Text;
-								label84.Text = label35.Text;
-								label35.Text = label36.Text;
-								label36.Text = label34.Text;
-								label34.Text = label37.Text;
-								label23.Text = Convert.ToString(b);
-								textBox15.Text = "0";
+                                }
 
-
-								if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-								{
-									label43.Text = label37.Text;
-									best_time.Play();
-
-								}
                             }
                             else
                             {
-								label37.Text = "999";
-								label43.Text = "999";
-								textBox15.Text = "0";
-							}
-						}
-						else                                        // алгоритм для часу кола для гонки зелена доріжка
-						{
-
-
-							textBox15.Text = "0";
-
-							if (Convert.ToDouble(label37.Text) > delay) //обмеження крвщого часу кола 3 секунди
-							{
-
-								label35.Text = label36.Text;
-								label36.Text = label34.Text;
-								label34.Text = label37.Text;
-								label23.Text = Convert.ToString(b);
+                                button6.PerformClick();
+                                MessageBox.Show("Щось пішло не так!! Перевірте модель на 3 доріжці!");
+                            }
+                        }
+                    }
+                    else
+                    {
 
 
 
-								if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-								{
-									label43.Text = label37.Text;
-
-								}
-								
-							}else
-								{
-									button6.PerformClick();
-									MessageBox.Show("Щось пішло не так!! Перевірте модель на 3 доріжці!");
-								}
-						}
-						break;
-					}
-				case 0100:
-					{
-						d = Convert.ToInt32(label25.Text);
-						timer14.Enabled = true;
-						timer16.Enabled = false;
-						label38.Text = label28.Text;
-						Timeg = 0;
-						timer16.Enabled = true;
-						timer45.Enabled = true;
 
 
-					
+                        if (Convert.ToInt32(textBox15.Text) == 0100)
+
+                        {
 
 
-							if (label13.Text == "Тренування!")// алгоритм для часу кола для тренування оранжева доріжка
-							{
 
-							if (Convert.ToDouble(label44.Text) > delay) // обмеження часу у тренуванні
-							{
-								label85.Text = label86.Text;
-								label86.Text = label87.Text;
-								label87.Text = label40.Text;
-								label40.Text = label41.Text;
-								label41.Text = label39.Text;
-								label39.Text = label38.Text;
-								label25.Text = Convert.ToString(d);
-								textBox15.Text = "0";
 
-								if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-								{
-									label44.Text = label38.Text;
-									best_time.Play();
 
-								}
+                            d = Convert.ToInt32(label25.Text);
+                            timer14.Enabled = true;
+                            timer16.Enabled = false;
+                            label38.Text = label28.Text;
+                            Timeg = 0;
+                            timer16.Enabled = true;
+                            timer45.Enabled = true;
+
+
+
+
+
+                            if (label13.Text == "Тренування!")// алгоритм для часу кола для тренування оранжева доріжка
+                            {
+
+                                if (Convert.ToDouble(label44.Text) > delay) // обмеження часу у тренуванні
+                                {
+                                    label85.Text = label86.Text;
+                                    label86.Text = label87.Text;
+                                    label87.Text = label40.Text;
+                                    label40.Text = label41.Text;
+                                    label41.Text = label39.Text;
+                                    label39.Text = label38.Text;
+                                    label25.Text = Convert.ToString(d);
+                                    textBox15.Text = "0";
+
+                                    if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+                                    {
+                                        label44.Text = label38.Text;
+                                        best_time.Play();
+
+                                    }
+                                }
+                                else
+                                {
+                                    label38.Text = "999";
+                                    label44.Text = "999";
+                                    textBox15.Text = "0";
+                                }
+                            }
+                            else                                     // алгоритм для часу кола для Гонки оранжева доріжка
+                            {
+
+
+                                textBox15.Text = "0";
+                                if (Convert.ToDouble(label38.Text) > delay)//обмеження крвщого часу кола 3 секунди
+                                {
+
+                                    label40.Text = label41.Text;
+                                    label41.Text = label39.Text;
+                                    label39.Text = label38.Text;
+                                    label25.Text = Convert.ToString(d);
+
+
+                                    if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+                                    {
+                                        label44.Text = label38.Text;
+
+                                    }
+
+                                }
+                                else
+                                {
+                                    button6.PerformClick();
+                                    MessageBox.Show("Щось пішло не так!! Перевірте модель на 4 доріжці!");
+                                }
+                            }
+                        }
+
+
+
+
+
+                        else
+                        {
+
+                            if (Convert.ToInt32(textBox15.Text) == 10000)
+
+
+
+
+                            {
+
+
+
+
+
+                                l = Convert.ToInt32(label112.Text);          //жовта доріжка
+                                timer29.Enabled = true;
+                                timer27.Enabled = false;
+                                label114.Text = label110.Text;
+                                Timeb = 0;
+                                timer27.Enabled = true;
+                                timer45.Enabled = true;
+                                textBox15.Text = "0";
+
+
+                                if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування жовта доріжка
+                                {
+                                    if (Convert.ToDouble(label107.Text) > delay) // обмеження часу у тренуванні
+                                    {
+
+                                        textBox15.Text = "0";
+                                        label109.Text = label111.Text;
+                                        label111.Text = label108.Text;
+                                        label108.Text = label100.Text;
+                                        label100.Text = label101.Text;
+                                        label101.Text = label103.Text;
+                                        label103.Text = label114.Text;
+                                        label112.Text = Convert.ToString(l);
+                                        if (Convert.ToDouble(label107.Text) > Convert.ToDouble(label114.Text))
+                                        {
+                                            label107.Text = label114.Text;
+                                            best_time.Play();
+
+                                        }
+                                    }
+                                    else
+                                    {
+                                        label107.Text = "999";
+                                        label114.Text = "999";
+                                        textBox15.Text = "0";
+                                    }
+                                }
+                                else
+                                {
+
+
+
+
+
+
+                                    if (Convert.ToDouble(label114.Text) > delay)//обмеження крвщого часу кола 3 секунди
+                                    {
+                                        label100.Text = label101.Text;
+                                        label101.Text = label103.Text;
+                                        label103.Text = label114.Text;
+                                        label112.Text = Convert.ToString(l);
+
+
+                                        if (Convert.ToDouble(label107.Text) > Convert.ToDouble(label114.Text))
+                                        {
+                                            label107.Text = label114.Text;
+
+
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        button6.PerformClick();
+                                        MessageBox.Show("Щось пішло не так!! Перевірте модель на 6 доріжці!");
+                                    }
+                                }
                             }
                             else
                             {
-								label38.Text = "999";
-								label44.Text = "999";
-								textBox15.Text = "0";
-							}
-						}
-						else                                     // алгоритм для часу кола для Гонки оранжева доріжка
-						{
-
-
-							textBox15.Text = "0";
-							if (Convert.ToDouble(label38.Text) > delay)//обмеження крвщого часу кола 3 секунди
-							{
-
-								label40.Text = label41.Text;
-								label41.Text = label39.Text;
-								label39.Text = label38.Text;
-								label25.Text = Convert.ToString(d);
-
-
-								if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-								{
-									label44.Text = label38.Text;
-
-								}
-								
-							}else
-								{
-									button6.PerformClick();
-									MessageBox.Show("Щось пішло не так!! Перевірте модель на 4 доріжці!");
-								}
-						}
-						break;
-					}
-				//case 01111://// білан + зелена+ оранжева+Червона доріжка
-				//	{
-				//		c = Convert.ToInt32(label24.Text);
-				//		timer13.Enabled = true;
-				//		timer17.Enabled = false;
-				//		label29.Text = label27.Text;
-				//		Timez = 0;
-				//		timer17.Enabled = true;
-				//		label31.Text = label32.Text;
-				//		label32.Text = label30.Text;
-				//		label30.Text = label29.Text;
-				//		label24.Text = Convert.ToString(c);
-
-
-				//		b = Convert.ToInt32(label23.Text);
-				//		timer12.Enabled = true;
-				//		timer15.Enabled = false;
-				//		label37.Text = label26.Text;
-				//		Times = 0;
-				//		timer15.Enabled = true;
-				//		label35.Text = label36.Text;
-				//		label36.Text = label34.Text;
-				//		label34.Text = label37.Text;
-				//		label23.Text = Convert.ToString(b);
-
-
-				//		d = Convert.ToInt32(label25.Text);
-				//		timer14.Enabled = true;
-				//		timer16.Enabled = false;
-				//		label38.Text = label28.Text;
-				//		Timeg = 0;
-				//		timer16.Enabled = true;
-				//		label40.Text = label41.Text;
-				//		label41.Text = label39.Text;
-				//		label39.Text = label38.Text;
-				//		label25.Text = Convert.ToString(d);
-
-				//		i = Convert.ToInt32(label17.Text);
-				//		timer10.Enabled = true;
-				//		timer11.Enabled = false;
-				//		label18.Text = label21.Text;
-				//		Time = 0;
-				//		timer11.Enabled = true;
-				//		label20.Text = label19.Text;
-				//		label19.Text = label22.Text;
-				//		label22.Text = label18.Text;
-				//		label17.Text = Convert.ToString(i);
-				//		textBox15.Text = "0";
-
-				//		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				//		{
-				//			label16.Text = label18.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				//		{
-				//			label44.Text = label38.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				//		{
-				//			label43.Text = label37.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				//		{
-				//			label42.Text = label29.Text;
-
-				//		}
-				//		break;
-				//	}
-				//case 01110:         // біла + зелена+ оранжева доріжка
-				//	{
-				//		c = Convert.ToInt32(label24.Text);
-				//		timer13.Enabled = true;
-				//		timer17.Enabled = false;
-				//		label29.Text = label27.Text;
-				//		Timez = 0;
-				//		timer17.Enabled = true;
-				//		label31.Text = label32.Text;
-				//		label32.Text = label30.Text;
-				//		label30.Text = label29.Text;
-				//		label24.Text = Convert.ToString(c);
-
-
-				//		b = Convert.ToInt32(label23.Text);
-				//		timer12.Enabled = true;
-				//		timer15.Enabled = false;
-				//		label37.Text = label26.Text;
-				//		Times = 0;
-				//		timer15.Enabled = true;
-				//		label35.Text = label36.Text;
-				//		label36.Text = label34.Text;
-				//		label34.Text = label37.Text;
-				//		label23.Text = Convert.ToString(b);
-
-
-				//		d = Convert.ToInt32(label25.Text);
-				//		timer14.Enabled = true;
-				//		timer16.Enabled = false;
-				//		label38.Text = label28.Text;
-				//		Timeg = 0;
-				//		timer16.Enabled = true;
-				//		label40.Text = label41.Text;
-				//		label41.Text = label39.Text;
-				//		label39.Text = label38.Text;
-				//		label25.Text = Convert.ToString(d);
-				//		textBox15.Text = "0";
-
-				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				//		{
-				//			label44.Text = label38.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				//		{
-				//			label43.Text = label37.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				//		{
-				//			label42.Text = label29.Text;
-
-				//		}
-				//		break;
-				//	}
-				//case 01100:
-				//	{
-				//		i = Convert.ToInt32(label17.Text);          //червона доріжка + зелена + оранжева
-				//		timer10.Enabled = true;
-				//		timer11.Enabled = false;
-				//		label18.Text = label21.Text;
-				//		Time = 0;
-				//		timer11.Enabled = true;
-				//		label20.Text = label19.Text;
-				//		label19.Text = label22.Text;
-				//		label22.Text = label18.Text;
-				//		label17.Text = Convert.ToString(i);
-
-
-				//		b = Convert.ToInt32(label23.Text);
-				//		timer12.Enabled = true;
-				//		timer15.Enabled = false;
-				//		label37.Text = label26.Text;
-				//		Times = 0;
-				//		timer15.Enabled = true;
-				//		label35.Text = label36.Text;
-				//		label36.Text = label34.Text;
-				//		label34.Text = label37.Text;
-				//		label23.Text = Convert.ToString(b);
-
-				//		d = Convert.ToInt32(label25.Text);
-				//		timer14.Enabled = true;
-				//		timer16.Enabled = false;
-				//		label38.Text = label28.Text;
-				//		Timeg = 0;
-				//		timer16.Enabled = true;
-				//		label40.Text = label41.Text;
-				//		label41.Text = label39.Text;
-				//		label39.Text = label38.Text;
-				//		label25.Text = Convert.ToString(d);
-				//		textBox15.Text = "0";
-
-				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				//		{
-				//			label44.Text = label38.Text;
-
-				//		}
-
-
-				//		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				//		{
-				//			label43.Text = label37.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				//		{
-				//			label16.Text = label18.Text;
-
-				//		}
-				//		break;
-				//	}
-				//case 01011:
-				//	{
-				//		i = Convert.ToInt32(label17.Text);          //червона  + біла+ оранжева доріжка
-				//		timer10.Enabled = true;
-				//		timer11.Enabled = false;
-				//		label18.Text = label21.Text;
-				//		Time = 0;
-				//		timer11.Enabled = true;
-				//		label20.Text = label19.Text;
-				//		label19.Text = label22.Text;
-				//		label22.Text = label18.Text;
-				//		label17.Text = Convert.ToString(i);
-
-
-				//		c = Convert.ToInt32(label24.Text);
-				//		timer13.Enabled = true;
-				//		timer17.Enabled = false;
-				//		label29.Text = label27.Text;
-				//		Timez = 0;
-				//		timer17.Enabled = true;
-				//		label31.Text = label32.Text;
-				//		label32.Text = label30.Text;
-				//		label30.Text = label29.Text;
-				//		label24.Text = Convert.ToString(c);
-
-				//		d = Convert.ToInt32(label25.Text);
-				//		timer14.Enabled = true;
-				//		timer16.Enabled = false;
-				//		label38.Text = label28.Text;
-				//		Timeg = 0;
-				//		timer16.Enabled = true;
-				//		label40.Text = label41.Text;
-				//		label41.Text = label39.Text;
-				//		label39.Text = label38.Text;
-				//		label25.Text = Convert.ToString(d);
-				//		textBox15.Text = "0";
-
-				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				//		{
-				//			label44.Text = label38.Text;
-
-				//		}
-
-
-				//		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				//		{
-				//			label42.Text = label29.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				//		{
-				//			label16.Text = label18.Text;
-
-				//		}
-				//		break;
-				//	}
-
-
-				//case 01010:                                     // біла + зелена доріжка
-				//	{
-				//		c = Convert.ToInt32(label24.Text);
-				//		timer13.Enabled = true;
-				//		timer17.Enabled = false;
-				//		label29.Text = label27.Text;
-				//		Timez = 0;
-				//		timer17.Enabled = true;
-				//		label31.Text = label32.Text;
-				//		label32.Text = label30.Text;
-				//		label30.Text = label29.Text;
-				//		label24.Text = Convert.ToString(c);
-
-
-				//		b = Convert.ToInt32(label23.Text);
-				//		timer12.Enabled = true;
-				//		timer15.Enabled = false;
-				//		label37.Text = label26.Text;
-				//		Times = 0;
-				//		timer15.Enabled = true;
-				//		label35.Text = label36.Text;
-				//		label36.Text = label34.Text;
-				//		label34.Text = label37.Text;
-				//		label23.Text = Convert.ToString(b);
-				//		textBox15.Text = "0";
-
-
-				//		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				//		{
-				//			label43.Text = label37.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				//		{
-				//			label42.Text = label29.Text;
-
-				//		}
-				//		break;
-				//	}
-				//case 01001: // оранжева + зелена доріжка
-				//	{
-
-				//		d = Convert.ToInt32(label25.Text);
-				//		timer14.Enabled = true;
-				//		timer16.Enabled = false;
-				//		label38.Text = label28.Text;
-				//		Timeg = 0;
-				//		timer16.Enabled = true;
-				//		label40.Text = label41.Text;
-				//		label41.Text = label39.Text;
-				//		label39.Text = label38.Text;
-				//		label25.Text = Convert.ToString(d);
-
-
-
-				//		b = Convert.ToInt32(label23.Text);
-				//		timer12.Enabled = true;
-				//		timer15.Enabled = false;
-				//		label37.Text = label26.Text;
-				//		Times = 0;
-				//		timer15.Enabled = true;
-				//		label35.Text = label36.Text;
-				//		label36.Text = label34.Text;
-				//		label34.Text = label37.Text;
-				//		label23.Text = Convert.ToString(b);
-				//		textBox15.Text = "0";
-
-
-				//		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				//		{
-				//			label43.Text = label37.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				//		{
-				//			label44.Text = label38.Text;
-
-				//		}
-				//		break;
-				//	}
-				//case 01000:
-				//	{
-				//		i = Convert.ToInt32(label17.Text);          //червона доріжка + зелена
-				//		timer10.Enabled = true;
-				//		timer11.Enabled = false;
-				//		label18.Text = label21.Text;
-				//		Time = 0;
-				//		timer11.Enabled = true;
-				//		label20.Text = label19.Text;
-				//		label19.Text = label22.Text;
-				//		label22.Text = label18.Text;
-				//		label17.Text = Convert.ToString(i);
-
-
-				//		b = Convert.ToInt32(label23.Text);
-				//		timer12.Enabled = true;
-				//		timer15.Enabled = false;
-				//		label37.Text = label26.Text;
-				//		Times = 0;
-				//		timer15.Enabled = true;
-				//		label35.Text = label36.Text;
-				//		label36.Text = label34.Text;
-				//		label34.Text = label37.Text;
-				//		label23.Text = Convert.ToString(b);
-				//		textBox15.Text = "0";
-
-
-				//		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-				//		{
-				//			label43.Text = label37.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				//		{
-				//			label16.Text = label18.Text;
-
-				//		}
-				//		break;
-				//	}
-				//case 0111:
-				//	{
-				//		i = Convert.ToInt32(label17.Text);          //червона + оранжева доріжка
-				//		timer10.Enabled = true;
-				//		timer11.Enabled = false;
-				//		label18.Text = label21.Text;
-				//		Time = 0;
-				//		timer11.Enabled = true;
-				//		label20.Text = label19.Text;
-				//		label19.Text = label22.Text;
-				//		label22.Text = label18.Text;
-				//		label17.Text = Convert.ToString(i);
-
-
-				//		d = Convert.ToInt32(label25.Text);
-				//		timer14.Enabled = true;
-				//		timer16.Enabled = false;
-				//		label38.Text = label28.Text;
-				//		Timeg = 0;
-				//		timer16.Enabled = true;
-				//		label40.Text = label41.Text;
-				//		label41.Text = label39.Text;
-				//		label39.Text = label38.Text;
-				//		label25.Text = Convert.ToString(d);
-				//		textBox15.Text = "0";
-
-				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				//		{
-				//			label44.Text = label38.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				//		{
-				//			label16.Text = label18.Text;
-
-				//		}
-				//		break;
-				//	}
-				//case 0110:
-				//	{
-				//		i = Convert.ToInt32(label17.Text);          //червона + біла доріжка
-				//		c = Convert.ToInt32(label24.Text);
-
-				//		timer10.Enabled = true;
-				//		timer11.Enabled = false;
-				//		label18.Text = label21.Text;
-				//		Time = 0;
-				//		timer11.Enabled = true;
-				//		label20.Text = label19.Text;
-				//		label19.Text = label22.Text;
-				//		label22.Text = label18.Text;
-				//		label17.Text = Convert.ToString(i);
-
-
-
-
-
-
-				//		timer13.Enabled = true;
-				//		timer17.Enabled = false;
-				//		label29.Text = label27.Text;
-				//		Timez = 0;
-				//		timer17.Enabled = true;
-				//		label31.Text = label32.Text;
-				//		label32.Text = label30.Text;
-				//		label30.Text = label29.Text;
-				//		label24.Text = Convert.ToString(c);
-				//		textBox15.Text = "0";
-
-				//		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				//		{
-				//			label42.Text = label29.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-				//		{
-				//			label16.Text = label18.Text;
-
-				//		}
-				//		break;
-				//	}
-				//case 0101:                              // оранжева + біла
-				//	{
-				//		d = Convert.ToInt32(label25.Text);
-				//		c = Convert.ToInt32(label24.Text);
-				//		timer14.Enabled = true;
-				//		timer13.Enabled = true;
-				//		timer16.Enabled = false;
-				//		timer17.Enabled = false;
-				//		label38.Text = label28.Text;
-				//		label29.Text = label27.Text;
-				//		Timeg = 0;
-				//		Timez = 0;
-				//		timer16.Enabled = true;
-				//		timer17.Enabled = true;
-				//		label40.Text = label41.Text;
-				//		label31.Text = label32.Text;
-				//		label41.Text = label39.Text;
-				//		label32.Text = label30.Text;
-				//		label39.Text = label38.Text;
-				//		label30.Text = label29.Text;
-				//		label25.Text = Convert.ToString(d);
-				//		label24.Text = Convert.ToString(c);
-				//		textBox15.Text = "0";
-
-
-
-				//		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-				//		{
-				//			label42.Text = label29.Text;
-
-				//		}
-
-				//		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-				//		{
-				//			label44.Text = label38.Text;
-
-				//		}
-				//		break;
-
-				//	}
-
-				case 0:
-					{
-
-						break;
-					}
-
-				case 011111111:
-					{
-
-
-						button6.PerformClick();
-						textBox15.Text = "0";
-
-					}
-					break;
-				case 010111111:
-					{
-						button7.PerformClick();
-						textBox15.Text = "0";
-
-					}
-					break;
-				default:
-					{
-						textBox15.Text = "0";
-						break;
-					}
-
-
-
-
-
-					if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
-					{
-						timer2.Enabled = false;
-						timer17.Enabled = false;
-						timer11.Enabled = false;
-						timer15.Enabled = false;
-						timer16.Enabled = false;
-						button6.Visible = false;
-						button7.Visible = true;
-						button7.Focus();
-						textBox15.Text = "0";
-					}
-
-					if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
-					{
-						timer4.Enabled = false;
-						timer17.Enabled = false;
-						timer11.Enabled = false;
-						timer15.Enabled = false;
-						timer16.Enabled = false;
-						button6.Visible = false;
-						button7.Visible = true;
-						button7.Focus();
-						textBox15.Text = "0";
-					}
-
-					if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
-					{
-						timer6.Enabled = false;
-						timer17.Enabled = false;
-						timer11.Enabled = false;
-						timer15.Enabled = false;
-						timer16.Enabled = false;
-						button6.Visible = false;
-						button7.Visible = true;
-						button7.Focus();
-						textBox15.Text = "0";
-					}
-
-					if (number_group.Text == "3")   // кнопка пауза для 3 заїзду
-					{
-						timer8.Enabled = false;
-						timer17.Enabled = false;
-						timer11.Enabled = false;
-						timer15.Enabled = false;
-						timer16.Enabled = false;
-						button6.Visible = false;
-						button7.Visible = true;
-						button7.Focus();
-						textBox15.Text = "0";
-					}
-
-					serialPort1.Close();
-
-					textBox15.Text = "0";
-
-					MessageBox.Show("Щось пішло не так!! Перевірте моделі!");
-
-
-
-
-					break;
-
-			}
-
-
-
-			//if (Convert.ToInt32(textBox15.Text) == 01111) // зелена + Синя+ Жовта+Червона доріжка
-			//{
-			//	c = Convert.ToInt32(label24.Text);
-			//	timer13.Enabled = true;
-			//	timer17.Enabled = false;
-			//	label29.Text = label27.Text;
-			//	Timez = 0;
-			//	timer17.Enabled = true;
-			//	label31.Text = label32.Text;
-			//	label32.Text = label30.Text;
-			//	label30.Text = label29.Text;
-			//	label24.Text = Convert.ToString(c);
-
-
-			//	b = Convert.ToInt32(label23.Text);
-			//	timer12.Enabled = true;
-			//	timer15.Enabled = false;
-			//	label37.Text = label26.Text;
-			//	Times = 0;
-			//	timer15.Enabled = true;
-			//	label35.Text = label36.Text;
-			//	label36.Text = label34.Text;
-			//	label34.Text = label37.Text;
-			//	label23.Text = Convert.ToString(b);
-
-
-			//	d = Convert.ToInt32(label25.Text);
-			//	timer14.Enabled = true;
-			//	timer16.Enabled = false;
-			//	label38.Text = label28.Text;
-			//	Timeg = 0;
-			//	timer16.Enabled = true;
-			//	label40.Text = label41.Text;
-			//	label41.Text = label39.Text;
-			//	label39.Text = label38.Text;
-			//	label25.Text = Convert.ToString(d);
-
-			//	i = Convert.ToInt32(label17.Text);         
-			//	timer10.Enabled = true;
-			//	timer11.Enabled = false;
-			//	label18.Text = label21.Text;
-			//	Time = 0;
-			//	timer11.Enabled = true;
-			//	label20.Text = label19.Text;
-			//	label19.Text = label22.Text;
-			//	label22.Text = label18.Text;
-			//	label17.Text = Convert.ToString(i);
-			//	textBox15.Text = "0";
-
-			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-			//	{
-			//		label16.Text = label18.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-			//	{
-			//		label44.Text = label38.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-			//	{
-			//		label43.Text = label37.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-			//	{
-			//		label42.Text = label29.Text;
-
-			//	}
-
-
-			//}
-
-			//if (Convert.ToInt32(textBox15.Text) == 01110) // зелена + Синя+ Жовта доріжка
-			//{
-			//	c = Convert.ToInt32(label24.Text);
-			//	timer13.Enabled = true;
-			//	timer17.Enabled = false;
-			//	label29.Text = label27.Text;
-			//	Timez = 0;
-			//	timer17.Enabled = true;
-			//	label31.Text = label32.Text;
-			//	label32.Text = label30.Text;
-			//	label30.Text = label29.Text;
-			//	label24.Text = Convert.ToString(c);
-
-
-			//	b = Convert.ToInt32(label23.Text);
-			//	timer12.Enabled = true;
-			//	timer15.Enabled = false;
-			//	label37.Text = label26.Text;
-			//	Times = 0;
-			//	timer15.Enabled = true;
-			//	label35.Text = label36.Text;
-			//	label36.Text = label34.Text;
-			//	label34.Text = label37.Text;
-			//	label23.Text = Convert.ToString(b);
-
-
-			//	d = Convert.ToInt32(label25.Text);
-			//	timer14.Enabled = true;
-			//	timer16.Enabled = false;
-			//	label38.Text = label28.Text;
-			//	Timeg = 0;
-			//	timer16.Enabled = true;
-			//	label40.Text = label41.Text;
-			//	label41.Text = label39.Text;
-			//	label39.Text = label38.Text;
-			//	label25.Text = Convert.ToString(d);
-			//	textBox15.Text = "0";
-
-			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-			//	{
-			//		label44.Text = label38.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-			//	{
-			//		label43.Text = label37.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-			//	{
-			//		label42.Text = label29.Text;
-
-			//	}
-
-
-			//}
-
-
-			//if (Convert.ToInt32(textBox15.Text) == 01100)
-			//{
-			//	i = Convert.ToInt32(label17.Text);          //червона доріжка + Синя + жовта
-			//	timer10.Enabled = true;
-			//	timer11.Enabled = false;
-			//	label18.Text = label21.Text;
-			//	Time = 0;
-			//	timer11.Enabled = true;
-			//	label20.Text = label19.Text;
-			//	label19.Text = label22.Text;
-			//	label22.Text = label18.Text;
-			//	label17.Text = Convert.ToString(i);
-
-
-			//	b = Convert.ToInt32(label23.Text);
-			//	timer12.Enabled = true;
-			//	timer15.Enabled = false;
-			//	label37.Text = label26.Text;
-			//	Times = 0;
-			//	timer15.Enabled = true;
-			//	label35.Text = label36.Text;
-			//	label36.Text = label34.Text;
-			//	label34.Text = label37.Text;
-			//	label23.Text = Convert.ToString(b);
-
-			//	d = Convert.ToInt32(label25.Text);
-			//	timer14.Enabled = true;
-			//	timer16.Enabled = false;
-			//	label38.Text = label28.Text;
-			//	Timeg = 0;
-			//	timer16.Enabled = true;
-			//	label40.Text = label41.Text;
-			//	label41.Text = label39.Text;
-			//	label39.Text = label38.Text;
-			//	label25.Text = Convert.ToString(d);
-			//	textBox15.Text = "0";
-
-			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-			//	{
-			//		label44.Text = label38.Text;
-
-			//	}
-
-
-			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-			//	{
-			//		label43.Text = label37.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-			//	{
-			//		label16.Text = label18.Text;
-
-			//	}
-			//}
-
-
-
-			//if (Convert.ToInt32(textBox15.Text) == 01011)
-			//{
-			//	i = Convert.ToInt32(label17.Text);          //червона  + Зелена+ Жовта доріжка
-			//	timer10.Enabled = true;
-			//	timer11.Enabled = false;
-			//	label18.Text = label21.Text;
-			//	Time = 0;
-			//	timer11.Enabled = true;
-			//	label20.Text = label19.Text;
-			//	label19.Text = label22.Text;
-			//	label22.Text = label18.Text;
-			//	label17.Text = Convert.ToString(i);
-
-
-			//	c = Convert.ToInt32(label24.Text);
-			//	timer13.Enabled = true;
-			//	timer17.Enabled = false;
-			//	label29.Text = label27.Text;
-			//	Timez = 0;
-			//	timer17.Enabled = true;
-			//	label31.Text = label32.Text;
-			//	label32.Text = label30.Text;
-			//	label30.Text = label29.Text;
-			//	label24.Text = Convert.ToString(c);
-
-			//	d = Convert.ToInt32(label25.Text);
-			//	timer14.Enabled = true;
-			//	timer16.Enabled = false;
-			//	label38.Text = label28.Text;
-			//	Timeg = 0;
-			//	timer16.Enabled = true;
-			//	label40.Text = label41.Text;
-			//	label41.Text = label39.Text;
-			//	label39.Text = label38.Text;
-			//	label25.Text = Convert.ToString(d);
-			//	textBox15.Text = "0";
-
-			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-			//	{
-			//		label44.Text = label38.Text;
-
-			//	}
-
-
-			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-			//	{
-			//		label42.Text = label29.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-			//	{
-			//		label16.Text = label18.Text;
-
-			//	}
-			//}
-
-			//if (Convert.ToInt32(textBox15.Text) == 01011)
-			//{
-			//	i = Convert.ToInt32(label17.Text);          //червона  + Зелена+ Синя доріжка
-			//	timer10.Enabled = true;
-			//	timer11.Enabled = false;
-			//	label18.Text = label21.Text;
-			//	Time = 0;
-			//	timer11.Enabled = true;
-			//	label20.Text = label19.Text;
-			//	label19.Text = label22.Text;
-			//	label22.Text = label18.Text;
-			//	label17.Text = Convert.ToString(i);
-
-
-			//	c = Convert.ToInt32(label24.Text);
-			//	timer13.Enabled = true;
-			//	timer17.Enabled = false;
-			//	label29.Text = label27.Text;
-			//	Timez = 0;
-			//	timer17.Enabled = true;
-			//	label31.Text = label32.Text;
-			//	label32.Text = label30.Text;
-			//	label30.Text = label29.Text;
-			//	label24.Text = Convert.ToString(c);
-
-
-			//	b = Convert.ToInt32(label23.Text);
-			//	timer12.Enabled = true;
-			//	timer15.Enabled = false;
-			//	label37.Text = label26.Text;
-			//	Times = 0;
-			//	timer15.Enabled = true;
-			//	label35.Text = label36.Text;
-			//	label36.Text = label34.Text;
-			//	label34.Text = label37.Text;
-			//	label23.Text = Convert.ToString(b);
-			//	textBox15.Text = "0";
-
-
-			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-			//	{
-			//		label43.Text = label37.Text;
-
-			//	}
-
-
-			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-			//	{
-			//		label42.Text = label29.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-			//	{
-			//		label16.Text = label18.Text;
-
-			//	}
-			//}
-
-			//if (Convert.ToInt32(textBox15.Text) == 01010) // зелена + Синя доріжка
-			//{
-			//	c = Convert.ToInt32(label24.Text);
-			//	timer13.Enabled = true;
-			//	timer17.Enabled = false;
-			//	label29.Text = label27.Text;
-			//	Timez = 0;
-			//	timer17.Enabled = true;
-			//	label31.Text = label32.Text;
-			//	label32.Text = label30.Text;
-			//	label30.Text = label29.Text;
-			//	label24.Text = Convert.ToString(c);
-
-
-			//	b = Convert.ToInt32(label23.Text);
-			//	timer12.Enabled = true;
-			//	timer15.Enabled = false;
-			//	label37.Text = label26.Text;
-			//	Times = 0;
-			//	timer15.Enabled = true;
-			//	label35.Text = label36.Text;
-			//	label36.Text = label34.Text;
-			//	label34.Text = label37.Text;
-			//	label23.Text = Convert.ToString(b);
-			//	textBox15.Text = "0";
-
-
-			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-			//	{
-			//		label43.Text = label37.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-			//	{
-			//		label42.Text = label29.Text;
-
-			//	}
-
-
-			//}
-
-
-
-			//if (Convert.ToInt32(textBox15.Text) == 01001) // жовта + Синя доріжка
-			//{
-			//	d = Convert.ToInt32(label25.Text);
-			//	timer14.Enabled = true;
-			//	timer16.Enabled = false;
-			//	label38.Text = label28.Text;
-			//	Timeg = 0;
-			//	timer16.Enabled = true;
-			//	label40.Text = label41.Text;
-			//	label41.Text = label39.Text;
-			//	label39.Text = label38.Text;
-			//	label25.Text = Convert.ToString(d);
-
-
-
-			//	b = Convert.ToInt32(label23.Text);
-			//	timer12.Enabled = true;
-			//	timer15.Enabled = false;
-			//	label37.Text = label26.Text;
-			//	Times = 0;
-			//	timer15.Enabled = true;
-			//	label35.Text = label36.Text;
-			//	label36.Text = label34.Text;
-			//	label34.Text = label37.Text;
-			//	label23.Text = Convert.ToString(b);
-			//	textBox15.Text = "0";
-
-
-			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-			//	{
-			//		label43.Text = label37.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-			//	{
-			//		label44.Text = label38.Text;
-
-			//	}
-
-
-			//}
-
-
-
-
-			//if (Convert.ToInt32(textBox15.Text) == 01000)
-			//{
-			//	i = Convert.ToInt32(label17.Text);          //червона доріжка + Синя
-			//	timer10.Enabled = true;
-			//	timer11.Enabled = false;
-			//	label18.Text = label21.Text;
-			//	Time = 0;
-			//	timer11.Enabled = true;
-			//	label20.Text = label19.Text;
-			//	label19.Text = label22.Text;
-			//	label22.Text = label18.Text;
-			//	label17.Text = Convert.ToString(i);
-
-
-			//	b = Convert.ToInt32(label23.Text);
-			//	timer12.Enabled = true;
-			//	timer15.Enabled = false;
-			//	label37.Text = label26.Text;
-			//	Times = 0;
-			//	timer15.Enabled = true;
-			//	label35.Text = label36.Text;
-			//	label36.Text = label34.Text;
-			//	label34.Text = label37.Text;
-			//	label23.Text = Convert.ToString(b);
-			//	textBox15.Text = "0";
-
-
-			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-			//	{
-			//		label43.Text = label37.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-			//	{
-			//		label16.Text = label18.Text;
-
-			//	}
-			//}
-
-
-
-
-			//if (Convert.ToInt32(textBox15.Text) == 0111)
-			//{
-			//	i = Convert.ToInt32(label17.Text);          //червона + Жовта доріжка
-			//	timer10.Enabled = true;
-			//	timer11.Enabled = false;
-			//	label18.Text = label21.Text;
-			//	Time = 0;
-			//	timer11.Enabled = true;
-			//	label20.Text = label19.Text;
-			//	label19.Text = label22.Text;
-			//	label22.Text = label18.Text;
-			//	label17.Text = Convert.ToString(i);
-
-
-			//	d = Convert.ToInt32(label25.Text);
-			//	timer14.Enabled = true;
-			//	timer16.Enabled = false;
-			//	label38.Text = label28.Text;
-			//	Timeg = 0;
-			//	timer16.Enabled = true;
-			//	label40.Text = label41.Text;
-			//	label41.Text = label39.Text;
-			//	label39.Text = label38.Text;
-			//	label25.Text = Convert.ToString(d);
-			//	textBox15.Text = "0";
-
-			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-			//	{
-			//		label44.Text = label38.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-			//	{
-			//		label16.Text = label18.Text;
-
-			//	}
-			//}
-
-
-
-
-			//if (Convert.ToInt32(textBox15.Text) == 0110)
-			//{
-			//	i = Convert.ToInt32(label17.Text);          //червона + зелена доріжка
-			//	c = Convert.ToInt32(label24.Text);
-
-			//	timer10.Enabled = true;
-			//	timer11.Enabled = false;
-			//	label18.Text = label21.Text;
-			//	Time = 0;
-			//	timer11.Enabled = true;
-			//	label20.Text = label19.Text;
-			//	label19.Text = label22.Text;
-			//	label22.Text = label18.Text;
-			//	label17.Text = Convert.ToString(i);
-
-
-
-
-
-
-			//	timer13.Enabled = true;
-			//	timer17.Enabled = false;
-			//	label29.Text = label27.Text;
-			//	Timez = 0;
-			//	timer17.Enabled = true;
-			//	label31.Text = label32.Text;
-			//	label32.Text = label30.Text;
-			//	label30.Text = label29.Text;
-			//	label24.Text = Convert.ToString(c);
-			//	textBox15.Text = "0";
-
-			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-			//	{
-			//		label42.Text = label29.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-			//	{
-			//		label16.Text = label18.Text;
-
-			//	}
-			//}
-
-
-
-
-
-
-			//if (Convert.ToInt32(textBox15.Text) == 0101) // жовта + зелена
-			//{
-			//	d = Convert.ToInt32(label25.Text);
-			//	c = Convert.ToInt32(label24.Text);
-			//	timer14.Enabled = true;
-			//	timer13.Enabled = true;
-			//	timer16.Enabled = false;
-			//	timer17.Enabled = false;
-			//	label38.Text = label28.Text;
-			//	label29.Text = label27.Text;
-			//	Timeg = 0;
-			//	Timez = 0;
-			//	timer16.Enabled = true;
-			//	timer17.Enabled = true;
-			//	label40.Text = label41.Text;
-			//	label31.Text = label32.Text;
-			//	label41.Text = label39.Text;
-			//	label32.Text = label30.Text;
-			//	label39.Text = label38.Text;
-			//	label30.Text = label29.Text;
-			//	label25.Text = Convert.ToString(d);
-			//	label24.Text = Convert.ToString(c);
-			//	textBox15.Text = "0";
-
-
-
-			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-			//	{
-			//		label42.Text = label29.Text;
-
-			//	}
-
-			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-			//	{
-			//		label44.Text = label38.Text;
-
-			//	}
-
-
-			//}
-
-			//if (Convert.ToInt32(textBox15.Text) == 01)
-			//{
-			//	i = Convert.ToInt32(label17.Text);          //червона доріжка
-			//	timer10.Enabled = true;
-			//	timer11.Enabled = false;
-			//	label18.Text = label21.Text;
-			//	Time = 0;
-			//	timer11.Enabled = true;
-			//	label20.Text = label19.Text;
-			//	label19.Text = label22.Text;
-			//	label22.Text = label18.Text;
-			//	label17.Text = Convert.ToString(i);
-			//	textBox15.Text = "0";
-
-			//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
-			//	{
-			//		label16.Text = label18.Text;
-
-			//	}
-			//}
-
-
-
-			//		if (Convert.ToInt32(textBox15.Text) == 011) // синя доріжка
-			//		{
-			//			b = Convert.ToInt32(label23.Text);
-			//			timer12.Enabled = true;
-			//			timer15.Enabled = false;
-			//			label37.Text = label26.Text;
-			//			Times = 0;
-			//			timer15.Enabled = true;
-			//			label35.Text = label36.Text;
-			//			label36.Text = label34.Text;
-			//			label34.Text = label37.Text; 
-			//			label23.Text = Convert.ToString(b);
-			//			textBox15.Text = "0";
-
-
-			//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
-			//	{
-			//		label43.Text = label37.Text;
-
-			//	}
-
-
-			//}
-
-
-			//if (Convert.ToInt32(textBox15.Text) == 010) // зелена доріжка
-			//{
-			//	c = Convert.ToInt32(label24.Text);
-			//	timer13.Enabled = true;
-			//	timer17.Enabled = false;
-			//	label29.Text = label27.Text;
-			//	Timez = 0;
-			//	timer17.Enabled = true;
-			//	label31.Text = label32.Text;
-			//	label32.Text = label30.Text;
-			//	label30.Text = label29.Text; 
-			//	label24.Text = Convert.ToString(c);
-			//	textBox15.Text = "0";
-
-			//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
-			//	{
-			//		label42.Text = label29.Text;
-
-			//	}
-
-
-			//}
-
-			//if (Convert.ToInt32(textBox15.Text) == 0100) // жовта доріжка
-			//{
-			//	d = Convert.ToInt32(label25.Text);
-			//	timer14.Enabled = true;
-			//	timer16.Enabled = false;
-			//	label38.Text = label28.Text;
-			//	Timeg = 0;
-			//	timer16.Enabled = true;
-			//	label40.Text = label41.Text;
-			//	label41.Text = label39.Text;
-			//	label39.Text = label38.Text;
-			//	label25.Text = Convert.ToString(d);
-			//	textBox15.Text = "0";
-
-			//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
-			//	{
-			//		label44.Text = label38.Text;
-
-			//	}
-
-
-			//}
-
-		}
+
+
+
+
+                                if (Convert.ToInt32(textBox15.Text) == 10001)
+                                {
+
+
+
+                                    v = Convert.ToInt32(label97.Text);          //синя доріжка
+                                    timer28.Enabled = true;
+                                    timer26.Enabled = false;
+                                    label99.Text = label95.Text;
+                                    Timeo = 0;
+                                    timer26.Enabled = true;
+                                    timer45.Enabled = true;
+
+                                    textBox15.Text = "0";
+
+                                    if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування синя доріжка
+                                    {
+                                        if (Convert.ToDouble(label92.Text) > delay) // обмеження часу у тренуванні
+                                        {
+
+
+
+
+
+                                            label11.Text = label96.Text;
+                                            label96.Text = label93.Text;
+                                            label93.Text = label94.Text;
+
+                                            label94.Text = label72.Text;
+                                            label72.Text = label74.Text;
+                                            label74.Text = label99.Text;
+                                            label97.Text = Convert.ToString(v);
+
+
+                                            if (Convert.ToDouble(label92.Text) > Convert.ToDouble(label99.Text))
+                                            {
+                                                label92.Text = label99.Text;
+                                                best_time.Play();
+
+                                            }
+                                        }
+                                        else
+                                        {
+                                            label107.Text = "999";
+                                            label114.Text = "999";
+                                            textBox15.Text = "0";
+                                        }
+                                    }
+                                    else
+                                    {
+
+
+
+                                        if (Convert.ToDouble(label99.Text) > delay)//обмеження крвщого часу кола 3 секунди
+                                        {
+
+                                            label94.Text = label72.Text;
+                                            label72.Text = label74.Text;
+                                            label74.Text = label99.Text;
+                                            label97.Text = Convert.ToString(v);
+
+
+                                            if (Convert.ToDouble(label92.Text) > Convert.ToDouble(label99.Text))
+                                            {
+                                                label92.Text = label99.Text;
+
+
+                                            }
+
+                                        }
+                                        else
+                                        {
+                                            button6.PerformClick();
+                                            MessageBox.Show("Щось пішло не так!! Перевірте модель на 5 доріжці!");
+                                        }
+
+                                    }
+                                }
+                                else
+                                {
+                                    if (Convert.ToInt32(textBox15.Text) == 011111111)
+                                    {
+                                        button6.PerformClick();
+                                        textBox15.Text = "0";
+                                        if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
+                                        {
+                                            timer2.Enabled = false;
+                                            timer17.Enabled = false;
+                                            timer11.Enabled = false;
+                                            timer15.Enabled = false;
+                                            timer16.Enabled = false;
+                                            button6.Visible = false;
+                                            button7.Visible = true;
+                                            button7.Focus();
+                                            textBox15.Text = "0";
+                                        }
+
+                                        if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
+                                        {
+                                            timer4.Enabled = false;
+                                            timer17.Enabled = false;
+                                            timer11.Enabled = false;
+                                            timer15.Enabled = false;
+                                            timer16.Enabled = false;
+                                            button6.Visible = false;
+                                            button7.Visible = true;
+                                            button7.Focus();
+                                            textBox15.Text = "0";
+                                        }
+
+                                        if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
+                                        {
+                                            timer6.Enabled = false;
+                                            timer17.Enabled = false;
+                                            timer11.Enabled = false;
+                                            timer15.Enabled = false;
+                                            timer16.Enabled = false;
+                                            button6.Visible = false;
+                                            button7.Visible = true;
+                                            button7.Focus();
+                                            textBox15.Text = "0";
+                                        }
+
+                                        if (number_group.Text == "3")   // кнопка пауза для 3 заїзду
+                                        {
+                                            timer8.Enabled = false;
+                                            timer17.Enabled = false;
+                                            timer11.Enabled = false;
+                                            timer15.Enabled = false;
+                                            timer16.Enabled = false;
+                                            button6.Visible = false;
+                                            button7.Visible = true;
+                                            button7.Focus();
+                                            textBox15.Text = "0";
+                                        }
+
+
+
+
+                                    }
+                                    else
+                                    {
+                                        if (Convert.ToInt32(textBox15.Text) == 010111111)
+                                        {
+                                            button7.PerformClick();
+                                            textBox15.Text = "0";
+                                        }
+                                        else
+                                        {
+                                            textBox15.Text = "0";
+                                        }
+
+                                    }
+
+                                }
+                            }
+
+
+                        }
+
+
+
+                    }
+                }
+
+
+            }
+
+				
+
+
+
+			
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //switch (Convert.ToInt32(textBox15.Text))
+            //{
+
+            //	case 10000:
+            //		{
+            //			l = Convert.ToInt32(label112.Text);          //жовта доріжка
+            //			timer29.Enabled = true;
+            //			timer27.Enabled = false;
+            //			label114.Text = label110.Text;
+            //			Timeb = 0;
+            //			timer27.Enabled = true;
+            //			timer45.Enabled = true;
+            //			textBox15.Text = "0";
+
+
+            //			if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування жовта доріжка
+            //			{
+            //				if (Convert.ToDouble(label107.Text) > delay) // обмеження часу у тренуванні
+            //				{
+
+            //					textBox15.Text = "0";
+            //					label109.Text = label111.Text;
+            //					label111.Text = label108.Text;
+            //					label108.Text = label100.Text;
+            //					label100.Text = label101.Text;
+            //					label101.Text = label103.Text;
+            //					label103.Text = label114.Text;
+            //					label112.Text = Convert.ToString(l);
+            //					if (Convert.ToDouble(label107.Text) > Convert.ToDouble(label114.Text))
+            //					{
+            //						label107.Text = label114.Text;
+            //						best_time.Play();
+
+            //					}
+            //				}
+            //				else
+            //				{
+            //					label107.Text = "999";
+            //					label114.Text = "999";
+            //					textBox15.Text = "0";
+            //				}
+            //			}
+            //			else
+            //			{
+
+
+
+
+
+
+            //				if (Convert.ToDouble(label114.Text) > delay)//обмеження крвщого часу кола 3 секунди
+            //				{
+            //					label100.Text = label101.Text;
+            //					label101.Text = label103.Text;
+            //					label103.Text = label114.Text;
+            //					label112.Text = Convert.ToString(l);
+
+
+            //					if (Convert.ToDouble(label107.Text) > Convert.ToDouble(label114.Text))
+            //					{
+            //						label107.Text = label114.Text;
+
+
+            //					}
+
+            //				}
+            //				else
+            //				{
+            //					button6.PerformClick();
+            //					MessageBox.Show("Щось пішло не так!! Перевірте модель на 6 доріжці!");
+            //				}
+            //			}
+            //		}
+            //		break;
+            //	case 10001:
+            //		{
+            //			v = Convert.ToInt32(label97.Text);          //синя доріжка
+            //			timer28.Enabled = true;
+            //			timer26.Enabled = false;
+            //			label99.Text = label95.Text;
+            //			Timeo = 0;
+            //			timer26.Enabled = true;
+            //			timer45.Enabled = true;
+
+            //			textBox15.Text = "0";
+
+            //			if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування синя доріжка
+            //			{
+            //				if (Convert.ToDouble(label92.Text) > delay) // обмеження часу у тренуванні
+            //				{
+
+
+
+
+
+            //					label11.Text = label96.Text;
+            //					label96.Text = label93.Text;
+            //					label93.Text = label94.Text;
+
+            //					label94.Text = label72.Text;
+            //					label72.Text = label74.Text;
+            //					label74.Text = label99.Text;
+            //					label97.Text = Convert.ToString(v);
+
+
+            //					if (Convert.ToDouble(label92.Text) > Convert.ToDouble(label99.Text))
+            //					{
+            //						label92.Text = label99.Text;
+            //						best_time.Play();
+
+            //					}
+            //				}
+            //				else
+            //				{
+            //					label107.Text = "999";
+            //					label114.Text = "999";
+            //					textBox15.Text = "0";
+            //				}
+            //			}
+            //			else
+            //			{
+
+
+
+            //				if (Convert.ToDouble(label99.Text) > delay)//обмеження крвщого часу кола 3 секунди
+            //				{
+
+            //					label94.Text = label72.Text;
+            //					label72.Text = label74.Text;
+            //					label74.Text = label99.Text;
+            //					label97.Text = Convert.ToString(v);
+
+
+            //					if (Convert.ToDouble(label92.Text) > Convert.ToDouble(label99.Text))
+            //					{
+            //						label92.Text = label99.Text;
+
+
+            //					}
+
+            //				}
+            //				else
+            //				{
+            //					button6.PerformClick();
+            //					MessageBox.Show("Щось пішло не так!! Перевірте модель на 5 доріжці!");
+            //				}
+
+            //			}
+            //		}
+            //		break;
+            //	case 01:
+            //		{
+            //			i = Convert.ToInt32(label17.Text);          //червона доріжка
+            //			timer10.Enabled = true;
+            //			timer11.Enabled = false;
+            //			label18.Text = label21.Text;
+            //			Time = 0;
+            //			timer11.Enabled = true;
+            //			timer45.Enabled = true;
+
+            //			if (label13.Text == "Тренування!")  // алгоритм для часу кола для тренування червона доріжка
+            //			{
+
+            //				if (Convert.ToDouble(label16.Text) > delay) // обмеження часу у тренуванні
+            //				{
+            //					textBox15.Text = "0";
+
+            //					label78.Text = label77.Text;
+            //					label77.Text = label76.Text;
+            //					label76.Text = label20.Text;
+            //					label20.Text = label19.Text;
+            //					label19.Text = label22.Text;
+            //					label22.Text = label18.Text;
+            //					label17.Text = Convert.ToString(i);
+
+
+            //					if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+            //					{
+            //						label16.Text = label18.Text;
+            //						best_time.Play();
+
+            //					}
+            //				}
+            //				else
+            //				{
+            //					label18.Text = "999";
+            //					label16.Text = "999";
+            //					textBox15.Text = "0";
+            //				}
+            //			}
+            //			else                             // алгоритм для часу кола для гонок червона доріжка
+            //			{
+            //				textBox15.Text = "0";
+            //				if (Convert.ToDouble(label18.Text) > delay)//обмеження крвщого часу кола 3 секунди
+            //				{
+            //					label20.Text = label19.Text;
+            //					label19.Text = label22.Text;
+            //					label22.Text = label18.Text;
+            //					label17.Text = Convert.ToString(i);
+
+
+            //					if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+            //					{
+            //						label16.Text = label18.Text;
+
+
+            //					}
+            //				}
+            //				else
+            //				{
+            //					button6.PerformClick();
+            //					MessageBox.Show("Щось пішло не так!! Перевірте модель на 1 доріжці!");
+            //				}
+            //			}
+            //			break;
+            //		}
+            //	case 010:
+            //		{
+            //			c = Convert.ToInt32(label24.Text);
+            //			timer13.Enabled = true;
+            //			timer17.Enabled = false;
+            //			label29.Text = label27.Text;
+            //			Timez = 0;
+            //			timer17.Enabled = true;
+            //			timer45.Enabled = true;
+
+
+
+            //			if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування біла доріжка
+            //			{
+            //				if (Convert.ToDouble(label42.Text) > delay) // обмеження часу у тренуванні
+            //				{
+            //					label79.Text = label80.Text;
+            //					label80.Text = label81.Text;
+            //					label81.Text = label31.Text;
+            //					label31.Text = label32.Text;
+            //					label32.Text = label30.Text;
+            //					label30.Text = label29.Text;
+            //					label24.Text = Convert.ToString(c);
+            //					textBox15.Text = "0";
+
+            //					if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+            //					{
+            //						label42.Text = label29.Text;
+            //						best_time.Play();
+
+
+            //					}
+            //				}
+            //				else
+            //				{
+
+
+            //					label29.Text = "999";
+            //					label42.Text = "999";
+            //					textBox15.Text = "0";
+            //				}
+            //			}
+            //			else                                     // алгоритм для часу кола для гонки біла доріжка
+            //			{
+
+            //				textBox15.Text = "0";
+
+            //				if (Convert.ToDouble(label29.Text) > delay)//обмеження крвщого часу кола 3 секунди
+            //				{
+
+            //					label31.Text = label32.Text;
+            //					label32.Text = label30.Text;
+            //					label30.Text = label29.Text;
+            //					label24.Text = Convert.ToString(c);
+
+
+            //					if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+            //					{
+            //						label42.Text = label29.Text;
+
+
+            //					}
+
+            //				}
+            //				else
+            //				{
+            //					button6.PerformClick();
+            //					MessageBox.Show("Щось пішло не так!! Перевірте модель на 2 доріжці!");
+            //				}
+            //			}
+            //			break;
+            //		}
+            //	case 011:
+            //		{
+            //			b = Convert.ToInt32(label23.Text);
+            //			timer12.Enabled = true;
+            //			timer15.Enabled = false;
+            //			label37.Text = label26.Text;
+            //			Times = 0;
+            //			timer15.Enabled = true;
+            //			timer45.Enabled = true;
+
+
+
+            //			if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування зелена доріжка
+            //			{
+            //				if (Convert.ToDouble(label43.Text) > delay) // обмеження часу у тренуванні
+            //				{
+            //					label82.Text = label83.Text;
+            //					label83.Text = label84.Text;
+            //					label84.Text = label35.Text;
+            //					label35.Text = label36.Text;
+            //					label36.Text = label34.Text;
+            //					label34.Text = label37.Text;
+            //					label23.Text = Convert.ToString(b);
+            //					textBox15.Text = "0";
+
+
+            //					if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+            //					{
+            //						label43.Text = label37.Text;
+            //						best_time.Play();
+
+            //					}
+            //				}
+            //				else
+            //				{
+            //					label37.Text = "999";
+            //					label43.Text = "999";
+            //					textBox15.Text = "0";
+            //				}
+            //			}
+            //			else                                        // алгоритм для часу кола для гонки зелена доріжка
+            //			{
+
+
+            //				textBox15.Text = "0";
+
+            //				if (Convert.ToDouble(label37.Text) > delay) //обмеження крвщого часу кола 3 секунди
+            //				{
+
+            //					label35.Text = label36.Text;
+            //					label36.Text = label34.Text;
+            //					label34.Text = label37.Text;
+            //					label23.Text = Convert.ToString(b);
+
+
+
+            //					if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+            //					{
+            //						label43.Text = label37.Text;
+
+            //					}
+
+            //				}
+            //				else
+            //				{
+            //					button6.PerformClick();
+            //					MessageBox.Show("Щось пішло не так!! Перевірте модель на 3 доріжці!");
+            //				}
+            //			}
+            //			break;
+            //		}
+            //	case 0100:
+            //		{
+            //			d = Convert.ToInt32(label25.Text);
+            //			timer14.Enabled = true;
+            //			timer16.Enabled = false;
+            //			label38.Text = label28.Text;
+            //			Timeg = 0;
+            //			timer16.Enabled = true;
+            //			timer45.Enabled = true;
+
+
+
+
+
+            //			if (label13.Text == "Тренування!")// алгоритм для часу кола для тренування оранжева доріжка
+            //			{
+
+            //				if (Convert.ToDouble(label44.Text) > delay) // обмеження часу у тренуванні
+            //				{
+            //					label85.Text = label86.Text;
+            //					label86.Text = label87.Text;
+            //					label87.Text = label40.Text;
+            //					label40.Text = label41.Text;
+            //					label41.Text = label39.Text;
+            //					label39.Text = label38.Text;
+            //					label25.Text = Convert.ToString(d);
+            //					textBox15.Text = "0";
+
+            //					if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+            //					{
+            //						label44.Text = label38.Text;
+            //						best_time.Play();
+
+            //					}
+            //				}
+            //				else
+            //				{
+            //					label38.Text = "999";
+            //					label44.Text = "999";
+            //					textBox15.Text = "0";
+            //				}
+            //			}
+            //			else                                     // алгоритм для часу кола для Гонки оранжева доріжка
+            //			{
+
+
+            //				textBox15.Text = "0";
+            //				if (Convert.ToDouble(label38.Text) > delay)//обмеження крвщого часу кола 3 секунди
+            //				{
+
+            //					label40.Text = label41.Text;
+            //					label41.Text = label39.Text;
+            //					label39.Text = label38.Text;
+            //					label25.Text = Convert.ToString(d);
+
+
+            //					if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+            //					{
+            //						label44.Text = label38.Text;
+
+            //					}
+
+            //				}
+            //				else
+            //				{
+            //					button6.PerformClick();
+            //					MessageBox.Show("Щось пішло не так!! Перевірте модель на 4 доріжці!");
+            //				}
+            //			}
+            //			break;
+            //		}
+            //	//case 01111://// білан + зелена+ оранжева+Червона доріжка
+            //	{
+            //		c = Convert.ToInt32(label24.Text);
+            //		timer13.Enabled = true;
+            //		timer17.Enabled = false;
+            //		label29.Text = label27.Text;
+            //		Timez = 0;
+            //		timer17.Enabled = true;
+            //		label31.Text = label32.Text;
+            //		label32.Text = label30.Text;
+            //		label30.Text = label29.Text;
+            //		label24.Text = Convert.ToString(c);
+
+
+            //		b = Convert.ToInt32(label23.Text);
+            //		timer12.Enabled = true;
+            //		timer15.Enabled = false;
+            //		label37.Text = label26.Text;
+            //		Times = 0;
+            //		timer15.Enabled = true;
+            //		label35.Text = label36.Text;
+            //		label36.Text = label34.Text;
+            //		label34.Text = label37.Text;
+            //		label23.Text = Convert.ToString(b);
+
+
+            //		d = Convert.ToInt32(label25.Text);
+            //		timer14.Enabled = true;
+            //		timer16.Enabled = false;
+            //		label38.Text = label28.Text;
+            //		Timeg = 0;
+            //		timer16.Enabled = true;
+            //		label40.Text = label41.Text;
+            //		label41.Text = label39.Text;
+            //		label39.Text = label38.Text;
+            //		label25.Text = Convert.ToString(d);
+
+            //		i = Convert.ToInt32(label17.Text);
+            //		timer10.Enabled = true;
+            //		timer11.Enabled = false;
+            //		label18.Text = label21.Text;
+            //		Time = 0;
+            //		timer11.Enabled = true;
+            //		label20.Text = label19.Text;
+            //		label19.Text = label22.Text;
+            //		label22.Text = label18.Text;
+            //		label17.Text = Convert.ToString(i);
+            //		textBox15.Text = "0";
+
+            //		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+            //		{
+            //			label16.Text = label18.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+            //		{
+            //			label44.Text = label38.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+            //		{
+            //			label43.Text = label37.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+            //		{
+            //			label42.Text = label29.Text;
+
+            //		}
+            //		break;
+            //	}
+            //case 01110:         // біла + зелена+ оранжева доріжка
+            //	{
+            //		c = Convert.ToInt32(label24.Text);
+            //		timer13.Enabled = true;
+            //		timer17.Enabled = false;
+            //		label29.Text = label27.Text;
+            //		Timez = 0;
+            //		timer17.Enabled = true;
+            //		label31.Text = label32.Text;
+            //		label32.Text = label30.Text;
+            //		label30.Text = label29.Text;
+            //		label24.Text = Convert.ToString(c);
+
+
+            //		b = Convert.ToInt32(label23.Text);
+            //		timer12.Enabled = true;
+            //		timer15.Enabled = false;
+            //		label37.Text = label26.Text;
+            //		Times = 0;
+            //		timer15.Enabled = true;
+            //		label35.Text = label36.Text;
+            //		label36.Text = label34.Text;
+            //		label34.Text = label37.Text;
+            //		label23.Text = Convert.ToString(b);
+
+
+            //		d = Convert.ToInt32(label25.Text);
+            //		timer14.Enabled = true;
+            //		timer16.Enabled = false;
+            //		label38.Text = label28.Text;
+            //		Timeg = 0;
+            //		timer16.Enabled = true;
+            //		label40.Text = label41.Text;
+            //		label41.Text = label39.Text;
+            //		label39.Text = label38.Text;
+            //		label25.Text = Convert.ToString(d);
+            //		textBox15.Text = "0";
+
+            //		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+            //		{
+            //			label44.Text = label38.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+            //		{
+            //			label43.Text = label37.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+            //		{
+            //			label42.Text = label29.Text;
+
+            //		}
+            //		break;
+            //	}
+            //case 01100:
+            //	{
+            //		i = Convert.ToInt32(label17.Text);          //червона доріжка + зелена + оранжева
+            //		timer10.Enabled = true;
+            //		timer11.Enabled = false;
+            //		label18.Text = label21.Text;
+            //		Time = 0;
+            //		timer11.Enabled = true;
+            //		label20.Text = label19.Text;
+            //		label19.Text = label22.Text;
+            //		label22.Text = label18.Text;
+            //		label17.Text = Convert.ToString(i);
+
+
+            //		b = Convert.ToInt32(label23.Text);
+            //		timer12.Enabled = true;
+            //		timer15.Enabled = false;
+            //		label37.Text = label26.Text;
+            //		Times = 0;
+            //		timer15.Enabled = true;
+            //		label35.Text = label36.Text;
+            //		label36.Text = label34.Text;
+            //		label34.Text = label37.Text;
+            //		label23.Text = Convert.ToString(b);
+
+            //		d = Convert.ToInt32(label25.Text);
+            //		timer14.Enabled = true;
+            //		timer16.Enabled = false;
+            //		label38.Text = label28.Text;
+            //		Timeg = 0;
+            //		timer16.Enabled = true;
+            //		label40.Text = label41.Text;
+            //		label41.Text = label39.Text;
+            //		label39.Text = label38.Text;
+            //		label25.Text = Convert.ToString(d);
+            //		textBox15.Text = "0";
+
+            //		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+            //		{
+            //			label44.Text = label38.Text;
+
+            //		}
+
+
+            //		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+            //		{
+            //			label43.Text = label37.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+            //		{
+            //			label16.Text = label18.Text;
+
+            //		}
+            //		break;
+            //	}
+            //case 01011:
+            //	{
+            //		i = Convert.ToInt32(label17.Text);          //червона  + біла+ оранжева доріжка
+            //		timer10.Enabled = true;
+            //		timer11.Enabled = false;
+            //		label18.Text = label21.Text;
+            //		Time = 0;
+            //		timer11.Enabled = true;
+            //		label20.Text = label19.Text;
+            //		label19.Text = label22.Text;
+            //		label22.Text = label18.Text;
+            //		label17.Text = Convert.ToString(i);
+
+
+            //		c = Convert.ToInt32(label24.Text);
+            //		timer13.Enabled = true;
+            //		timer17.Enabled = false;
+            //		label29.Text = label27.Text;
+            //		Timez = 0;
+            //		timer17.Enabled = true;
+            //		label31.Text = label32.Text;
+            //		label32.Text = label30.Text;
+            //		label30.Text = label29.Text;
+            //		label24.Text = Convert.ToString(c);
+
+            //		d = Convert.ToInt32(label25.Text);
+            //		timer14.Enabled = true;
+            //		timer16.Enabled = false;
+            //		label38.Text = label28.Text;
+            //		Timeg = 0;
+            //		timer16.Enabled = true;
+            //		label40.Text = label41.Text;
+            //		label41.Text = label39.Text;
+            //		label39.Text = label38.Text;
+            //		label25.Text = Convert.ToString(d);
+            //		textBox15.Text = "0";
+
+            //		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+            //		{
+            //			label44.Text = label38.Text;
+
+            //		}
+
+
+            //		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+            //		{
+            //			label42.Text = label29.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+            //		{
+            //			label16.Text = label18.Text;
+
+            //		}
+            //		break;
+            //	}
+
+
+            //case 01010:                                     // біла + зелена доріжка
+            //	{
+            //		c = Convert.ToInt32(label24.Text);
+            //		timer13.Enabled = true;
+            //		timer17.Enabled = false;
+            //		label29.Text = label27.Text;
+            //		Timez = 0;
+            //		timer17.Enabled = true;
+            //		label31.Text = label32.Text;
+            //		label32.Text = label30.Text;
+            //		label30.Text = label29.Text;
+            //		label24.Text = Convert.ToString(c);
+
+
+            //		b = Convert.ToInt32(label23.Text);
+            //		timer12.Enabled = true;
+            //		timer15.Enabled = false;
+            //		label37.Text = label26.Text;
+            //		Times = 0;
+            //		timer15.Enabled = true;
+            //		label35.Text = label36.Text;
+            //		label36.Text = label34.Text;
+            //		label34.Text = label37.Text;
+            //		label23.Text = Convert.ToString(b);
+            //		textBox15.Text = "0";
+
+
+            //		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+            //		{
+            //			label43.Text = label37.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+            //		{
+            //			label42.Text = label29.Text;
+
+            //		}
+            //		break;
+            //	}
+            //case 01001: // оранжева + зелена доріжка
+            //	{
+
+            //		d = Convert.ToInt32(label25.Text);
+            //		timer14.Enabled = true;
+            //		timer16.Enabled = false;
+            //		label38.Text = label28.Text;
+            //		Timeg = 0;
+            //		timer16.Enabled = true;
+            //		label40.Text = label41.Text;
+            //		label41.Text = label39.Text;
+            //		label39.Text = label38.Text;
+            //		label25.Text = Convert.ToString(d);
+
+
+
+            //		b = Convert.ToInt32(label23.Text);
+            //		timer12.Enabled = true;
+            //		timer15.Enabled = false;
+            //		label37.Text = label26.Text;
+            //		Times = 0;
+            //		timer15.Enabled = true;
+            //		label35.Text = label36.Text;
+            //		label36.Text = label34.Text;
+            //		label34.Text = label37.Text;
+            //		label23.Text = Convert.ToString(b);
+            //		textBox15.Text = "0";
+
+
+            //		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+            //		{
+            //			label43.Text = label37.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+            //		{
+            //			label44.Text = label38.Text;
+
+            //		}
+            //		break;
+            //	}
+            //case 01000:
+            //	{
+            //		i = Convert.ToInt32(label17.Text);          //червона доріжка + зелена
+            //		timer10.Enabled = true;
+            //		timer11.Enabled = false;
+            //		label18.Text = label21.Text;
+            //		Time = 0;
+            //		timer11.Enabled = true;
+            //		label20.Text = label19.Text;
+            //		label19.Text = label22.Text;
+            //		label22.Text = label18.Text;
+            //		label17.Text = Convert.ToString(i);
+
+
+            //		b = Convert.ToInt32(label23.Text);
+            //		timer12.Enabled = true;
+            //		timer15.Enabled = false;
+            //		label37.Text = label26.Text;
+            //		Times = 0;
+            //		timer15.Enabled = true;
+            //		label35.Text = label36.Text;
+            //		label36.Text = label34.Text;
+            //		label34.Text = label37.Text;
+            //		label23.Text = Convert.ToString(b);
+            //		textBox15.Text = "0";
+
+
+            //		if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+            //		{
+            //			label43.Text = label37.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+            //		{
+            //			label16.Text = label18.Text;
+
+            //		}
+            //		break;
+            //	}
+            //case 0111:
+            //	{
+            //		i = Convert.ToInt32(label17.Text);          //червона + оранжева доріжка
+            //		timer10.Enabled = true;
+            //		timer11.Enabled = false;
+            //		label18.Text = label21.Text;
+            //		Time = 0;
+            //		timer11.Enabled = true;
+            //		label20.Text = label19.Text;
+            //		label19.Text = label22.Text;
+            //		label22.Text = label18.Text;
+            //		label17.Text = Convert.ToString(i);
+
+
+            //		d = Convert.ToInt32(label25.Text);
+            //		timer14.Enabled = true;
+            //		timer16.Enabled = false;
+            //		label38.Text = label28.Text;
+            //		Timeg = 0;
+            //		timer16.Enabled = true;
+            //		label40.Text = label41.Text;
+            //		label41.Text = label39.Text;
+            //		label39.Text = label38.Text;
+            //		label25.Text = Convert.ToString(d);
+            //		textBox15.Text = "0";
+
+            //		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+            //		{
+            //			label44.Text = label38.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+            //		{
+            //			label16.Text = label18.Text;
+
+            //		}
+            //		break;
+            //	}
+            //case 0110:
+            //	{
+            //		i = Convert.ToInt32(label17.Text);          //червона + біла доріжка
+            //		c = Convert.ToInt32(label24.Text);
+
+            //		timer10.Enabled = true;
+            //		timer11.Enabled = false;
+            //		label18.Text = label21.Text;
+            //		Time = 0;
+            //		timer11.Enabled = true;
+            //		label20.Text = label19.Text;
+            //		label19.Text = label22.Text;
+            //		label22.Text = label18.Text;
+            //		label17.Text = Convert.ToString(i);
+
+
+
+
+
+
+            //		timer13.Enabled = true;
+            //		timer17.Enabled = false;
+            //		label29.Text = label27.Text;
+            //		Timez = 0;
+            //		timer17.Enabled = true;
+            //		label31.Text = label32.Text;
+            //		label32.Text = label30.Text;
+            //		label30.Text = label29.Text;
+            //		label24.Text = Convert.ToString(c);
+            //		textBox15.Text = "0";
+
+            //		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+            //		{
+            //			label42.Text = label29.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+            //		{
+            //			label16.Text = label18.Text;
+
+            //		}
+            //		break;
+            //	}
+            //case 0101:                              // оранжева + біла
+            //	{
+            //		d = Convert.ToInt32(label25.Text);
+            //		c = Convert.ToInt32(label24.Text);
+            //		timer14.Enabled = true;
+            //		timer13.Enabled = true;
+            //		timer16.Enabled = false;
+            //		timer17.Enabled = false;
+            //		label38.Text = label28.Text;
+            //		label29.Text = label27.Text;
+            //		Timeg = 0;
+            //		Timez = 0;
+            //		timer16.Enabled = true;
+            //		timer17.Enabled = true;
+            //		label40.Text = label41.Text;
+            //		label31.Text = label32.Text;
+            //		label41.Text = label39.Text;
+            //		label32.Text = label30.Text;
+            //		label39.Text = label38.Text;
+            //		label30.Text = label29.Text;
+            //		label25.Text = Convert.ToString(d);
+            //		label24.Text = Convert.ToString(c);
+            //		textBox15.Text = "0";
+
+
+
+            //		if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+            //		{
+            //			label42.Text = label29.Text;
+
+            //		}
+
+            //		if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+            //		{
+            //			label44.Text = label38.Text;
+
+            //		}
+            //		break;
+
+            //	}
+
+            //case 0:
+            //	{
+
+            //		break;
+            //	}
+
+            //case 011111111:
+            //	{
+
+
+            //		button6.PerformClick();
+            //		textBox15.Text = "0";
+
+            //	}
+            //	break;
+            //case 010111111:
+            //	{
+            //		button7.PerformClick();
+            //		textBox15.Text = "0";
+
+            //	}
+            //	break;
+            //default:
+            //	{
+            //		textBox15.Text = "0";
+            //		break;
+            //	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
+            //{
+            //	timer2.Enabled = false;
+            //	timer17.Enabled = false;
+            //	timer11.Enabled = false;
+            //	timer15.Enabled = false;
+            //	timer16.Enabled = false;
+            //	button6.Visible = false;
+            //	button7.Visible = true;
+            //	button7.Focus();
+            //	textBox15.Text = "0";
+            //}
+
+            //if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
+            //{
+            //	timer4.Enabled = false;
+            //	timer17.Enabled = false;
+            //	timer11.Enabled = false;
+            //	timer15.Enabled = false;
+            //	timer16.Enabled = false;
+            //	button6.Visible = false;
+            //	button7.Visible = true;
+            //	button7.Focus();
+            //	textBox15.Text = "0";
+            //}
+
+            //if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
+            //{
+            //	timer6.Enabled = false;
+            //	timer17.Enabled = false;
+            //	timer11.Enabled = false;
+            //	timer15.Enabled = false;
+            //	timer16.Enabled = false;
+            //	button6.Visible = false;
+            //	button7.Visible = true;
+            //	button7.Focus();
+            //	textBox15.Text = "0";
+            //}
+
+            //if (number_group.Text == "3")   // кнопка пауза для 3 заїзду
+            //{
+            //	timer8.Enabled = false;
+            //	timer17.Enabled = false;
+            //	timer11.Enabled = false;
+            //	timer15.Enabled = false;
+            //	timer16.Enabled = false;
+            //	button6.Visible = false;
+            //	button7.Visible = true;
+            //	button7.Focus();
+            //	textBox15.Text = "0";
+            //}
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+		//serialPort1.Close();
+		//
+		///textBox15.Text = "0";
+
+		//MessageBox.Show("Щось пішло не так!! Перевірте моделі!");
+
+
+
+
+		//break;
+
+		//}
+
+
+
+
+		//if (Convert.ToInt32(textBox15.Text) == 01111) // зелена + Синя+ Жовта+Червона доріжка
+		//{
+		//	c = Convert.ToInt32(label24.Text);
+		//	timer13.Enabled = true;
+		//	timer17.Enabled = false;
+		//	label29.Text = label27.Text;
+		//	Timez = 0;
+		//	timer17.Enabled = true;
+		//	label31.Text = label32.Text;
+		//	label32.Text = label30.Text;
+		//	label30.Text = label29.Text;
+		//	label24.Text = Convert.ToString(c);
+
+
+		//	b = Convert.ToInt32(label23.Text);
+		//	timer12.Enabled = true;
+		//	timer15.Enabled = false;
+		//	label37.Text = label26.Text;
+		//	Times = 0;
+		//	timer15.Enabled = true;
+		//	label35.Text = label36.Text;
+		//	label36.Text = label34.Text;
+		//	label34.Text = label37.Text;
+		//	label23.Text = Convert.ToString(b);
+
+
+		//	d = Convert.ToInt32(label25.Text);
+		//	timer14.Enabled = true;
+		//	timer16.Enabled = false;
+		//	label38.Text = label28.Text;
+		//	Timeg = 0;
+		//	timer16.Enabled = true;
+		//	label40.Text = label41.Text;
+		//	label41.Text = label39.Text;
+		//	label39.Text = label38.Text;
+		//	label25.Text = Convert.ToString(d);
+
+		//	i = Convert.ToInt32(label17.Text);         
+		//	timer10.Enabled = true;
+		//	timer11.Enabled = false;
+		//	label18.Text = label21.Text;
+		//	Time = 0;
+		//	timer11.Enabled = true;
+		//	label20.Text = label19.Text;
+		//	label19.Text = label22.Text;
+		//	label22.Text = label18.Text;
+		//	label17.Text = Convert.ToString(i);
+		//	textBox15.Text = "0";
+
+		//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+		//	{
+		//		label16.Text = label18.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+		//	{
+		//		label44.Text = label38.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+		//	{
+		//		label43.Text = label37.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+		//	{
+		//		label42.Text = label29.Text;
+
+		//	}
+
+
+		//}
+
+		//if (Convert.ToInt32(textBox15.Text) == 01110) // зелена + Синя+ Жовта доріжка
+		//{
+		//	c = Convert.ToInt32(label24.Text);
+		//	timer13.Enabled = true;
+		//	timer17.Enabled = false;
+		//	label29.Text = label27.Text;
+		//	Timez = 0;
+		//	timer17.Enabled = true;
+		//	label31.Text = label32.Text;
+		//	label32.Text = label30.Text;
+		//	label30.Text = label29.Text;
+		//	label24.Text = Convert.ToString(c);
+
+
+		//	b = Convert.ToInt32(label23.Text);
+		//	timer12.Enabled = true;
+		//	timer15.Enabled = false;
+		//	label37.Text = label26.Text;
+		//	Times = 0;
+		//	timer15.Enabled = true;
+		//	label35.Text = label36.Text;
+		//	label36.Text = label34.Text;
+		//	label34.Text = label37.Text;
+		//	label23.Text = Convert.ToString(b);
+
+
+		//	d = Convert.ToInt32(label25.Text);
+		//	timer14.Enabled = true;
+		//	timer16.Enabled = false;
+		//	label38.Text = label28.Text;
+		//	Timeg = 0;
+		//	timer16.Enabled = true;
+		//	label40.Text = label41.Text;
+		//	label41.Text = label39.Text;
+		//	label39.Text = label38.Text;
+		//	label25.Text = Convert.ToString(d);
+		//	textBox15.Text = "0";
+
+		//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+		//	{
+		//		label44.Text = label38.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+		//	{
+		//		label43.Text = label37.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+		//	{
+		//		label42.Text = label29.Text;
+
+		//	}
+
+
+		//}
+
+
+		//if (Convert.ToInt32(textBox15.Text) == 01100)
+		//{
+		//	i = Convert.ToInt32(label17.Text);          //червона доріжка + Синя + жовта
+		//	timer10.Enabled = true;
+		//	timer11.Enabled = false;
+		//	label18.Text = label21.Text;
+		//	Time = 0;
+		//	timer11.Enabled = true;
+		//	label20.Text = label19.Text;
+		//	label19.Text = label22.Text;
+		//	label22.Text = label18.Text;
+		//	label17.Text = Convert.ToString(i);
+
+
+		//	b = Convert.ToInt32(label23.Text);
+		//	timer12.Enabled = true;
+		//	timer15.Enabled = false;
+		//	label37.Text = label26.Text;
+		//	Times = 0;
+		//	timer15.Enabled = true;
+		//	label35.Text = label36.Text;
+		//	label36.Text = label34.Text;
+		//	label34.Text = label37.Text;
+		//	label23.Text = Convert.ToString(b);
+
+		//	d = Convert.ToInt32(label25.Text);
+		//	timer14.Enabled = true;
+		//	timer16.Enabled = false;
+		//	label38.Text = label28.Text;
+		//	Timeg = 0;
+		//	timer16.Enabled = true;
+		//	label40.Text = label41.Text;
+		//	label41.Text = label39.Text;
+		//	label39.Text = label38.Text;
+		//	label25.Text = Convert.ToString(d);
+		//	textBox15.Text = "0";
+
+		//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+		//	{
+		//		label44.Text = label38.Text;
+
+		//	}
+
+
+		//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+		//	{
+		//		label43.Text = label37.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+		//	{
+		//		label16.Text = label18.Text;
+
+		//	}
+		//}
+
+
+
+		//if (Convert.ToInt32(textBox15.Text) == 01011)
+		//{
+		//	i = Convert.ToInt32(label17.Text);          //червона  + Зелена+ Жовта доріжка
+		//	timer10.Enabled = true;
+		//	timer11.Enabled = false;
+		//	label18.Text = label21.Text;
+		//	Time = 0;
+		//	timer11.Enabled = true;
+		//	label20.Text = label19.Text;
+		//	label19.Text = label22.Text;
+		//	label22.Text = label18.Text;
+		//	label17.Text = Convert.ToString(i);
+
+
+		//	c = Convert.ToInt32(label24.Text);
+		//	timer13.Enabled = true;
+		//	timer17.Enabled = false;
+		//	label29.Text = label27.Text;
+		//	Timez = 0;
+		//	timer17.Enabled = true;
+		//	label31.Text = label32.Text;
+		//	label32.Text = label30.Text;
+		//	label30.Text = label29.Text;
+		//	label24.Text = Convert.ToString(c);
+
+		//	d = Convert.ToInt32(label25.Text);
+		//	timer14.Enabled = true;
+		//	timer16.Enabled = false;
+		//	label38.Text = label28.Text;
+		//	Timeg = 0;
+		//	timer16.Enabled = true;
+		//	label40.Text = label41.Text;
+		//	label41.Text = label39.Text;
+		//	label39.Text = label38.Text;
+		//	label25.Text = Convert.ToString(d);
+		//	textBox15.Text = "0";
+
+		//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+		//	{
+		//		label44.Text = label38.Text;
+
+		//	}
+
+
+		//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+		//	{
+		//		label42.Text = label29.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+		//	{
+		//		label16.Text = label18.Text;
+
+		//	}
+		//}
+
+		//if (Convert.ToInt32(textBox15.Text) == 01011)
+		//{
+		//	i = Convert.ToInt32(label17.Text);          //червона  + Зелена+ Синя доріжка
+		//	timer10.Enabled = true;
+		//	timer11.Enabled = false;
+		//	label18.Text = label21.Text;
+		//	Time = 0;
+		//	timer11.Enabled = true;
+		//	label20.Text = label19.Text;
+		//	label19.Text = label22.Text;
+		//	label22.Text = label18.Text;
+		//	label17.Text = Convert.ToString(i);
+
+
+		//	c = Convert.ToInt32(label24.Text);
+		//	timer13.Enabled = true;
+		//	timer17.Enabled = false;
+		//	label29.Text = label27.Text;
+		//	Timez = 0;
+		//	timer17.Enabled = true;
+		//	label31.Text = label32.Text;
+		//	label32.Text = label30.Text;
+		//	label30.Text = label29.Text;
+		//	label24.Text = Convert.ToString(c);
+
+
+		//	b = Convert.ToInt32(label23.Text);
+		//	timer12.Enabled = true;
+		//	timer15.Enabled = false;
+		//	label37.Text = label26.Text;
+		//	Times = 0;
+		//	timer15.Enabled = true;
+		//	label35.Text = label36.Text;
+		//	label36.Text = label34.Text;
+		//	label34.Text = label37.Text;
+		//	label23.Text = Convert.ToString(b);
+		//	textBox15.Text = "0";
+
+
+		//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+		//	{
+		//		label43.Text = label37.Text;
+
+		//	}
+
+
+		//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+		//	{
+		//		label42.Text = label29.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+		//	{
+		//		label16.Text = label18.Text;
+
+		//	}
+		//}
+
+		//if (Convert.ToInt32(textBox15.Text) == 01010) // зелена + Синя доріжка
+		//{
+		//	c = Convert.ToInt32(label24.Text);
+		//	timer13.Enabled = true;
+		//	timer17.Enabled = false;
+		//	label29.Text = label27.Text;
+		//	Timez = 0;
+		//	timer17.Enabled = true;
+		//	label31.Text = label32.Text;
+		//	label32.Text = label30.Text;
+		//	label30.Text = label29.Text;
+		//	label24.Text = Convert.ToString(c);
+
+
+		//	b = Convert.ToInt32(label23.Text);
+		//	timer12.Enabled = true;
+		//	timer15.Enabled = false;
+		//	label37.Text = label26.Text;
+		//	Times = 0;
+		//	timer15.Enabled = true;
+		//	label35.Text = label36.Text;
+		//	label36.Text = label34.Text;
+		//	label34.Text = label37.Text;
+		//	label23.Text = Convert.ToString(b);
+		//	textBox15.Text = "0";
+
+
+		//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+		//	{
+		//		label43.Text = label37.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+		//	{
+		//		label42.Text = label29.Text;
+
+		//	}
+
+
+		//}
+
+
+
+		//if (Convert.ToInt32(textBox15.Text) == 01001) // жовта + Синя доріжка
+		//{
+		//	d = Convert.ToInt32(label25.Text);
+		//	timer14.Enabled = true;
+		//	timer16.Enabled = false;
+		//	label38.Text = label28.Text;
+		//	Timeg = 0;
+		//	timer16.Enabled = true;
+		//	label40.Text = label41.Text;
+		//	label41.Text = label39.Text;
+		//	label39.Text = label38.Text;
+		//	label25.Text = Convert.ToString(d);
+
+
+
+		//	b = Convert.ToInt32(label23.Text);
+		//	timer12.Enabled = true;
+		//	timer15.Enabled = false;
+		//	label37.Text = label26.Text;
+		//	Times = 0;
+		//	timer15.Enabled = true;
+		//	label35.Text = label36.Text;
+		//	label36.Text = label34.Text;
+		//	label34.Text = label37.Text;
+		//	label23.Text = Convert.ToString(b);
+		//	textBox15.Text = "0";
+
+
+		//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+		//	{
+		//		label43.Text = label37.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+		//	{
+		//		label44.Text = label38.Text;
+
+		//	}
+
+
+		//}
+
+
+
+
+		//if (Convert.ToInt32(textBox15.Text) == 01000)
+		//{
+		//	i = Convert.ToInt32(label17.Text);          //червона доріжка + Синя
+		//	timer10.Enabled = true;
+		//	timer11.Enabled = false;
+		//	label18.Text = label21.Text;
+		//	Time = 0;
+		//	timer11.Enabled = true;
+		//	label20.Text = label19.Text;
+		//	label19.Text = label22.Text;
+		//	label22.Text = label18.Text;
+		//	label17.Text = Convert.ToString(i);
+
+
+		//	b = Convert.ToInt32(label23.Text);
+		//	timer12.Enabled = true;
+		//	timer15.Enabled = false;
+		//	label37.Text = label26.Text;
+		//	Times = 0;
+		//	timer15.Enabled = true;
+		//	label35.Text = label36.Text;
+		//	label36.Text = label34.Text;
+		//	label34.Text = label37.Text;
+		//	label23.Text = Convert.ToString(b);
+		//	textBox15.Text = "0";
+
+
+		//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+		//	{
+		//		label43.Text = label37.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+		//	{
+		//		label16.Text = label18.Text;
+
+		//	}
+		//}
+
+
+
+
+		//if (Convert.ToInt32(textBox15.Text) == 0111)
+		//{
+		//	i = Convert.ToInt32(label17.Text);          //червона + Жовта доріжка
+		//	timer10.Enabled = true;
+		//	timer11.Enabled = false;
+		//	label18.Text = label21.Text;
+		//	Time = 0;
+		//	timer11.Enabled = true;
+		//	label20.Text = label19.Text;
+		//	label19.Text = label22.Text;
+		//	label22.Text = label18.Text;
+		//	label17.Text = Convert.ToString(i);
+
+
+		//	d = Convert.ToInt32(label25.Text);
+		//	timer14.Enabled = true;
+		//	timer16.Enabled = false;
+		//	label38.Text = label28.Text;
+		//	Timeg = 0;
+		//	timer16.Enabled = true;
+		//	label40.Text = label41.Text;
+		//	label41.Text = label39.Text;
+		//	label39.Text = label38.Text;
+		//	label25.Text = Convert.ToString(d);
+		//	textBox15.Text = "0";
+
+		//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+		//	{
+		//		label44.Text = label38.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+		//	{
+		//		label16.Text = label18.Text;
+
+		//	}
+		//}
+
+
+
+
+		//if (Convert.ToInt32(textBox15.Text) == 0110)
+		//{
+		//	i = Convert.ToInt32(label17.Text);          //червона + зелена доріжка
+		//	c = Convert.ToInt32(label24.Text);
+
+		//	timer10.Enabled = true;
+		//	timer11.Enabled = false;
+		//	label18.Text = label21.Text;
+		//	Time = 0;
+		//	timer11.Enabled = true;
+		//	label20.Text = label19.Text;
+		//	label19.Text = label22.Text;
+		//	label22.Text = label18.Text;
+		//	label17.Text = Convert.ToString(i);
+
+
+
+
+
+
+		//	timer13.Enabled = true;
+		//	timer17.Enabled = false;
+		//	label29.Text = label27.Text;
+		//	Timez = 0;
+		//	timer17.Enabled = true;
+		//	label31.Text = label32.Text;
+		//	label32.Text = label30.Text;
+		//	label30.Text = label29.Text;
+		//	label24.Text = Convert.ToString(c);
+		//	textBox15.Text = "0";
+
+		//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+		//	{
+		//		label42.Text = label29.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+		//	{
+		//		label16.Text = label18.Text;
+
+		//	}
+		//}
+
+
+
+
+
+
+		//if (Convert.ToInt32(textBox15.Text) == 0101) // жовта + зелена
+		//{
+		//	d = Convert.ToInt32(label25.Text);
+		//	c = Convert.ToInt32(label24.Text);
+		//	timer14.Enabled = true;
+		//	timer13.Enabled = true;
+		//	timer16.Enabled = false;
+		//	timer17.Enabled = false;
+		//	label38.Text = label28.Text;
+		//	label29.Text = label27.Text;
+		//	Timeg = 0;
+		//	Timez = 0;
+		//	timer16.Enabled = true;
+		//	timer17.Enabled = true;
+		//	label40.Text = label41.Text;
+		//	label31.Text = label32.Text;
+		//	label41.Text = label39.Text;
+		//	label32.Text = label30.Text;
+		//	label39.Text = label38.Text;
+		//	label30.Text = label29.Text;
+		//	label25.Text = Convert.ToString(d);
+		//	label24.Text = Convert.ToString(c);
+		//	textBox15.Text = "0";
+
+
+
+		//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+		//	{
+		//		label42.Text = label29.Text;
+
+		//	}
+
+		//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+		//	{
+		//		label44.Text = label38.Text;
+
+		//	}
+
+
+		//}
+
+		//if (Convert.ToInt32(textBox15.Text) == 01)
+		//{
+		//	i = Convert.ToInt32(label17.Text);          //червона доріжка
+		//	timer10.Enabled = true;
+		//	timer11.Enabled = false;
+		//	label18.Text = label21.Text;
+		//	Time = 0;
+		//	timer11.Enabled = true;
+		//	label20.Text = label19.Text;
+		//	label19.Text = label22.Text;
+		//	label22.Text = label18.Text;
+		//	label17.Text = Convert.ToString(i);
+		//	textBox15.Text = "0";
+
+		//	if (Convert.ToDouble(label16.Text) > Convert.ToDouble(label18.Text))
+		//	{
+		//		label16.Text = label18.Text;
+
+		//	}
+		//}
+
+
+
+		//		if (Convert.ToInt32(textBox15.Text) == 011) // синя доріжка
+		//		{
+		//			b = Convert.ToInt32(label23.Text);
+		//			timer12.Enabled = true;
+		//			timer15.Enabled = false;
+		//			label37.Text = label26.Text;
+		//			Times = 0;
+		//			timer15.Enabled = true;
+		//			label35.Text = label36.Text;
+		//			label36.Text = label34.Text;
+		//			label34.Text = label37.Text; 
+		//			label23.Text = Convert.ToString(b);
+		//			textBox15.Text = "0";
+
+
+		//	if (Convert.ToDouble(label43.Text) > Convert.ToDouble(label37.Text))
+		//	{
+		//		label43.Text = label37.Text;
+
+		//	}
+
+
+		//}
+
+
+		//if (Convert.ToInt32(textBox15.Text) == 010) // зелена доріжка
+		//{
+		//	c = Convert.ToInt32(label24.Text);
+		//	timer13.Enabled = true;
+		//	timer17.Enabled = false;
+		//	label29.Text = label27.Text;
+		//	Timez = 0;
+		//	timer17.Enabled = true;
+		//	label31.Text = label32.Text;
+		//	label32.Text = label30.Text;
+		//	label30.Text = label29.Text; 
+		//	label24.Text = Convert.ToString(c);
+		//	textBox15.Text = "0";
+
+		//	if (Convert.ToDouble(label42.Text) > Convert.ToDouble(label29.Text))
+		//	{
+		//		label42.Text = label29.Text;
+
+		//	}
+
+
+		//}
+
+		//if (Convert.ToInt32(textBox15.Text) == 0100) // жовта доріжка
+		//{
+		//	d = Convert.ToInt32(label25.Text);
+		//	timer14.Enabled = true;
+		//	timer16.Enabled = false;
+		//	label38.Text = label28.Text;
+		//	Timeg = 0;
+		//	timer16.Enabled = true;
+		//	label40.Text = label41.Text;
+		//	label41.Text = label39.Text;
+		//	label39.Text = label38.Text;
+		//	label25.Text = Convert.ToString(d);
+		//	textBox15.Text = "0";
+
+		//	if (Convert.ToDouble(label44.Text) > Convert.ToDouble(label38.Text))
+		//	{
+		//		label44.Text = label38.Text;
+
+		//	}
+
+
+		//}
+
+
 		private void timer12_Tick(object sender, EventArgs e)
 		{
 			if (Convert.ToDouble(label37.Text) > delay)

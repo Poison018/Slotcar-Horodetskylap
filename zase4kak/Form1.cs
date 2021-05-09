@@ -28,8 +28,8 @@ namespace zase4kak
             f2.button1.Visible = true;
             f2.button3.Visible = false;
             this.Visible = false;
-            f2.button5.Visible = false;
-            f2.button2.Visible = true;
+            f2.button2.Visible = false;
+            f2.button5.Visible = true;
         
         }
 

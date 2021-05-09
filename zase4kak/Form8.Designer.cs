@@ -359,6 +359,8 @@ namespace zase4kak
             this.timer44 = new System.Windows.Forms.Timer(this.components);
             this.timer45 = new System.Windows.Forms.Timer(this.components);
             this.timer46 = new System.Windows.Forms.Timer(this.components);
+            this.textBox39 = new System.Windows.Forms.TextBox();
+            this.label137 = new System.Windows.Forms.Label();
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -425,7 +427,7 @@ namespace zase4kak
             this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button15.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button15.Location = new System.Drawing.Point(690, 920);
+            this.button15.Location = new System.Drawing.Point(690, 924);
             this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(458, 122);
@@ -844,35 +846,35 @@ namespace zase4kak
             // оранжеваToolStripMenuItem1
             // 
             this.оранжеваToolStripMenuItem1.Name = "оранжеваToolStripMenuItem1";
-            this.оранжеваToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.оранжеваToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.оранжеваToolStripMenuItem1.Text = "Оранжева";
             this.оранжеваToolStripMenuItem1.Click += new System.EventHandler(this.оранжеваToolStripMenuItem1_Click);
             // 
             // жовтаToolStripMenuItem1
             // 
             this.жовтаToolStripMenuItem1.Name = "жовтаToolStripMenuItem1";
-            this.жовтаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.жовтаToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.жовтаToolStripMenuItem1.Text = "Жовта";
             this.жовтаToolStripMenuItem1.Click += new System.EventHandler(this.жовтаToolStripMenuItem1_Click);
             // 
             // синяToolStripMenuItem1
             // 
             this.синяToolStripMenuItem1.Name = "синяToolStripMenuItem1";
-            this.синяToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.синяToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.синяToolStripMenuItem1.Text = "Синя";
             this.синяToolStripMenuItem1.Click += new System.EventHandler(this.синяToolStripMenuItem1_Click);
             // 
             // чорнаToolStripMenuItem1
             // 
             this.чорнаToolStripMenuItem1.Name = "чорнаToolStripMenuItem1";
-            this.чорнаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.чорнаToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.чорнаToolStripMenuItem1.Text = "Чорна";
             this.чорнаToolStripMenuItem1.Click += new System.EventHandler(this.чорнаToolStripMenuItem1_Click);
             // 
             // зеленаToolStripMenuItem1
             // 
             this.зеленаToolStripMenuItem1.Name = "зеленаToolStripMenuItem1";
-            this.зеленаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.зеленаToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.зеленаToolStripMenuItem1.Text = "Зелена";
             this.зеленаToolStripMenuItem1.Click += new System.EventHandler(this.зеленаToolStripMenuItem1_Click);
             // 
@@ -888,62 +890,62 @@ namespace zase4kak
             this.чорнаToolStripMenuItem2,
             this.зеленаToolStripMenuItem2});
             this.доріжкаToolStripMenuItem2.Name = "доріжкаToolStripMenuItem2";
-            this.доріжкаToolStripMenuItem2.Size = new System.Drawing.Size(127, 22);
+            this.доріжкаToolStripMenuItem2.Size = new System.Drawing.Size(138, 22);
             this.доріжкаToolStripMenuItem2.Text = "3 доріжка";
             // 
             // червонаToolStripMenuItem2
             // 
             this.червонаToolStripMenuItem2.Name = "червонаToolStripMenuItem2";
-            this.червонаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.червонаToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
             this.червонаToolStripMenuItem2.Text = "Червона";
             this.червонаToolStripMenuItem2.Click += new System.EventHandler(this.червонаToolStripMenuItem2_Click);
             // 
             // білаToolStripMenuItem2
             // 
             this.білаToolStripMenuItem2.Name = "білаToolStripMenuItem2";
-            this.білаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.білаToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
             this.білаToolStripMenuItem2.Text = "Біла";
             this.білаToolStripMenuItem2.Click += new System.EventHandler(this.білаToolStripMenuItem2_Click);
             // 
             // оранжеваToolStripMenuItem2
             // 
             this.оранжеваToolStripMenuItem2.Name = "оранжеваToolStripMenuItem2";
-            this.оранжеваToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.оранжеваToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
             this.оранжеваToolStripMenuItem2.Text = "Оранжева";
             this.оранжеваToolStripMenuItem2.Click += new System.EventHandler(this.оранжеваToolStripMenuItem2_Click);
             // 
             // фіолетоваToolStripMenuItem2
             // 
             this.фіолетоваToolStripMenuItem2.Name = "фіолетоваToolStripMenuItem2";
-            this.фіолетоваToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.фіолетоваToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
             this.фіолетоваToolStripMenuItem2.Text = "Фіолетова";
             this.фіолетоваToolStripMenuItem2.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem2_Click);
             // 
             // жовтаToolStripMenuItem2
             // 
             this.жовтаToolStripMenuItem2.Name = "жовтаToolStripMenuItem2";
-            this.жовтаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.жовтаToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
             this.жовтаToolStripMenuItem2.Text = "Жовта";
             this.жовтаToolStripMenuItem2.Click += new System.EventHandler(this.жовтаToolStripMenuItem2_Click);
             // 
             // синяToolStripMenuItem2
             // 
             this.синяToolStripMenuItem2.Name = "синяToolStripMenuItem2";
-            this.синяToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.синяToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
             this.синяToolStripMenuItem2.Text = "Синя";
             this.синяToolStripMenuItem2.Click += new System.EventHandler(this.синяToolStripMenuItem2_Click);
             // 
             // чорнаToolStripMenuItem2
             // 
             this.чорнаToolStripMenuItem2.Name = "чорнаToolStripMenuItem2";
-            this.чорнаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.чорнаToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
             this.чорнаToolStripMenuItem2.Text = "Чорна";
             this.чорнаToolStripMenuItem2.Click += new System.EventHandler(this.чорнаToolStripMenuItem2_Click);
             // 
             // зеленаToolStripMenuItem2
             // 
             this.зеленаToolStripMenuItem2.Name = "зеленаToolStripMenuItem2";
-            this.зеленаToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.зеленаToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
             this.зеленаToolStripMenuItem2.Text = "Зелена";
             this.зеленаToolStripMenuItem2.Click += new System.EventHandler(this.зеленаToolStripMenuItem2_Click);
             // 
@@ -959,72 +961,73 @@ namespace zase4kak
             this.чорнаToolStripMenuItem3,
             this.зеленаToolStripMenuItem3});
             this.доріжкаToolStripMenuItem3.Name = "доріжкаToolStripMenuItem3";
-            this.доріжкаToolStripMenuItem3.Size = new System.Drawing.Size(127, 22);
+            this.доріжкаToolStripMenuItem3.Size = new System.Drawing.Size(138, 22);
             this.доріжкаToolStripMenuItem3.Text = "4 доріжка";
             // 
             // червонаToolStripMenuItem3
             // 
             this.червонаToolStripMenuItem3.Name = "червонаToolStripMenuItem3";
-            this.червонаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
+            this.червонаToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
             this.червонаToolStripMenuItem3.Text = "Червона";
             this.червонаToolStripMenuItem3.Click += new System.EventHandler(this.червонаToolStripMenuItem3_Click);
             // 
             // білаToolStripMenuItem3
             // 
             this.білаToolStripMenuItem3.Name = "білаToolStripMenuItem3";
-            this.білаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
+            this.білаToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
             this.білаToolStripMenuItem3.Text = "Біла";
             this.білаToolStripMenuItem3.Click += new System.EventHandler(this.білаToolStripMenuItem3_Click);
             // 
             // оранжеваToolStripMenuItem3
             // 
             this.оранжеваToolStripMenuItem3.Name = "оранжеваToolStripMenuItem3";
-            this.оранжеваToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
+            this.оранжеваToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
             this.оранжеваToolStripMenuItem3.Text = "Оранжева";
             this.оранжеваToolStripMenuItem3.Click += new System.EventHandler(this.оранжеваToolStripMenuItem3_Click);
             // 
             // фіолетоваToolStripMenuItem3
             // 
             this.фіолетоваToolStripMenuItem3.Name = "фіолетоваToolStripMenuItem3";
-            this.фіолетоваToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
+            this.фіолетоваToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
             this.фіолетоваToolStripMenuItem3.Text = "Фіолетова";
             this.фіолетоваToolStripMenuItem3.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem3_Click);
             // 
             // жовтаToolStripMenuItem3
             // 
             this.жовтаToolStripMenuItem3.Name = "жовтаToolStripMenuItem3";
-            this.жовтаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
+            this.жовтаToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
             this.жовтаToolStripMenuItem3.Text = "Жовта";
             this.жовтаToolStripMenuItem3.Click += new System.EventHandler(this.жовтаToolStripMenuItem3_Click);
             // 
             // синяToolStripMenuItem3
             // 
             this.синяToolStripMenuItem3.Name = "синяToolStripMenuItem3";
-            this.синяToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
+            this.синяToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
             this.синяToolStripMenuItem3.Text = "Синя";
             this.синяToolStripMenuItem3.Click += new System.EventHandler(this.синяToolStripMenuItem3_Click);
             // 
             // чорнаToolStripMenuItem3
             // 
             this.чорнаToolStripMenuItem3.Name = "чорнаToolStripMenuItem3";
-            this.чорнаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
+            this.чорнаToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
             this.чорнаToolStripMenuItem3.Text = "Чорна";
             this.чорнаToolStripMenuItem3.Click += new System.EventHandler(this.чорнаToolStripMenuItem3_Click);
             // 
             // зеленаToolStripMenuItem3
             // 
             this.зеленаToolStripMenuItem3.Name = "зеленаToolStripMenuItem3";
-            this.зеленаToolStripMenuItem3.Size = new System.Drawing.Size(130, 22);
+            this.зеленаToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
             this.зеленаToolStripMenuItem3.Text = "Зелена";
             this.зеленаToolStripMenuItem3.Click += new System.EventHandler(this.зеленаToolStripMenuItem3_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1920, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1920, 25);
             this.menuStrip1.TabIndex = 132;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1033,8 +1036,10 @@ namespace zase4kak
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.кольориДоріжокToolStripMenuItem,
             this.toolStripMenuItem2});
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(81, 20);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(91, 21);
             this.toolStripMenuItem1.Text = "Параметри";
             // 
             // кольориДоріжокToolStripMenuItem
@@ -1047,7 +1052,7 @@ namespace zase4kak
             this.доріжкаToolStripMenuItem4,
             this.доріжкаToolStripMenuItem5});
             this.кольориДоріжокToolStripMenuItem.Name = "кольориДоріжокToolStripMenuItem";
-            this.кольориДоріжокToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.кольориДоріжокToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.кольориДоріжокToolStripMenuItem.Text = "Кольори доріжок";
             // 
             // доріжкаToolStripMenuItem
@@ -1062,62 +1067,61 @@ namespace zase4kak
             this.чорнаToolStripMenuItem,
             this.зеленаToolStripMenuItem});
             this.доріжкаToolStripMenuItem.Name = "доріжкаToolStripMenuItem";
-            this.доріжкаToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.доріжкаToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.доріжкаToolStripMenuItem.Text = "1 доріжка";
-            this.доріжкаToolStripMenuItem.Click += new System.EventHandler(this.доріжкаToolStripMenuItem_Click_1);
             // 
             // червонаToolStripMenuItem
             // 
             this.червонаToolStripMenuItem.Name = "червонаToolStripMenuItem";
-            this.червонаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.червонаToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.червонаToolStripMenuItem.Text = "Червона";
             this.червонаToolStripMenuItem.Click += new System.EventHandler(this.червонаToolStripMenuItem_Click);
             // 
             // білаToolStripMenuItem
             // 
             this.білаToolStripMenuItem.Name = "білаToolStripMenuItem";
-            this.білаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.білаToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.білаToolStripMenuItem.Text = "Біла";
             this.білаToolStripMenuItem.Click += new System.EventHandler(this.білаToolStripMenuItem_Click);
             // 
             // оранжеваToolStripMenuItem
             // 
             this.оранжеваToolStripMenuItem.Name = "оранжеваToolStripMenuItem";
-            this.оранжеваToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.оранжеваToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.оранжеваToolStripMenuItem.Text = "Оранжева";
             this.оранжеваToolStripMenuItem.Click += new System.EventHandler(this.оранжеваToolStripMenuItem_Click);
             // 
             // фіолетоваToolStripMenuItem
             // 
             this.фіолетоваToolStripMenuItem.Name = "фіолетоваToolStripMenuItem";
-            this.фіолетоваToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.фіолетоваToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.фіолетоваToolStripMenuItem.Text = "Фіолетова";
             this.фіолетоваToolStripMenuItem.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem_Click);
             // 
             // жовтаToolStripMenuItem
             // 
             this.жовтаToolStripMenuItem.Name = "жовтаToolStripMenuItem";
-            this.жовтаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.жовтаToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.жовтаToolStripMenuItem.Text = "Жовта";
             this.жовтаToolStripMenuItem.Click += new System.EventHandler(this.жовтаToolStripMenuItem_Click);
             // 
             // синяToolStripMenuItem
             // 
             this.синяToolStripMenuItem.Name = "синяToolStripMenuItem";
-            this.синяToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.синяToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.синяToolStripMenuItem.Text = "Синя";
             this.синяToolStripMenuItem.Click += new System.EventHandler(this.синяToolStripMenuItem_Click);
             // 
             // чорнаToolStripMenuItem
             // 
             this.чорнаToolStripMenuItem.Name = "чорнаToolStripMenuItem";
-            this.чорнаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.чорнаToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.чорнаToolStripMenuItem.Text = "Чорна";
             // 
             // зеленаToolStripMenuItem
             // 
             this.зеленаToolStripMenuItem.Name = "зеленаToolStripMenuItem";
-            this.зеленаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.зеленаToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.зеленаToolStripMenuItem.Text = "Зелена";
             this.зеленаToolStripMenuItem.Click += new System.EventHandler(this.зеленаToolStripMenuItem_Click);
             // 
@@ -1133,27 +1137,27 @@ namespace zase4kak
             this.чорнаToolStripMenuItem1,
             this.зеленаToolStripMenuItem1});
             this.доріжкаToolStripMenuItem1.Name = "доріжкаToolStripMenuItem1";
-            this.доріжкаToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
+            this.доріжкаToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.доріжкаToolStripMenuItem1.Text = "2 доріжка";
             // 
             // червонаToolStripMenuItem1
             // 
             this.червонаToolStripMenuItem1.Name = "червонаToolStripMenuItem1";
-            this.червонаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.червонаToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.червонаToolStripMenuItem1.Text = "Червона";
             this.червонаToolStripMenuItem1.Click += new System.EventHandler(this.червонаToolStripMenuItem1_Click);
             // 
             // білаToolStripMenuItem1
             // 
             this.білаToolStripMenuItem1.Name = "білаToolStripMenuItem1";
-            this.білаToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.білаToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.білаToolStripMenuItem1.Text = "Біла";
             this.білаToolStripMenuItem1.Click += new System.EventHandler(this.білаToolStripMenuItem1_Click);
             // 
             // фіолетоваToolStripMenuItem1
             // 
             this.фіолетоваToolStripMenuItem1.Name = "фіолетоваToolStripMenuItem1";
-            this.фіолетоваToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.фіолетоваToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.фіолетоваToolStripMenuItem1.Text = "Фіолетова";
             this.фіолетоваToolStripMenuItem1.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem1_Click);
             // 
@@ -1169,62 +1173,62 @@ namespace zase4kak
             this.чорнаToolStripMenuItem4,
             this.зеленаToolStripMenuItem4});
             this.доріжкаToolStripMenuItem4.Name = "доріжкаToolStripMenuItem4";
-            this.доріжкаToolStripMenuItem4.Size = new System.Drawing.Size(127, 22);
+            this.доріжкаToolStripMenuItem4.Size = new System.Drawing.Size(138, 22);
             this.доріжкаToolStripMenuItem4.Text = "5 доріжка";
             // 
             // червонаToolStripMenuItem4
             // 
             this.червонаToolStripMenuItem4.Name = "червонаToolStripMenuItem4";
-            this.червонаToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.червонаToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
             this.червонаToolStripMenuItem4.Text = "Червона";
             this.червонаToolStripMenuItem4.Click += new System.EventHandler(this.червонаToolStripMenuItem4_Click);
             // 
             // білаToolStripMenuItem4
             // 
             this.білаToolStripMenuItem4.Name = "білаToolStripMenuItem4";
-            this.білаToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.білаToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
             this.білаToolStripMenuItem4.Text = "Біла";
             this.білаToolStripMenuItem4.Click += new System.EventHandler(this.білаToolStripMenuItem4_Click);
             // 
             // оранжеваToolStripMenuItem4
             // 
             this.оранжеваToolStripMenuItem4.Name = "оранжеваToolStripMenuItem4";
-            this.оранжеваToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.оранжеваToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
             this.оранжеваToolStripMenuItem4.Text = "Оранжева";
             this.оранжеваToolStripMenuItem4.Click += new System.EventHandler(this.оранжеваToolStripMenuItem4_Click);
             // 
             // фіолетоваToolStripMenuItem4
             // 
             this.фіолетоваToolStripMenuItem4.Name = "фіолетоваToolStripMenuItem4";
-            this.фіолетоваToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.фіолетоваToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
             this.фіолетоваToolStripMenuItem4.Text = "Фіолетова";
             this.фіолетоваToolStripMenuItem4.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem4_Click);
             // 
             // жовтаToolStripMenuItem4
             // 
             this.жовтаToolStripMenuItem4.Name = "жовтаToolStripMenuItem4";
-            this.жовтаToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.жовтаToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
             this.жовтаToolStripMenuItem4.Text = "Жовта";
             this.жовтаToolStripMenuItem4.Click += new System.EventHandler(this.жовтаToolStripMenuItem4_Click);
             // 
             // синяToolStripMenuItem4
             // 
             this.синяToolStripMenuItem4.Name = "синяToolStripMenuItem4";
-            this.синяToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.синяToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
             this.синяToolStripMenuItem4.Text = "Синя";
             this.синяToolStripMenuItem4.Click += new System.EventHandler(this.синяToolStripMenuItem4_Click);
             // 
             // чорнаToolStripMenuItem4
             // 
             this.чорнаToolStripMenuItem4.Name = "чорнаToolStripMenuItem4";
-            this.чорнаToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.чорнаToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
             this.чорнаToolStripMenuItem4.Text = "Чорна";
             this.чорнаToolStripMenuItem4.Click += new System.EventHandler(this.чорнаToolStripMenuItem4_Click);
             // 
             // зеленаToolStripMenuItem4
             // 
             this.зеленаToolStripMenuItem4.Name = "зеленаToolStripMenuItem4";
-            this.зеленаToolStripMenuItem4.Size = new System.Drawing.Size(130, 22);
+            this.зеленаToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
             this.зеленаToolStripMenuItem4.Text = "Зелена";
             this.зеленаToolStripMenuItem4.Click += new System.EventHandler(this.зеленаToolStripMenuItem4_Click);
             // 
@@ -1240,63 +1244,63 @@ namespace zase4kak
             this.чорнаToolStripMenuItem5,
             this.зеленаToolStripMenuItem5});
             this.доріжкаToolStripMenuItem5.Name = "доріжкаToolStripMenuItem5";
-            this.доріжкаToolStripMenuItem5.Size = new System.Drawing.Size(127, 22);
+            this.доріжкаToolStripMenuItem5.Size = new System.Drawing.Size(138, 22);
             this.доріжкаToolStripMenuItem5.Text = "6 доріжка";
             this.доріжкаToolStripMenuItem5.Click += new System.EventHandler(this.доріжкаToolStripMenuItem5_Click);
             // 
             // червонаToolStripMenuItem5
             // 
             this.червонаToolStripMenuItem5.Name = "червонаToolStripMenuItem5";
-            this.червонаToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.червонаToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
             this.червонаToolStripMenuItem5.Text = "Червона";
             this.червонаToolStripMenuItem5.Click += new System.EventHandler(this.червонаToolStripMenuItem5_Click);
             // 
             // білаToolStripMenuItem5
             // 
             this.білаToolStripMenuItem5.Name = "білаToolStripMenuItem5";
-            this.білаToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.білаToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
             this.білаToolStripMenuItem5.Text = "Біла";
             this.білаToolStripMenuItem5.Click += new System.EventHandler(this.білаToolStripMenuItem5_Click);
             // 
             // оранжеваToolStripMenuItem5
             // 
             this.оранжеваToolStripMenuItem5.Name = "оранжеваToolStripMenuItem5";
-            this.оранжеваToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.оранжеваToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
             this.оранжеваToolStripMenuItem5.Text = "Оранжева";
             this.оранжеваToolStripMenuItem5.Click += new System.EventHandler(this.оранжеваToolStripMenuItem5_Click);
             // 
             // фіолетоваToolStripMenuItem5
             // 
             this.фіолетоваToolStripMenuItem5.Name = "фіолетоваToolStripMenuItem5";
-            this.фіолетоваToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.фіолетоваToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
             this.фіолетоваToolStripMenuItem5.Text = "Фіолетова";
             this.фіолетоваToolStripMenuItem5.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem5_Click);
             // 
             // жовтаToolStripMenuItem5
             // 
             this.жовтаToolStripMenuItem5.Name = "жовтаToolStripMenuItem5";
-            this.жовтаToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.жовтаToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
             this.жовтаToolStripMenuItem5.Text = "Жовта";
             this.жовтаToolStripMenuItem5.Click += new System.EventHandler(this.жовтаToolStripMenuItem5_Click);
             // 
             // синяToolStripMenuItem5
             // 
             this.синяToolStripMenuItem5.Name = "синяToolStripMenuItem5";
-            this.синяToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.синяToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
             this.синяToolStripMenuItem5.Text = "Синя";
             this.синяToolStripMenuItem5.Click += new System.EventHandler(this.синяToolStripMenuItem5_Click);
             // 
             // чорнаToolStripMenuItem5
             // 
             this.чорнаToolStripMenuItem5.Name = "чорнаToolStripMenuItem5";
-            this.чорнаToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.чорнаToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
             this.чорнаToolStripMenuItem5.Text = "Чорна";
             this.чорнаToolStripMenuItem5.Click += new System.EventHandler(this.чорнаToolStripMenuItem5_Click);
             // 
             // зеленаToolStripMenuItem5
             // 
             this.зеленаToolStripMenuItem5.Name = "зеленаToolStripMenuItem5";
-            this.зеленаToolStripMenuItem5.Size = new System.Drawing.Size(130, 22);
+            this.зеленаToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
             this.зеленаToolStripMenuItem5.Text = "Зелена";
             this.зеленаToolStripMenuItem5.Click += new System.EventHandler(this.зеленаToolStripMenuItem5_Click);
             // 
@@ -1311,49 +1315,49 @@ namespace zase4kak
             this.секToolStripMenuItem5,
             this.ввестиВручнуToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(198, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(215, 22);
             this.toolStripMenuItem2.Text = "Мінімальний час кола";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // секToolStripMenuItem
             // 
             this.секToolStripMenuItem.Name = "секToolStripMenuItem";
-            this.секToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.секToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.секToolStripMenuItem.Text = "1 сек";
             this.секToolStripMenuItem.Click += new System.EventHandler(this.секToolStripMenuItem_Click);
             // 
             // секToolStripMenuItem1
             // 
             this.секToolStripMenuItem1.Name = "секToolStripMenuItem1";
-            this.секToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.секToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
             this.секToolStripMenuItem1.Text = "2 сек";
             this.секToolStripMenuItem1.Click += new System.EventHandler(this.секToolStripMenuItem1_Click);
             // 
             // секToolStripMenuItem2
             // 
             this.секToolStripMenuItem2.Name = "секToolStripMenuItem2";
-            this.секToolStripMenuItem2.Size = new System.Drawing.Size(153, 22);
+            this.секToolStripMenuItem2.Size = new System.Drawing.Size(167, 22);
             this.секToolStripMenuItem2.Text = "3 сек";
             this.секToolStripMenuItem2.Click += new System.EventHandler(this.секToolStripMenuItem2_Click);
             // 
             // секToolStripMenuItem3
             // 
             this.секToolStripMenuItem3.Name = "секToolStripMenuItem3";
-            this.секToolStripMenuItem3.Size = new System.Drawing.Size(153, 22);
+            this.секToolStripMenuItem3.Size = new System.Drawing.Size(167, 22);
             this.секToolStripMenuItem3.Text = "4 сек";
             this.секToolStripMenuItem3.Click += new System.EventHandler(this.секToolStripMenuItem3_Click);
             // 
             // секToolStripMenuItem4
             // 
             this.секToolStripMenuItem4.Name = "секToolStripMenuItem4";
-            this.секToolStripMenuItem4.Size = new System.Drawing.Size(153, 22);
+            this.секToolStripMenuItem4.Size = new System.Drawing.Size(167, 22);
             this.секToolStripMenuItem4.Text = "5 сек";
             this.секToolStripMenuItem4.Click += new System.EventHandler(this.секToolStripMenuItem4_Click);
             // 
             // секToolStripMenuItem5
             // 
             this.секToolStripMenuItem5.Name = "секToolStripMenuItem5";
-            this.секToolStripMenuItem5.Size = new System.Drawing.Size(153, 22);
+            this.секToolStripMenuItem5.Size = new System.Drawing.Size(167, 22);
             this.секToolStripMenuItem5.Text = "6 сек";
             this.секToolStripMenuItem5.Click += new System.EventHandler(this.секToolStripMenuItem5_Click);
             // 
@@ -1362,7 +1366,7 @@ namespace zase4kak
             this.ввестиВручнуToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripTextBox1});
             this.ввестиВручнуToolStripMenuItem.Name = "ввестиВручнуToolStripMenuItem";
-            this.ввестиВручнуToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.ввестиВручнуToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.ввестиВручнуToolStripMenuItem.Text = "Ввести вручну";
             // 
             // toolStripTextBox1
@@ -1370,7 +1374,10 @@ namespace zase4kak
             this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox1.ToolTipText = "Для збереження двічі нажміть на поле";
             this.toolStripTextBox1.DoubleClick += new System.EventHandler(this.toolStripTextBox1_DoubleClick);
+            this.toolStripTextBox1.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
+            this.toolStripTextBox1.VisibleChanged += new System.EventHandler(this.toolStripTextBox1_VisibleChanged);
             // 
             // timer24
             // 
@@ -1399,6 +1406,7 @@ namespace zase4kak
             // 
             this.button20.BackColor = System.Drawing.Color.Goldenrod;
             this.button20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button20.BackgroundImage")));
+            this.button20.Enabled = false;
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button20.ForeColor = System.Drawing.Color.Goldenrod;
             this.button20.Location = new System.Drawing.Point(537, 844);
@@ -1446,14 +1454,18 @@ namespace zase4kak
             this.textBox27.Size = new System.Drawing.Size(100, 20);
             this.textBox27.TabIndex = 136;
             this.textBox27.Visible = false;
+            this.textBox27.TextChanged += new System.EventHandler(this.textBox27_TextChanged);
             // 
             // textBox26
             // 
             this.textBox26.Location = new System.Drawing.Point(432, 844);
+            this.textBox26.MaxLength = 100;
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(100, 20);
             this.textBox26.TabIndex = 135;
             this.textBox26.Visible = false;
+            this.textBox26.TextChanged += new System.EventHandler(this.textBox26_TextChanged_1);
+            this.textBox26.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox26_KeyDown);
             // 
             // button18
             // 
@@ -1594,10 +1606,10 @@ namespace zase4kak
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Wide Latin", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(78, 27);
+            this.label46.Font = new System.Drawing.Font("Times New Roman", 42.75F, System.Drawing.FontStyle.Bold);
+            this.label46.Location = new System.Drawing.Point(79, 11);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(0, 63);
+            this.label46.Size = new System.Drawing.Size(0, 65);
             this.label46.TabIndex = 37;
             // 
             // label42
@@ -1706,7 +1718,7 @@ namespace zase4kak
             this.label12.BackColor = System.Drawing.Color.LightBlue;
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(16, 32);
+            this.label12.Location = new System.Drawing.Point(16, 28);
             this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 41);
@@ -1877,10 +1889,10 @@ namespace zase4kak
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Wide Latin", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(78, 26);
+            this.label47.Font = new System.Drawing.Font("Times New Roman", 42.75F, System.Drawing.FontStyle.Bold);
+            this.label47.Location = new System.Drawing.Point(79, 11);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(0, 63);
+            this.label47.Size = new System.Drawing.Size(0, 65);
             this.label47.TabIndex = 39;
             // 
             // label43
@@ -2349,10 +2361,10 @@ namespace zase4kak
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Wide Latin", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(78, 21);
+            this.label45.Font = new System.Drawing.Font("Times New Roman", 42.75F, System.Drawing.FontStyle.Bold);
+            this.label45.Location = new System.Drawing.Point(79, 11);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(0, 63);
+            this.label45.Size = new System.Drawing.Size(0, 65);
             this.label45.TabIndex = 36;
             // 
             // label21
@@ -2551,13 +2563,15 @@ namespace zase4kak
             // textBox15
             // 
             this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(471, -927);
+            this.textBox15.Location = new System.Drawing.Point(1153, 1026);
             this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.MaxLength = 2000021;
+            this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(137, 20);
             this.textBox15.TabIndex = 95;
             this.textBox15.Text = "0";
+            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // label65
             // 
@@ -2616,10 +2630,10 @@ namespace zase4kak
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Wide Latin", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(62, 22);
+            this.label48.Font = new System.Drawing.Font("Times New Roman", 42.75F, System.Drawing.FontStyle.Bold);
+            this.label48.Location = new System.Drawing.Point(79, 11);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(0, 63);
+            this.label48.Size = new System.Drawing.Size(0, 65);
             this.label48.TabIndex = 43;
             // 
             // label44
@@ -2771,12 +2785,12 @@ namespace zase4kak
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 45.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label14.ForeColor = System.Drawing.Color.Goldenrod;
             this.label14.Location = new System.Drawing.Point(4, 30);
             this.label14.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(473, 73);
+            this.label14.Size = new System.Drawing.Size(450, 70);
             this.label14.TabIndex = 91;
             this.label14.Text = "Клас моделей";
             this.label14.Visible = false;
@@ -2959,7 +2973,7 @@ namespace zase4kak
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.LightBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(16, 32);
+            this.label3.Location = new System.Drawing.Point(16, 28);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 39);
@@ -3063,10 +3077,10 @@ namespace zase4kak
             // label115
             // 
             this.label115.AutoSize = true;
-            this.label115.Font = new System.Drawing.Font("Wide Latin", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label115.Location = new System.Drawing.Point(79, 20);
+            this.label115.Font = new System.Drawing.Font("Times New Roman", 42.75F, System.Drawing.FontStyle.Bold);
+            this.label115.Location = new System.Drawing.Point(79, 11);
             this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(0, 63);
+            this.label115.Size = new System.Drawing.Size(0, 65);
             this.label115.TabIndex = 58;
             this.label115.Click += new System.EventHandler(this.label115_Click);
             // 
@@ -3261,7 +3275,7 @@ namespace zase4kak
             this.label98.AutoSize = true;
             this.label98.BackColor = System.Drawing.Color.LightBlue;
             this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
-            this.label98.Location = new System.Drawing.Point(16, 32);
+            this.label98.Location = new System.Drawing.Point(16, 28);
             this.label98.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(48, 39);
@@ -3351,7 +3365,7 @@ namespace zase4kak
             this.label113.AutoSize = true;
             this.label113.BackColor = System.Drawing.Color.LightBlue;
             this.label113.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
-            this.label113.Location = new System.Drawing.Point(16, 32);
+            this.label113.Location = new System.Drawing.Point(16, 28);
             this.label113.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label113.Name = "label113";
             this.label113.Size = new System.Drawing.Size(48, 39);
@@ -3546,10 +3560,10 @@ namespace zase4kak
             // label116
             // 
             this.label116.AutoSize = true;
-            this.label116.Font = new System.Drawing.Font("Wide Latin", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label116.Location = new System.Drawing.Point(96, 20);
+            this.label116.Font = new System.Drawing.Font("Times New Roman", 42.75F, System.Drawing.FontStyle.Bold);
+            this.label116.Location = new System.Drawing.Point(79, 11);
             this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(0, 63);
+            this.label116.Size = new System.Drawing.Size(0, 65);
             this.label116.TabIndex = 59;
             // 
             // panel11
@@ -3772,6 +3786,28 @@ namespace zase4kak
             this.timer46.Tag = "таймер для сортування результату";
             this.timer46.Tick += new System.EventHandler(this.timer46_Tick);
             // 
+            // textBox39
+            // 
+            this.textBox39.Location = new System.Drawing.Point(333, 906);
+            this.textBox39.Name = "textBox39";
+            this.textBox39.Size = new System.Drawing.Size(199, 20);
+            this.textBox39.TabIndex = 179;
+            this.textBox39.Visible = false;
+            this.textBox39.TextChanged += new System.EventHandler(this.textBox39_TextChanged);
+            // 
+            // label137
+            // 
+            this.label137.AutoSize = true;
+            this.label137.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label137.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label137.Location = new System.Drawing.Point(225, 901);
+            this.label137.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(104, 24);
+            this.label137.TabIndex = 178;
+            this.label137.Text = "К-сть груп";
+            this.label137.Visible = false;
+            // 
             // form4BindingSource
             // 
             this.form4BindingSource.DataSource = typeof(zase4kak.Form4);
@@ -3782,6 +3818,8 @@ namespace zase4kak
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(1920, 1057);
+            this.Controls.Add(this.textBox39);
+            this.Controls.Add(this.label137);
             this.Controls.Add(this.textBox38);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.textBox37);
@@ -4206,5 +4244,7 @@ namespace zase4kak
         private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem ввестиВручнуToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.TextBox textBox39;
+        private System.Windows.Forms.Label label137;
     }
 }

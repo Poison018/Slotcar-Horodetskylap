@@ -506,6 +506,8 @@ namespace zase4kak
                 timer1.Enabled = false;
                 timer2.Enabled = false;
                 label101.Text = "<<Кваліфікацію завершено!>>";
+                label50.Visible = false;
+                label101.Location = new Point(371,234) ;
                 serialPort1.Close();
                 kvalificatsia.Play();
                 SaveTable_laptime(dataGridView2);
@@ -1364,7 +1366,7 @@ namespace zase4kak
 
                 number_pilot = number_pilot + 1;
 
-                dataGridView2.Rows.Add(number_pilot, label56.Text,label55.Text);
+                dataGridView2.Rows.Add(number_pilot, label56.Text,Convert.ToDouble(label55.Text));
                 
 
                 

@@ -33,7 +33,7 @@ namespace zase4kak
 
 			f3.textBox24.Text = textBox5.Text;
 
-
+			f3.timer41.Enabled = true;
 			f3.textBox13.Text = textBox1.Text;
 			f3.textBox14.Text = textBox2.Text;
 
@@ -264,15 +264,20 @@ namespace zase4kak
 		{
 			Form3 f3 = new Form3();      //закриваю програму
 			DialogResult dialog = MessageBox.Show(
-			 "Вы действительно хотите выйти из программы?",
-			 "Завершение программы",
+			 "Вийти з програми?",
+			 "Завершення роботи",
 			 MessageBoxButtons.YesNo,
 			 MessageBoxIcon.Warning
 			);
 			if (dialog == DialogResult.Yes)
 			{
 				e.Cancel = false;
-				Application.Exit();
+				
+					Application.Exit();
+                
+				
+				
+				
 			}
 			else
 			{
@@ -432,7 +437,7 @@ namespace zase4kak
         {
 			Form9 f9 = new Form9();
 			f9.Show();
-			this.Hide();
+			
 		
 			
 			f9.textBox106.Text = textBox3.Text;
@@ -494,6 +499,71 @@ namespace zase4kak
 					break;
 			}
 
+		}
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+			try
+			{
+				int z = Convert.ToInt32(textBox1.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				textBox1.Clear();
+			}
+		}
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+			try
+			{
+				int x = Convert.ToInt32(textBox2.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				textBox2.Clear();
+			}
+		}
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+			try
+			{
+				int c = Convert.ToInt32(textBox3.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				textBox3.Clear();
+			}
+		}
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+			try
+			{
+				int v = Convert.ToInt32(textBox4.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				textBox4.Clear();
+			}
+		}
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+			try
+			{
+				int v = Convert.ToInt32(textBox5.Text);
+			}
+			catch (System.FormatException)
+			{
+				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+				textBox5.Clear();
+			}
 		}
     }
 }
