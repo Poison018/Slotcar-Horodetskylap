@@ -58,6 +58,8 @@ namespace zase4kak
 
 		private void Form8_Load(object sender, EventArgs e)
 		{
+
+			
 			timetostartsound.SoundLocation = "music/81980c1a7dcb7cd.wav";
 			timetostartsound.Load();
 			fivesecond.SoundLocation = "music/fivesecond.wav";
@@ -102,6 +104,10 @@ namespace zase4kak
 		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, v, l, time_to_traning_min, time_to_traning_sec, traning_number_group = 1;
 
 		int time_to_traning_secs = 1;// секунди для тренування
+
+
+		int lane1, lane2, lane3, lane4, lane5, lane6, lane2_1, lane2_2, lane2_3, lane2_4, lane2_5, lane2_6, lane3_1, lane3_2, lane3_3, lane3_4, lane3_5, lane3_6, lane4_1, lane4_2, lane4_3, lane4_4, lane4_5, lane4_6, lane5_1, lane5_2, lane5_3, lane5_4, lane5_5, lane5_6, lane6_1, lane6_2, lane6_3, lane6_4, lane6_5, lane6_6;
+		int position = 1, position1 = 0;
 
 
 		int timetostart = 5; // значення стартового таймера
@@ -249,6 +255,20 @@ namespace zase4kak
 					timer16.Enabled = false;
 					timer26.Enabled = false;
 					timer27.Enabled = false;
+
+
+					//
+					lane1 = Convert.ToInt32(label17.Text);
+					lane2_2 = Convert.ToInt32(label24.Text);
+					lane3_3 = Convert.ToInt32(label23.Text);
+					lane4_4 = Convert.ToInt32(label25.Text);
+					lane5_5 = Convert.ToInt32(label97.Text);
+					lane6_6 = Convert.ToInt32(label112.Text);
+
+
+
+
+
 
 
 
@@ -812,6 +832,21 @@ namespace zase4kak
 					timer16.Enabled = false;
 					timer26.Enabled = false;
 					timer27.Enabled = false;
+
+
+
+
+					//
+
+					lane3 = Convert.ToInt32(label23.Text) - lane1;
+					lane2_4 = Convert.ToInt32(label25.Text) - lane2_2;
+					lane3_5 = Convert.ToInt32(label97.Text) - lane3_3;
+					lane4_6 = Convert.ToInt32(label112.Text) - lane4_4;
+					lane5_2 = Convert.ToInt32(label24.Text) - lane5_5;
+					lane6_1 = Convert.ToInt32(label17.Text) - lane6_6;
+
+
+
 
 					textBox16.Text = label45.Text;  //червона
 					label50.Text = label17.Text;
@@ -1405,6 +1440,24 @@ namespace zase4kak
 					timer16.Enabled = false;
 					timer26.Enabled = false;
 					timer27.Enabled = false;
+
+
+
+					//
+
+
+					lane5 = Convert.ToInt32(label97.Text) - lane1 - lane3;
+					lane2_6 = Convert.ToInt32(label112.Text) - lane2_2 - lane2_4;
+					lane3_2 = Convert.ToInt32(label24.Text) - lane3_3 - lane3_5;
+					lane4_1 = Convert.ToInt32(label17.Text) - lane4_4 - lane4_6;
+					lane5_4 = Convert.ToInt32(label25.Text) - lane5_5 - lane5_2;
+					lane6_3 = Convert.ToInt32(label23.Text) - lane6_6 - lane6_1;
+
+
+
+
+
+
 
 					textBox16.Text = label45.Text;  //червона
 					label50.Text = label17.Text;
@@ -4258,27 +4311,27 @@ namespace zase4kak
 			label7.Text = "Круги";
 			label5.Visible = false;
 			label9.Location = new Point(878, 8);
-			label22.Location = new Point(431, 34);
-			label19.Location = new Point(610, 34);
-			label20.Location = new Point(803, 34);
+			label22.Location = new Point(431, 26);
+			label19.Location = new Point(610, 26);
+			label20.Location = new Point(803, 26);
 			label76.Visible = true;
 			label77.Visible = true;
 			label78.Visible = true;
-			label30.Location = new Point(431, 33);
-			label32.Location = new Point(610, 33);
-			label31.Location = new Point(803, 33);
+			label30.Location = new Point(431, 26);
+			label32.Location = new Point(610, 26);
+			label31.Location = new Point(803, 26);
 			label79.Visible = true;
 			label80.Visible = true;
 			label81.Visible = true;
-			label34.Location = new Point(431, 35);
-			label36.Location = new Point(610, 35);
-			label35.Location = new Point(803, 35);
+			label34.Location = new Point(431, 26);
+			label36.Location = new Point(610, 26);
+			label35.Location = new Point(803, 26);
 			label82.Visible = true;
 			label83.Visible = true;
 			label84.Visible = true;
-			label39.Location = new Point(431, 34);
-			label41.Location = new Point(610, 34);
-			label40.Location = new Point(803, 34);
+			label39.Location = new Point(431, 26);
+			label41.Location = new Point(610, 26);
+			label40.Location = new Point(803, 26);
 			label87.Visible = true;
 			label86.Visible = true;
 			label85.Visible = true;
@@ -6498,29 +6551,48 @@ namespace zase4kak
 
 			if (textBox25.Text == "")
 			{
+				position = 1;
+				position1 = 0;
 
 				button8.Visible = true;
 
-				dataGridView1.Visible = true;
+			
 
-				dataGridView1.Rows.Add(label45.Text, label17.Text + "," + textBox20.Text);
+				dataGridView1.Rows.Add("",label45.Text,lane3_1, lane3_2, lane3_3, lane3_4, lane3_5, lane3_6, label17.Text + "," + textBox20.Text);
 
-				dataGridView1.Rows.Add(label46.Text, label24.Text + "," + textBox22.Text);
+				dataGridView1.Rows.Add("",label46.Text, lane4_1, lane4_2, lane4_3, lane4_4, lane4_5, lane4_6, label24.Text + "," + textBox22.Text);
 
-				dataGridView1.Rows.Add(label47.Text, label23.Text + "," + textBox21.Text);
+				dataGridView1.Rows.Add("", label47.Text,lane5_1, lane5_2, lane5_3, lane5_4, lane5_5, lane5_6, label23.Text + "," + textBox21.Text);
 
-				dataGridView1.Rows.Add(label48.Text, label25.Text + "," + textBox23.Text);
+				dataGridView1.Rows.Add("",label48.Text,lane6_1, lane6_2, lane6_3, lane6_4, lane6_5, lane6_6, label25.Text + "," + textBox23.Text);
 
-				dataGridView1.Rows.Add(label115.Text, label97.Text + "," + textBox36.Text);
+				dataGridView1.Rows.Add("",label115.Text,lane2_1, lane2_2, lane2_3, lane2_4, lane2_5, lane2_6, label97.Text + "," + textBox36.Text);
 
-				dataGridView1.Rows.Add(label116.Text, label112.Text + "," + textBox37.Text);
+				dataGridView1.Rows.Add("",label116.Text,lane1, lane2, lane3, lane4, lane5, lane6, label112.Text + "," + textBox37.Text);
 
 				//сортування результату гонки в таблиці
 
 
-				//dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
-				dataGridView1.Sort(Column2, ListSortDirection.Descending);
+				dataGridView1.Sort(dataGridView1.Columns[8], ListSortDirection.Descending);
+				
 
+
+				// добавляю порядок спортсмені ( порядок місць)
+				for (int cell = 0; dataGridView1.Rows.Count > cell; cell++)
+				{
+
+					dataGridView1.Rows[position1].Cells[0].Value = position;
+
+
+
+					if (dataGridView1.Rows.Count > position)
+
+					{
+						position1 = position1 + 1;
+						position = position + 1;
+					}
+
+				}
 				textBox20.Text = "";
 				textBox21.Text = "";
 				textBox22.Text = "";
@@ -6531,25 +6603,41 @@ namespace zase4kak
 			}
 			else
 			{
-				dataGridView2.Visible = true;
+			
 				button16.Visible = true;
+				position = 1;
+				position1 = 0;
+				dataGridView2.Rows.Add("", label45.Text, lane3_1, lane3_2, lane3_3, lane3_4, lane3_5, lane3_6, label17.Text + "," + textBox20.Text);
 
-				dataGridView2.Rows.Add(label45.Text, label17.Text + "," + textBox20.Text);
+				dataGridView2.Rows.Add("", label46.Text, lane4_1, lane4_2, lane4_3, lane4_4, lane4_5, lane4_6, label24.Text + "," + textBox22.Text);
 
-				dataGridView2.Rows.Add(label46.Text, label24.Text + "," + textBox22.Text);
+				dataGridView2.Rows.Add("", label47.Text, lane5_1, lane5_2, lane5_3, lane5_4, lane5_5, lane5_6, label23.Text + "," + textBox21.Text);
 
-				dataGridView2.Rows.Add(label47.Text, label23.Text + "," + textBox21.Text);
+				dataGridView2.Rows.Add("", label48.Text, lane6_1, lane6_2, lane6_3, lane6_4, lane6_5, lane6_6, label25.Text + "," + textBox23.Text);
 
-				dataGridView2.Rows.Add(label48.Text, label25.Text + "," + textBox23.Text);
+				dataGridView2.Rows.Add("", label115.Text, lane2_1, lane2_2, lane2_3, lane2_4, lane2_5, lane2_6, label97.Text + "," + textBox36.Text);
 
-				dataGridView2.Rows.Add(label115.Text, label97.Text + "," + textBox36.Text);
-
-				dataGridView2.Rows.Add(label116.Text, label112.Text + "," + textBox37.Text);
+				dataGridView2.Rows.Add("", label116.Text, lane1, lane2, lane3, lane4, lane5, lane6, label112.Text + "," + textBox37.Text);
 				//сортування результату гонки в таблиці
 
 
-				dataGridView2.Sort(dataGridView2.Columns[1], ListSortDirection.Descending);
+				dataGridView2.Sort(dataGridView2.Columns[8], ListSortDirection.Descending);
+				// добавляю порядок спортсмені ( порядок місць)
+				for (int cell = 0; dataGridView1.Rows.Count > cell; cell++)
+				{
 
+					dataGridView2.Rows[position1].Cells[0].Value = position;
+
+
+
+					if (dataGridView2.Rows.Count > position)
+
+					{
+						position1 = position1 + 1;
+						position = position + 1;
+					}
+
+				}
 				textBox20.Text = "";
 				textBox21.Text = "";
 				textBox22.Text = "";
@@ -6750,12 +6838,12 @@ namespace zase4kak
 
 
 			//задаю учасників фіналістів
-			label116.Text = dataGridView1[0, 5].Value.ToString();
-			label115.Text = dataGridView1[0, 4].Value.ToString();
-			label48.Text = dataGridView1[0, 3].Value.ToString();
-			label47.Text = dataGridView1[0, 2].Value.ToString();
-			label46.Text = dataGridView1[0, 1].Value.ToString();
-			label45.Text = dataGridView1[0, 0].Value.ToString();
+			label116.Text = dataGridView1[1, 5].Value.ToString();
+			label115.Text = dataGridView1[1, 4].Value.ToString();
+			label48.Text = dataGridView1[1, 3].Value.ToString();
+			label47.Text = dataGridView1[1, 2].Value.ToString();
+			label46.Text = dataGridView1[1, 1].Value.ToString();
+			label45.Text = dataGridView1[1, 0].Value.ToString();
 
 
 		}
@@ -7190,23 +7278,11 @@ namespace zase4kak
 
 		private void dataGridView1_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
 		{
-			if (double.Parse(e.CellValue1.ToString()) > double.Parse(e.CellValue2.ToString()))
-			{
-				e.SortResult = 1;
-			}
-			else if (double.Parse(e.CellValue1.ToString()) < double.Parse(e.CellValue2.ToString()))
-			{
-				e.SortResult = -1;
-			}
-			else
-			{
-				e.SortResult = 0;
-			}
-			e.Handled = true;
-		}
+
+        }
 
 
-		private void button19_Click_2(object sender, EventArgs e)
+        private void button19_Click_2(object sender, EventArgs e)
 		{
 			button19.Visible = false;
 			button1.Enabled = true;
@@ -7504,6 +7580,25 @@ namespace zase4kak
 
 
 					timer43.Enabled = false;
+
+
+
+
+
+					//
+
+
+					lane4 = Convert.ToInt32(label25.Text) - lane1 - lane3 - lane5 - lane2;
+					lane2_3 = Convert.ToInt32(label23.Text) - lane2_2 - lane2_4 - lane2_6 - lane2_1;
+					lane3_6 = Convert.ToInt32(label112.Text) - lane3_3 - lane3_5 - lane3_2 - lane3_4;
+					lane4_5 = Convert.ToInt32(label97.Text) - lane4_4 - lane4_6 - lane4_1 - lane4_3;
+					lane5_1 = Convert.ToInt32(label17.Text) - lane5_5 - lane5_2 - lane5_4 - lane5_6;
+					lane6_2 = Convert.ToInt32(label24.Text) - lane6_6 - lane6_1 - lane6_3 - lane6_5;
+
+
+
+
+
 
 
 					textBox16.Text = label45.Text;  //червона
@@ -7997,6 +8092,24 @@ namespace zase4kak
 					button6.Enabled = false;
 
 
+
+					//
+
+
+					lane6 = Convert.ToInt32(label112.Text) - lane1 - lane3 - lane5 - lane2 - lane4;
+					lane2_5 = Convert.ToInt32(label97.Text) - lane2_2 - lane2_4 - lane2_6 - lane2_1 - lane2_3;
+					lane3_1 = Convert.ToInt32(label17.Text) - lane3_3 - lane3_5 - lane3_2 - lane3_4 - lane3_6;
+					lane4_2 = Convert.ToInt32(label24.Text) - lane4_4 - lane4_6 - lane4_1 - lane4_3 - lane4_5;
+					lane5_3 = Convert.ToInt32(label23.Text) - lane5_5 - lane5_2 - lane5_4 - lane5_6 - lane5_1;
+					lane6_4 = Convert.ToInt32(label25.Text) - lane6_6 - lane6_1 - lane6_3 - lane6_5 - lane6_2;
+
+
+
+
+
+
+
+
 					timer31.Enabled = false;
 					label4.Text = "00:00";
 					label13.Text = "<<Фініш!>>";
@@ -8434,7 +8547,13 @@ namespace zase4kak
 			timer35.Enabled = false;
 		}
 
-		private void timer36_Tick(object sender, EventArgs e)
+        private void button21_Click(object sender, EventArgs e)
+        {
+			min = 0;
+			sec = 2;
+        }
+
+        private void timer36_Tick(object sender, EventArgs e)
 		{
 			textBox6.BackColor = Color.WhiteSmoke;
 			label24.BackColor = Color.WhiteSmoke;
@@ -10545,49 +10664,97 @@ namespace zase4kak
 		void SaveTable(DataGridView Whats_save)
 		{
 			if (textBox25.Text == "")
+			{ 
+				Microsoft.Office.Interop.Excel.Application Excel_Lapp = new Microsoft.Office.Interop.Excel.Application();
+				Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook_lap;
+				Microsoft.Office.Interop.Excel.Worksheet ExcelWorkShee_lap;
+
+				//Книга.
+				ExcelWorkBook_lap = Excel_Lapp.Workbooks.Add(System.Reflection.Missing.Value);
+			//Таблица.
+				ExcelWorkShee_lap = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook_lap.Worksheets.get_Item(1);
+
+
+
+			for (int j = 0; j < dataGridView1.ColumnCount; j++)
+				Excel_Lapp.Cells[1, j + 1] = dataGridView1.Columns[j].HeaderText;
+
+			for (int i = 0; i < dataGridView1.Rows.Count; i++)
 			{
-
-
-				string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "result_of_racing.xlsx";// запис в ексель результату гонки
-
-				Excel.Application excel_lapp = new Excel.Application();
-				Excel.Workbook workbooks = excel_lapp.Workbooks.Add();
-				Excel.Worksheet worksheet = workbooks.ActiveSheet;
-
-				for (int i = 1; i < Whats_save.RowCount + 1; i++)
+				for (int j = 0; j < dataGridView1.ColumnCount; j++)
 				{
-					for (int j = 1; j < Whats_save.ColumnCount + 1; j++)
-					{
-						worksheet.Rows[i].Columns[j] = Whats_save.Rows[i - 1].Cells[j - 1].Value;
-
-					}
+					Excel_Lapp.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value;
 				}
-				excel_lapp.AlertBeforeOverwriting = false;
-				workbooks.SaveAs(path);
-				workbooks.Close();
-
-				GC.Collect();
 			}
+			// Excel_Lapp.Visible = true;
+			Excel_Lapp.UserControl = true;
+			Excel_Lapp.AlertBeforeOverwriting = true;
+			//  ExcelWorkBook_laptime.SaveAs(path);
+			Excel_Lapp.Visible = true;
+
+			// ExcelWorkBook.Close();
+
+			// GC.Collect();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		}
 			else// запис в ексель результату фіналу
 			{
-				string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "Finaly_of_racing.xlsx";
 
-				Excel.Application excel_lapp_final = new Excel.Application();
-				Excel.Workbook workbooks_final = excel_lapp_final.Workbooks.Add();
-				Excel.Worksheet worksheet_final = workbooks_final.ActiveSheet;
+				Microsoft.Office.Interop.Excel.Application Excel_Lapp_TIME = new Microsoft.Office.Interop.Excel.Application();
+			Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook_lap_TIME;
+			Microsoft.Office.Interop.Excel.Worksheet ExcelWorkShee_lap_TIME;
 
-				for (int i = 1; i < Whats_save.RowCount + 1; i++)
+		//Книга.
+		ExcelWorkBook_lap_TIME = Excel_Lapp_TIME.Workbooks.Add(System.Reflection.Missing.Value);
+				//Таблица.
+				ExcelWorkShee_lap_TIME = (Microsoft.Office.Interop.Excel.Worksheet) ExcelWorkBook_lap_TIME.Worksheets.get_Item(1);
+
+
+
+				for (int j = 0; j<dataGridView2.ColumnCount; j++)
+					Excel_Lapp_TIME.Cells[1, j + 1] = dataGridView1.Columns[j].HeaderText;
+
+				for (int i = 0; i<dataGridView2.Rows.Count; i++)
 				{
-					for (int j = 1; j < Whats_save.ColumnCount + 1; j++)
+					for (int j = 0; j<dataGridView2.ColumnCount; j++)
 					{
-						worksheet_final.Rows[i].Columns[j] = Whats_save.Rows[i - 1].Cells[j - 1].Value;
-
+						Excel_Lapp_TIME.Cells[i + 2, j + 1] = dataGridView2.Rows[i].Cells[j].Value;
 					}
-				}
-				excel_lapp_final.AlertBeforeOverwriting = false;
-				workbooks_final.SaveAs(path);
-				workbooks_final.Close();
+	}
+				
+				
+				
+				
+						Excel_Lapp_TIME.UserControl = true;
+						Excel_Lapp_TIME.AlertBeforeOverwriting = true;
+
+						Excel_Lapp_TIME.Visible = true;
+
+				
 			}
+
 
 
 
@@ -10880,6 +11047,30 @@ namespace zase4kak
 					timer16.Enabled = false;
 					timer26.Enabled = false;
 					timer27.Enabled = false;
+
+
+
+
+
+
+
+					//
+
+
+					lane2 = Convert.ToInt32(label24.Text) - lane1 - lane3 - lane5;
+					lane2_1 = Convert.ToInt32(label17.Text) - lane2_2 - lane2_4 - lane2_6;
+					lane3_4 = Convert.ToInt32(label25.Text) - lane3_3 - lane3_5 - lane3_2;
+					lane4_3 = Convert.ToInt32(label23.Text) - lane4_4 - lane4_6 - lane4_1;
+					lane5_6 = Convert.ToInt32(label112.Text) - lane5_5 - lane5_2 - lane5_4;
+					lane6_5 = Convert.ToInt32(label97.Text) - lane6_6 - lane6_1 - lane6_3;
+
+
+
+
+
+
+
+
 
 
 					textBox16.Text = label45.Text;  //червона
@@ -11382,7 +11573,7 @@ namespace zase4kak
 
 							if (Convert.ToDouble(label16.Text) > delay) // обмеження часу у тренуванні
 							{
-								textBox15.Text = "i";
+								textBox15.Text = "0";
 
 								label78.Text = label77.Text;
 								label77.Text = label76.Text;
@@ -11404,7 +11595,7 @@ namespace zase4kak
 							{
 								label18.Text = "999";
 								label16.Text = "999";
-								textBox15.Text = "i";
+								textBox15.Text = "0";
 							}
 						}
                 else                             // алгоритм для часу кола для гонок червона доріжка

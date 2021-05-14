@@ -15,3 +15,6 @@ C:\Users\ooleg\OneDrive\Документы\GitHub\Slotcar-Horodetskylap\zase4kak
 C:\Users\ooleg\OneDrive\Документы\GitHub\Slotcar-Horodetskylap\zase4kak\obj\Debug\zase4ka.pdb
 C:\Users\ooleg\OneDrive\Документы\GitHub\Slotcar-Horodetskylap\zase4kak\obj\Debug\zase4kak.Form8.resources
 C:\Users\ooleg\OneDrive\Документы\GitHub\Slotcar-Horodetskylap\zase4kak\obj\Debug\zase4kak.Form9.resources
+C:\Users\ooleg\OneDrive\Документы\GitHub\Slotcar-Horodetskylap\zase4kak\bin\Debug\agq\zase4ka.resources.dll
+C:\Users\ooleg\OneDrive\Документы\GitHub\Slotcar-Horodetskylap\zase4kak\obj\Debug\zase4kak.Form8.agq.resources
+C:\Users\ooleg\OneDrive\Документы\GitHub\Slotcar-Horodetskylap\zase4kak\obj\Debug\agq\zase4ka.resources.dll

@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Threading;
+
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Data;
 using System.Media;
 using zase4ka.Properties;
-
 namespace zase4kak
 {
 	public partial class Form3 : Form
@@ -67,6 +67,11 @@ namespace zase4kak
 
 			button6.Focus();
 		}
+
+		
+		//записник результату кожної доріжки
+		int lane1,lane2,lane3, lane4,   lane2_1, lane2_2, lane2_3, lane2_4,    lane3_1, lane3_2, lane3_3, lane3_4,    lane4_1, lane4_2, lane4_3, lane4_4;
+		int position = 1, position1 = 0;
 
 		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, time_to_traning_min, time_to_traning_sec, traning_number_group = 1;
 
@@ -257,6 +262,21 @@ namespace zase4kak
 					timer11.Enabled = false;
 					timer15.Enabled = false;
 					timer16.Enabled = false;
+
+
+
+
+
+
+					//
+					lane1 = Convert.ToInt32(label17.Text);
+					lane2_2 = Convert.ToInt32(label24.Text);
+					lane3_3 = Convert.ToInt32(label23.Text);
+					lane4_4 = Convert.ToInt32(label25.Text);
+
+
+
+
 
 
 
@@ -607,6 +627,15 @@ namespace zase4kak
 					timer11.Enabled = false;
 					timer15.Enabled = false;
 					timer16.Enabled = false;
+
+
+					//
+
+					lane3 = Convert.ToInt32(label23.Text) - lane1;
+					lane2_1 = Convert.ToInt32(label17.Text) - lane2_2;
+					lane3_4 = Convert.ToInt32(label25.Text) - lane3_3;
+					lane4_2 = Convert.ToInt32(label24.Text) - lane4_4;
+
 
 					textBox16.Text = label45.Text;
 					label50.Text = label17.Text;
@@ -994,6 +1023,23 @@ namespace zase4kak
 					timer11.Enabled = false;
 					timer15.Enabled = false;
 					timer16.Enabled = false;
+
+
+
+
+					//
+
+					lane4 = Convert.ToInt32(label25.Text) - lane1 - lane3;
+					lane2_3 = Convert.ToInt32(label23.Text) - lane2_1 -lane2_2;
+					lane3_2 = Convert.ToInt32(label24.Text) - lane3_3 - lane3_4;
+					lane4_1 = Convert.ToInt32(label17.Text) - lane4_4 - lane4_2;
+
+
+
+
+
+
+
 
 
 					textBox16.Text = label45.Text;
@@ -3476,30 +3522,46 @@ namespace zase4kak
 
 			if (textBox25.Text == "")
 			{
+				
 
 				button8.Visible = true;
-				dataGridView1.Visible = true;
+			
 
-				//dataGridView1.Rows.Add("Червона", label45.Text, label17.Text + "," + textBox20.Text);
 
-				//dataGridView1.Rows.Add("Зелена", label46.Text, label24.Text + "," + textBox22.Text);
+				position = 1;
+				position1 = 0;
 
-				//dataGridView1.Rows.Add("Синя", label47.Text, label23.Text + "," + textBox21.Text);
+				dataGridView1.Rows.Add("", label45.Text,lane3_1,lane3_2,lane3_3,lane3_4, label17.Text + "," + textBox20.Text);
 
-				//dataGridView1.Rows.Add("Жовта", label48.Text, label25.Text + "," + textBox23.Text);
-				dataGridView1.Rows.Add(label45.Text, label17.Text + "," + textBox20.Text);
+				dataGridView1.Rows.Add("", label46.Text,lane1,lane2,lane3,lane4, label24.Text + "," + textBox22.Text);
 
-				dataGridView1.Rows.Add(label46.Text, label24.Text + "," + textBox22.Text);
+				dataGridView1.Rows.Add("", label47.Text,lane4_1,lane4_2,lane4_3,lane4_4, label23.Text + "," + textBox21.Text);
 
-				dataGridView1.Rows.Add(label47.Text, label23.Text + "," + textBox21.Text);
-
-				dataGridView1.Rows.Add(label48.Text, label25.Text + "," + textBox23.Text);
+				dataGridView1.Rows.Add("", label48.Text,lane2_1,lane2_2,lane2_3,lane2_4, label25.Text + "," + textBox23.Text);
 
 				//сортування результату гонки в таблиці
 
 
-				//dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
-				dataGridView1.Sort(Column2, ListSortDirection.Descending);
+				dataGridView1.Sort(dataGridView1.Columns[6], ListSortDirection.Descending);
+				
+				// добавляю порядок спортсмені ( порядок місць)
+				for (int cell = 0; dataGridView1.Rows.Count > cell; cell++)
+				{
+					
+					dataGridView1.Rows[position1].Cells[0].Value = position;
+					
+
+
+					if(dataGridView1.Rows.Count > position) 
+					
+					{
+						position1 = position1 + 1;
+						position = position + 1;
+					}
+					
+				}
+
+		
 				textBox20.Text = "";
 				textBox21.Text = "";
 				textBox22.Text = "";
@@ -3508,20 +3570,42 @@ namespace zase4kak
 			}
 			else
 			{
-				dataGridView2.Visible = true;
+
+				position = 1;
+				position1 = 0;
+
+		
 				button16.Visible = true;
 
-				dataGridView2.Rows.Add(label45.Text, label17.Text + "." + textBox20.Text);
+				dataGridView2.Rows.Add("",label45.Text, lane3_1, lane3_2, lane3_3, lane3_4, label17.Text + "." + textBox20.Text);
 
-				dataGridView2.Rows.Add(label46.Text, label24.Text + "." + textBox22.Text);
+				dataGridView2.Rows.Add("",label46.Text, lane1, lane2, lane3, lane4, label24.Text + "." + textBox22.Text);
 
-				dataGridView2.Rows.Add(label47.Text, label23.Text + "." + textBox21.Text);
+				dataGridView2.Rows.Add("",label47.Text, lane4_1, lane4_2, lane4_3, lane4_4, label23.Text + "." + textBox21.Text);
 
-				dataGridView2.Rows.Add(label48.Text, label25.Text + "." + textBox23.Text);
+				dataGridView2.Rows.Add("",label48.Text, lane2_1, lane2_2, lane2_3, lane2_4, label25.Text + "." + textBox23.Text);
 				//сортування результату гонки в таблиці
 
 
-				dataGridView2.Sort(dataGridView2.Columns[2], ListSortDirection.Descending);
+				dataGridView2.Sort(dataGridView2.Columns[6], ListSortDirection.Descending);
+
+				// добавляю порядок спортсмені ( порядок місць)
+
+				for (int cell = 0; dataGridView2.Rows.Count > cell; cell++)
+				{
+
+					dataGridView2.Rows[position1].Cells[0].Value = position;
+
+
+
+					if (dataGridView2.Rows.Count > position)
+
+					{
+						position1 = position1 + 1;
+						position = position + 1;
+					}
+
+				}
 
 				textBox20.Text = "";
 				textBox21.Text = "";
@@ -3682,10 +3766,10 @@ namespace zase4kak
 
 			//задаю учасників фіналістів
 
-			label48.Text = dataGridView1[0, 3].Value.ToString();
-			label47.Text = dataGridView1[0, 2].Value.ToString();
-			label46.Text = dataGridView1[0, 1].Value.ToString();
-			label45.Text = dataGridView1[0, 0].Value.ToString();
+			label48.Text = dataGridView1[1, 3].Value.ToString();
+			label47.Text = dataGridView1[1, 2].Value.ToString();
+			label46.Text = dataGridView1[1, 1].Value.ToString();
+			label45.Text = dataGridView1[1, 0].Value.ToString();
 
 
 		}
@@ -4179,7 +4263,12 @@ namespace zase4kak
 			timer26.Enabled = false;
 		}
 
-		private void timer27_Tick(object sender, EventArgs e)
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+			
+		}
+
+        private void timer27_Tick(object sender, EventArgs e)
 		{
 			textBox1.BackColor = Color.WhiteSmoke;
 			label17.BackColor = Color.WhiteSmoke;
@@ -4277,7 +4366,9 @@ namespace zase4kak
         private void button21_Click(object sender, EventArgs e)
         {
 			sec = 2;
-        }
+			
+			
+		}
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
@@ -5417,16 +5508,15 @@ namespace zase4kak
 			timer11.Enabled = true;
 			timer16.Enabled = true;
 		}
-
+		
 		private void timer11_Tick(object sender, EventArgs e)
 		{
 
 
 			Time += 0.0003 * 53;                   //timer на час кола
 			label21.Text = string.Format("{0:F3}", Time);       //timer на час кола 
-
-
-
+			
+			
 
 
 		}
@@ -5485,45 +5575,117 @@ namespace zase4kak
 			{
 
 
-				string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "result_of_racing.xlsx";// запис в ексель результату гонки
 
-				Excel.Application excel_lapp = new Excel.Application();
-				Excel.Workbook workbooks = excel_lapp.Workbooks.Add();
-				Excel.Worksheet worksheet = workbooks.ActiveSheet;
 
-				for (int i = 1; i < Whats_save.RowCount + 1; i++)
+				
+
+				Microsoft.Office.Interop.Excel.Application Excel_Lapp = new Microsoft.Office.Interop.Excel.Application();
+				Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook_lap;
+				Microsoft.Office.Interop.Excel.Worksheet ExcelWorkShee_lap;
+			
+				//Книга.
+				ExcelWorkBook_lap = Excel_Lapp.Workbooks.Add(System.Reflection.Missing.Value);
+				//Таблица.
+				ExcelWorkShee_lap = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook_lap.Worksheets.get_Item(1);
+
+
+
+				for (int j = 0; j < dataGridView1.ColumnCount; j++)
+					Excel_Lapp.Cells[1, j + 1] = dataGridView1.Columns[j].HeaderText;
+
+				for (int i = 0; i < dataGridView1.Rows.Count; i++)
 				{
-					for (int j = 1; j < Whats_save.ColumnCount + 1; j++)
+					for (int j = 0; j < dataGridView1.ColumnCount; j++)
 					{
-						worksheet.Rows[i].Columns[j] = Whats_save.Rows[i - 1].Cells[j - 1].Value;
-
+						Excel_Lapp.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value;
 					}
 				}
-				excel_lapp.AlertBeforeOverwriting = false;
-				workbooks.SaveAs(path);
-				workbooks.Close();
+				// Excel_Lapp.Visible = true;
+				Excel_Lapp.UserControl = true;
+				Excel_Lapp.AlertBeforeOverwriting = true;
+				//  ExcelWorkBook_laptime.SaveAs(path);
+				Excel_Lapp.Visible = true;
 
-				GC.Collect();
+				// ExcelWorkBook.Close();
+
+				// GC.Collect();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
 			}
 			else// запис в ексель результату фіналу
 			{
-				string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "Finaly_of_racing.xlsx";
 
-				Excel.Application excel_lapp_final = new Excel.Application();
-				Excel.Workbook workbooks_final = excel_lapp_final.Workbooks.Add();
-				Excel.Worksheet worksheet_final = workbooks_final.ActiveSheet;
+				Microsoft.Office.Interop.Excel.Application Excel_Lapp_TIME = new Microsoft.Office.Interop.Excel.Application();
+				Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook_lap_TIME;
+				Microsoft.Office.Interop.Excel.Worksheet ExcelWorkShee_lap_TIME;
 
-				for (int i = 1; i < Whats_save.RowCount + 1; i++)
+				//Книга.
+				ExcelWorkBook_lap_TIME = Excel_Lapp_TIME.Workbooks.Add(System.Reflection.Missing.Value);
+				//Таблица.
+				ExcelWorkShee_lap_TIME = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook_lap_TIME.Worksheets.get_Item(1);
+
+
+
+				for (int j = 0; j < dataGridView2.ColumnCount; j++)
+					Excel_Lapp_TIME.Cells[1, j + 1] = dataGridView1.Columns[j].HeaderText;
+
+				for (int i = 0; i < dataGridView2.Rows.Count; i++)
 				{
-					for (int j = 1; j < Whats_save.ColumnCount + 1; j++)
+					for (int j = 0; j < dataGridView2.ColumnCount; j++)
 					{
-						worksheet_final.Rows[i].Columns[j] = Whats_save.Rows[i - 1].Cells[j - 1].Value;
-
+						Excel_Lapp_TIME.Cells[i + 2, j + 1] = dataGridView2.Rows[i].Cells[j].Value;
 					}
 				}
-				excel_lapp_final.AlertBeforeOverwriting = false;
-				workbooks_final.SaveAs(path);
-				workbooks_final.Close();
+				// Excel_Lapp.Visible = true;
+				Excel_Lapp_TIME.UserControl = true;
+				Excel_Lapp_TIME.AlertBeforeOverwriting = true;
+				//  ExcelWorkBook_laptime.SaveAs(path);
+				Excel_Lapp_TIME.Visible = true;
+
+				// ExcelWorkBook.Close();
+
+				// GC.Collect();
+
+
+
+				//string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "Finaly_of_racing.xlsx";
+
+				//Excel.Application excel_lapp_final = new Excel.Application();
+				//Excel.Workbook workbooks_final = excel_lapp_final.Workbooks.Add();
+				//Excel.Worksheet worksheet_final = workbooks_final.ActiveSheet;
+
+				//for (int i = 1; i < Whats_save.RowCount + 1; i++)
+				//{
+				//	for (int j = 1; j < Whats_save.ColumnCount + 1; j++)
+				//	{
+				//		worksheet_final.Rows[i].Columns[j] = Whats_save.Rows[i - 1].Cells[j - 1].Value;
+
+				//	}
+				//}
+				//excel_lapp_final.AlertBeforeOverwriting = false;
+				//workbooks_final.SaveAs(path);
+				//workbooks_final.Close();
 			}
 
 
@@ -5596,11 +5758,13 @@ namespace zase4kak
 
 		private void timer10_Tick(object sender, EventArgs e)
 		{
+			
 			if (Convert.ToDouble(label18.Text) > delay)
 			{
 				i++;                                            //добавляю кола 1 доріці
 				label17.Text = Convert.ToString(i);
 
+				
 
 
 
@@ -5796,6 +5960,16 @@ namespace zase4kak
 					label69.BackColor = Color.Red;
 					button10.Enabled = true;
 					button11.Enabled = false;
+
+
+
+					//
+					lane2 = Convert.ToInt32(label24.Text) - lane1 - lane4 - lane3;
+					lane2_4 = Convert.ToInt32(label25.Text) - lane2_1 - lane2_2 - lane2_3;
+					lane3_1 = Convert.ToInt32(label17.Text) - lane3_2 - lane3_3 - lane3_4;
+					lane4_3 = Convert.ToInt32(label23.Text) - lane4_1 - lane4_2 - lane4_4;
+
+
 
 					kinetsgonkisound.Play();
 					label68.Visible = true;

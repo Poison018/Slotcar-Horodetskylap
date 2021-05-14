@@ -31,11 +31,16 @@ namespace zase4kak
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.timer22 = new System.Windows.Forms.Timer(this.components);
             this.timer21 = new System.Windows.Forms.Timer(this.components);
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -56,9 +61,6 @@ namespace zase4kak
             this.label68 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer10 = new System.Windows.Forms.Timer(this.components);
             this.timer12 = new System.Windows.Forms.Timer(this.components);
             this.button7 = new System.Windows.Forms.Button();
@@ -361,9 +363,28 @@ namespace zase4kak
             this.timer46 = new System.Windows.Forms.Timer(this.components);
             this.textBox39 = new System.Windows.Forms.TextBox();
             this.label137 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button21 = new System.Windows.Forms.Button();
             this.form4BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -373,6 +394,8 @@ namespace zase4kak
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.form4BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -387,160 +410,79 @@ namespace zase4kak
             this.timer21.Tag = "таймер для зміни учасників групи";
             this.timer21.Tick += new System.EventHandler(this.timer21_Tick);
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.dataGridView2.Location = new System.Drawing.Point(1360, 859);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(329, 197);
-            this.dataGridView2.TabIndex = 130;
-            this.dataGridView2.Visible = false;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            this.dataGridView2.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView2_SortCompare);
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Спортсмен";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.Width = 180;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Результат";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
             // textBox25
             // 
-            this.textBox25.Location = new System.Drawing.Point(1829, 1027);
+            resources.ApplyResources(this.textBox25, "textBox25");
             this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(36, 20);
-            this.textBox25.TabIndex = 129;
-            this.textBox25.Visible = false;
             // 
             // button15
             // 
-            this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.button15, "button15");
             this.button15.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button15.Location = new System.Drawing.Point(690, 924);
-            this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(458, 122);
-            this.button15.TabIndex = 128;
-            this.button15.Text = "Старт фіналу";
             this.button15.UseVisualStyleBackColor = true;
-            this.button15.Visible = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             this.button15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button15_KeyPress);
             // 
             // button14
             // 
-            this.button14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button14.BackgroundImage")));
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.button14, "button14");
             this.button14.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button14.Location = new System.Drawing.Point(1783, 982);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(106, 34);
-            this.button14.TabIndex = 126;
-            this.button14.Text = "Фінал";
             this.button14.UseVisualStyleBackColor = true;
-            this.button14.Visible = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // label71
             // 
-            this.label71.AutoSize = true;
+            resources.ApplyResources(this.label71, "label71");
             this.label71.BackColor = System.Drawing.Color.Transparent;
-            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
             this.label71.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label71.Location = new System.Drawing.Point(164, 104);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(186, 55);
-            this.label71.TabIndex = 125;
-            this.label71.Text = "label71";
-            this.label71.Visible = false;
             // 
             // label70
             // 
-            this.label70.AutoSize = true;
+            resources.ApplyResources(this.label70, "label70");
             this.label70.BackColor = System.Drawing.Color.Transparent;
-            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label70.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label70.Location = new System.Drawing.Point(209, 891);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(153, 108);
-            this.label70.TabIndex = 124;
-            this.label70.Text = "60";
-            this.label70.Visible = false;
             // 
             // button13
             // 
-            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
+            resources.ApplyResources(this.button13, "button13");
             this.button13.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button13.Location = new System.Drawing.Point(217, 1002);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(121, 23);
-            this.button13.TabIndex = 123;
-            this.button13.Text = "Старт тренування";
             this.button13.UseVisualStyleBackColor = true;
-            this.button13.Visible = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button12
             // 
-            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
+            resources.ApplyResources(this.button12, "button12");
             this.button12.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button12.Location = new System.Drawing.Point(217, 1002);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(102, 23);
-            this.button12.TabIndex = 122;
-            this.button12.Text = "1 хв. Тренувань.";
             this.button12.UseVisualStyleBackColor = true;
-            this.button12.Visible = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // label69
             // 
-            this.label69.AutoSize = true;
+            resources.ApplyResources(this.label69, "label69");
             this.label69.BackColor = System.Drawing.Color.Red;
-            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label69.Location = new System.Drawing.Point(32, 979);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(156, 20);
-            this.label69.TabIndex = 121;
-            this.label69.Text = "Трек виключений";
-            this.label69.Visible = false;
             // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.Firebrick;
-            this.button11.Enabled = false;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.button11, "button11");
             this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button11.Location = new System.Drawing.Point(114, 1002);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(83, 23);
-            this.button11.TabIndex = 120;
-            this.button11.Text = "Викл Трек";
             this.button11.UseVisualStyleBackColor = false;
-            this.button11.Visible = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.Lime;
-            this.button10.Location = new System.Drawing.Point(25, 1002);
+            resources.ApplyResources(this.button10, "button10");
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(83, 23);
-            this.button10.TabIndex = 119;
-            this.button10.Text = "Вкл Трек";
             this.button10.UseVisualStyleBackColor = false;
-            this.button10.Visible = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // timer23
@@ -551,130 +493,62 @@ namespace zase4kak
             // 
             // textBox24
             // 
-            this.textBox24.Location = new System.Drawing.Point(1789, 1027);
+            resources.ApplyResources(this.textBox24, "textBox24");
             this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(34, 20);
-            this.textBox24.TabIndex = 127;
-            this.textBox24.Visible = false;
             // 
             // button9
             // 
-            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            resources.ApplyResources(this.button9, "button9");
             this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button9.Location = new System.Drawing.Point(1072, 897);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(76, 25);
-            this.button9.TabIndex = 118;
-            this.button9.Text = "Зберегти";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Visible = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // textBox23
             // 
             this.textBox23.BackColor = System.Drawing.Color.Orange;
-            this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox23.Location = new System.Drawing.Point(832, 900);
+            resources.ApplyResources(this.textBox23, "textBox23");
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(100, 20);
-            this.textBox23.TabIndex = 117;
-            this.textBox23.Visible = false;
             // 
             // textBox22
             // 
             this.textBox22.BackColor = System.Drawing.Color.White;
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox22.Location = new System.Drawing.Point(711, 900);
+            resources.ApplyResources(this.textBox22, "textBox22");
             this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(100, 20);
-            this.textBox22.TabIndex = 116;
-            this.textBox22.Visible = false;
             // 
             // textBox21
             // 
             this.textBox21.BackColor = System.Drawing.Color.Green;
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox21.Location = new System.Drawing.Point(832, 875);
+            resources.ApplyResources(this.textBox21, "textBox21");
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(100, 20);
-            this.textBox21.TabIndex = 115;
-            this.textBox21.Visible = false;
             // 
             // textBox20
             // 
             this.textBox20.BackColor = System.Drawing.Color.Red;
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox20.Location = new System.Drawing.Point(711, 875);
+            resources.ApplyResources(this.textBox20, "textBox20");
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(100, 20);
-            this.textBox20.TabIndex = 114;
-            this.textBox20.Visible = false;
             // 
             // label68
             // 
-            this.label68.AutoSize = true;
+            resources.ApplyResources(this.label68, "label68");
             this.label68.BackColor = System.Drawing.Color.Transparent;
-            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label68.ForeColor = System.Drawing.Color.White;
-            this.label68.Location = new System.Drawing.Point(774, 840);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(227, 24);
-            this.label68.TabIndex = 113;
-            this.label68.Text = "<<Введіть сектора!>>";
-            this.label68.Visible = false;
             // 
             // label67
             // 
-            this.label67.AutoSize = true;
+            resources.ApplyResources(this.label67, "label67");
             this.label67.BackColor = System.Drawing.Color.Transparent;
             this.label67.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label67.Location = new System.Drawing.Point(730, 72);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(13, 13);
-            this.label67.TabIndex = 112;
-            this.label67.Text = "0";
-            this.label67.Visible = false;
             // 
             // button8
             // 
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.button8, "button8");
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button8.Location = new System.Drawing.Point(1783, 938);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(106, 34);
-            this.button8.TabIndex = 111;
-            this.button8.Text = "Продовжити";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Visible = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(1360, 853);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(329, 197);
-            this.dataGridView1.TabIndex = 110;
-            this.dataGridView1.Visible = false;
-            this.dataGridView1.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView1_SortCompare_2);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Спортсмен";
-            this.Column1.Name = "Column1";
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 180;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Результат";
-            this.Column2.MaxInputLength = 300;
-            this.Column2.Name = "Column2";
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // timer10
             // 
@@ -690,31 +564,19 @@ namespace zase4kak
             // 
             // button7
             // 
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.button7, "button7");
             this.button7.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button7.Location = new System.Drawing.Point(690, 920);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(458, 122);
-            this.button7.TabIndex = 109;
-            this.button7.Text = "Продовжити";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Visible = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             this.button7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button7_KeyDown_1);
             // 
             // button6
             // 
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.button6, "button6");
             this.button6.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button6.Location = new System.Drawing.Point(690, 925);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(458, 122);
-            this.button6.TabIndex = 108;
-            this.button6.Text = "Пауза";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button6_KeyDown_1);
             // 
@@ -750,78 +612,47 @@ namespace zase4kak
             // 
             // button5
             // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.Enabled = false;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.button5, "button5");
             this.button5.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button5.Location = new System.Drawing.Point(518, 996);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(110, 37);
-            this.button5.TabIndex = 103;
-            this.button5.Text = "зберегти";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Visible = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.button3, "button3");
             this.button3.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button3.Location = new System.Drawing.Point(919, 831);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(223, 94);
-            this.button3.TabIndex = 102;
-            this.button3.Text = "Тренування";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // number_group
             // 
-            this.number_group.AutoSize = true;
+            resources.ApplyResources(this.number_group, "number_group");
             this.number_group.BackColor = System.Drawing.Color.Transparent;
             this.number_group.ForeColor = System.Drawing.Color.Goldenrod;
-            this.number_group.Location = new System.Drawing.Point(602, 84);
             this.number_group.Name = "number_group";
-            this.number_group.Size = new System.Drawing.Size(13, 13);
-            this.number_group.TabIndex = 101;
-            this.number_group.Text = "0";
-            this.number_group.Visible = false;
             // 
             // label49
             // 
-            this.label49.AutoSize = true;
+            resources.ApplyResources(this.label49, "label49");
             this.label49.BackColor = System.Drawing.Color.Transparent;
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label49.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label49.Location = new System.Drawing.Point(390, 951);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(218, 25);
-            this.label49.TabIndex = 100;
-            this.label49.Text = "Виберіть COM-Port";
-            this.label49.Visible = false;
             // 
             // button4
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.button4, "button4");
             this.button4.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button4.Location = new System.Drawing.Point(690, 831);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(223, 94);
-            this.button4.TabIndex = 99;
-            this.button4.Text = "Загрузити учасників";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(17, 891);
+            resources.ApplyResources(this.listBox1, "listBox1");
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(142, 56);
-            this.listBox1.TabIndex = 98;
-            this.listBox1.Visible = false;
             // 
             // timer19
             // 
@@ -846,36 +677,31 @@ namespace zase4kak
             // оранжеваToolStripMenuItem1
             // 
             this.оранжеваToolStripMenuItem1.Name = "оранжеваToolStripMenuItem1";
-            this.оранжеваToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
-            this.оранжеваToolStripMenuItem1.Text = "Оранжева";
+            resources.ApplyResources(this.оранжеваToolStripMenuItem1, "оранжеваToolStripMenuItem1");
             this.оранжеваToolStripMenuItem1.Click += new System.EventHandler(this.оранжеваToolStripMenuItem1_Click);
             // 
             // жовтаToolStripMenuItem1
             // 
             this.жовтаToolStripMenuItem1.Name = "жовтаToolStripMenuItem1";
-            this.жовтаToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
-            this.жовтаToolStripMenuItem1.Text = "Жовта";
+            resources.ApplyResources(this.жовтаToolStripMenuItem1, "жовтаToolStripMenuItem1");
             this.жовтаToolStripMenuItem1.Click += new System.EventHandler(this.жовтаToolStripMenuItem1_Click);
             // 
             // синяToolStripMenuItem1
             // 
             this.синяToolStripMenuItem1.Name = "синяToolStripMenuItem1";
-            this.синяToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
-            this.синяToolStripMenuItem1.Text = "Синя";
+            resources.ApplyResources(this.синяToolStripMenuItem1, "синяToolStripMenuItem1");
             this.синяToolStripMenuItem1.Click += new System.EventHandler(this.синяToolStripMenuItem1_Click);
             // 
             // чорнаToolStripMenuItem1
             // 
             this.чорнаToolStripMenuItem1.Name = "чорнаToolStripMenuItem1";
-            this.чорнаToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
-            this.чорнаToolStripMenuItem1.Text = "Чорна";
+            resources.ApplyResources(this.чорнаToolStripMenuItem1, "чорнаToolStripMenuItem1");
             this.чорнаToolStripMenuItem1.Click += new System.EventHandler(this.чорнаToolStripMenuItem1_Click);
             // 
             // зеленаToolStripMenuItem1
             // 
             this.зеленаToolStripMenuItem1.Name = "зеленаToolStripMenuItem1";
-            this.зеленаToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
-            this.зеленаToolStripMenuItem1.Text = "Зелена";
+            resources.ApplyResources(this.зеленаToolStripMenuItem1, "зеленаToolStripMenuItem1");
             this.зеленаToolStripMenuItem1.Click += new System.EventHandler(this.зеленаToolStripMenuItem1_Click);
             // 
             // доріжкаToolStripMenuItem2
@@ -890,63 +716,54 @@ namespace zase4kak
             this.чорнаToolStripMenuItem2,
             this.зеленаToolStripMenuItem2});
             this.доріжкаToolStripMenuItem2.Name = "доріжкаToolStripMenuItem2";
-            this.доріжкаToolStripMenuItem2.Size = new System.Drawing.Size(138, 22);
-            this.доріжкаToolStripMenuItem2.Text = "3 доріжка";
+            resources.ApplyResources(this.доріжкаToolStripMenuItem2, "доріжкаToolStripMenuItem2");
             // 
             // червонаToolStripMenuItem2
             // 
             this.червонаToolStripMenuItem2.Name = "червонаToolStripMenuItem2";
-            this.червонаToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
-            this.червонаToolStripMenuItem2.Text = "Червона";
+            resources.ApplyResources(this.червонаToolStripMenuItem2, "червонаToolStripMenuItem2");
             this.червонаToolStripMenuItem2.Click += new System.EventHandler(this.червонаToolStripMenuItem2_Click);
             // 
             // білаToolStripMenuItem2
             // 
             this.білаToolStripMenuItem2.Name = "білаToolStripMenuItem2";
-            this.білаToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
-            this.білаToolStripMenuItem2.Text = "Біла";
+            resources.ApplyResources(this.білаToolStripMenuItem2, "білаToolStripMenuItem2");
             this.білаToolStripMenuItem2.Click += new System.EventHandler(this.білаToolStripMenuItem2_Click);
             // 
             // оранжеваToolStripMenuItem2
             // 
             this.оранжеваToolStripMenuItem2.Name = "оранжеваToolStripMenuItem2";
-            this.оранжеваToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
-            this.оранжеваToolStripMenuItem2.Text = "Оранжева";
+            resources.ApplyResources(this.оранжеваToolStripMenuItem2, "оранжеваToolStripMenuItem2");
             this.оранжеваToolStripMenuItem2.Click += new System.EventHandler(this.оранжеваToolStripMenuItem2_Click);
             // 
             // фіолетоваToolStripMenuItem2
             // 
             this.фіолетоваToolStripMenuItem2.Name = "фіолетоваToolStripMenuItem2";
-            this.фіолетоваToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
-            this.фіолетоваToolStripMenuItem2.Text = "Фіолетова";
+            resources.ApplyResources(this.фіолетоваToolStripMenuItem2, "фіолетоваToolStripMenuItem2");
             this.фіолетоваToolStripMenuItem2.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem2_Click);
             // 
             // жовтаToolStripMenuItem2
             // 
             this.жовтаToolStripMenuItem2.Name = "жовтаToolStripMenuItem2";
-            this.жовтаToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
-            this.жовтаToolStripMenuItem2.Text = "Жовта";
+            resources.ApplyResources(this.жовтаToolStripMenuItem2, "жовтаToolStripMenuItem2");
             this.жовтаToolStripMenuItem2.Click += new System.EventHandler(this.жовтаToolStripMenuItem2_Click);
             // 
             // синяToolStripMenuItem2
             // 
             this.синяToolStripMenuItem2.Name = "синяToolStripMenuItem2";
-            this.синяToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
-            this.синяToolStripMenuItem2.Text = "Синя";
+            resources.ApplyResources(this.синяToolStripMenuItem2, "синяToolStripMenuItem2");
             this.синяToolStripMenuItem2.Click += new System.EventHandler(this.синяToolStripMenuItem2_Click);
             // 
             // чорнаToolStripMenuItem2
             // 
             this.чорнаToolStripMenuItem2.Name = "чорнаToolStripMenuItem2";
-            this.чорнаToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
-            this.чорнаToolStripMenuItem2.Text = "Чорна";
+            resources.ApplyResources(this.чорнаToolStripMenuItem2, "чорнаToolStripMenuItem2");
             this.чорнаToolStripMenuItem2.Click += new System.EventHandler(this.чорнаToolStripMenuItem2_Click);
             // 
             // зеленаToolStripMenuItem2
             // 
             this.зеленаToolStripMenuItem2.Name = "зеленаToolStripMenuItem2";
-            this.зеленаToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
-            this.зеленаToolStripMenuItem2.Text = "Зелена";
+            resources.ApplyResources(this.зеленаToolStripMenuItem2, "зеленаToolStripMenuItem2");
             this.зеленаToolStripMenuItem2.Click += new System.EventHandler(this.зеленаToolStripMenuItem2_Click);
             // 
             // доріжкаToolStripMenuItem3
@@ -961,63 +778,54 @@ namespace zase4kak
             this.чорнаToolStripMenuItem3,
             this.зеленаToolStripMenuItem3});
             this.доріжкаToolStripMenuItem3.Name = "доріжкаToolStripMenuItem3";
-            this.доріжкаToolStripMenuItem3.Size = new System.Drawing.Size(138, 22);
-            this.доріжкаToolStripMenuItem3.Text = "4 доріжка";
+            resources.ApplyResources(this.доріжкаToolStripMenuItem3, "доріжкаToolStripMenuItem3");
             // 
             // червонаToolStripMenuItem3
             // 
             this.червонаToolStripMenuItem3.Name = "червонаToolStripMenuItem3";
-            this.червонаToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
-            this.червонаToolStripMenuItem3.Text = "Червона";
+            resources.ApplyResources(this.червонаToolStripMenuItem3, "червонаToolStripMenuItem3");
             this.червонаToolStripMenuItem3.Click += new System.EventHandler(this.червонаToolStripMenuItem3_Click);
             // 
             // білаToolStripMenuItem3
             // 
             this.білаToolStripMenuItem3.Name = "білаToolStripMenuItem3";
-            this.білаToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
-            this.білаToolStripMenuItem3.Text = "Біла";
+            resources.ApplyResources(this.білаToolStripMenuItem3, "білаToolStripMenuItem3");
             this.білаToolStripMenuItem3.Click += new System.EventHandler(this.білаToolStripMenuItem3_Click);
             // 
             // оранжеваToolStripMenuItem3
             // 
             this.оранжеваToolStripMenuItem3.Name = "оранжеваToolStripMenuItem3";
-            this.оранжеваToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
-            this.оранжеваToolStripMenuItem3.Text = "Оранжева";
+            resources.ApplyResources(this.оранжеваToolStripMenuItem3, "оранжеваToolStripMenuItem3");
             this.оранжеваToolStripMenuItem3.Click += new System.EventHandler(this.оранжеваToolStripMenuItem3_Click);
             // 
             // фіолетоваToolStripMenuItem3
             // 
             this.фіолетоваToolStripMenuItem3.Name = "фіолетоваToolStripMenuItem3";
-            this.фіолетоваToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
-            this.фіолетоваToolStripMenuItem3.Text = "Фіолетова";
+            resources.ApplyResources(this.фіолетоваToolStripMenuItem3, "фіолетоваToolStripMenuItem3");
             this.фіолетоваToolStripMenuItem3.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem3_Click);
             // 
             // жовтаToolStripMenuItem3
             // 
             this.жовтаToolStripMenuItem3.Name = "жовтаToolStripMenuItem3";
-            this.жовтаToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
-            this.жовтаToolStripMenuItem3.Text = "Жовта";
+            resources.ApplyResources(this.жовтаToolStripMenuItem3, "жовтаToolStripMenuItem3");
             this.жовтаToolStripMenuItem3.Click += new System.EventHandler(this.жовтаToolStripMenuItem3_Click);
             // 
             // синяToolStripMenuItem3
             // 
             this.синяToolStripMenuItem3.Name = "синяToolStripMenuItem3";
-            this.синяToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
-            this.синяToolStripMenuItem3.Text = "Синя";
+            resources.ApplyResources(this.синяToolStripMenuItem3, "синяToolStripMenuItem3");
             this.синяToolStripMenuItem3.Click += new System.EventHandler(this.синяToolStripMenuItem3_Click);
             // 
             // чорнаToolStripMenuItem3
             // 
             this.чорнаToolStripMenuItem3.Name = "чорнаToolStripMenuItem3";
-            this.чорнаToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
-            this.чорнаToolStripMenuItem3.Text = "Чорна";
+            resources.ApplyResources(this.чорнаToolStripMenuItem3, "чорнаToolStripMenuItem3");
             this.чорнаToolStripMenuItem3.Click += new System.EventHandler(this.чорнаToolStripMenuItem3_Click);
             // 
             // зеленаToolStripMenuItem3
             // 
             this.зеленаToolStripMenuItem3.Name = "зеленаToolStripMenuItem3";
-            this.зеленаToolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
-            this.зеленаToolStripMenuItem3.Text = "Зелена";
+            resources.ApplyResources(this.зеленаToolStripMenuItem3, "зеленаToolStripMenuItem3");
             this.зеленаToolStripMenuItem3.Click += new System.EventHandler(this.зеленаToolStripMenuItem3_Click);
             // 
             // menuStrip1
@@ -1025,22 +833,17 @@ namespace zase4kak
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1920, 25);
-            this.menuStrip1.TabIndex = 132;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.кольориДоріжокToolStripMenuItem,
             this.toolStripMenuItem2});
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(91, 21);
-            this.toolStripMenuItem1.Text = "Параметри";
             // 
             // кольориДоріжокToolStripMenuItem
             // 
@@ -1052,8 +855,7 @@ namespace zase4kak
             this.доріжкаToolStripMenuItem4,
             this.доріжкаToolStripMenuItem5});
             this.кольориДоріжокToolStripMenuItem.Name = "кольориДоріжокToolStripMenuItem";
-            this.кольориДоріжокToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.кольориДоріжокToolStripMenuItem.Text = "Кольори доріжок";
+            resources.ApplyResources(this.кольориДоріжокToolStripMenuItem, "кольориДоріжокToolStripMenuItem");
             // 
             // доріжкаToolStripMenuItem
             // 
@@ -1067,62 +869,53 @@ namespace zase4kak
             this.чорнаToolStripMenuItem,
             this.зеленаToolStripMenuItem});
             this.доріжкаToolStripMenuItem.Name = "доріжкаToolStripMenuItem";
-            this.доріжкаToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.доріжкаToolStripMenuItem.Text = "1 доріжка";
+            resources.ApplyResources(this.доріжкаToolStripMenuItem, "доріжкаToolStripMenuItem");
             // 
             // червонаToolStripMenuItem
             // 
             this.червонаToolStripMenuItem.Name = "червонаToolStripMenuItem";
-            this.червонаToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.червонаToolStripMenuItem.Text = "Червона";
+            resources.ApplyResources(this.червонаToolStripMenuItem, "червонаToolStripMenuItem");
             this.червонаToolStripMenuItem.Click += new System.EventHandler(this.червонаToolStripMenuItem_Click);
             // 
             // білаToolStripMenuItem
             // 
             this.білаToolStripMenuItem.Name = "білаToolStripMenuItem";
-            this.білаToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.білаToolStripMenuItem.Text = "Біла";
+            resources.ApplyResources(this.білаToolStripMenuItem, "білаToolStripMenuItem");
             this.білаToolStripMenuItem.Click += new System.EventHandler(this.білаToolStripMenuItem_Click);
             // 
             // оранжеваToolStripMenuItem
             // 
             this.оранжеваToolStripMenuItem.Name = "оранжеваToolStripMenuItem";
-            this.оранжеваToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.оранжеваToolStripMenuItem.Text = "Оранжева";
+            resources.ApplyResources(this.оранжеваToolStripMenuItem, "оранжеваToolStripMenuItem");
             this.оранжеваToolStripMenuItem.Click += new System.EventHandler(this.оранжеваToolStripMenuItem_Click);
             // 
             // фіолетоваToolStripMenuItem
             // 
             this.фіолетоваToolStripMenuItem.Name = "фіолетоваToolStripMenuItem";
-            this.фіолетоваToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.фіолетоваToolStripMenuItem.Text = "Фіолетова";
+            resources.ApplyResources(this.фіолетоваToolStripMenuItem, "фіолетоваToolStripMenuItem");
             this.фіолетоваToolStripMenuItem.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem_Click);
             // 
             // жовтаToolStripMenuItem
             // 
             this.жовтаToolStripMenuItem.Name = "жовтаToolStripMenuItem";
-            this.жовтаToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.жовтаToolStripMenuItem.Text = "Жовта";
+            resources.ApplyResources(this.жовтаToolStripMenuItem, "жовтаToolStripMenuItem");
             this.жовтаToolStripMenuItem.Click += new System.EventHandler(this.жовтаToolStripMenuItem_Click);
             // 
             // синяToolStripMenuItem
             // 
             this.синяToolStripMenuItem.Name = "синяToolStripMenuItem";
-            this.синяToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.синяToolStripMenuItem.Text = "Синя";
+            resources.ApplyResources(this.синяToolStripMenuItem, "синяToolStripMenuItem");
             this.синяToolStripMenuItem.Click += new System.EventHandler(this.синяToolStripMenuItem_Click);
             // 
             // чорнаToolStripMenuItem
             // 
             this.чорнаToolStripMenuItem.Name = "чорнаToolStripMenuItem";
-            this.чорнаToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.чорнаToolStripMenuItem.Text = "Чорна";
+            resources.ApplyResources(this.чорнаToolStripMenuItem, "чорнаToolStripMenuItem");
             // 
             // зеленаToolStripMenuItem
             // 
             this.зеленаToolStripMenuItem.Name = "зеленаToolStripMenuItem";
-            this.зеленаToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.зеленаToolStripMenuItem.Text = "Зелена";
+            resources.ApplyResources(this.зеленаToolStripMenuItem, "зеленаToolStripMenuItem");
             this.зеленаToolStripMenuItem.Click += new System.EventHandler(this.зеленаToolStripMenuItem_Click);
             // 
             // доріжкаToolStripMenuItem1
@@ -1137,28 +930,24 @@ namespace zase4kak
             this.чорнаToolStripMenuItem1,
             this.зеленаToolStripMenuItem1});
             this.доріжкаToolStripMenuItem1.Name = "доріжкаToolStripMenuItem1";
-            this.доріжкаToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
-            this.доріжкаToolStripMenuItem1.Text = "2 доріжка";
+            resources.ApplyResources(this.доріжкаToolStripMenuItem1, "доріжкаToolStripMenuItem1");
             // 
             // червонаToolStripMenuItem1
             // 
             this.червонаToolStripMenuItem1.Name = "червонаToolStripMenuItem1";
-            this.червонаToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
-            this.червонаToolStripMenuItem1.Text = "Червона";
+            resources.ApplyResources(this.червонаToolStripMenuItem1, "червонаToolStripMenuItem1");
             this.червонаToolStripMenuItem1.Click += new System.EventHandler(this.червонаToolStripMenuItem1_Click);
             // 
             // білаToolStripMenuItem1
             // 
             this.білаToolStripMenuItem1.Name = "білаToolStripMenuItem1";
-            this.білаToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
-            this.білаToolStripMenuItem1.Text = "Біла";
+            resources.ApplyResources(this.білаToolStripMenuItem1, "білаToolStripMenuItem1");
             this.білаToolStripMenuItem1.Click += new System.EventHandler(this.білаToolStripMenuItem1_Click);
             // 
             // фіолетоваToolStripMenuItem1
             // 
             this.фіолетоваToolStripMenuItem1.Name = "фіолетоваToolStripMenuItem1";
-            this.фіолетоваToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
-            this.фіолетоваToolStripMenuItem1.Text = "Фіолетова";
+            resources.ApplyResources(this.фіолетоваToolStripMenuItem1, "фіолетоваToolStripMenuItem1");
             this.фіолетоваToolStripMenuItem1.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem1_Click);
             // 
             // доріжкаToolStripMenuItem4
@@ -1173,63 +962,54 @@ namespace zase4kak
             this.чорнаToolStripMenuItem4,
             this.зеленаToolStripMenuItem4});
             this.доріжкаToolStripMenuItem4.Name = "доріжкаToolStripMenuItem4";
-            this.доріжкаToolStripMenuItem4.Size = new System.Drawing.Size(138, 22);
-            this.доріжкаToolStripMenuItem4.Text = "5 доріжка";
+            resources.ApplyResources(this.доріжкаToolStripMenuItem4, "доріжкаToolStripMenuItem4");
             // 
             // червонаToolStripMenuItem4
             // 
             this.червонаToolStripMenuItem4.Name = "червонаToolStripMenuItem4";
-            this.червонаToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
-            this.червонаToolStripMenuItem4.Text = "Червона";
+            resources.ApplyResources(this.червонаToolStripMenuItem4, "червонаToolStripMenuItem4");
             this.червонаToolStripMenuItem4.Click += new System.EventHandler(this.червонаToolStripMenuItem4_Click);
             // 
             // білаToolStripMenuItem4
             // 
             this.білаToolStripMenuItem4.Name = "білаToolStripMenuItem4";
-            this.білаToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
-            this.білаToolStripMenuItem4.Text = "Біла";
+            resources.ApplyResources(this.білаToolStripMenuItem4, "білаToolStripMenuItem4");
             this.білаToolStripMenuItem4.Click += new System.EventHandler(this.білаToolStripMenuItem4_Click);
             // 
             // оранжеваToolStripMenuItem4
             // 
             this.оранжеваToolStripMenuItem4.Name = "оранжеваToolStripMenuItem4";
-            this.оранжеваToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
-            this.оранжеваToolStripMenuItem4.Text = "Оранжева";
+            resources.ApplyResources(this.оранжеваToolStripMenuItem4, "оранжеваToolStripMenuItem4");
             this.оранжеваToolStripMenuItem4.Click += new System.EventHandler(this.оранжеваToolStripMenuItem4_Click);
             // 
             // фіолетоваToolStripMenuItem4
             // 
             this.фіолетоваToolStripMenuItem4.Name = "фіолетоваToolStripMenuItem4";
-            this.фіолетоваToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
-            this.фіолетоваToolStripMenuItem4.Text = "Фіолетова";
+            resources.ApplyResources(this.фіолетоваToolStripMenuItem4, "фіолетоваToolStripMenuItem4");
             this.фіолетоваToolStripMenuItem4.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem4_Click);
             // 
             // жовтаToolStripMenuItem4
             // 
             this.жовтаToolStripMenuItem4.Name = "жовтаToolStripMenuItem4";
-            this.жовтаToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
-            this.жовтаToolStripMenuItem4.Text = "Жовта";
+            resources.ApplyResources(this.жовтаToolStripMenuItem4, "жовтаToolStripMenuItem4");
             this.жовтаToolStripMenuItem4.Click += new System.EventHandler(this.жовтаToolStripMenuItem4_Click);
             // 
             // синяToolStripMenuItem4
             // 
             this.синяToolStripMenuItem4.Name = "синяToolStripMenuItem4";
-            this.синяToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
-            this.синяToolStripMenuItem4.Text = "Синя";
+            resources.ApplyResources(this.синяToolStripMenuItem4, "синяToolStripMenuItem4");
             this.синяToolStripMenuItem4.Click += new System.EventHandler(this.синяToolStripMenuItem4_Click);
             // 
             // чорнаToolStripMenuItem4
             // 
             this.чорнаToolStripMenuItem4.Name = "чорнаToolStripMenuItem4";
-            this.чорнаToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
-            this.чорнаToolStripMenuItem4.Text = "Чорна";
+            resources.ApplyResources(this.чорнаToolStripMenuItem4, "чорнаToolStripMenuItem4");
             this.чорнаToolStripMenuItem4.Click += new System.EventHandler(this.чорнаToolStripMenuItem4_Click);
             // 
             // зеленаToolStripMenuItem4
             // 
             this.зеленаToolStripMenuItem4.Name = "зеленаToolStripMenuItem4";
-            this.зеленаToolStripMenuItem4.Size = new System.Drawing.Size(140, 22);
-            this.зеленаToolStripMenuItem4.Text = "Зелена";
+            resources.ApplyResources(this.зеленаToolStripMenuItem4, "зеленаToolStripMenuItem4");
             this.зеленаToolStripMenuItem4.Click += new System.EventHandler(this.зеленаToolStripMenuItem4_Click);
             // 
             // доріжкаToolStripMenuItem5
@@ -1244,64 +1024,55 @@ namespace zase4kak
             this.чорнаToolStripMenuItem5,
             this.зеленаToolStripMenuItem5});
             this.доріжкаToolStripMenuItem5.Name = "доріжкаToolStripMenuItem5";
-            this.доріжкаToolStripMenuItem5.Size = new System.Drawing.Size(138, 22);
-            this.доріжкаToolStripMenuItem5.Text = "6 доріжка";
+            resources.ApplyResources(this.доріжкаToolStripMenuItem5, "доріжкаToolStripMenuItem5");
             this.доріжкаToolStripMenuItem5.Click += new System.EventHandler(this.доріжкаToolStripMenuItem5_Click);
             // 
             // червонаToolStripMenuItem5
             // 
             this.червонаToolStripMenuItem5.Name = "червонаToolStripMenuItem5";
-            this.червонаToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
-            this.червонаToolStripMenuItem5.Text = "Червона";
+            resources.ApplyResources(this.червонаToolStripMenuItem5, "червонаToolStripMenuItem5");
             this.червонаToolStripMenuItem5.Click += new System.EventHandler(this.червонаToolStripMenuItem5_Click);
             // 
             // білаToolStripMenuItem5
             // 
             this.білаToolStripMenuItem5.Name = "білаToolStripMenuItem5";
-            this.білаToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
-            this.білаToolStripMenuItem5.Text = "Біла";
+            resources.ApplyResources(this.білаToolStripMenuItem5, "білаToolStripMenuItem5");
             this.білаToolStripMenuItem5.Click += new System.EventHandler(this.білаToolStripMenuItem5_Click);
             // 
             // оранжеваToolStripMenuItem5
             // 
             this.оранжеваToolStripMenuItem5.Name = "оранжеваToolStripMenuItem5";
-            this.оранжеваToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
-            this.оранжеваToolStripMenuItem5.Text = "Оранжева";
+            resources.ApplyResources(this.оранжеваToolStripMenuItem5, "оранжеваToolStripMenuItem5");
             this.оранжеваToolStripMenuItem5.Click += new System.EventHandler(this.оранжеваToolStripMenuItem5_Click);
             // 
             // фіолетоваToolStripMenuItem5
             // 
             this.фіолетоваToolStripMenuItem5.Name = "фіолетоваToolStripMenuItem5";
-            this.фіолетоваToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
-            this.фіолетоваToolStripMenuItem5.Text = "Фіолетова";
+            resources.ApplyResources(this.фіолетоваToolStripMenuItem5, "фіолетоваToolStripMenuItem5");
             this.фіолетоваToolStripMenuItem5.Click += new System.EventHandler(this.фіолетоваToolStripMenuItem5_Click);
             // 
             // жовтаToolStripMenuItem5
             // 
             this.жовтаToolStripMenuItem5.Name = "жовтаToolStripMenuItem5";
-            this.жовтаToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
-            this.жовтаToolStripMenuItem5.Text = "Жовта";
+            resources.ApplyResources(this.жовтаToolStripMenuItem5, "жовтаToolStripMenuItem5");
             this.жовтаToolStripMenuItem5.Click += new System.EventHandler(this.жовтаToolStripMenuItem5_Click);
             // 
             // синяToolStripMenuItem5
             // 
             this.синяToolStripMenuItem5.Name = "синяToolStripMenuItem5";
-            this.синяToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
-            this.синяToolStripMenuItem5.Text = "Синя";
+            resources.ApplyResources(this.синяToolStripMenuItem5, "синяToolStripMenuItem5");
             this.синяToolStripMenuItem5.Click += new System.EventHandler(this.синяToolStripMenuItem5_Click);
             // 
             // чорнаToolStripMenuItem5
             // 
             this.чорнаToolStripMenuItem5.Name = "чорнаToolStripMenuItem5";
-            this.чорнаToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
-            this.чорнаToolStripMenuItem5.Text = "Чорна";
+            resources.ApplyResources(this.чорнаToolStripMenuItem5, "чорнаToolStripMenuItem5");
             this.чорнаToolStripMenuItem5.Click += new System.EventHandler(this.чорнаToolStripMenuItem5_Click);
             // 
             // зеленаToolStripMenuItem5
             // 
             this.зеленаToolStripMenuItem5.Name = "зеленаToolStripMenuItem5";
-            this.зеленаToolStripMenuItem5.Size = new System.Drawing.Size(140, 22);
-            this.зеленаToolStripMenuItem5.Text = "Зелена";
+            resources.ApplyResources(this.зеленаToolStripMenuItem5, "зеленаToolStripMenuItem5");
             this.зеленаToolStripMenuItem5.Click += new System.EventHandler(this.зеленаToolStripMenuItem5_Click);
             // 
             // toolStripMenuItem2
@@ -1315,50 +1086,43 @@ namespace zase4kak
             this.секToolStripMenuItem5,
             this.ввестиВручнуToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(215, 22);
-            this.toolStripMenuItem2.Text = "Мінімальний час кола";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // секToolStripMenuItem
             // 
             this.секToolStripMenuItem.Name = "секToolStripMenuItem";
-            this.секToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.секToolStripMenuItem.Text = "1 сек";
+            resources.ApplyResources(this.секToolStripMenuItem, "секToolStripMenuItem");
             this.секToolStripMenuItem.Click += new System.EventHandler(this.секToolStripMenuItem_Click);
             // 
             // секToolStripMenuItem1
             // 
             this.секToolStripMenuItem1.Name = "секToolStripMenuItem1";
-            this.секToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
-            this.секToolStripMenuItem1.Text = "2 сек";
+            resources.ApplyResources(this.секToolStripMenuItem1, "секToolStripMenuItem1");
             this.секToolStripMenuItem1.Click += new System.EventHandler(this.секToolStripMenuItem1_Click);
             // 
             // секToolStripMenuItem2
             // 
             this.секToolStripMenuItem2.Name = "секToolStripMenuItem2";
-            this.секToolStripMenuItem2.Size = new System.Drawing.Size(167, 22);
-            this.секToolStripMenuItem2.Text = "3 сек";
+            resources.ApplyResources(this.секToolStripMenuItem2, "секToolStripMenuItem2");
             this.секToolStripMenuItem2.Click += new System.EventHandler(this.секToolStripMenuItem2_Click);
             // 
             // секToolStripMenuItem3
             // 
             this.секToolStripMenuItem3.Name = "секToolStripMenuItem3";
-            this.секToolStripMenuItem3.Size = new System.Drawing.Size(167, 22);
-            this.секToolStripMenuItem3.Text = "4 сек";
+            resources.ApplyResources(this.секToolStripMenuItem3, "секToolStripMenuItem3");
             this.секToolStripMenuItem3.Click += new System.EventHandler(this.секToolStripMenuItem3_Click);
             // 
             // секToolStripMenuItem4
             // 
             this.секToolStripMenuItem4.Name = "секToolStripMenuItem4";
-            this.секToolStripMenuItem4.Size = new System.Drawing.Size(167, 22);
-            this.секToolStripMenuItem4.Text = "5 сек";
+            resources.ApplyResources(this.секToolStripMenuItem4, "секToolStripMenuItem4");
             this.секToolStripMenuItem4.Click += new System.EventHandler(this.секToolStripMenuItem4_Click);
             // 
             // секToolStripMenuItem5
             // 
             this.секToolStripMenuItem5.Name = "секToolStripMenuItem5";
-            this.секToolStripMenuItem5.Size = new System.Drawing.Size(167, 22);
-            this.секToolStripMenuItem5.Text = "6 сек";
+            resources.ApplyResources(this.секToolStripMenuItem5, "секToolStripMenuItem5");
             this.секToolStripMenuItem5.Click += new System.EventHandler(this.секToolStripMenuItem5_Click);
             // 
             // ввестиВручнуToolStripMenuItem
@@ -1366,15 +1130,12 @@ namespace zase4kak
             this.ввестиВручнуToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripTextBox1});
             this.ввестиВручнуToolStripMenuItem.Name = "ввестиВручнуToolStripMenuItem";
-            this.ввестиВручнуToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.ввестиВручнуToolStripMenuItem.Text = "Ввести вручну";
+            resources.ApplyResources(this.ввестиВручнуToolStripMenuItem, "ввестиВручнуToolStripMenuItem");
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            resources.ApplyResources(this.toolStripTextBox1, "toolStripTextBox1");
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
-            this.toolStripTextBox1.ToolTipText = "Для збереження двічі нажміть на поле";
             this.toolStripTextBox1.DoubleClick += new System.EventHandler(this.toolStripTextBox1_DoubleClick);
             this.toolStripTextBox1.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
             this.toolStripTextBox1.VisibleChanged += new System.EventHandler(this.toolStripTextBox1_VisibleChanged);
@@ -1394,7 +1155,7 @@ namespace zase4kak
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
             // timer11
             // 
@@ -1405,110 +1166,61 @@ namespace zase4kak
             // button20
             // 
             this.button20.BackColor = System.Drawing.Color.Goldenrod;
-            this.button20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button20.BackgroundImage")));
-            this.button20.Enabled = false;
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.button20, "button20");
             this.button20.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button20.Location = new System.Drawing.Point(537, 844);
-            this.button20.Margin = new System.Windows.Forms.Padding(2);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(71, 52);
-            this.button20.TabIndex = 139;
-            this.button20.Text = "OK";
             this.button20.UseVisualStyleBackColor = false;
-            this.button20.Visible = false;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // label89
             // 
-            this.label89.AutoSize = true;
+            resources.ApplyResources(this.label89, "label89");
             this.label89.BackColor = System.Drawing.Color.Transparent;
-            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label89.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label89.Location = new System.Drawing.Point(225, 870);
-            this.label89.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(184, 24);
-            this.label89.TabIndex = 138;
-            this.label89.Text = "Час переходу (сек):";
-            this.label89.Visible = false;
             // 
             // label88
             // 
-            this.label88.AutoSize = true;
+            resources.ApplyResources(this.label88, "label88");
             this.label88.BackColor = System.Drawing.Color.Transparent;
-            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label88.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label88.Location = new System.Drawing.Point(225, 840);
-            this.label88.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(199, 24);
-            this.label88.TabIndex = 137;
-            this.label88.Text = "Час тренування  (хв):";
-            this.label88.Visible = false;
             // 
             // textBox27
             // 
-            this.textBox27.Location = new System.Drawing.Point(432, 876);
+            resources.ApplyResources(this.textBox27, "textBox27");
             this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(100, 20);
-            this.textBox27.TabIndex = 136;
-            this.textBox27.Visible = false;
             this.textBox27.TextChanged += new System.EventHandler(this.textBox27_TextChanged);
             // 
             // textBox26
             // 
-            this.textBox26.Location = new System.Drawing.Point(432, 844);
-            this.textBox26.MaxLength = 100;
+            resources.ApplyResources(this.textBox26, "textBox26");
             this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(100, 20);
-            this.textBox26.TabIndex = 135;
-            this.textBox26.Visible = false;
             this.textBox26.TextChanged += new System.EventHandler(this.textBox26_TextChanged_1);
             this.textBox26.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox26_KeyDown);
             // 
             // button18
             // 
-            this.button18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button18.BackgroundImage")));
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.button18, "button18");
             this.button18.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button18.Location = new System.Drawing.Point(690, 924);
-            this.button18.Margin = new System.Windows.Forms.Padding(2);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(458, 122);
-            this.button18.TabIndex = 134;
-            this.button18.Text = "Завершити тренування";
             this.button18.UseVisualStyleBackColor = true;
-            this.button18.Visible = false;
             this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button17
             // 
-            this.button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button17.BackgroundImage")));
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.button17, "button17");
             this.button17.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button17.Location = new System.Drawing.Point(690, 924);
-            this.button17.Margin = new System.Windows.Forms.Padding(2);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(458, 122);
-            this.button17.TabIndex = 133;
-            this.button17.Text = "Старт Тренування";
             this.button17.UseVisualStyleBackColor = true;
-            this.button17.Visible = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button16
             // 
-            this.button16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button16.BackgroundImage")));
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.button16, "button16");
             this.button16.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button16.Location = new System.Drawing.Point(1783, 879);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(106, 46);
-            this.button16.TabIndex = 131;
-            this.button16.Text = "Зберегти в Excel";
             this.button16.UseVisualStyleBackColor = true;
-            this.button16.Visible = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // serialPort1
@@ -1518,229 +1230,124 @@ namespace zase4kak
             // 
             // label64
             // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(694, 54);
+            resources.ApplyResources(this.label64, "label64");
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(13, 13);
-            this.label64.TabIndex = 43;
-            this.label64.Text = "0";
-            this.label64.Visible = false;
             // 
             // label79
             // 
-            this.label79.AutoSize = true;
+            resources.ApplyResources(this.label79, "label79");
             this.label79.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label79.Location = new System.Drawing.Point(1347, 26);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(160, 51);
-            this.label79.TabIndex = 51;
-            this.label79.Text = "00,000";
-            this.label79.Visible = false;
             // 
             // label80
             // 
-            this.label80.AutoSize = true;
+            resources.ApplyResources(this.label80, "label80");
             this.label80.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label80.Location = new System.Drawing.Point(1185, 26);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(160, 51);
-            this.label80.TabIndex = 50;
-            this.label80.Text = "00,000";
-            this.label80.Visible = false;
             // 
             // label63
             // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(692, 43);
+            resources.ApplyResources(this.label63, "label63");
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(13, 13);
-            this.label63.TabIndex = 41;
-            this.label63.Text = "0";
-            this.label63.Visible = false;
             // 
             // label81
             // 
-            this.label81.AutoSize = true;
+            resources.ApplyResources(this.label81, "label81");
             this.label81.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label81.Location = new System.Drawing.Point(1019, 26);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(160, 51);
-            this.label81.TabIndex = 49;
-            this.label81.Text = "00,000";
-            this.label81.Visible = false;
             // 
             // label60
             // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label60.Location = new System.Drawing.Point(951, 36);
+            resources.ApplyResources(this.label60, "label60");
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(27, 29);
-            this.label60.TabIndex = 41;
-            this.label60.Text = "0";
-            this.label60.Visible = false;
             // 
             // label51
             // 
-            this.label51.AutoSize = true;
+            resources.ApplyResources(this.label51, "label51");
             this.label51.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51.Location = new System.Drawing.Point(898, 27);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(32, 33);
-            this.label51.TabIndex = 39;
-            this.label51.Text = "0";
-            this.label51.Visible = false;
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(539, 26);
+            resources.ApplyResources(this.textBox17, "textBox17");
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 20);
-            this.textBox17.TabIndex = 38;
-            this.textBox17.Visible = false;
             // 
             // label46
             // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Times New Roman", 42.75F, System.Drawing.FontStyle.Bold);
-            this.label46.Location = new System.Drawing.Point(79, 11);
+            resources.ApplyResources(this.label46, "label46");
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(0, 65);
-            this.label46.TabIndex = 37;
             // 
             // label42
             // 
-            this.label42.AutoSize = true;
+            resources.ApplyResources(this.label42, "label42");
             this.label42.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
             this.label42.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label42.Location = new System.Drawing.Point(1575, 22);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(97, 51);
-            this.label42.TabIndex = 36;
-            this.label42.Text = "999";
             // 
             // label27
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(674, 20);
+            resources.ApplyResources(this.label27, "label27");
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(13, 13);
-            this.label27.TabIndex = 36;
-            this.label27.Text = "0";
-            this.label27.Visible = false;
             // 
             // label30
             // 
-            this.label30.AutoSize = true;
+            resources.ApplyResources(this.label30, "label30");
             this.label30.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label30.Location = new System.Drawing.Point(1022, 22);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(160, 51);
-            this.label30.TabIndex = 38;
-            this.label30.Text = "00,000";
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
+            resources.ApplyResources(this.label24, "label24");
             this.label24.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(719, -7);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(111, 120);
-            this.label24.TabIndex = 36;
-            this.label24.Text = "0";
             // 
             // label31
             // 
-            this.label31.AutoSize = true;
+            resources.ApplyResources(this.label31, "label31");
             this.label31.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label31.Location = new System.Drawing.Point(1351, 25);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(160, 51);
-            this.label31.TabIndex = 37;
-            this.label31.Text = "00,000";
             // 
             // label32
             // 
-            this.label32.AutoSize = true;
+            resources.ApplyResources(this.label32, "label32");
             this.label32.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label32.Location = new System.Drawing.Point(1188, 25);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(160, 51);
-            this.label32.TabIndex = 36;
-            this.label32.Text = "00,000";
             // 
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(1536, 7);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox4.Multiline = true;
+            resources.ApplyResources(this.textBox4, "textBox4");
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(215, 80);
-            this.textBox4.TabIndex = 7;
             // 
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(1016, 7);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox5.Multiline = true;
+            resources.ApplyResources(this.textBox5, "textBox5");
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(498, 80);
-            this.textBox5.TabIndex = 6;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(709, -7);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox6.Multiline = true;
+            resources.ApplyResources(this.textBox6, "textBox6");
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(240, 142);
-            this.textBox6.TabIndex = 5;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
+            resources.ApplyResources(this.label12, "label12");
             this.label12.BackColor = System.Drawing.Color.LightBlue;
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(16, 28);
-            this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 41);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "2.";
             // 
             // label29
             // 
-            this.label29.AutoSize = true;
+            resources.ApplyResources(this.label29, "label29");
             this.label29.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label29.Location = new System.Drawing.Point(960, 83);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(52, 16);
-            this.label29.TabIndex = 35;
-            this.label29.Text = "00,000";
-            this.label29.Visible = false;
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.Green;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label133);
@@ -1767,286 +1374,153 @@ namespace zase4kak
             this.panel4.Controls.Add(this.textBox9);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label37);
-            this.panel4.Location = new System.Drawing.Point(4, 423);
-            this.panel4.Margin = new System.Windows.Forms.Padding(1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1923, 98);
-            this.panel4.TabIndex = 87;
             // 
             // label133
             // 
-            this.label133.AutoSize = true;
+            resources.ApplyResources(this.label133, "label133");
             this.label133.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label133.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label133.Location = new System.Drawing.Point(1876, 76);
             this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(16, 16);
-            this.label133.TabIndex = 170;
-            this.label133.Text = "0";
-            this.label133.Visible = false;
             // 
             // label127
             // 
-            this.label127.AutoSize = true;
+            resources.ApplyResources(this.label127, "label127");
             this.label127.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label127.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label127.Location = new System.Drawing.Point(1898, 76);
             this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(16, 16);
-            this.label127.TabIndex = 170;
-            this.label127.Text = "0";
-            this.label127.Visible = false;
             // 
             // label58
             // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label58.Location = new System.Drawing.Point(1772, 27);
+            resources.ApplyResources(this.label58, "label58");
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(43, 46);
-            this.label58.TabIndex = 171;
-            this.label58.Text = "0";
             // 
             // label117
             // 
-            this.label117.AutoSize = true;
+            resources.ApplyResources(this.label117, "label117");
             this.label117.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label117.Location = new System.Drawing.Point(1757, 73);
             this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(16, 16);
-            this.label117.TabIndex = 170;
-            this.label117.Text = "0";
-            this.label117.Visible = false;
             // 
             // label82
             // 
-            this.label82.AutoSize = true;
+            resources.ApplyResources(this.label82, "label82");
             this.label82.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label82.Location = new System.Drawing.Point(1347, 26);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(160, 51);
-            this.label82.TabIndex = 54;
-            this.label82.Text = "00,000";
-            this.label82.Visible = false;
             // 
             // label83
             // 
-            this.label83.AutoSize = true;
+            resources.ApplyResources(this.label83, "label83");
             this.label83.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label83.Location = new System.Drawing.Point(1185, 26);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(160, 51);
-            this.label83.TabIndex = 53;
-            this.label83.Text = "00,000";
-            this.label83.Visible = false;
             // 
             // label84
             // 
-            this.label84.AutoSize = true;
+            resources.ApplyResources(this.label84, "label84");
             this.label84.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label84.Location = new System.Drawing.Point(1025, 26);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(160, 51);
-            this.label84.TabIndex = 52;
-            this.label84.Text = "00,000";
-            this.label84.Visible = false;
             // 
             // label61
             // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label61.Location = new System.Drawing.Point(951, 36);
+            resources.ApplyResources(this.label61, "label61");
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(27, 29);
-            this.label61.TabIndex = 42;
-            this.label61.Text = "0";
-            this.label61.Visible = false;
             // 
             // label52
             // 
-            this.label52.AutoSize = true;
+            resources.ApplyResources(this.label52, "label52");
             this.label52.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label52.Location = new System.Drawing.Point(898, 22);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(32, 33);
-            this.label52.TabIndex = 40;
-            this.label52.Text = "0";
-            this.label52.Visible = false;
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(539, 35);
+            resources.ApplyResources(this.textBox18, "textBox18");
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 20);
-            this.textBox18.TabIndex = 39;
-            this.textBox18.Visible = false;
             // 
             // label47
             // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Times New Roman", 42.75F, System.Drawing.FontStyle.Bold);
-            this.label47.Location = new System.Drawing.Point(79, 11);
+            resources.ApplyResources(this.label47, "label47");
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(0, 65);
-            this.label47.TabIndex = 39;
             // 
             // label43
             // 
-            this.label43.AutoSize = true;
+            resources.ApplyResources(this.label43, "label43");
             this.label43.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
             this.label43.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label43.Location = new System.Drawing.Point(1575, 26);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(97, 51);
-            this.label43.TabIndex = 39;
-            this.label43.Text = "999";
             // 
             // label33
             // 
-            this.label33.AutoSize = true;
+            resources.ApplyResources(this.label33, "label33");
             this.label33.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label33.Location = new System.Drawing.Point(1048, 263);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(128, 39);
-            this.label33.TabIndex = 39;
-            this.label33.Text = "00,000";
-            this.label33.Visible = false;
             // 
             // label26
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(689, 23);
+            resources.ApplyResources(this.label26, "label26");
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(13, 13);
-            this.label26.TabIndex = 34;
-            this.label26.Text = "0";
-            this.label26.Visible = false;
             // 
             // label34
             // 
-            this.label34.AutoSize = true;
+            resources.ApplyResources(this.label34, "label34");
             this.label34.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label34.Location = new System.Drawing.Point(1025, 26);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(160, 51);
-            this.label34.TabIndex = 42;
-            this.label34.Text = "00,000";
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
+            resources.ApplyResources(this.label23, "label23");
             this.label23.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(719, -12);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(111, 120);
-            this.label23.TabIndex = 36;
-            this.label23.Text = "0";
             // 
             // label35
             // 
-            this.label35.AutoSize = true;
+            resources.ApplyResources(this.label35, "label35");
             this.label35.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label35.Location = new System.Drawing.Point(1350, 26);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(160, 51);
-            this.label35.TabIndex = 41;
-            this.label35.Text = "00,000";
             // 
             // label36
             // 
-            this.label36.AutoSize = true;
+            resources.ApplyResources(this.label36, "label36");
             this.label36.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label36.Location = new System.Drawing.Point(1188, 26);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(160, 51);
-            this.label36.TabIndex = 40;
-            this.label36.Text = "00,000";
             // 
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(1536, 10);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox7.Multiline = true;
+            resources.ApplyResources(this.textBox7, "textBox7");
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(215, 80);
-            this.textBox7.TabIndex = 7;
             // 
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(1016, 7);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox8.Multiline = true;
+            resources.ApplyResources(this.textBox8, "textBox8");
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(498, 80);
-            this.textBox8.TabIndex = 6;
             // 
             // textBox9
             // 
             this.textBox9.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(709, -7);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox9.Multiline = true;
+            resources.ApplyResources(this.textBox9, "textBox9");
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(240, 137);
-            this.textBox9.TabIndex = 5;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
+            resources.ApplyResources(this.label2, "label2");
             this.label2.BackColor = System.Drawing.Color.LightBlue;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(16, 28);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 41);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "3.";
             // 
             // label37
             // 
-            this.label37.AutoSize = true;
+            resources.ApplyResources(this.label37, "label37");
             this.label37.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(960, 74);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(52, 16);
-            this.label37.TabIndex = 36;
-            this.label37.Text = "00,000";
-            this.label37.Visible = false;
             // 
             // button19
             // 
-            this.button19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button19.BackgroundImage")));
+            resources.ApplyResources(this.button19, "button19");
             this.button19.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button19.Location = new System.Drawing.Point(217, 1027);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(121, 23);
-            this.button19.TabIndex = 140;
-            this.button19.Text = "Відмінити";
             this.button19.UseVisualStyleBackColor = true;
-            this.button19.Visible = false;
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label132);
@@ -2072,123 +1546,65 @@ namespace zase4kak
             this.panel3.Controls.Add(this.textBox6);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label29);
-            this.panel3.Location = new System.Drawing.Point(4, 321);
-            this.panel3.Margin = new System.Windows.Forms.Padding(1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1923, 98);
-            this.panel3.TabIndex = 85;
             // 
             // label132
             // 
-            this.label132.AutoSize = true;
+            resources.ApplyResources(this.label132, "label132");
             this.label132.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label132.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label132.Location = new System.Drawing.Point(1876, 78);
             this.label132.Name = "label132";
-            this.label132.Size = new System.Drawing.Size(16, 16);
-            this.label132.TabIndex = 169;
-            this.label132.Text = "0";
-            this.label132.Visible = false;
             // 
             // label126
             // 
-            this.label126.AutoSize = true;
+            resources.ApplyResources(this.label126, "label126");
             this.label126.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label126.Location = new System.Drawing.Point(1898, 78);
             this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(16, 16);
-            this.label126.TabIndex = 168;
-            this.label126.Text = "0";
-            this.label126.Visible = false;
             // 
             // label57
             // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label57.Location = new System.Drawing.Point(1772, 29);
+            resources.ApplyResources(this.label57, "label57");
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(43, 46);
-            this.label57.TabIndex = 169;
-            this.label57.Text = "0";
             // 
             // label56
             // 
-            this.label56.AutoSize = true;
+            resources.ApplyResources(this.label56, "label56");
             this.label56.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label56.Location = new System.Drawing.Point(1757, 78);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(16, 16);
-            this.label56.TabIndex = 168;
-            this.label56.Text = "0";
-            this.label56.Visible = false;
             // 
             // label55
             // 
-            this.label55.AutoSize = true;
+            resources.ApplyResources(this.label55, "label55");
             this.label55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label55.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label55.Location = new System.Drawing.Point(940, 8);
-            this.label55.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(99, 26);
-            this.label55.TabIndex = 20;
-            this.label55.Text = "Різниця";
-            this.label55.Visible = false;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
+            resources.ApplyResources(this.label6, "label6");
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(1, 8);
-            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 26);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Доріжка";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
+            resources.ApplyResources(this.label9, "label9");
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label9.Location = new System.Drawing.Point(1191, 7);
-            this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 26);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Час кола";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
+            resources.ApplyResources(this.label10, "label10");
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label10.Location = new System.Drawing.Point(1555, 7);
-            this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(144, 26);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Кращий час";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
+            resources.ApplyResources(this.label5, "label5");
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(757, 7);
-            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 26);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "К-сть кіл";
             // 
             // panel1
             // 
@@ -2217,273 +1633,143 @@ namespace zase4kak
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(4, 219);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1923, 98);
-            this.panel1.TabIndex = 83;
             // 
             // label131
             // 
-            this.label131.AutoSize = true;
+            resources.ApplyResources(this.label131, "label131");
             this.label131.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label131.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label131.Location = new System.Drawing.Point(1876, 75);
             this.label131.Name = "label131";
-            this.label131.Size = new System.Drawing.Size(16, 16);
-            this.label131.TabIndex = 168;
-            this.label131.Text = "0";
-            this.label131.Visible = false;
             // 
             // label125
             // 
-            this.label125.AutoSize = true;
+            resources.ApplyResources(this.label125, "label125");
             this.label125.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label125.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label125.Location = new System.Drawing.Point(1898, 75);
             this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(16, 16);
-            this.label125.TabIndex = 167;
-            this.label125.Text = "0";
-            this.label125.Visible = false;
             // 
             // label54
             // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label54.Location = new System.Drawing.Point(1772, 26);
+            resources.ApplyResources(this.label54, "label54");
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(43, 46);
-            this.label54.TabIndex = 49;
-            this.label54.Text = "0";
             // 
             // label78
             // 
-            this.label78.AutoSize = true;
+            resources.ApplyResources(this.label78, "label78");
             this.label78.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label78.Location = new System.Drawing.Point(1351, 26);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(160, 51);
-            this.label78.TabIndex = 48;
-            this.label78.Text = "00,000";
-            this.label78.Visible = false;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
+            resources.ApplyResources(this.label8, "label8");
             this.label8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(1757, 75);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 16);
-            this.label8.TabIndex = 166;
-            this.label8.Text = "0";
-            this.label8.Visible = false;
             // 
             // label77
             // 
-            this.label77.AutoSize = true;
+            resources.ApplyResources(this.label77, "label77");
             this.label77.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label77.Location = new System.Drawing.Point(1181, 26);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(160, 51);
-            this.label77.TabIndex = 47;
-            this.label77.Text = "00,000";
-            this.label77.Visible = false;
             // 
             // label76
             // 
-            this.label76.AutoSize = true;
+            resources.ApplyResources(this.label76, "label76");
             this.label76.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label76.Location = new System.Drawing.Point(1022, 26);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(160, 51);
-            this.label76.TabIndex = 46;
-            this.label76.Text = "00,000";
-            this.label76.Visible = false;
             // 
             // label66
             // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(689, 54);
+            resources.ApplyResources(this.label66, "label66");
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(13, 13);
-            this.label66.TabIndex = 44;
-            this.label66.Text = "0";
-            this.label66.Visible = false;
             // 
             // label59
             // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label59.Location = new System.Drawing.Point(951, 47);
+            resources.ApplyResources(this.label59, "label59");
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(27, 29);
-            this.label59.TabIndex = 40;
-            this.label59.Text = "0";
-            this.label59.Visible = false;
             // 
             // label50
             // 
-            this.label50.AutoSize = true;
+            resources.ApplyResources(this.label50, "label50");
             this.label50.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label50.Location = new System.Drawing.Point(898, 22);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(32, 33);
-            this.label50.TabIndex = 38;
-            this.label50.Text = "0";
-            this.label50.Visible = false;
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
+            resources.ApplyResources(this.label18, "label18");
             this.label18.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(960, 78);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(52, 16);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "00,000";
-            this.label18.Visible = false;
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(539, 28);
+            resources.ApplyResources(this.textBox16, "textBox16");
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 37;
-            this.textBox16.Visible = false;
             // 
             // label45
             // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Times New Roman", 42.75F, System.Drawing.FontStyle.Bold);
-            this.label45.Location = new System.Drawing.Point(79, 11);
+            resources.ApplyResources(this.label45, "label45");
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(0, 65);
-            this.label45.TabIndex = 36;
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(689, 23);
+            resources.ApplyResources(this.label21, "label21");
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(13, 13);
-            this.label21.TabIndex = 33;
-            this.label21.Text = "0";
-            this.label21.Visible = false;
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
+            resources.ApplyResources(this.label16, "label16");
             this.label16.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label16.Location = new System.Drawing.Point(1575, 22);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(97, 51);
-            this.label16.TabIndex = 35;
-            this.label16.Text = "999";
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
+            resources.ApplyResources(this.label22, "label22");
             this.label22.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(1022, 19);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(160, 51);
-            this.label22.TabIndex = 34;
-            this.label22.Text = "00,000";
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
+            resources.ApplyResources(this.label20, "label20");
             this.label20.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(1347, 24);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(160, 51);
-            this.label20.TabIndex = 12;
-            this.label20.Text = "00,000";
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
+            resources.ApplyResources(this.label19, "label19");
             this.label19.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(1181, 24);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(160, 51);
-            this.label19.TabIndex = 11;
-            this.label19.Text = "00,000";
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
+            resources.ApplyResources(this.label17, "label17");
             this.label17.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(719, -10);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(111, 120);
-            this.label17.TabIndex = 9;
-            this.label17.Text = "0";
             // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(1536, 5);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox3.Multiline = true;
+            resources.ApplyResources(this.textBox3, "textBox3");
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(215, 80);
-            this.textBox3.TabIndex = 7;
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(1016, 5);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox2.Multiline = true;
+            resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(498, 80);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "                       \r\n\r\n\r\n\r\n\r\n                                                " +
-    "        -\r\n";
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(709, -14);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox1.Multiline = true;
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 151);
-            this.textBox1.TabIndex = 5;
             this.textBox1.TabStop = false;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.LightBlue;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(14, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "1.";
             // 
             // panel2
             // 
@@ -2495,228 +1781,124 @@ namespace zase4kak
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(4, 163);
-            this.panel2.Margin = new System.Windows.Forms.Padding(1);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1923, 42);
-            this.panel2.TabIndex = 84;
             // 
             // label124
             // 
-            this.label124.AutoSize = true;
+            resources.ApplyResources(this.label124, "label124");
             this.label124.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label124.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label124.Location = new System.Drawing.Point(1780, 7);
-            this.label124.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(102, 26);
-            this.label124.TabIndex = 21;
-            this.label124.Text = "Прогноз";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
+            resources.ApplyResources(this.label7, "label7");
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label7.Location = new System.Drawing.Point(111, 8);
-            this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 26);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Ім\'я";
             // 
             // button2
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(518, 996);
+            resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 37);
-            this.button2.TabIndex = 97;
-            this.button2.Text = "зберегти";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(372, 1004);
+            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 96;
-            this.comboBox1.Visible = false;
             // 
             // label40
             // 
-            this.label40.AutoSize = true;
+            resources.ApplyResources(this.label40, "label40");
             this.label40.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label40.Location = new System.Drawing.Point(1347, 27);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(160, 51);
-            this.label40.TabIndex = 44;
-            this.label40.Text = "00,000";
             // 
             // textBox15
             // 
-            this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(1153, 1026);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox15.MaxLength = 2000021;
-            this.textBox15.Multiline = true;
+            resources.ApplyResources(this.textBox15, "textBox15");
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(137, 20);
-            this.textBox15.TabIndex = 95;
-            this.textBox15.Text = "0";
             this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // label65
             // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(694, 53);
+            resources.ApplyResources(this.label65, "label65");
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(13, 13);
-            this.label65.TabIndex = 42;
-            this.label65.Text = "0";
-            this.label65.Visible = false;
             // 
             // label87
             // 
-            this.label87.AutoSize = true;
+            resources.ApplyResources(this.label87, "label87");
             this.label87.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label87.Location = new System.Drawing.Point(1019, 26);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(160, 51);
-            this.label87.TabIndex = 55;
-            this.label87.Text = "00,000";
-            this.label87.Visible = false;
             // 
             // label62
             // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label62.Location = new System.Drawing.Point(951, 37);
+            resources.ApplyResources(this.label62, "label62");
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(27, 29);
-            this.label62.TabIndex = 43;
-            this.label62.Text = "0";
-            this.label62.Visible = false;
             // 
             // label53
             // 
-            this.label53.AutoSize = true;
+            resources.ApplyResources(this.label53, "label53");
             this.label53.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label53.Location = new System.Drawing.Point(898, 27);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(32, 33);
-            this.label53.TabIndex = 43;
-            this.label53.Text = "0";
-            this.label53.Visible = false;
             this.label53.Click += new System.EventHandler(this.label53_Click);
             // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(539, 28);
+            resources.ApplyResources(this.textBox19, "textBox19");
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(100, 20);
-            this.textBox19.TabIndex = 43;
-            this.textBox19.Visible = false;
             // 
             // label48
             // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Times New Roman", 42.75F, System.Drawing.FontStyle.Bold);
-            this.label48.Location = new System.Drawing.Point(79, 11);
+            resources.ApplyResources(this.label48, "label48");
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(0, 65);
-            this.label48.TabIndex = 43;
             // 
             // label44
             // 
-            this.label44.AutoSize = true;
+            resources.ApplyResources(this.label44, "label44");
             this.label44.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
             this.label44.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label44.Location = new System.Drawing.Point(1571, 26);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(97, 51);
-            this.label44.TabIndex = 43;
-            this.label44.Text = "999";
             // 
             // label39
             // 
-            this.label39.AutoSize = true;
+            resources.ApplyResources(this.label39, "label39");
             this.label39.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label39.Location = new System.Drawing.Point(1025, 22);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(160, 51);
-            this.label39.TabIndex = 45;
-            this.label39.Text = "00,000";
             // 
             // button1
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button1.Location = new System.Drawing.Point(690, 920);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(458, 122);
-            this.button1.TabIndex = 94;
-            this.button1.Text = "Старт";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(1476, 81);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(1);
+            resources.ApplyResources(this.textBox13, "textBox13");
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(122, 20);
-            this.textBox13.TabIndex = 93;
-            this.textBox13.Visible = false;
             // 
             // label86
             // 
-            this.label86.AutoSize = true;
+            resources.ApplyResources(this.label86, "label86");
             this.label86.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label86.Location = new System.Drawing.Point(1185, 26);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(160, 51);
-            this.label86.TabIndex = 56;
-            this.label86.Text = "00,000";
-            this.label86.Visible = false;
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(1476, 35);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(1);
+            resources.ApplyResources(this.textBox14, "textBox14");
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(122, 20);
-            this.textBox14.TabIndex = 86;
-            this.textBox14.Visible = false;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
+            resources.ApplyResources(this.label13, "label13");
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label13.Location = new System.Drawing.Point(782, 74);
-            this.label13.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(247, 73);
-            this.label13.TabIndex = 90;
-            this.label13.Text = "label13";
-            this.label13.Visible = false;
             // 
             // timer1
             // 
@@ -2732,7 +1914,7 @@ namespace zase4kak
             // 
             // timer4
             // 
-            this.timer4.Interval = 300;
+            this.timer4.Interval = 1000;
             this.timer4.Tag = "час 2 заїзду";
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
@@ -2744,7 +1926,7 @@ namespace zase4kak
             // 
             // timer6
             // 
-            this.timer6.Interval = 300;
+            this.timer6.Interval = 1000;
             this.timer6.Tag = "третя гонка";
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
@@ -2756,7 +1938,7 @@ namespace zase4kak
             // 
             // timer8
             // 
-            this.timer8.Interval = 300;
+            this.timer8.Interval = 1000;
             this.timer8.Tag = "четверта гонка";
             this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
             // 
@@ -2769,73 +1951,39 @@ namespace zase4kak
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
+            resources.ApplyResources(this.label15, "label15");
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label15.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label15.Location = new System.Drawing.Point(17, 99);
-            this.label15.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(345, 55);
-            this.label15.TabIndex = 92;
-            this.label15.Text = "номер заизду";
-            this.label15.Visible = false;
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
+            resources.ApplyResources(this.label14, "label14");
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 45.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label14.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label14.Location = new System.Drawing.Point(4, 30);
-            this.label14.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(450, 70);
-            this.label14.TabIndex = 91;
-            this.label14.Text = "Клас моделей";
-            this.label14.Visible = false;
             // 
             // label85
             // 
-            this.label85.AutoSize = true;
+            resources.ApplyResources(this.label85, "label85");
             this.label85.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label85.Location = new System.Drawing.Point(1347, 26);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(160, 51);
-            this.label85.TabIndex = 57;
-            this.label85.Text = "00,000";
-            this.label85.Visible = false;
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
+            resources.ApplyResources(this.label4, "label4");
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 84.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(1564, 30);
-            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(343, 128);
-            this.label4.TabIndex = 89;
-            this.label4.Text = "00:00";
             // 
             // label28
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(689, 20);
+            resources.ApplyResources(this.label28, "label28");
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(13, 13);
-            this.label28.TabIndex = 37;
-            this.label28.Text = "0";
-            this.label28.Visible = false;
             // 
             // panel5
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.Orange;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.label134);
@@ -2861,141 +2009,76 @@ namespace zase4kak
             this.panel5.Controls.Add(this.textBox12);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label38);
-            this.panel5.Location = new System.Drawing.Point(4, 525);
-            this.panel5.Margin = new System.Windows.Forms.Padding(1);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1923, 98);
-            this.panel5.TabIndex = 88;
             // 
             // label134
             // 
-            this.label134.AutoSize = true;
+            resources.ApplyResources(this.label134, "label134");
             this.label134.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label134.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label134.Location = new System.Drawing.Point(1876, 78);
             this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(16, 16);
-            this.label134.TabIndex = 172;
-            this.label134.Text = "0";
-            this.label134.Visible = false;
             // 
             // label128
             // 
-            this.label128.AutoSize = true;
+            resources.ApplyResources(this.label128, "label128");
             this.label128.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label128.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label128.Location = new System.Drawing.Point(1898, 78);
             this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(16, 16);
-            this.label128.TabIndex = 172;
-            this.label128.Text = "0";
-            this.label128.Visible = false;
             // 
             // label118
             // 
-            this.label118.AutoSize = true;
-            this.label118.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label118.Location = new System.Drawing.Point(1772, 26);
+            resources.ApplyResources(this.label118, "label118");
             this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(43, 46);
-            this.label118.TabIndex = 173;
-            this.label118.Text = "0";
             // 
             // label119
             // 
-            this.label119.AutoSize = true;
+            resources.ApplyResources(this.label119, "label119");
             this.label119.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label119.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label119.Location = new System.Drawing.Point(1755, 74);
             this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(16, 16);
-            this.label119.TabIndex = 172;
-            this.label119.Text = "0";
-            this.label119.Visible = false;
             // 
             // label41
             // 
-            this.label41.AutoSize = true;
+            resources.ApplyResources(this.label41, "label41");
             this.label41.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label41.Location = new System.Drawing.Point(1185, 27);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(160, 51);
-            this.label41.TabIndex = 43;
-            this.label41.Text = "00,000";
             // 
             // label25
             // 
-            this.label25.AutoSize = true;
+            resources.ApplyResources(this.label25, "label25");
             this.label25.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(719, -11);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(111, 120);
-            this.label25.TabIndex = 34;
-            this.label25.Text = "0";
             // 
             // textBox10
             // 
             this.textBox10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(1536, 7);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox10.Multiline = true;
+            resources.ApplyResources(this.textBox10, "textBox10");
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(215, 80);
-            this.textBox10.TabIndex = 7;
             // 
             // textBox11
             // 
             this.textBox11.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(1016, 7);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox11.Multiline = true;
+            resources.ApplyResources(this.textBox11, "textBox11");
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(498, 80);
-            this.textBox11.TabIndex = 6;
             // 
             // textBox12
             // 
             this.textBox12.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox12.Enabled = false;
-            this.textBox12.Location = new System.Drawing.Point(709, -2);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox12.Multiline = true;
+            resources.ApplyResources(this.textBox12, "textBox12");
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(240, 133);
-            this.textBox12.TabIndex = 5;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
+            resources.ApplyResources(this.label3, "label3");
             this.label3.BackColor = System.Drawing.Color.LightBlue;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(16, 28);
-            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 39);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "4.";
             // 
             // label38
             // 
-            this.label38.AutoSize = true;
+            resources.ApplyResources(this.label38, "label38");
             this.label38.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label38.Location = new System.Drawing.Point(960, 81);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(52, 16);
-            this.label38.TabIndex = 37;
-            this.label38.Text = "00,000";
-            this.label38.Visible = false;
             // 
             // panel10
             // 
-            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel10.Controls.Add(this.label135);
@@ -3022,281 +2105,151 @@ namespace zase4kak
             this.panel10.Controls.Add(this.textBox31);
             this.panel10.Controls.Add(this.label98);
             this.panel10.Controls.Add(this.label99);
-            this.panel10.Location = new System.Drawing.Point(4, 628);
-            this.panel10.Margin = new System.Windows.Forms.Padding(1);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1923, 98);
-            this.panel10.TabIndex = 141;
             // 
             // label135
             // 
-            this.label135.AutoSize = true;
+            resources.ApplyResources(this.label135, "label135");
             this.label135.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label135.Location = new System.Drawing.Point(1878, 73);
             this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(16, 16);
-            this.label135.TabIndex = 174;
-            this.label135.Text = "0";
-            this.label135.Visible = false;
             // 
             // label129
             // 
-            this.label129.AutoSize = true;
+            resources.ApplyResources(this.label129, "label129");
             this.label129.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label129.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label129.Location = new System.Drawing.Point(1900, 74);
             this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(16, 16);
-            this.label129.TabIndex = 174;
-            this.label129.Text = "0";
-            this.label129.Visible = false;
             // 
             // label120
             // 
-            this.label120.AutoSize = true;
-            this.label120.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label120.Location = new System.Drawing.Point(1772, 31);
+            resources.ApplyResources(this.label120, "label120");
             this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(43, 46);
-            this.label120.TabIndex = 175;
-            this.label120.Text = "0";
             // 
             // label121
             // 
-            this.label121.AutoSize = true;
+            resources.ApplyResources(this.label121, "label121");
             this.label121.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label121.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label121.Location = new System.Drawing.Point(1757, 71);
             this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(16, 16);
-            this.label121.TabIndex = 174;
-            this.label121.Text = "0";
-            this.label121.Visible = false;
             // 
             // label115
             // 
-            this.label115.AutoSize = true;
-            this.label115.Font = new System.Drawing.Font("Times New Roman", 42.75F, System.Drawing.FontStyle.Bold);
-            this.label115.Location = new System.Drawing.Point(79, 11);
+            resources.ApplyResources(this.label115, "label115");
             this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(0, 65);
-            this.label115.TabIndex = 58;
             this.label115.Click += new System.EventHandler(this.label115_Click);
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
+            resources.ApplyResources(this.label11, "label11");
             this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(1347, 26);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(160, 51);
-            this.label11.TabIndex = 57;
-            this.label11.Text = "00,000";
-            this.label11.Visible = false;
             // 
             // label72
             // 
-            this.label72.AutoSize = true;
+            resources.ApplyResources(this.label72, "label72");
             this.label72.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label72.Location = new System.Drawing.Point(1185, 26);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(160, 51);
-            this.label72.TabIndex = 56;
-            this.label72.Text = "00,000";
             // 
             // label73
             // 
-            this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(694, 53);
+            resources.ApplyResources(this.label73, "label73");
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(13, 13);
-            this.label73.TabIndex = 42;
-            this.label73.Text = "0";
-            this.label73.Visible = false;
             // 
             // label74
             // 
-            this.label74.AutoSize = true;
+            resources.ApplyResources(this.label74, "label74");
             this.label74.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label74.Location = new System.Drawing.Point(1025, 26);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(160, 51);
-            this.label74.TabIndex = 55;
-            this.label74.Text = "00,000";
             // 
             // label75
             // 
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label75.Location = new System.Drawing.Point(951, 37);
+            resources.ApplyResources(this.label75, "label75");
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(27, 29);
-            this.label75.TabIndex = 43;
-            this.label75.Text = "0";
-            this.label75.Visible = false;
             // 
             // label90
             // 
-            this.label90.AutoSize = true;
+            resources.ApplyResources(this.label90, "label90");
             this.label90.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label90.Location = new System.Drawing.Point(898, 27);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(32, 33);
-            this.label90.TabIndex = 43;
-            this.label90.Text = "0";
-            this.label90.Visible = false;
             // 
             // textBox28
             // 
-            this.textBox28.Location = new System.Drawing.Point(539, 28);
+            resources.ApplyResources(this.textBox28, "textBox28");
             this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(100, 20);
-            this.textBox28.TabIndex = 43;
-            this.textBox28.Visible = false;
             // 
             // label91
             // 
-            this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("Wide Latin", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label91.Location = new System.Drawing.Point(57, 37);
+            resources.ApplyResources(this.label91, "label91");
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(0, 63);
-            this.label91.TabIndex = 43;
             // 
             // label92
             // 
-            this.label92.AutoSize = true;
+            resources.ApplyResources(this.label92, "label92");
             this.label92.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
             this.label92.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label92.Location = new System.Drawing.Point(1571, 26);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(97, 51);
-            this.label92.TabIndex = 43;
-            this.label92.Text = "999";
             // 
             // label93
             // 
-            this.label93.AutoSize = true;
+            resources.ApplyResources(this.label93, "label93");
             this.label93.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label93.Location = new System.Drawing.Point(1022, 26);
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(160, 51);
-            this.label93.TabIndex = 45;
-            this.label93.Text = "00,000";
-            this.label93.Visible = false;
             // 
             // label94
             // 
-            this.label94.AutoSize = true;
+            resources.ApplyResources(this.label94, "label94");
             this.label94.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label94.Location = new System.Drawing.Point(1347, 19);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(160, 51);
-            this.label94.TabIndex = 44;
-            this.label94.Text = "00,000";
             this.label94.Click += new System.EventHandler(this.label94_Click);
             // 
             // label95
             // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(689, 20);
+            resources.ApplyResources(this.label95, "label95");
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(13, 13);
-            this.label95.TabIndex = 37;
-            this.label95.Text = "0";
-            this.label95.Visible = false;
             // 
             // label96
             // 
-            this.label96.AutoSize = true;
+            resources.ApplyResources(this.label96, "label96");
             this.label96.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label96.Location = new System.Drawing.Point(1185, 27);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(160, 51);
-            this.label96.TabIndex = 43;
-            this.label96.Text = "00,000";
-            this.label96.Visible = false;
             // 
             // label97
             // 
-            this.label97.AutoSize = true;
+            resources.ApplyResources(this.label97, "label97");
             this.label97.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label97.Location = new System.Drawing.Point(719, -11);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(111, 120);
-            this.label97.TabIndex = 34;
-            this.label97.Text = "0";
             // 
             // textBox29
             // 
             this.textBox29.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox29.Enabled = false;
-            this.textBox29.Location = new System.Drawing.Point(1536, 7);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox29.Multiline = true;
+            resources.ApplyResources(this.textBox29, "textBox29");
             this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(215, 80);
-            this.textBox29.TabIndex = 7;
             // 
             // textBox30
             // 
             this.textBox30.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox30.Enabled = false;
-            this.textBox30.Location = new System.Drawing.Point(1016, 7);
-            this.textBox30.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox30.Multiline = true;
+            resources.ApplyResources(this.textBox30, "textBox30");
             this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(498, 80);
-            this.textBox30.TabIndex = 6;
             // 
             // textBox31
             // 
             this.textBox31.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox31.Enabled = false;
-            this.textBox31.Location = new System.Drawing.Point(709, -2);
-            this.textBox31.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox31.Multiline = true;
+            resources.ApplyResources(this.textBox31, "textBox31");
             this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(240, 133);
-            this.textBox31.TabIndex = 5;
             // 
             // label98
             // 
-            this.label98.AutoSize = true;
+            resources.ApplyResources(this.label98, "label98");
             this.label98.BackColor = System.Drawing.Color.LightBlue;
-            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
-            this.label98.Location = new System.Drawing.Point(16, 28);
-            this.label98.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(48, 39);
-            this.label98.TabIndex = 0;
-            this.label98.Text = "5.";
             // 
             // label99
             // 
-            this.label99.AutoSize = true;
+            resources.ApplyResources(this.label99, "label99");
             this.label99.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label99.Location = new System.Drawing.Point(960, 81);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(52, 16);
-            this.label99.TabIndex = 37;
-            this.label99.Text = "00,000";
-            this.label99.Visible = false;
             // 
             // timer2
             // 
-            this.timer2.Interval = 300;
+            this.timer2.Interval = 1000;
             this.timer2.Tag = "час 1 заїзду";
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
@@ -3326,13 +2279,13 @@ namespace zase4kak
             // 
             // timer30
             // 
-            this.timer30.Interval = 300;
+            this.timer30.Interval = 1000;
             this.timer30.Tag = "пята гонка";
             this.timer30.Tick += new System.EventHandler(this.timer30_Tick);
             // 
             // timer31
             // 
-            this.timer31.Interval = 300;
+            this.timer31.Interval = 1000;
             this.timer31.Tag = "шоста гонка";
             this.timer31.Tick += new System.EventHandler(this.timer31_Tick);
             // 
@@ -3350,226 +2303,122 @@ namespace zase4kak
             // 
             // label114
             // 
-            this.label114.AutoSize = true;
+            resources.ApplyResources(this.label114, "label114");
             this.label114.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label114.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label114.Location = new System.Drawing.Point(960, 81);
             this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(52, 16);
-            this.label114.TabIndex = 37;
-            this.label114.Text = "00,000";
-            this.label114.Visible = false;
             // 
             // label113
             // 
-            this.label113.AutoSize = true;
+            resources.ApplyResources(this.label113, "label113");
             this.label113.BackColor = System.Drawing.Color.LightBlue;
-            this.label113.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
-            this.label113.Location = new System.Drawing.Point(16, 28);
-            this.label113.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(48, 39);
-            this.label113.TabIndex = 0;
-            this.label113.Text = "6.";
             // 
             // textBox35
             // 
             this.textBox35.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox35.Enabled = false;
-            this.textBox35.Location = new System.Drawing.Point(709, -2);
-            this.textBox35.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox35.Multiline = true;
+            resources.ApplyResources(this.textBox35, "textBox35");
             this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(240, 133);
-            this.textBox35.TabIndex = 5;
             // 
             // textBox34
             // 
             this.textBox34.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox34.Enabled = false;
-            this.textBox34.Location = new System.Drawing.Point(1016, 7);
-            this.textBox34.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox34.Multiline = true;
+            resources.ApplyResources(this.textBox34, "textBox34");
             this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(498, 80);
-            this.textBox34.TabIndex = 6;
             // 
             // textBox33
             // 
             this.textBox33.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox33.Enabled = false;
-            this.textBox33.Location = new System.Drawing.Point(1536, 7);
-            this.textBox33.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox33.Multiline = true;
+            resources.ApplyResources(this.textBox33, "textBox33");
             this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(215, 80);
-            this.textBox33.TabIndex = 7;
             // 
             // label112
             // 
-            this.label112.AutoSize = true;
+            resources.ApplyResources(this.label112, "label112");
             this.label112.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label112.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label112.Location = new System.Drawing.Point(719, -11);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(111, 120);
-            this.label112.TabIndex = 34;
-            this.label112.Text = "0";
             // 
             // label111
             // 
-            this.label111.AutoSize = true;
+            resources.ApplyResources(this.label111, "label111");
             this.label111.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label111.Location = new System.Drawing.Point(1185, 27);
             this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(160, 51);
-            this.label111.TabIndex = 43;
-            this.label111.Text = "00,000";
-            this.label111.Visible = false;
             // 
             // label110
             // 
-            this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(689, 20);
+            resources.ApplyResources(this.label110, "label110");
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(13, 13);
-            this.label110.TabIndex = 37;
-            this.label110.Text = "0";
-            this.label110.Visible = false;
             // 
             // label109
             // 
-            this.label109.AutoSize = true;
+            resources.ApplyResources(this.label109, "label109");
             this.label109.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label109.Location = new System.Drawing.Point(1347, 26);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(160, 51);
-            this.label109.TabIndex = 44;
-            this.label109.Text = "00,000";
-            this.label109.Visible = false;
             // 
             // label108
             // 
-            this.label108.AutoSize = true;
+            resources.ApplyResources(this.label108, "label108");
             this.label108.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
-            this.label108.Location = new System.Drawing.Point(1022, 26);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(160, 51);
-            this.label108.TabIndex = 45;
-            this.label108.Text = "00,000";
-            this.label108.Visible = false;
             // 
             // label107
             // 
-            this.label107.AutoSize = true;
+            resources.ApplyResources(this.label107, "label107");
             this.label107.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold);
             this.label107.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label107.Location = new System.Drawing.Point(1571, 26);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(97, 51);
-            this.label107.TabIndex = 43;
-            this.label107.Text = "999";
             // 
             // label106
             // 
-            this.label106.AutoSize = true;
-            this.label106.Font = new System.Drawing.Font("Wide Latin", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label106.Location = new System.Drawing.Point(57, 37);
+            resources.ApplyResources(this.label106, "label106");
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(0, 63);
-            this.label106.TabIndex = 43;
             // 
             // textBox32
             // 
-            this.textBox32.Location = new System.Drawing.Point(539, 28);
+            resources.ApplyResources(this.textBox32, "textBox32");
             this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(100, 20);
-            this.textBox32.TabIndex = 43;
-            this.textBox32.Visible = false;
             // 
             // label105
             // 
-            this.label105.AutoSize = true;
+            resources.ApplyResources(this.label105, "label105");
             this.label105.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label105.Location = new System.Drawing.Point(898, 27);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(32, 33);
-            this.label105.TabIndex = 43;
-            this.label105.Text = "0";
-            this.label105.Visible = false;
             // 
             // label104
             // 
-            this.label104.AutoSize = true;
-            this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label104.Location = new System.Drawing.Point(951, 37);
+            resources.ApplyResources(this.label104, "label104");
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(27, 29);
-            this.label104.TabIndex = 43;
-            this.label104.Text = "0";
-            this.label104.Visible = false;
             // 
             // label103
             // 
-            this.label103.AutoSize = true;
+            resources.ApplyResources(this.label103, "label103");
             this.label103.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label103.Location = new System.Drawing.Point(1025, 26);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(160, 51);
-            this.label103.TabIndex = 55;
-            this.label103.Text = "00,000";
             // 
             // label102
             // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(694, 53);
+            resources.ApplyResources(this.label102, "label102");
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(13, 13);
-            this.label102.TabIndex = 42;
-            this.label102.Text = "0";
-            this.label102.Visible = false;
             // 
             // label101
             // 
-            this.label101.AutoSize = true;
+            resources.ApplyResources(this.label101, "label101");
             this.label101.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label101.Location = new System.Drawing.Point(1188, 26);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(160, 51);
-            this.label101.TabIndex = 56;
-            this.label101.Text = "00,000";
             // 
             // label100
             // 
-            this.label100.AutoSize = true;
+            resources.ApplyResources(this.label100, "label100");
             this.label100.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label100.Location = new System.Drawing.Point(1345, 26);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(160, 51);
-            this.label100.TabIndex = 57;
-            this.label100.Text = "00,000";
             // 
             // label116
             // 
-            this.label116.AutoSize = true;
-            this.label116.Font = new System.Drawing.Font("Times New Roman", 42.75F, System.Drawing.FontStyle.Bold);
-            this.label116.Location = new System.Drawing.Point(79, 11);
+            resources.ApplyResources(this.label116, "label116");
             this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(0, 65);
-            this.label116.TabIndex = 59;
             // 
             // panel11
             // 
-            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.panel11, "panel11");
             this.panel11.BackColor = System.Drawing.Color.Yellow;
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel11.Controls.Add(this.label136);
@@ -3596,77 +2445,42 @@ namespace zase4kak
             this.panel11.Controls.Add(this.textBox35);
             this.panel11.Controls.Add(this.label113);
             this.panel11.Controls.Add(this.label114);
-            this.panel11.Location = new System.Drawing.Point(4, 731);
-            this.panel11.Margin = new System.Windows.Forms.Padding(1);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1923, 98);
-            this.panel11.TabIndex = 142;
             // 
             // label136
             // 
-            this.label136.AutoSize = true;
+            resources.ApplyResources(this.label136, "label136");
             this.label136.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label136.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label136.Location = new System.Drawing.Point(1878, 74);
             this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(16, 16);
-            this.label136.TabIndex = 176;
-            this.label136.Text = "0";
-            this.label136.Visible = false;
             // 
             // label130
             // 
-            this.label130.AutoSize = true;
+            resources.ApplyResources(this.label130, "label130");
             this.label130.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label130.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label130.Location = new System.Drawing.Point(1898, 74);
             this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(16, 16);
-            this.label130.TabIndex = 176;
-            this.label130.Text = "0";
-            this.label130.Visible = false;
             // 
             // label122
             // 
-            this.label122.AutoSize = true;
-            this.label122.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label122.Location = new System.Drawing.Point(1772, 26);
+            resources.ApplyResources(this.label122, "label122");
             this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(43, 46);
-            this.label122.TabIndex = 177;
-            this.label122.Text = "0";
             // 
             // label123
             // 
-            this.label123.AutoSize = true;
+            resources.ApplyResources(this.label123, "label123");
             this.label123.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label123.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label123.Location = new System.Drawing.Point(1757, 74);
             this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(16, 16);
-            this.label123.TabIndex = 176;
-            this.label123.Text = "0";
-            this.label123.Visible = false;
             // 
             // textBox36
             // 
             this.textBox36.BackColor = System.Drawing.Color.DodgerBlue;
-            this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox36.Location = new System.Drawing.Point(949, 876);
+            resources.ApplyResources(this.textBox36, "textBox36");
             this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(100, 20);
-            this.textBox36.TabIndex = 118;
-            this.textBox36.Visible = false;
             // 
             // textBox37
             // 
             this.textBox37.BackColor = System.Drawing.Color.Yellow;
-            this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox37.Location = new System.Drawing.Point(949, 899);
+            resources.ApplyResources(this.textBox37, "textBox37");
             this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(100, 20);
-            this.textBox37.TabIndex = 119;
-            this.textBox37.Visible = false;
             // 
             // timer34
             // 
@@ -3680,29 +2494,25 @@ namespace zase4kak
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-            this.dataGridView3.Location = new System.Drawing.Point(1298, 858);
+            resources.ApplyResources(this.dataGridView3, "dataGridView3");
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(56, 197);
-            this.dataGridView3.TabIndex = 165;
-            this.dataGridView3.Visible = false;
             this.dataGridView3.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridView3_SortCompare);
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Доріжка";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Спортсмен";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn5.Width = 180;
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Результат";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
@@ -3744,13 +2554,8 @@ namespace zase4kak
             // 
             // textBox38
             // 
-            this.textBox38.Location = new System.Drawing.Point(1314, 81);
-            this.textBox38.Margin = new System.Windows.Forms.Padding(1);
+            resources.ApplyResources(this.textBox38, "textBox38");
             this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(122, 20);
-            this.textBox38.TabIndex = 167;
-            this.textBox38.Text = "0";
-            this.textBox38.Visible = false;
             // 
             // timer41
             // 
@@ -3788,25 +2593,170 @@ namespace zase4kak
             // 
             // textBox39
             // 
-            this.textBox39.Location = new System.Drawing.Point(333, 906);
+            resources.ApplyResources(this.textBox39, "textBox39");
             this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(199, 20);
-            this.textBox39.TabIndex = 179;
-            this.textBox39.Visible = false;
             this.textBox39.TextChanged += new System.EventHandler(this.textBox39_TextChanged);
             // 
             // label137
             // 
-            this.label137.AutoSize = true;
-            this.label137.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.label137, "label137");
             this.label137.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label137.Location = new System.Drawing.Point(225, 901);
-            this.label137.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(104, 24);
-            this.label137.TabIndex = 178;
-            this.label137.Text = "К-сть груп";
-            this.label137.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
+            this.Column1,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column8,
+            this.Column9,
+            this.Column2});
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            // 
+            // Column7
+            // 
+            resources.ApplyResources(this.Column7, "Column7");
+            this.Column7.Name = "Column7";
+            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column1
+            // 
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.Column3, "Column3");
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.Column4, "Column4");
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle3;
+            resources.ApplyResources(this.Column5, "Column5");
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle4;
+            resources.ApplyResources(this.Column6, "Column6");
+            this.Column6.Name = "Column6";
+            // 
+            // Column8
+            // 
+            resources.ApplyResources(this.Column8, "Column8");
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            resources.ApplyResources(this.Column9, "Column9");
+            this.Column9.Name = "Column9";
+            // 
+            // Column2
+            // 
+            resources.ApplyResources(this.Column2, "Column2");
+            this.Column2.MaxInputLength = 300;
+            this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12});
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
+            this.dataGridView2.Name = "dataGridView2";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle5;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle6;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle7;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle8;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn12, "dataGridViewTextBoxColumn12");
+            this.dataGridViewTextBoxColumn12.MaxInputLength = 300;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // button21
+            // 
+            resources.ApplyResources(this.button21, "button21");
+            this.button21.Name = "button21";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // form4BindingSource
             // 
@@ -3814,10 +2764,12 @@ namespace zase4kak
             // 
             // Form8
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1057);
+            this.Controls.Add(this.button21);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox39);
             this.Controls.Add(this.label137);
             this.Controls.Add(this.textBox38);
@@ -3826,7 +2778,6 @@ namespace zase4kak
             this.Controls.Add(this.textBox36);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel10);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.textBox25);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
@@ -3846,7 +2797,6 @@ namespace zase4kak
             this.Controls.Add(this.label68);
             this.Controls.Add(this.label67);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -3881,15 +2831,11 @@ namespace zase4kak
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form8";
-            this.Text = "Гонка";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form8_FormClosing);
             this.Load += new System.EventHandler(this.Form8_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -3907,6 +2853,8 @@ namespace zase4kak
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.form4BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -3917,7 +2865,6 @@ namespace zase4kak
 
         private System.Windows.Forms.Timer timer22;
         private System.Windows.Forms.Timer timer21;
-        private System.Windows.Forms.DataGridView dataGridView2;
         public System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button14;
@@ -3938,7 +2885,6 @@ namespace zase4kak
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Timer timer10;
         private System.Windows.Forms.Timer timer12;
         private System.Windows.Forms.Button button7;
@@ -4231,10 +3177,6 @@ namespace zase4kak
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Timer timer45;
         private System.Windows.Forms.Timer timer46;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem секToolStripMenuItem1;
@@ -4246,5 +3188,26 @@ namespace zase4kak
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.TextBox textBox39;
         private System.Windows.Forms.Label label137;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.Button button21;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.Diagnostics;
 using System.Threading;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Data;
@@ -39,8 +40,12 @@ namespace zase4kak
             CheckForIllegalCrossThreadCalls = false;
         }
 
-       
-        int number, i = 1, timer_svitofor = 0, timer_svitofor2 = 0;
+      
+		System.Diagnostics.Stopwatch time_to_lapp = new Stopwatch();
+
+
+
+    int number, i = 1, timer_svitofor = 0, timer_svitofor2 = 0, position1, position;
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -335,19 +340,18 @@ namespace zase4kak
 
 
 
-           
 
-            string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "Учасники змагання.xlsx";// запис в ексель результату гонки
 
             Microsoft.Office.Interop.Excel.Application Excel_Lapp = new Microsoft.Office.Interop.Excel.Application();
-            Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook;
-            Microsoft.Office.Interop.Excel.Worksheet ExcelWorkSheet;
-            //Книга.
-            ExcelWorkBook = Excel_Lapp.Workbooks.Add(System.Reflection.Missing.Value);
-            //Таблица.
-            ExcelWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+            Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook_lap;
+            Microsoft.Office.Interop.Excel.Worksheet ExcelWorkShee_lap;
 
-            
+            //Книга.
+            ExcelWorkBook_lap = Excel_Lapp.Workbooks.Add(System.Reflection.Missing.Value);
+            //Таблица.
+            ExcelWorkShee_lap = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook_lap.Worksheets.get_Item(1);
+
+
 
             for (int j = 0; j < dataGridView1.ColumnCount; j++)
                 Excel_Lapp.Cells[1, j + 1] = dataGridView1.Columns[j].HeaderText;
@@ -359,13 +363,11 @@ namespace zase4kak
                     Excel_Lapp.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value;
                 }
             }
-           // Excel_Lapp.Visible = true;
+            // Excel_Lapp.Visible = true;
             Excel_Lapp.UserControl = true;
-            Excel_Lapp.AlertBeforeOverwriting = false;
-            ExcelWorkBook.SaveAs(path);
-            ExcelWorkBook.Close();
-
-                  GC.Collect();
+            Excel_Lapp.AlertBeforeOverwriting = true;
+            //  ExcelWorkBook_laptime.SaveAs(path);
+            Excel_Lapp.Visible = true;
         }
 
        
@@ -400,6 +402,7 @@ namespace zase4kak
         {
             i++;                                            //добавляю кола 1 доріці
             label100.Text = Convert.ToString(i);
+           
             timer10.Enabled = false;
         }
 
@@ -417,10 +420,23 @@ namespace zase4kak
 
             if (Convert.ToInt32(textBox108.Text) != 0)
             {
-                i = Convert.ToInt32(label100.Text);          //червона доріжка
+                i = Convert.ToInt32(label100.Text);  //червона доріжка
+
+
+
+
+
+                // рахую час кола
+                label103.Text = string.Format("{0}", time_to_lapp.ElapsedMilliseconds / 1000.0);
+                time_to_lapp.Restart();
+                time_to_lapp.Start();
+                //
+
+
+
                 timer10.Enabled = true;
                 timer11.Enabled = false;
-                label103.Text = label102.Text;
+                //label103.Text = label102.Text;
                 Time = 0;
                 timer11.Enabled = true;
                 
@@ -451,8 +467,8 @@ namespace zase4kak
         double Time;
         private void timer11_Tick(object sender, EventArgs e)
         {
-            Time += 0.0003 * 53;                    //timer на час кола
-            label102.Text = string.Format("{0:F4}", Time);       //timer на час кола 
+            //Time += 0.0003 * 53;                    //timer на час кола
+            //label102.Text = string.Format("{0:F4}", Time);       //timer на час кола 
         }
 
         private void Form9_Load(object sender, EventArgs e)
@@ -506,6 +522,9 @@ namespace zase4kak
                 timer1.Enabled = false;
                 timer2.Enabled = false;
                 label101.Text = "<<Кваліфікацію завершено!>>";
+                button5.Text = "Вихід";
+                button1.Enabled = false;
+                button6.Enabled = false;
                 label50.Visible = false;
                 label101.Location = new Point(371,234) ;
                 serialPort1.Close();
@@ -534,29 +553,59 @@ namespace zase4kak
 
             if (pmin == -1 || psec == 0)
             {
-                serialPort1.Open();
-               serialPort1.WriteLine("4");
-                timer2.Enabled = false;
-                min = Convert.ToInt32(textBox106.Text);
-                sec = 1;
-                label101.Text = "<<Кваліфікація>>";
-                timer1.Enabled = true;
-                label55.Text = "999";
-                label103.Text = "00,00";
-                label51.Text = "00,00";
-                label52.Text = "00,00";
-                label53.Text = "00,00";
-                label54.Text = "00,00";
-                label100.Text = "0";
+                if (serialPort1.IsOpen == true)
+                {
+                    serialPort1.WriteLine("4");
+                    timer2.Enabled = false;
+                    min = Convert.ToInt32(textBox106.Text);
+                    sec = 1;
+                    label101.Text = "<<Кваліфікація>>";
+                    timer1.Enabled = true;
+                    label55.Text = "999";
+                    label103.Text = "00,00";
+                    label51.Text = "00,00";
+                    label52.Text = "00,00";
+                    label53.Text = "00,00";
+                    label54.Text = "00,00";
+                    label100.Text = "0";
 
-                timer11.Enabled = false;
-                Time = 0;
-                label102.Text = "0";
+                    timer11.Enabled = false;
+                    Time = 0;
+                    label102.Text = "0";
 
 
-                button5.Visible = true;
-                button5.Enabled = true;
-                button5.Focus();
+                    button5.Visible = true;
+                    button5.Enabled = true;
+                    button5.Focus();
+                }
+                else
+                {
+                    serialPort1.Open();
+                    serialPort1.WriteLine("4");
+                    timer2.Enabled = false;
+                    min = Convert.ToInt32(textBox106.Text);
+                    sec = 1;
+                    label101.Text = "<<Кваліфікація>>";
+                    timer1.Enabled = true;
+                    label55.Text = "999";
+                    label103.Text = "00,00";
+                    label51.Text = "00,00";
+                    label52.Text = "00,00";
+                    label53.Text = "00,00";
+                    label54.Text = "00,00";
+                    label100.Text = "0";
+
+                    timer11.Enabled = false;
+                    Time = 0;
+                    label102.Text = "0";
+
+
+                    button5.Visible = true;
+                    button5.Enabled = true;
+                    button5.Focus();
+                }
+               
+               
             }
 
         
@@ -854,23 +903,30 @@ namespace zase4kak
 
         private void button5_Click_2(object sender, EventArgs e)
         {
-            label101.Text = "<<Пауза>>";
-            serialPort1.WriteLine("3");
-            
-            panel11.BackColor = Color.Orange;
-            panel9.BackColor = Color.Orange;
-            panel10.BackColor = Color.Orange;
-            panel12.BackColor = Color.Orange;
-            stopsound.Play();
-            timer1.Enabled = false;
-            button5.Enabled = false;
-            button5.Visible = false;
-            button6.Enabled = true;
-            button6.Visible = true;
-            button6.Focus();
-            timer11.Enabled = false;
-           serialPort1.Close();
 
+            if (label101.Text != "<<Кваліфікацію завершено!>>")
+            {
+                label101.Text = "<<Пауза>>";
+                serialPort1.WriteLine("3");
+
+                panel11.BackColor = Color.Orange;
+                panel9.BackColor = Color.Orange;
+                panel10.BackColor = Color.Orange;
+                panel12.BackColor = Color.Orange;
+                stopsound.Play();
+                timer1.Enabled = false;
+                button5.Enabled = false;
+                button5.Visible = false;
+                button6.Enabled = true;
+                button6.Visible = true;
+                button6.Focus();
+                timer11.Enabled = false;
+                serialPort1.Close();
+            }
+            else
+            {
+                this.Close();
+            }
           
         }
 
@@ -974,6 +1030,38 @@ namespace zase4kak
         private void form4BindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_NewRowNeeded(object sender, DataGridViewRowEventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_ColumnWidthChanged(object sender, DataGridViewColumnEventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            position = 1;
+            position1 = 0;
+          
+            for (int cell = 0; dataGridView1.Rows.Count > cell; cell++)
+            {
+
+                dataGridView1.Rows[position1].Cells[0].Value = position;
+
+
+
+                if (dataGridView1.Rows.Count > position)
+
+                {
+                    position1 = position1 + 1;
+                    position = position + 1;
+                }
+
+            }
         }
 
         private void timer8_Tick(object sender, EventArgs e)
@@ -1097,7 +1185,16 @@ namespace zase4kak
                             button1.Enabled = false;
                             button5.Focus();
                             button6.Focus();
-                            serialPort1.WriteLine("4");
+                            if(serialPort1.IsOpen == false) 
+                            {
+                                serialPort1.Open();
+                                serialPort1.WriteLine("4");
+                            }
+                            else
+                            {
+                                serialPort1.WriteLine("4");
+                            }
+                            
                             timer7.Enabled = false;
 
                         }
@@ -1358,27 +1455,45 @@ namespace zase4kak
 
 
 
+
+
+                position1 = 0;
+                position = 1;
+
+
+                time_to_lapp.Restart();
+                time_to_lapp.Stop();
+                label103.Text = "0";
                 
 
-
-
-
-
-                number_pilot = number_pilot + 1;
-
-                dataGridView2.Rows.Add(number_pilot, label56.Text,Convert.ToDouble(label55.Text));
+                dataGridView2.Rows.Add("", label56.Text,Convert.ToDouble(label55.Text));
                 
 
                 
                 dataGridView2.Sort(dataGridViewTextBoxColumn3, ListSortDirection.Ascending);
-               
-                
-                
-                
 
 
-                
-                //laptime++;
+                // добавляю порядок спортсмені ( порядок місць)
+
+
+                for (int cell = 0; dataGridView2.Rows.Count > cell; cell++)
+                {
+
+                    dataGridView2.Rows[position1].Cells[0].Value = position;
+
+
+
+                    if (dataGridView2.Rows.Count > position)
+
+                    {
+                        position1 = position1 + 1;
+                        position = position + 1;
+                    }
+
+                }
+
+
+                    //laptime++;
                 serialPort1.Close();
                 laptime = Convert.ToInt32(label104.Text);
                 timer1.Enabled = false;
