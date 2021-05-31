@@ -70,7 +70,7 @@ namespace zase4kak
 
 		
 		//записник результату кожної доріжки
-		int lane1,lane2,lane3, lane4,   lane2_1, lane2_2, lane2_3, lane2_4,    lane3_1, lane3_2, lane3_3, lane3_4,    lane4_1, lane4_2, lane4_3, lane4_4;
+		int lanes1,lanes2,lanes3, lanes4, lanes5, lane2_1, lane2_2, lane2_3, lane2_4, lane2_5, lane3_1, lane3_2, lane3_3, lane3_4, lane3_5, lane4_1, lane4_2, lane4_3, lane4_4, lane4_5, lane5_1, lane5_2, lane5_3, lane5_4, lane5_5;
 		int position = 1, position1 = 0;
 
 		int mins, secs, min, sec, i, msecs, mmsecs, b, c, d, time_to_traning_min, time_to_traning_sec, traning_number_group = 1;
@@ -80,11 +80,14 @@ namespace zase4kak
 
 		int timetostart = 5; // значення стартового таймера
 
+		string prostoi, prostoi2, prostoi3;
+		int prostoi_number,prostoi_number2, prostoi_number3;
+
 		//для прогнозу
-		double prognoz1, prognoz2, prognoz3, prognoz4;
+		double prognoz1, prognoz2, prognoz3, prognoz4,prognoz5;
 		double masuv, kola, seredniychas, prognoz;
 
-		double Time, Times, Timez, Timeg, seredniychas1, seredniychas2, seredniychas3, seredniychas4;//timer на час кола
+		double Time, Times, Timez, Timeg,Timeb, seredniychas1, seredniychas2, seredniychas3, seredniychas4,seredniychas5;//timer на час кола
 		private void timer1_Tick(object sender, EventArgs e)
 		{
 
@@ -94,10 +97,12 @@ namespace zase4kak
 			prognoz2 = 0;
 			prognoz3 = 0;
 			prognoz4 = 0;
+			prognoz5 = 0;
 			seredniychas1 = 0;
 			seredniychas2 = 0;
 			seredniychas3 = 0;
 			seredniychas4 = 0;
+			seredniychas5 = 0;
 			masuv = 0;
 			kola = 0;
 			seredniychas = 0;
@@ -187,6 +192,7 @@ namespace zase4kak
 					prognoz2 = 0;
 					prognoz3 = 0;
 					prognoz4 = 0;
+					prognoz5 = 0;
 					timer32.Enabled = true;
 					label71.Visible = true;
 					timer2.Enabled = true;
@@ -195,7 +201,16 @@ namespace zase4kak
 					min = Convert.ToInt32(textBox13.Text);
 					label13.Text = "<<Гонка!>>";
 					label15.Visible = true;
-					label15.Text = "1/4";
+
+					//для простою
+					if (label72.Visible == false)
+					{
+						label15.Text = "1/4";
+                    }
+                    else
+                    {
+						label15.Text = "1/5";
+					}
 					label13.Visible = true;
 					timer20.Enabled = true;
 					timer11.Enabled = true;
@@ -255,106 +270,187 @@ namespace zase4kak
 					button6.Enabled = false;
 
 
-					//перехід між доріжками
-					timer32.Enabled = false;
 
-					timer17.Enabled = false;
-					timer11.Enabled = false;
-					timer15.Enabled = false;
-					timer16.Enabled = false;
+					if (label72.Visible == false)
+					{
 
+						//перехід між доріжками
+						timer32.Enabled = false;
 
-
-
-
-
-					//
-					lane1 = Convert.ToInt32(label17.Text);
-					lane2_2 = Convert.ToInt32(label24.Text);
-					lane3_3 = Convert.ToInt32(label23.Text);
-					lane4_4 = Convert.ToInt32(label25.Text);
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
 
 
 
 
 
 
-
-					textBox16.Text = label45.Text;
-					label50.Text = label17.Text;
-					label66.Text = label21.Text;
-					label125.Text = label8.Text;
-					label131.Text = label54.Text;
-
-					textBox17.Text = label46.Text;
-					label51.Text = label24.Text;
-					label63.Text = label27.Text;
-					label126.Text = label56.Text;
-					label132.Text = label57.Text;
-
-					textBox18.Text = label47.Text;
-					label52.Text = label23.Text;
-					label64.Text = label26.Text;
-					label127.Text = label117.Text;
-					label133.Text = label58.Text;
-
-					textBox19.Text = label48.Text;
-					label53.Text = label25.Text;
-					label65.Text = label28.Text;
-					label128.Text = label119.Text;
-					label134.Text = label118.Text;
+						//
+						lanes1 = Convert.ToInt32(label17.Text);
+						lane2_2 = Convert.ToInt32(label24.Text);
+						lane3_3 = Convert.ToInt32(label23.Text);
+						lane4_4 = Convert.ToInt32(label25.Text);
 
 
 
 
-					label45.Text = textBox17.Text;
-					label17.Text = label51.Text;
-					label21.Text = label63.Text;
-					label8.Text = label126.Text;
-					label54.Text = label132.Text;
-
-					label46.Text = textBox19.Text;
-					label24.Text = label53.Text;
-					label27.Text = label65.Text;
-					label56.Text = label128.Text;
-					label57.Text = label134.Text;
-
-					label47.Text = textBox16.Text;
-					label23.Text = label50.Text;
-					label26.Text = label66.Text;
-					label117.Text = label125.Text;
-					label58.Text = label131.Text;
-
-					label48.Text = textBox18.Text;
-					label25.Text = label52.Text;
-					label28.Text = label64.Text;
-					label119.Text = label127.Text;
-					label118.Text = label133.Text;
 
 
 
+						textBox16.Text = label45.Text;
+						label50.Text = label17.Text;
+						label66.Text = label21.Text;
+						label125.Text = label8.Text;
+						label131.Text = label54.Text;
 
-					label18.Text = "00,000";
-					label22.Text = "00,000";
-					label19.Text = "00,000";
-					label20.Text = "00,000";
-					label16.Text = "999";
-					label29.Text = "00,000";
-					label30.Text = "00,000";
-					label31.Text = "00,000";
-					label32.Text = "00,000";
-					label42.Text = "999";
-					label35.Text = "00,000";
-					label36.Text = "00,000";
-					label37.Text = "00,000";
-					label34.Text = "00,000";
-					label43.Text = "999";
-					label38.Text = "00,000";
-					label39.Text = "00,000";
-					label40.Text = "00,000";
-					label41.Text = "00,000";
-					label44.Text = "999";
+						textBox17.Text = label46.Text;
+						label51.Text = label24.Text;
+						label63.Text = label27.Text;
+						label126.Text = label56.Text;
+						label132.Text = label57.Text;
 
+						textBox18.Text = label47.Text;
+						label52.Text = label23.Text;
+						label64.Text = label26.Text;
+						label127.Text = label117.Text;
+						label133.Text = label58.Text;
+
+						textBox19.Text = label48.Text;
+						label53.Text = label25.Text;
+						label65.Text = label28.Text;
+						label128.Text = label119.Text;
+						label134.Text = label118.Text;
+
+
+
+
+						label45.Text = textBox17.Text;
+						label17.Text = label51.Text;
+						label21.Text = label63.Text;
+						label8.Text = label126.Text;
+						label54.Text = label132.Text;
+
+						label46.Text = textBox19.Text;
+						label24.Text = label53.Text;
+						label27.Text = label65.Text;
+						label56.Text = label128.Text;
+						label57.Text = label134.Text;
+
+						label47.Text = textBox16.Text;
+						label23.Text = label50.Text;
+						label26.Text = label66.Text;
+						label117.Text = label125.Text;
+						label58.Text = label131.Text;
+
+						label48.Text = textBox18.Text;
+						label25.Text = label52.Text;
+						label28.Text = label64.Text;
+						label119.Text = label127.Text;
+						label118.Text = label133.Text;
+
+
+
+
+						label18.Text = "00,000";
+						label22.Text = "00,000";
+						label19.Text = "00,000";
+						label20.Text = "00,000";
+						label16.Text = "999";
+						label29.Text = "00,000";
+						label30.Text = "00,000";
+						label31.Text = "00,000";
+						label32.Text = "00,000";
+						label42.Text = "999";
+						label35.Text = "00,000";
+						label36.Text = "00,000";
+						label37.Text = "00,000";
+						label34.Text = "00,000";
+						label43.Text = "999";
+						label38.Text = "00,000";
+						label39.Text = "00,000";
+						label40.Text = "00,000";
+						label41.Text = "00,000";
+						label44.Text = "999";
+                    }
+                    else
+                    {
+						
+						string lane1, lane2, lane3, lane4, lane5; // перемінні для імен
+						string value1, value2, value3, value4, value5; // перемінні для кіл
+
+						//перехід між доріжками
+						timer32.Enabled = false;
+
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+
+
+
+						lanes1 = Convert.ToInt32(label17.Text);
+						lane2_2 = Convert.ToInt32(label24.Text);
+						lane3_3 = Convert.ToInt32(label23.Text);
+						lane4_4 = Convert.ToInt32(label25.Text);
+						lane5_5 = Convert.ToInt32(label75.Text);
+
+						lane1 = label45.Text;
+						lane2 = label46.Text;
+						lane3 = label47.Text;
+						lane4 = label48.Text;
+						lane5 = label72.Text;
+
+						label47.Text = lane1;
+						label72.Text = lane2;
+						label48.Text = lane3;
+						label46.Text = lane4;
+						label45.Text = lane5;
+
+
+						value1 = label17.Text;
+						value2 = label24.Text;
+						value3 = label23.Text;
+						value4 = label25.Text;
+						value5 = label75.Text;
+
+						label23.Text = value1;
+						label75.Text = value2;
+						label25.Text = value3;
+						label24.Text = value4;
+						label17.Text = value5;
+
+
+
+						label18.Text = "00,000";
+						label22.Text = "00,000";
+						label19.Text = "00,000";
+						label20.Text = "00,000";
+						label16.Text = "999";
+						label29.Text = "00,000";
+						label30.Text = "00,000";
+						label31.Text = "00,000";
+						label32.Text = "00,000";
+						label42.Text = "999";
+						label35.Text = "00,000";
+						label36.Text = "00,000";
+						label37.Text = "00,000";
+						label34.Text = "00,000";
+						label43.Text = "999";
+						label38.Text = "00,000";
+						label39.Text = "00,000";
+						label40.Text = "00,000";
+						label41.Text = "00,000";
+						label44.Text = "999";
+
+
+
+
+
+
+
+					}
 
 
 					//сортування результату
@@ -556,10 +652,23 @@ namespace zase4kak
 				label69.BackColor = Color.Green;
 				button10.Enabled = false;
 				button11.Enabled = true;
-				Time = Convert.ToDouble(label63.Text);
-				Timeg = Convert.ToDouble(label64.Text);
-				Timez = Convert.ToDouble(label65.Text);
-				Times = Convert.ToDouble(label66.Text);
+
+				if(label72.Visible == false)
+                {
+					Time = Convert.ToDouble(label63.Text);
+					Timeg = Convert.ToDouble(label64.Text);
+					Timez = Convert.ToDouble(label65.Text);
+					Times = Convert.ToDouble(label66.Text);
+                }
+                else
+                {
+					Time = Timeb;
+					Timeg = Convert.ToDouble(label26.Text);
+					Timez = Convert.ToDouble(label28.Text);
+					Times = Convert.ToDouble(label21.Text);
+					Timeb = Convert.ToDouble(label27.Text);
+				}
+				
 
 				timer3.Enabled = false;
 				timer4.Enabled = true;
@@ -573,17 +682,36 @@ namespace zase4kak
 					min = Convert.ToInt32(textBox24.Text);
 				}
 
-				label4.Text = "00:00";
-				label13.Text = "<<Гонка!>>";
-				label15.Text = "2/4";
-				timer32.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer16.Enabled = true;
 
-				button6.Enabled = true;
-				button6.Focus();
+				//для простою
+				if (label72.Visible == false)
+				{
+					label4.Text = "00:00";
+					label13.Text = "<<Гонка!>>";
+					label15.Text = "2/4";
+					timer32.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
+
+					button6.Enabled = true;
+					button6.Focus();
+                }
+                else
+                {
+					label4.Text = "00:00";
+					label13.Text = "<<Гонка!>>";
+					label15.Text = "2/5";
+					timer32.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
+
+					button6.Enabled = true;
+					button6.Focus();
+				}
 			}
 		}
 
@@ -621,96 +749,184 @@ namespace zase4kak
 					label13.Text = "<<Перехід!>>";
 
 					button6.Enabled = false;
+
+
 					//перехід між доріжками
-					timer32.Enabled = false;
-					timer17.Enabled = false;
-					timer11.Enabled = false;
-					timer15.Enabled = false;
-					timer16.Enabled = false;
+					if (label72.Visible == false)
+					{
+
+						timer32.Enabled = false;
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
 
 
-					//
+						//
 
-					lane3 = Convert.ToInt32(label23.Text) - lane1;
-					lane2_1 = Convert.ToInt32(label17.Text) - lane2_2;
-					lane3_4 = Convert.ToInt32(label25.Text) - lane3_3;
-					lane4_2 = Convert.ToInt32(label24.Text) - lane4_4;
-
-
-					textBox16.Text = label45.Text;
-					label50.Text = label17.Text;
-					label66.Text = label21.Text;
-					label125.Text = label8.Text;
-					label131.Text = label54.Text;
-
-					textBox17.Text = label46.Text;
-					label51.Text = label24.Text;
-					label63.Text = label27.Text;
-					label126.Text = label56.Text;
-					label132.Text = label57.Text;
-
-					textBox18.Text = label47.Text;
-					label52.Text = label23.Text;
-					label64.Text = label26.Text;
-					label127.Text = label117.Text;
-					label133.Text = label58.Text;
-
-					textBox19.Text = label48.Text;
-					label53.Text = label25.Text;
-					label65.Text = label28.Text;
-					label128.Text = label119.Text;
-					label134.Text = label118.Text;
+						lanes3 = Convert.ToInt32(label23.Text) - lanes1;
+						lane2_1 = Convert.ToInt32(label17.Text) - lane2_2;
+						lane3_4 = Convert.ToInt32(label25.Text) - lane3_3;
+						lane4_2 = Convert.ToInt32(label24.Text) - lane4_4;
 
 
+						textBox16.Text = label45.Text;
+						label50.Text = label17.Text;
+						label66.Text = label21.Text;
+						label125.Text = label8.Text;
+						label131.Text = label54.Text;
 
+						textBox17.Text = label46.Text;
+						label51.Text = label24.Text;
+						label63.Text = label27.Text;
+						label126.Text = label56.Text;
+						label132.Text = label57.Text;
 
-					label45.Text = textBox17.Text;
-					label17.Text = label51.Text;
-					label21.Text = label63.Text;
-					label8.Text = label126.Text;
-					label54.Text = label132.Text;
+						textBox18.Text = label47.Text;
+						label52.Text = label23.Text;
+						label64.Text = label26.Text;
+						label127.Text = label117.Text;
+						label133.Text = label58.Text;
 
-					label46.Text = textBox19.Text;
-					label24.Text = label53.Text;
-					label27.Text = label65.Text;
-					label56.Text = label128.Text;
-					label57.Text = label134.Text;
-
-					label47.Text = textBox16.Text;
-					label23.Text = label50.Text;
-					label26.Text = label66.Text;
-					label117.Text = label125.Text;
-					label58.Text = label131.Text;
-
-					label48.Text = textBox18.Text;
-					label25.Text = label52.Text;
-					label28.Text = label64.Text;
-					label119.Text = label127.Text;
-					label118.Text = label133.Text;
-
-					label18.Text = "00,000";
-					label22.Text = "00,000";
-					label19.Text = "00,000";
-					label20.Text = "00,000";
-					label16.Text = "999";
-					label29.Text = "00,000";
-					label30.Text = "00,000";
-					label31.Text = "00,000";
-					label32.Text = "00,000";
-					label42.Text = "999";
-					label35.Text = "00,000";
-					label36.Text = "00,000";
-					label37.Text = "00,000";
-					label34.Text = "00,000";
-					label43.Text = "999";
-					label38.Text = "00,000";
-					label39.Text = "00,000";
-					label40.Text = "00,000";
-					label41.Text = "00,000";
-					label44.Text = "999";
+						textBox19.Text = label48.Text;
+						label53.Text = label25.Text;
+						label65.Text = label28.Text;
+						label128.Text = label119.Text;
+						label134.Text = label118.Text;
 
 
 
+
+						label45.Text = textBox17.Text;
+						label17.Text = label51.Text;
+						label21.Text = label63.Text;
+						label8.Text = label126.Text;
+						label54.Text = label132.Text;
+
+						label46.Text = textBox19.Text;
+						label24.Text = label53.Text;
+						label27.Text = label65.Text;
+						label56.Text = label128.Text;
+						label57.Text = label134.Text;
+
+						label47.Text = textBox16.Text;
+						label23.Text = label50.Text;
+						label26.Text = label66.Text;
+						label117.Text = label125.Text;
+						label58.Text = label131.Text;
+
+						label48.Text = textBox18.Text;
+						label25.Text = label52.Text;
+						label28.Text = label64.Text;
+						label119.Text = label127.Text;
+						label118.Text = label133.Text;
+
+						label18.Text = "00,000";
+						label22.Text = "00,000";
+						label19.Text = "00,000";
+						label20.Text = "00,000";
+						label16.Text = "999";
+						label29.Text = "00,000";
+						label30.Text = "00,000";
+						label31.Text = "00,000";
+						label32.Text = "00,000";
+						label42.Text = "999";
+						label35.Text = "00,000";
+						label36.Text = "00,000";
+						label37.Text = "00,000";
+						label34.Text = "00,000";
+						label43.Text = "999";
+						label38.Text = "00,000";
+						label39.Text = "00,000";
+						label40.Text = "00,000";
+						label41.Text = "00,000";
+						label44.Text = "999";
+
+
+                    }
+                    else
+                    {
+						string value1, value2, value3, value4, value5; // перемінні для кіл
+
+						string lane1, lane2, lane3, lane4, lane5; // перемінні для імя
+
+
+						//перехід між доріжками
+						timer32.Enabled = false;
+
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+
+
+						lanes3 = Convert.ToInt32(label23.Text) - lanes1;
+						lane2_5 = Convert.ToInt32(label75.Text) - lane2_2;
+						lane3_4 = Convert.ToInt32(label25.Text) - lane3_3;
+						lane4_2 = Convert.ToInt32(label24.Text) - lane4_4;
+						lane5_1 = Convert.ToInt32(label17.Text) - lane5_5;
+
+
+
+
+						lane1 = label47.Text;
+						lane2 = label72.Text;
+						lane3 = label48.Text;
+						lane4 = label46.Text;
+						lane5 = label45.Text;
+
+						label48.Text = lane1;
+						label45.Text = lane2;
+						label46.Text = lane3;
+						label72.Text = lane4;
+						label47.Text = lane5;
+
+
+
+
+						value1 = label23.Text;
+						value2 = label75.Text;
+						value3 = label25.Text;
+						value4 = label24.Text;
+						value5 = label17.Text;
+
+						label25.Text = value1;
+						label17.Text = value2;
+						label24.Text = value3;
+						label75.Text = value4;
+						label23.Text = value5;
+
+
+
+
+
+
+						label18.Text = "00,000";
+						label22.Text = "00,000";
+						label19.Text = "00,000";
+						label20.Text = "00,000";
+						label16.Text = "999";
+						label29.Text = "00,000";
+						label30.Text = "00,000";
+						label31.Text = "00,000";
+						label32.Text = "00,000";
+						label42.Text = "999";
+						label35.Text = "00,000";
+						label36.Text = "00,000";
+						label37.Text = "00,000";
+						label34.Text = "00,000";
+						label43.Text = "999";
+						label38.Text = "00,000";
+						label39.Text = "00,000";
+						label40.Text = "00,000";
+						label41.Text = "00,000";
+						label44.Text = "999";
+
+
+
+
+
+					}
 
 
 					//сортування результату
@@ -917,10 +1133,21 @@ namespace zase4kak
 				timer5.Enabled = false;
 				timer6.Enabled = true;
 
-				Time = Convert.ToDouble(label63.Text);
-				Timeg = Convert.ToDouble(label64.Text);
-				Timez = Convert.ToDouble(label65.Text);
-				Times = Convert.ToDouble(label66.Text);
+				if (label72.Visible == false)
+				{
+					Time = Convert.ToDouble(label63.Text);
+					Timeg = Convert.ToDouble(label64.Text);
+					Timez = Convert.ToDouble(label65.Text);
+					Times = Convert.ToDouble(label66.Text);
+				}
+				else
+				{
+					Time = Timeb;
+					Timeg = Convert.ToDouble(label26.Text);
+					Timez = Convert.ToDouble(label28.Text);
+					Times = Convert.ToDouble(label21.Text);
+					Timeb = Convert.ToDouble(label27.Text);
+				}
 
 
 				sec = 1;
@@ -935,18 +1162,35 @@ namespace zase4kak
 					min = Convert.ToInt32(textBox24.Text);
 				}
 
+				//для простою
+				if (label72.Visible == false)
+				{
+					label4.Text = "00:00";
+					label13.Text = "<<Гонка!>>";
+					label15.Text = "3/4";
+					timer32.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
 
-				label4.Text = "00:00";
-				label13.Text = "<<Гонка!>>";
-				label15.Text = "3/4";
-				timer32.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer16.Enabled = true;
+					button6.Enabled = true;
+					button6.Focus();
+                }
+                else
+                {
+					label4.Text = "00:00";
+					label13.Text = "<<Гонка!>>";
+					label15.Text = "3/5";
+					timer32.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
 
-				button6.Enabled = true;
-				button6.Focus();
+					button6.Enabled = true;
+					button6.Focus();
+				}
 			}
 
 		}
@@ -1016,25 +1260,30 @@ namespace zase4kak
 					timer7.Enabled = true;
 					label13.Text = "<<Перехід!>>";
 					button6.Enabled = false;
+
+
+
 					//перехід між доріжками
 
-					timer32.Enabled = false;
-					timer17.Enabled = false;
-					timer11.Enabled = false;
-					timer15.Enabled = false;
-					timer16.Enabled = false;
+
+
+					if (label72.Visible == false)
+					{
+						timer32.Enabled = false;
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
 
 
 
 
-					//
+						//
 
-					lane4 = Convert.ToInt32(label25.Text) - lane1 - lane3;
-					lane2_3 = Convert.ToInt32(label23.Text) - lane2_1 -lane2_2;
-					lane3_2 = Convert.ToInt32(label24.Text) - lane3_3 - lane3_4;
-					lane4_1 = Convert.ToInt32(label17.Text) - lane4_4 - lane4_2;
-
-
+						lanes4 = Convert.ToInt32(label25.Text) - lanes1 - lanes3;
+						lane2_3 = Convert.ToInt32(label23.Text) - lane2_1 - lane2_2;
+						lane3_2 = Convert.ToInt32(label24.Text) - lane3_3 - lane3_4;
+						lane4_1 = Convert.ToInt32(label17.Text) - lane4_4 - lane4_2;
 
 
 
@@ -1042,79 +1291,168 @@ namespace zase4kak
 
 
 
-					textBox16.Text = label45.Text;
-					label50.Text = label17.Text;
-					label66.Text = label21.Text;
-					label125.Text = label8.Text;
-					label131.Text = label54.Text;
-
-					textBox17.Text = label46.Text;
-					label51.Text = label24.Text;
-					label63.Text = label27.Text;
-					label126.Text = label56.Text;
-					label132.Text = label57.Text;
-
-					textBox18.Text = label47.Text;
-					label52.Text = label23.Text;
-					label64.Text = label26.Text;
-					label127.Text = label117.Text;
-					label133.Text = label58.Text;
-
-					textBox19.Text = label48.Text;
-					label53.Text = label25.Text;
-					label65.Text = label28.Text;
-					label128.Text = label119.Text;
-					label134.Text = label118.Text;
 
 
+						textBox16.Text = label45.Text;
+						label50.Text = label17.Text;
+						label66.Text = label21.Text;
+						label125.Text = label8.Text;
+						label131.Text = label54.Text;
+
+						textBox17.Text = label46.Text;
+						label51.Text = label24.Text;
+						label63.Text = label27.Text;
+						label126.Text = label56.Text;
+						label132.Text = label57.Text;
+
+						textBox18.Text = label47.Text;
+						label52.Text = label23.Text;
+						label64.Text = label26.Text;
+						label127.Text = label117.Text;
+						label133.Text = label58.Text;
+
+						textBox19.Text = label48.Text;
+						label53.Text = label25.Text;
+						label65.Text = label28.Text;
+						label128.Text = label119.Text;
+						label134.Text = label118.Text;
 
 
-					label45.Text = textBox17.Text;
-					label17.Text = label51.Text;
-					label21.Text = label63.Text;
-					label8.Text = label126.Text;
-					label54.Text = label132.Text;
-
-					label46.Text = textBox19.Text;
-					label24.Text = label53.Text;
-					label27.Text = label65.Text;
-					label56.Text = label128.Text;
-					label57.Text = label134.Text;
-
-					label47.Text = textBox16.Text;
-					label23.Text = label50.Text;
-					label26.Text = label66.Text;
-					label117.Text = label125.Text;
-					label58.Text = label131.Text;
-
-					label48.Text = textBox18.Text;
-					label25.Text = label52.Text;
-					label28.Text = label64.Text;
-					label119.Text = label127.Text;
-					label118.Text = label133.Text;
-
-					label18.Text = "00,000";
-					label22.Text = "00,000";
-					label19.Text = "00,000";
-					label20.Text = "00,000";
-					label16.Text = "999";
-					label29.Text = "00,000";
-					label30.Text = "00,000";
-					label31.Text = "00,000";
-					label32.Text = "00,000";
-					label42.Text = "999";
-					label35.Text = "00,000";
-					label36.Text = "00,000";
-					label37.Text = "00,000";
-					label34.Text = "00,000";
-					label43.Text = "999";
-					label38.Text = "00,000";
-					label39.Text = "00,000";
-					label40.Text = "00,000";
-					label41.Text = "00,000";
-					label44.Text = "999";
 
 
+						label45.Text = textBox17.Text;
+						label17.Text = label51.Text;
+						label21.Text = label63.Text;
+						label8.Text = label126.Text;
+						label54.Text = label132.Text;
+
+						label46.Text = textBox19.Text;
+						label24.Text = label53.Text;
+						label27.Text = label65.Text;
+						label56.Text = label128.Text;
+						label57.Text = label134.Text;
+
+						label47.Text = textBox16.Text;
+						label23.Text = label50.Text;
+						label26.Text = label66.Text;
+						label117.Text = label125.Text;
+						label58.Text = label131.Text;
+
+						label48.Text = textBox18.Text;
+						label25.Text = label52.Text;
+						label28.Text = label64.Text;
+						label119.Text = label127.Text;
+						label118.Text = label133.Text;
+
+						label18.Text = "00,000";
+						label22.Text = "00,000";
+						label19.Text = "00,000";
+						label20.Text = "00,000";
+						label16.Text = "999";
+						label29.Text = "00,000";
+						label30.Text = "00,000";
+						label31.Text = "00,000";
+						label32.Text = "00,000";
+						label42.Text = "999";
+						label35.Text = "00,000";
+						label36.Text = "00,000";
+						label37.Text = "00,000";
+						label34.Text = "00,000";
+						label43.Text = "999";
+						label38.Text = "00,000";
+						label39.Text = "00,000";
+						label40.Text = "00,000";
+						label41.Text = "00,000";
+						label44.Text = "999";
+
+                    }
+                    else
+                    {
+
+
+
+						string value1, value2, value3, value4, value5; // перемінні для кіл
+
+						string lane1, lane2, lane3, lane4, lane5; // перемінні для імя
+
+						
+
+						//перехід між доріжками
+						timer32.Enabled = false;
+
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+
+
+						//
+
+						lanes4 = Convert.ToInt32(label25.Text) - lanes1 - lanes3;
+						lane2_1 = Convert.ToInt32(label17.Text) - lane2_2 - lane2_5;
+						lane3_2 = Convert.ToInt32(label24.Text) - lane3_3 - lane3_4;
+						lane4_5 = Convert.ToInt32(label75.Text) - lane4_4 - lane4_2;
+						lane5_3 = Convert.ToInt32(label23.Text) -lane5_5 - lane5_1;
+
+						lane1 = label48.Text;
+						lane2 = label45.Text;
+						lane3 = label46.Text;
+						lane4 = label72.Text;
+						lane5 = label47.Text;
+
+						label46.Text = lane1;
+						label47.Text = lane2;
+						label72.Text = lane3;
+						label45.Text = lane4;
+						label48.Text = lane5;
+
+
+
+
+
+						value1 = label25.Text;
+						value2 = label17.Text;
+						value3 = label24.Text;
+						value4 = label75.Text;
+						value5 = label23.Text;
+
+						label24.Text = value1;
+						label23.Text = value2;
+						label75.Text = value3;
+						label17.Text = value4;
+						label25.Text = value5;
+
+
+
+
+
+
+						label18.Text = "00,000";
+						label22.Text = "00,000";
+						label19.Text = "00,000";
+						label20.Text = "00,000";
+						label16.Text = "999";
+						label29.Text = "00,000";
+						label30.Text = "00,000";
+						label31.Text = "00,000";
+						label32.Text = "00,000";
+						label42.Text = "999";
+						label35.Text = "00,000";
+						label36.Text = "00,000";
+						label37.Text = "00,000";
+						label34.Text = "00,000";
+						label43.Text = "999";
+						label38.Text = "00,000";
+						label39.Text = "00,000";
+						label40.Text = "00,000";
+						label41.Text = "00,000";
+						label44.Text = "999";
+
+
+
+
+
+					}
 
 					//сортування результату
 					dataGridView3.Rows.Add(label17.Text + "," + 6);
@@ -1315,14 +1653,18 @@ namespace zase4kak
 		{
 			comboBox1.Text = Settings.Default.zase4ka_comPort;
 			int n = ExportExcel();
+
+
+
 			listBox1.Items.Clear();
 			string s;
 			for (int i = 0; i < n; i++) // по всем строкам
 			{
 				s = "";
-				for (int j = 1; j < 2; j++) //по всем колонкам
+				for (int j = 1; j < 2;  j++) //по всем колонкам
 					s += list[i, j];
 				listBox1.Items.Add(s);
+				
 			}
 
 
@@ -1560,7 +1902,105 @@ namespace zase4kak
 						label71.Text = "<< Фінал! >>";
 						break;
 					}
+				case 229:
+                    {
+						label72.Visible = false;
+						label74.Visible = false;
+						label75.Visible = false;
+						label90.Visible = false;
+						break;
+                    }
+				default:
+					{
 
+						//простой
+						if (Convert.ToInt32(label67.Text) != 0)
+						{
+							label67.Text = "229";
+
+							DialogResult dialog = MessageBox.Show(
+					 "Бажаєте загрузити простій?",
+					 "Групи не повні!",
+					 MessageBoxButtons.YesNo,
+					 MessageBoxIcon.Warning
+
+					);
+							if (dialog == DialogResult.Yes)
+							{
+
+								int collum_back_color = 0;
+								
+
+								int number_raiser = 1;
+								for (int a = 1; listBox1.Items.Count > a; a++)
+								{
+
+									dataGridView4.Rows.Add(number_raiser, listBox1.Items[a]);
+									number_raiser = number_raiser + 1;
+
+
+
+									
+									
+
+								}
+								
+
+								for(int i = 0; i < listBox1.Items.Count; i++)
+                                {
+
+									if (collum_back_color <= 3)
+									{
+										dataGridView4.Rows[i].DefaultCellStyle.BackColor = Color.Lime;
+										collum_back_color = collum_back_color + 1;
+
+
+									}
+									else
+									{
+										if (collum_back_color >= 3 && collum_back_color <= 7)
+										{
+											dataGridView4.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+											collum_back_color = collum_back_color + 1;
+
+										}
+										else
+										{
+											dataGridView4.Rows[i].DefaultCellStyle.BackColor = Color.Lime;
+											collum_back_color = 1;
+										}
+
+
+
+									}
+								}
+
+
+
+
+
+
+
+
+								dataGridView4.Visible = true;
+								button22.Visible = true;
+								dataGridView4.Size = new Size (371, 421);
+								dataGridView4.Location = new Point(1145, 624);
+								button1.Visible = false;
+
+
+
+							}
+							else
+							{
+								label72.Visible = false;
+								break;
+							}
+
+							
+						}
+						break;
+					}
 			}
 
 
@@ -3035,6 +3475,19 @@ namespace zase4kak
 				button7.Focus();
 			}
 
+			if(number_group.Text == "4")
+            {
+				serialPort1.Close();
+				timer38.Enabled = false;
+				timer17.Enabled = false;
+				timer11.Enabled = false;
+				timer15.Enabled = false;
+				timer16.Enabled = false;
+				button6.Visible = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+
 		}
 
 		private void button7_Click(object sender, EventArgs e)
@@ -3215,70 +3668,163 @@ namespace zase4kak
 
 
 
-
-
-				// алгоритм прогнозу
-				if (label15.Text == "1/4")
+				if (label72.Visible == false)
 				{
-					//double masuv, kola, seredniychas, prognoz;
 
-					kola = Convert.ToDouble(label29.Text);
-					masuv = Convert.ToDouble(label56.Text);
-					seredniychas2 = Convert.ToDouble(label57.Text);
-					kola = (kola + masuv);
-					label56.Text = Convert.ToString(kola);
-					seredniychas2 = kola / Convert.ToDouble(label24.Text);
 
-				}
-				else
-				{
-					if (label15.Text == "2/4")
+
+					// алгоритм прогнозу
+					if (label15.Text == "1/4")
 					{
 						//double masuv, kola, seredniychas, prognoz;
+
 						kola = Convert.ToDouble(label29.Text);
 						masuv = Convert.ToDouble(label56.Text);
-						seredniychas4 = Convert.ToDouble(label57.Text);
+						seredniychas2 = Convert.ToDouble(label57.Text);
 						kola = (kola + masuv);
 						label56.Text = Convert.ToString(kola);
-						seredniychas4 = kola / Convert.ToDouble(label24.Text);
+						seredniychas2 = kola / Convert.ToDouble(label24.Text);
 
 					}
 					else
 					{
-						if (label15.Text == "3/4")
+						if (label15.Text == "2/4")
 						{
 							//double masuv, kola, seredniychas, prognoz;
 							kola = Convert.ToDouble(label29.Text);
 							masuv = Convert.ToDouble(label56.Text);
-							seredniychas3 = Convert.ToDouble(label57.Text);
+							seredniychas4 = Convert.ToDouble(label57.Text);
 							kola = (kola + masuv);
 							label56.Text = Convert.ToString(kola);
-							seredniychas3 = kola / Convert.ToDouble(label24.Text);
+							seredniychas4 = kola / Convert.ToDouble(label24.Text);
 
 						}
 						else
 						{
-							if (label15.Text == "4/4")
+							if (label15.Text == "3/4")
 							{
-								//	double masuv, kola, seredniychas, prognoz;
+								//double masuv, kola, seredniychas, prognoz;
 								kola = Convert.ToDouble(label29.Text);
 								masuv = Convert.ToDouble(label56.Text);
-								seredniychas1 = Convert.ToDouble(label57.Text);
+								seredniychas3 = Convert.ToDouble(label57.Text);
 								kola = (kola + masuv);
 								label56.Text = Convert.ToString(kola);
-								seredniychas1 = kola / Convert.ToDouble(label24.Text);
+								seredniychas3 = kola / Convert.ToDouble(label24.Text);
 
-								if (label13.Text == "<<Фініш!>>")
+							}
+							else
+							{
+								if (label15.Text == "4/4")
 								{
-									masuv = 0;
-									kola = 0;
-									seredniychas = 0;
-									prognoz = 0;
+									//	double masuv, kola, seredniychas, prognoz;
+									kola = Convert.ToDouble(label29.Text);
+									masuv = Convert.ToDouble(label56.Text);
+									seredniychas1 = Convert.ToDouble(label57.Text);
+									kola = (kola + masuv);
+									label56.Text = Convert.ToString(kola);
+									seredniychas1 = kola / Convert.ToDouble(label24.Text);
+
+									if (label13.Text == "<<Фініш!>>")
+									{
+										masuv = 0;
+										kola = 0;
+										seredniychas = 0;
+										prognoz = 0;
+									}
+
 								}
 
 							}
+						}
+					}
+
+
+
+				}
+				else
+				{
+
+
+
+
+
+					// алгоритм прогнозу
+					if (label15.Text == "1/5")
+					{
+						//double masuv, kola, seredniychas, prognoz;
+
+						kola = Convert.ToDouble(label29.Text);
+						masuv = Convert.ToDouble(label56.Text);
+						seredniychas2 = Convert.ToDouble(label57.Text);
+						kola = (kola + masuv);
+						label56.Text = Convert.ToString(kola);
+						seredniychas2 = kola / Convert.ToDouble(label24.Text);
+
+					}
+					else
+					{
+						if (label15.Text == "2/5")
+						{
+							//double masuv, kola, seredniychas, prognoz;
+							kola = Convert.ToDouble(label29.Text);
+							masuv = Convert.ToDouble(label56.Text);
+							seredniychas4 = Convert.ToDouble(label57.Text);
+							kola = (kola + masuv);
+							label56.Text = Convert.ToString(kola);
+							seredniychas4 = kola / Convert.ToDouble(label24.Text);
 
 						}
+						else
+						{
+							if (label15.Text == "3/5")
+							{
+								//double masuv, kola, seredniychas, prognoz;
+								kola = Convert.ToDouble(label29.Text);
+								masuv = Convert.ToDouble(label56.Text);
+								seredniychas3 = Convert.ToDouble(label57.Text);
+								kola = (kola + masuv);
+								label56.Text = Convert.ToString(kola);
+								seredniychas3 = kola / Convert.ToDouble(label24.Text);
+
+							}
+							else
+							{
+								if (label15.Text == "4/5")
+								{
+									//	double masuv, kola, seredniychas, prognoz;
+									kola = Convert.ToDouble(label29.Text);
+									masuv = Convert.ToDouble(label56.Text);
+									seredniychas1 = Convert.ToDouble(label57.Text);
+									kola = (kola + masuv);
+									label56.Text = Convert.ToString(kola);
+									seredniychas1 = kola / Convert.ToDouble(label24.Text);
+								}
+								else
+								{
+									if (label15.Text == "5/5")
+									{
+										//	double masuv, kola, seredniychas, prognoz;
+										kola = Convert.ToDouble(label29.Text);
+										masuv = Convert.ToDouble(label56.Text);
+										seredniychas5 = Convert.ToDouble(label57.Text);
+										kola = (kola + masuv);
+										label56.Text = Convert.ToString(kola);
+										seredniychas5 = kola / Convert.ToDouble(label24.Text);
+								
+
+									if (label13.Text == "<<Фініш!>>")
+									{
+										masuv = 0;
+										kola = 0;
+										seredniychas = 0;
+										prognoz = 0;
+									}
+									 }
+								}
+
+							}
+						}
+
 					}
 				}
 
@@ -3286,8 +3832,23 @@ namespace zase4kak
 
 
 
-				// підсвітка під час кола
-				textBox6.BackColor = Color.LawnGreen;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					// підсвітка під час кола
+					textBox6.BackColor = Color.LawnGreen;
 				label24.BackColor = Color.LawnGreen;
 				timer28.Enabled = true;
 
@@ -3305,78 +3866,169 @@ namespace zase4kak
 
 
 
-
-
-				// алгоритм прогнозу
-
-				if (label15.Text == "1/4")
+				if (label72.Visible == false)
 				{
-					//double masuv, kola, seredniychas, prognoz;
-					kola = Convert.ToDouble(label38.Text);
-					masuv = Convert.ToDouble(label119.Text);
-					seredniychas4 = Convert.ToDouble(label118.Text);
-					kola = (kola + masuv);
-					label119.Text = Convert.ToString(kola);
-					seredniychas4 = kola / Convert.ToDouble(label25.Text);
-				}
-				else
-				{
-					if (label15.Text == "2/4")
+
+					// алгоритм прогнозу
+
+					if (label15.Text == "1/4")
 					{
 						//double masuv, kola, seredniychas, prognoz;
 						kola = Convert.ToDouble(label38.Text);
 						masuv = Convert.ToDouble(label119.Text);
-						seredniychas3 = Convert.ToDouble(label118.Text);
+						seredniychas4 = Convert.ToDouble(label118.Text);
 						kola = (kola + masuv);
 						label119.Text = Convert.ToString(kola);
-						seredniychas3 = kola / Convert.ToDouble(label25.Text);
+						seredniychas4 = kola / Convert.ToDouble(label25.Text);
 					}
 					else
 					{
-						if (label15.Text == "3/4")
+						if (label15.Text == "2/4")
 						{
 							//double masuv, kola, seredniychas, prognoz;
 							kola = Convert.ToDouble(label38.Text);
 							masuv = Convert.ToDouble(label119.Text);
-							seredniychas1 = Convert.ToDouble(label118.Text);
+							seredniychas3 = Convert.ToDouble(label118.Text);
 							kola = (kola + masuv);
 							label119.Text = Convert.ToString(kola);
-							seredniychas1 = kola / Convert.ToDouble(label25.Text);
+							seredniychas3 = kola / Convert.ToDouble(label25.Text);
 						}
 						else
 						{
-							if (label15.Text == "4/4")
+							if (label15.Text == "3/4")
 							{
 								//double masuv, kola, seredniychas, prognoz;
 								kola = Convert.ToDouble(label38.Text);
 								masuv = Convert.ToDouble(label119.Text);
-								seredniychas2 = Convert.ToDouble(label118.Text);
+								seredniychas1 = Convert.ToDouble(label118.Text);
 								kola = (kola + masuv);
 								label119.Text = Convert.ToString(kola);
-								seredniychas2 = kola / Convert.ToDouble(label25.Text);
-								if (label13.Text == "<<Фініш!>>")
-								{
-									masuv = 0;
-									kola = 0;
-									seredniychas = 0;
-									prognoz = 0;
-								}
+								seredniychas1 = kola / Convert.ToDouble(label25.Text);
 							}
+							else
+							{
+								if (label15.Text == "4/4")
+								{
+									//double masuv, kola, seredniychas, prognoz;
+									kola = Convert.ToDouble(label38.Text);
+									masuv = Convert.ToDouble(label119.Text);
+									seredniychas2 = Convert.ToDouble(label118.Text);
+									kola = (kola + masuv);
+									label119.Text = Convert.ToString(kola);
+									seredniychas2 = kola / Convert.ToDouble(label25.Text);
+									if (label13.Text == "<<Фініш!>>")
+									{
+										masuv = 0;
+										kola = 0;
+										seredniychas = 0;
+										prognoz = 0;
+									}
+								}
 
+							}
 						}
 					}
+
+				}
+				else
+				{
+
+
+					// алгоритм прогнозу
+
+					if (label15.Text == "1/5")
+					{
+						//double masuv, kola, seredniychas, prognoz;
+						kola = Convert.ToDouble(label38.Text);
+						masuv = Convert.ToDouble(label119.Text);
+						seredniychas4 = Convert.ToDouble(label118.Text);
+						kola = (kola + masuv);
+						label119.Text = Convert.ToString(kola);
+						seredniychas4 = kola / Convert.ToDouble(label25.Text);
+					}
+					else
+					{
+						if (label15.Text == "2/5")
+						{
+							//double masuv, kola, seredniychas, prognoz;
+							kola = Convert.ToDouble(label38.Text);
+							masuv = Convert.ToDouble(label119.Text);
+							seredniychas3 = Convert.ToDouble(label118.Text);
+							kola = (kola + masuv);
+							label119.Text = Convert.ToString(kola);
+							seredniychas3 = kola / Convert.ToDouble(label25.Text);
+						}
+						else
+						{
+							if (label15.Text == "3/5")
+							{
+								//double masuv, kola, seredniychas, prognoz;
+								kola = Convert.ToDouble(label38.Text);
+								masuv = Convert.ToDouble(label119.Text);
+								seredniychas1 = Convert.ToDouble(label118.Text);
+								kola = (kola + masuv);
+								label119.Text = Convert.ToString(kola);
+								seredniychas1 = kola / Convert.ToDouble(label25.Text);
+							}
+							else
+							{
+								if (label15.Text == "4/5")
+								{
+									//double masuv, kola, seredniychas, prognoz;
+									kola = Convert.ToDouble(label38.Text);
+									masuv = Convert.ToDouble(label119.Text);
+									seredniychas5 = Convert.ToDouble(label118.Text);
+									kola = (kola + masuv);
+									label119.Text = Convert.ToString(kola);
+									seredniychas5 = kola / Convert.ToDouble(label25.Text);
+								}
+								else
+								{
+
+									if (label15.Text == "5/5")
+									{
+										//double masuv, kola, seredniychas, prognoz;
+										kola = Convert.ToDouble(label38.Text);
+										masuv = Convert.ToDouble(label119.Text);
+										seredniychas2 = Convert.ToDouble(label118.Text);
+										kola = (kola + masuv);
+										label119.Text = Convert.ToString(kola);
+										seredniychas2 = kola / Convert.ToDouble(label25.Text);
+									
+
+										if (label13.Text == "<<Фініш!>>")
+									{
+										masuv = 0;
+										kola = 0;
+										seredniychas = 0;
+										prognoz = 0;
+									}
+								  }
+								}
+
+							}
+						}
+					}
+
 				}
 
 
 
+					
+
+
+
+
+					
 
 
 
 
 
 
-				// підсвітка під час кола
-				textBox12.BackColor = Color.LawnGreen;
+
+					// підсвітка під час кола
+					textBox12.BackColor = Color.LawnGreen;
 				label25.BackColor = Color.LawnGreen;
 				timer29.Enabled = true;
 				timer26.Enabled = true;
@@ -3401,6 +4053,7 @@ namespace zase4kak
 			if (label48.Text == "" && label15.Text == "номер заизду")
 			{
 				n = listBox1.Items.Count - 1;
+				
 				//label48.Text = Convert.ToString(listBox1.Items[n]);
 
 				for (int i = 0; i < n; n--)
@@ -3421,13 +4074,62 @@ namespace zase4kak
 				label45.Text = Convert.ToString(listBox1.Items[n]);
 
 				label67.Text = Convert.ToString(n);
-				//Convert.ToString(listBox1.Items.Count);
 
-				timer21.Enabled = false;
+
+
+
+				// добавляю людину з простою
+				if (prostoi_number - Convert.ToInt32(label67.Text) <= 5 && prostoi_number - Convert.ToInt32(label67.Text) >= 0)
+				{
+					label72.Visible = true;
+					label74.Visible = true;
+					label75.Visible = true;
+					label90.Visible = true;
+					prostoi = "finish";
+				}
+				else
+				{
+
+					if (prostoi_number2 - Convert.ToInt32(label67.Text) <= 5 && prostoi_number2 - Convert.ToInt32(label67.Text) >= 0 && prostoi == "finish")
+
+					{
+						label72.Text = prostoi2;
+						label72.Visible = true;
+						label74.Visible = true;
+						label75.Visible = true;
+						label90.Visible = true;
+						prostoi2 = "finish";
+					}
+					else
+					{
+						if (prostoi_number3 - Convert.ToInt32(label67.Text) <=5 && prostoi_number3 - Convert.ToInt32(label67.Text) >= 0 && prostoi == "finish" && prostoi2 == "finish")
+
+						{
+							label72.Text = prostoi3;
+							label72.Visible = true;
+							label74.Visible = true;
+							label75.Visible = true;
+							label90.Visible = true;
+							prostoi3 = "finish";
+                        }
+                        else
+                        {
+							label72.Visible = false;
+							label74.Visible = false;
+							label75.Visible = false;
+							label90.Visible = false;
+						}
+
+							
+
+					}
+
+					
+				}
 
 			}
 
-			if (Convert.ToInt32(label67.Text) != 0)
+			if (Convert.ToInt32(label67.Text) != 1)
 			{
 
 
@@ -3489,7 +4191,62 @@ namespace zase4kak
 
 
 					label67.Text = Convert.ToString(n);
-					timetostart = 5;
+
+
+
+					// добавляю людину з простою
+					if (prostoi_number - Convert.ToInt32(label67.Text) <= 5 && prostoi_number - Convert.ToInt32(label67.Text) >= 0)
+					{
+						label72.Visible = true;
+						label74.Visible = true;
+						label75.Visible = true;
+						label90.Visible = true;
+						prostoi = "finish";
+					}
+					else
+					{
+
+						if (prostoi_number2 - Convert.ToInt32(label67.Text) <= 5 && prostoi_number2 - Convert.ToInt32(label67.Text) >= 0 && prostoi == "finish")
+
+						{
+							label72.Text = prostoi2;
+							label72.Visible = true;
+							label74.Visible = true;
+							label75.Visible = true;
+							label90.Visible = true;
+							prostoi2 = "finish";
+						}
+						else
+						{
+							if (prostoi_number3 - Convert.ToInt32(label67.Text) <= 5 && prostoi_number3 - Convert.ToInt32(label67.Text) >= 0 && prostoi == "finish" && prostoi2 == "finish")
+
+							{
+								label72.Text = prostoi3;
+								label72.Visible = true;
+								label74.Visible = true;
+								label75.Visible = true;
+								label90.Visible = true;
+								prostoi3 = "finish";
+                            }
+                            else
+                            {
+								label72.Visible = false;
+								label74.Visible = false;
+								label75.Visible = false;
+								label90.Visible = false;
+							}
+
+							
+						}
+
+						
+					}
+
+				
+
+
+
+				timetostart = 5;
 					label13.Visible = false;
 					timer21.Enabled = false;
 
@@ -3517,8 +4274,9 @@ namespace zase4kak
 			textBox21.Visible = false;
 			textBox22.Visible = false;
 			textBox23.Visible = false;
+			textBox29.Visible = false;
 			button9.Visible = false;
-
+			panel6.Visible = false;
 
 			if (textBox25.Text == "")
 			{
@@ -3531,20 +4289,36 @@ namespace zase4kak
 				position = 1;
 				position1 = 0;
 
-				dataGridView1.Rows.Add("", label45.Text,lane3_1,lane3_2,lane3_3,lane3_4, label17.Text + "," + textBox20.Text);
 
-				dataGridView1.Rows.Add("", label46.Text,lane1,lane2,lane3,lane4, label24.Text + "," + textBox22.Text);
+				if (label72.Visible == false)
+				{
+					dataGridView1.Rows.Add("", label45.Text, lane3_1, lane3_2, lane3_3, lane3_4, label17.Text + "," + textBox20.Text);
 
-				dataGridView1.Rows.Add("", label47.Text,lane4_1,lane4_2,lane4_3,lane4_4, label23.Text + "," + textBox21.Text);
+					dataGridView1.Rows.Add("", label46.Text, lanes1, lanes2, lanes3, lanes4, label24.Text + "," + textBox22.Text);
 
-				dataGridView1.Rows.Add("", label48.Text,lane2_1,lane2_2,lane2_3,lane2_4, label25.Text + "," + textBox23.Text);
+					dataGridView1.Rows.Add("", label47.Text, lane4_1, lane4_2, lane4_3, lane4_4, label23.Text + "," + textBox21.Text);
 
+					dataGridView1.Rows.Add("", label48.Text, lane2_1, lane2_2, lane2_3, lane2_4, label25.Text + "," + textBox23.Text);
+                }
+                else
+                {
+					dataGridView1.Rows.Add("", label45.Text, lane3_1, lane3_2, lane3_3, lane3_4, label17.Text + "," + textBox20.Text);
+
+					dataGridView1.Rows.Add("", label46.Text, lane5_1, lane5_2, lane5_3, lane5_4, label24.Text + "," + textBox22.Text);
+
+					dataGridView1.Rows.Add("", label47.Text, lane4_1, lane4_2, lane4_3, lane4_4, label23.Text + "," + textBox21.Text);
+
+					dataGridView1.Rows.Add("", label48.Text, lane2_1, lane2_2, lane2_3, lane2_4, label25.Text + "," + textBox23.Text);
+
+					dataGridView1.Rows.Add("", label72.Text, lanes1, lanes2, lanes3, lanes4, label75.Text + "," + textBox29.Text);
+				}
 				//сортування результату гонки в таблиці
 
 
 				dataGridView1.Sort(dataGridView1.Columns[6], ListSortDirection.Descending);
 				
 				// добавляю порядок спортсмені ( порядок місць)
+
 				for (int cell = 0; dataGridView1.Rows.Count > cell; cell++)
 				{
 					
@@ -3566,7 +4340,7 @@ namespace zase4kak
 				textBox21.Text = "";
 				textBox22.Text = "";
 				textBox23.Text = "";
-
+				textBox29.Text = "";
 			}
 			else
 			{
@@ -3579,7 +4353,7 @@ namespace zase4kak
 
 				dataGridView2.Rows.Add("",label45.Text, lane3_1, lane3_2, lane3_3, lane3_4, label17.Text + "." + textBox20.Text);
 
-				dataGridView2.Rows.Add("",label46.Text, lane1, lane2, lane3, lane4, label24.Text + "." + textBox22.Text);
+				dataGridView2.Rows.Add("",label46.Text, lanes1, lanes2, lanes3, lanes4, label24.Text + "." + textBox22.Text);
 
 				dataGridView2.Rows.Add("",label47.Text, lane4_1, lane4_2, lane4_3, lane4_4, label23.Text + "." + textBox21.Text);
 
@@ -3793,10 +4567,12 @@ namespace zase4kak
 			prognoz2 = 0;
 			prognoz3 = 0;
 			prognoz4 = 0;
+			prognoz5 = 0;
 			seredniychas1 = 0;
 			seredniychas2 = 0;
 			seredniychas3 = 0;
 			seredniychas4 = 0;
+			seredniychas5 = 0;
 			masuv = 0;
 			kola = 0;
 			seredniychas = 0;
@@ -4263,6 +5039,305 @@ namespace zase4kak
 			timer26.Enabled = false;
 		}
 
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+			if (prostoi == null)
+			{
+				prostoi = Convert.ToString(dataGridView4.CurrentRow.Cells[1].Value);
+				label72.Text = prostoi;
+
+				prostoi_number = dataGridView4.CurrentRow.Index;
+				label73.Text = Convert.ToString(prostoi_number);
+
+            }
+            else
+            {
+				if (prostoi !=null && prostoi2 == null)
+				{
+					prostoi2 = Convert.ToString(dataGridView4.CurrentRow.Cells[1].Value);
+					prostoi_number2 = dataGridView4.CurrentRow.Index;
+
+                }
+                else
+                {
+					if (prostoi != null && prostoi2 != null && prostoi3 == null)
+                    {
+						prostoi3 = Convert.ToString(dataGridView4.CurrentRow.Cells[1].Value);
+						prostoi_number3 = dataGridView4.CurrentRow.Index;
+					}
+
+				}
+			}
+
+			
+        }
+
+		private void button22_Click(object sender, EventArgs e)
+		{
+			button1.Visible = true;
+			button1.Focus();
+
+
+
+			// видаляю людину яка буде в простої
+			if(prostoi != null && prostoi2 == null)
+            {
+				listBox1.Items.RemoveAt(prostoi_number + 1);
+				dataGridView4.Visible = false;
+				button22.Visible = false;
+            }
+            else
+            {
+				if(prostoi !=null && prostoi2 !=null && prostoi3 == null)
+                {
+					listBox1.Items.RemoveAt(prostoi_number2 + 1);
+					dataGridView4.Visible = false;
+					button22.Visible = false;
+
+                }
+                else
+                {
+					if (prostoi != null && prostoi2 != null && prostoi3 != null)
+					{
+						listBox1.Items.RemoveAt(prostoi_number3 + 1);
+						dataGridView4.Visible = false;
+						button22.Visible = false;
+
+					}
+				}
+			}
+			
+
+
+			// добавляю людину у простой
+			n = listBox1.Items.Count - 1;
+
+			for (int i = 0; i < n; n--)
+			{
+
+				label48.Text = Convert.ToString(listBox1.Items[n]);
+				if (label48.Text != "")
+				{
+					break;
+				}
+
+			}
+			n--;
+			label47.Text = Convert.ToString(listBox1.Items[n]);
+			n--;
+			label46.Text = Convert.ToString(listBox1.Items[n]);
+			n--;
+			label45.Text = Convert.ToString(listBox1.Items[n]);
+
+			label67.Text = Convert.ToString(n);
+
+
+			if (prostoi_number - Convert.ToInt32(label67.Text) <= 5 && prostoi_number - Convert.ToInt32(label67.Text) >= 0)
+			{
+				label72.Visible = true;
+				label74.Visible = true;
+				label75.Visible = true;
+				label90.Visible = true;
+			}
+			else
+			{
+
+				if(prostoi_number2 - Convert.ToInt32(label67.Text) <= 5 && prostoi_number2 - Convert.ToInt32(label67.Text) >= 0 && prostoi == "finish")
+
+                {
+					label72.Text = prostoi2;
+					label72.Visible = true;
+					label74.Visible = true;
+					label75.Visible = true;
+					label90.Visible = true;
+				}
+                else
+                {
+					if (prostoi_number3 - Convert.ToInt32(label67.Text) <= 5 && prostoi_number3 - Convert.ToInt32(label67.Text) >= 0 && prostoi == "finish" && prostoi2 == "finish")
+
+					{
+						label72.Text = prostoi3;
+						label72.Visible = true;
+						label74.Visible = true;
+						label75.Visible = true;
+						label90.Visible = true;
+					}
+				}
+
+				label72.Visible = false;
+				label74.Visible = false;
+				label75.Visible = false;
+				label90.Visible = false;
+			}
+			dataGridView4.Rows.Clear();
+
+		}
+
+        private void timer37_Tick(object sender, EventArgs e)
+        {
+			label4.Text = Convert.ToString(mins) + ":" + Convert.ToString(secs);
+			secs--;
+
+			button6.Enabled = false;
+
+			if (label4.Text == "0:3")
+			{
+				timetostartsound.Play();
+			}
+
+
+			if (label4.Text == "0:16") //залишилось 15 секунд
+			{
+				sekynd.Play();
+			}
+
+			if (secs > 60)
+			{
+				mins++;
+				secs = secs - 60;
+
+			}
+			if (secs == -1)
+			{
+
+				mins--;
+				secs = 60;
+			}
+
+			if (secs == 60 && mins == -1)
+			{
+				serialPort1.Open();
+				serialPort1.WriteLine("4"); //продовжити 
+				label69.Text = "Трек включений";
+				label69.BackColor = Color.Green;
+				button10.Enabled = false;
+				button11.Enabled = true;
+
+				timer37.Enabled = false;
+				timer38.Enabled = true;
+
+				if (label72.Visible == false)
+				{
+					Time = Convert.ToDouble(label63.Text);
+					Timeg = Convert.ToDouble(label64.Text);
+					Timez = Convert.ToDouble(label65.Text);
+					Times = Convert.ToDouble(label66.Text);
+				}
+				else
+				{
+					Time = Timeb;
+					Timeg = Convert.ToDouble(label26.Text);
+					Timez = Convert.ToDouble(label28.Text);
+					Times = Convert.ToDouble(label21.Text);
+					Timeb = Convert.ToDouble(label27.Text);
+				}
+
+
+				sec = 1;
+				if (textBox25.Text == "")
+				{
+					min = Convert.ToInt32(textBox13.Text);
+				}
+				else
+				{
+					min = Convert.ToInt32(textBox24.Text);
+				}
+
+
+				label4.Text = "00:00";
+				label13.Text = "<<Гонка!>>";
+				label15.Text = "5/5";
+				timer32.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
+
+				button6.Enabled = true;
+				button6.Focus();
+			}
+		}
+
+		private void timer38_Tick(object sender, EventArgs e)
+		{
+			sec--;
+			label4.Text = Convert.ToString(min) + ":" + Convert.ToString(sec);           //зчитую час гонки який був заданий у настройках
+
+
+
+
+
+			if (sec == 0)                                                                   //таймер для гонки 4 заїзд
+			{
+				min--;
+				sec = 60;
+
+				if (min == -1 && sec == 60)
+				{
+					
+					
+						button6.Enabled = false;
+						serialPort1.WriteLine("3"); //пауза
+						label69.Text = "Трек виключений";
+						label69.BackColor = Color.Red;
+						button10.Enabled = true;
+						button11.Enabled = false;
+						
+						timer38.Enabled = false;
+
+
+					panel6.Visible = true;
+
+						kinetsgonkisound.Play();
+						label68.Visible = true;
+						textBox20.BackColor = panel1.BackColor;
+						textBox20.Visible = true;
+						textBox21.BackColor = panel4.BackColor;
+						textBox21.Visible = true;
+						textBox22.BackColor = panel3.BackColor;
+						textBox22.Visible = true;
+						textBox23.BackColor = panel5.BackColor;
+						textBox29.Visible = true;
+						textBox23.Visible = true;
+						button9.Visible = true;
+						button6.Enabled = false;
+
+						timer32.Enabled = false;
+						timer8.Enabled = false;
+						label4.Text = "00:00";
+						label13.Text = "<<Фініш!>>";
+
+					timer21.Enabled = false;
+					timer2.Enabled = false;
+					timer4.Enabled = false;
+					timer6.Enabled = false;
+					timer8.Enabled = false;
+
+					//
+
+
+					lanes5 = Convert.ToInt32(label75.Text) - lanes1 - lanes3 - lanes4 - lanes2;
+					lane2_4 = Convert.ToInt32(label25.Text) - lane2_2 - lane2_5 - lane2_1 - lane2_3;
+					lane3_1 = Convert.ToInt32(label17.Text) - lane3_3 - lane3_4 - lane3_2 - lane3_5;
+					lane4_3 = Convert.ToInt32(label23.Text) - lane4_4 - lane4_2 - lane4_5 - lane4_1;
+					lane5_2 = Convert.ToInt32(label24.Text) - lane5_5 - lane5_1 - lane5_3 - lane5_4;
+
+
+
+					number_group.Text = "0";
+						
+						serialPort1.Close();
+						//вивід результату в таблицю
+						
+
+
+				}
+
+
+			}
+		}
+				
+
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
 			
@@ -4562,7 +5637,19 @@ namespace zase4kak
 				timer17.Enabled = true;
 				timer11.Enabled = true;
 				timer15.Enabled = true;
-				timer16.Enabled = false;
+				timer16.Enabled = true;
+				button6.Visible = true;
+				button7.Visible = false;
+				button6.Focus();
+			}
+			if (number_group.Text == "4")   // кнопка продовжити для 3 заїзду
+			{
+
+				timer38.Enabled = true;
+				timer17.Enabled = true;
+				timer11.Enabled = true;
+				timer15.Enabled = true;
+				timer16.Enabled = true;
 				button6.Visible = true;
 				button7.Visible = false;
 				button6.Focus();
@@ -4752,7 +5839,10 @@ namespace zase4kak
 		private void timer32_Tick(object sender, EventArgs e)
 		{
 			// алгоритм прогнозу
+			if(label72.Visible == false)
+            {
 
+            
 			if (label15.Text == "1/4")
 			{
 				prognoz1 = (Convert.ToInt32(textBox38.Text) / seredniychas1) + Convert.ToDouble(label17.Text);
@@ -4828,580 +5918,1425 @@ namespace zase4kak
 					}
 					else
 					{
-						if (label15.Text == "4/4")
-						{
-							prognoz3 = (Convert.ToInt32(textBox38.Text) / seredniychas3) + Convert.ToDouble(label17.Text);
-							label54.Text = Convert.ToString(prognoz3);
-							label54.Text = string.Format("{0:F2}", prognoz3);
+							if (label15.Text == "4/4")
+							{
+								prognoz3 = (Convert.ToInt32(textBox38.Text) / seredniychas3) + Convert.ToDouble(label17.Text);
+								label54.Text = Convert.ToString(prognoz3);
+								label54.Text = string.Format("{0:F2}", prognoz3);
 
 
-							prognoz1 = (Convert.ToInt32(textBox38.Text) / seredniychas1) + Convert.ToDouble(label24.Text);
-							label57.Text = Convert.ToString(prognoz1);
-							label57.Text = string.Format("{0:F2}", prognoz1);
+								prognoz1 = (Convert.ToInt32(textBox38.Text) / seredniychas1) + Convert.ToDouble(label24.Text);
+								label57.Text = Convert.ToString(prognoz1);
+								label57.Text = string.Format("{0:F2}", prognoz1);
 
 
-							prognoz4 = (Convert.ToInt32(textBox38.Text) / seredniychas4) + Convert.ToDouble(label23.Text);
-							label58.Text = Convert.ToString(prognoz4);
-							label58.Text = string.Format("{0:F2}", prognoz4);
+								prognoz4 = (Convert.ToInt32(textBox38.Text) / seredniychas4) + Convert.ToDouble(label23.Text);
+								label58.Text = Convert.ToString(prognoz4);
+								label58.Text = string.Format("{0:F2}", prognoz4);
 
 
-							prognoz2 = (Convert.ToInt32(textBox38.Text) / seredniychas2) + Convert.ToDouble(label25.Text);
-							label118.Text = Convert.ToString(prognoz2);
-							label118.Text = string.Format("{0:F2}", prognoz2);
+								prognoz2 = (Convert.ToInt32(textBox38.Text) / seredniychas2) + Convert.ToDouble(label25.Text);
+								label118.Text = Convert.ToString(prognoz2);
+								label118.Text = string.Format("{0:F2}", prognoz2);
 
-
+							}
 						}
 					}
 				}
+            }
+            else
+            {
+
+
+
+
+
+
+
+
+				if (label15.Text == "1/5")
+				{
+					prognoz1 = (Convert.ToInt32(textBox38.Text) / seredniychas1) + Convert.ToDouble(label17.Text);
+					label54.Text = Convert.ToString(prognoz1);
+					label54.Text = string.Format("{0:F2}", prognoz1);
+
+
+					prognoz2 = (Convert.ToInt32(textBox38.Text) / seredniychas2) + Convert.ToDouble(label24.Text);
+					label57.Text = Convert.ToString(prognoz2);
+					label57.Text = string.Format("{0:F2}", prognoz2);
+
+
+					prognoz3 = (Convert.ToInt32(textBox38.Text) / seredniychas3) + Convert.ToDouble(label23.Text);
+					label58.Text = Convert.ToString(prognoz3);
+					label58.Text = string.Format("{0:F2}", prognoz3);
+
+
+					prognoz4 = (Convert.ToInt32(textBox38.Text) / seredniychas4) + Convert.ToDouble(label25.Text);
+					label118.Text = Convert.ToString(prognoz4);
+					label118.Text = string.Format("{0:F2}", prognoz4);
+
+					prognoz5 = (Convert.ToInt32(textBox38.Text) / seredniychas5) + Convert.ToDouble(label75.Text);
+					label90.Text = Convert.ToString(prognoz5);
+					label90.Text = string.Format("{0:F2}", prognoz5);
+
+
+				}
+				else
+				{
+
+
+					if (label15.Text == "2/5")
+					{
+						prognoz5 = (Convert.ToInt32(textBox38.Text) / seredniychas5) + Convert.ToDouble(label17.Text);
+						label54.Text = Convert.ToString(prognoz5);
+						label54.Text = string.Format("{0:F2}", prognoz5);
+
+
+						prognoz4 = (Convert.ToInt32(textBox38.Text) / seredniychas4) + Convert.ToDouble(label24.Text);
+						label57.Text = Convert.ToString(prognoz4);
+						label57.Text = string.Format("{0:F2}", prognoz4);
+
+
+						prognoz1 = (Convert.ToInt32(textBox38.Text) / seredniychas1) + Convert.ToDouble(label23.Text);
+						label58.Text = Convert.ToString(prognoz1);
+						label58.Text = string.Format("{0:F2}", prognoz1);
+
+
+						prognoz3 = (Convert.ToInt32(textBox38.Text) / seredniychas3) + Convert.ToDouble(label25.Text);
+						label118.Text = Convert.ToString(prognoz3);
+						label118.Text = string.Format("{0:F2}", prognoz3);
+
+						prognoz2 = (Convert.ToInt32(textBox38.Text) / seredniychas2) + Convert.ToDouble(label75.Text);
+						label90.Text = Convert.ToString(prognoz2);
+						label90.Text = string.Format("{0:F2}", prognoz2);
+					}
+					else
+					{
+						if (label15.Text == "3/5")
+						{
+							prognoz2 = (Convert.ToInt32(textBox38.Text) / seredniychas2) + Convert.ToDouble(label17.Text);
+							label54.Text = Convert.ToString(prognoz2);
+							label54.Text = string.Format("{0:F2}", prognoz2);
+
+
+							prognoz3 = (Convert.ToInt32(textBox38.Text) / seredniychas3) + Convert.ToDouble(label24.Text);
+							label57.Text = Convert.ToString(prognoz3);
+							label57.Text = string.Format("{0:F2}", prognoz3);
+
+
+							prognoz5 = (Convert.ToInt32(textBox38.Text) / seredniychas5) + Convert.ToDouble(label23.Text);
+							label58.Text = Convert.ToString(prognoz5);
+							label58.Text = string.Format("{0:F2}", prognoz5);
+
+
+							prognoz1 = (Convert.ToInt32(textBox38.Text) / seredniychas1) + Convert.ToDouble(label25.Text);
+							label118.Text = Convert.ToString(prognoz1);
+							label118.Text = string.Format("{0:F2}", prognoz1);
+
+							prognoz4 = (Convert.ToInt32(textBox38.Text) / seredniychas4) + Convert.ToDouble(label75.Text);
+							label90.Text = Convert.ToString(prognoz4);
+							label90.Text = string.Format("{0:F2}", prognoz4);
+						}
+						else
+						{
+							if (label15.Text == "4/5")
+							{
+								prognoz4 = (Convert.ToInt32(textBox38.Text) / seredniychas4) + Convert.ToDouble(label17.Text);
+								label54.Text = Convert.ToString(prognoz4);
+								label54.Text = string.Format("{0:F2}", prognoz4);
+
+
+								prognoz1 = (Convert.ToInt32(textBox38.Text) / seredniychas1) + Convert.ToDouble(label24.Text);
+								label57.Text = Convert.ToString(prognoz1);
+								label57.Text = string.Format("{0:F2}", prognoz1);
+
+
+								prognoz2 = (Convert.ToInt32(textBox38.Text) / seredniychas2) + Convert.ToDouble(label23.Text);
+								label58.Text = Convert.ToString(prognoz2);
+								label58.Text = string.Format("{0:F2}", prognoz2);
+
+
+								prognoz5 = (Convert.ToInt32(textBox38.Text) / seredniychas5) + Convert.ToDouble(label25.Text);
+								label118.Text = Convert.ToString(prognoz5);
+								label118.Text = string.Format("{0:F2}", prognoz5);
+
+								prognoz3 = (Convert.ToInt32(textBox38.Text) / seredniychas3) + Convert.ToDouble(label75.Text);
+								label90.Text = Convert.ToString(prognoz3);
+								label90.Text = string.Format("{0:F2}", prognoz3);
+                            }
+                            else
+                            {
+								if (label15.Text == "5/5")
+								{
+									prognoz3 = (Convert.ToInt32(textBox38.Text) / seredniychas3) + Convert.ToDouble(label17.Text);
+									label54.Text = Convert.ToString(prognoz3);
+									label54.Text = string.Format("{0:F2}", prognoz3);
+
+
+									prognoz5 = (Convert.ToInt32(textBox38.Text) / seredniychas5) + Convert.ToDouble(label24.Text);
+									label57.Text = Convert.ToString(prognoz5);
+									label57.Text = string.Format("{0:F2}", prognoz5);
+
+
+									prognoz4 = (Convert.ToInt32(textBox38.Text) / seredniychas4) + Convert.ToDouble(label23.Text);
+									label58.Text = Convert.ToString(prognoz4);
+									label58.Text = string.Format("{0:F2}", prognoz4);
+
+
+									prognoz2 = (Convert.ToInt32(textBox38.Text) / seredniychas2) + Convert.ToDouble(label25.Text);
+									label118.Text = Convert.ToString(prognoz2);
+									label118.Text = string.Format("{0:F2}", prognoz2);
+
+									prognoz1 = (Convert.ToInt32(textBox38.Text) / seredniychas1) + Convert.ToDouble(label75.Text);
+									label90.Text = Convert.ToString(prognoz1);
+									label90.Text = string.Format("{0:F2}", prognoz1);
+								}
+							}
+						}
+					}
+				}
+
+
+
+
+
+
+
+
+
+
+
 			}
 		}
 
 		public void timer41_Tick(object sender, EventArgs e)
 		{
 			int value;
+			if(label72.Visible == false)
+            {
 
-			switch (Convert.ToInt32(textBox13.Text))
-			{
-				case 1:
-					{
-						if (label15.Text == "1/4")
+
+				switch (Convert.ToInt32(textBox13.Text))
+				{
+					case 1:
 						{
-							value = (60 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
-						}
-						else
-						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (60 * 2) + sec;
+								value = (60 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (60 * 1) + sec;
+									value = (60 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (60 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 2:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (120 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 2:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (120 * 2) + sec;
+								value = (120 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (120 * 1) + sec;
+									value = (120 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (120 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 3:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (180 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 3:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (180 * 2) + sec;
+								value = (180 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (180 * 1) + sec;
+									value = (180 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (180 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 4:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (240 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 4:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (240 * 2) + sec;
+								value = (240 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (240 * 1) + sec;
+									value = (240 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (240 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 5:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (300 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 5:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (300 * 2) + sec;
+								value = (300 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (300 * 1) + sec;
+									value = (300 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (300 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 6:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (360 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 6:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (360 * 2) + sec;
+								value = (360 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (360 * 1) + sec;
+									value = (360 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (360 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 7:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (420 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 7:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (420 * 2) + sec;
+								value = (420 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (420 * 1) + sec;
+									value = (420 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (420 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 8:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (480 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 8:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (480 * 2) + sec;
+								value = (480 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (480 * 1) + sec;
+									value = (480 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (480 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 9:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (540 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 9:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (540 * 2) + sec;
+								value = (540 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (540 * 1) + sec;
+									value = (540 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (540 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 10:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (600 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 10:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (600 * 2) + sec;
+								value = (600 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (600 * 1) + sec;
+									value = (600 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (600 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 11:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (660 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 11:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (660 * 2) + sec;
+								value = (660 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (660 * 1) + sec;
+									value = (660 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (660 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 12:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (720 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 12:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (720 * 2) + sec;
+								value = (720 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (720 * 1) + sec;
+									value = (720 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (720 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 13:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (780 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 13:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (780 * 2) + sec;
+								value = (780 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (780 * 1) + sec;
+									value = (780 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (780 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 14:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (840 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 14:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (840 * 2) + sec;
+								value = (840 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (840 * 1) + sec;
+									value = (840 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (840 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
-						}
 
-						break;
-					}
-				case 15:
-					{
-						if (label15.Text == "1/4")
-						{
-							value = (900 * 3) + sec;
-							textBox38.Text = Convert.ToString(value);
+							break;
 						}
-						else
+					case 15:
 						{
-							if (label15.Text == "2/4")
+							if (label15.Text == "1/4")
 							{
-								value = (900 * 2) + sec;
+								value = (900 * 3) + sec;
 								textBox38.Text = Convert.ToString(value);
 							}
 							else
 							{
-								if (label15.Text == "3/4")
+								if (label15.Text == "2/4")
 								{
-									value = (900 * 1) + sec;
+									value = (900 * 2) + sec;
 									textBox38.Text = Convert.ToString(value);
 								}
 								else
 								{
-									if (label15.Text == "4/4")
+									if (label15.Text == "3/4")
 									{
-										value = sec;
+										value = (900 * 1) + sec;
 										textBox38.Text = Convert.ToString(value);
 									}
+									else
+									{
+										if (label15.Text == "4/4")
+										{
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+										}
 
+									}
 								}
 							}
+
+							break;
+						}
+					case 0:
+						{
+							value = sec;
+							textBox38.Text = Convert.ToString(value);
+							break;
 						}
 
-						break;
-					}
-				case 0:
-					{
-						value = sec;
-						textBox38.Text = Convert.ToString(value);
-						break;
-					}
+					default:
+						{
+							value = 0;
+							textBox38.Text = Convert.ToString(value);
+							break;
+						}
 
-				default:
-					{
-						value = 0;
-						textBox38.Text = Convert.ToString(value);
-						break;
-					}
+                }
 
 
+
+
+
+            }
+            else
+            {
+
+
+
+
+				// для простоя
+
+
+				switch (Convert.ToInt32(textBox13.Text))
+				{
+					case 1:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (60 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (60 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (60 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (60 * 1) + sec;
+											value = sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 2:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (120 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (120 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (120 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (120 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 3:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (180 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (180 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (180 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (180 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 4:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (240 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (240 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (240 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (240 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 5:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (300 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (300 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (300 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (300 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 6:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (360 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (360 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (360 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (360 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 7:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (420 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (420 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (420 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (420 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 8:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (480 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (480 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (480 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (480 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 9:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (540 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (540 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (540 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (540 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 10:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (600 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (600 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (600 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (600 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 11:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (660 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (660 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (660 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (660 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 12:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (720 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (720 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (720 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (720 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 13:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (780 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (780 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (780 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (780 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 14:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (840 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (840 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (840 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (840 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 15:
+						{
+							if (label15.Text == "1/5")
+							{
+								value = (900 * 4) + sec;
+								textBox38.Text = Convert.ToString(value);
+							}
+							else
+							{
+								if (label15.Text == "2/5")
+								{
+									value = (900 * 3) + sec;
+									textBox38.Text = Convert.ToString(value);
+								}
+								else
+								{
+									if (label15.Text == "3/5")
+									{
+										value = (900 * 2) + sec;
+										textBox38.Text = Convert.ToString(value);
+									}
+									else
+									{
+										if (label15.Text == "4/5")
+										{
+											value = (900 * 1) + sec;
+											textBox38.Text = Convert.ToString(value);
+                                        }
+                                        else
+                                        {
+											if (label15.Text == "5/5")
+											{
+												value = sec;
+												textBox38.Text = Convert.ToString(value);
+											}
+										}
+
+									}
+								}
+							}
+
+							break;
+						}
+					case 0:
+						{
+							value = sec;
+							textBox38.Text = Convert.ToString(value);
+							break;
+						}
+
+					default:
+						{
+							value = 0;
+							textBox38.Text = Convert.ToString(value);
+							break;
+						}
+
+				}
 
 
 			}
@@ -5695,11 +7630,40 @@ namespace zase4kak
 		private void button8_Click(object sender, EventArgs e)
 		{
 
+
+			// обявляю фініш простоям
+			if(prostoi != "finish")
+            {
+				prostoi = "finish";
+            }
+            else
+            {
+				if (prostoi == "finish" && prostoi2 != "finish")
+                {
+					prostoi2 = "finish";
+
+                }
+                else
+                {
+					if (prostoi == "finish" && prostoi2 == "finish" && prostoi3 != "finish")
+					{
+						//prostoi3 = "finish";
+
+					}
+				}
+
+			}
+		
+
+
+
+
 			//обнуляю прогноз після зміни учасників
 			prognoz1 = 0;
 			prognoz2 = 0;
 			prognoz3 = 0;
 			prognoz4 = 0;
+			prognoz5 = 0;
 			masuv = 0;
 			kola = 0;
 			seredniychas = 0;
@@ -5722,7 +7686,8 @@ namespace zase4kak
 			label127.Text = "0";
 			label134.Text = "0";
 			label128.Text = "0";
-
+			label90.Text = "0";
+			label75.Text = "0";
 
 
 
@@ -5764,70 +7729,166 @@ namespace zase4kak
 				i++;                                            //добавляю кола 1 доріці
 				label17.Text = Convert.ToString(i);
 
-				
+
 
 
 
 
 
 				// алгоритм прогнозу
-
-
-
-				if (label15.Text == "1/4")
+				if (label72.Visible == false)
 				{
-					kola = Convert.ToDouble(label18.Text);
-					masuv = Convert.ToDouble(label8.Text);
-					seredniychas1 = Convert.ToDouble(label54.Text);
-					kola = (kola + masuv);
-					label8.Text = Convert.ToString(kola);
-					seredniychas1 = kola / Convert.ToDouble(label17.Text);
 
-				}
-				else
-				{
-					if (label15.Text == "2/4")
+
+					if (label15.Text == "1/4")
 					{
 						kola = Convert.ToDouble(label18.Text);
 						masuv = Convert.ToDouble(label8.Text);
-						seredniychas2 = Convert.ToDouble(label54.Text);
+						seredniychas1 = Convert.ToDouble(label54.Text);
 						kola = (kola + masuv);
 						label8.Text = Convert.ToString(kola);
-						seredniychas2 = kola / Convert.ToDouble(label17.Text);
+						seredniychas1 = kola / Convert.ToDouble(label17.Text);
+
 					}
 					else
 					{
-						if (label15.Text == "3/4")
+						if (label15.Text == "2/4")
 						{
 							kola = Convert.ToDouble(label18.Text);
 							masuv = Convert.ToDouble(label8.Text);
-							seredniychas4 = Convert.ToDouble(label54.Text);
+							seredniychas2 = Convert.ToDouble(label54.Text);
 							kola = (kola + masuv);
 							label8.Text = Convert.ToString(kola);
-							seredniychas4 = kola / Convert.ToDouble(label17.Text);
+							seredniychas2 = kola / Convert.ToDouble(label17.Text);
 						}
 						else
 						{
-							if (label15.Text == "4/4")
+							if (label15.Text == "3/4")
 							{
 								kola = Convert.ToDouble(label18.Text);
 								masuv = Convert.ToDouble(label8.Text);
-								seredniychas3 = Convert.ToDouble(label54.Text);
+								seredniychas4 = Convert.ToDouble(label54.Text);
 								kola = (kola + masuv);
 								label8.Text = Convert.ToString(kola);
-								seredniychas3 = kola / Convert.ToDouble(label17.Text);
-								if (label13.Text == "<<Фініш!>>")
+								seredniychas4 = kola / Convert.ToDouble(label17.Text);
+							}
+							else
+							{
+								if (label15.Text == "4/4")
 								{
-									masuv = 0;
-									kola = 0;
-									seredniychas = 0;
-									prognoz = 0;
+									kola = Convert.ToDouble(label18.Text);
+									masuv = Convert.ToDouble(label8.Text);
+									seredniychas3 = Convert.ToDouble(label54.Text);
+									kola = (kola + masuv);
+									label8.Text = Convert.ToString(kola);
+									seredniychas3 = kola / Convert.ToDouble(label17.Text);
+									if (label13.Text == "<<Фініш!>>")
+									{
+										masuv = 0;
+										kola = 0;
+										seredniychas = 0;
+										prognoz = 0;
+									}
 								}
 							}
 						}
 					}
-				}
+                }
+                else
 
+
+                {
+
+
+					if (label15.Text == "1/5")
+					{
+						kola = Convert.ToDouble(label18.Text);
+						masuv = Convert.ToDouble(label8.Text);
+						seredniychas1 = Convert.ToDouble(label54.Text);
+						kola = (kola + masuv);
+						label8.Text = Convert.ToString(kola);
+						seredniychas1 = kola / Convert.ToDouble(label17.Text);
+
+					}
+					else
+					{
+						if (label15.Text == "2/5")
+						{
+							kola = Convert.ToDouble(label18.Text);
+							masuv = Convert.ToDouble(label8.Text);
+							seredniychas5 = Convert.ToDouble(label54.Text);
+							kola = (kola + masuv);
+							label8.Text = Convert.ToString(kola);
+							seredniychas5 = kola / Convert.ToDouble(label17.Text);
+						}
+						else
+						{
+							if (label15.Text == "3/5")
+							{
+								kola = Convert.ToDouble(label18.Text);
+								masuv = Convert.ToDouble(label8.Text);
+								seredniychas2 = Convert.ToDouble(label54.Text);
+								kola = (kola + masuv);
+								label8.Text = Convert.ToString(kola);
+								seredniychas2 = kola / Convert.ToDouble(label17.Text);
+							}
+							else
+							{
+								if (label15.Text == "4/5")
+								{
+									kola = Convert.ToDouble(label18.Text);
+									masuv = Convert.ToDouble(label8.Text);
+									seredniychas4 = Convert.ToDouble(label54.Text);
+									kola = (kola + masuv);
+									label8.Text = Convert.ToString(kola);
+									seredniychas4 = kola / Convert.ToDouble(label17.Text);
+
+                                }
+                                else
+                                {
+									if (label15.Text == "5/5")
+									{
+										kola = Convert.ToDouble(label18.Text);
+										masuv = Convert.ToDouble(label8.Text);
+										seredniychas3 = Convert.ToDouble(label54.Text);
+										kola = (kola + masuv);
+										label8.Text = Convert.ToString(kola);
+										seredniychas3 = kola / Convert.ToDouble(label17.Text);
+
+
+										if (label13.Text == "<<Фініш!>>")
+										{
+											masuv = 0;
+											kola = 0;
+											seredniychas = 0;
+											prognoz = 0;
+										}
+
+
+
+
+
+
+
+									}
+
+
+
+
+
+								}
+
+
+
+									
+								
+							}
+						}
+					}
+
+
+
+				}
 
 
 
@@ -5852,12 +7913,7 @@ namespace zase4kak
 			}
 
 
-			//if (Convert.ToDouble(label22.Text) < 1)			//обмеження по часу кола 1 секунда
-			//  {
-			//	i--;
-			//label17.Text = Convert.ToString(i); 
-			//	}
-			//textBox15.Text = "0";
+			
 			timer10.Enabled = false;
 		}
 
@@ -5904,10 +7960,24 @@ namespace zase4kak
 				timer7.Enabled = false;
 				timer8.Enabled = true;
 
-				Time = Convert.ToDouble(label63.Text);
-				Timeg = Convert.ToDouble(label64.Text);
-				Timez = Convert.ToDouble(label65.Text);
-				Times = Convert.ToDouble(label66.Text);
+
+
+
+				if (label72.Visible == false)
+				{
+					Time = Convert.ToDouble(label63.Text);
+					Timeg = Convert.ToDouble(label64.Text);
+					Timez = Convert.ToDouble(label65.Text);
+					Times = Convert.ToDouble(label66.Text);
+				}
+				else
+				{
+					Time = Timeb;
+					Timeg = Convert.ToDouble(label26.Text);
+					Timez = Convert.ToDouble(label28.Text);
+					Times = Convert.ToDouble(label21.Text);
+					Timeb = Convert.ToDouble(label27.Text);
+				}
 
 
 				sec = 1;
@@ -5920,18 +7990,35 @@ namespace zase4kak
 					min = Convert.ToInt32(textBox24.Text);
 				}
 
+				//для простою
+				if (label72.Visible == false)
+				{
+					label4.Text = "00:00";
+					label13.Text = "<<Гонка!>>";
+					label15.Text = "4/4";
+					timer32.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
 
-				label4.Text = "00:00";
-				label13.Text = "<<Гонка!>>";
-				label15.Text = "4/4";
-				timer32.Enabled = true;
-				timer17.Enabled = true;
-				timer11.Enabled = true;
-				timer15.Enabled = true;
-				timer16.Enabled = true;
+					button6.Enabled = true;
+					button6.Focus();
+                }
+                else
+                {
+					label4.Text = "00:00";
+					label13.Text = "<<Гонка!>>";
+					label15.Text = "4/5";
+					timer32.Enabled = true;
+					timer17.Enabled = true;
+					timer11.Enabled = true;
+					timer15.Enabled = true;
+					timer16.Enabled = true;
 
-				button6.Enabled = true;
-				button6.Focus();
+					button6.Enabled = true;
+					button6.Focus();
+				}
 			}
 		}
 
@@ -5954,52 +8041,329 @@ namespace zase4kak
 
 				if (min == -1 && sec == 60)
 				{
-					button6.Enabled = false;
-					serialPort1.WriteLine("3"); //пауза
-					label69.Text = "Трек виключений";
-					label69.BackColor = Color.Red;
-					button10.Enabled = true;
-					button11.Enabled = false;
+					if (label72.Visible == false)
+					{
+						button6.Enabled = false;
+						serialPort1.WriteLine("3"); //пауза
+						label69.Text = "Трек виключений";
+						label69.BackColor = Color.Red;
+						button10.Enabled = true;
+						button11.Enabled = false;
 
 
 
-					//
-					lane2 = Convert.ToInt32(label24.Text) - lane1 - lane4 - lane3;
-					lane2_4 = Convert.ToInt32(label25.Text) - lane2_1 - lane2_2 - lane2_3;
-					lane3_1 = Convert.ToInt32(label17.Text) - lane3_2 - lane3_3 - lane3_4;
-					lane4_3 = Convert.ToInt32(label23.Text) - lane4_1 - lane4_2 - lane4_4;
+						//
+						lanes2 = Convert.ToInt32(label24.Text) - lanes1 - lanes4 - lanes3;
+						lane2_4 = Convert.ToInt32(label25.Text) - lane2_1 - lane2_2 - lane2_3;
+						lane3_1 = Convert.ToInt32(label17.Text) - lane3_2 - lane3_3 - lane3_4;
+						lane4_3 = Convert.ToInt32(label23.Text) - lane4_1 - lane4_2 - lane4_4;
 
 
 
-					kinetsgonkisound.Play();
-					label68.Visible = true;
-					textBox20.BackColor = panel1.BackColor;
-					textBox20.Visible = true;
-					textBox21.BackColor = panel4.BackColor;
-					textBox21.Visible = true;
-					textBox22.BackColor = panel3.BackColor;
-					textBox22.Visible = true;
-					textBox23.BackColor = panel5.BackColor;
-					textBox23.Visible = true;
-					button9.Visible = true;
-					button6.Enabled = false;
+						kinetsgonkisound.Play();
+						label68.Visible = true;
+						textBox20.BackColor = panel1.BackColor;
+						textBox20.Visible = true;
+						textBox21.BackColor = panel4.BackColor;
+						textBox21.Visible = true;
+						textBox22.BackColor = panel3.BackColor;
+						textBox22.Visible = true;
+						textBox23.BackColor = panel5.BackColor;
+						textBox23.Visible = true;
+						button9.Visible = true;
+						button6.Enabled = false;
 
-					timer32.Enabled = false;
-					timer8.Enabled = false;
-					label4.Text = "00:00";
-					label13.Text = "<<Фініш!>>";
-
-
-
-					number_group.Text = "0";
-
-					serialPort1.Close();
-					//вивід результату в таблицю
+						timer32.Enabled = false;
+						timer8.Enabled = false;
+						label4.Text = "00:00";
+						label13.Text = "<<Фініш!>>";
 
 
+
+						number_group.Text = "0";
+
+						serialPort1.Close();
+                        //вивід результату в таблицю
+                    }
+                    else
+                    {
+
+						perehid.Play();
+						serialPort1.WriteLine("3");//пауза
+						serialPort1.Close();
+						label69.Text = "Трек виключений";
+						label69.BackColor = Color.Red;
+						button10.Enabled = true;
+						button11.Enabled = false;
+						timer8.Enabled = false;
+						label4.Text = "00:00";
+						secs = Convert.ToInt32(textBox14.Text);
+						mins = 0;
+						timer37.Enabled = true;
+						label13.Text = "<<Перехід!>>";
+						button6.Enabled = false;
+
+						string value1, value2, value3, value4, value5; // перемінні для кіл
+
+						string lane1, lane2, lane3, lane4, lane5; // перемінні для імя
+
+
+						//перехід між доріжками
+						timer32.Enabled = false;
+
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+
+
+
+						//
+
+
+						lanes2 = Convert.ToInt32(label24.Text) - lanes1 - lanes3 - lanes4;
+						lane2_3 = Convert.ToInt32(label23.Text) - lane2_2 - lane2_5 - lane2_1;
+						lane3_5 = Convert.ToInt32(label75.Text) - lane3_3 - lane3_4 - lane3_2;
+						lane4_1 = Convert.ToInt32(label17.Text) - lane4_4 - lane4_2 - lane4_5;
+						lane5_4 = Convert.ToInt32(label25.Text) - lane5_5 - lane5_1 - lane5_3;
+
+						lane1 = label46.Text;
+						lane2 = label47.Text;
+						lane3 = label72.Text;
+						lane4 = label45.Text;
+						lane5 = label48.Text;
+
+						label72.Text = lane1;
+						label48.Text = lane2;
+						label45.Text = lane3;
+						label47.Text = lane4;
+						label46.Text = lane5;
+
+
+
+
+
+
+						value1 = label24.Text;
+						value2 = label23.Text;
+						value3 = label75.Text;
+						value4 = label17.Text;
+						value5 = label25.Text;
+
+						label75.Text = value1;
+						label25.Text = value2;
+						label17.Text = value3;
+						label23.Text = value4;
+						label24.Text = value5;
+
+
+
+
+
+
+
+
+
+
+
+
+						label18.Text = "00,000";
+						label22.Text = "00,000";
+						label19.Text = "00,000";
+						label20.Text = "00,000";
+						label16.Text = "999";
+						label29.Text = "00,000";
+						label30.Text = "00,000";
+						label31.Text = "00,000";
+						label32.Text = "00,000";
+						label42.Text = "999";
+						label35.Text = "00,000";
+						label36.Text = "00,000";
+						label37.Text = "00,000";
+						label34.Text = "00,000";
+						label43.Text = "999";
+						label38.Text = "00,000";
+						label39.Text = "00,000";
+						label40.Text = "00,000";
+						label41.Text = "00,000";
+						label44.Text = "999";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						//сортування результату
+						dataGridView3.Rows.Add(label17.Text + "," + 6);
+						dataGridView3.Rows.Add(label24.Text + "," + 5);
+						dataGridView3.Rows.Add(label23.Text + "," + 4);
+						dataGridView3.Rows.Add(label25.Text + "," + 3);
+
+						dataGridView3.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+
+
+
+						//червона
+
+						if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToDouble(label17.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToDouble(label17.Text) != Convert.ToDouble(label112.Text))
+						{
+							panel1.Location = new Point(7, 213);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label17.Text + "," + 6))//&& Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel1.Location = new Point(7, 358);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel1.Location = new Point(7, 502);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label17.Text + "," + 6))// && Convert.ToInt32(label17.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label17.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel1.Location = new Point(7, 645);
+									}
+
+								}
+							}
+
+						}
+
+
+
+						// зелена
+
+						if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToDouble(label24.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label24.Text) != Convert.ToDouble(label112.Text))
+						{
+							panel3.Location = new Point(7, 213);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text ) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel3.Location = new Point(7, 358);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel3.Location = new Point(7, 502);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label24.Text + "," + 5))// && Convert.ToInt32(label24.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label24.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel3.Location = new Point(7, 645);
+									}
+
+								}
+							}
+
+						}
+
+						// синя
+
+						if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToDouble(label23.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label25.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label23.Text) != Convert.ToDouble(label112.Text))
+						{
+							panel4.Location = new Point(7, 213);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel4.Location = new Point(7, 358);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label23.Text + "," + 4))// && Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel4.Location = new Point(7, 502);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label23.Text + "," + 4))//&& Convert.ToInt32(label23.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label25.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label23.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel4.Location = new Point(7, 645);
+									}
+
+								}
+							}
+
+						}
+
+						//жовта 
+
+
+
+						if (Convert.ToDouble(dataGridView3[0, 0].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToDouble(label25.Text) != Convert.ToDouble(label17.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label24.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label23.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label97.Text) && Convert.ToDouble(label25.Text) != Convert.ToDouble(label112.Text))
+						{
+							panel5.Location = new Point(7, 213);
+						}
+						else
+						{
+							if (Convert.ToDouble(dataGridView3[0, 1].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+							{
+
+								panel5.Location = new Point(7, 358);
+							}
+							else
+							{
+								if (Convert.ToDouble(dataGridView3[0, 2].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+								{
+
+									panel5.Location = new Point(7, 502);
+								}
+								else
+								{
+									if (Convert.ToDouble(dataGridView3[0, 3].Value) == Convert.ToDouble(label25.Text + "," + 3))// && Convert.ToInt32(label25.Text) != Convert.ToInt32(label17.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label24.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label23.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label97.Text) && Convert.ToInt32(label25.Text) != Convert.ToInt32(label112.Text))
+									{
+
+										panel5.Location = new Point(7, 645);
+									}
+
+
+								}
+							}
+
+						}
+
+
+						timer26.Enabled = true;
+
+
+						number_group.Text = "4";
+
+					}
 
 
 				}
+
+
+
+				
 
 
 			}
@@ -6917,78 +9281,197 @@ namespace zase4kak
 
 
 
-
-
-			// алгоритм прогнозу
-			if (label15.Text == "1/4")
-			{
-
-
-				//double masuv, kola;
-				kola = Convert.ToDouble(label37.Text);
-				masuv = Convert.ToDouble(label117.Text);
-				seredniychas3 = Convert.ToDouble(label58.Text);
-				kola = (kola + masuv);
-				label117.Text = Convert.ToString(kola);
-				seredniychas3 = kola / Convert.ToDouble(label23.Text);
-			}
-			else
-			{
-				if (label15.Text == "2/4")
+				if (label72.Visible == false)
 				{
 
 
-					//double masuv, kola, seredniychas, prognoz;
-					kola = Convert.ToDouble(label37.Text);
-					masuv = Convert.ToDouble(label117.Text);
-					seredniychas1 = Convert.ToDouble(label58.Text);
-					kola = (kola + masuv);
-					label117.Text = Convert.ToString(kola);
-					seredniychas1 = kola / Convert.ToDouble(label23.Text);
-				}
-				else
-				{
-					if (label15.Text == "3/4")
+
+					// алгоритм прогнозу
+					if (label15.Text == "1/4")
 					{
 
 
-						//double masuv, kola, seredniychas, prognoz;
+
 						kola = Convert.ToDouble(label37.Text);
 						masuv = Convert.ToDouble(label117.Text);
-						seredniychas2 = Convert.ToDouble(label58.Text);
+						seredniychas3 = Convert.ToDouble(label58.Text);
 						kola = (kola + masuv);
 						label117.Text = Convert.ToString(kola);
-						seredniychas2 = kola / Convert.ToDouble(label23.Text);
+						seredniychas3 = kola / Convert.ToDouble(label23.Text);
 					}
 					else
 					{
-						if (label15.Text == "4/4")
+						if (label15.Text == "2/4")
 						{
 
 
 							//double masuv, kola, seredniychas, prognoz;
 							kola = Convert.ToDouble(label37.Text);
 							masuv = Convert.ToDouble(label117.Text);
-							seredniychas4 = Convert.ToDouble(label58.Text);
+							seredniychas1 = Convert.ToDouble(label58.Text);
 							kola = (kola + masuv);
 							label117.Text = Convert.ToString(kola);
-							seredniychas4 = kola / Convert.ToDouble(label23.Text);
-							if (label13.Text == "<<Фініш!>>")
+							seredniychas1 = kola / Convert.ToDouble(label23.Text);
+						}
+						else
+						{
+							if (label15.Text == "3/4")
 							{
-								masuv = 0;
-								kola = 0;
-								seredniychas = 0;
-								prognoz = 0;
+
+
+								//double masuv, kola, seredniychas, prognoz;
+								kola = Convert.ToDouble(label37.Text);
+								masuv = Convert.ToDouble(label117.Text);
+								seredniychas2 = Convert.ToDouble(label58.Text);
+								kola = (kola + masuv);
+								label117.Text = Convert.ToString(kola);
+								seredniychas2 = kola / Convert.ToDouble(label23.Text);
+							}
+							else
+							{
+								if (label15.Text == "4/4")
+								{
+
+
+									//double masuv, kola, seredniychas, prognoz;
+									kola = Convert.ToDouble(label37.Text);
+									masuv = Convert.ToDouble(label117.Text);
+									seredniychas4 = Convert.ToDouble(label58.Text);
+									kola = (kola + masuv);
+									label117.Text = Convert.ToString(kola);
+									seredniychas4 = kola / Convert.ToDouble(label23.Text);
+									if (label13.Text == "<<Фініш!>>")
+									{
+										masuv = 0;
+										kola = 0;
+										seredniychas = 0;
+										prognoz = 0;
+									}
+								}
+
+							}
+						}
+					}
+                }
+                else
+                {
+
+
+
+					// алгоритм прогнозу
+					if (label15.Text == "1/5")
+					{
+
+
+
+						kola = Convert.ToDouble(label37.Text);
+						masuv = Convert.ToDouble(label117.Text);
+						seredniychas3 = Convert.ToDouble(label58.Text);
+						kola = (kola + masuv);
+						label117.Text = Convert.ToString(kola);
+						seredniychas3 = kola / Convert.ToDouble(label23.Text);
+					}
+					else
+					{
+						if (label15.Text == "2/5")
+						{
+
+
+							//double masuv, kola, seredniychas, prognoz;
+							kola = Convert.ToDouble(label37.Text);
+							masuv = Convert.ToDouble(label117.Text);
+							seredniychas1 = Convert.ToDouble(label58.Text);
+							kola = (kola + masuv);
+							label117.Text = Convert.ToString(kola);
+							seredniychas1 = kola / Convert.ToDouble(label23.Text);
+						}
+						else
+						{
+							if (label15.Text == "3/5")
+							{
+
+
+								//double masuv, kola, seredniychas, prognoz;
+								kola = Convert.ToDouble(label37.Text);
+								masuv = Convert.ToDouble(label117.Text);
+								seredniychas5 = Convert.ToDouble(label58.Text);
+								kola = (kola + masuv);
+								label117.Text = Convert.ToString(kola);
+								seredniychas5 = kola / Convert.ToDouble(label23.Text);
+							}
+							else
+							{
+								if (label15.Text == "4/5")
+								{
+
+
+									//double masuv, kola, seredniychas, prognoz;
+									kola = Convert.ToDouble(label37.Text);
+									masuv = Convert.ToDouble(label117.Text);
+									seredniychas2 = Convert.ToDouble(label58.Text);
+									kola = (kola + masuv);
+									label117.Text = Convert.ToString(kola);
+									seredniychas2 = kola / Convert.ToDouble(label23.Text);
+
+								}
+								else
+								{
+									if (label15.Text == "5/5")
+									{
+
+
+										//double masuv, kola, seredniychas, prognoz;
+										kola = Convert.ToDouble(label37.Text);
+										masuv = Convert.ToDouble(label117.Text);
+										seredniychas4 = Convert.ToDouble(label58.Text);
+										kola = (kola + masuv);
+										label117.Text = Convert.ToString(kola);
+										seredniychas4 = kola / Convert.ToDouble(label23.Text);
+
+
+
+
+
+
+
+										if (label13.Text == "<<Фініш!>>")
+										{
+											masuv = 0;
+											kola = 0;
+											seredniychas = 0;
+											prognoz = 0;
+										}
+
+
+
+									}
+								}
+
+
+
+
 							}
 						}
 
+
 					}
-				}
-			}
 
 
-			// підсвітка під час кола
-			textBox9.BackColor = Color.LawnGreen;
+
+
+
+
+
+
+
+
+
+
+
+					}
+
+					// підсвітка під час кола
+					textBox9.BackColor = Color.LawnGreen;
 			label23.BackColor = Color.LawnGreen;
 			timer30.Enabled = true;
 			timer26.Enabled = true;
