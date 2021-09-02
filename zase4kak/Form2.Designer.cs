@@ -53,6 +53,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox2
@@ -96,10 +97,10 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(382, 232);
+            this.button2.Location = new System.Drawing.Point(480, 232);
             this.button2.Margin = new System.Windows.Forms.Padding(1);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 34);
+            this.button2.Size = new System.Drawing.Size(47, 34);
             this.button2.TabIndex = 49;
             this.button2.Text = "Лап-Тайм";
             this.button2.UseVisualStyleBackColor = false;
@@ -108,13 +109,13 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LemonChiffon;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(12, 249);
             this.button1.Margin = new System.Windows.Forms.Padding(1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 34);
+            this.button1.Size = new System.Drawing.Size(83, 34);
             this.button1.TabIndex = 48;
             this.button1.Text = "Гонка";
             this.button1.UseVisualStyleBackColor = false;
@@ -303,13 +304,13 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.LemonChiffon;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(12, 249);
             this.button3.Margin = new System.Windows.Forms.Padding(1);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 34);
+            this.button3.Size = new System.Drawing.Size(83, 34);
             this.button3.TabIndex = 61;
             this.button3.Text = "Гонка";
             this.button3.UseVisualStyleBackColor = false;
@@ -321,10 +322,10 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(367, 268);
+            this.button4.Location = new System.Drawing.Point(480, 268);
             this.button4.Margin = new System.Windows.Forms.Padding(1);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(194, 34);
+            this.button4.Size = new System.Drawing.Size(81, 34);
             this.button4.TabIndex = 62;
             this.button4.Text = "Лап-Тайм 6 дор";
             this.button4.UseVisualStyleBackColor = false;
@@ -336,17 +337,33 @@
             this.button5.BackColor = System.Drawing.Color.LemonChiffon;
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.Enabled = false;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(138, 249);
+            this.button5.Location = new System.Drawing.Point(98, 249);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(145, 34);
+            this.button5.Size = new System.Drawing.Size(121, 34);
             this.button5.TabIndex = 63;
             this.button5.Text = "Лап-Тайм";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.LemonChiffon;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(222, 249);
+            this.button6.Margin = new System.Windows.Forms.Padding(1);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(116, 34);
+            this.button6.TabIndex = 64;
+            this.button6.Text = "Тренування";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form2
             // 
@@ -355,6 +372,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(571, 312);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -415,5 +433,6 @@
         public System.Windows.Forms.Button button4;
         public System.Windows.Forms.Button button2;
         public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button button6;
     }
 }

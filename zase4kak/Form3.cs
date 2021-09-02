@@ -39,6 +39,16 @@ namespace zase4kak
 			InitializeComponent();
 			CheckForIllegalCrossThreadCalls = false;
 
+			AutoSize = false;
+			AutoScaleMode = AutoScaleMode.Font;
+
+			float scaleX = ((float)Screen.PrimaryScreen.WorkingArea.Width / 1920);
+			float scaleY = ((float)Screen.PrimaryScreen.WorkingArea.Height / 1080);
+			SizeF aSf = new SizeF(scaleX, scaleY);
+			this.Scale(aSf);
+			
+			
+
 			// вибір кольору доріжки
 			panel1.BackColor = Settings.Default.line_1;
 			panel3.BackColor = Settings.Default.line_2;
@@ -53,7 +63,7 @@ namespace zase4kak
 			секToolStripMenuItem5.BackColor = Settings.Default.color_delay5;
 			toolStripTextBox1.Text = Settings.Default.deley6_text;
 			toolStripTextBox1.BackColor = Settings.Default.color_delay6;
-
+		
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -1197,6 +1207,27 @@ namespace zase4kak
 
 		private void Form3_Load(object sender, EventArgs e)
 		{
+
+			if (label17.Location.X < 661)
+			{
+				//label45.Font = new Font(label45.Font.Name, 20, label45.Font.Style);
+				label45.MaximumSize = new Size(300, 63);
+				label46.MaximumSize = new Size(300, 63);
+				label47.MaximumSize = new Size(300, 63);
+				label48.MaximumSize = new Size(300, 63);
+				dataGridView4.Location = new Point(864, 3);
+				button22.Location = new Point(1650, 901);
+			}
+
+			else
+			{
+				//label45.Font = new Font(label45.Font.Name, 42, label45.Font.Style);
+			}
+
+
+
+
+
 			timetostartsound.SoundLocation = "music/81980c1a7dcb7cd.wav";
 			timetostartsound.Load();
 
@@ -1670,7 +1701,7 @@ namespace zase4kak
 
 			button4.Visible = false;
 
-			button3.Visible = false;
+			
 
 
 			if (button4.Visible == false)
@@ -1728,7 +1759,7 @@ namespace zase4kak
 			comboBox1.Visible = true;
 			button5.Visible = true;
 			button4.Visible = false;
-			button3.Visible = false;
+	
 			label88.Visible = true;
 			label89.Visible = true;
 			textBox26.Visible = true;
@@ -1743,87 +1774,103 @@ namespace zase4kak
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			label13.Visible = true;
-			label13.Text = "Тренування!";
-			//serialPort1.BaudRate = 9600;
-			serialPort1.PortName = comboBox1.Text;
-			button5.Visible = false;
-			comboBox1.Visible = false;
-			label49.Visible = false;
-			serialPort1.Open();
-			serialPort1.WriteLine("3");
-			serialPort1.Close();
-			Settings.Default.zase4ka_comPort = comboBox1.Text;
-			Settings.Default.Save();
+			if (label13.Text != "<<Вільні тренування!>>")
+			{
 
 
-			// переміщення інтерфейсу під тренування
-			textBox1.Location = new Point(92, -13);
-			textBox1.Size = new Size(301, 151);
-			textBox6.Location = new Point(92, -5);
-			textBox6.Size = new Size(301, 151);
-			textBox9.Location = new Point(92, -5);
-			textBox9.Size = new Size(301, 151);
-			textBox12.Location = new Point(92, 1);
-			textBox12.Size = new Size(301, 151);
-			label17.Location = new Point(88, -10);
-			label24.Location = new Point(88, -6);
-			label23.Location = new Point(88, -6);
-			label25.Location = new Point(88, -10);
-			textBox2.Location = new Point(431, 12);
-			textBox2.Size = new Size(1083, 104);
-			textBox5.Location = new Point(431, 12);
-			textBox5.Size = new Size(1083, 104);
-			textBox8.Location = new Point(431, 12);
-			textBox8.Size = new Size(1083, 104);
-			textBox11.Location = new Point(431, 12);
-			textBox11.Size = new Size(1083, 104);
-			label7.Text = "Круги";
-			label5.Visible = false;
-			label9.Location = new Point(878, 8);
-			label22.Location = new Point(431, 34);
-			label19.Location = new Point(610, 34);
-			label20.Location = new Point(803, 37);
-			label76.Visible = true;
-			label77.Visible = true;
-			label78.Visible = true;
-			label30.Location = new Point(431, 33);
-			label32.Location = new Point(610, 33);
-			label31.Location = new Point(803, 36);
-			label79.Visible = true;
-			label80.Visible = true;
-			label81.Visible = true;
-			label34.Location = new Point(431, 35);
-			label36.Location = new Point(610, 35);
-			label35.Location = new Point(803, 38);
-			label82.Visible = true;
-			label83.Visible = true;
-			label84.Visible = true;
-			label39.Location = new Point(431, 34);
-			label41.Location = new Point(610, 34);
-			label40.Location = new Point(803, 37);
-			label87.Visible = true;
-			label86.Visible = true;
-			label85.Visible = true;
-			button17.Visible = true;
-			timer18.Enabled = false;
-			textBox3.Size = new Size(223, 104);
-			textBox4.Size = new Size(223, 104);
-			textBox7.Size = new Size(223, 104);
-			textBox10.Size = new Size(223, 104);
-
-			label55.Visible = false;
-			label59.Visible = false;
-			label60.Visible = false;
-			label61.Visible = false;
-			label62.Visible = false;
-			label124.Visible = false;
-			label54.Visible = false;
-			label57.Visible = false;
-			label58.Visible = false;
-			label118.Visible = false;
+				label13.Visible = true;
+				label13.Text = "Тренування!";
+				//serialPort1.BaudRate = 9600;
+				serialPort1.PortName = comboBox1.Text;
+				button5.Visible = false;
+				comboBox1.Visible = false;
+				label49.Visible = false;
+				serialPort1.Open();
+				serialPort1.WriteLine("3");
+				serialPort1.Close();
+				Settings.Default.zase4ka_comPort = comboBox1.Text;
+				Settings.Default.Save();
 
 
+				// переміщення інтерфейсу під тренування
+				label17.Location = new Point(92, -13);
+				//textBox1.Size = new Size(301, 151);
+				label24.Location = new Point(92, -5);
+				//textBox6.Size = new Size(301, 151);
+				label23.Location = new Point(92, -5);
+				//textBox9.Size = new Size(301, 151);
+				label25.Location = new Point(92, 1);
+				//textBox12.Size = new Size(301, 151);
+				label17.Location = new Point(88, -10);
+				label24.Location = new Point(88, -6);
+				label23.Location = new Point(88, -6);
+				label25.Location = new Point(88, -10);
+				textBox2.Location = new Point(431, 12);
+				textBox2.Size = new Size(1083, 104);
+				textBox5.Location = new Point(431, 12);
+				textBox5.Size = new Size(1083, 104);
+				textBox8.Location = new Point(431, 12);
+				textBox8.Size = new Size(1083, 104);
+				textBox11.Location = new Point(431, 12);
+				textBox11.Size = new Size(1083, 104);
+				label7.Text = "Круги";
+				label5.Visible = false;
+				label9.Location = new Point(878, 8);
+				label22.Location = new Point(431, 34);
+				label19.Location = new Point(610, 34);
+				label20.Location = new Point(803, 37);
+				label76.Visible = true;
+				label77.Visible = true;
+				label78.Visible = true;
+				label30.Location = new Point(431, 33);
+				label32.Location = new Point(610, 33);
+				label31.Location = new Point(803, 36);
+				label79.Visible = true;
+				label80.Visible = true;
+				label81.Visible = true;
+				label34.Location = new Point(431, 35);
+				label36.Location = new Point(610, 35);
+				label35.Location = new Point(803, 38);
+				label82.Visible = true;
+				label83.Visible = true;
+				label84.Visible = true;
+				label39.Location = new Point(431, 34);
+				label41.Location = new Point(610, 34);
+				label40.Location = new Point(803, 37);
+				label87.Visible = true;
+				label86.Visible = true;
+				label85.Visible = true;
+				button17.Visible = true;
+				timer18.Enabled = false;
+				
+
+				label55.Visible = false;
+				label59.Visible = false;
+				label60.Visible = false;
+				label61.Visible = false;
+				label62.Visible = false;
+				label124.Visible = false;
+				label54.Visible = false;
+				label57.Visible = false;
+				label58.Visible = false;
+				label118.Visible = false;
+
+            }
+            else
+            {
+				
+	
+				serialPort1.PortName = comboBox1.Text;
+				button5.Visible = false;
+				comboBox1.Visible = false;
+				label49.Visible = false;
+				serialPort1.Open();
+				serialPort1.WriteLine("3");
+				serialPort1.Close();
+				Settings.Default.zase4ka_comPort = comboBox1.Text;
+				Settings.Default.Save();
+				button17.Visible = true;
+			}
 
 
 
@@ -1922,9 +1969,8 @@ namespace zase4kak
 					 "Бажаєте загрузити простій?",
 					 "Групи не повні!",
 					 MessageBoxButtons.YesNo,
-					 MessageBoxIcon.Warning
+					 MessageBoxIcon.Warning);
 
-					);
 							if (dialog == DialogResult.Yes)
 							{
 
@@ -1984,8 +2030,24 @@ namespace zase4kak
 
 								dataGridView4.Visible = true;
 								button22.Visible = true;
-								dataGridView4.Size = new Size (371, 421);
-								dataGridView4.Location = new Point(1145, 624);
+
+
+
+								if (label17.Location.X < 676)
+									
+									
+									{
+
+
+									dataGridView4.Size = new Size(371, 421);
+
+								}
+                                else
+                                {
+									dataGridView4.Size = new Size(371, 421);
+									dataGridView4.Location = new Point(1145, 624);
+                                }
+								
 								button1.Visible = false;
 
 
@@ -3403,188 +3465,49 @@ namespace zase4kak
 
 		private void button6_Click(object sender, EventArgs e)
 		{
-
-			serialPort1.WriteLine("3");
-
-
-			if (serialPort1.IsOpen == true)
-			{
-				serialPort1.Close();
-			}
-
-
-			label69.Text = "Трек виключений";
-			label69.BackColor = Color.Red;
-			button10.Enabled = true;
-			button11.Enabled = false;
-
-
-
-
-
-			pausesound.Play();
-			if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
-			{
-				serialPort1.Close();
-				timer2.Enabled = false;
-				timer17.Enabled = false;
-				timer11.Enabled = false;
-				timer15.Enabled = false;
-				timer16.Enabled = false;
-				button6.Visible = false;
-				button7.Visible = true;
-				button7.Focus();
-			}
-
-			if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
-			{
-				serialPort1.Close();
-				timer4.Enabled = false;
-				timer17.Enabled = false;
-				timer11.Enabled = false;
-				timer15.Enabled = false;
-				timer16.Enabled = false;
-				button6.Visible = false;
-				button7.Visible = true;
-				button7.Focus();
-			}
-
-			if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
-			{
-				serialPort1.Close();
-				timer6.Enabled = false;
-				timer17.Enabled = false;
-				timer11.Enabled = false;
-				timer15.Enabled = false;
-				timer16.Enabled = false;
-				button6.Visible = false;
-				button7.Visible = true;
-				button7.Focus();
-			}
-
-			if (number_group.Text == "3")   // кнопка пауза для 3 заїзду
-			{
-				serialPort1.Close();
-				timer8.Enabled = false;
-				timer17.Enabled = false;
-				timer11.Enabled = false;
-				timer15.Enabled = false;
-				timer16.Enabled = false;
-				button6.Visible = false;
-				button7.Visible = true;
-				button7.Focus();
-			}
-
-			if(number_group.Text == "4")
-            {
-				serialPort1.Close();
-				timer38.Enabled = false;
-				timer17.Enabled = false;
-				timer11.Enabled = false;
-				timer15.Enabled = false;
-				timer16.Enabled = false;
-				button6.Visible = false;
-				button7.Visible = true;
-				button7.Focus();
-			}
-
-		}
-
-		private void button7_Click(object sender, EventArgs e)
-		{
-
-			start_to_pause.Play();
-			timer33.Enabled = true;
-		}
-
-		private void button7_KeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.KeyCode == Keys.Space)
-			{
-				startsound.Play();
-
-				if (serialPort1.IsOpen == false)
-				{
-					serialPort1.Open();
-				}
-				start_to_pause.Play();
-				timer33.Enabled = true;
-				//serialPort1.WriteLine("4");
-				//label69.Text = "Трек включений";
-				//label69.BackColor = Color.Green;
-				//if (number_group.Text == "0")   // кнопка продовжити для 1 заїзду
-				//{
-				//	timer2.Enabled = true;
-				//	timer17.Enabled = true;
-				//	timer11.Enabled = true;
-				//	timer15.Enabled = true;
-				//	timer16.Enabled = true;
-				//	button6.Visible = true;
-				//	button7.Visible = false;
-				//	button6.Focus();
-				//}
-
-				//if (number_group.Text == "1")   // кнопка продовжити для 2 заїзду
-				//{
-				//	timer4.Enabled = true;
-				//	timer17.Enabled = true;
-				//	timer11.Enabled = true;
-				//	timer15.Enabled = true;
-				//	timer16.Enabled = true;
-				//	button6.Visible = true;
-				//	button7.Visible = false;
-				//	button6.Focus();
-				//}
-
-				//if (number_group.Text == "2")   // кнопка продовжити для 3 заїзду
-				//{
-				//	timer6.Enabled = true;
-				//	timer17.Enabled = true;
-				//	timer11.Enabled = true;
-				//	timer15.Enabled = true;
-				//	timer16.Enabled = true;
-				//	button6.Visible = true;
-				//	button7.Visible = false;
-				//	button6.Focus();
-				//}
-
-				//if (number_group.Text == "3")   // кнопка продовжити для 3 заїзду
-				//{
-				//	timer8.Enabled = true;
-				//	timer17.Enabled = true;
-				//	timer11.Enabled = true;
-				//	timer15.Enabled = true;
-				//	timer16.Enabled = false;
-				//	button6.Visible = true;
-				//	button7.Visible = false;
-				//	button6.Focus();
-				//}
-
-
-
-
-
-
-			}
-		}
-
-		private void button6_KeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.KeyCode == Keys.Space)
+			if (label13.Text == "Тренування!")
 			{
 				serialPort1.WriteLine("3");
+				pausesound.Play();
+				label69.Text = "Трек виключений";
+				label69.BackColor = Color.Red;
 				if (serialPort1.IsOpen == true)
 				{
 					serialPort1.Close();
 				}
 
-				pausesound.Play();
+				timer24.Enabled = false;
+
+				button6.Visible = false;
+				button7.Visible = true;
+				button7.Focus();
+			}
+			else
+			{
+
+
+				serialPort1.WriteLine("3");
+
+
+				if (serialPort1.IsOpen == true)
+				{
+					serialPort1.Close();
+				}
+
 
 				label69.Text = "Трек виключений";
 				label69.BackColor = Color.Red;
+				button10.Enabled = true;
+				button11.Enabled = false;
 
+
+
+
+
+				pausesound.Play();
 				if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
 				{
+					serialPort1.Close();
 					timer2.Enabled = false;
 					timer17.Enabled = false;
 					timer11.Enabled = false;
@@ -3597,6 +3520,7 @@ namespace zase4kak
 
 				if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
 				{
+					serialPort1.Close();
 					timer4.Enabled = false;
 					timer17.Enabled = false;
 					timer11.Enabled = false;
@@ -3609,6 +3533,7 @@ namespace zase4kak
 
 				if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
 				{
+					serialPort1.Close();
 					timer6.Enabled = false;
 					timer17.Enabled = false;
 					timer11.Enabled = false;
@@ -3621,6 +3546,7 @@ namespace zase4kak
 
 				if (number_group.Text == "3")   // кнопка пауза для 3 заїзду
 				{
+					serialPort1.Close();
 					timer8.Enabled = false;
 					timer17.Enabled = false;
 					timer11.Enabled = false;
@@ -3629,6 +3555,177 @@ namespace zase4kak
 					button6.Visible = false;
 					button7.Visible = true;
 					button7.Focus();
+				}
+
+				if (number_group.Text == "4")
+				{
+					serialPort1.Close();
+					timer38.Enabled = false;
+					timer17.Enabled = false;
+					timer11.Enabled = false;
+					timer15.Enabled = false;
+					timer16.Enabled = false;
+					button6.Visible = false;
+					button7.Visible = true;
+					button7.Focus();
+				}
+			}
+		}
+
+		private void button7_Click(object sender, EventArgs e)
+		{
+			if(label13.Text == "Тренування!")
+            {
+				serialPort1.Open();
+				serialPort1.WriteLine("4");
+				startsound.Play();
+				timer24.Enabled = true;
+				button7.Visible = false;
+				button6.Visible = true;
+				button6.Focus();
+			}
+            else
+            {
+			start_to_pause.Play();
+			timer33.Enabled = true;
+            }
+			
+		}
+
+		private void button7_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Space)
+			{
+				if (label13.Text == "Тренування!")
+				{
+					serialPort1.Open();
+					serialPort1.WriteLine("4");
+					startsound.Play();
+					timer24.Enabled = true;
+					button7.Visible = false;
+					button6.Visible = true;
+					button6.Focus();
+				}
+				else
+				{
+					start_to_pause.Play();
+					timer33.Enabled = true;
+				}
+
+
+
+
+			}
+		}
+
+		private void button6_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Space)
+			{
+				if (label13.Text == "Тренування!")
+				{
+					serialPort1.WriteLine("3");
+					pausesound.Play();
+					label69.Text = "Трек виключений";
+					label69.BackColor = Color.Red;
+					if (serialPort1.IsOpen == true)
+					{
+						serialPort1.Close();
+					}
+
+					timer24.Enabled = false;
+
+					button6.Visible = false;
+					button7.Visible = true;
+					button7.Focus();
+				}
+				else
+				{
+
+
+					serialPort1.WriteLine("3");
+
+
+					if (serialPort1.IsOpen == true)
+					{
+						serialPort1.Close();
+					}
+
+
+					label69.Text = "Трек виключений";
+					label69.BackColor = Color.Red;
+					button10.Enabled = true;
+					button11.Enabled = false;
+
+
+
+
+
+					pausesound.Play();
+					if (number_group.Text == "0")   // кнопка пауза для 1 заїзду
+					{
+						serialPort1.Close();
+						timer2.Enabled = false;
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+						button6.Visible = false;
+						button7.Visible = true;
+						button7.Focus();
+					}
+
+					if (number_group.Text == "1")   // кнопка пауза для 2 заїзду
+					{
+						serialPort1.Close();
+						timer4.Enabled = false;
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+						button6.Visible = false;
+						button7.Visible = true;
+						button7.Focus();
+					}
+
+					if (number_group.Text == "2")   // кнопка пауза для 3 заїзду
+					{
+						serialPort1.Close();
+						timer6.Enabled = false;
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+						button6.Visible = false;
+						button7.Visible = true;
+						button7.Focus();
+					}
+
+					if (number_group.Text == "3")   // кнопка пауза для 3 заїзду
+					{
+						serialPort1.Close();
+						timer8.Enabled = false;
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+						button6.Visible = false;
+						button7.Visible = true;
+						button7.Focus();
+					}
+
+					if (number_group.Text == "4")
+					{
+						serialPort1.Close();
+						timer38.Enabled = false;
+						timer17.Enabled = false;
+						timer11.Enabled = false;
+						timer15.Enabled = false;
+						timer16.Enabled = false;
+						button6.Visible = false;
+						button7.Visible = true;
+						button7.Focus();
+					}
 				}
 			}
 		}
@@ -3848,7 +3945,7 @@ namespace zase4kak
 
 
 					// підсвітка під час кола
-					textBox6.BackColor = Color.LawnGreen;
+					label24.BackColor = Color.LawnGreen;
 				label24.BackColor = Color.LawnGreen;
 				timer28.Enabled = true;
 
@@ -4028,7 +4125,7 @@ namespace zase4kak
 
 
 					// підсвітка під час кола
-					textBox12.BackColor = Color.LawnGreen;
+					label25.BackColor = Color.LawnGreen;
 				label25.BackColor = Color.LawnGreen;
 				timer29.Enabled = true;
 				timer26.Enabled = true;
@@ -4904,7 +5001,297 @@ namespace zase4kak
 
 		}
 
-		private void жовтаToolStripMenuItem3_Click(object sender, EventArgs e)
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+			time_to_traning_min = 999999;
+
+			traning_number_group = 999;
+
+
+
+			
+
+
+			button5.Enabled = true;
+			button3.Visible = false;
+			label49.Visible = true;
+			comboBox1.Visible = true;
+			button5.Visible = true;
+			button4.Visible = false;
+			label88.Visible = false;
+			label89.Visible = false;
+			textBox26.Visible = false;
+			textBox27.Visible = false;
+			button20.Visible = false;
+			label11.Visible = false;
+			textBox28.Visible = false;
+			label13.Text = "<<Вільні тренування!>>";
+			label4.Visible = false;
+			label13.Visible = true;
+			label13.Location = new Point(570, 75);
+
+
+			// переміщення інтерфейсу під тренування
+			label25.Location = new Point(92, -13);
+			//textBox1.Size = new Size(301, 151);
+			label23.Location = new Point(92, -5);
+			//textBox6.Size = new Size(301, 151);
+			label24.Location = new Point(92, -5);
+			//textBox9.Size = new Size(301, 151);
+			label17.Location = new Point(92, 1);
+			//textBox12.Size = new Size(301, 151);
+			label17.Location = new Point(88, -10);
+			label24.Location = new Point(88, -6);
+			label23.Location = new Point(88, -6);
+			label25.Location = new Point(88, -10);
+			textBox2.Location = new Point(431, 12);
+			textBox2.Size = new Size(1083, 104);
+			textBox5.Location = new Point(431, 12);
+			textBox5.Size = new Size(1083, 104);
+			textBox8.Location = new Point(431, 12);
+			textBox8.Size = new Size(1083, 104);
+			textBox11.Location = new Point(431, 12);
+			textBox11.Size = new Size(1083, 104);
+			label7.Text = "Круги";
+			label5.Visible = false;
+			label9.Location = new Point(878, 8);
+			label22.Location = new Point(431, 34);
+			label19.Location = new Point(610, 34);
+			label20.Location = new Point(803, 37);
+			label76.Visible = true;
+			label77.Visible = true;
+			label78.Visible = true;
+			label30.Location = new Point(431, 33);
+			label32.Location = new Point(610, 33);
+			label31.Location = new Point(803, 36);
+			label79.Visible = true;
+			label80.Visible = true;
+			label81.Visible = true;
+			label34.Location = new Point(431, 35);
+			label36.Location = new Point(610, 35);
+			label35.Location = new Point(803, 38);
+			label82.Visible = true;
+			label83.Visible = true;
+			label84.Visible = true;
+			label39.Location = new Point(431, 34);
+			label41.Location = new Point(610, 34);
+			label40.Location = new Point(803, 37);
+			label87.Visible = true;
+			label86.Visible = true;
+			label85.Visible = true;
+		
+			timer18.Enabled = false;
+			
+
+			label55.Visible = false;
+			label59.Visible = false;
+			label60.Visible = false;
+			label61.Visible = false;
+			label62.Visible = false;
+			label124.Visible = false;
+			label54.Visible = false;
+			label57.Visible = false;
+			label58.Visible = false;
+			label118.Visible = false;
+		}
+
+        private void Form3_SizeChanged(object sender, EventArgs e)
+        {
+            if (label17.Location.X < 661)
+            {
+                //label45.Font = new Font(label45.Font.Name, 20, label45.Font.Style);
+                label45.MaximumSize = new Size(300, 63);
+                label46.MaximumSize = new Size(300, 63);
+                label47.MaximumSize = new Size(300, 63);
+                label48.MaximumSize = new Size(300, 63);
+                dataGridView4.Location = new Point(864, 3);
+                button22.Location = new Point(1279, 74);
+            }
+            else
+            {
+                label45.MaximumSize = new Size(598, 130);
+                label46.MaximumSize = new Size(598, 130);
+                label47.MaximumSize = new Size(598, 130);
+                label48.MaximumSize = new Size(598, 130);
+
+				label45.Size = new Size(598, 74);
+				label46.Size = new Size(598, 74);
+				label47.Size = new Size(598, 74);
+				label48.Size = new Size(598, 74);
+			}
+			int p,x;
+			
+		}
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+			if(checkBox1.Checked == true)
+            {
+				button23.Enabled = true;
+				button24.Enabled = true;
+				button25.Enabled = true;
+				button26.Enabled = true;
+            }
+            else
+            {
+				button23.Enabled = false;
+				button24.Enabled = false;
+				button25.Enabled = false;
+				button26.Enabled = false;
+			}
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+			i++;                                            
+			label17.Text = Convert.ToString(i);
+			checkBox1.Checked = false;
+		}
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+			c++;                                            //добавляю кола 1 доріці
+			label24.Text = Convert.ToString(c);
+			checkBox1.Checked = false;
+		}
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+			b++;                                            //добавляю кола 1 доріці
+			label23.Text = Convert.ToString(b);
+			checkBox1.Checked = false;
+		}
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+			d++;                                            //добавляю кола 4 доріці
+			label25.Text = Convert.ToString(d);
+			checkBox1.Checked = false;
+
+		}
+
+        private void label59_TextChanged(object sender, EventArgs e)
+        {
+			if(label59.Text == "-99")
+            {
+				label59.Font = new Font(label59.Font.Name, 18, label45.Font.Style);
+            }
+            else
+            {
+				if (label59.Text == "0")
+				{
+					label59.Font = new Font(label59.Font.Name, 24, label45.Font.Style);
+				}
+			}
+		}
+
+        private void label60_TextChanged(object sender, EventArgs e)
+        {
+			if (label60.Text == "-99")
+			{
+				label60.Font = new Font(label60.Font.Name, 18, label45.Font.Style);
+            }
+            else
+            {
+				if (label60.Text == "0")
+				{
+					label60.Font = new Font(label60.Font.Name, 24, label45.Font.Style);
+				}
+			}
+		}
+
+        private void label61_TextChanged(object sender, EventArgs e)
+        {
+			if (label61.Text == "-99")
+			{
+				label61.Font = new Font(label61.Font.Name, 18, label45.Font.Style);
+            }
+            else
+            {
+				if (label61.Text == "0")
+				{
+					label61.Font = new Font(label61.Font.Name, 24, label45.Font.Style);
+				}
+			}
+		}
+
+        private void label62_TextChanged(object sender, EventArgs e)
+        {
+			if (label62.Text == "-99")
+			{
+				label62.Font = new Font(label62.Font.Name, 18, label45.Font.Style);
+            }
+            else
+            {
+				if (label62.Text == "0")
+				{
+					label62.Font = new Font(label62.Font.Name, 24, label45.Font.Style);
+				}
+			}
+		}
+
+        private void label62_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox20_TextChanged(object sender, EventArgs e)
+        {
+			// неправельне введення тексту
+			if (textBox20.Text != "")
+			{
+				try
+				{
+					int m = Convert.ToInt32(textBox20.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					textBox20.Clear();
+				}
+			}
+		}
+
+        private void textBox21_TextChanged(object sender, EventArgs e)
+        {
+			// неправельне введення тексту
+			if (textBox21.Text != "")
+			{
+				try
+				{
+					int b = Convert.ToInt32(textBox21.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					textBox21.Clear();
+				}
+			}
+		}
+
+        private void textBox23_TextChanged(object sender, EventArgs e)
+        {
+			// неправельне введення тексту
+			if (textBox23.Text != "")
+			{
+				try
+				{
+					int h = Convert.ToInt32(textBox23.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					textBox23.Clear();
+				}
+			}
+		}
+
+        private void жовтаToolStripMenuItem3_Click(object sender, EventArgs e)
 		{
 			Settings.Default.line_4 = panel5.BackColor = Color.Gold;
 			Settings.Default.Save();
@@ -4952,12 +5339,14 @@ namespace zase4kak
 				label13.Text = "Тренування!";
 				timer24.Enabled = true;
 				timer25.Enabled = false;
+				button6.Enabled = true;
+				button6.Focus();
 			}
 		}
 
 		private void timer26_Tick(object sender, EventArgs e)
 		{
-			if (label13.Text == "Тренування!") // алгоритм часу для тренування
+			if (label13.Text == "Тренування!" || label13.Text == "<<Вільні тренування!>>") // алгоритм часу для тренування
 			{
 				label78.Text = label77.Text;
 				label77.Text = label76.Text;
@@ -4978,6 +5367,7 @@ namespace zase4kak
 
 		private void button20_Click(object sender, EventArgs e)
 		{
+			button3.Visible = false;
 			label88.Visible = false;
 			label89.Visible = false;
 			textBox26.Visible = false;
@@ -5345,7 +5735,7 @@ namespace zase4kak
 
         private void timer27_Tick(object sender, EventArgs e)
 		{
-			textBox1.BackColor = Color.WhiteSmoke;
+	
 			label17.BackColor = Color.WhiteSmoke;
 			timer27.Enabled = false;
 		}
@@ -5450,29 +5840,31 @@ namespace zase4kak
 			
 		}
 
-        private void textBox28_TextChanged(object sender, EventArgs e)
-        {
+		private void textBox28_TextChanged(object sender, EventArgs e)
+		{
 			// обмежую активність кнопки ок (button20) коли поля не заповненні
-			if(textBox26.Text != "" && textBox27.Text != "" && textBox28.Text != "")
-            {
+			if (textBox26.Text != "" && textBox27.Text != "" && textBox28.Text != "")
+			{
 				button20.Enabled = true;
-            }
-            else
-            {
-				button20.Enabled = false;
-            }
-
-			try
-			{
-				int h = Convert.ToInt32(textBox28.Text);
 			}
-			catch (System.FormatException)
+			else
 			{
-				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
-				textBox28.Clear();
+				button20.Enabled = false;
+			}
+			// неправельне введення тексту
+			if (textBox28.Text != "")
+			{
+				try
+				{
+					int h = Convert.ToInt32(textBox28.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					textBox28.Clear();
+				}
 			}
 		}
-
         private void textBox27_TextChanged(object sender, EventArgs e)
         {
 			// обмежую активність кнопки ок (button20) коли поля не заповненні
@@ -5484,21 +5876,25 @@ namespace zase4kak
 			{
 				button20.Enabled = false;
 			}
-
-			try
+			// неправельне введення тексту
+			if (textBox27.Text != "")
 			{
-				int g = Convert.ToInt32(textBox27.Text);
-			}
-			catch (System.FormatException)
-			{
-				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
-				textBox27.Clear();
+				try
+				{
+					int g = Convert.ToInt32(textBox27.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					textBox27.Clear();
+				}
 			}
 		}
 
         private void textBox26_TextChanged(object sender, EventArgs e)
         {
 			// обмежую активність кнопки ок (button20) коли поля не заповненні
+
 			if (textBox26.Text != "" && textBox27.Text != "" && textBox28.Text != "")
 			{
 				button20.Enabled = true;
@@ -5509,31 +5905,36 @@ namespace zase4kak
 			}
 
 
-			try
+			// неправельне введення тексту
+			if (textBox26.Text != "")
 			{
-				int f = Convert.ToInt32(textBox26.Text);
-			}
-			catch (System.FormatException)
-			{
-				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
-				textBox26.Clear();
-			}
-
-		}
-
-        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
-        {
-			try
-			{
-				int h = Convert.ToInt32(toolStripTextBox1.Text);
-			}
-			catch (System.FormatException)
-			{
-				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
-				toolStripTextBox1.Clear();
+				try
+				{
+					int f = Convert.ToInt32(textBox26.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					textBox26.Clear();
+				}
 			}
 		}
 
+		private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
+		{
+			if (toolStripTextBox1.Text != "")
+			{
+				try
+				{
+					int h = Convert.ToInt32(toolStripTextBox1.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					toolStripTextBox1.Clear();
+				}
+			}
+		}
         private void toolStripTextBox1_DoubleClick(object sender, EventArgs e)
         {
 			Settings.Default.delay1 = delay = Convert.ToDouble(toolStripTextBox1.Text);
@@ -5550,7 +5951,7 @@ namespace zase4kak
 
         private void timer30_Tick(object sender, EventArgs e)
 		{
-			textBox9.BackColor = Color.WhiteSmoke;
+			
 			label23.BackColor = Color.WhiteSmoke;
 			timer30.Enabled = false;
 
@@ -5558,7 +5959,7 @@ namespace zase4kak
 
 		private void timer29_Tick(object sender, EventArgs e)
 		{
-			textBox12.BackColor = Color.WhiteSmoke;
+			
 			label25.BackColor = Color.WhiteSmoke;
 			timer29.Enabled = false;
 
@@ -5566,7 +5967,7 @@ namespace zase4kak
 
 		private void timer28_Tick(object sender, EventArgs e)
 		{
-			textBox6.BackColor = Color.WhiteSmoke;
+			
 			label24.BackColor = Color.WhiteSmoke;
 			timer28.Enabled = false;
 		}
@@ -5833,7 +6234,19 @@ namespace zase4kak
 
 		private void textBox22_TextChanged(object sender, EventArgs e)
 		{
-
+			// неправельне введення тексту
+			if (textBox22.Text != "")
+			{
+				try
+				{
+					int n = Convert.ToInt32(textBox22.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					textBox22.Clear();
+				}
+			}
 		}
 
 		private void timer32_Tick(object sender, EventArgs e)
@@ -7370,7 +7783,12 @@ namespace zase4kak
 						label69.BackColor = Color.Red;
 						timer24.Enabled = false;
 						timer25.Enabled = true;
+
+
 						label13.Text = "Перехід!";
+
+						button6.Enabled = false;
+
 
 						traning_number_group = traning_number_group + 1;
 						label15.Text = traning_number_group + "/" + textBox28.Text;
@@ -7430,11 +7848,11 @@ namespace zase4kak
 			}
 		}
 
-		private void button17_Click(object sender, EventArgs e)
+		private void button17_Click(object sender, EventArgs e)// старт тренування
 		{
 			button17.Visible = false;
 			button18.Visible = true;
-
+			
 			serialPort1.Open();
 			serialPort1.WriteLine("4");
 			timer24.Enabled = true;
@@ -7442,6 +7860,16 @@ namespace zase4kak
 			timer15.Enabled = true;
 			timer11.Enabled = true;
 			timer16.Enabled = true;
+
+			if(label13.Text == "Тренування!")
+            {
+				button6.Visible = true;
+				button6.Focus();
+            }
+            else
+            {
+				button6.Visible = false;
+            }
 		}
 		
 		private void timer11_Tick(object sender, EventArgs e)
@@ -7494,7 +7922,8 @@ namespace zase4kak
 			Settings.Default.zase4ka_comPort = comboBox1.Text;
 			Settings.Default.Save();
 
-
+			groupBox1.Visible = true;
+			checkBox1.Visible = true;
 
 			// цикл для підтягування спортсменів за результатами лаптайму
 
@@ -7907,7 +8336,7 @@ namespace zase4kak
 
 
 				// підсвітка під час кола
-				textBox1.BackColor = Color.LawnGreen;
+				label17.BackColor = Color.LawnGreen;
 				label17.BackColor = Color.LawnGreen;
 				timer27.Enabled = true;
 			}
@@ -8078,7 +8507,7 @@ namespace zase4kak
 						label4.Text = "00:00";
 						label13.Text = "<<Фініш!>>";
 
-
+						panel6.Visible = true;
 
 						number_group.Text = "0";
 
@@ -8404,7 +8833,7 @@ namespace zase4kak
 
 
 
-						if (label13.Text == "Тренування!")  // алгоритм для часу кола для тренування червона доріжка
+						if (label13.Text == "Тренування!" || label13.Text == "<<Вільні тренування!>>")  // алгоритм для часу кола для тренування червона доріжка
 						{
 
 							textBox15.Text = "0";
@@ -8492,7 +8921,7 @@ namespace zase4kak
 
 
 
-						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування зеленої доріжка
+						if (label13.Text == "Тренування!" || label13.Text == "<<Вільні тренування!>>")     // алгоритм для часу кола для тренування зеленої доріжка
 						{
 							
 
@@ -8565,7 +8994,7 @@ namespace zase4kak
 						timer35.Enabled = true;
 
 
-						if (label13.Text == "Тренування!")      // алгоритм для часу кола для тренування синьої доріжка
+						if (label13.Text == "Тренування!" || label13.Text == "<<Вільні тренування!>>")   // алгоритм для часу кола для тренування синьої доріжка
 						{
 							
 
@@ -8635,7 +9064,7 @@ namespace zase4kak
 						timer35.Enabled = true;
 
 
-						if (label13.Text == "Тренування!")// алгоритм для часу кола для тренування жовтої доріжка
+						if (label13.Text == "Тренування!" || label13.Text == "<<Вільні тренування!>>")// алгоритм для часу кола для тренування жовтої доріжка
 
 						{
 							
@@ -9471,7 +9900,7 @@ namespace zase4kak
 					}
 
 					// підсвітка під час кола
-					textBox9.BackColor = Color.LawnGreen;
+					
 			label23.BackColor = Color.LawnGreen;
 			timer30.Enabled = true;
 			timer26.Enabled = true;

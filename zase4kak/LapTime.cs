@@ -1494,7 +1494,12 @@ namespace zase4kak
 
 
                     //laptime++;
+
+
+
                 serialPort1.Close();
+
+
                 laptime = Convert.ToInt32(label104.Text);
                 timer1.Enabled = false;
                 psec = Convert.ToInt32(textBox107.Text);

@@ -106,11 +106,12 @@ namespace zase4kak
         {
             Form2 f2 = new Form2();
             this.Visible = false;
-            f2.Show();
+            
             f2.button1.Visible = false;
             f2.button5.Visible = true;
            // f2.button4.Visible = true;
             f2.button2.Visible = false;
+            f2.Show();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

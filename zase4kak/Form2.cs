@@ -20,7 +20,14 @@ namespace zase4kak
 
 		private void Form2_Load(object sender, EventArgs e)
 		{
-
+			if(button1.Visible == true)
+            {
+				button6.Visible = true;
+            }
+            else
+            {
+				button6.Visible = false;
+            }
 
 		}
 
@@ -115,7 +122,7 @@ namespace zase4kak
 
 
 
-			if (textBox1.Text == "" || textBox2.Text == "" )
+			if (textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == "")
 			{
 				button1.Enabled = false;
 				button3.Enabled = false;
@@ -501,69 +508,101 @@ namespace zase4kak
 
 		}
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-			try
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+
+			if (textBox1.Text != "")
 			{
-				int z = Convert.ToInt32(textBox1.Text);
-			}
-			catch (System.FormatException)
-			{
-				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
-				textBox1.Clear();
+				try
+				{
+					int z = Convert.ToInt32(textBox1.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					textBox1.Clear();
+				}
 			}
 		}
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-			try
+		private void textBox2_TextChanged(object sender, EventArgs e)
+		{
+			if (textBox2.Text != "")
 			{
-				int x = Convert.ToInt32(textBox2.Text);
-			}
-			catch (System.FormatException)
-			{
-				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
-				textBox2.Clear();
-			}
-		}
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-			try
-			{
-				int c = Convert.ToInt32(textBox3.Text);
-			}
-			catch (System.FormatException)
-			{
-				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
-				textBox3.Clear();
+				try
+				{
+					int x = Convert.ToInt32(textBox2.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					textBox2.Clear();
+				}
 			}
 		}
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-			try
+		private void textBox3_TextChanged(object sender, EventArgs e)
+		{
+			if (textBox3.Text != "")
 			{
-				int v = Convert.ToInt32(textBox4.Text);
-			}
-			catch (System.FormatException)
-			{
-				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
-				textBox4.Clear();
+				try
+				{
+					int c = Convert.ToInt32(textBox3.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					textBox3.Clear();
+				}
 			}
 		}
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
+		private void textBox4_TextChanged(object sender, EventArgs e)
+		{
+			if (textBox4.Text != "")
+			{
+				try
+				{
+					int v = Convert.ToInt32(textBox4.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					textBox4.Clear();
+				}
+			}
+		}
+		private void textBox5_TextChanged(object sender, EventArgs e)
+		{
+			if (textBox5.Text != "")
+			{
+				try
+				{
+					int v = Convert.ToInt32(textBox5.Text);
+				}
+				catch (System.FormatException)
+				{
+					MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
+					textBox5.Clear();
+				}
+			}
+		}
+        private void button6_Click(object sender, EventArgs e)
         {
-			try
-			{
-				int v = Convert.ToInt32(textBox5.Text);
-			}
-			catch (System.FormatException)
-			{
-				MessageBox.Show("Ви ввели символ! Будь ласка,введіть цифрy");
-				textBox5.Clear();
-			}
+			Form3 f3 = new Form3();
+
+			f3.button3.Visible = true;
+			f3.label49.Visible = true;
+			f3.comboBox1.Visible = true;
+			f3.button5.Visible = true;
+			f3.button4.Visible = false;
+			f3.label88.Visible = true;
+			f3.label89.Visible = true;
+			f3.textBox26.Visible = true;
+			f3.textBox27.Visible = true;
+			f3.button20.Visible = true;
+			f3.label11.Visible = true;
+			f3.textBox28.Visible = true;
+
+			
+			f3.Show();
 		}
     }
 }

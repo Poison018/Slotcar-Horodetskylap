@@ -122,12 +122,12 @@ namespace zase4kak
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.timer7 = new System.Windows.Forms.Timer(this.components);
-            this.timer8 = new System.Windows.Forms.Timer(this.components);
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer7 = new System.Windows.Forms.Timer(this.components);
+            this.timer8 = new System.Windows.Forms.Timer(this.components);
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -245,14 +245,14 @@ namespace zase4kak
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.ForeColor = System.Drawing.Color.Goldenrod;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(353, 947);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 30);
+            this.comboBox1.Size = new System.Drawing.Size(136, 28);
             this.comboBox1.TabIndex = 209;
             // 
             // button9
@@ -1133,18 +1133,6 @@ namespace zase4kak
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
             this.dataGridView1.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridView1_RowStateChanged);
             // 
-            // timer7
-            // 
-            this.timer7.Interval = 1000;
-            this.timer7.Tag = "Таймер світлофора1";
-            this.timer7.Tick += new System.EventHandler(this.timer7_Tick_1);
-            // 
-            // timer8
-            // 
-            this.timer8.Interval = 350;
-            this.timer8.Tag = "Таймер світлофора2";
-            this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
-            // 
             // Column4
             // 
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -1200,6 +1188,18 @@ namespace zase4kak
             this.Column3.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column3.HeaderText = "Розряд";
             this.Column3.Name = "Column3";
+            // 
+            // timer7
+            // 
+            this.timer7.Interval = 1000;
+            this.timer7.Tag = "Таймер світлофора1";
+            this.timer7.Tick += new System.EventHandler(this.timer7_Tick_1);
+            // 
+            // timer8
+            // 
+            this.timer8.Interval = 350;
+            this.timer8.Tag = "Таймер світлофора2";
+            this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
             // 
             // Form9
             // 
